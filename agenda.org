@@ -1,0 +1,84 @@
+#+TITLE: AGENDA
+#+AUTHOR: David
+#+TODO: TODO CURRENT | DONE
+#+STARTUP: inlineimages
+* Horaires a trouver sur
+[[~/Cours/horaire.pdf][Horaire]]
+[[file:horaire.pdf][Horaire semestre 1]]
+#+ATTR_ORG: :width 50% :height 50%
+[[file:/home/david/Cours/horaire-1.png]]
+
+
+
+[[https://isa.epfl.ch/imoniteur_ISAP/!GEDREPORTS.pdf?ww_x_DATE=14.09.2020&ww_x_PLANMODELE=2700926973&zz_x_PLANMODELE=Math%E9matiques%202020-21&ww_i_reportModel=2096516523&ww_x_GPS=2642971254&zz_x_HIVERETE=Semestre%20d%27automne&ww_i_reportModelXsl=2096516549&ww_x_HIVERETE=2936286][Lien vers isa]]
+* Algebre Lineaire I
+** Cours zoom Algebre Lineaire I lundi
+SCHEDULED: <2020-09-14 Mon 13:15 +1w>
+ https://epfl.zoom.us/j/97550677866
+** Exercices Algebre Lineaire I lundi
+SCHEDULED: <2020-09-14 Mon 15:15 +1w>
+
+** Cours zoom Algebre Lineaire I mardi
+SCHEDULED: <2020-09-15 Tue 08:15 +1w>
+ https://epfl.zoom.us/j/95597947507
+
+** Exercices Algebre Lineaire jeudi
+SCHEDULED: <2020-09-17 Thu 15:15 +1w>
+
+
+* Structures Algebriques
+** Cours zoom Structures Algebriques mardi
+SCHEDULED: <2020-09-15 Tue 10:15 +1w>
+https://epfl.zoom.us/j/94435489646
+avec ID: 944 3548 9646
+** Exercices Structures Algebriques vendredi
+SCHEDULED: <2020-09-18 Fri 08:15 +1w>
+
+* Analyse avancee
+** Cours zoom Analyse avancee lundi
+SCHEDULED: <2020-09-14 Mon 10:15 +1w>
+https://moodle.epfl.ch/mod/url/view.php?id=1089886
+** Exercices Analyse avancee mardi
+SCHEDULED: <2020-09-15 Tue 14:15 +1w>
+
+** Cours zoom Analyse avancee mercredi
+SCHEDULED: <2020-09-16 Wed 13:15 +1w> 
+** Exercices Analyse avancee jeudi
+SCHEDULED: <2020-09-17 Thu 13:15 +1w>
+
+
+
+* Physique Mecanique
+** Cours zoom Physique mercredi
+SCHEDULED: <2020-09-16 Wed 09:15 +1w>
+** Exercices Physique mercredi
+SCHEDULED: <2020-09-16 Wed 15:15 +1w>
+** Exercices Physique vendredi
+SCHEDULED: <2020-09-18 Fri 10:15 +1w>
+
+
+
+
+* ICC
+** Exercices ICC jeudi
+SCHEDULED: <2020-09-17 Thu 09:15 +1w>
+** Cours ICC jeudi
+SCHEDULED: <2020-09-17 Thu 11:15 +1w>
+
+
+
+** Cours ICC vendredi
+SCHEDULED: <2020-09-18 Fri 13:15 +1w>
+
+** Exercices ICC vendredi
+SCHEDULED: <2020-09-18 Fri 15:15 +1w>
+
+
+
+* PDFs/Cours a telecharger...
+** mecanique
+*** DONE Conceptual Physics / Hewitt
+*** DONE Physics for scientists and engineers / Giancoli
+*** DONE Physique Générale / Alonso
+*** TODO Mooc-Mécanique / Ansermet
+*** TODO La Mécanique / Ansermet
