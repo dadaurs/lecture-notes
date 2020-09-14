@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex main"] 1600077547 "main.aux" "main.bbl" "main" 1600077547
-  "main.aux" 1600077466 5635 f58fcb722be94ef2fb89a42ddf0e2f0e "pdflatex"
+["bibtex main"] 1600108496 "main.aux" "main.bbl" "main" 1600108496
+  "main.aux" 1600108482 5952 235a5420301e36a73ad67e4c5fdf1bf1 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["makeindex main.idx"] 1600077220 "main.idx" "main.ind" "main" 1600077547
-  "main.idx" 1600077466 161 e3b4705fc2bb10c4d6d9f33e8388ebbc "pdflatex"
+["makeindex main.idx"] 1600108482 "main.idx" "main.ind" "main" 1600108496
+  "main.idx" 1600108482 187 d64edc22759263ceee5386dd28b2e145 "pdflatex"
   (generated)
-  "main.ilg"
   "main.ind"
-["pdflatex"] 1600077547 "main.tex" "main.pdf" "main" 1600077547
+  "main.ilg"
+["pdflatex"] 1600108496 "main.tex" "main.pdf" "main" 1600108496
   "../../header.tex" 1599495079 102 d5f915c592d8c7a405eb2868277818c8 ""
   "../../preamble.tex" 1600004609 6934 f68b70c055dcdf77575e186593ecf962 ""
   "/dev/null" 1599990865 0 d41d8cd98f00b204e9800998ecf8427e ""
@@ -287,18 +287,18 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1591545468 33301 a3134070eacafb10b1f371612ce2650d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1599553026 4855604 a2b69e422d881628e3d9a5db2035053f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1599553015 2514047 fbf118675b2f68bc3b0de1e3f8bfd828 ""
-  "lectures/lec1.tex" 1600077547 5287 7dc496cc356f22360c0fafb58be1f7ab ""
-  "main.aux" 1600077466 5635 f58fcb722be94ef2fb89a42ddf0e2f0e "pdflatex"
+  "lectures/lec1.tex" 1600108496 5289 6ea7422150b345bd70bba39141efdad3 ""
+  "main.aux" 1600108482 5952 235a5420301e36a73ad67e4c5fdf1bf1 "pdflatex"
   "main.bbl" 0 -1 0 "bibtex main"
-  "main.ind" 1600077220 218 d936861d805c4cbb708d15792023bb80 "makeindex main.idx"
-  "main.loe" 1600077466 1217 d73ddbd95c5074f2f7967d7939b2d9fa "pdflatex"
+  "main.ind" 1600108482 255 20167d91e001f177f85683ed3f52afa0 "makeindex main.idx"
+  "main.loe" 1600108482 1321 c8ba58a6d28b7507cf39f2a9d578ff72 "pdflatex"
   "main.tex" 1600072603 180 657e4cd61dd4df6953364dcc08a5591c ""
-  "main.toc" 1600077466 257 7c3dd7d24b1f0a869a5a5c72a39a0de1 "pdflatex"
+  "main.toc" 1600108482 257 7c3dd7d24b1f0a869a5a5c72a39a0de1 "pdflatex"
   (generated)
-  "main.thm"
-  "main.loe"
-  "main.aux"
   "main.idx"
-  "main.log"
+  "main.aux"
   "main.toc"
+  "main.loe"
+  "main.log"
+  "main.thm"
   "main.pdf"

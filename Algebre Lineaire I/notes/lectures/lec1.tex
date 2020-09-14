@@ -1,0 +1,289 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Mon 14 Sep}{Le language des Ensembles}
+\chapter{Le language des Ensembles}
+
+Le terme ``Algebre'' est derive du mot arabe al-jabr tire du tire d'un ouvrage.
+
+Al-jabr signifie restoration.
+
+Par exemple:
+$2x -4 = 0$
+Ce qu'on veut c'est trouver $x$.
+Il faut donc transformer cette egalite en effectuant des operations de part et d'autres de l egalite.
+\begin{align*}
+	2x &= 4 &\vert +4\\
+	x &= \frac{4}{2} = 2  &\vert :2
+\end{align*}
+
+
+
+Le but de l'ouvrage etait de resoudre des soucis administratifs, comment partager des champs etc.\\
+
+Le but c'est d'introduire les espaces vectoriels a partir de 0.\\
+
+Il y aura besoin d'introduire des groupes, anneaux, corps ( anneaux particuliers), modules et des ensembles.\\
+
+Il faut donc commencer avec les objets les plus simples, i.e. les groupes.\\
+Ici, on introduit de maniere moins rigoureuse qu'avec les systemes algebriques.
+
+\section{Notations}
+
+\begin{itemize}
+	\item "Il existe" $\exists$, "Il existe un unique"  $\exists !$\\
+	\item "Quelque soit", "Pour tout",  $\forall$\\
+	\item "Implique",  $\Rightarrow$ \\
+	\item "est equivalent" $\iff$, ou ``ssi''\\
+	\item "sans perte de generalite" ``spdg'', ``wlog''\\
+	\item "on peut supposer" ``ops, wma''
+	\item "tel que" $\vert$
+\end{itemize}
+
+On ne va pas parler de logique mathematique dans ce cours, ni de definition rigoureuse des ensembles
+
+\section{Ensembles}
+Un ensemble est une collection d'elements ``appartenant'' a $E$
+\[ 
+e \in E
+\]
+
+\subsection{Exemples}
+\begin{itemize}
+	\item $\emptyset$ ne contient aucun element\\
+	\item $ \mathbb{N} = \{ 0,1,2 \}$\\
+	\item $\mathbb{Z} = \{-2,-1,0,1,2\}$\\
+	\item $\mathbb{Q} = \{ \frac{p}{q} \vert p,q \in \mathbb{Z}, q \neq 0 \}$
+	\item $\mathbb{R}$
+\end{itemize}
+\section{Sous-Ensembles}
+Un sous-ensemble $A$ d'un ensemble $E$ est un ensemble t.q. tout element de $A$ appartient a $E$.
+Formellement:
+\[ 
+	a \in A \Rightarrow a \in E
+\]
+
+L'ensemble vide est un sous-ensemble de $E$ pour tout ensemble $E$.\\
+\[ 
+\emptyset \subset E \forall E
+\]
+
+
+Deux ensembles $E$ et $F$ sont egaux si ils ont les memes elements, ssi
+E est inclus dans F et F est inclus dans E ( regarder  notations)
+\[ 
+E \subset F \land F \subset E \Rightarrow E = F
+\]
+
+\section{$\mathcal{P}(E)$ l'ensemble des sous-ensembles}
+C'est l'ensemble des $A \in E$ 
+
+Remarque: L'ensemble de TOUS les ensembles n'est pas un ensemble et c'est du au paradoxe de Russell (Logicien anglais)
+Si c'etait le cas, on considererait
+\[ 
+	Ncont = \{ \text{ L'ensemble des $E$ tq $E$ n'est pas contenu dans lui meme. } \}
+\]
+Cet ensemble Ncont est-il contenu dans lui meme ou pas?\\
+\subsection{ Exercice }
+Ncont est il contenu dans lui meme ou pas? \contra
+
+\section{Operations sur les ensembles}
+\[ 
+A,B dans E
+\]
+\[ 
+A \cup B = \{ e \in E tq e \in A \intertext{ ou bien } e \in B \}
+\]
+\[ 
+	A \cap B = \{ e \in E \vert e \in A  e \in B \}
+\]
+
+Difference: $A-B$ ou $A\setminus B$
+ \[ 
+	 = \{A \in A \land \not\in B \}
+\]
+Difference symmetrique:
+\[ 
+	A \Delta B = ( A -B) \cup ( B-A)
+
+\]
+Si $A \cap B $
+
+
+$ A_1, \ldots, A_{n} \subset E $ $n \geq 1$ \\
+
+
+\section{$\times$: Produit cartesien}
+
+Si $A$ et $B$ sont des ensembles
+
+\[ 
+	A\times B = \{ ( a,b), a \in A b \in B\}
+\]
+($\neq ( b,a)$)
+
+On peut bien sur iterer
+\[ 
+	A_1 \times \ldots \times A_{n}  = \prod_{i=1}^{n} A_{i}  = \[ (a_1,a_2,\ldots,a_{n}  avec $a_i \in A_{i} $)
+\]
+On peut noter une grande reunion ainsi:
+\begin{align*}
+	A_1 \cup A_2 \cup \ldots \cup A_{n} &= A_1 \cup ( A_2 \cup \ldots \cup A_{n} )\\
+					    &= \{ e \in E \vert \exists i \in \{1,\ldots,n\} \text{avec} e \in A_{i} \}\\
+					    &= \bigcup_{i=1}^{n} A_{i} 
+\end{align*}
+
+
+$ ( a_1, \ldots, a_{n} ) \in A_1 \times \ldots \times A_{n} $ s'appelle $n$-uplet.
+
+\section{Applications entre ensembles}
+%\begin{definition}[Application lineaire]\index{Application lineaire}\label{def:application_lineaire}
+	
+Soient $X$ $Y$ deux ensembles.\\
+
+Une application (fonction) $f$ est la donnee pour chaque element $x \in X$ (L'espace de depart) d'un element $f(x) \in Y$ (l'espace d'arrivee)
+%\end{definition}
+
+\[ 
+f: X \rightarrow Y
+\]
+\subsection{Graphe}
+Se donner une application
+\[ 
+	f: X \rightarrow Y
+\]
+equivaut a se donner un graphe $G$ (graphe de $f$)
+
+\[ 
+	G \subset X \times Y = \{(x,y) \vert x \in X y \in Y\}
+\]
+tq pour $x_0 \in X$ l'ensemble des elements du graphe $G$ de la forme $(x_0,y)$ possede exactement un element $(x_0,y_0)$.
+$y_0= f(x_0)=$ l'image de $x_0$ par l'application $f$.
+
+On associe simplement au premier element un autre element.
+
+
+
+
+\section{Composition/Associativite}
+Soient
+\[ 
+f: X \rightarrow Y
+\]
+\[ 
+g: Y \rightarrow Z
+\]
+
+\begin{marginfigure}
+    \incfig{schemacomposition}
+    \caption{Schema de la composition de 2 applications}
+    \label{fig:schemacomposition}
+\end{marginfigure}
+\begin{align*}
+	g \circ f : X \longrightarrow Z \vert x \in X &\longrightarrow f(x) \in Y\\
+						      &\longrightarrow g(f(x)) \in Z
+\end{align*}
+
+Cette application s'appelle la composee de $f$ et $g$.
+
+\subsection{Associativite}
+\[ 
+f:X \longrightarrow Y
+\]
+\[ 
+g:Y \longrightarrow Z
+\]
+\[ 
+h:Z \longrightarrow W
+\]
+Alors
+\[ 
+	( g \circ f): X \longrightarrow Z \huge{ \circ } h: Z \longrightarrow W
+\]
+\[ 
+	\Rightarrow h \circ ( g \circ f)
+\]
+
+\[ 
+	f: X \longrightarrow Y \huge{\circ} h \circ g : Y \longrightarrow W
+\]
+
+On a que 
+
+\begin{thm}[Composition de fonctions]\index{Composition de fonctions}\label{thm:composition_de_fonctions}
+	
+\[ 
+	h \circ ( g \circ f) = ( h \circ g) \circ f = h \circ g \circ f
+\]
+\end{thm}
+\begin{proof}
+\[ 
+	h \circ ( g \circ f) : x \longrightarrow h((g\circ f) ( x))
+\]
+\[ 
+	= h(g(f(x))) \in W
+\]
+\[ 
+	( h\circ g) \circ f : x \longrightarrow ( h\circ g) ( f(x))
+\]
+\[ 
+	h(g(f(x))) \in W
+\]
+
+
+
+\end{proof}
+\section{Image,Preimage}
+\[ 
+f: X \longrightarrow Y
+\]
+A l'application $f$ sont associes deux applications impliquant $\mathcal{P}(X), \mathcal{P}(Y)$.
+\begin{itemize}
+	\item $Im(f): \mathcal{P}(X) \longrightarrow \mathcal{P}(Y)$\\
+		$A \subset X  \longrightarrow  Im(f)(A)=f(A)$\\
+		C'est ce qu'on appelle l'image de $A$ par $f$ 
+		\[ 
+			= \{ f(a) \in Y \vert a \in A\} \subset Y \in \mathcal{P}(Y)
+		\]
+		L'image de $f$ $Im(f) := f(X) = \{f(x) \in Y \vert x \in X\}$
+
+	\item Preimage de  $f$: $Preim(f)$:
+		\begin{align*}
+			Preim(f): \mathcal{P}(Y) &\longrightarrow \mathcal{P}(X)\\
+			B &\longrightarrow Preim(f)(B) = f^{-1}(B)
+			  &= \text{preimage de l'ensemble $B$ par $f$.}
+		\end{align*}
+		\[ 
+			f^{-1}(B) = \{x \inn X \vert f(x) \in B\}
+		\]
+\end{itemize}
+
+\textbf{\underline{Exemples}}\\
+
+\[ 
+	f_1(\{1,2\}) = \{2,4\}
+\]
+
+\[ 
+	f_1^{-1}(\{1,2,3,4\}) = \{1,2,3,4\}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

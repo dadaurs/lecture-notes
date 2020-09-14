@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.8)  14 SEP 2020 11:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.8)  14 SEP 2020 20:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1451,18 +1451,20 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 11.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 11.
  ) 
 Here is how much of TeX's memory you used:
- 32386 strings out of 480478
- 568251 string characters out of 5905960
- 851130 words of memory out of 5000000
- 47629 multiletter control sequences out of 15000+600000
+ 32388 strings out of 480478
+ 568273 string characters out of 5905960
+ 851159 words of memory out of 5000000
+ 47630 multiletter control sequences out of 15000+600000
  626719 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,62p,976b,813s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{crly.8} has been referenced but does not exist, replaced by a fixed one
+
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free3.enc}{/usr/share/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc}{/usr/share/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}</usr/share/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (6 pages, 144020 bytes).
+Output written on main.pdf (6 pages, 144286 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
+ 161 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
  2597 words of extra memory for PDF output out of 10000 (max. 10000000)
 
