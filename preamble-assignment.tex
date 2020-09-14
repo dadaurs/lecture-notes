@@ -1,0 +1,86 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{graphicx}
+\usepackage{mdframed}
+\usepackage[french]{babel}
+\usepackage{bbm} %RCQ
+\usepackage{verbatim}
+\usepackage{varioref}
+\usepackage{theoremref}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{python}
+\usepackage{xurl}
+\usepackage{xcolor}
+\usepackage[amsmath,hyperref,thmmarks]{ntheorem}
+\usepackage[fixed]{fontawesome5}
+\usepackage{imakeidx}
+\makeindex
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{thmtools}
+%\usepackage{fancyhdr}
+\usepackage{stmaryrd} % for \lightning
+%\pagestyle{fancy}
+\definecolor{background}{HTML}{FFFFFF}
+\definecolor{myred}{HTML}{A54242}
+\definecolor{mygreen}{HTML}{8C9440}
+\definecolor{myyellow}{HTML}{F0C674}
+\definecolor{myblue}{HTML}{5f819d}
+\definecolor{mymagenta}{HTML}{85678f}
+\definecolor{mycyan}{HTML}{5e8d87}
+
+\setlength\theorempreskipamount{2ex}
+\setlength\theorempostskipamount{3ex}
+\allowdisplaybreaks
+
+	
+\newcommand\norm[1]{\left\vert#1\right\vert}
+\newcommand\Norm[1]{\left\lVert#1\right\rVert}
+\newcommand\abs[1]{\left\vert#1\right\vert}
+
+
+
+%\renewtheoremstyle{break}%
+  %{\item{\theorem@headerfont
+          %##1\ ##2\theorem@separator}\hskip\labelsep\relax\nobreakitem}%
+  %{\item{\theorem@headerfont
+          %##1\ ##2\ (##3)\theorem@separator}\hskip\labelsep\relax\nobreakitem}
+%% make \th@nonumberbreak the same as \th@break, but remove "\ ##2"
+%\let\th@nonumberbreak\th@break
+%\xpatchcmd*{\th@nonumberbreak}{\ ##2}{}{}{}
+%\makeatother
+
+\theorempreskip{10pt}
+\theorempostskip{5pt}
+\theoremstyle{break}
+
+
+
+    % theorem envs
+
+
+% horizontal rule
+\newcommand\hr{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures}{#1.pdf_tex}
+}
+\newcommand{\filler}[1][10]%
+{   \foreach \x in {1,...,#1}
+    {   test 
+    }
+}
+
+

@@ -1,0 +1,162 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Mon 14 Sep}{Introduction}
+
+\chapter{Introduction}
+\section{Buts du Cours}
+\textbf{\underline{Officiel:}}\\
+Suites, series, fonctions, derivees, integrales , \ldots\\
+
+\textbf{ \underline{Secrets:}}\\
+Apprendre le raisonnement rigoureux\\
+Creativite\\
+Esprit Critique\\
+Ne croyez rien tant que c'est pas prouve\\
+
+On construit sur ce qu'on a fait, on recommence pas toujours a $0$, par rapport a d'autres domaines(lettres par exemple)
+
+\begin{thm}[env. -400]\label{thm:env_400}
+	Il n'existe aucin nombre ( fraction) x tel que $x^{2} = 2$.
+\end{thm}
+
+
+Ca contredit pythagore nn?
+
+On va demontrer le theoreme.\\\sidenote{On demontre d'abord un lemme}
+\begin{lemma}[Lemme]\index{Lemme}\label{lemma:lemme}
+	Soit $n \in \mathbb{N}$ 
+	Alors $n$ pair $\iff$  $n^{2}$ pair.
+\end{lemma}
+\sidenote{Il se pourrait qu'il y ait 13 valeurs pour $\sqrt{2}$}
+\begin{proof}
+$\Rightarrow$ Si n pair $\Rightarrow$ $n^{2}$ pair.
+
+Hyp. $n = 2m ( m \in \mathbb{N})$ \\
+Donc $n^{2} = 4m^{2}$, pair. \\
+
+Par l'absurde, $n$ impair. $n=2k + 1 ( k \in \mathbb{N})$.\\
+\[ 
+	n^{2} = 4k^{2} + 4k + 1 = 2 ( 2k^{2} + 2k) + 1
+\]
+impair.
+Donc si $n$ est impair, alors $n^{2}$ est forcement impair.
+Absurde. 
+\end{proof}
+\begin{proof}
+	Supposons par l'absurde $\exists x$ t.q. $x^{2} = 2$ et $x= \frac{a}{b} ( a,b \in \mathbb{Z}, b \neq 0)$.\\
+	On peut supposer $a$ et $b$ non tous pairs.(sinon reduire).
+	\[ 
+	x^{2} = 2 \Rightarrow \frac{a^{2}}{b^{2}} = 2 \Rightarrow a^{2} = 2b^{2} \Rightarrow a^{2}
+	\] 
+	pair.\\
+	Lemme: $a$ pair, i.e. $a=2n ( n \in \mathbb{N})$.
+	\[ 
+	a^{2}=4n^{2} = 2b^{2} \Rightarrow  2 n^{2} = b^{2}, i.e. b^{2} pair.
+	\]
+	Lemme: $b$ pair.\\
+	Donc $a$ et $b$ sont les deux pairs, on a une contradiction.\\
+	$\contra$
+\end{proof}
+
+En conclusion, le theoreme est bel et bien vrai, et contredit donc pythagore.
+Donc les fractions ( $\mathbb{Q}$ ) ne suffisent pas a decrire/mesurer les longueurs geometriques.
+Il faut les nombres reels, on les comprends seulement vraiment depuis 2 siecles.\\
+C'est important de chercher ce genre d'erreurs.\\
+Prochain but: definir les nombres reels ($\mathbb{R}$).
+L'interaction entre les fractions et les nombres reels.
+
+\chapter{Definir $\mathbb{R}$}
+On commence avec la definition axiomatique des nombres reels.
+
+\begin{axiom}[Nombres Reels]\index{Nombres Reels}\label{axiom:nombres_reels}
+	$\mathbb{R}$ est un corps, en d'autres termes:\\
+	Ils sont munis de deux operations: plus et fois.
+	\begin{itemize}
+		\item Associativite $x + ( y + z)= ( x+ y)+z ( x,y,z \in \mathbb{R})$ \sidenote{L'associativite n'est pas forcement vraie(octonions)}\\
+		\item Commutativite $x+y = y+x$.\\
+		\item Il existe un element neutre $0$ t.q. $0+x=x, x \in \mathbb{R}$.\sidenote{Il y a aucune difference entre les regles pour l'addition que pour la multiplication.}
+		\item Distributivite $x ( yz)= ( xy)z$\\
+		\item Il existe un element inverse, unique $-x \in \mathbb{R}$ t.q. $x + (-x)=0$
+	\end{itemize}
+\end{axiom}
+
+Remarque: Il existe beaucoup d'autres corps que $\mathbb{R}$, par exemple $\mathbb{Q},\mathbb{C}$, $\{0,1,2\} \mod 3$\\
+
+Attention: $ \{0,1,2,3\} \mod 4$ n'est pas un corps!\\
+Presque tous marchent, ils satisfont 8 des 9 axiomes.\\
+\hr\\
+\begin{lemma}[Theorem name]\index{Theorem name}\label{lemma:theorem_name}
+$\forall x \exists ! y$ t.q. $x+y = 0.$	
+\end{lemma}
+\begin{proof}
+Supposons $x+y =0 = x+y'$ \\
+A voir: $y=y'$.\\
+ 
+\begin{align*}
+	y &= y + 0 = y + (x + y') = ( y+x) + y'\\
+	  &= ( x+y) + y' = 0 + y' = y'
+\end{align*}
+CQFD.
+\end{proof}
+
+\underline{\texbf{Exercice}}\\
+Demontrer que $0$ est unique.
+
+\begin{propo}[Annulation de l'element neutre]\index{Annulation de l'element neutre}\label{propo:annulation_de_l_element_neutre}
+	$0\cdot x = 0$
+\end{propo}
+\begin{proof}
+	\[ 
+		x = x \cdot 1 = x(1+0) = x\cdot 1 + x \cdot 0 = x + x \cdot 0
+	\]
+	\[ 
+		0 = x + (-x) = x + ( -x) + x \cdot 0
+	\]
+	$\Rightarrow$ $0=x\cdot 0$
+	
+\sidenote{ $a-b = a + ( -b)$}
+
+\end{proof}
+
+\begin{crly}[x fois moins 1 egale -x]\label{lemma:x_fois_moins_1_egale_x}
+\[ 
+	x + x \cdot (-1) = 0
+\]
+	
+\end{crly}
+\begin{proof}
+	A voir: $x \cdot ( -1)$ satisfait les proprietes de $-x$.\\
+	Or
+	\[ 
+		x + x(-1) = x(1-1) = x \cdot 0 =0.
+	\]
+	
+\end{proof}
+\underline{\texbf{Exercice}}\\
+Montrer que $\forall x: x-(-x)=x$ et que ceci implique $(-a)(-b) = ab$.\\
+\hr\\
+
+Rien de tout ca n'a quelque chose a voir avec $\mathbb{R}$.\\
+Il nous faut plus d'axiomes!!
+\begin{axiom}[Nombres Reels II]\index{Nombres Reels II}\label{axiom:nombres_reels_ii}
+$\mathbb{R}$ est un corps ordonne. Ce qui revient a dire que les assertions suivantes sont verifiees.
+\begin{itemize}
+	\item $x \leq y$ et $y \leq z$ impliquent $x \leq z$ \\
+	\item $(x \leq y \intertext{et} y \leq x)$ $\Rightarrow$ $x=y$
+	\item pour tout couple de nombres reels  $x$ et $y$ : ou bien $x \leq y$ ou bien $x \geq y$.
+\end{itemize}
+\end{axiom}
+
+Exemple de corps ordonnnes:\\
+(1) $\mathbb{R}$, (2) $\mathbb{Q}$, (3) $\{0,1,2\} \mod 3$ n'est pas un corps ordonne.
+
+\underline{\texbf{Exercice}}\\
+$x \leq y \iff -x \geq -y$ 
+\underline{\texbf{Exercice}}\\
+$x \leq y$ et $z \geq 0$ $\Rightarrow$ $xz \leq yz$ \\
+$x \leq y $ et $z \leq 0$ $\Rightarrow$ $xz \geq yz$.\\
+\hr\\
+Il nous manque encore un axiome, et c'est le dernier, pour mercredi!
+
+
+\end{document}	

@@ -1,0 +1,14 @@
+\addvspace {10\p@ }
+\contentsline {thm}{\numberline {1}\faCoffee Theorem\thmtformatoptarg {env. -400}}{3}{thm.1}%
+\contentsline {lemma}{\numberline {2}\faTree Lemma\thmtformatoptarg {Lemme}}{3}{lemma.2}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{3}{proof.1}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{4}{proof.2}%
+\addvspace {10\p@ }
+\contentsline {axiom}{\numberline {3}\faShield * Axiom\thmtformatoptarg {Nombres Reels}}{4}{axiom.3}%
+\contentsline {lemma}{\numberline {4}\faTree Lemma\thmtformatoptarg {Theorem name}}{5}{lemma.4}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{5}{proof.3}%
+\contentsline {propo}{\numberline {5}\faTint Proposition\thmtformatoptarg {Annulation de l'element neutre}}{5}{propo.5}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{5}{proof.4}%
+\contentsline {crly}{\numberline {6}\faSpaceShuttle Corollary\thmtformatoptarg {x fois moins 1 egale -x}}{5}{crly.6}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{6}{proof.5}%
+\contentsline {axiom}{\numberline {7}\faShield * Axiom\thmtformatoptarg {Nombres Reels II}}{6}{axiom.7}%

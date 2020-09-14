@@ -5,7 +5,6 @@
 * Horaires a trouver sur
 [[~/Cours/horaire.pdf][Horaire]]
 [[file:horaire.pdf][Horaire semestre 1]]
-#+ATTR_ORG: :width 50% :height 50%
 [[file:/home/david/Cours/horaire-1.png]]
 
 

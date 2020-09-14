@@ -37,6 +37,7 @@
 \definecolor{myblue}{HTML}{5f819d}
 \definecolor{mymagenta}{HTML}{85678f}
 \definecolor{mycyan}{HTML}{5e8d87}
+\definecolor{mygray}{HTML}{373B41}
 
 \setlength\theorempreskipamount{2ex}
 \setlength\theorempostskipamount{3ex}
@@ -47,6 +48,26 @@
 \newcommand\Norm[1]{\left\lVert#1\right\rVert}
 \newcommand\abs[1]{\left\vert#1\right\vert}
 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{background},   
+    commentstyle=\color{mygreen},
+    keywordstyle=\color{mymagenta},
+    numberstyle=\tiny\color{mygrau},
+    stringstyle=\color{mycyan},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
 
 
 %\renewtheoremstyle{break}%
