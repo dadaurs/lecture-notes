@@ -1,0 +1,193 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Tue 15 Sep}{Introduction}
+\begin{center}
+	\textbf{Parties}
+\end{center}
+
+\begin{itemize}
+	\item preuves et ensembles\\
+	\item Theorie des nombres\\
+	\item Theorie des groupes	
+\end{itemize}
+\chapter{Preuves}
+
+Une grande partie du bachelor est de faire des preuves, il est donc important de comprendre quand une preuve est correcte.\\
+
+Il y a deux types de preuves:
+\begin{itemize}
+	\item Preuves formelles\\
+		Tres precise, mais difficile a lire.\\
+	\item Preuves d'habitude\\
+		Approximation des preuves formelles, en remplacant qqes parties par du texte ``humain''.
+		Il faut s'assurer qu'on peut traduire cette preuve en preuve formelle.
+\end{itemize}
+\section{Proprietes de preuves formelles}
+\begin{itemize}
+	\item Elles utilisent seulement des signes/symboles mathematiques.
+		\begin{itemize}
+			\item $\exists$ ( existe)\\
+			\item $\forall$ ( pour tout)\\
+			\item $\exists !$ ( existe unique)\\
+			\item  $\land$  ( et) \\
+			\item $\lor$ ( ou) \\
+			\item $\neg$ (non) \\
+			\item  $\Rightarrow$ ( implique)\\
+			\item etc
+		\end{itemize}
+	\item Elle consiste de lignes, et il y a des regles strictes que ces lignes doivent suivre.\\
+	\item Regles
+		\begin{itemize}
+			\item Axiomes\\
+			\item Propositions qu'on a deja montrees.\\
+			\item Tautologies\\
+				Exemples
+				\[ 
+					\neg ( A \lor B) \iff ( ( \neg A) \lor ( \neg B))
+				\]
+		\end{itemize}
+	\item Modus Ponens: Si on a que 
+		\begin{align*}
+		\begin{cases}
+		A \Rightarrow B\\
+		A
+		\end{cases}\\
+		\end{align*}
+		Alors $B$ est vrai\sidenote{ Pour lire plus, regarder ``Calcul des predicats'' sur wikipedia}
+\end{itemize}
+
+Dans ce cours $0$ n'est ni positif, ni negatif.
+
+\begin{defn}[division d'entiers]\label{def:divison_dentiers}
+	q divise $a$ ( $q \vert a$)
+	si il existe un entier $r$ tel que $a=q\cdot r$.
+\end{defn}
+\begin{propo}[Division avec reste]\index{division}\index{reste}\label{propo:division_avec_reste}
+	$a, q \neq 0$ entiers non-negatifs, 
+	\[ 
+		\Rightarrow \exists \text{ entiers non-negatifs }
+	\]
+	$b$ et $r$ t.q.
+	\[ 
+	a=b\cdot q + r
+	\]
+	et 
+	\[ 
+	r < q
+	\]
+\end{propo}
+\begin{proof}
+	\textbf{Unicite}
+	Supposons que $\exists b,r,b',r'$ entiers non-negatifs et $r<q$ et $r'<q$.
+	\begin{align*}
+	a &= b q + r\\
+	a &= b' q + r'
+	\end{align*}
+	Alors
+	\[ 
+		\underbrace{ ( b-b')  }_{-q,0,q}q = \underbrace{ r'-r }_{-q < r'-r < q}
+	\]
+	$\Rightarrow$ $r' -r = 0$ \\
+	$(b-b') q = 0 \Rightarrow b=b'$
+	
+	\textbf{Existence}\\
+	Par induction sur $a$.\\
+	$\bullet$ $a=0 \Rightarrow b=0$ et $r=0$\\
+	$0$ supposons que on connait l'existence pour a remplace par $a-1$.
+	Alors, $\exists c,s$ tq
+	\begin{align*}
+	a-1 = c q + s\\
+	s<q
+	\end{align*}
+	Alors, soit $s<q-1$ 
+	\begin{align*}
+		a= ( a-1) + 1 \\
+		= cq +s +1
+	\end{align*}
+	Alors on peut dire que $s+1=r$.
+	Sinon $s=q-1$ \\
+	\begin{align*}
+		a= ( a-1) +1\\
+		= cq +\underbrace{ s +1 }_{=q}\\
+		= (c+1) \cdot q + 0
+	\end{align*}
+\end{proof}
+\section{Ensembles}
+\underline{Premiere approche:}\\
+ensemble $=$ \{ collection de choses \}\\
+Exemple:\\
+\[ 
+	\underbrace{ \{\{ \{\emptyset\}, \emptyset \}\emptyset\} }_{A}
+\]
+$\Rightarrow A \in A$ 
+\begin{propo}[Paradoxe de Russel]\index{Paradoxe}\index{Russel}\label{propo:paradoxe_de_russel}
+\[ 
+	B = \{ A \text{est un ensemble} \vert A \in A\}
+\]
+peut pas etre un ensemble.
+\end{propo}
+\begin{proof}
+Supposons que $B$ est un ensemble et $B \subset B \iff B \not\subset B \iff B \subset B \ldots$ 
+\end{proof}
+\underlin{Question:}\\
+Alors, qui sont les ensembles?
+\underlin{Reponse:}\\
+Axiome de Zermelo-Fraenkel\\
+\hr\\
+Quelques exemples de Zermelo-Fraenkel\\
+1) et 2) impliquent que $\emptyset$ est un ensemble.\\
+2)$A$ ensemble, $E(x)$ expression
+$\rightarrow \{a \in A \vert E(a) \text{vrai}\}$
+3) $A_i$ ensembles ( $i \in I$)\\
+\[ 
+	\rightarrow \Cup_{i\in I}  A_i
+\]
+est un ens.
+4)...\\
+5) axiome de l'ensemble puissance\\
+$A$ ensemble
+\[ 
+	\rightarrow 2^{A} = \{ B \subseteq A \vert B \text{sous-ens.} de A\}
+\]
+Exemple: $\{0,1\}=A$ \\
+
+\[ 
+	2^{A} = \{ \emptyset , \{0\}, \{1\}, \{0,1\}\}
+\]
+6) $A_i$ ensembles ( $i \in I$)
+$\rightarrow$ on peut choisir $a_i \in A_i$ a la meme fois\\
+7) etc...\\
+\underline{Consequences}
+1) Les ensembles finis existent.\\
+( i)  $\emptyset$ \\
+ (ii)  $\{\emptyset\}$ \\
+ ...\\
+
+ 2) $\mathbb{N} = \{0,1,2,\ldots\}$ est un ensemble
+ 3) $\mathbb{Z}= \{\ldots,-2,-1,0,1,2,\ldots\}$\\
+ 4) $2 \cdot \mathbb{N} = \{x \in \mathbb{N} \vert 2 \vert x\}$
+ 5) $A \subseteq B$ \\
+ Alors on peut definir la difference
+ \[ 
+	 B \setminus A = \{x \in B \vert x \not\in A\}
+ \]
+ 6) $A,B \subseteq C$ 
+ \[ 
+	 A \cap B = \{x \in C \vert x \in A, x \in B\} 
+ \]
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

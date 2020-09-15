@@ -1,0 +1,188 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Tue 15 Sep}{Injectivite, Surjectivite et Bijectivite}
+\begin{defn}[Injectivite]\index{Injectivite}\label{defn:injectivite}
+	Une application $f:X \mapsto Y$ est injective ( injection) si $\forall y \in Y f^{-1} ( \{y\})$ ne possede pas plus d'un element. 
+	On note
+	\[ 
+	f: X \inj Y
+	\]
+	
+\end{defn}
+Remarque: Une condition equivalente d' injectivite:
+\begin{align*}
+	\forall x \neq x' \in X \Rightarrow f(x) \neq f(x')
+\end{align*}
+\begin{defn}[Surjectivite]\index{Surjectivite}\label{defn:surjectivite}
+	Une application $f:X \mapsto Y$ est surjective ( surjection) si $\forall y \in Y  f^{-1} ( \{y\})$ possede au moins un element.\\
+	On note
+	\[ 
+	f: X \surj Y
+	\]
+		
+\end{defn}
+
+Soit $ f^{-1} ( \{y\}) \neq \emptyset$, il existe au moins $x \in X$ tq  $f(x)=y$\\
+De maniere equivalente
+\[ 
+	\text{surjectif} \iff Im(f) = f(X) = Y	
+\]
+Alors on a une application
+\begin{align*}
+	``f'' : X &\mapsto Y\\
+	x &\mapsto f(x)
+\end{align*}
+Cette application est toujours surjective.\\
+
+\begin{defn}[Bijectivite]\index{Bijectivite}\label{defn:bijectivite}
+	Une application $f:X \mapsto Y$ est bijective ( bijection) si elle est injective et surjective, cad si 
+	$\forall y \in Y, f^{-1}(\{y\}$ ( l'ensemble des antecedents de $y$ par $f$) possede exactement un element.
+	On note la bijectivite par
+	\[ 
+	f: X \simeq Y
+	\]
+\end{defn}
+
+Si $f:X \simeq Y$, alors on peut identifier les els de  $X$ avec ceux de $Y$ :
+\[ 
+	x \in X \leftrightarrow f(x) \in Y
+\]
+
+\underline{Remarque:} Si $f: X \inj Y$\\
+$Y' = f(X)$ l'application
+\[ 
+	f: X \surj Y' = f(x)
+\]
+et toujours surjective.
+et comme $f$ est injective, on obtient une bijection $f: X \simeq Y'=f(X)$ entre $X$ et $f(X)$.\\
+$X$ peut etre identifie a $f(X)$.
+
+\begin{itemize}
+	\item $Id_X$ : $\underbrace{ X \mapsto X }_{x \mapsto x}$ est bijective
+	\item $x \in \mathbb{R}_{\geq 0} \mapsto x^{2} \in \mathbb{R}_{\geq 0}$ est inj et bijective.
+	\item $ \mathcal{P} \simeq \{0,1\}^{X} = \mathcal{F} (X, \{0,1\})$
+\end{itemize}
+\underline{Exercice}\\
+$C: \mathbb{N} \times \mathbb{N} \mapsto \mathbb{N}$\\
+$ (m,n) \simeq \frac{1}{2}( ( m+n)^{2} + m +3n)$\\
+Montrer la bijectivite.
+
+
+Dans ce qui suit, soient $X$ et $Y$ des ensembles finis possedant respectivement $\abs{X}$ et $\abs{Y}$ elements et $f: X \mapsto Y$ une application entre ces ensembles. On a les proprietes suivantes:
+\begin{propo}[Injectivite et cardinalite]\index{injectivite}\index{cardinalite}\label{propo:injectivite_et_cardinalite}
+	Si $f: X \inj Y$ est injective alors $ \abs{X} \leq \abs{Y}$
+\end{propo}
+\begin{propo}[Surjectivite et cardinalite]\index{Surjectivite}\index{cardinalite}\label{propo:surjectivite_et_cardinalite}
+	Si $f: \surj Y$ est surjective alors $ \abs{X} \geq \abs{Y}$.
+\end{propo}
+
+\begin{propo}[injectivite et condition]\index{injectivite}\index{surjectivite}\label{propo:injectivite_et_condition}
+	Si $f: X \inj Y $ et $\abs{X} \geq \abs{Y}$ alors $\abs{Y} = \abs{X}$ et  $f$ bijective.
+	
+\end{propo}
+
+\begin{propo}[Surjectivite et condition]\index{surjectivite}\index{surjectivite}\label{propo:injectivite_et_condition}
+	Si $f: X \surj Y $ et $\abs{X} \leq \abs{Y}$ alors $\abs{Y} = \abs{X}$ et  $f$ bijective.
+\end{propo}
+
+\begin{propr}[Bijectivite]\index{Bijectivite}\label{propr:bijectivite}
+Si $f$ bijective, on peut lui associer une application reciproque:
+\begin{align*}
+	f^{-1}: Y &\mapsto X\\
+	y & \mapsto x
+\end{align*}
+tel que $f^{-1} ( \{y\}) = \{x\}$, $x$ unique.
+\end{propr}
+
+\section{Relation de composition par les applications reciproques}
+
+\begin{itemize}
+	\item$f: X \simeq Y$ et  $ f^{-1}: Y \simeq X$ \\
+\[ 
+	f^{-1} \circ f: X \mapsto Y \mapsto X = Id_{X}.
+\]
+En effet, $\forall x \in X$ si on pose $y = f(x)$ \\
+on a $f^{-1} ( y) = x = f^{-1}(f(x)) = x$
+\item $f \circ f^{-1}: Y \mapsto X \mapsto Y$ \\
+	$f\circ f^{-1} = Id_Y$ \\
+\item $ ( f^{-1})^{-1} =f$ 
+\item $f: X \simeq Y$ et $g: Y \simeq Z$ \\
+	Alors $g\circ f: X \mapsto Z$ est bijective et $ ( g\circ f)^{-1} = f^{-1} \circ g^{-1}$
+
+\end{itemize}
+
+
+\begin{lemma}[Composition d'applications surjectives et injectives]\index{surjectivite}\inde{bijectivite}\label{lemma:composition_d_applications_surjectives_et_injectives}
+\begin{enumerate}
+	\item Si $f$ et $g$ sont injectives, $g\circ f$ est injective.\\
+	\item Si $f$ et $g$ sont surjectives, $g\circ f$ est surjective.\\
+	\item Si $f$ et $g$ sont bijectives, $g\circ f$ est bijective et
+		\[ 
+			( g \circ f)^{-1} = f^{-1} \circ g^{-1}.
+		\]
+		
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+\begin{enumerate}
+	\item $g \circ f : X \mapsto Y \mapsto Z$ \\
+		$x \mapsto g(f(x))$ \\
+		$\forall z \in Z$ on veut montrer que $ ( g\circ f)^{-1} ( \{z\})$ a au plus un element
+		\begin{align*}
+			( g \circ f)^{-1}(\{z\}) = \{x \in X \vert g(f(x)) = z\}\\
+			\text{si } g(f(x)) = z \Rightarrow f(x) \in g^{-1}(\{z\})
+		\end{align*}
+		l'ensemble $\{x \in X \vert g(f(x)) = z\}$ est contenu dans $g^{-1}(\{z\})$ et donc possede au plus 1 element.
+		Si cet ensemble est vide on a fini $ ( g \circ f)^{-1} ( \{z\}) = \emptyset$.
+		Si $g^{-1}(\{z\}) \neq \emptyset$ alors $g^{-1} ( \{z\}) = \{y\}$\\
+		et $x \in ( g\circ f)^{-1} ( \{z\})$ verifie
+		\[ 
+			f(x) = y \Rightarrow x \in f^{-1}(\{y\})
+		\]
+		Comme $f^{-1}$ est injective $f^{-1}(\{y\})$ possede au plus un element.\\
+		Et donc $g^{-1}(f^{-1}(\{z\})$ a au plus 1 element car $g$ est surjective\\
+	\item Surjectivite: Exercice\\
+	\item Bijectivite: si $f$ et $g$ sont bijectives $g\circ f$ est bijective.\\
+		$f$ et $g$ sont inj $\Rightarrow$  $g\circ f$ inj.\\
+		$f$ et $g$ sont surj $\Rightarrow$ $g\circ f$ surj\\
+		Si $f$ et $g$ sont bij $\Rightarrow$ $g\circ f$ est injective et surjective\\
+		$\Rightarrow$  $g \circ f$ bijective.
+\end{enumerate}
+
+\end{proof}
+
+\begin{propo}[Inverse d'une composition]\index{inverse}\index{composition}\label{propo:inverse_d_une_composition}
+On veut montrer que $\forall z \in Z$ 
+\[ 
+	X := ( g\circ f)^{-1} ( z) = f^{-1} \circ g^{-1} ( z) \underbrace{=}_{?} f^{-1} ( g^{-1}(z)) = x'
+\]
+
+\end{propo}
+\begin{proof}
+\begin{align*}
+	g \circ f ( x) &= g(f(x)) = z\\
+	g\circ f( f^{-1}(g^{-1}(z))) &= g(f(f^{-1}(g^{-1}(z))))\\
+				     &= g( f\circ f^{-1}(g^{-1}(z)))
+\end{align*}
+Or on sait que
+\[ 
+	f \circ f^{-1} = g \circ g^{-1} Id_{Y}
+\]
+et donc
+\[ 
+	g(f\circ f^{-1}(g^{-1}(z))) = g(g^{-1}(z)) =z = ( g \circ f)(x) 
+\]
+On a donc montre que
+\[ 
+	(g \circ f)(x) = z = ( g\circ f)(x')
+\]
+
+\end{proof}
+
+
+
+
+
+
+
+\end{document}	

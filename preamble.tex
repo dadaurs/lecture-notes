@@ -27,6 +27,7 @@
 \usepackage{pdfpages}
 \usepackage{transparent}
 \usepackage{thmtools}
+\usepackage{amssymb}
 %\usepackage{fancyhdr}
 \usepackage{stmaryrd} % for \lightning
 %\pagestyle{fancy}
@@ -47,6 +48,8 @@
 \newcommand\norm[1]{\left\vert#1\right\vert}
 \newcommand\Norm[1]{\left\lVert#1\right\rVert}
 \newcommand\abs[1]{\left\vert#1\right\vert}
+\newcommand\inj{\hookrightarrow}
+\newcommand\surj{\twoheadrightarrow}
 
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{background},   
@@ -109,13 +112,19 @@
 \theoremheaderfont{\color{myyellow}\normalfont\bfseries}
 \theorempostwork{\textcolor{myyellow}{\hrule height 2pt width \textwidth}}
 \theoremindent10pt
-\newtheorem{crly}[thm]{\faSpaceShuttle Corollary}
+\newtheorem{crly}[thm]{\faSpaceShuttle Corollaire}
 
 \theoremprework{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
 \theoremheaderfont{\color{mymagenta}\normalfont\bfseries}
 \theorempostwork{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
 \theoremindent10pt
-\newtheorem{lemma}[thm]{\faTree Lemma}
+\newtheorem{lemma}[thm]{\faTree Lemme}
+
+\theoremprework{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
+\theoremheaderfont{\color{mymagenta}\normalfont\bfseries}
+\theorempostwork{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
+\theoremindent10pt
+\newtheorem{propr}[thm]{\faTree Propriete}
 
 \theoremprework{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
 \theoremheaderfont{\color{mycyan}\normalfont\bfseries}
@@ -127,7 +136,7 @@
 \theorembodyfont{\normalfont}
 \theoremheaderfont{\color{mycyan}\normalfont\bfseries}
 \theorempostwork{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
-\theoremsymbol{\ensuremath{_\square}}
+\theoremsymbol{\square}
 \newtheorem*{proof}{\faPencil* Proof}
 \theoremsymbol{}
 

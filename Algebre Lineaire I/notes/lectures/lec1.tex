@@ -31,12 +31,12 @@ Ici, on introduit de maniere moins rigoureuse qu'avec les systemes algebriques.
 
 \begin{itemize}
 	\item "Il existe" $\exists$, "Il existe un unique"  $\exists !$\\
-	\item "Quelque soit", "Pour tout",  $\forall$\\
+	\item "Quel que soit", "Pour tout",  $\forall$\\
 	\item "Implique",  $\Rightarrow$ \\
 	\item "est equivalent" $\iff$, ou ``ssi''\\
 	\item "sans perte de generalite" ``spdg'', ``wlog''\\
-	\item "on peut supposer" ``ops, wma''
-	\item "tel que" $\vert$
+	\item ``on peut supposer'' ``ops, wma''\\
+	\item ``tel que'' t.q. ou $\vert$
 \end{itemize}
 
 On ne va pas parler de logique mathematique dans ce cours, ni de definition rigoureuse des ensembles
@@ -44,7 +44,7 @@ On ne va pas parler de logique mathematique dans ce cours, ni de definition rigo
 \section{Ensembles}
 Un ensemble est une collection d'elements ``appartenant'' a $E$
 \[ 
-e \in E
+	e \underbrace{\in}_{\text{ ``appartient à'' }} E
 \]
 
 \subsection{Exemples}
@@ -53,14 +53,15 @@ e \in E
 	\item $ \mathbb{N} = \{ 0,1,2 \}$\\
 	\item $\mathbb{Z} = \{-2,-1,0,1,2\}$\\
 	\item $\mathbb{Q} = \{ \frac{p}{q} \vert p,q \in \mathbb{Z}, q \neq 0 \}$
-	\item $\mathbb{R}$
+	\item $\mathbb{R}$, nombres réels, nombres complexes.
 \end{itemize}
 \section{Sous-Ensembles}
 Un sous-ensemble $A$ d'un ensemble $E$ est un ensemble t.q. tout element de $A$ appartient a $E$.
 Formellement:
-\[ 
-	a \in A \Rightarrow a \in E
-\]
+\begin{align*}
+	a \in A &\Rightarrow a \in E\\
+	A \underbrace{ \subset }_{ \text{inclut dans $E$}} E
+\end{align*}
 
 L'ensemble vide est un sous-ensemble de $E$ pour tout ensemble $E$.\\
 \[ 
@@ -68,14 +69,14 @@ L'ensemble vide est un sous-ensemble de $E$ pour tout ensemble $E$.\\
 \]
 
 
-Deux ensembles $E$ et $F$ sont egaux si ils ont les memes elements, ssi
+Deux ensembles $E$ et $F$ sont egaux si ils ont les mêmes élements, ssi
 E est inclus dans F et F est inclus dans E ( regarder  notations)
 \[ 
-E \subset F \land F \subset E \Rightarrow E = F
+E \subset F \land F \subset E \Rightarrow E = F.
 \]
 
 \section{$\mathcal{P}(E)$ l'ensemble des sous-ensembles}
-C'est l'ensemble des $A \in E$ 
+C'est l'ensemble des $A \in E$, aussi appelé l'ensemble des parties de $E$.
 
 Remarque: L'ensemble de TOUS les ensembles n'est pas un ensemble et c'est du au paradoxe de Russell (Logicien anglais)
 Si c'etait le cas, on considererait
@@ -87,15 +88,13 @@ Cet ensemble Ncont est-il contenu dans lui meme ou pas?\\
 Ncont est il contenu dans lui meme ou pas? \contra
 
 \section{Operations sur les ensembles}
+\begin{itemize}
+	\item $A,B \subset E$
 \[ 
-A,B dans E
+A \cup B = \{ e \in E \text{ tq } e \in A \text{ ou bien } e \in B \}
 \]
-\[ 
-A \cup B = \{ e \in E tq e \in A \intertext{ ou bien } e \in B \}
-\]
-\[ 
-	A \cap B = \{ e \in E \vert e \in A  e \in B \}
-\]
+Réunion de $A$ et $B$.
+\item $A \cap B = \{ e \in E \vert e \in A  e \in B \}$
 
 Difference: $A-B$ ou $A\setminus B$
  \[ 
@@ -104,27 +103,11 @@ Difference: $A-B$ ou $A\setminus B$
 Difference symmetrique:
 \[ 
 	A \Delta B = ( A -B) \cup ( B-A)
-
 \]
-Si $A \cap B $
-
-
+Si $A \cap B = \emptyset$  on dit que $A$ et  $B$ sont disjoints.
 $ A_1, \ldots, A_{n} \subset E $ $n \geq 1$ \\
+\end{itemize}
 
-
-\section{$\times$: Produit cartesien}
-
-Si $A$ et $B$ sont des ensembles
-
-\[ 
-	A\times B = \{ ( a,b), a \in A b \in B\}
-\]
-($\neq ( b,a)$)
-
-On peut bien sur iterer
-\[ 
-	A_1 \times \ldots \times A_{n}  = \prod_{i=1}^{n} A_{i}  = \[ (a_1,a_2,\ldots,a_{n}  avec $a_i \in A_{i} $)
-\]
 On peut noter une grande reunion ainsi:
 \begin{align*}
 	A_1 \cup A_2 \cup \ldots \cup A_{n} &= A_1 \cup ( A_2 \cup \ldots \cup A_{n} )\\
@@ -133,12 +116,22 @@ On peut noter une grande reunion ainsi:
 \end{align*}
 
 
-$ ( a_1, \ldots, a_{n} ) \in A_1 \times \ldots \times A_{n} $ s'appelle $n$-uplet.
+%$\( a_1, \ldots, a_{n}\) \in A_1 \times \ldots \times A_{n}$ s'appelle $n$-uplet.
 
+\section{$\times$: Produit cartesien}
+
+Si $A$ et $B$ sont des ensembles
+\begin{align*}
+A\times B = \{ (a,b) \vert a \in A \land b \in B\}
+\end{align*}
+On peut bien sur iterer
+\[ 
+	A_1 \times \ldots \times A_{n}  = \prod_{i=1}^{n} A_{i}  =  \{a_1,a_2,\ldots,a_{n} \text{ avec } a_i \in A_{i}\}
+\]
 \section{Applications entre ensembles}
 %\begin{definition}[Application lineaire]\index{Application lineaire}\label{def:application_lineaire}
 	
-Soient $X$ $Y$ deux ensembles.\\
+Soient $X$ et $Y$ deux ensembles.\\
 
 Une application (fonction) $f$ est la donnee pour chaque element $x \in X$ (L'espace de depart) d'un element $f(x) \in Y$ (l'espace d'arrivee)
 %\end{definition}
@@ -216,18 +209,12 @@ On a que
 \]
 \end{thm}
 \begin{proof}
-\[ 
-	h \circ ( g \circ f) : x \longrightarrow h((g\circ f) ( x))
-\]
-\[ 
-	= h(g(f(x))) \in W
-\]
-\[ 
-	( h\circ g) \circ f : x \longrightarrow ( h\circ g) ( f(x))
-\]
-\[ 
-	h(g(f(x))) \in W
-\]
+	\begin{align*}
+		h \circ ( g \circ f) : x &\longrightarrow h((g\circ f) ( x))
+	&= h(g(f(x))) \in W
+		( h\circ g) \circ f : x &\longrightarrow ( h\circ g) ( f(x))
+		h(g(f(x))) &\in W
+	\end{align*}
 
 
 
