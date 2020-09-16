@@ -1,0 +1,162 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Wed 16 Sep}{Cours de Physique Generale}
+\section{Physique}
+\begin{itemize}
+	\item Science dont le but est d'etudier et de comprendre les composants de la matiere et leurs interactions mutuelles.\\
+	\item Sur la base des proprietes observees de la matiere et des interactions, le physicien tente d'expliquer les phenomenes naturels observables.\\
+	\item Les ``explications'' sont donnees sous forme de lois aussi fondamentales que possible: elles resument notre comprehension des phenomenes physiques.\\
+	\item Les maths sont le language qu'on utilise pour decrire ces phenomenes.
+\end{itemize}
+\underline{Exemple}\\
+Une particule se deplace sur un axe droit.\\
+Au temps $t_1$ position $x_1 = x(t_1)$.
+Au temps $t_2$ position $x_2 = x(t_2)$.
+$\Delta x = x_2 -x_1$ et $\Delta t = t_2-t_1$\\
+Donc la vitesse moyenne 
+\[ 
+	v_{moyenne} = \frac{\Delta x}{\Delta t}
+\]
+Mais on peut faire diminuer $\Delta t$, pour connaitre la vitesse moyenne sur un temps infinitesimal:
+\[ 
+	v = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{dx(t)}{dt} = \dot{x}(t)
+\]
+Donc la vitesse instantanee est la derivee de la fonction $x(t)$ par rapport a $t$.
+
+On peut faire la meme chose avec l'acceleration\\
+Au temps $t_1$, vitesse $ v_1 = v(t_1)$.\\
+Au temps $t_2$, vitesse $ v_2 = v(t_2)$.\\
+Donc l'acceleration moyenne est
+\[ 
+	a_{moyenne}= \frac{v_2-v_1}{t_2 -t_1} = \frac{\Delta v}{\Delta t}
+\]
+
+Et donc par le meme raisonnement, l'acceleration instantanee est
+\[ 
+	a = \lim_{\Delta t \to 0} \frac{\Delta v}{\Delta t} = \frac{dv(t)}{dt} := \dot{v}(t) = \ddot{x}(t)
+\]
+
+\subsection{Exemple de loi physique: l'addition des vitesse}
+Si je marche a la vitesse $v_{marche}$ sur un tapis , alors la vitesse par rapport au sol est
+\[ 
+	V = v_{marche} + v_{tapis}
+\]
+C'est la loi d'addition des vitesses de galilee.\\
+Ici, c'est une addition \underline{vectorielle} qu'il faut faire.\\
+
+Cette loi est 
+\begin{itemize}
+	\item independante des vitesses\\
+	\item independante des objets en presence\\
+	\item independante du temps ( hier, aujourd'hui, demain)\\
+	\item etc...
+\end{itemize}
+
+\subsection{Lois de conservation}
+Ce sont les lois les plus fondamentales.
+\begin{itemize}
+	\item Conservation de l'energie\\
+	\item Conservation de la quantite de mouvement\\
+	\item Conservation du moment cinetique
+\end{itemize}
+Ces lois sont valables dans toutes les situations ( classiques, relativistes ou quantiques) .\\
+Ne peuvent pas etre formulees mathematiquement de facon unique.\\
+Resultent des principes ``d'invariance''  (ou de symmetrie)  tres generaux.\\
+\subsection{Invariance par changement de referentiel}
+\begin{itemize}
+	\item Changement de referentiel ( ou d'observateur):
+	Referentiel $O'x'y'z'$ en mouvement par rapport au referentiel $Oxyz$ \\
+\item Les lois de la physqiue sont-elles invariantes par rapport a n'importe quel changement de referentiel?\\
+	Autrement dit, si les observateurs $O$ et $O'$ font la meme experience, obtiendront-ils le meme resultat?\\
+\item Principe de Galilee:\\
+	Les lois de la physique sont les memes (i.e. invariantes)  pour deux observateurs en mouvement rectiligne uniforme l'un par rapport a l'autre.
+\end{itemize}
+\section{La mecanique classique}
+\begin{enumerate}
+	\item Mecanique:\\
+		science du mouvement ( ou du repos) de systemes materiels caracterises par des variables d'espace et de temps.\\
+	\item Cinematique:\\
+		Description du mouvement.\\
+	\item Dynamique:\\
+		Etude de la relation entre le mouvement et les causes de sa variation(forces, lois de Newton, th. du moment cinetique).\\
+\item Statique:\\
+	Etude et description de l'equilibre.
+\end{enumerate}
+\section{Objectifs du cours de mecanique generale}
+$\bullet$ Apprendre a mettre sous forme mathematique un probleme, une situation physique:
+\begin{itemize}
+	\item Definir le probleme, le modeliser\\
+	\item Choisir une description mathematique\\
+	\item Poser les equations regissant la physique du probleme\\
+	\item Resoudre et/ou discuter la solution
+\end{itemize}
+$\bullet$ Developper un ``savoir-faire''  pratique, mais egalement un esprit scientifique:
+\begin{itemize}
+	\item Reperer le sens physique derriere les equations\\
+	\item Savoir formaliser mathematiquement la donnee d'un probleme physique.
+\end{itemize}
+
+\section{Le modele du ``point materiel'' }
+\begin{defn}[Point materiel]\index{Point materiel}\label{defn:point_materiel}
+	un systeme est assimile a un point geometrique auquel on attribue toute la masse de ce systeme, et dont l'etat est decrit en tout temps par une ( seule) position et une ( seule) vitesse.
+\end{defn}
+$\bullet$ Notion introduite par Newton.\\
+
+On approxime un systeme a quelquechose de plus simple, le point peut etre ``gros'' ( exemple:la terre, le soleil).\\
+Pas applicable dans toutes les situations; le modele a des limites..
+\section{Mouvement Rectiligne Uniforme}
+Mouvement d'un point materiel se deplacant en ligne droite a vitesse constante.\\
+On definit un axe $x$ associe a la trajectoire rectiligne, avec une origine $O$.
+\[ 
+	v(t) := \frac{dx(t)}{dt} = \dot{x}(t) = v_0= \text{constante}
+\]
+La solution s'obtient en integrant le dessus: $x(t) = v_0 t + x_0$, ou $ x_0=$ constante.\\
+On appelle le resultat de cette integration l'equation horaire.\\
+\section{Mouvement rectiligne uniformement accelere}
+Ici
+\[ 
+	a(t) := \frac{d^{2}x(t)}{dt^{2}	} = \ddot{x} ( t) = a_0 = constante	
+\]
+C'est une equadiff d'ordre 2 faisant intervenir la derivee seconde de $x(t)$.\\
+Solution
+\begin{align*}
+	x(t) &= a_0 \frac{t^{2}}{2} + v_0 t + x_0\\
+	v(t) &= \frac{dx}{dt} = a_0 t + v_0
+\end{align*}
+ou $ x_0$ et $ v_0$ sont des constantes.\\
+
+\section{Lois de newton}
+\begin{itemize}
+	\item mouvement rectiligne uniforme $\Rightarrow \vec{F} = \vec{0}$ \\
+	\item $\vec{F} = m \vec{a}$ \\
+	\item Action reaction $\vec{F} = -\vec{F}$
+\end{itemize}
+\section{Force de pesanteur et chute des corps}
+$\bullet$ L'attraction terrestre donne lieu a une force verticale ( le poids)  proportionelle a la masse $m$ :
+\[ 
+F= mg
+\]
+$g \approx 9.8 \frac{m}{s^{2}}$\\
+$\bullet$ Application de la 2eme loi de Newton:\\
+Si le poids est la seule force appliquee a un point materiel
+\[ 
+F = ma \Rightarrow a = g = constante
+\]
+Dans le vide, les corps ont un mouvement uniformement accelere
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+\end{document}	

@@ -108,11 +108,10 @@ on a $f^{-1} ( y) = x = f^{-1}(f(x)) = x$
 \item $ ( f^{-1})^{-1} =f$ 
 \item $f: X \simeq Y$ et $g: Y \simeq Z$ \\
 	Alors $g\circ f: X \mapsto Z$ est bijective et $ ( g\circ f)^{-1} = f^{-1} \circ g^{-1}$
-
 \end{itemize}
 
 
-\begin{lemma}[Composition d'applications surjectives et injectives]\index{surjectivite}\inde{bijectivite}\label{lemma:composition_d_applications_surjectives_et_injectives}
+\begin{lemma}[Composition d'applications surjectives et injectives]\index{surjectivite}\index{bijectivite}\label{lemma:composition_d_applications_surjectives_et_injectives}
 \begin{enumerate}
 	\item Si $f$ et $g$ sont injectives, $g\circ f$ est injective.\\
 	\item Si $f$ et $g$ sont surjectives, $g\circ f$ est surjective.\\
@@ -129,8 +128,8 @@ on a $f^{-1} ( y) = x = f^{-1}(f(x)) = x$
 		$x \mapsto g(f(x))$ \\
 		$\forall z \in Z$ on veut montrer que $ ( g\circ f)^{-1} ( \{z\})$ a au plus un element
 		\begin{align*}
-			( g \circ f)^{-1}(\{z\}) = \{x \in X \vert g(f(x)) = z\}\\
-			\text{si } g(f(x)) = z \Rightarrow f(x) \in g^{-1}(\{z\})
+			( g \circ f)^{-1}(\{z\}) &= \{x \in X \vert g(f(x)) = z\}\\
+			\text{si } g(f(x)) &= z \Rightarrow f(x) \in g^{-1}(\{z\})
 		\end{align*}
 		l'ensemble $\{x \in X \vert g(f(x)) = z\}$ est contenu dans $g^{-1}(\{z\})$ et donc possede au plus 1 element.
 		Si cet ensemble est vide on a fini $ ( g \circ f)^{-1} ( \{z\}) = \emptyset$.
@@ -145,10 +144,9 @@ on a $f^{-1} ( y) = x = f^{-1}(f(x)) = x$
 	\item Bijectivite: si $f$ et $g$ sont bijectives $g\circ f$ est bijective.\\
 		$f$ et $g$ sont inj $\Rightarrow$  $g\circ f$ inj.\\
 		$f$ et $g$ sont surj $\Rightarrow$ $g\circ f$ surj\\
-		Si $f$ et $g$ sont bij $\Rightarrow$ $g\circ f$ est injective et surjective\\
-		$\Rightarrow$  $g \circ f$ bijective.
+		Si $f$ et $g$ sont bij $\Rightarrow g\circ f$ est injective et surjective\\
+		$\Rightarrow g \circ f$ bijective.
 \end{enumerate}
-
 \end{proof}
 
 \begin{propo}[Inverse d'une composition]\index{inverse}\index{composition}\label{propo:inverse_d_une_composition}
@@ -176,10 +174,130 @@ On a donc montre que
 \[ 
 	(g \circ f)(x) = z = ( g\circ f)(x')
 \]
+$\Rightarrow x$ et $x'$ on la meme image par $g\circ f $ et comme $g\circ f$ est injective $x=x'$.
+Donc $\forall z \in Z (g\circ f)^{-1}(z) = f^{-1}\circ g^{-1}(z)$.
 
 \end{proof}
+%\section{Notations}
+L'ensemble des applications entre $X$ et $Y$ seran note
+\[ 
+	\mathcal{F} ( X,Y) = HOM_{ENS}(X,Y) = Y^{X}
+\]
+\begin{defn}[Notations Injection]\index{notations}\index{injectivite}\label{def:notations_injection}
+L'ensemble des applications injectives sera note
+\[ 
+	INJ_{ENS}(X,Y)
+\]
+
+\end{defn}
 
 
+\begin{defn}[Notations Surjection]\index{notations}\index{surjectivite}\label{def:notations_injection}
+L'ensemble des applications surjectives sera note
+\[ 
+	SURJ_{ENS}(X,Y)
+\]
+
+\end{defn}
+
+\begin{defn}[Notations Bijection]\index{notations}\index{bijectivite}\label{def:notations_injection}
+L'ensemble des applications bijectives sera note
+\[ 
+	BIJ_{ENS}(X,Y) = Iso_{ENS}(X,Y)		
+\]
+Si il s'agit d'une bijections de $X$ vers $Y=X$ alors
+\[ 
+	Hom_{ENS}(X,X) = END_{ENS}(X) = AUT_{ENS} = ISO_{ENS}(X)
+\]
+On appelle cet ensemble aussi parfois l'ensemble des permutations de $X$.
+
+\end{defn}
+
+\chapter{Groupes}
+\section{Le groupe Symmetrique}
+Voici un exemple d'un groupe, le groupe des bijections muni de la composition.\\
+$X$ ensemble
+\[ 
+	Bij(X,X) = Bij(X)
+\]
+Clairement $\{ Id_X \} \subset Bij(X) \Rightarrow Bij(X) \neq \emptyset $.\\
+Supposons $f,g \in Bij(X)$, alors
+\[ 
+	f,g \mapsto g \circ f \in Bij(X)
+\]
+On dispose donc de cette loi de composition:
+\begin{align*}
+\circ: 
+\begin{cases}
+	Bij(X) \times Bij(X) &\longrightarrow Bij(X)\\
+	( g,f) &\longrightarrow g \circ f
+\end{cases}
+\end{align*}
+ $\circ$ est associative:\\
+ $f,g,h \in Bij(X)$, alors
+ \[ 
+	 ( f \circ g) \circ h = f \circ ( g \circ h) = f \circ g \circ h
+ \]
+ $Id_X$ est neutre: $\forall f \in Bij(X)$ 
+ \[ 
+	 f \circ Id_X = Id_X \circ f = f
+ \]
+Donc
+\[ 
+	x \in X (f \circ Id_X)(x) = f(Id_X(x)) = f(x)
+\]
+
+Pour chaque element $f$ on trouve une reciproque notee $f^{-1}$ tel que
+\[ 
+f^{-1} \circ f = Id_X= f \circ f^{-1}
+\]
+
+Toutes ces proprietes font de 
+\[ 
+	Bij(X) = Aut_{ENS}(X)
+\]
+un \underline{groupe}
+
+\begin{defn}[Groupe abstrait]\index{groupe}\label{defn:groupe_abstrait}
+	Un groupe $(G,\star, e_G, \cdot^{-1})$ est la donnee d'un quadruple forme
+	\begin{itemize}
+		\item d'un ensemble $G$ non-vide\\
+		\item d'une application ( appellee loi de composition interne) $\star$ tq
+			\begin{align*}
+				G \times G &\mapsto G\\
+				( g,g') &\mapsto \star(g,g') =: g \star g'
+			\end{align*}
+		\item d'un element $e_G \in G$ (element neutre)\\
+		\item de l'application d'inversion $\cdot^{-1}$
+			\begin{align*}
+			G &\mapsto G\\
+			g & \mapsto g^{-1}	
+			\end{align*}
+		ayant les proprietes suivantes\\
+	\item Associativite: $\forall g,g',g'' \in G, ( g\star g')\star g'' = g \star(g'\starg'')$.\\
+	\item Neutralite e $e_G$ : $\forall g \in G, g \star e_G = e_G \star g = g$.\\
+	\item Inversibilite: $\forall g \in G, g^{-1} \star g = g \star g^{-1} = e_G$.
+	\end{itemize}
+\end{defn}
+Quelques exemples:
+\begin{itemize}
+	\item $(Bij(X), \circ, Id_X, \cdot^{-1}) $ est un groupe.\\
+	\item $(\mathbb{Z}, +, 0, - \cdot) $ est un groupe.\\
+	\item $( \mathbb{Q}\setminus \{0\}, \times, 1,  \cdot^{-1}) $ est un groupe.\\
+	\item $( \{1,-1\}, \times, 1,  \cdot^{-1}) $ est un groupe.\\
+\end{itemize}
+\begin{defn}[Groupes commutatifs]\index{groupes}\label{defn:groupes_commutatifs}
+	Un groupe $(G, \star, e_G, \cdot^{-1}$ est dit commutatif si $\star$ possede la propriete supplementaire de commutativite:
+	\[ 
+	\forall g, g' \in G  g\star g' = g' \star g
+	\]
+	
+\end{defn}
+\underline{Exemple} Les groupes $(\mathbb{Z},+)$ ou $(\mathbb{Q}\setminus \{0\},x)$ sont des groupes commutatifs.\\
+Par contre si $X$ possede au moins 3 elements $Bij(X)$ n'est pas commutatif.
+
+
+	
 
 
 

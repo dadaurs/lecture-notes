@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.8)  14 SEP 2020 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.8)  16 SEP 2020 14:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -957,9 +957,18 @@ Package: thm-listof 2019/12/22 v68
 Package: thm-restate 2019/12/22 v68
 ) (/usr/share/texmf-dist/tex/latex/thmtools/thm-ntheorem.sty
 Package: thm-ntheorem 2019/12/22 v68
+)) (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (/usr/share/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
 Package: stmaryrd 1994/03/03 St Mary's Road symbol package
-\symstmry=\mathgroup5
+\symstmry=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
 )
@@ -975,11 +984,19 @@ LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 \c@endcrlyctr=\count356
 \c@currlemmactr=\count357
 \c@endlemmactr=\count358
-\c@curraxiomctr=\count359
-\c@endaxiomctr=\count360
-\c@currproofctr=\count361
-\c@endproofctr=\count362
-\c@proof=\count363
+\c@currproprctr=\count359
+\c@endproprctr=\count360
+\c@currrmqctr=\count361
+\c@endrmqctr=\count362
+\c@curraxiomctr=\count363
+\c@endaxiomctr=\count364
+\c@currexemplectr=\count365
+\c@endexemplectr=\count366
+\c@currproofctr=\count367
+\c@endproofctr=\count368
+\c@proof=\count369
+\c@currexoctr=\count370
+\c@endexoctr=\count371
  (/usr/share/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/02/14 v1.6 Multi-file projects (package)
 )) (./main.aux)
@@ -1010,7 +1027,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count364
+\c@section@level=\count372
 LaTeX Info: Redefining \Ref on input line 520.
 )
 LaTeX Info: Redefining \ref on input line 5.
@@ -1056,16 +1073,16 @@ LaTeX Info: Redefining \selectfont on input line 5.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count365
+\scratchcounter=\count373
 \scratchdimen=\dimen303
 \scratchbox=\box119
-\nofMPsegments=\count366
-\nofMParguments=\count367
+\nofMPsegments=\count374
+\nofMParguments=\count375
 \everyMPshowfont=\toks65
-\MPscratchCnt=\count368
+\MPscratchCnt=\count376
 \MPscratchDim=\dimen304
-\MPnumerator=\count369
-\makeMPintoPDFobject=\count370
+\MPnumerator=\count377
+\makeMPintoPDFobject=\count378
 \everyMPtoPDFconversion=\toks66
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1084,7 +1101,7 @@ Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             reported on input line 5.
 LaTeX Info: Redefining \up on input line 5.
  ABD: EveryShipout initializing macros
-\c@lstlisting=\count371
+\c@lstlisting=\count379
  (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
  (/usr/share/texmf-dist/tex/latex/graphics/lscape.sty
@@ -1130,12 +1147,33 @@ LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 4
  (/usr/share/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 4.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 4.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 4.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 4.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 4.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 4.
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 4.
  (/usr/share/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 4.
  (/usr/share/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-))
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 15.0049pt on input line 4.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 4.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 15.0049pt on input line 4.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 4.
+)
 \tf@toc=\write7
 
 showing thm
@@ -1149,97 +1187,41 @@ showing proof
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on input line 2.
  (/usr/share/texmf-dist/tex/latex/fontawesome5/ufontawesomefree0.fd)
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree3 on input line 3.
- (/usr/share/texmf-dist/tex/latex/fontawesome5/ufontawesomefree3.fd)) [2
+ (/usr/share/texmf-dist/tex/latex/fontawesome5/ufontawesomefree3.fd) [2
 
-]) (./lectures/lec1.tex
+]) [3]) (./lectures/lec1.tex
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 3.
 
 Chapitre 1.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 21.61124pt on input line 5.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 5.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 21.61124pt on input line 5.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 5.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 6.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 6.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 6.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 6.
 Package hyperref Info: bookmark level for unknown thm defaults to 0 on input line 18.
 
-LaTeX Warning: Marginpar on page 3 moved.
+LaTeX Warning: Marginpar on page 4 moved.
 
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 26.
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--30
-[][]\T1/pplj/m/n/8 .Il se pour-rait qu'il y ait 13 va-leurs
- []
-
-
-LaTeX Warning: Marginpar on page 3 moved.
-
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 32.
-./lectures/lec1.tex:44: Undefined control sequence.
-<argument> _\square 
-                    
-l.44 \end{proof}
-                
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-./lectures/lec1.tex:44: Missing { inserted.
-<to be read again> 
-                   $
-l.44 \end{proof}
-                
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
+Underfull \vbox (badness 5217) has occurred while \output is active []
 
-./lectures/lec1.tex:44: Missing } inserted.
-<inserted text> 
-                }
-l.44 \end{proof}
-                
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3
+ [4
 
 ]
-./lectures/lec1.tex:59: Undefined control sequence.
-<argument> _\square 
-                    
-l.59 \end{proof}
-                
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./lectures/lec1.tex:59: Missing { inserted.
-<to be read again> 
-                   $
-l.59 \end{proof}
-                
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./lectures/lec1.tex:59: Missing } inserted.
-<inserted text> 
-                }
-l.59 \end{proof}
-                
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 Chapitre 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1256,7 +1238,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--75
  []
 
 
-LaTeX Warning: Marginpar on page 4 moved.
+LaTeX Warning: Marginpar on page 5 moved.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 77--77
@@ -1269,136 +1251,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--77
  []
 
 
-LaTeX Warning: Marginpar on page 4 moved.
-
-[4]
-./lectures/lec1.tex:100: Undefined control sequence.
-<argument> _\square 
-                    
-l.100 \end{proof}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./lectures/lec1.tex:100: Missing { inserted.
-<to be read again> 
-                   $
-l.100 \end{proof}
-                 
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./lectures/lec1.tex:100: Missing } inserted.
-<inserted text> 
-                }
-l.100 \end{proof}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./lectures/lec1.tex:102: Undefined control sequence.
-<argument> \texbf 
-                  {Exercice}
-l.102 \underline{\texbf{Exercice}}
-                                  \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Package hyperref Info: bookmark level for unknown propo defaults to 0 on input line 105.
-./lectures/lec1.tex:114: Undefined control sequence.
-<argument> _\square 
-                    
-l.114 	\]
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./lectures/lec1.tex:114: Missing { inserted.
-<to be read again> 
-                   \hbox 
-l.114 	\]
-         
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./lectures/lec1.tex:114: Missing } inserted.
-<inserted text> 
-                }
-l.114 	\]
-         
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
 LaTeX Warning: Marginpar on page 5 moved.
+
+[5]
+Package hyperref Info: bookmark level for unknown propo defaults to 0 on input line 105.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 117.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 117.
+
+
+LaTeX Warning: Marginpar on page 6 moved.
 
 Package hyperref Info: bookmark level for unknown crly defaults to 0 on input line 121.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5]
-./lectures/lec1.tex:132: Undefined control sequence.
-<argument> _\square 
-                    
-l.132 	\]
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./lectures/lec1.tex:132: Missing { inserted.
-<to be read again> 
-                   \hbox 
-l.132 	\]
-         
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./lectures/lec1.tex:132: Missing } inserted.
-<inserted text> 
-                }
-l.132 	\]
-         
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./lectures/lec1.tex:135: Undefined control sequence.
-<argument> \texbf 
-                  {Exercice}
-l.135 \underline{\texbf{Exercice}}
-                                  \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
+ [6]
 
 ./lectures/lec1.tex:145: Package amsmath Error: Invalid use of \intertext.
 
@@ -1434,37 +1303,54 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-)
+) (./lectures/lec2.tex
+Package hyperref Info: bookmark level for unknown defn defaults to 0 on input line 5.
+ [7] [8]
+Package hyperref Info: bookmark level for unknown rmq defaults to 0 on input line 67.
+ [9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+
+LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
+(Font)              using `U/stmry/m/n' instead on input line 160.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11])
 
 Package bibentry Warning: You have used \nobibliography* 
 (bibentry)                without a following \bibliography.
 (bibentry)                You may not be able to run BibTeX.
 
 \tf@thm=\write8
-[6]
+[12]
 \tf@loe=\write9
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 11.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 11.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 12.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 12.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 11.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 11.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 11.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 12.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 12.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 12.
  ) 
 Here is how much of TeX's memory you used:
- 32388 strings out of 480478
- 568273 string characters out of 5905960
- 851159 words of memory out of 5000000
- 47630 multiletter control sequences out of 15000+600000
- 626719 words of font info for 173 fonts, out of 8000000 for 9000
+ 33131 strings out of 480478
+ 576915 string characters out of 5905960
+ 857112 words of memory out of 5000000
+ 48298 multiletter control sequences out of 15000+600000
+ 639702 words of font info for 212 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,12n,62p,976b,813s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{crly.8} has been referenced but does not exist, replaced by a fixed one
-
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free3.enc}{/usr/share/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc}{/usr/share/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}</usr/share/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (6 pages, 144286 bytes).
+ 63i,15n,62p,976b,753s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free3.enc}{/usr/share/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc}{/usr/share/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}</usr/share/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (12 pages, 188569 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 2597 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 286 PDF objects out of 1000 (max. 8388607)
+ 248 compressed objects within 3 object streams
+ 91 named destinations out of 1000 (max. 500000)
+ 2605 words of extra memory for PDF output out of 10000 (max. 10000000)
 
