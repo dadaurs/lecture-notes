@@ -1,0 +1,57 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Fri 18 Sep}{Calcul et Algorithmes I}
+\chapter{Algorithmes}
+\section{Formalisation d'algorithmes}
+\begin{defn}[Algorithme]
+	Un algorithme est une description abstraite des etapes conduisant a la solution d'un probleme
+\end{defn}
+
+\begin{exemple}
+	\textbf{Probleme:}\\
+	Trouver la valeur maximale dans une liste\\
+	Une liste c'est un element du produit cartesien de $E^{n}$, $n$ taille de la liste.\\
+	On pourrait ordonner la liste et retourner le dernier element.\\
+	\begin{itemize}
+		\item comparer les elements de la liste entre eux\\
+		\item a chaque fois prendre le plus gd.\\
+		\item au fur et a mesure
+	\end{itemize}
+	
+\end{exemple}
+
+\subsection{Methodologie}
+But: Pour un probleme, trouver une sequence d'actions permettant de produire une solution acceptable en un temps raisonnable.
+\begin{itemize}
+	\item Bien identifier le probleme
+		\begin{itemize}
+			\item Quelle question?\\
+			\item Quelles entrees?\\
+			\item Quelles sorties?
+		\end{itemize}
+	\item Trouver un algorithme correct?\\
+		verifier qu'il est effectivement correct, qu'il se termine dans tous les cas.\\
+	\item trouver l'algorithme le plus efficace possible
+\end{itemize}
+\subsection{Qu'est-ce qu'un algorithme?}
+Moyen pour un humain de representer la resolution d'un probleme donne\\
+\begin{defn}[Algorithme]
+	Composition d'un ensemble fini d'operations elementaires bien definies operant sur un nombre fini de donnees et effectuant un traitement bien defini:
+	\begin{itemize}
+		\item suite finie de regles a appliquer\\
+		\item dans un ordre determine\\
+		\item a un nombre fini de donnees
+\end{itemize}
+Un algorithme peut etre
+\begin{itemize}
+	\item sequentiel: operations s'executent en sequence\\
+	\item parallele: certaines de ses operations s' executent en parallele: simultanement\\
+	\item reparti: certaines de ses operations s executent sur plusieurs machines.
+\end{itemize}
+\end{defn}
+
+
+
+
+
+\end{document}	

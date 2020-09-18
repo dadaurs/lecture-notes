@@ -1,0 +1,77 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Wed 16 Sep}{Notions Mathematiques}
+\section{Quelques notions mathematiques}
+\subsection{Fonctions}
+\[ 
+	F(x) \underbrace{ \longrightarrow }_{\text{derivee}} F'(x) = \frac{dF}{dx}(x) = \lim_{\Delta x \to 0} \frac{F(x+\Delta x) -F(x)}{\Delta x}
+\]
+Quand on parle d'un point dans l'espace, on aura tjrs 3 coordonnees
+\begin{align*}
+	x(t) \longrightarrow &x'(t) := \dot{x} ( t) := \dot{x}\\
+	&x''(t) := \ddot{x}(t) := \ddot{x}
+\end{align*}
+\hr\\
+\[ 
+	\frac{d}{dt}(x^{2}(t)) = 2 x(t) \dot{x}(t) = 2x \dot{x}
+\]
+Si je fais
+\[ 
+	\frac{d}{dx}(x^{2}) = 2x
+\]
+\subsection{Equations Differentielles}
+\[ 
+	F''(x) = C
+\]
+Pour resoudre
+\begin{align*}
+	F'(x) &= Cx + D\\
+	F(x) &= \frac{1}{2}Cx^{2} + Dx + E
+\end{align*}
+\[ 
+	mg = F = ma = m\ddot{x}
+\]
+\hr\\
+\[ 
+	\ddot{x}= -c^{2}x
+\]
+On devine la solution:
+\begin{align*}
+	x(t) &= A \sin(Ct) + B \cos(Ct)\\
+	\dot{x} = AC \cos ( Ct) - BC sin(Ct)\\
+	\ddot{x}(t) &= -AC^{2}\sin(Ct) - BC^{2} \cos(Ct)\\
+		    &= - C^{2} [ A sin(Ct) + Bcos(Ct)] = -C^{2} x(t)
+\end{align*}
+\section{Vecteurs}
+\[ 
+\vec{v} = \begin{pmatrix}
+v_x \\
+v_y\\
+v_z
+\end{pmatrix}
+= 
+\begin{pmatrix}
+v_1\\
+v_2\\
+v_3
+\end{pmatrix}
+\]
+\[ 
+\vec{x} = 
+\begin{pmatrix}
+x_1\\
+x_2\\
+x_3\\
+\end{pmatrix} = x_1 \cdot \vec{e_1} + x_2 \cdot \vec{e_2} + x_3 \cdot \vec{e_3}
+\]
+Le point $(x_1,x_2,x_3)$ on l'atteint en faisant une combinaison lineaire de $(e_1,e_2,e_3)$.
+\section{Trigonometrie}
+\begin{figure}[ht]
+    \centering
+    \incfig{cercletrigo}
+    \caption{cercletrigo}
+    \label{fig:cercletrigo}
+\end{figure}
+
+
+\end{document}	
