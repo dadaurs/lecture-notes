@@ -6,14 +6,14 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{mathtools}
 \newtheorem{lemma}{Lemme}
 \newtheorem{thm}{Theoreme}
 \begin{document}
 \title{Série 1}
 \author{David Wiedemann}
 \maketitle
-
-\begin{lemma}
+\begin{lemma}\label{degres}
 On montre d'abord que:
 \[ 
 	\forall a(t) , b(t) \in \mathbb{R}[t], \deg (ab) = \deg(a) + \deg(b)
@@ -21,33 +21,35 @@ On montre d'abord que:
 
 \end{lemma}
 \begin{proof}
-Soit $deg(a(t)) = A$ et $deg(b(t)) = B$ \\
-On pose que 
-\[ 
-	a(i) = \sum_{i=0}^{A} a_i t^{i}	
-\]
-et 
-\[ 
-	b(i) = \sum_{i=0}^{B} b_i t^{i}
-\]
-Alors
-\[ 
-	a(t) \cdot b(t) = a_{A} \cdot b_{B} t^{A} t^{B} + \ldots \underbrace{ = }_{\text{Propriete des nombres reels}} a_{A} \cdot b_{B} t^{A+B} + \ldots
-\]
-Clairement, c'est l'element resultant de la multiplication des deux elements de plus haut degre de $a(t)$ et $b(t)$ qui aura le plus haut degre.
+Pour alléger la notation, on pose que:$deg(a(t)) = A$ et $deg(b(t)) = B$.\\
+\begin{align*}
+	a(t) \cdot b(t) &= \left( \sum_{i=0}^{A}a_i t^{i}\right) \cdot \left( \sum_{j=0}^{B}b_j t^{j}\right)\\
+			&= a_A b_B t^{A} t^{B}\\
+			&+ a_A t^{A} \sum_{j=0}^{B-1} b_j t^{j}\\
+			&+ b_B t^{B} \sum_{i=0}^{A-1}a_i t^{i}\\
+			&+ \left( \sum_{i=0}^{A-1} a_i t^{i}\right) \left( \sum_{j=0}^{B-1}b_j t^{j}\right)
+\end{align*}
+Ici, on peut clairement voir que le terme $a_A b_B t^{A} t^{B} =a_A b_B t^{A+B} $ est du plus haut degré, et donc le lemme est prouvé.
 \end{proof}
-\begin{lemma}
+\begin{lemma}\label{somme}
 	Soit $a(t), b(t) \in \mathbb{R}[t]$ et $\deg(a(t))>\deg(b(t))$ alors $deg(a(t) + b(t)) \leq \deg (a(t))$.
 \end{lemma}
 On peut donc finalement montrer que la division Euclidienne dans $\mathbb{R}[t]$ existe et est unique.
 \begin{proof}
-\textbf{Unicite}\\
-Supposons qye $\exists b,r,b',r' \in \mathbb{R}[t]$ et $\deg(r'),\deg(r) < \deg(q)$ tel que
+$ $\newline
+\textbf{Unicité}\\
+Supposons par l'absurde que $\exists b,r,b',r' \in \mathbb{R}[t]$ et $\deg(r'),\deg(r) < \deg(q)$, tel que:
 \begin{align*}
-	a(t) &= q(t) \cdot b(t) + r(t) = q(t) b'(t) + r'(t)\\
-	0 &= q(t)(b(t) - b'(t)) + ( r(t) - r'(t)) 
+	a(t) &= q(t) \cdot b(t) + r(t)\\
+	     &= q(t) b'(t) + r'(t)\\
+	0 &= q(t)(b(t) - b'(t)) + (\underbrace{  r(t) - r'(t) }_{\coloneqq r''}) 
 \end{align*}
-Par hypothese, $q(t) \neq 0$, donc par lemme 2 et par l'hypothese que $\deg(q) > \deg(r)$, il faut que
+Sans perte de généralité, on peut également assumer que $\deg(r) \geq \deg(r')$.\\
+On utilise maintenant le lemme \ref{somme} pour remarquer que
+\[ 
+	\deg(r''(t)) \leq \deg(r(t)) < \deg(q(t))
+\]
+
 \[ 
 	q(t)(b(t) - b'(t)) = 0
 \]
