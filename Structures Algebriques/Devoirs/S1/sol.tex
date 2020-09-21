@@ -21,7 +21,7 @@ On montre d'abord que:
 
 \end{lemma}
 \begin{proof}
-Pour alléger la notation, on pose que:$deg(a(t)) = A$ et $deg(b(t)) = B$.\\
+Pour alléger la notation, on pose que: $\deg(a(t)) = A$ et $\deg(b(t)) = B$.\\
 \begin{align*}
 	a(t) \cdot b(t) &= \left( \sum_{i=0}^{A}a_i t^{i}\right) \cdot \left( \sum_{j=0}^{B}b_j t^{j}\right)\\
 			&= a_A b_B t^{A} t^{B}\\
@@ -32,8 +32,38 @@ Pour alléger la notation, on pose que:$deg(a(t)) = A$ et $deg(b(t)) = B$.\\
 Ici, on peut clairement voir que le terme $a_A b_B t^{A} t^{B} =a_A b_B t^{A+B} $ est du plus haut degré, et donc le lemme est prouvé.
 \end{proof}
 \begin{lemma}\label{somme}
-	Soit $a(t), b(t) \in \mathbb{R}[t]$ et $\deg(a(t))>\deg(b(t))$ alors $deg(a(t) + b(t)) \leq \deg (a(t))$.
+	Soit $a(t), b(t) \in \mathbb{R}[t]$ et $\deg(a(t))\geq\deg(b(t))$ alors $\deg(a(t) + b(t)) \leq \deg (a(t))$.
 \end{lemma}
+\begin{proof}
+Il suffit à nouveau de développer la somme du polynôme.
+On posera de plus que si $j>\deg(b(t))$, alors $b_j=0$.
+\begin{align*}
+	a(t) + b(t) &= \sum_{i=0}^{\deg(a(t))} a_i t^{i} + \sum_{j=0}^{\deg(b(t))} b_j t^{j}\\
+		    &= \sum_{k=0}^{\deg(a(t))} (a_k + b_k) t^{k}
+\end{align*}
+On voit clairement que le terme de plus haut degre est le terme $t^{\deg(a(t))}$.\\
+Le cas $a_k = -b_k$ impliquerait que le degré de $a(t)+ b(t) < \deg(a(t))$.
+\end{proof}
+\begin{lemma}\label{produit}
+	Soit $a(t), b(t) \in \mathbb{R}[t]$, alors 
+	\[ 
+		a(t) \cdot b(t) = 0
+	\]
+	implique $a(t)=0$ ou $b(t)=0$.
+\end{lemma}
+\begin{proof}
+	On utilisera le lemme \ref{degres}.\\
+	Par l'absurde, assumons que $a(t) \neq 0$ et $b(t)\neq 0$, alors
+	\begin{align*}
+		\deg(a(t)\cdot b(t)) &= \deg(a(t)) + \deg(b(t))\\
+				 &\geq 0 
+	\end{align*}
+	Contradiction, car $\deg(0) = - \infty $.\\
+	Donc $a(t)=0$ ou $b(t)=0$
+	
+\end{proof}
+
+
 On peut donc finalement montrer que la division Euclidienne dans $\mathbb{R}[t]$ existe et est unique.
 \begin{proof}
 $ $\newline
@@ -49,12 +79,13 @@ On utilise maintenant le lemme \ref{somme} pour remarquer que
 \[ 
 	\deg(r''(t)) \leq \deg(r(t)) < \deg(q(t))
 \]
-
+Par le lemme \ref{somme} et le lemme \ref{degres}, on a que 
 \[ 
 	q(t)(b(t) - b'(t)) = 0
 \]
-et donc que $b(t) - b'(t) = 0$, donc $b(t)$ est unique.\\
-Donc 
+Finalement par le lemme \ref{produit}, $q(t)=0$ ou $b(t)-b'(t)=0$.\\
+Par hypothèse, $q(t)\neq 0$, et donc $b(t) = b'(t) $, donc $b(t)$ est unique.\\
+Pour prouver l'unicité de $r(t)$, on utilise l'unicité de $b(t)$.
 \begin{align*}
 	q(t)(b(t) - b'(t)) + ( r'(t) - r(t)) &=0\\
 	r'(t) - r(t) &= 0\\
@@ -63,35 +94,47 @@ Donc
 Donc $b(t)$ et $r(t)$ sont uniques.\\
 
 \textbf{Existence}\\
-On procede par induction sur le degre de $a(t)$.\\
-Clairement si $\deg(a(t))=0$ et $\deg(q(t))=0$, alors $a(t) = k_1$ et $q(t) = k_2$, alors
+On procède par induction sur le degré de $a(t)$.\\
+On vérifie d'abord le cas $\deg(a(t))=0$.\\
+On peut distinguer deux cas:
+\begin{itemize}
+	\item Si $\deg(q(t))=0$, alors $a(t) = k_1 \in \mathbb{R}$ et $q(t) = k_2 \in \mathbb{R}$, alors
 \[ 
-	b(t) = \frac{k_1}{k_2} \Rightarrow a(t) = b(t) \cdot q(t) + 0
+	b(t) = \frac{k_1}{k_2} \text{ et } r(t)=0 \Rightarrow a(t) = b(t) \cdot q(t) + r(t)
 .\]
-Donc $r(t)=0$.\\
-Si $\deg(q(t))> 0$, alors
+\item Si $\deg(q(t))> 0$, alors
 \[ 
-	b(t) = 0  \text{ et } r(t) = a(t) \Rightarrow  a(t) = q(t) \cdot 0 + r(t)
+	b(t) = 0  \text{ et } r(t) = a(t) \Rightarrow  a(t) = q(t) \cdot b(t) + r(t)
 .\]
 
+\end{itemize}
 Par recurrence, supposons que le cas $\deg(a(t))=n$ est vrai et montrons pour $\deg(a(t))=n+1$.\\
-Posons que $a(t)=k(t) + a_{n+1} t^{n+1}$, avec $\deg(k(t))=n$ et que $q(t) = q'(t) + q_m t^{m}$, alors
-Soit, $\deg(q(t)) > \deg(a(t))$, dans ce cas, il suffit de poser que $b(t) = 0$ et que $r(t)= a(t)$.\\
-
-Supposons donc que $\deg(a(t)) \geq \deg(q(t))$, on peut ecrire:
+Posons que $a(t)=a'(t) + a_{n+1} t^{n+1}$, avec $\deg(a'(t))=n$, et que $q(t) = q'(t) + q_m t^{m}$, avec $\deg(q(t)) = m$ et $\deg(q'(t))= m-1$.\\
+On distingue à nouveau 2 cas:
+\begin{itemize}
+	\item Si, $\deg(q(t)) > \deg(a(t))$, dans ce cas, il suffit de poser que $b(t) = 0$ et que $r(t)= a(t)$, alors
+		\[ 
+			a(t) = q(t) \cdot b(t) + r(t)
+		\]
+	\item Supposons donc que $\deg(a(t)) \geq \deg(q(t))$, on peut ecrire:
+		\begin{align*}
+			a(t) &= a_{n+1} t^{n+1} + a'(t)\\
+			     &= a_{n+1} t^{n+1} \left( \frac{q_m t^{m}}{q_{m} t^{m}}\right) + a'(t)\\
+			     &= a_{n+1} t^{n+1} \left( \frac{q(t) - q'(t)}{q_{m} t^{m}}\right) + a'(t)\\
+			     &= a_{n+1} t^{n+1} \frac{q(t)}{q_m t^{m}}\\
+			     &- a_{n+1} t^{n+1} \frac{q'(t)}{q_m t^{m}}\\
+			     &+ a'(t)\\
+		\end{align*}
+		
+Dans cette expression, on remarque que
 \[ 
-a(t) = \frac{a_{n+1}}{q_m} t^{n+1-m} q(t) - \frac{a_n}{q_m} t^{n-m+1} ( q'(t)) + k(t)\\
+	\deg\left(-\frac{a_n}{q_m} t^{n-m+1} q'(t)\right) < n+1 \text{, ceci découle du lemme \ref{produit}.}
 \]
-Dans cette expression, on peut voir que
+Donc le terme ci-dessus, $-\frac{a_n}{q_m} t^{n-m+1} q'(t)$, admet, par hypothèse de récurrence, $c(t)$ et $r_c(t)$ tel que
 \[ 
-	\deg\left(\frac{a_n}{q_m} t^{n-m+1} q'(t)\right) < n+1
+	-\frac{a_n}{q_m} t^{n-m+1} q'(t) = c(t) \cdot q(t) + r_c(t)
 \]
-En effet, le degre de $q'(t)$ est au pire $m-1$, donc par le lemme 1, le terme de plus haut degre sera de degre $n-m+1+m-1=n$.\\
-Donc le terme ci-dessus $\frac{a_n}{q_m} t^{n-m+1} q'(t)$ admet, par hypothese de recurrence, $c(t)$ et $r_c(t)$ tel que
-\[ 
-	\frac{a_n}{q_m} t^{n-m+1} q'(t) = c(t) \cdot q(t) + r_c(t)
-\]
-Le degre de $k(t)$ est aussi inferieur a $n+1$, et donc, par le meme raisonnement, $\exists d(t) , r_d(t)$ tel que $k(t)= q(t)\cdot d(t) + r_d(t)$.\\
+Le degré de $k(t)$ est aussi inférieur à $n+1$, et donc, par le même raisonnement, $\exists d(t) , r_d(t)$ tel que $k(t)= q(t)\cdot d(t) + r_d(t)$.\\
 On a donc
 \begin{align*}
 	a(t) &= \frac{a_{n+1}}{q_m} t^{n+1-m} q(t) - \frac{a_n}{q_m} t^{n-m+1} ( q'(t)) + k(t)\\
@@ -99,6 +142,7 @@ On a donc
 	     &= q(t) \left( \frac{a_{n+1}}{q_m} t^{n+1-m} - c(t) + d(t) \right) - r_c(t) + r_d(t) \\
 \end{align*}
 
+\end{itemize}
 \end{proof}
 
 
