@@ -1,9 +1,9 @@
-\documentclass[a4paper]{tufte-book}
+\documentclass[a4paper,hidelinks]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage{amsmath}
 \usepackage{hyperref}
+\usepackage{amsmath}
 \usepackage{bookmark}
 \usepackage{graphicx}
 \usepackage{mdframed}
@@ -73,6 +73,7 @@
 
 \lstset{style=mystyle}
 
+\newcommand\sidenote[1]{\footnote{#1}}
 
 %\renewtheoremstyle{break}%
   %{\item{\theorem@headerfont
@@ -91,73 +92,29 @@
 
 
     % theorem envs
-\theoremprework{\textcolor{myred}{\hrule height 2pt width \textwidth}}
-\theoremheaderfont{\color{myred}\normalfont\bfseries}
-\theorempostwork{\textcolor{myred}{\hrule height 2pt width \textwidth}}
-\theoremindent10pt
-\newtheorem{thm}{\faCoffee Theorem}
 
-\theoremprework{\textcolor{myblue}{\hrule height 2pt width \textwidth}}
-\theoremheaderfont{\color{myblue}\normalfont\bfseries}
-\theorempostwork{\textcolor{myblue}{\hrule height 2pt width \textwidth}}
-\theoremindent10pt
-\newtheorem{defn}{\faBook Definition}
+\newmdtheoremenv{thm}{Theorème}
+\newtheorem{defn}{Definition}
 
-\theoremprework{\textcolor{mygreen}{\hrule height 2pt width \textwidth}}
-\theoremheaderfont{\color{mygreen}\normalfont\bfseries}
-\theorempostwork{\textcolor{mygreen}{\hrule height 2pt width \textwidth}}
-\theoremindent10pt
-\newtheorem{propo}[thm]{\faTint Proposition}
+\newmdtheoremenv{propo}[thm]{Proposition}
 
-\theoremprework{\textcolor{myyellow}{\hrule height 2pt width \textwidth}}
-\theoremheaderfont{\color{myyellow}\normalfont\bfseries}
-\theorempostwork{\textcolor{myyellow}{\hrule height 2pt width \textwidth}}
-\theoremindent10pt
-\newtheorem{crly}[thm]{\faSpaceShuttle Corollaire}
+\newmdtheoremenv{crly}[thm]{Corollaire}
 
-\theoremprework{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
-\theoremheaderfont{\color{mymagenta}\normalfont\bfseries}
-\theorempostwork{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
-\theoremindent10pt
-\newtheorem{lemma}[thm]{\faTree Lemme}
+\newmdtheoremenv{lemma}[thm]{Lemme}
 
-\theoremprework{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
-\theoremheaderfont{\color{mymagenta}\normalfont\bfseries}
-\theorempostwork{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
-\theoremindent10pt
-\newtheorem{propr}[thm]{\faTree Propriete}
+\newmdtheoremenv{propr}[thm]{Propriete}
 
-\theoremprework{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
-\theoremheaderfont{\color{mymagenta}\normalfont\bfseries}
-\theorempostwork{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
-\theoremindent10pt
-\newtheorem{rmq}[thm]{\faTree Remarque}
+\newtheorem{rmq}[thm]{Remarque}
 
-\theoremprework{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
-\theoremheaderfont{\color{mycyan}\normalfont\bfseries}
-\theorempostwork{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
-\theoremindent10pt
-\newtheorem{axiom}[thm]{\faShield* Axiom}
+\newtheorem{axiom}[thm]{Axiom}
 
-\theoremprework{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
-\theoremheaderfont{\color{mycyan}\normalfont\bfseries}
-\theorempostwork{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
-\theoremindent10pt
-\newtheorem{exemple}[thm]{\faShield* Exemple}
+\newtheorem{exemple}[thm]{Exemple}
 
-\theoremprework{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
-\theorembodyfont{\normalfont}
-\theoremheaderfont{\color{mycyan}\normalfont\bfseries}
-\theorempostwork{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
 \theoremsymbol{\ensuremath{ \square }}
-\newtheorem*{proof}{\faPencil* Proof}
+\newtheorem*{proof}{Preuve}
 \theoremsymbol{}
 
-\theoremprework{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
-\theoremheaderfont{\color{mycyan}\normalfont\bfseries}
-\theorempostwork{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
-\theoremindent10pt
-\newtheorem{exo}[thm]{\faShield* Exercice}
+\newtheorem{exo}[thm]{Exercice}
 
 \newcommand\eng[1]{\left\langle#1\right\rangle}
 
@@ -209,38 +166,38 @@
 \renewcommand{\baselinestretch}{1.2}
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
-\usepackage{subfiles}
 \makeatletter
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 \makeatother
-\titleformat{\chapter}%
-  {\huge\rmfamily\itshape\color{mymagenta}}% format applied to label+text
-  {\llap{\colorbox{mymagenta}{\parbox[c][1cm]{3cm}{\hfill\itshape\Huge\textcolor{background}{\thechapter}}}}}% label
-  {5pt}% horizontal separation between label and title body
-  {\faLeaf}% before the title body
-  []% after the title body
+%\titleformat{\chapter}%
+  %{\huge\rmfamily\itshape\color{mymagenta}}% format applied to label+text
+  %{\llap{\colorbox{mymagenta}{\parbox[c][1cm]{3cm}{\hfill\itshape\Huge\textcolor{background}{\thechapter}}}}}% label
+  %{5pt}% horizontal separation between label and title body
+  %{\faLeaf}% before the title body
+  %[]% after the title body
 
-\titleformat{\section}%
-  {\normalfont\Large\rmfamily\itshape\color{myblue}}% format applied to label+text
-  {\llap{\colorbox{myblue}{\parbox{3cm}{\hfill\itshape\textcolor{background}{\thesection}}}}}% label
-  {5pt}% horizontal separation between label and title body
-  {}% before the title body
-  []% after the title body
+%\titleformat{\section}%
+  %{\normalfont\Large\rmfamily\itshape\color{myblue}}% format applied to label+text
+  %{\llap{\colorbox{myblue}{\parbox{3cm}{\hfill\itshape\textcolor{background}{\thesection}}}}}% label
+  %{5pt}% horizontal separation between label and title body
+  %{}% before the title body
+  %[]% after the title body
 
-% subsection format
-\titleformat{\subsection}%
-  {\normalfont\large\itshape\color{mygreen}}% format applied to label+text
-  {\llap{\colorbox{mygreen}{\parbox{3cm}{\hfill\textcolor{background}{\thesubsection}}}}}% label
-  {1em}% horizontal separation between label and title body
-  {}% before the title body
-  []% after the title body
+%% subsection format
+%\titleformat{\subsection}%
+  %{\normalfont\large\itshape\color{mygreen}}% format applied to label+text
+  %{\llap{\colorbox{mygreen}{\parbox{3cm}{\hfill\textcolor{background}{\thesubsection}}}}}% label
+  %{1em}% horizontal separation between label and title body
+  %{}% before the title body
+  %[]% after the title body
 
-% subsubsection format
-\titleclass{\subsubsection}{straight}
-\titleformat{\subsubsection}%
-  {\normalfont\large\itshape\color{myyellow}}% format applied to label+text
-  {\llap{\colorbox{myyellow}{\parbox{3cm}{\hfill\textcolor{background}{\thesubsubsection}}}}}% label
-  {1em}% horizontal separation between label and title body
-  {}% before the title body
-  []% after the title body
+%% subsubsection format
+%\titleclass{\subsubsection}{straight}
+%\titleformat{\subsubsection}%
+  %{\normalfont\large\itshape\color{myyellow}}% format applied to label+text
+  %{\llap{\colorbox{myyellow}{\parbox{3cm}{\hfill\textcolor{background}{\thesubsubsection}}}}}% label
+  %{1em}% horizontal separation between label and title body
+  %{}% before the title body
+  %[]% after the title body
 
+\usepackage{subfiles}

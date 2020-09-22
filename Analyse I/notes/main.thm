@@ -1,33 +1,33 @@
-\contentsline {thm}{{\faCoffee Theorem}{1}{env. -400}}{4}{thm.1}%
-\contentsline {lemma}{{\faTree Lemme}{2}{Lemme}}{4}{lemma.2}%
-\contentsline {proof}{{\faPencil * Proof}{}{}}{4}{proof.1}%
-\contentsline {proof}{{\faPencil * Proof}{}{}}{5}{proof.2}%
-\contentsline {axiom}{{\faShield * Axiom}{3}{Nombres Reels}}{5}{axiom.3}%
-\contentsline {lemma}{{\faTree Lemme}{4}{Theorem name}}{6}{lemma.4}%
-\contentsline {proof}{{\faPencil * Proof}{}{}}{6}{proof.3}%
-\contentsline {propo}{{\faTint Proposition}{5}{Annulation de l'element neutre}}{6}{propo.5}%
-\contentsline {proof}{{\faPencil * Proof}{}{}}{6}{proof.4}%
-\contentsline {crly}{{\faSpaceShuttle Corollaire}{6}{x fois moins 1 egale -x}}{6}{crly.6}%
-\contentsline {proof}{{\faPencil * Proof}{}{}}{7}{proof.5}%
-\contentsline {axiom}{{\faShield * Axiom}{7}{Nombres Reels II}}{7}{axiom.7}%
-\contentsline {defn}{{\faBook Definition}{1}{valeur absolue}}{7}{defn.1}%
-\contentsline {propo}{{\faTint Proposition}{8}{Inegalite du triangle}}{8}{propo.8}%
-\contentsline {proof}{{\faPencil * Proof}{}{}}{8}{proof.6}%
-\contentsline {defn}{{\faBook Definition}{2}{Bornes}}{8}{defn.2}%
-\contentsline {axiom}{{\faShield * Axiom}{9}{Axiome de completude}}{8}{axiom.9}%
-\contentsline {rmq}{{\faTree Remarque}{10}{}}{9}{rmq.10}%
-\contentsline {defn}{{\faBook Definition}{3}{Supremum}}{9}{defn.3}%
-\contentsline {rmq}{{\faTree Remarque}{11}{}}{9}{rmq.11}%
-\contentsline {rmq}{{\faTree Remarque}{12}{}}{9}{rmq.12}%
-\contentsline {rmq}{{\faTree Remarque}{13}{}}{9}{rmq.13}%
-\contentsline {propo}{{\faTint Proposition}{14}{}}{9}{propo.14}%
-\contentsline {proof}{{\faPencil * Proof}{}{}}{9}{proof.7}%
-\contentsline {crly}{{\faSpaceShuttle Corollaire}{15}{Propriete archimedienne}}{10}{crly.15}%
-\contentsline {proof}{{\faPencil * Proof}{}{}}{10}{proof.8}%
-\contentsline {thm}{{\faCoffee Theorem}{16}{La racine de deux existe}}{10}{thm.16}%
-\contentsline {proof}{{\faPencil * Proof}{}{}}{10}{proof.9}%
-\contentsline {rmq}{{\faTree Remarque}{17}{}}{11}{rmq.17}%
-\contentsline {propo}{{\faTint Proposition}{18}{$\mathbb {Q}$ est dense dans $\mathbb {R}$}}{11}{propo.18}%
-\contentsline {lemma}{{\faTree Lemme}{19}{}}{11}{lemma.19}%
-\contentsline {proof}{{\faPencil * Proof}{}{}}{11}{proof.10}%
-\contentsline {proof}{{\faPencil * Proof}{}{Preuve de la densite}}{11}{proof.11}%
+\contentsline {thm}{{Theorème}{1}{env. -400}}{3}{thm.1}%
+\contentsline {lemma}{{Lemme}{2}{Lemme}}{3}{lemma.2}%
+\contentsline {proof}{{Preuve}{}{}}{3}{proof.1}%
+\contentsline {proof}{{Preuve}{}{}}{3}{proof.2}%
+\contentsline {axiom}{{Axiom}{3}{Nombres Reels}}{4}{axiom.3}%
+\contentsline {lemma}{{Lemme}{4}{Theorem name}}{5}{lemma.4}%
+\contentsline {proof}{{Preuve}{}{}}{5}{proof.3}%
+\contentsline {propo}{{Proposition}{5}{Annulation de l'element neutre}}{5}{propo.5}%
+\contentsline {proof}{{Preuve}{}{}}{5}{proof.4}%
+\contentsline {crly}{{Corollaire}{6}{x fois moins 1 egale -x}}{5}{crly.6}%
+\contentsline {proof}{{Preuve}{}{}}{5}{proof.5}%
+\contentsline {axiom}{{Axiom}{7}{Nombres Reels II}}{6}{axiom.7}%
+\contentsline {defn}{{Definition}{1}{valeur absolue}}{6}{defn.1}%
+\contentsline {propo}{{Proposition}{8}{Inegalite du triangle}}{6}{propo.8}%
+\contentsline {proof}{{Preuve}{}{}}{6}{proof.6}%
+\contentsline {defn}{{Definition}{2}{Bornes}}{7}{defn.2}%
+\contentsline {axiom}{{Axiom}{9}{Axiome de completude}}{7}{axiom.9}%
+\contentsline {rmq}{{Remarque}{10}{}}{7}{rmq.10}%
+\contentsline {defn}{{Definition}{3}{Supremum}}{7}{defn.3}%
+\contentsline {rmq}{{Remarque}{11}{}}{7}{rmq.11}%
+\contentsline {rmq}{{Remarque}{12}{}}{7}{rmq.12}%
+\contentsline {rmq}{{Remarque}{13}{}}{7}{rmq.13}%
+\contentsline {propo}{{Proposition}{14}{}}{8}{propo.14}%
+\contentsline {proof}{{Preuve}{}{}}{8}{proof.7}%
+\contentsline {crly}{{Corollaire}{15}{Propriete archimedienne}}{8}{crly.15}%
+\contentsline {proof}{{Preuve}{}{}}{8}{proof.8}%
+\contentsline {thm}{{Theorème}{16}{La racine de deux existe}}{8}{thm.16}%
+\contentsline {proof}{{Preuve}{}{}}{8}{proof.9}%
+\contentsline {rmq}{{Remarque}{17}{}}{9}{rmq.17}%
+\contentsline {propo}{{Proposition}{18}{$\mathbb {Q}$ est dense dans $\mathbb {R}$}}{9}{propo.18}%
+\contentsline {lemma}{{Lemme}{19}{}}{9}{lemma.19}%
+\contentsline {proof}{{Preuve}{}{}}{9}{proof.10}%
+\contentsline {proof}{{Preuve}{}{Preuve de la densite}}{10}{proof.11}%

@@ -1,0 +1,246 @@
+\documentclass[a4paper]{tufte-book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{graphicx}
+\usepackage{mdframed}
+\usepackage[french]{babel}
+\usepackage{bbm} %RCQ
+\usepackage{verbatim}
+\usepackage{varioref}
+\usepackage{theoremref}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{python}
+\usepackage{xurl}
+\usepackage{xcolor}
+\usepackage[amsmath,hyperref,thmmarks]{ntheorem}
+\usepackage[fixed]{fontawesome5}
+\usepackage{imakeidx}
+\makeindex
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{thmtools}
+\usepackage{amssymb}
+\usepackage{aligned-overset}
+%\usepackage{fancyhdr}
+\usepackage{stmaryrd} % for \lightning
+%\pagestyle{fancy}
+\definecolor{background}{HTML}{FFFFFF}
+\definecolor{myred}{HTML}{A54242}
+\definecolor{mygreen}{HTML}{8C9440}
+\definecolor{myyellow}{HTML}{F0C674}
+\definecolor{myblue}{HTML}{5f819d}
+\definecolor{mymagenta}{HTML}{85678f}
+\definecolor{mycyan}{HTML}{5e8d87}
+\definecolor{mygray}{HTML}{373B41}
+
+\setlength\theorempreskipamount{2ex}
+\setlength\theorempostskipamount{3ex}
+\allowdisplaybreaks
+
+	
+\newcommand\norm[1]{\left\vert#1\right\vert}
+\newcommand\Norm[1]{\left\lVert#1\right\rVert}
+\newcommand\abs[1]{\left\vert#1\right\vert}
+\newcommand\inj{\hookrightarrow}
+\newcommand\surj{\twoheadrightarrow}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{background},   
+    commentstyle=\color{mygreen},
+    keywordstyle=\color{mymagenta},
+    numberstyle=\tiny\color{mygrau},
+    stringstyle=\color{mycyan},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+%\renewtheoremstyle{break}%
+  %{\item{\theorem@headerfont
+          %##1\ ##2\theorem@separator}\hskip\labelsep\relax\nobreakitem}%
+  %{\item{\theorem@headerfont
+          %##1\ ##2\ (##3)\theorem@separator}\hskip\labelsep\relax\nobreakitem}
+%% make \th@nonumberbreak the same as \th@break, but remove "\ ##2"
+%\let\th@nonumberbreak\th@break
+%\xpatchcmd*{\th@nonumberbreak}{\ ##2}{}{}{}
+%\makeatother
+
+\theorempreskip{10pt}
+\theorempostskip{5pt}
+\theoremstyle{break}
+
+
+
+    % theorem envs
+\theoremprework{\textcolor{myred}{\hrule height 2pt width \textwidth}}
+\theoremheaderfont{\color{myred}\normalfont\bfseries}
+\theorempostwork{\textcolor{myred}{\hrule height 2pt width \textwidth}}
+\theoremindent10pt
+\newtheorem{thm}{\faCoffee Theorem}
+
+\theoremprework{\textcolor{myblue}{\hrule height 2pt width \textwidth}}
+\theoremheaderfont{\color{myblue}\normalfont\bfseries}
+\theorempostwork{\textcolor{myblue}{\hrule height 2pt width \textwidth}}
+\theoremindent10pt
+\newtheorem{defn}{\faBook Definition}
+
+\theoremprework{\textcolor{mygreen}{\hrule height 2pt width \textwidth}}
+\theoremheaderfont{\color{mygreen}\normalfont\bfseries}
+\theorempostwork{\textcolor{mygreen}{\hrule height 2pt width \textwidth}}
+\theoremindent10pt
+\newtheorem{propo}[thm]{\faTint Proposition}
+
+\theoremprework{\textcolor{myyellow}{\hrule height 2pt width \textwidth}}
+\theoremheaderfont{\color{myyellow}\normalfont\bfseries}
+\theorempostwork{\textcolor{myyellow}{\hrule height 2pt width \textwidth}}
+\theoremindent10pt
+\newtheorem{crly}[thm]{\faSpaceShuttle Corollaire}
+
+\theoremprework{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
+\theoremheaderfont{\color{mymagenta}\normalfont\bfseries}
+\theorempostwork{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
+\theoremindent10pt
+\newtheorem{lemma}[thm]{\faTree Lemme}
+
+\theoremprework{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
+\theoremheaderfont{\color{mymagenta}\normalfont\bfseries}
+\theorempostwork{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
+\theoremindent10pt
+\newtheorem{propr}[thm]{\faTree Propriete}
+
+\theoremprework{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
+\theoremheaderfont{\color{mymagenta}\normalfont\bfseries}
+\theorempostwork{\textcolor{mymagenta}{\hrule height 2pt width \textwidth}}
+\theoremindent10pt
+\newtheorem{rmq}[thm]{\faTree Remarque}
+
+\theoremprework{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
+\theoremheaderfont{\color{mycyan}\normalfont\bfseries}
+\theorempostwork{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
+\theoremindent10pt
+\newtheorem{axiom}[thm]{\faShield* Axiom}
+
+\theoremprework{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
+\theoremheaderfont{\color{mycyan}\normalfont\bfseries}
+\theorempostwork{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
+\theoremindent10pt
+\newtheorem{exemple}[thm]{\faShield* Exemple}
+
+\theoremprework{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
+\theorembodyfont{\normalfont}
+\theoremheaderfont{\color{mycyan}\normalfont\bfseries}
+\theorempostwork{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
+\theoremsymbol{\ensuremath{ \square }}
+\newtheorem*{proof}{\faPencil* Proof}
+\theoremsymbol{}
+
+\theoremprework{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
+\theoremheaderfont{\color{mycyan}\normalfont\bfseries}
+\theorempostwork{\textcolor{mycyan}{\hrule height 2pt width \textwidth}}
+\theoremindent10pt
+\newtheorem{exo}[thm]{\faShield* Exercice}
+
+\newcommand\eng[1]{\left\langle#1\right\rangle}
+
+%\hypersetup{
+    %unicode=true,          % non-Latin characters in Acrobat’s bookmarks
+    %pdftoolbar=false,        % show Acrobat’s toolbar?
+    %pdfmenubar=false,        % show Acrobat’s menu?
+    %pdffitwindow=true,     % window fit to page when opened
+    %colorlinks=true,
+    %allcolors=magenta,
+%}
+
+% tikz
+
+
+% horizontal rule
+\newcommand\hr{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures}{#1.pdf_tex}
+}
+\newcommand{\filler}[1][10]%
+{   \foreach \x in {1,...,#1}
+    {   test 
+    }
+}
+
+\def\mathnote#1{%
+  \tag*{\rlap{\hspace\marginparsep\smash{\parbox[t]{\marginparwidth}{%
+  \footnotesize#1}}}}
+}
+\pdfsuppresswarningpagegroup=1
+\newcommand\contra{\scalebox{1.5}{$\lightning$}}
+\makeatother
+\def\@lecture{}%
+\newcommand{\lecture}[3]{
+    \ifthenelse{\isempty{#3}}{%
+        \def\@lecture{Lecture #1}%
+    }{%
+        \def\@lecture{Lecture #1: #3}%
+    }%
+    \subsection*{\@lecture}
+    \marginpar{\small\textsf{\mbox{#2}}}
+}
+\makeatletter
+\renewcommand{\baselinestretch}{1.2}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{subfiles}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+\titleformat{\chapter}%
+  {\huge\rmfamily\itshape\color{mymagenta}}% format applied to label+text
+  {\llap{\colorbox{mymagenta}{\parbox[c][1cm]{3cm}{\hfill\itshape\Huge\textcolor{background}{\thechapter}}}}}% label
+  {5pt}% horizontal separation between label and title body
+  {\faLeaf}% before the title body
+  []% after the title body
+
+\titleformat{\section}%
+  {\normalfont\Large\rmfamily\itshape\color{myblue}}% format applied to label+text
+  {\llap{\colorbox{myblue}{\parbox{3cm}{\hfill\itshape\textcolor{background}{\thesection}}}}}% label
+  {5pt}% horizontal separation between label and title body
+  {}% before the title body
+  []% after the title body
+
+% subsection format
+\titleformat{\subsection}%
+  {\normalfont\large\itshape\color{mygreen}}% format applied to label+text
+  {\llap{\colorbox{mygreen}{\parbox{3cm}{\hfill\textcolor{background}{\thesubsection}}}}}% label
+  {1em}% horizontal separation between label and title body
+  {}% before the title body
+  []% after the title body
+
+% subsubsection format
+\titleclass{\subsubsection}{straight}
+\titleformat{\subsubsection}%
+  {\normalfont\large\itshape\color{myyellow}}% format applied to label+text
+  {\llap{\colorbox{myyellow}{\parbox{3cm}{\hfill\textcolor{background}{\thesubsubsection}}}}}% label
+  {1em}% horizontal separation between label and title body
+  {}% before the title body
+  []% after the title body
+

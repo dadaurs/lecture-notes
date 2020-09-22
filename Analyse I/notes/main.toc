@@ -1,6 +1,5 @@
 \babel@toc {french}{}
-\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Buts du Cours}{4}{section.1.1}%
-\contentsline {chapter}{\numberline {2}Definir $\PazoBB {R}$}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Exemple d'utilisation}{7}{section.2.1}%
-\contentsfinish 
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Buts du Cours}{3}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Definir $\mathbb {R}$}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Exemple d'utilisation}{6}{subsection.2.1}%

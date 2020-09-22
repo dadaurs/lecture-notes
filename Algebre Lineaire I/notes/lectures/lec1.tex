@@ -1,7 +1,7 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \lecture{1}{Mon 14 Sep}{Le language des Ensembles}
-\chapter{Le language des Ensembles}
+\section{Le language des Ensembles}
 
 Le terme ``Algebre'' est derive du mot arabe al-jabr tire du tire d'un ouvrage.
 
@@ -27,7 +27,7 @@ Il y aura besoin d'introduire des groupes, anneaux, corps ( anneaux particuliers
 Il faut donc commencer avec les objets les plus simples, i.e. les groupes.\\
 Ici, on introduit de maniere moins rigoureuse qu'avec les systemes algebriques.
 
-\section{Notations}
+\subsection{Notations}
 
 \begin{itemize}
 	\item "Il existe" $\exists$, "Il existe un unique"  $\exists !$\\
@@ -41,13 +41,13 @@ Ici, on introduit de maniere moins rigoureuse qu'avec les systemes algebriques.
 
 On ne va pas parler de logique mathematique dans ce cours, ni de definition rigoureuse des ensembles
 
-\section{Ensembles}
+\subsection{Ensembles}
 Un ensemble est une collection d'elements ``appartenant'' a $E$
 \[ 
 	e \underbrace{\in}_{\text{ ``appartient à'' }} E
 \]
 
-\subsection{Exemples}
+\subsubsection{Exemples}
 \begin{itemize}
 	\item $\emptyset$ ne contient aucun element\\
 	\item $ \mathbb{N} = \{ 0,1,2 \}$\\
@@ -55,7 +55,7 @@ Un ensemble est une collection d'elements ``appartenant'' a $E$
 	\item $\mathbb{Q} = \{ \frac{p}{q} \vert p,q \in \mathbb{Z}, q \neq 0 \}$
 	\item $\mathbb{R}$, nombres réels, nombres complexes.
 \end{itemize}
-\section{Sous-Ensembles}
+\subsection{Sous-Ensembles}
 Un sous-ensemble $A$ d'un ensemble $E$ est un ensemble t.q. tout element de $A$ appartient a $E$.
 Formellement:
 \begin{align*}
@@ -75,7 +75,7 @@ E est inclus dans F et F est inclus dans E ( regarder  notations)
 E \subset F \land F \subset E \Rightarrow E = F.
 \]
 
-\section{$\mathcal{P}(E)$ l'ensemble des sous-ensembles}
+\subsection{$\mathcal{P}(E)$ l'ensemble des sous-ensembles}
 C'est l'ensemble des $A \in E$, aussi appelé l'ensemble des parties de $E$.
 
 Remarque: L'ensemble de TOUS les ensembles n'est pas un ensemble et c'est du au paradoxe de Russell (Logicien anglais)
@@ -84,10 +84,10 @@ Si c'etait le cas, on considererait
 	Ncont = \{ \text{ L'ensemble des $E$ tq $E$ n'est pas contenu dans lui meme. } \}
 \]
 Cet ensemble Ncont est-il contenu dans lui meme ou pas?\\
-\subsection{ Exercice }
+\subsubsection{ Exercice }
 Ncont est il contenu dans lui meme ou pas? \contra
 
-\section{Operations sur les ensembles}
+\subsection{Operations sur les ensembles}
 \begin{itemize}
 	\item $A,B \subset E$
 \[ 
@@ -118,7 +118,7 @@ On peut noter une grande reunion ainsi:
 
 %$\( a_1, \ldots, a_{n}\) \in A_1 \times \ldots \times A_{n}$ s'appelle $n$-uplet.
 
-\section{$\times$: Produit cartesien}
+\subsection{$\times$: Produit cartesien}
 
 Si $A$ et $B$ sont des ensembles
 \begin{align*}
@@ -128,7 +128,7 @@ On peut bien sur iterer
 \[ 
 	A_1 \times \ldots \times A_{n}  = \prod_{i=1}^{n} A_{i}  =  \{a_1,a_2,\ldots,a_{n} \text{ avec } a_i \in A_{i}\}
 \]
-\section{Applications entre ensembles}
+\subsection{Applications entre ensembles}
 %\begin{definition}[Application lineaire]\index{Application lineaire}\label{def:application_lineaire}
 	
 Soient $X$ et $Y$ deux ensembles.\\
@@ -139,7 +139,7 @@ Une application (fonction) $f$ est la donnee pour chaque element $x \in X$ (L'es
 \[ 
 f: X \rightarrow Y
 \]
-\subsection{Graphe}
+\subsubsection{Graphe}
 Se donner une application
 \[ 
 	f: X \rightarrow Y
@@ -157,7 +157,7 @@ On associe simplement au premier element un autre element.
 
 
 
-\section{Composition/Associativite}
+\subsection{Composition/Associativite}
 Soient
 \[ 
 f: X \rightarrow Y
@@ -166,11 +166,11 @@ f: X \rightarrow Y
 g: Y \rightarrow Z
 \]
 
-\begin{marginfigure}
+\begin{figure}
     \incfig{schemacomposition}
     \caption{Schema de la composition de 2 applications}
     \label{fig:schemacomposition}
-\end{marginfigure}
+\end{figure}
 \begin{align*}
 	g \circ f : X \longrightarrow Z \vert x \in X &\longrightarrow f(x) \in Y\\
 						      &\longrightarrow g(f(x)) \in Z
@@ -178,7 +178,7 @@ g: Y \rightarrow Z
 
 Cette application s'appelle la composee de $f$ et $g$.
 
-\subsection{Associativite}
+\subsubsection{Associativite}
 \[ 
 f:X \longrightarrow Y
 \]
@@ -219,7 +219,7 @@ On a que
 
 
 \end{proof}
-\section{Image,Preimage}
+\subsection{Image,Preimage}
 \[ 
 f: X \longrightarrow Y
 \]

@@ -1,35 +1,33 @@
-\addvspace {10\p@ }
-\contentsline {thm}{\numberline {1}\faCoffee Theorem\thmtformatoptarg {env. -400}}{4}{thm.1}%
-\contentsline {lemma}{\numberline {2}\faTree Lemme\thmtformatoptarg {Lemme}}{4}{lemma.2}%
-\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{4}{proof.1}%
-\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{5}{proof.2}%
-\addvspace {10\p@ }
-\contentsline {axiom}{\numberline {3}\faShield * Axiom\thmtformatoptarg {Nombres Reels}}{5}{axiom.3}%
-\contentsline {lemma}{\numberline {4}\faTree Lemme\thmtformatoptarg {Theorem name}}{6}{lemma.4}%
-\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{6}{proof.3}%
-\contentsline {propo}{\numberline {5}\faTint Proposition\thmtformatoptarg {Annulation de l'element neutre}}{6}{propo.5}%
-\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{6}{proof.4}%
-\contentsline {crly}{\numberline {6}\faSpaceShuttle Corollaire\thmtformatoptarg {x fois moins 1 egale -x}}{6}{crly.6}%
-\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{7}{proof.5}%
-\contentsline {axiom}{\numberline {7}\faShield * Axiom\thmtformatoptarg {Nombres Reels II}}{7}{axiom.7}%
-\contentsline {defn}{\numberline {1}\faBook Definition\thmtformatoptarg {valeur absolue}}{7}{defn.1}%
-\contentsline {propo}{\numberline {8}\faTint Proposition\thmtformatoptarg {Inegalite du triangle}}{8}{propo.8}%
-\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{8}{proof.6}%
-\contentsline {defn}{\numberline {2}\faBook Definition\thmtformatoptarg {Bornes}}{8}{defn.2}%
-\contentsline {axiom}{\numberline {9}\faShield * Axiom\thmtformatoptarg {Axiome de completude}}{8}{axiom.9}%
-\contentsline {rmq}{\numberline {10}\faTree Remarque}{9}{rmq.10}%
-\contentsline {defn}{\numberline {3}\faBook Definition\thmtformatoptarg {Supremum}}{9}{defn.3}%
-\contentsline {rmq}{\numberline {11}\faTree Remarque}{9}{rmq.11}%
-\contentsline {rmq}{\numberline {12}\faTree Remarque}{9}{rmq.12}%
-\contentsline {rmq}{\numberline {13}\faTree Remarque}{9}{rmq.13}%
-\contentsline {propo}{\numberline {14}\faTint Proposition}{9}{propo.14}%
-\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{9}{proof.7}%
-\contentsline {crly}{\numberline {15}\faSpaceShuttle Corollaire\thmtformatoptarg {Propriete archimedienne}}{10}{crly.15}%
-\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{10}{proof.8}%
-\contentsline {thm}{\numberline {16}\faCoffee Theorem\thmtformatoptarg {La racine de deux existe}}{10}{thm.16}%
-\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{10}{proof.9}%
-\contentsline {rmq}{\numberline {17}\faTree Remarque}{11}{rmq.17}%
-\contentsline {propo}{\numberline {18}\faTint Proposition\thmtformatoptarg {$\PazoBB {Q}$ est dense dans $\PazoBB {R}$}}{11}{propo.18}%
-\contentsline {lemma}{\numberline {19}\faTree Lemme}{11}{lemma.19}%
-\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof}{11}{proof.10}%
-\contentsline {proof}{\numberline {\let \autodot \@empty }\faPencil * Proof\thmtformatoptarg {Preuve de la densite}}{11}{proof.11}%
+\contentsline {thm}{\numberline {1}Theorème\thmtformatoptarg {env. -400}}{3}{thm.1}%
+\contentsline {lemma}{\numberline {2}Lemme\thmtformatoptarg {Lemme}}{3}{lemma.2}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{3}{proof.1}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{3}{proof.2}%
+\contentsline {axiom}{\numberline {3}Axiom\thmtformatoptarg {Nombres Reels}}{4}{axiom.3}%
+\contentsline {lemma}{\numberline {4}Lemme\thmtformatoptarg {Theorem name}}{5}{lemma.4}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{5}{proof.3}%
+\contentsline {propo}{\numberline {5}Proposition\thmtformatoptarg {Annulation de l'element neutre}}{5}{propo.5}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{5}{proof.4}%
+\contentsline {crly}{\numberline {6}Corollaire\thmtformatoptarg {x fois moins 1 egale -x}}{5}{crly.6}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{5}{proof.5}%
+\contentsline {axiom}{\numberline {7}Axiom\thmtformatoptarg {Nombres Reels II}}{6}{axiom.7}%
+\contentsline {defn}{\numberline {1}Definition\thmtformatoptarg {valeur absolue}}{6}{defn.1}%
+\contentsline {propo}{\numberline {8}Proposition\thmtformatoptarg {Inegalite du triangle}}{6}{propo.8}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{6}{proof.6}%
+\contentsline {defn}{\numberline {2}Definition\thmtformatoptarg {Bornes}}{7}{defn.2}%
+\contentsline {axiom}{\numberline {9}Axiom\thmtformatoptarg {Axiome de completude}}{7}{axiom.9}%
+\contentsline {rmq}{\numberline {10}Remarque}{7}{rmq.10}%
+\contentsline {defn}{\numberline {3}Definition\thmtformatoptarg {Supremum}}{7}{defn.3}%
+\contentsline {rmq}{\numberline {11}Remarque}{7}{rmq.11}%
+\contentsline {rmq}{\numberline {12}Remarque}{7}{rmq.12}%
+\contentsline {rmq}{\numberline {13}Remarque}{7}{rmq.13}%
+\contentsline {propo}{\numberline {14}Proposition}{8}{propo.14}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{8}{proof.7}%
+\contentsline {crly}{\numberline {15}Corollaire\thmtformatoptarg {Propriete archimedienne}}{8}{crly.15}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{8}{proof.8}%
+\contentsline {thm}{\numberline {16}Theorème\thmtformatoptarg {La racine de deux existe}}{8}{thm.16}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{8}{proof.9}%
+\contentsline {rmq}{\numberline {17}Remarque}{9}{rmq.17}%
+\contentsline {propo}{\numberline {18}Proposition\thmtformatoptarg {$\mathbb {Q}$ est dense dans $\mathbb {R}$}}{9}{propo.18}%
+\contentsline {lemma}{\numberline {19}Lemme}{9}{lemma.19}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{9}{proof.10}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve\thmtformatoptarg {Preuve de la densite}}{10}{proof.11}%
