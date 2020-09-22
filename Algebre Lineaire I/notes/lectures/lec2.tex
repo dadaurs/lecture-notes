@@ -228,10 +228,10 @@ Supposons $f,g \in Bij(X)$, alors
 On dispose donc de cette loi de composition:
 \begin{align*}
 \circ: 
-\begin{cases}
+\begin{aligned}
 	Bij(X) \times Bij(X) &\longrightarrow Bij(X)\\
 	( g,f) &\longrightarrow g \circ f
-\end{cases}
+\end{aligned}
 \end{align*}
  $\circ$ est associative:\\
  $f,g,h \in Bij(X)$, alors
@@ -264,14 +264,20 @@ un \underline{groupe}
 		\item d'un ensemble $G$ non-vide\\
 		\item d'une application ( appellee loi de composition interne) $\star$ tq
 			\begin{align*}
+				\star :
+				\begin{aligned}
 				G \times G &\mapsto G\\
 				( g,g') &\mapsto \star(g,g') =: g \star g'
+				\end{aligned}
 			\end{align*}
 		\item d'un element $e_G \in G$ (element neutre)\\
 		\item de l'application d'inversion $\cdot^{-1}$
 			\begin{align*}
-			G &\mapsto G\\
-			g & \mapsto g^{-1}	
+				\cdot ^{-1}:
+				\begin{aligned}
+				G &\mapsto G\\
+				g & \mapsto g^{-1}	
+				\end{aligned}
 			\end{align*}
 		ayant les proprietes suivantes\\
 	\item Associativite: $\forall g,g',g'' \in G, ( g\star g')\star g'' = g \star(g'\star g'')$.\\
