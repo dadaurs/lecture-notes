@@ -125,27 +125,22 @@ On distingue à nouveau 2 cas:
 			a(t) &= a_{n+1} t^{n+1} + a'(t)\\
 			     &= a_{n+1} t^{n+1} \left( \frac{q_m t^{m}}{q_{m} t^{m}}\right) + a'(t)\\
 			     &= a_{n+1} t^{n+1} \left( \frac{q(t) - q'(t)}{q_{m} t^{m}}\right) + a'(t)\\
-			     &= a_{n+1} t^{n+1} \frac{q(t)}{q_m t^{m}}\\
-			     &- a_{n+1} t^{n+1} \frac{q'(t)}{q_m t^{m}}\\
-			     &+ a'(t)\\
+			     &= \underbrace{a_{n+1} t^{n+1} \frac{q(t)}{q_m t^{m}}}_{ \text{ degré: } n+2}
+			     - \underbrace{a_{n+1} t^{n+1} \frac{q'(t)}{q_m t^{m}}}_{ \text{ degré  } \leq n } + \underbrace{a'(t)}_{ \text{ degré } \leq n}\\
 		\end{align*}
 		
-Dans cette expression, on remarque que
+Donc le terme  $-\frac{a_{n+1}}{q_m} t^{n-m+1} q'(t)$, admet, par hypothèse de récurrence, $\exists c(t)$ et $r_c(t)$ tel que
 \[ 
-	\deg\left(-\frac{a_{n+1}}{q_m} t^{n-m+1} q'(t)\right) < n+1 \text{, ceci découle du lemme \ref{produit}.}
+	-\frac{a_{n+1}}{q_m} t^{n-m+1} q'(t) = c(t) \cdot q(t) + r_c(t)
 \]
-Donc le terme ci-dessus, $-\frac{a_{n+1}}{q_m} t^{n-m+1} q'(t)$, admet, par hypothèse de récurrence, $c(t)$ et $r_c(t)$ tel que
-\[ 
-	-\frac{a_n}{q_m} t^{n-m+1} q'(t) = c(t) \cdot q(t) + r_c(t)
-\]
-Le degré de $a'(t)$ est aussi inférieur à $n+1$, et donc, par le même raisonnement, $\exists d(t) , r_d(t)$ tel que $a'(t)= q(t)\cdot d(t) + r_d(t)$.\\
+Le degré de $a'(t)$ est aussi inférieur à $n+1$, et donc, par hypothèse de récurrence, $\exists d(t) , r_d(t)$ tel que $a'(t)= q(t)\cdot d(t) + r_d(t)$.\\
 On a donc
 \begin{align*}
 	a(t) &= \frac{a_{n+1}}{q_m} t^{n+1-m} q(t) - \frac{a_{n+1}}{q_m} t^{n-m+1} ( q'(t)) + a'(t)\\
 	     &= \frac{a_{n+1}}{q_m} t^{n+1-m} q(t) - c(t) \cdot q(t) - r_c(t) + q(t) \cdot d(t) + r_d(t)\\
 	     &= q(t) \left( \frac{a_{n+1}}{q_m} t^{n+1-m} - c(t) + d(t) \right) - r_c(t) + r_d(t) \\
 \end{align*}
-
+On a donc trouvé une formulation pour $a(t)$ tel que $a(t)=b(t) \cdot q(t) + r(t)$.
 \end{itemize}
 \end{proof}
 
