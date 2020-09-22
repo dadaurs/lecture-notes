@@ -1,0 +1,108 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\begin{document}
+\title{Série 1, Exercice 6}
+\author{David Wiedemann}
+\maketitle
+	$\bullet$ Clairement le numérateur est un entier positif, il suffit donc de montrer qu'il est pair.\\
+		On distingue donc les cas.\\
+		\begin{itemize}
+			\item Supposons $m$ pair et $n$ pair, alors:
+		\[ 
+			m=2i \text{ et } n=2k
+		\]
+
+		
+		Donc
+		\begin{align*}
+			( m+n)^{2} + m + 3n&= ( 2i+ 2k)^{2} + 2i + 6k\\
+					   &= 2 ( 2 ( i+k)^2 + i + 3k)
+		\end{align*}
+		Donc le numérateur est pair.\\
+	\item Supposons $m$ pair et $n$ impair, alors
+		\[ 
+			m = 2i \text{ et } n = 2k +1
+		\]
+		Donc 
+		\begin{align*}
+			( m+n)^{2} + m + 3n&= ( 2i+ 2k + 1)^{2} + 2i + 6k + 3\\
+					   &= (2i + 2k)^{2} + 2(2i+ 2k) + 1 + 2i + 6k + 3\\
+					   &= (2i + 2k)^{2} + 2(2i+ 2k)  + 2i + 6k + 4\\
+					   &= 2( 2(i + k)^{2} + (2i+ 2k)  + i + 3k + 2 )\\
+		\end{align*}
+		Donc le numérateur est pair.\\
+	\item Supposons $m$ impair et $n$ pair, alors
+		\[ 
+		m=2i + 1 \text{ et } n=2k
+		\]
+		Donc
+		\begin{align*}
+		( m+n)^{2} + m + 3n&= ( 2i+ 2k + 1)^{2} + 2i + 6k + 1\\
+				&= (2i + 2k)^{2} + 2(2i+ 2k) + 1 + 2i + 6k + 1\\
+				&= (2i + 2k)^{2} + 2(2i+ 2k) + 2i + 6k + 2\\
+				&= 2( 2(i + k)^{2} + (2i+ 2k)  + i + 3k + 1 )\\
+		\end{align*}
+	\item Finalement, supposons $m$ impair et $n$ impair
+
+		\[ 
+			m=2i + 1 \text{ et } n=2k +1
+		\]
+		Donc
+		\begin{align*}
+		( m+n)^{2} + m + 3n&= ( 2i+ 2k + 2)^{2} + 2i + 6k + 4\\
+				   &= 2 (2 ( i+k+1) + i + 3k +2)
+		\end{align*}
+		\end{itemize}
+		$\bullet$ Par la définition de $D_k$, $(m,n) \in D_k$ implique que $(k-n,n)\in D_k$ et $0\leq n\leq k$.\\
+		Supposons donc $(m,n) \in D_k$, on a:
+		\begin{align*}
+			C(m,n)=C(k-n,n)&= \frac{1}{2} \cdot \left( (k-n+n)^{2} + k-n + 3n\right)\\
+				       &= \frac{1}{2} \cdot \left( k^{2} + k + 2n\right)\\
+				       &= \frac{k^{2}+k}{2} + n
+		\end{align*}
+		Donc si $n=0$, $C(m,n)= \frac{k^{2}+k}{2}$ et si $n=k$, $C(m,n)= \frac{k^{2}+k}{2}+k$, donc les valeurs de $C(m,n)$ sont comprises entre $\frac{k^{2}+k}{2}$ et  $\frac{k^{2}+k}{2}+k$.\\
+		$\bullet$ On est maintenant prêt à montrer la bijectivité de $C: \mathbb{N}^{2} \to \mathbb{N}$.
+		Pour ceci, on va procéder par étapes:
+		\begin{enumerate}
+			\item Montrer que $C:D_k \to \{\frac{k^{2}+k}{2},\ldots,\frac{k^{2}+k}{2}+k\}$ est bijective.\\
+			\item Montrer que $ D_i \cap D_k= \emptyset$, si $i\neq k$.\\
+			\item Montrer que $\bigcup_{i=0}^{+\infty} D_i = \mathbb{N}^{2}$.\\
+			\item Montrer la bijectivité de $C: \mathbb{N}^{2} \to \mathbb{N}$.
+		\end{enumerate}
+		Pour le point 1.\\
+		Trouver un inverse pour $C:D_k \to \{\frac{k^{2}+k}{2},\ldots,\frac{k^{2}+k}{2}+k\}$ est facile, soit $a \in \{\frac{k^{2}+k}{2},\ldots,\frac{k^{2}+k}{2}+k\}$, alors
+		\begin{align*}
+			C^{-1}: \left\{\frac{k^{2}+k}{2},\ldots,\frac{k^{2}+k}{2}+k\right\} &\to D_k\\
+			a &\to \left(a-\frac{1}{2}(k^{2}+k),k+\frac{1}{2}(k^{2}+k)-a\right)
+		\end{align*}
+		Clairement, cette application est bijective car $k$ est constante.\\
+		Pour le point 2.\\
+		Par l'absurde, supposons que $\exists (m,n) \in D_k$ et $(m,n) \in D_i$.\\
+		Donc $m+n=i$ et $m+n=k$, donc $i=k$, ce qui est une contradiction à l'hypothèse.\\
+		Pour le point 3.\\
+		On montre la double inclusion.\\
+		L'inclusion de gauche à droite est triviale.\\
+		Supposons donc $(m,n) \in \mathbb{N}^{2}$. On pose $m+n=i, i \in \mathbb{N}$, donc $m=i-n$.
+		\[ 
+			(m,n) = (i-n,n) \in D_i
+		\]
+		On en déduit $\bigcup_{i=0}^{+\infty} D_i = \mathbb{N}^{2}$
+		
+
+		
+
+
+
+		
+		
+		
+
+\end{document}
