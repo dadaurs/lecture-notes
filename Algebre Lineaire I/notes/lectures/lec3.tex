@@ -1,0 +1,239 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Tue 22 Sep}{Groupes, Anneaux, Corps}
+
+$\exists \sigma, \tau \in Bij(x)$ tq. $\sigma \circ \tau \neq \tau \circ \sigma$
+\begin{defn}[Notation additive]\label{defn:notation_additive}
+	Si un groupe est commutatif on pourra utiliser une notation ``additive'':\\
+\begin{itemize}
+	\item 	La loi sera notee $+$.\\
+	\item 	L'element neutre sera note $0_G$.\\
+	\item 	L'inversion sera appele oppose et notee $-g  g + (-g)= 0_G$.
+\end{itemize}
+\end{defn}
+\begin{propo}[Lois de Groupe]\index{Lois de Groupe}\label{propo:lois_de_groupe}
+	\begin{itemize}
+		\item Involutivite de l'inversion: $\forall g, ( g^{-1})^{-1}=g, g^{-1}\star g = e_G$.\\
+		\item L'element neutre est unique, si $\exists e'_G$ tq $g\in G$ verifiant $g\star e'_G=g$, alors $e'_G$ est l'element neutre.\\
+		\item Unicite de l'inverse: si $g'\in G$ verifie $g\star g'= e_G$, alors $g'=g^{-1}$.\\
+		\item On a $ (g\star g')^{-1}=g'^{-1}\star g^{-1}$
+	\end{itemize}
+	
+\end{propo}
+\begin{proof}
+La preuve de toutes les proprietes est donnee dans le support de cours.\\
+On montre l'unicite de l'element neutre.\\
+Si $e'_G$ est telle que pour un certain $g\in G$, tq
+\[ 
+g \star e'_G = g
+\]
+Alors on $\star$ a gauche par $g^{-1} g^{-1}\star g \star e'_G=g^{-1}\star g$  
+\[ 
+=e_G \star e'_G = e_G = e'_G
+\]
+Admettons que l'inverse est unique et montrons que si $g,g'\in G  ( g\star g')^{-1}=g'^{-1}\star g^{-1}$\\
+On calcule
+\begin{align*}
+	( g\star g') \star ( g'^{-1}\star g^{-1}) &= g\star g' \star g'^{-1} \star g^{-1}\\
+						  &= g \star e_G \star g^{-1}=g\star g^{-1}	
+\end{align*}
+de meme:
+\[ 
+ ( g'^{-1}\star g^{-1})\star ( g\star g') = e_G
+ \]
+ Donc $g'^{-1}\star g^{-1}$ a les meme proprietes d'inversion que $(g\star g')$ et par unicite c'est $ ( g\star g')^{-1}$.
+\end{proof}
+\begin{defn}[Notation exponentielle]\label{defn:notation_exponentielle}
+	$(G,\cdot)$ un groupe et $g\in G$. On peut:
+	\[ 
+		g \to g^{-1} \text{  } g\cdot g, g\cdot g \cdot g, g\cdot g \cdot g \cdot g \ldots
+	\]
+	On peut faire ca $n$ fois $n \geq 1$ un entier, on notera:
+	\[ 
+ g\cdot g \cdot g \cdot g = g^{n}
+	\]
+	si $n < 0$ :
+	\[ 
+		g^{n} := ( g^{-1})^{n} = \underbrace{g^{-1} \cdot g^{-1} \cdot \ldots  g^{-1}}_{\abs{n} \text{fois}}
+	\]
+	et $g^{0}:=e_G$
+\end{defn}
+\begin{exo}
+	Verifier que: $g^{m+n}= g^{m}\cdot g^{n}$
+\end{exo}
+
+\begin{defn}[exponentielle]\label{defn:exponentielle}
+	
+	\begin{align*}
+	\exp_g:
+	\begin{aligned}
+	\mathbb{Z} &\to G\\
+	n &\to g^{n}
+	\end{aligned}
+	\end{align*}
+	On l'appelle l'exponentielle de $n$ en base $g$.
+	\[ 
+		\exp_g(m+n) = \exp_g(m) \cdot \exp_g(n)
+	\]
+\end{defn}
+\begin{defn}[Notation multiple]\index{Notation multiple}\label{defn:notation_multiple}
+	Si $G $ est commutatif et que le groupe est note additivement
+	\[ 
+	n \geq 1	\underbrace{ g+ \ldots + g }_{n \text{ fois }} = n \cdot g
+	\]
+	Si $n< 0$ 
+	\[ 
+		n\cdot g := \underbrace{ (-g) + \ldots + (-g) }_{\abs{n} \text{ fois }}
+	\]
+	Donc on a la notation
+	\[ 
+		\forall m,n \in \mathbb{Z} (m+n)\cdot g = m\cdot g + n \cdot g
+	\]
+\end{defn}
+\section{Sous-Groupe}
+\begin{defn}[Sous-groupe]\index{Sous-group}\label{defn:sous_group}
+	Soit $(G, \star, e_g, \cdot^{-1})$ un groupe.
+	Un sous-groupe $H \subset G$ est un sous-ensemble de $G$ tq
+	\begin{enumerate}
+		\item $e_G \in H$ \\
+		\item $H$ est stable par la loi de composition 
+			\[ 
+			\forall h,h' \in H , h\star h' \in H
+			\]
+		\item $H$ est stable par l'inversion
+			\[ 
+			\forall h \in H , h^{-1} \in H
+			\]
+			
+	\end{enumerate}
+$(H, \star, e_g, \cdot^{-1})$ forme un groupe
+\end{defn}
+\begin{propo}[Critere de Sous-groupe]\index{Critere de Sous-groupe}\label{propo:critere_de_sous_groupe}
+	Pour montrer que $\emptyset \neq H \subset G$ est un sous groupe il suffite de verifier l'une ou l'autre de ces proprietes:
+	\begin{enumerate}
+		\item a. $\forall h,h' \in H , h\star h' \in H$\\
+			b. $\forall h \in H, h^{-1} \in H$
+		\item $\forall h,h' \in H, h \star h'^{-1}\in H$.
+	\end{enumerate}
+\end{propo}
+\begin{proof}
+Montrons que $H$ verifie le point 1 de la definition.\\
+Comme $H\neq \emptyset$ il existe $h\in H$. Par hypothese $h\star h^{-1} \in H$.\\
+On verifie la stabilite par inversion\\
+Soit $h\in H$ et par hypothese $e_G \in H$ $e_G \star h^{-1}\in H$\\
+On verifie la stabilite par produit\\
+Soit $h,h' \in H$ alors $(h')^{-1} \in H$ et $h\star ( ( h')^{-1})^{-1}\in H$. 
+Or
+\[ 
+	( ( h')^{-1})^{-1} = h' \Rightarrow h \star h' \in H
+\]
+
+\end{proof}
+\begin{exemple}
+	 $(G,\cdot) g \in G$ et $g^{\mathbb{Z}}= \exp_g(\mathbb{Z}) = \{g^{n}, n \in \mathbb{Z}\}$
+	 Forme un sous groupe.
+\end{exemple}
+\begin{proof}
+Soit $h,h' \in H = g^{\mathbb{Z}}$ alors
+\[ 
+h= g^{m} h'=g^{m'} m,m'\in \mathbb{Z}
+\]
+Alors
+\[ 
+h\cdot h' = g^{m} \cdot g^{m'} = g^{m+m'} \in g^{\mathbb{Z}}
+\]
+Soit $h\in g^{\mathbb{Z}} h=g^{m}$
+a finir
+\end{proof}
+\begin{exemple}
+	\begin{enumerate}
+		\item $\{e_G\}\subset G$ est un sous groupe de $G$ on l'appelle le sous groupe trivial de $G$.\\
+		\item $G\subset G$ est un sous groupe \\
+		\item $(\mathbb{Z},+) q \in \mathbb{Z}$ \\
+		\item $q\cdot \mathbb{Z} = \{a, a=q\cdot k, k\in \mathbb{Z}\}$
+	\end{enumerate}
+	
+\end{exemple}
+\begin{proof}
+On prouve la derniere propriete
+\begin{itemize}
+	\item $0 \in q \mathbb{Z}$ car $0=q\cdot 0$ \\
+	\item $qk$ et $q\cdot k' \in q\mathbb{Z} \Rightarrow qk + qk'=q(k+k') \in q\cdot \mathbb{Z}$ \\
+	\item $qk \in q\mathbb{Z}$
+\end{itemize}
+\end{proof}
+
+\begin{thm}[Sous groupe de $\mathbb{Z}$]\index{Sous groupe de $\mathbb{Z}$}\label{thm:sous_groupe_de_mathbb_z_}
+Reciproqueme tout sousgroupe de $\mathbb{Z}$ est de la forme $q\cdot \mathbb{Z}$.
+\end{thm}
+\begin{proof}
+Soit $H \subset \mathbb{Z}$ un sous groupe
+\begin{itemize}
+	\item si $h=\{0\}, H = 0\cdot \mathbb{Z}$.\\
+	\item si $H\neq \{0\}$ soit $q\in H \neq 0$
+\end{itemize}
+Alors, sans perte de generalite, on peut supposer que $q>0$ ( si $q<0$ on remplace $q$ par $-q \in H$ )
+
+Sans perte de generalite on peut supposer que $q$ est le plus petit el strictement positif contenu dans $H$ 
+\[ 
+	q=q_{min}=\min(h\in H, h>0)
+\]
+On va montrer que $H=q\mathbb{Z}$.\\
+Soit $h\in H$ par division euclidienne il existe $k\in \mathbb{Z}$  et $r\in \{0,\ldots,q-1\}$ tq
+\begin{align*}
+	h&=qk+r\\
+r&=h-qk \in H 
+\end{align*}
+Donc $0 \geq r < q \Rightarrow r=0$ par def de $q$.\\
+Donc $h=q\cdot k \in q\mathbb{Z}$.
+
+\end{proof}
+
+\section{Groupe engendre par un ensemble}
+\begin{propo}[Intersection de sous-groupes]\index{Intersection de sous-groupes}\label{propo:intersection_de_sous_groupes}
+	Soit $G$ un groupe et $H_1, H_2 \subset G$ deux sous groupes alors $ H_1\cap H_2$ est un sous groupe.
+	Plus generalement l intersection de sous groupes est un sous-groupe.
+\end{propo}
+\begin{proof}
+Cas $ H_1 \cap H_2$.
+On veut montrer que c'est un sous groupe. On utilise la deuxieme version du critere de la proposition \ref{propo:critere_de_sous_groupe}.
+\[ 
+\forall h,h' \in H_1\cap H_2 \Rightarrow ? h\star h'^{-1} \in H_1\cap H_2
+\]
+Comme $h,h' \in H_1 h\star h'^{-1}\in H_1$ et
+$h,h' \in  H_2 h \star h'^{-1} \in H_2$\\
+Donc $h\star h'^{-1}\in H_1 \cap H_2$\\
+$  \Rightarrow H_1 \cap H_2$ est un sous-groupe
+\end{proof}
+
+\begin{defn}[Sous-groupe engendre]\index{Sous-groupe engendre}\label{defn:sous_groupe_engendre}
+	$G$ un groupe et $A\subset G$ un sous-ensemble de $G$.\\
+	Le sous-groupe engendre par $A$, note $<A> \subset G$ est par definition le plus petit sous groupe de $G$ contenant $A$.\\
+	Soit
+	\begin{align*}
+	G_A =
+	\begin{cases}
+	H \subset G, H \text{ est un sous groupe et  } A \subset H
+	\end{cases}
+	\end{align*}
+	$G_A$ est non-videcar il contient $G$.\\
+	Par la proposition precedente, on considere
+	\[ 
+		\eng{A} := \bigcap_{H\in G_A} H
+	\]
+	Par la proposition cette intersection est un sous groupe qui contient $A$ et c'est le plus petit possible au sens ou si $H \subset G$ est un sous groupe contenant $A$ alors
+	\[ 
+		\eng{A} =\bigcap_{H \in G_A}H \subset H'
+	\]
+\end{defn}
+\begin{exemple}
+Si $g\in G \eng{\{g\}} = g ^{\mathbb{Z}} = \{g^{n}, n\in \mathbb{Z}\}$
+\end{exemple}
+
+
+
+
+
+
+
+\end{document}
