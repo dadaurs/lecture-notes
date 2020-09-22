@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="240mm"
+   height="120mm"
+   viewBox="0 0 240 120"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="preuve-fonction-bizarre.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.99437388"
+     inkscape:cx="284.27627"
+     inkscape:cy="182.72055"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="true"
+     width="200mm"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1906"
+     inkscape:window-height="1168"
+     inkscape:window-x="6"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0"
+     inkscape:snap-global="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid815"
+       units="mm"
+       spacingx="10"
+       spacingy="10"
+       empspacing="4"
+       dotted="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-177)">
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.140441"
+       id="path831"
+       cx="33.312679"
+       cy="234.8291"
+       rx="13.356583"
+       ry="40.069748" />
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.140441"
+       id="ellipse833"
+       cx="137.04921"
+       cy="235.33604"
+       rx="13.356583"
+       ry="40.069748" />
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.140441"
+       id="path835"
+       cx="35.49033"
+       cy="218.57013"
+       rx="4.0000558"
+       ry="12.000168" />
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.140441"
+       id="path837"
+       cx="137.61369"
+       cy="231.26224"
+       rx="4.8390846"
+       ry="19.356339" />
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text841"
+       y="217.72272"
+       x="34.549919"><tspan
+         sodipodi:role="line"
+         id="tspan839"
+         x="34.549919"
+         y="217.72272"
+         style="stroke-width:0.264583">$x$</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 36.08755,206.80137 101.00436,4.68578"
+       id="path867" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 35.434156,230.22899 136.1008,250.35075"
+       id="path871" />
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text875"
+       y="223.89461"
+       x="59.971066"><tspan
+         sodipodi:role="line"
+         id="tspan873"
+         x="59.971066"
+         y="223.89461"
+         style="stroke-width:0.264583">$f\vert_x :X \mapsto X_B$</tspan></text>
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text845"
+       y="224.06383"
+       x="135.19044"><tspan
+         sodipodi:role="line"
+         id="tspan843"
+         x="135.19044"
+         y="224.06383"
+         style="stroke-width:0.264583">$X_B= f(X)$</tspan></text>
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.140441"
+       id="path857"
+       cx="135.77298"
+       cy="262.71768"
+       rx="4.7901607"
+       ry="7.4122066" />
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text861"
+       y="262.69031"
+       x="132.73357"><tspan
+         sodipodi:role="line"
+         id="tspan859"
+         x="132.73357"
+         y="262.69031"
+         style="stroke-width:0.264583">$Y$</tspan></text>
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.140441"
+       id="path846"
+       cx="31.408472"
+       cy="251.39243"
+       rx="4.2974963"
+       ry="8.5949926" />
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text850"
+       y="250.8652"
+       x="27.103226"><tspan
+         sodipodi:role="line"
+         id="tspan848"
+         x="27.103226"
+         y="250.8652"
+         style="stroke-width:0.264583">$Y_A$</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 32.116093,242.55125 135.49137,254.77919"
+       id="path862" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 31.24487,260.07408 104.43784,9.81685"
+       id="path864" />
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text868"
+       y="257.07977"
+       x="60.374115"><tspan
+         sodipodi:role="line"
+         id="tspan866"
+         x="60.374115"
+         y="257.07977"
+         style="stroke-width:0.264583">$g\vert_Y: Y \mapsto Y_A$</tspan></text>
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text896"
+       y="272.34372"
+       x="71.048698"><tspan
+         sodipodi:role="line"
+         id="tspan894"
+         x="71.048698"
+         y="272.34372"
+         style="stroke-width:0.264583">bijective</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,223 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Tue 22 Sep}{Applications entre ensembles}
+\chapter{Applications entre ensembles}
+Plus complet dans les notes de cours.\\
+\begin{defn}[Formalisation des applications]\index{Formalisation des applications}\label{defn:formalisation_des_applications}
+	Soit $A, B$ deux ensembles, alors 
+	\[ 
+	\phi : A \to B
+	\]
+	On la definit comme un sous-ensemble du produit cartesien:
+	\begin{align*}
+		\Gamma_\phi &\subseteq A \times B\\
+		\forall a &\exists ! b: ( a,b) \in \Gamma_\phi
+	\end{align*}
+	Une maniere de penser d'une application est comme une machine qui prend $a$ et qui sort $b$, la machine aura un fonctionnement deterministe.
+\end{defn}
+\begin{propr}[Propriete des applications]\index{Propriete des applications}\label{propr:propriete_des_applications}
+	Soit $\phi: A \to B$
+	\begin{enumerate}
+		\item injective:
+			\[ 
+				\phi(a) = \phi(b) \iff a=b
+			\]
+		\item surjective
+			\[ 
+				\forall b \in B \exists a : \phi(a)=b
+			\]
+		\item bijective $\iff$ injective et bijective\\
+			L'inverse
+			\begin{align*}
+				\phi^{-1}: B &\to A
+				\iff \phi(a) &= b
+			\end{align*}
+			
+		\item Image
+			\[ 
+				\phi(A) = \left\{ \phi(a) \vert a \in A \right\} \subseteq B
+			\]
+		\item $\phi: A \to B, \xi :B \to C$, alors
+			\[ 
+				( \xi \circ \phi )(a) = \xi(\phi(a))
+			\]
+			\sidenote{L'ordre est etrange.}
+	\end{enumerate}
+\end{propr}
+\begin{propo}[Surjectivite de la composition]\index{Surjectivite de la composition}\label{propo:surjectivite_de_la_composition}
+	(i) $\xi$ surjectif\\
+	(ii) $\phi$ pas necessairement $\iff$ il existe un contre exemple.
+\end{propo}
+\begin{proof}
+	(i) $\forall c \in C: \exists a: \xi(\phi(a))=c$\\
+	Donc $\exists b :=\phi(a) \Rightarrow \xi(b)=c$\\
+	(ii) 
+\begin{figure}[ht]
+    \centering
+    \incfig{contre-exemple-injectivite}
+    \caption{contre-exemple injectivite}
+    \label{fig:contre-exemple-injectivite}
+\end{figure}
+\end{proof}
+\section{Relations d'equivalence}
+\begin{figure}[ht]
+    \centering
+    \incfig{schema-relation-d-equivalence}
+    \caption{schema relation d equivalence}
+    \label{fig:schema-relation-d-equivalence}
+\end{figure}
+\begin{defn}[Relations d'equivalence]\index{Relations d'equivalence}\label{defn:relations_d_equivalence}
+	Une relation d'equivalence de $A$ est un sous ensemble du produit $R \subseteq A \times A$ tq.
+	\begin{enumerate}
+		\item (identite) $\forall a \in A: ( a,a) \in R	$\\
+		\item ( reflexivite): $(a,b) \in R \iff ( b,a) \in R$ \\
+		\item ( transitivite): $(a,b) \in R, ( b,c) \in R \Rightarrow ( a,c)\in R$.
+	\end{enumerate}
+\end{defn}
+\begin{exemple}[Exemple de transitivite]
+$A= \mathbb{Z}$, alors:
+\[ 
+	R \subseteq \mathbb{Z}\times \mathbb{Z}: ( a,b) \in R \iff m \vert a-b
+\]
+\begin{enumerate}
+	\item $(a,a) \in R: m \vert a-a$.\\
+	\item $( a,b) \in R \Rightarrow ( b,a) \in R$
+
+		\[ 
+			\Rightarrow m \vert a-b \text{  } m \vert b-a = -(a-b)
+		\]
+	Ce qui est equivalent.\\
+\item $(a,b) \in R, ( b,c) \in R \Rightarrow ( a,c) \in R$\\
+	\[ 
+		m \vert a-b , m | b-c \Rightarrow m \vert ( a-b)+ ( b-c) = a-c
+	\]
+	
+\end{enumerate}
+\end{exemple}
+\begin{defn}[Classes d'equivalence]\index{Classes d'equivalence}\label{defn:classes_d_equivalence}
+	Soir $R \subseteq A \times A$ rel. d'equivalence. et $a \in A$.\\
+	La classe d'equivalence de $a$ est
+	\[ 
+		R_a= \left\{ b \in A \vert ( a,b) \in R \right\} 
+	\]
+\end{defn}
+\begin{defn}[L'ensemble quotient]\index{L'ensemble quotient}\label{defn:l_ensemble_quotient}
+	L'ensemble quotient de $R$ :
+	\[ 
+	A / R = \left\{ R_a \vert a \in A \right\} \subseteq 2^{A}
+	\]
+	
+\end{defn}
+\begin{exemple}[Cas de relation d'equivalence]\index{Cas de relation d'equivalence}\label{exemple:cas_de_relation_d_equivalence}
+	$m=3$ et $R$ la relation d'equivalence precedente.
+	\[ 
+	A= \mathbb{Z} = \left\{ -2,-1,0,1,2 \right\} 
+	\]
+	Alors:
+	\begin{align*}
+		R &\supseteq (0.3)\\
+		  & ( 1,4)\\
+		  & ( 1,7)\\
+		  & ( 11,8)
+	\end{align*}
+	$R_a= \left\{ b \in A \vert ( a,b) \in R \right\} = \left\{ b \in \mathbb{Z} \vert 3 \vert a-b \right\}$
+	Pour le cas $a=1$, on a:
+	\begin{align*}
+	R_1= \left\{ \ldots, -5,-2,1,4,7,\ldots \right\} = 1 + 3 \mathbb{Z}\\
+	R_0= 3 \mathbb{Z}\\
+	R_2 = \left\{ \ldots,-4,-1,2,5,\ldots \right\} \\
+	A / R = \left\{ 3\mathbb{Z}, 3\mathbb{Z}+1, 3\mathbb{Z}+2 \right\} 
+	\end{align*}
+	En general, pour m arbitraire
+	\[ 
+		A / R = \left\{ m \mathbb{Z}, m \mathbb{Z} +1, \ldots, m\mathbb{Z} + (m-1) \right\} 
+	\]
+\end{exemple}
+\section{Cardinal d'un ensemble}
+La question generale est: comment mesure-t'on la taille d'un ensemble ( meme pour des ensembles infinis)?\\
+\begin{defn}[Cardinal d'un ensemble]\index{Cardinal d'un ensemble}\label{defn:cardinal_d_un_ensemble}
+	\begin{enumerate}
+		\item $A$ et  $B$ ont le meme cardinal si il existe $\phi: A \to B$ bijection, on note $\abs{A} = \abs{B}$\\
+		\item $A$ a un cardinal plus petit que $B$ si $\exists$ une injection 
+			\[ 
+			\psi: A \inj B
+			\]
+			On note $\abs{A} \leq \abs{B}$.
+
+			Par exemple, il n'existe pas de bijection de $\mathbb{Z}$ a $\mathbb{R}$, par contre il existe une injection $\mathbb{Z} \inj \mathbb{R}$ donc $\abs{\mathbb{Z}} < \abs{\mathbb{R}}$. On dit quue $\abs{\mathbb{Z}} = \omega_0 = \aleph_0$ et on note $\abs{R}= \kappa$
+	\end{enumerate}
+\end{defn}
+\begin{exemple}
+	On veut montrer que $\abs{\mathbb{N}} = \abs{\mathbb{Z}}$ et 
+	\[ 
+		\phi: \mathbb{Z} \to \mathbb{N}
+	\]
+	\begin{align*}
+	\phi :
+	\begin{aligned}
+		0 \leq x &\mapsto 2x\\
+	0>x &\mapsto -2x-1
+	\end{aligned}
+	\end{align*}
+	Devoir: montrer que $\phi$ est une bijection.
+\end{exemple}
+\begin{thm}[Cantor-Bernhard-quelquechose]
+	$\abs{A} \leq \abs{B}, \abs{B} \leq \abs{A}$ alors $\abs{A} = \abs{B}$.
+	Autrement dit:
+	\[ 
+	f: A \inj B, B \inj A \Rightarrow \exists bij A \mapsto B
+	\]
+	
+\end{thm}
+\begin{lemma}
+	
+	Si il existe
+	\begin{align*}
+	X \subseteq A\\
+	X = A \setminus g(B\setminus f(X))
+	\end{align*}
+	Alors il existe une bijectin $A \mapsto B$
+\end{lemma}
+\begin{proof}
+\begin{align*}
+	Y_A := X \setminus A = g(Y)\\
+X_B = f(X)\\
+Y = B \setminus f(x)
+\end{align*}
+
+\begin{figure}[ht]
+    \centering
+    \incfig{preuve-fonction-bizarre}
+    \caption{preuve fonction bizarre}
+    \label{fig:preuve-fonction-bizarre}
+\end{figure}
+Union disjointe $ B =Y \bot X_B$
+\end{proof}
+\begin{proof}
+$f: A \inj B$ et  $g: B \inj A$.\\
+Il faut : $X$ tq:
+\[ 
+	X = A \setminus g(B \setminus f(x)) = H(X)
+\]
+
+$X  \subseteq Z  \Rightarrow f(X) \subseteq f(Z)$
+
+\begin{align*}
+	&\Rightarrow B \setminus f(x) \supseteq B \setminus f(Z)\\
+	&\Rightarrow g(B\setminus f(x)) \supseteq g(B \setminus f(Z))\\
+	&\Rightarrow A \setminus g(B\setminus f(x)) \supseteq g(B \setminus f(Z))\\
+	&\Rightarrow  A \setminus g(B\setminus f(Z)) \subseteq A \setminus g(B\setminus f(x))\\
+	&\Rightarrow H(X) \subseteq H(Z)
+\end{align*}
+Soit $W = \bigcap_{X \subseteq A, \text{  } H(X) \subseteq X}X$ 
+Lire les notes pour voir que $W = H(W)$
+
+\end{proof}
+
+
+
+
+
+
+
+\end{document}	
