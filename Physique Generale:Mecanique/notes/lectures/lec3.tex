@@ -144,12 +144,54 @@ Deuxieme loi de Newton: $F+F_{frot}=ma$, alors
 \[ 
 	m\ddot{x} = -kx - b\dot{x} \Rightarrow \ddot{x} + 2\gamma \dot{x} + \omega_0^{2}=0 \text{ avec } \gamma=\frac{b}{2m} \text{ et } \omega_0=\sqrt{\frac{k}{m}}
 \]
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \incfig{types-d'ammortissement}
     \caption{types d'ammortissement}
     \label{fig:types-d'ammortissement}
 \end{figure}
+\subsection{Oscillateur force}
+En pratique tout oscillateur s'amortit, mais on peut entretenir les oscillations a l'aide d'une force exterieure.\\
+Exemples
+\begin{itemize}
+	\item Balancoire pousse par un enfant.
+	\item Voiture ( avec suspension) passant sur des bosses
+	\item Atome ( electron lie) recevant un rayonnement electromagnetique
+\end{itemize}
+On ajoute une force periodique $\vec{F}_{ ext }$ Par exemple $F_{ext}=f \sin(\omega t)$ avec $f=1N$
+\[ 
+	m \ddot{x}= - kx -b \dot{x} + F_{ext}
+\]
+
+\[ 
+	\ddot{x} + 2 \gamma \dot{x} + \omega_0^{2} =a_0\sin(\omega t) \text{ avec } \gamma=\frac{b}{2m}, \omega_0=\sqrt{\frac{k}{m}}
+\]
+Solution:
+\[ 
+	x(t)= x_{transitoire} ( t) + \rho \sin(\omega t- \Phi)
+\]
+avec
+\[ 
+	\rho= \frac{a_0}{\sqrt{(\omega_0^{2}-\omega_2)^{2}+4 \gamma^{2}\omega^{2}}}
+\]
+et
+\[ 
+	\tan(\Phi) = 2\gamma\frac{\omega}{\omega_0^{2}-\omega^{2}}
+\]
+
+\subsection{Phenomes de resonnance}
+Resonnances desirables
+\begin{itemize}
+	\item Circuitselectriques dans un tuner
+	\item Tuyaux d'orgue
+	\item Balancoire de jardin
+\end{itemize}
+\begin{itemize}
+	\item Amortisseurs d'une voiture
+	\item Suspension du tambour d'une essoreuse a linge
+	\item Structure de genie civil
+\end{itemize}
+
 
 
 

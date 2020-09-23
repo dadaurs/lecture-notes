@@ -53,7 +53,17 @@
   \begin{picture}(1,0.5)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{types-d'ammortissement.pdf}}%
     \put(0.01994054,0.35062523){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Ammortissement sous-critique\end{tabular}}}}%
+    \put(0.02112444,0.25638841){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Ammortissement critique\end{tabular}}}}%
+    \put(0.43345868,0.40222708){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\gamma>\omega_0$\end{tabular}}}}%
+    \put(0.43557517,0.25990531){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\gamma = \omega_0$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{types-d'ammortissement.pdf}}%
+    \put(0.0165697,0.14545937){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Ammortissement sur-critique\end{tabular}}}}%
+    \put(0.44090691,0.14919713){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\gamma> \omega_0$\end{tabular}}}}%
+    \put(0.41232942,0.38509903){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\gamma < \omega_0$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{types-d'ammortissement.pdf}}%
+    \put(0.59437262,0.38042336){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x(t)=e^{-\gamma t}[A\cos(\omega_1t) + B\sin(\omega_1t)]$\\ avec $\omega_1=\sqrt{\omega_0^{2}-\gamma_2}\omega_0$\end{tabular}}}}%
+    \put(0.58932571,0.25525665){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x(t)=e^{-\gamma t}[A+Bt]$\end{tabular}}}}%
+    \put(0.58853181,0.13125153){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x(t)=e^{\gamma t}[A\exp(\omega_2t)+B\exp(-\omega_2t)]$\\ avec $\omega_2=\sqrt{\gamma^{2}-\omega_0^{2}}$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

@@ -24,8 +24,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.99437388"
-     inkscape:cx="284.27627"
-     inkscape:cy="182.72055"
+     inkscape:cx="396.23444"
+     inkscape:cy="125.37612"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -65,10 +65,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-177)">
-    <path
-       id="path831"
-       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 91.829656,206.09023 c 10.185814,4.70967 19.220074,22.38905 31.458254,9.9939 10.15293,-5.12979 20.50841,2.5914 30.74549,1.73895" />
     <text
        style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        xml:space="preserve"
@@ -80,5 +76,116 @@
          x="4.7857294"
          y="212.84995"
          style="stroke-width:0.264583">Ammortissement sous-critique</tspan></text>
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text880"
+       y="235.46678"
+       x="5.0698652"><tspan
+         sodipodi:role="line"
+         id="tspan878"
+         x="5.0698652"
+         y="235.46678"
+         style="stroke-width:0.264583">Ammortissement critique</tspan></text>
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:white;fill-opacity:1;stroke:none;stroke-width:0.264583;marker-end:none;marker-start:none;stroke-opacity:1;"
+       xml:space="preserve"
+       id="text894"
+       y="200.4655"
+       x="104.03008"><tspan
+         sodipodi:role="line"
+         id="tspan892"
+         x="104.03008"
+         y="200.4655"
+         style="stroke-width:0.264583;fill:white;fill-opacity:1;marker-end:none;marker-start:none;stroke:none;stroke-opacity:1;">$\gamma&gt;\omega_0$</tspan></text>
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text908"
+       y="234.62273"
+       x="104.53804"><tspan
+         sodipodi:role="line"
+         id="tspan906"
+         x="104.53804"
+         y="234.62273"
+         style="stroke-width:0.264583">$\gamma = \omega_0$</tspan></text>
+    <path
+       id="path920"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 92.098038,255.79719 c 12.447262,11.40399 30.652742,11.6166 46.373602,13.94158" />
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text936"
+       y="262.08975"
+       x="3.9767277"><tspan
+         sodipodi:role="line"
+         id="tspan934"
+         x="3.9767277"
+         y="262.08975"
+         style="stroke-width:0.264583">Ammortissement sur-critique</tspan></text>
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text950"
+       y="261.19269"
+       x="105.81766"><tspan
+         sodipodi:role="line"
+         id="tspan948"
+         x="105.81766"
+         y="261.19269"
+         style="stroke-width:0.264583">$\gamma&gt; \omega_0$</tspan></text>
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text972"
+       y="204.57623"
+       x="98.959061"><tspan
+         sodipodi:role="line"
+         id="tspan970"
+         x="98.959061"
+         y="204.57623"
+         style="stroke-width:0.264583">$\gamma &lt; \omega_0$</tspan></text>
+    <path
+       id="path984"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 97.597423,208.21456 c 2.13187,3.92313 1.31859,8.89327 4.043577,12.55719 0.78175,1.31826 2.22404,1.94179 3.64773,1.22995 2.61876,-0.8379 4.66495,-3.33936 7.57958,-3.19899 1.69168,0.0737 2.89384,1.45104 4.52998,1.73462 5.47621,1.74034 11.25365,2.16739 16.96085,2.40817" />
+    <path
+       id="path994"
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 92.246253,231.95028 c -0.04836,4.82646 1.721523,10.03603 5.871292,12.82782 2.300585,1.54528 5.213385,1.11503 7.798525,1.73976 3.8364,0.81489 7.74971,1.13343 11.66476,1.22333 3.86289,0.0907 7.72753,0.17531 11.58896,0.27168" />
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text850"
+       y="205.69839"
+       x="142.64943"><tspan
+         sodipodi:role="line"
+         id="tspan848"
+         x="142.64943"
+         y="205.69839"
+         style="stroke-width:0.264583">$x(t)=e^{-\gamma t}[A\cos(\omega_1t) + B\sin(\omega_1t)]$\\ avec $\omega_1=\sqrt{\omega_0^{2}-\gamma_2}\omega_0$</tspan></text>
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text864"
+       y="235.7384"
+       x="141.43817"><tspan
+         sodipodi:role="line"
+         id="tspan862"
+         x="141.43817"
+         y="235.7384"
+         style="stroke-width:0.264583">$x(t)=e^{-\gamma t}[A+Bt]$</tspan></text>
+    <text
+       style="font-size:2.64583px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"
+       id="text878"
+       y="265.49963"
+       x="141.24763"><tspan
+         sodipodi:role="line"
+         id="tspan876"
+         x="141.24763"
+         y="265.49963"
+         style="stroke-width:0.264583">$x(t)=e^{\gamma t}[A\exp(\omega_2t)+B\exp(-\omega_2t)]$\\ avec $\omega_2=\sqrt{\gamma^{2}-\omega_0^{2}}$</tspan></text>
   </g>
 </svg>
