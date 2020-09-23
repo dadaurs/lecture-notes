@@ -1,0 +1,156 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Wed 23 Sep}{Oscillateurs Harmoniques}
+\section{Oscillateurs Harmoniques}
+Considerer des systemes ayant des mouvements oscillatoires.\\
+Exemples:
+\begin{itemize}
+	\item masse pendue a un ressort.
+	\item pendule simple, pendule de torsion.
+	\item vibrations.
+	\item Resonateurs quartz ( montres)
+	\item oscillations du champ
+	\item etc...
+\end{itemize}
+\begin{rmq}
+	Un mouvement oscillatoire permet de mesurer un intervalle de temps.
+\end{rmq}
+\subsection{Modelisation de la force d'un ressort}
+La force exercee par un ressort est proportionelle a son deplaccement par rapport a sa position de repos.
+
+Force de rappel:
+\[ 
+\vec{F}= - k \vec{\Delta x}
+\]
+$k=$ constante elastique du ressort  [N/m]
+\begin{figure}[H]
+    \centering
+    \incfig{ressort}
+    \caption{ressort}
+    \label{fig:ressort}
+\end{figure}
+\begin{rmq}
+Ce modele n'est que valable pour des petits allongements
+\end{rmq}
+
+\subsection{Oscillateurs harmoniques a une dimension}
+\begin{figure}[ht]
+    \centering
+    \incfig{ressort-plan-horizontal}
+    \caption{Ressort plan horizontal}
+    \label{fig:ressort-plan-horizontal}
+\end{figure}
+\begin{align*}
+	\text{ Loi de Hooke } F_x &= -kx\\
+	\text{ 2eme loi de Newton } F &=ma
+\end{align*}
+On arrive a 
+\[ 
+	m\ddot{x}= -kx
+\]
+But: connaissant $k,m$ et les conditions initiales, determiner $x(t)$ pour tout temps $t$.
+\begin{exemple}
+Posons $m=1kg, k=1 \frac{N}{m}=1 \frac{kg}{s^{2}}$\\
+Conditions initiales: $x(0)=1m, v(0)=0 \frac{m}{s}$ 
+\[ 
+	\Rightarrow a(0) = \frac{F(0)}{m} = k \frac{x(0)}{m} = -1 \frac{m}{s^{2}}
+\]
+
+Accroissement de $v$ entre $t$ et $t+\Delta t$ :
+$\Delta v = a(t) \Delta t$ car $a(t)=dv(t) / dt$ \\
+\[ 
+	\Rightarrow v(t+\Delta t)= v(t)+a(t) \Delta t
+\]
+Accroissement de $x$ entre $t$ et $t+\Delta t$ :
+\[ 
+	\Rightarrow x(t+\Delta t)=x(t) +v(t) \Delta t
+\]
+Verification analytique:\\
+On pose $x(t)= \cos(\omega_0 t) \Rightarrow x(0)=1$\\
+$v(t)= \frac{dx}{dt}=-\omega_0\sin(\omega_0 t) \Rightarrow  v(0)=0$.\\
+$a(t)= \frac{dv}{dt} - \omega_0^{2} \cos(\omega_0 t) = - \omega_0^{2}x(t)$
+
+Comme $a(t)=-\frac{k}{m}x(t)$, on doit avoir:
+\[ 
+	\omega_0= \sqrt{\frac{k}{m}}
+\]
+C'est la pulsation propre de l'oscillateur libre.
+
+\textbf{Solution generale et dependance par rapport aux conditions initiales}\\
+
+Periode:
+\[ 
+T = \frac{2\pi}{\omega_0}
+\]
+Frequence
+\[ 
+\nu = \frac{1}{T} = \frac{\omega_0}{2\pi}
+\]
+
+\end{exemple}
+Solution generale de $\ddot{x}= \omega_0^{2}x =0$:
+\[ 
+	x(t) = A\cos(\omega_0 t) + B \sin(\omega_0t )
+\]
+ou 
+\[ 
+	x(t) = C \sin(\omega_0t + D)
+\]
+Deux constantes d'integration a determiner en utilisant les conditions initiales
+
+\[ 
+A=x_0
+\]
+et 
+\[ 
+B= \frac{v_0}{\omega_0}
+\]
+ou bien
+$ x_0^{2}=x_0^{2}+ (\frac{v_0}{\omega_0})^{2}$ et $\tan(D)= \omega_0\frac{x_0}{v_0}$
+
+Resolution de l'equation differentielle:
+
+\begin{align*}
+	x(t) &= A\cos(\omega_0 t) + B \sin(\omega_0t)\\
+x(0) &= A \cdot 1 + B \cdot 0 = A = x_0\\
+\dot{x}(0) &= -A \omega_0 \sin(0) + B \omega_0 \cos(0)\\
+	   &= B \omega_0 = v_0 \Rightarrow B = \frac{v_0}{\omega_0}
+\end{align*}
+\hr\\
+\begin{align*}
+	x(t) &= C \sin(\omega_0t+ D), x_0,v_0\\
+	x(0)&= C \sin(D) = x_0\\
+	\dot{x}(0) &= C\omega_0\cos(D)=v_0\\
+	\frac{1}{\omega_0} \tan(D) &= \frac{x_0}{v_0}\\
+				   &\Rightarrow \tan(D) = \omega_0 \frac{x_0}{v_0}\\
+				   C^{2}(\sin^{2}(D) + \cos^{2}(D)) = x_0^{2} + \frac{v_0^{2}}{\omega_0^{2}}\\
+				   &\Rightarrow C= \sqrt{x_0^{2} + \frac{v_0^{2}}{\omega_0^{2}}}
+\end{align*}
+\subsection{Oscillateur harmonique amorti}
+\begin{figure}[H]
+    \centering
+    \incfig{oscillateur-amorti}
+    \caption{oscillateur amorti}
+    \label{fig:oscillateur-amorti}
+\end{figure}
+Par $b$ on definira la force de frottement.\\
+Deuxieme loi de Newton: $F+F_{frot}=ma$, alors
+\[ 
+	m\ddot{x} = -kx - b\dot{x}
+\]
+
+\textbf{Resolution}\\
+
+\[ 
+	m\ddot{x} = -kx - b\dot{x} \Rightarrow \ddot{x} + 2\gamma \dot{x} + \omega_0^{2}=0 \text{ avec } \gamma=\frac{b}{2m} \text{ et } \omega_0=\sqrt{\frac{k}{m}}
+\]
+\begin{figure}[ht]
+    \centering
+    \incfig{types-d'ammortissement}
+    \caption{types d'ammortissement}
+    \label{fig:types-d'ammortissement}
+\end{figure}
+
+
+
+\end{document}	
