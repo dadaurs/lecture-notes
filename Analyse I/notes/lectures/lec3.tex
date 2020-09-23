@@ -1,0 +1,173 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Wed 23 Sep}{Suites}
+\begin{align*}
+0,999\\
+0,9\\
+0.99\\
+0.999\\
+0.9999\\
+\vdots
+\end{align*}
+\begin{propo}[Densite des irrationnels]\label{propo:densite_des_irrationnels}
+	$\mathbb{R} \setminus \mathbb{Q}$, les irrationnels sont dense dans $\mathbb{R}$.
+\end{propo}
+\begin{proof}
+	Soit $x<y$ ( dans $\mathbb{R}$).\\
+	Cherche $z \notin \mathbb{Q}$ tq $x<z<y$.\\
+	\[ 
+	\exists \frac{p}{q} \in \mathbb{Q} tq x< \frac{p}{q} <y
+	\]
+	Propr. archimedienne $  \Rightarrow \exists n \in \mathbb{N}$:
+	\[ 
+		\underbrace{\frac{p}{q} + \sqrt{2} \frac{\sqrt{2}}{n}}_{:=z} <y
+	\]
+	car 
+	\[ 
+		\exists n: \frac{1}{n} < \underbrace{y - \frac{1}{q}}_{>0} / \sqrt{2}
+	\]
+	Il reste a voir que: $z= \frac{p}{q} + \sqrt{2}/n \notin \mathbb{Q}$ 
+	\begin{align*}
+	\sqrt{2} = n ( z-\frac{p}{q})\\
+	z \in \mathbb{Q} \Rightarrow \sqrt 2 \in \mathbb{Q} \contra
+	\end{align*}
+\end{proof}
+\section{Suites et limites}
+\begin{defn}[Suite]\index{Suite}\label{defn:suite}
+	Une suite $(x_n)_{n=1}^{\infty }$ dans $\mathbb{R}$
+	est une application ( $=$ fonction) $\mathbb{N}\to \mathbb{R}$
+\end{defn}
+\begin{rmq}
+	Suite $(x_n) \neq$ ensemble $ \left\{ x_n \right\} $
+	 Il arrive qu'on indice $x_n$ par une partie de $\mathbb{N}$.
+	 Mais suite $=$ suite infinie
+\end{rmq}
+\begin{exemple}
+	$x_n = \frac{1}{n} ( n=1,2,\ldots)$ \\
+	$x_n = ( -1)^{n}; x_n = n!; F_n:0,1,1,2,3,5,8,13$\\
+	$3,3.1,3.14,3.141,3.1415$
+\end{exemple}
+\hr
+\subsection{Convergence}
+\begin{defn}[Convergence de suites]\index{Convergence de suites}\label{defn:convergence_de_suites}
+	L'expression $ \lim_{n \to  + \infty} x_n = l$ signifie:
+	\[ 
+		\forall \epsilon > 0 \exists n_0 \in \mathbb{N} \forall n>n_0: \abs{x_n -l} < \epsilon
+	\]
+	On dit alors que $(x_n)$ converge ( vers $l$).
+	Sinon, $(x_n)$ diverge.
+\end{defn}
+\begin{lemma}[Unicite de la limite]\index{Unicite de la limite}\label{lemma:unicite_de_la_limite}
+	Si $(x_n)$ converge, il existe un unique $l \in \mathbb{R}$ tq $ \lim_{n \to  + \infty} x_n =l$
+\end{lemma}
+\begin{proof}
+	Supposons $l,l'$ limites. Si $l \neq l'$, alors $\abs{l-l'} > 0$ Donc $\exists n_0 \forall n >n_0: \abs{x_n -l} < \frac{\abs{l-l'}}{2}$\\
+	De meme $\exists n_1 \forall n>n_1: \abs{x_n - l'} < \frac{\abs{l-l'}}{2}$\\
+	Soit $n> n_0,n_1$ Alors:
+	\[ 
+		\abs{l-l'} = \abs{l-x_n+x_n -l'} \leq \underbrace{\abs{l-x_n}}_{<\abs{l-l'} /2} + \underbrace{\abs{x_n - l'}}_{\abs{x_n - l'}}
+	\]
+	Donc
+	\[ 
+		\abs{l-l'} < 2 \cdot \frac{\abs{l-l'}}{2}
+	\]
+	$\contra$
+\end{proof}
+\begin{exemple}
+\begin{enumerate}
+	\item Si $(x_n)$ est constante ( $\exists a \forall n: x_n =a$) alors 
+		\[ 
+		\lim_{n \to  + \infty} \frac{1}{n} =0
+		\]
+	\item $ \lim_{n \to  + \infty} \frac{1}{n} =0$ ( Archimede)
+\end{enumerate}
+
+\end{exemple}
+\begin{defn}
+Terminologie:\\
+$(x_n)$ est bornee, majoree, minoree, rationnelle, ... etc si l'ensemble $ \left\{ x_n \right\} $ l'est.
+\hr\\
+La suite $(x_n)$ est croissante si $x_n \leq x_{n+1} \forall n$ Idem decroissante
+Dans les deux cas, on dit que la suite $(x_n)$ est monotone
+\end{defn}
+\begin{lemma}
+Toute suite convergente est bornee.
+\end{lemma}
+\begin{proof}
+Posons $\epsilon =7$.
+\[ 
+	\exists N \in \mathbb{N}\forall n >N: \abs{x_n-l} <7
+\]
+Soit $ B_1 \geq \abs{x_1}, \abs{x_2}, \ldots, \abs{x_N}$\\
+Posons $B=max(B_1,\abs{l} +7)$
+Alors $\abs{x_n} \leq B \forall n.$
+
+\end{proof}
+Attention la reciproque n'est pas vraie!!
+\begin{exemple}
+	$x_n = ( -1)^{n}$ definit une suite bornee non convergente.
+\end{exemple}
+\begin{proof}
+	Supposons $ \lim_{n \to  + \infty} (-1)^{n} = l$.\\
+	Posons $\epsilon = \frac{1}{10}$ alors $\exists n_0 \forall n> n_0: \abs{(-1)^{n} -l}< \frac{1}{10}$\\
+	$n> n_0$ pair $\Rightarrow \abs{1-l} < \frac{1}{10}$ \\
+	$n> n_0$ impair $\Rightarrow \abs{-1-l} < \frac{1}{10}$ \\
+	ceci implique
+	\[ 
+		\Rightarrow \abs{1 -(-1)} \leq \abs{1-l} + \abs{-1-l}
+	\]
+	A finir...
+\end{proof}
+\begin{propo}
+Supposons $ \lim_{n \to  + \infty} x_n =l$ et $\lim_{n \to  + \infty} x'_n = l'$ \\
+Alors $1.: \lim_{n \to  + \infty} (x_n + x'_n) = l+l'$, et
+$2.:\lim_{n \to  + \infty} x_n \cdot x'_n = l\cdot l'$
+\end{propo}
+\begin{proof}
+1:\\
+Soit $\epsilon>0$ Cherche $ n_0$ tq $\forall n>n_0: \abs{x_n + x'_n - ( l+l')}< \epsilon$.\\
+Appliquons les deux hypothese a $\frac{\epsilon}{2}: \exists N \forall n>N: \abs{x_n -l} < \frac{\epsilon}{2}$ et\\
+$\frac{\epsilon}{2}: \exists N' \forall n>N': \abs{x'_n -l} < \frac{\epsilon}{2}$
+Posons $ n_0= \max(N,N')$\\
+Si $n>n_0$, alors
+\[ 
+	\abs{x_n + x'_n - ( l+l')} \leq \abs{x_n -l} + \abs{x'_n -l'}\\
+	< \frac{\epsilon}{2} + \frac{\epsilon}{2}
+\]
+2:\\
+Par le lemme, $\exists B$ tq. $\abs{x_n}, \abs{x'_n} < B \forall n$.\\
+Soit $\epsilon >0$. Appliquons les hypotheses a $\frac{\epsilon}{2B}$.
+\[ 
+	\exists N \forall n>N: \abs{x_n-l} < \frac{\epsilon}{2B}
+\]
+Si $n>n_0:=\max(N,N'):$
+\begin{align*}
+	\abs{x_nx'_n - ll'} &\leq \abs{x_nx'_n - x_nl'} + \abs{x_nl' - ll'}\\
+			    &= \underbrace{\abs{x_n}}_{<B} \cdot \underbrace{\abs{x'_n - l'}}_{<\frac{\epsilon}{2B}} + \underbrace{\abs{l'}}_{<B} \cdot \underbrace{\abs{x_n - l}}_{< \frac{\epsilon}{2B}} < \epsilon
+\end{align*}
+
+
+\end{proof}
+
+
+\begin{lemma}
+On a utilise: lemme  Si $x_n \leq B \forall n $ et $\lim_{n \to  + \infty} x_n = l$ alors $l \leq B$\\
+\end{lemma}
+\begin{proof}
+Par l'absurde:\\
+Si $l > B$, posons $ \epsilon = l - B > 0$\\
+$\exists n_0 \forall n >n_0: \abs{x_n -l} < \epsilon$\\
+en particulier $x_n > l - \epsilon - B \contra$ 
+\end{proof}
+
+
+
+
+
+
+
+				
+
+
+
+\end{document}	

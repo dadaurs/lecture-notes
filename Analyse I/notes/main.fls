@@ -79,6 +79,8 @@ INPUT /usr/share/texmf-dist/tex/latex/bookmark/bookmark.sty
 INPUT /usr/share/texmf-dist/tex/latex/bookmark/bookmark.sty
 INPUT /usr/share/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 INPUT /usr/share/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT /usr/share/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/share/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics/graphics.sty
@@ -408,12 +410,15 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
+INPUT lectures/lec3.tex
+INPUT lectures/lec3.tex
 OUTPUT main.thm
 OUTPUT main.loe
 INPUT main.aux
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
@@ -421,6 +426,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
