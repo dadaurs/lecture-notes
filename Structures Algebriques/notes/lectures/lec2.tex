@@ -41,7 +41,7 @@ Plus complet dans les notes de cours.\\
 			\[ 
 				( \xi \circ \phi )(a) = \xi(\phi(a))
 			\]
-			\sidenote{L'ordre est etrange.}
+			L'ordre est etrange.
 	\end{enumerate}
 \end{propr}
 \begin{propo}[Surjectivite de la composition]\index{Surjectivite de la composition}\label{propo:surjectivite_de_la_composition}
@@ -52,15 +52,9 @@ Plus complet dans les notes de cours.\\
 	(i) $\forall c \in C: \exists a: \xi(\phi(a))=c$\\
 	Donc $\exists b :=\phi(a) \Rightarrow \xi(b)=c$\\
 	(ii) 
-\begin{figure}[ht]
-    \centering
-    \incfig{contre-exemple-injectivite}
-    \caption{contre-exemple injectivite}
-    \label{fig:contre-exemple-injectivite}
-\end{figure}
 \end{proof}
 \subsection{Relations d'equivalence}
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \incfig{schema-relation-d-equivalence}
     \caption{schema relation d equivalence}
@@ -161,7 +155,7 @@ La question generale est: comment mesure-t'on la taille d'un ensemble ( meme pou
 	\end{align*}
 	Devoir: montrer que $\phi$ est une bijection.
 \end{exemple}
-\begin{thm}[Cantor-Bernhard-quelquechose]
+\begin{thm}[Cantor-Schroeder-Bernstein]
 	$\abs{A} \leq \abs{B}, \abs{B} \leq \abs{A}$ alors $\abs{A} = \abs{B}$.
 	Autrement dit:
 	\[ 
@@ -176,11 +170,12 @@ La question generale est: comment mesure-t'on la taille d'un ensemble ( meme pou
 	X \subseteq A\\
 	X = A \setminus g(B\setminus f(X))
 	\end{align*}
-	Alors il existe une bijectin $A \mapsto B$
+	Ou $g$ et $f$ sont des injections.\\
+	Alors il existe une bijection $A \mapsto B$
 \end{lemma}
 \begin{proof}
 \begin{align*}
-	Y_A := X \setminus A = g(Y)\\
+	Y_A := A \setminus X = g(Y)\\
 X_B = f(X)\\
 Y = B \setminus f(x)
 \end{align*}

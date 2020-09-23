@@ -72,9 +72,10 @@
 		$\bullet$ On est maintenant prêt à montrer la bijectivité de $C: \mathbb{N}^{2} \to \mathbb{N}$.
 		Pour ceci, on va procéder par étapes:
 		\begin{enumerate}
-			\item Montrer que $C:D_k \to \{\frac{k^{2}+k}{2},\ldots,\frac{k^{2}+k}{2}+k\}$ est bijective.\\
-			\item Montrer que $ D_i \cap D_k= \emptyset$, si $i\neq k$.\\
-			\item Montrer que $\bigcup_{i=0}^{+\infty} D_i = \mathbb{N}^{2}$.\\
+			\item Montrer que $C:D_k \to \{\frac{k^{2}+k}{2},\ldots,\frac{k^{2}+k}{2}+k\}$ est bijective.
+			\item Montrer que $ D_i \cap D_k= \emptyset$, si $i\neq k$.
+			\item Montrer que $\bigcup_{i=0}^{+\infty} D_i = \mathbb{N}^{2}$.
+			\item Montrer que $C(D_k)\cap C(D_i) = \emptyset, i \neq k$
 			\item Montrer la bijectivité de $C: \mathbb{N}^{2} \to \mathbb{N}$.
 		\end{enumerate}
 		Pour le point 1.\\
@@ -94,15 +95,25 @@
 		\[ 
 			(m,n) = (i-n,n) \in D_i
 		\]
-		On en déduit $\bigcup_{i=0}^{+\infty} D_i = \mathbb{N}^{2}$
-		
+		On en déduit $\bigcup_{i=0}^{+\infty} D_i = \mathbb{N}^{2}$\\
+		Sans perte de généralité, on suppose $i<k$, donc $k= i+a, a \in \mathbb{Z}^{+} $.
+		Montrons que $\sup(C(D_i)) < \sup(C(D_k))$.\\
+		Clairement
+		\[ 
+			C: D_i \to \left\{ \frac{i^{2}+i}{2}, \ldots,  \frac{i^{2}+i}{2}+i\right\} 
+		\]
+		et 
+		\[ 
+			C: D_k \to \left\{ \frac{k^{2}+k}{2}, \ldots,  \frac{k^{2}+k}{2}+k\right\} = \left\{ \frac{i^{2}+2ia+a^{2}+i}{2}, \ldots, \frac{i^{2}+2ia+a^{2}+i}{2} + i+a\right\} 
+		\]
+		On sait que $\sup(C(D_i))= \frac{i^{2}+i}{2}$ et que $\inf(C(D_k))= \frac{i^{2}+2ia+a^{2}+i}{2}$, donc
+		\begin{align*}
+			\inf(C(D_k)) - \sup(C(D_i)) &= \frac{i^{2}+2ia+a^{2}+i}{2} -\frac{i^{2}+i}{2}-i\\
+						&= \frac{i^{2}+2ia+a^{2}+i}{2} - \frac{i^{2}-2i}{2}\\
+						    &=  \frac{a^{2}+2ia+3i}{2}
+		\end{align*}
+		Car $i,a> 0$, la différence est plus grande que $0$ et donc l'intersection de $C(D_i) \cap C(D_k)$ est vide.\\
+		Donc $C$ est bijective sur $D_i \cup D_k, k \neq i$ et donc elle est bijective sur $\bigcup_{i=0}^{+ \infty } D_i$
 
-		
-
-
-
-		
-		
-		
 
 \end{document}
