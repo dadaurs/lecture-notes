@@ -61,7 +61,7 @@
 				   &= 2 (2 ( i+k+1) + i + 3k +2)
 		\end{align*}
 		\end{itemize}
-		$\bullet$ Par la définition de $D_k$, $(m,n) \in D_k$ implique que $(k-n,n)\in D_k$ et $0\leq n\leq k$.\\
+		$\bullet$ Par la définition de $D_k$, $(m,n) \in D_k$ implique que $(k-n,n)\in D_k$ avec $0\leq n\leq k$.\\
 		Supposons donc $(m,n) \in D_k$, on a:
 		\begin{align*}
 			C(m,n)=C(k-n,n)&= \frac{1}{2} \cdot \left( (k-n+n)^{2} + k-n + 3n\right)\\
@@ -104,16 +104,24 @@
 		\]
 		et 
 		\[ 
-			C: D_k \to \left\{ \frac{k^{2}+k}{2}, \ldots,  \frac{k^{2}+k}{2}+k\right\} = \left\{ \frac{i^{2}+2ia+a^{2}+i}{2}, \ldots, \frac{i^{2}+2ia+a^{2}+i}{2} + i+a\right\} 
+			C: D_k \to \left\{ \frac{k^{2}+k}{2}, \ldots,  \frac{k^{2}+k}{2}+k\right\} = \left\{ \frac{i^{2}+2ia+a^{2}+i+a}{2}, \ldots, \frac{i^{2}+2ia+a^{2}+i+a}{2} + i+a\right\} 
 		\]
-		On sait que $\sup(C(D_i))= \frac{i^{2}+i}{2}$ et que $\inf(C(D_k))= \frac{i^{2}+2ia+a^{2}+i}{2}$, donc
+		On sait que $\sup(C(D_i))= \frac{i^{2}+i}{2}$ et que $\inf(C(D_k))= \frac{i^{2}+2ia+a^{2}+i+a}{2}$, donc
 		\begin{align*}
-			\inf(C(D_k)) - \sup(C(D_i)) &= \frac{i^{2}+2ia+a^{2}+i}{2} -\frac{i^{2}+i}{2}-i\\
-						&= \frac{i^{2}+2ia+a^{2}+i}{2} - \frac{i^{2}-2i}{2}\\
-						    &=  \frac{a^{2}+2ia+3i}{2}
+			\inf(C(D_k)) - \sup(C(D_i)) &= \frac{i^{2}+2ia+a^{2}+i+a}{2} -\left(\frac{i^{2}+i}{2}+i\right)\\
+						&= \frac{i^{2}+2ia+a^{2}+i+a}{2} - \frac{i^{2}+3i}{2}\\
+						    &=  \frac{a^{2}+2ia-2i+a}{2}
 		\end{align*}
 		Car $i,a> 0$, la différence est plus grande que $0$ et donc l'intersection de $C(D_i) \cap C(D_k)$ est vide.\\
-		Donc $C$ est bijective sur $D_i \cup D_k, k \neq i$ et donc elle est bijective sur $\bigcup_{i=0}^{+ \infty } D_i$
+		Donc $C$ est injective sur $D_i \cup D_k, k \neq i$ et donc elle est bijective sur $\bigcup_{i=0}^{+ \infty } D_i$
+	
+On voit aussi que si $a=1$, on a:
+\[ 
+\frac{1+2i - 2i+1}{2}=1
+\]
+Donc, il n'existe pas d'éléments de $k \in \mathbb{N}$ qui ne sont pas dans un $C(D_i),i \in \mathbb{N}$, les $C(D_i),i \in \mathbb{N}$ couvrent $\mathbb{N}$.\\
+Donc $C:\mathbb{N} \to \mathbb{N}$ est une bijection.
+
 
 
 \end{document}

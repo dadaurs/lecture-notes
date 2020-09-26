@@ -1,0 +1,202 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Fri 25 Sep}{Ingredients de base des algorithmes}
+\section{Definition formelle des algorithmes}
+Un algorithme travaille sur des donnees qu'il utilise et/ou moidifie.
+Il doit memoriser ces donnees en les associant a un nom.
+Les traitements sont associes a la notion d'instructions et d'expressions.
+\subsection{Instructions elementaires}
+Une instruction elementaire est une instruction dont le cout d'execution est constant ( negligeable par rapport a la taille des donnees).\\
+Exemples:
+\begin{itemize}
+\item \texttt{$delta = b^2 - 4ac$} 
+\item instruction non elementaire: compter le nombre de caracteres contenus dans une phrase ( depend de la longueur de la phrase)
+\end{itemize}
+
+\subsection{Structures de controle}
+Pour pouvoir exprimer des traitements interessants/complexes, un algorithme ne peut se reduire a une sequence lineaire d'instructions.\\
+Structures de controle: Il y en a 3
+\begin{itemize}
+\item les branchements conditionnels: \texttt{ si... alors }
+\item les boucles conditionnelles: \texttt{ tant que }
+\item les iterations : \texttt{ pour ... allant de ... a ... }, ou alors: \texttt{ pour ... parmi }
+\end{itemize}
+Note: on peut toujours faire des iterations avec des boucles conditionnelles.
+\subsection{Resolution d'une equation du second degre}
+entree:  $b,c$\\
+ sortie:  $\{x dans R: x^2+ bx +c =0\}$
+\begin{lstlisting}
+Delta = b^2 - 4c
+Si Delta < 0
+sortir: 
+Sinon
+	si Delta= 0
+		x= -b/2
+		sortir: x
+	Sinon
+		x_1 = -b-sqrt(Delta)/2,
+		x_2 = -b+sqrt(Delta) /2,
+		sortir x1 et x2
+\end{lstlisting}
+\subsection{Conclusion}
+On attend d'un algorithme qu'il se termine, produise le resultat correct ( solution du probleme) pour toute entree.\\
+
+Difficulte de l'informatique ( science): assurer que l'algorithme est correct pour toute entree.\\
+
+On ne peut pas verifier par des essais ( empirisme): il faut faire des preuves mathematiques.
+
+\subsection{Comment, a partir d'un probleme concret, trouver une solution?}
+Pour des problemes non-connus, cf semain prochaine.
+Sinon, si algorithme connu:
+\begin{itemize}
+\item Recherche 
+\item Tri
+\item 
+\end{itemize}
+Exemple: recherche d'un element x dans une list $E$.
+
+Avant tout: specifiaction claire du probleme et de l'algorithme voulu:
+$E$ peut il etre vide?\\
+$E$ varie-til pendant la recherche?\\
+$E$ est il ordonne?\\
+
+\subsection{Recherche}
+
+Deux algorithmes de recherche:\\
+\texttt{appartient1}\\
+entree: $x,E$ \\
+Sortie $x \in E ?$ 
+\begin{lstlisting}
+i=1
+Repeter
+	Si x= E[1]
+		Sortir oui
+	i=i+1
+	t = taille(E)
+jusqua i>t
+Sortir non
+\end{lstlisting}
+Deuxieme solution\\
+\texttt{appartient2}\\
+\begin{lstlisting}
+t = taille(E)
+Pour i de 1 a t
+	si x=E[i]
+		Sortir: oui
+Sortir : non
+\end{lstlisting}
+
+Dans le premier algorithme, on a suppose $E$ non vide, si $E$ est vide, l'algorithme n'est pas valable.\\
+Le deuxieme algorithme est correct pour un ensemble vide.\\
+
+Lequel des deux est le plus efficace?\\
+complexite: nombre d'instructions elementaires necessaires a un algorithme pour donner la reponse dans le pire des cas.\\
+
+Notons $n$ la taille de $E$ et comptons combien d'instructions elementaires que chaque algorithme necessite dans le pire des cas: $ C_1(n)$ et $ C_2(n)$\\
+Pour l'algorithme 1:
+
+Le pire des cas est si $x$ n'est pas dans $E$. On trouve:
+\[ 
+	C_1(n)= 1+ n \times(4+T(n))
+\]
+Pour l'algorithme 2:
+Le pire cas est le meme que pour l'algorithme 1.
+\[ 
+	C_2(n)= T(n) + 1 + 4n
+\]
+Supposons que le calcul de la taille de $E$ se fait en $ T(n)=a + bn$
+instructions ( $b\geq 0$).
+On aurait alors:
+\begin{align*}
+	C_1(n)=1 + ( a+4)n + bn^{2}\\
+	C_{2} = 1 + a + ( 4+b)n	
+\end{align*}
+\subsection{Dichotomie}
+
+Algorithme: appartientD($x,E_1$)
+\begin{lstlisting}
+Si E vide
+	sortir non
+Si E eest reduit a 1 seul element
+	Sortir x=e?
+
+decouper E en deux sous-ensembles non vides
+et disjoints E1 et E2
+Si x< max(E1)
+	sortir appartientD(x,E1)
+sinon 
+	sortir appartientD(x,E1)
+\end{lstlisting}
+Cet algorithme est-il meilleur que l'algorithme \texttt{appartient2}? \\
+Si l'element recherche est au ``milieu''  du ``milieu'' du ``milieu'' ... de la liste, il faudra repeter la bouclede decoupage en deux autant de fois.
+Donc la complexite est le combien de fois on peut couper $E$ en 2.\\
+Combien de fois qu'on peut diviser $n$ par 2?
+\[ 
+	\log_2(n)
+\]
+\begin{defn}[Complexite de l'algorithme]
+	La complexite d'un algorithme est le nombre d'instructions elementaires utilisees par l'algorithme dans le pire des cas ( celui qui demande le plus d'instructions).
+\end{defn}
+C'est une fonction de la taille de l'entree.\\
+Ce qui nous interesse c'est comment le temps pris par l'algorithme evolue au cours du temps.\\
+Ce qui nous interesse est le terme dominant.
+\subsection{Complexite: notation $\Theta$}
+\begin{defn}
+Pour deux fonctions $f$ et $g$ de $\mathbb{R}$ dans $\mathbb{R}$, on ecrit
+\[ 
+	f \in \Theta(g)
+\]
+si et seulement si 
+\[ 
+\exists c_1, c_2  c_2\geq c_1\geq 0
+\]
+
+\end{defn}
+
+\subsection{ differens types de complexite }
+
+\begin{itemize}
+	\item constante: $\Tetha(1)$ 
+	\item logarithmique $\Theta(\log n)$ 
+	\item lineaire $\Theta(n)$
+\end{itemize}
+
+\subsection{Les tris}
+Les methodes de tris sont tres importantes en pratique.\\
+Le probleme du tri est egalement un probleme interessant en tant que tel et un bon exemple pour lequel il existe de nombreux algorithmes
+
+On considere une structure de donnees avec une relation d'ordre dessus
+\begin{rmq}
+Un tri ne supprime pas les doublons\\
+Quelque soit l'algorithme de tri , un ensemble de donees vide ou reduit a un seul element est deja trie
+\end{rmq}
+On parle de tri interne ( ou ``sur place'' )
+
+\begin{exemple}[Tri par insertion]
+entree: un tableau(liste)\\
+sortie: le tableau trie
+\begin{lstlisting}
+Tant que il ya un element mal place
+	on cherche sa place dans le tableau.
+	on deplace lelement labas
+\end{lstlisting}
+\subsection{Probleme de plus court chemin}
+Exemples
+\begin{itemize}
+	\item Calcul du chemin le plus rapide entre toutes les gares du reseau CFF ( 2 a 2)
+	\item calcul du chemin le plus rapide entre une gare donnee et toutes les autres gares
+	\item calcul du chemin le plus rapide entre deux gares donnees
+\end{itemize}
+mais aussi
+\begin{itemize}
+\item resoudre le rubiks cube
+\item transcrire un texte lu ( reconnaissance de la parole)
+\item corriger les erreurs dans une communication satellite ( codes de convolution)
+\end{itemize}
+
+
+
+\end{exemple}
+
+\end{document}	
+

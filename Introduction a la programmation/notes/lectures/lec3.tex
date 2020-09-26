@@ -1,0 +1,60 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Thu 24 Sep}{Programmation:Variables et Expressions}
+\section{Etude de cas}
+
+\textbf{ But }
+\begin{itemize}
+	\item Resumer ce qu'il faut retenir
+	\item Etude de cas ( simple ici)
+	\item Complements de cours
+	\item Repondre a des questions
+\end{itemize}
+\subsection{Le langage C++}
+Cest un language oriente-objet, compile et fortement type.\\
+Parmi les avantages de C++:
+\begin{itemize}
+	\item tres utilise
+	\item compile, applications efficaces
+	\item typage fort
+\end{itemize}
+A retenir:
+\begin{itemize}
+	\item variable = representation interne d'une donnee du probleme traite
+	Une entite conceptuelle representee dans le programme.
+	\item Chaque valeur est typee
+	\item Les principaux types sont intt, double et bool
+\end{itemize}
+\subsection{Valeurs litterales}
+\begin{itemize}
+	\item valeurs litterales de type int: 1,12, etc
+	\item double : 1.23, ...
+	\item valeurs litterales de type char: 'a', '!', ...
+	\begin{lstlisting}
+	char x('B'); \end{lstlisting}
+	
+\end{itemize}
+\subsection{Expression}
+\begin{itemize}
+	\item un calcul a faire
+	\item expression= combinaison d'expressions, valeurs, a l aide d'operateurs
+	\item toute expression \textit{fait} quelque chose et \textit{vaut} quelquechose.
+
+\end{itemize}
+
+\subsection{\texttt{auto}}
+
+En c++11, on peut laisse rle compilateur deviner le type d'une variable grave au mot-cle \texttt{auto}.\\
+Par exemple:\\
+\texttt{auto val(2);}\\
+\texttt{auto j(2*i+5);}\\
+Conseil: ne pas en abuser!\\
+N'utilisez \texttt{auto} que dans les cas ``techniques'' qui seront vus plus tard.
+
+\subsection{ \texttt{const} et \texttt{constexpr} }
+Par defaut, les variables sont modifiables.\\
+si une variable est initialisee avec \texttt{const} mais elle est modifiable par pointeur.\\
+\texttt{constexpr} est pas modifiable, doit etre connue au moment de la compilation et n'est pas modifiable par pointeur.
+
+
+\end{document}	

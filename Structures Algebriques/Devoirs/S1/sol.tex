@@ -112,8 +112,9 @@ On peut distinguer deux cas:
 .\]
 
 \end{itemize}
+On remarque que ceci résout également le cas $ a(t)=0$.\\
 Par recurrence, supposons que le cas $\deg(a(t))=n$ est vrai et montrons pour $\deg(a(t))=n+1$.\\
-Posons que $a(t)=a'(t) + a_{n+1} t^{n+1}$, avec $\deg(a'(t))=n$, et que $q(t) = q'(t) + q_m t^{m}$, avec $\deg(q(t)) = m$ et $\deg(q'(t))= m-1$.\\
+Posons que $a(t)=a'(t) + a_{n+1} t^{n+1}$, avec $\deg(a'(t))\leq n$, et que $q(t) = q'(t) + q_m t^{m}$, avec $\deg(q(t)) \leq m$ et $\deg(q'(t))= m-1$.\\
 On distingue à nouveau 2 cas:
 \begin{itemize}
 	\item Si, $\deg(q(t)) > \deg(a(t))$, dans ce cas, il suffit de poser que $b(t) = 0$ et que $r(t)= a(t)$, alors
@@ -125,7 +126,7 @@ On distingue à nouveau 2 cas:
 			a(t) &= a_{n+1} t^{n+1} + a'(t)\\
 			     &= a_{n+1} t^{n+1} \left( \frac{q_m t^{m}}{q_{m} t^{m}}\right) + a'(t)\\
 			     &= a_{n+1} t^{n+1} \left( \frac{q(t) - q'(t)}{q_{m} t^{m}}\right) + a'(t)\\
-			     &= \underbrace{a_{n+1} t^{n+1} \frac{q(t)}{q_m t^{m}}}_{ \text{ degré: } n+2}
+			     &= \underbrace{a_{n+1} t^{n+1} \frac{q(t)}{q_m t^{m}}}_{ \text{ degré: } n+1}
 			     - \underbrace{a_{n+1} t^{n+1} \frac{q'(t)}{q_m t^{m}}}_{ \text{ degré  } \leq n } + \underbrace{a'(t)}_{ \text{ degré } \leq n}\\
 		\end{align*}
 		
@@ -143,6 +144,9 @@ On a donc
 On a donc trouvé une formulation pour $a(t)$ tel que $a(t)=b(t) \cdot q(t) + r(t)$.
 \end{itemize}
 \end{proof}
+
+
+
 
 
 
