@@ -1,0 +1,132 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newcommand{\Bij}{\mathrm{Bij}}
+\newcommand{\Id}{\mathrm{Id}}
+\begin{document}
+\title{Série 2}
+\author{David Wiedemann}
+\maketitle
+\section*{4.1}
+On vérifie le critère du sous-groupe.\\
+Soit $\sigma, \gamma \in \Bij(X)_Y $, alors:
+\[ 
+	\sigma \circ \gamma (x)=\sigma(\gamma(Y))= \sigma(Y) = Y
+\]
+donc $\sigma \circ \gamma \in \Bij(X)_Y$\\
+On montre que $\Bij(X)_Y$ est clos sous l'inversion:\\
+Soit $\sigma \in \Bij(X)_Y: X \to X$, alors $\exists \sigma^{-1}: X \to X$ tel que $\sigma^{-1}\circ \sigma = \sigma \circ \sigma^{-1} = \Id_X$. On a donc:
+\begin{align*}
+	\sigma^{-1}(\sigma(Y)) &= \Id_X(Y)\\
+	\sigma^{-1}(Y) &= Y
+\end{align*}
+Donc $\sigma^{-1} \in \Bij(X)_Y$.\\
+On en conclut que $\Bij(X)_Y$ forme un sous-groupe de $\Bij(X)$
+\section*{4.2}
+Dans un groupe à trois éléments, il suffit de trouver un contre exemple.
+Soit
+\begin{align*}
+\sigma: 
+\begin{cases}
+x_1 \to x_1\\
+x_2 \to x_3\\
+x_3 \to x_2\\
+\end{cases}
+\text{ et } 
+\tau: 
+\begin{cases}
+x_1 \to x_2\\
+x_2 \to x_1\\
+x_3 \to x_3\\
+\end{cases}
+\end{align*}
+Alors on a:
+\begin{align*}
+\sigma \circ \tau:
+\begin{cases}
+x_1 \to x_2\\
+x_2 \to x_3\\
+x_3 \to x_1
+\end{cases}
+\text{ et } 
+\tau \circ \sigma:
+\begin{cases}
+x_1 \to x_3\\
+x_2 \to x_1 \\
+x_3 \to x_2
+\end{cases}
+\end{align*}
+Considérons maintenant un groupe à plus que trois éléments et notons $Y=\{x_1,x_2,x_3\}, Y \subset X$.\\
+On pose:
+\begin{align*}
+S:
+\begin{cases}
+x_n \to x_n \text{ si } x_n \notin Y\\
+x_{n} \to \sigma(x_n) \text{ si }  x_n \in Y
+\end{cases}
+\text{ et }
+G:
+\begin{cases}
+x_n \to x_n \text{ si } x_n \notin Y\\
+x_n \to \gamma(x_n) \text{ si } x_n \in Y
+\end{cases}
+\end{align*}
+On remarque que $S, G \in \Bij(X)_Y$.\\
+Si on compose $G$ avec $S$, on remarque que les applications ne commutent pas:
+\begin{align*}
+G \circ S:
+\begin{cases}
+x_n \to x_n \text{ si } x_n \notin Y\\
+x_n \to \gamma(\sigma(x_n)) \text{ si } x_n \in Y
+\end{cases}
+\text{ et } 
+S \circ G:
+\begin{cases}
+x_n \to x_n \text{ si } x_n \notin Y\\
+x_n \to \sigma(\gamma(x_n)) \text{ si } x_n \in Y
+\end{cases}
+\end{align*}
+car $\sigma\circ\gamma \neq \gamma\circ\sigma$, on voit que $S \circ G \neq G \circ S$.
+
+
+
+\section*{4.3}
+Si $X$ possède deux éléments, il y a deux éléments dans $\Bij(X)$ :
+\begin{align*}
+\Id:
+\begin{cases}
+x_1 \to x_{1}\\
+x_2 \to x_2
+\end{cases}
+\text{ et } 
+C:
+\begin{cases}
+x_1 \to x_2\\
+x_2 \to x_1
+\end{cases}
+\end{align*}
+Car $\Id$ est l'élément neutre, on a que $C \circ \Id = \Id \circ C$, et donc le groupe est commutatif.\\
+Si $X$ possède un élément, il y a un élément dans $\Bij(X)$ :
+\begin{align*}
+\Id:
+\begin{cases}
+x_1 \to x_1
+\end{cases}
+\end{align*}
+Clairement l'identité commute avec elle même, et donc le groupe est commutatif.
+
+
+
+
+
+%[La résolution des exercices ici...] %commentaire
+
+
+
+\end{document}

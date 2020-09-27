@@ -57,12 +57,12 @@ On distingue deux cas:
 \end{lemma}
 \begin{proof}
 	On utilisera le lemme \ref{degres}.\\
-	Par l'absurde, assumons que $a(t) \neq 0$ et $b(t)\neq 0$, alors
+	Par l'absurde, on assume que $a(t) \neq 0$ et $b(t)\neq 0$, alors
 	\begin{align*}
-		\deg(a(t)\cdot b(t)) &= \deg(a(t)) + \deg(b(t))\\
+		\deg(a(t)\cdot b(t)) &= \deg(a(t)) + \deg(b(t))  \\
 				 &\geq 0 
 	\end{align*}
-	Contradiction, car $\deg(0) = - \infty $.\\
+	Contradiction, car $\deg(0) < 0 $.\\
 	Donc $a(t)=0$ ou $b(t)=0$
 	
 \end{proof}
@@ -72,7 +72,7 @@ On peut donc finalement montrer que la division Euclidienne dans $\mathbb{R}[t]$
 \begin{proof}
 $ $\newline
 \textbf{Unicité}\\
-Supposons que $\exists b,r,b',r' \in \mathbb{R}[t]$ et $\deg(r'),\deg(r) < \deg(q)$, tel que:
+On suppose que $\exists b,r,b',r' \in \mathbb{R}[t]$ et que $\deg(r'),\deg(r) < \deg(q)$, tel que:
 \begin{align*}
 	a(t) &= q(t) \cdot b(t) + r(t)\\
 	     &= q(t) b'(t) + r'(t)\\
@@ -113,15 +113,15 @@ On peut distinguer deux cas:
 
 \end{itemize}
 On remarque que ceci résout également le cas $ a(t)=0$.\\
-Par recurrence, supposons que le cas $\deg(a(t))=n$ est vrai et montrons pour $\deg(a(t))=n+1$.\\
-Posons que $a(t)=a'(t) + a_{n+1} t^{n+1}$, avec $\deg(a'(t))\leq n$, et que $q(t) = q'(t) + q_m t^{m}$, avec $\deg(q(t)) \leq m$ et $\deg(q'(t))= m-1$.\\
+Par recurrence, on suppose que le cas $\deg(a(t))=n$ est vrai et on montre pour $\deg(a(t))=n+1$.\\
+On pose que $a(t)=a'(t) + a_{n+1} t^{n+1}$, avec $\deg(a'(t))\leq n$, et que $q(t) = q'(t) + q_m t^{m}$, avec $\deg(q(t)) \leq m$ et $\deg(q'(t))= m-1$.\\
 On distingue à nouveau 2 cas:
 \begin{itemize}
 	\item Si, $\deg(q(t)) > \deg(a(t))$, dans ce cas, il suffit de poser que $b(t) = 0$ et que $r(t)= a(t)$, alors
 		\[ 
 			a(t) = q(t) \cdot b(t) + r(t)
 		\]
-	\item Supposons donc que $\deg(a(t)) \geq \deg(q(t))$, on peut ecrire:
+	\item On suppose donc que $\deg(a(t)) \geq \deg(q(t))$, on peut ecrire:
 		\begin{align*}
 			a(t) &= a_{n+1} t^{n+1} + a'(t)\\
 			     &= a_{n+1} t^{n+1} \left( \frac{q_m t^{m}}{q_{m} t^{m}}\right) + a'(t)\\
@@ -130,11 +130,12 @@ On distingue à nouveau 2 cas:
 			     - \underbrace{a_{n+1} t^{n+1} \frac{q'(t)}{q_m t^{m}}}_{ \text{ degré  } \leq n } + \underbrace{a'(t)}_{ \text{ degré } \leq n}\\
 		\end{align*}
 		
-Donc le terme  $-\frac{a_{n+1}}{q_m} t^{n-m+1} q'(t)$, admet, par hypothèse de récurrence, $\exists c(t)$ et $r_c(t)$ tel que
+Donc, par hypothèse de récurrence, $\exists c(t)$ et $r_c(t)$ tel que
 \[ 
 	-\frac{a_{n+1}}{q_m} t^{n-m+1} q'(t) = c(t) \cdot q(t) + r_c(t)
 \]
-Le degré de $a'(t)$ est aussi inférieur à $n+1$, et donc, par hypothèse de récurrence, $\exists d(t) , r_d(t)$ tel que $a'(t)= q(t)\cdot d(t) + r_d(t)$.\\
+
+De même, le degré de $a'(t)$ est aussi inférieur à $n+1$, et donc, par hypothèse de récurrence, $\exists d(t) , r_d(t)$ tel que $a'(t)= q(t)\cdot d(t) + r_d(t)$.\\
 On a donc
 \begin{align*}
 	a(t) &= \frac{a_{n+1}}{q_m} t^{n+1-m} q(t) - \frac{a_{n+1}}{q_m} t^{n-m+1} ( q'(t)) + a'(t)\\

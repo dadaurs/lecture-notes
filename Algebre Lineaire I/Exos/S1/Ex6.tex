@@ -69,6 +69,7 @@
 				       &= \frac{k^{2}+k}{2} + n
 		\end{align*}
 		Donc si $n=0$, $C(m,n)= \frac{k^{2}+k}{2}$ et si $n=k$, $C(m,n)= \frac{k^{2}+k}{2}+k$, donc les valeurs de $C(m,n)$ sont comprises entre $\frac{k^{2}+k}{2}$ et  $\frac{k^{2}+k}{2}+k$.\\
+		$\bullet$ Je n'ai pas fait le graphique en latex.\\
 		$\bullet$ On est maintenant prêt à montrer la bijectivité de $C: \mathbb{N}^{2} \to \mathbb{N}$.
 		Pour ceci, on va procéder par étapes:
 		\begin{enumerate}
@@ -86,18 +87,19 @@
 		\end{align*}
 		Clairement, cette application est bijective car $k$ est constante.\\
 		Pour le point 2.\\
-		Par l'absurde, supposons que $\exists (m,n) \in D_k$ et $(m,n) \in D_i$.\\
+		Par l'absurde, supposons que $\exists (m,n) \in D_k$ tel que $(m,n) \in D_i$, avec $i=k$.\\
 		Donc $m+n=i$ et $m+n=k$, donc $i=k$, ce qui est une contradiction à l'hypothèse.\\
 		Pour le point 3.\\
 		On montre la double inclusion.\\
-		L'inclusion de gauche à droite est triviale.\\
+		L'inclusion de gauche à droite est évidente, pour $(m,n) \in D_k, m,n \in \mathbb{N} \implies ( m,n) \in \mathbb{N}^{2}$.\\
 		Supposons donc $(m,n) \in \mathbb{N}^{2}$. On pose $m+n=i, i \in \mathbb{N}$, donc $m=i-n$.
 		\[ 
 			(m,n) = (i-n,n) \in D_i
 		\]
 		On en déduit $\bigcup_{i=0}^{+\infty} D_i = \mathbb{N}^{2}$\\
+		Pour le point 4.\\
 		Sans perte de généralité, on suppose $i<k$, donc $k= i+a, a \in \mathbb{Z}^{+} $.
-		Montrons que $\sup(C(D_i)) < \sup(C(D_k))$.\\
+		Montrons que $\sup(C(D_i)) < \inf(C(D_k))$.\\
 		Clairement
 		\[ 
 			C: D_i \to \left\{ \frac{i^{2}+i}{2}, \ldots,  \frac{i^{2}+i}{2}+i\right\} 
@@ -107,20 +109,21 @@
 			C: D_k \to \left\{ \frac{k^{2}+k}{2}, \ldots,  \frac{k^{2}+k}{2}+k\right\} = \left\{ \frac{i^{2}+2ia+a^{2}+i+a}{2}, \ldots, \frac{i^{2}+2ia+a^{2}+i+a}{2} + i+a\right\} 
 		\]
 		On sait que $\sup(C(D_i))= \frac{i^{2}+i}{2}$ et que $\inf(C(D_k))= \frac{i^{2}+2ia+a^{2}+i+a}{2}$, donc
-		\begin{align*}
+		\begin{align}
 			\inf(C(D_k)) - \sup(C(D_i)) &= \frac{i^{2}+2ia+a^{2}+i+a}{2} -\left(\frac{i^{2}+i}{2}+i\right)\\
 						&= \frac{i^{2}+2ia+a^{2}+i+a}{2} - \frac{i^{2}+3i}{2}\\
-						    &=  \frac{a^{2}+2ia-2i+a}{2}
-		\end{align*}
+						    &=  \frac{a^{2}+2ia-2i+a}{2} 
+		\end{align}
 		Car $i,a> 0$, la différence est plus grande que $0$ et donc l'intersection de $C(D_i) \cap C(D_k)$ est vide.\\
-		Donc $C$ est injective sur $D_i \cup D_k, k \neq i$ et donc elle est bijective sur $\bigcup_{i=0}^{+ \infty } D_i$
+		Pour le point 5.\\
+		Donc $C$ est injective sur $D_i \cup D_k, k \neq i$ et donc elle est injective sur $\bigcup_{i=0}^{+ \infty } D_i$
 	
-On voit aussi que si $a=1$, on a:
+On voit aussi que si on pose $a=1$ dans l'équation 3, on a:
 \[ 
 \frac{1+2i - 2i+1}{2}=1
 \]
-Donc, il n'existe pas d'éléments de $k \in \mathbb{N}$ qui ne sont pas dans un $C(D_i),i \in \mathbb{N}$, les $C(D_i),i \in \mathbb{N}$ couvrent $\mathbb{N}$.\\
-Donc $C:\mathbb{N} \to \mathbb{N}$ est une bijection.
+Donc, il n'existe pas d'éléments de $k \in \mathbb{N}$ qui ne sont pas dans un $C(D_i),i \in \mathbb{N}$, donc les $C(D_i)$ couvrent $\mathbb{N}$ et $C: \mathbb{N} \to \mathbb{N}^{2}$ est surjective.\\
+Donc $C:\mathbb{N} \to \mathbb{N}^{2}$ est une bijection.
 
 
 
