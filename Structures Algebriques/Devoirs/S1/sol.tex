@@ -41,7 +41,7 @@ On posera de plus que si $j>\deg(b(t))$, alors $b_j=0$.
 	a(t) + b(t) &= \sum_{i=0}^{\deg(a(t))} a_i t^{i} + \sum_{j=0}^{\deg(b(t))} b_j t^{j}\\
 		    &= \sum_{k=0}^{\deg(a(t))} (a_k + b_k) t^{k}
 \end{align*}
-On voit clairement que le terme de plus haut degre est le terme $t^{\deg(a(t))}$.\\
+On voit clairement que le terme de plus haut degré est le terme $t^{\deg(a(t))}$.\\
 On distingue deux cas:
 \begin{itemize}
 	\item Si $a_A \neq -b_A$, alors $\deg(a(t)+ b(t)) = \deg(a(t))$.\\
@@ -75,8 +75,8 @@ $ $\newline
 On suppose que $\exists b,r,b',r' \in \mathbb{R}[t]$ et que $\deg(r'),\deg(r) < \deg(q)$, tel que:
 \begin{align*}
 	a(t) &= q(t) \cdot b(t) + r(t)\\
-	     &= q(t) b'(t) + r'(t)\\
-	0 &= q(t)(b(t) - b'(t)) + (\underbrace{  r(t) - r'(t) }_{\coloneqq r''}) 
+	     &= q(t) \cdot b'(t) + r'(t)\\
+	0 &= q(t) \cdot(b(t) - b'(t)) + (\underbrace{  r(t) - r'(t) }_{\coloneqq r''}) 
 \end{align*}
 Sans perte de généralité, on peut également assumer que $\deg(r) \geq \deg(r')$.\\
 On utilise maintenant le lemme \ref{somme} pour remarquer que
@@ -114,7 +114,7 @@ On peut distinguer deux cas:
 \end{itemize}
 On remarque que ceci résout également le cas $ a(t)=0$.\\
 Par recurrence, on suppose que le cas $\deg(a(t))=n$ est vrai et on montre pour $\deg(a(t))=n+1$.\\
-On pose que $a(t)=a'(t) + a_{n+1} t^{n+1}$, avec $\deg(a'(t))\leq n$, et que $q(t) = q'(t) + q_m t^{m}$, avec $\deg(q(t)) \leq m$ et $\deg(q'(t))= m-1$.\\
+On pose que $a(t)=a'(t) + a_{n+1} t^{n+1}$, avec $\deg(a'(t))\leq n$, et que $q(t) = q'(t) + q_m t^{m}$, avec $\deg(q(t)) = m$ et $\deg(q'(t))\leq m-1$.\\
 On distingue à nouveau 2 cas:
 \begin{itemize}
 	\item Si, $\deg(q(t)) > \deg(a(t))$, dans ce cas, il suffit de poser que $b(t) = 0$ et que $r(t)= a(t)$, alors
@@ -129,19 +129,30 @@ On distingue à nouveau 2 cas:
 			     &= \underbrace{a_{n+1} t^{n+1} \frac{q(t)}{q_m t^{m}}}_{ \text{ degré: } n+1}
 			     - \underbrace{a_{n+1} t^{n+1} \frac{q'(t)}{q_m t^{m}}}_{ \text{ degré  } \leq n } + \underbrace{a'(t)}_{ \text{ degré } \leq n}\\
 		\end{align*}
-		
-Donc, par hypothèse de récurrence, $\exists c(t)$ et $r_c(t)$ tel que
+
+		Par le lemme \ref{somme}, la somme des deux derniers termes de cette expression est de degré $\leq n$ et donc par hypothèse de récurrence, $\exists c(t), r_c(t) \in \mathbb{R}[t], \deg(r_c(t)) < \deg(q(t))$, tel que
 \[ 
-	-\frac{a_{n+1}}{q_m} t^{n-m+1} q'(t) = c(t) \cdot q(t) + r_c(t)
+	- a_{n+1} t^{n+1} \frac{q'(t)}{q_m t^{m}} + a'(t) = q(t) \cdot c(t) + r_c(t)
+.\]
+Et donc on obtient que
+\[ 
+	a(t) = q(t) \cdot \left( - a_{n+1} t^{n+1-m} \frac{1}{q_m } + c(t) \right) + r_c(t)
 \]
 
-De même, le degré de $a'(t)$ est aussi inférieur à $n+1$, et donc, par hypothèse de récurrence, $\exists d(t) , r_d(t)$ tel que $a'(t)= q(t)\cdot d(t) + r_d(t)$.\\
-On a donc
-\begin{align*}
-	a(t) &= \frac{a_{n+1}}{q_m} t^{n+1-m} q(t) - \frac{a_{n+1}}{q_m} t^{n-m+1} ( q'(t)) + a'(t)\\
-	     &= \frac{a_{n+1}}{q_m} t^{n+1-m} q(t) - c(t) \cdot q(t) - r_c(t) + q(t) \cdot d(t) + r_d(t)\\
-	     &= q(t) \left( \frac{a_{n+1}}{q_m} t^{n+1-m} - c(t) + d(t) \right) - r_c(t) + r_d(t) \\
-\end{align*}
+
+		
+%Donc, par hypothèse de récurrence, $\exists c(t)$ et $r_c(t)$ tel que
+%\[ 
+	%-\frac{a_{n+1}}{q_m} t^{n-m+1} q'(t) = c(t) \cdot q(t) + r_c(t)
+%\]
+
+%De même, le degré de $a'(t)$ est aussi inférieur à $n+1$, et donc, par hypothèse de récurrence, $\exists d(t) , r_d(t)$ tel que $a'(t)= q(t)\cdot d(t) + r_d(t)$.\\
+%On a donc
+%\begin{align*}
+	%a(t) &= \frac{a_{n+1}}{q_m} t^{n+1-m} q(t) - \frac{a_{n+1}}{q_m} t^{n-m+1} ( q'(t)) + a'(t)\\
+	     %&= \frac{a_{n+1}}{q_m} t^{n+1-m} q(t) - c(t) \cdot q(t) - r_c(t) + q(t) \cdot d(t) + r_d(t)\\
+	     %&= q(t) \left( \frac{a_{n+1}}{q_m} t^{n+1-m} - c(t) + d(t) \right) - r_c(t) + r_d(t) \\
+%\end{align*}
 On a donc trouvé une formulation pour $a(t)$ tel que $a(t)=b(t) \cdot q(t) + r(t)$.
 \end{itemize}
 \end{proof}

@@ -1,12 +1,12 @@
 # Fdb version 3
-["makeindex main.idx"] 1600861931 "main.idx" "main.ind" "main" 1600865935
-  "main.idx" 1600865935 382 b1822269fd1c34d2f2070330d2ec8bd9 "pdflatex"
+["makeindex main.idx"] 1600861931 "main.idx" "main.ind" "main" 1601218553
+  "main.idx" 1601218553 382 b1822269fd1c34d2f2070330d2ec8bd9 "pdflatex"
   (generated)
-  "main.ind"
   "main.ilg"
-["pdflatex"] 1600865934 "main.tex" "main.pdf" "main" 1600865935
+  "main.ind"
+["pdflatex"] 1601218552 "main.tex" "main.pdf" "main" 1601218553
   "../../header.tex" 1599495079 102 d5f915c592d8c7a405eb2868277818c8 ""
-  "../../preamble.tex" 1600792900 5731 091854ad1d4430273dd5a773d0d89587 ""
+  "../../preamble.tex" 1601033111 5731 c6642ab46c8658eb1919f83f7d10609f ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1591545468 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1591545468 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1591545468 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -268,17 +268,17 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1599553015 2514047 fbf118675b2f68bc3b0de1e3f8bfd828 ""
   "lectures/lec1.tex" 1600777912 5290 3120abcaac3336b832160323bc3b9e3b ""
   "lectures/lec2.tex" 1600777857 5356 14a81cc70e1a9d09233c9c77b5ee1e8c ""
-  "lectures/lec3.tex" 1600865934 5463 9c268eef9f27f8c2467e792ceefddbfb ""
-  "main.aux" 1600865935 15033 44a65daeb0898822580a039acd92d08c "pdflatex"
+  "lectures/lec3.tex" 1601218551 5496 d5e79d87bc15082633b68f66e213afae ""
+  "main.aux" 1601218553 15083 1fe94116c51a5fb2b46140a2711c1775 "pdflatex"
   "main.ind" 1600861931 489 582f73b75c9dc5ed6611094bcedb91cb "makeindex main.idx"
-  "main.loe" 1600865935 4174 d513277b21ad2d12d8480f9dde87ede9 "pdflatex"
+  "main.loe" 1601218553 4174 d513277b21ad2d12d8480f9dde87ede9 "pdflatex"
   "main.tex" 1600859819 236 e239d6abbdca9e3ae35537fe9dfcb3c6 ""
-  "main.toc" 1600865935 485 271edb8d7d2fc0b2571cf49233332fb1 "pdflatex"
+  "main.toc" 1601218553 485 271edb8d7d2fc0b2571cf49233332fb1 "pdflatex"
   (generated)
+  "main.aux"
+  "main.thm"
+  "main.log"
   "main.toc"
   "main.pdf"
-  "main.thm"
   "main.idx"
   "main.loe"
-  "main.log"
-  "main.aux"
