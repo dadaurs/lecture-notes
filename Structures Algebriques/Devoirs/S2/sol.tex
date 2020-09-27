@@ -1,0 +1,60 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newtheorem{lemma}{Lemme}
+\newtheorem{thm}{Theoreme}
+\newcommand\hr{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}\newline
+}
+\begin{document}
+\title{Série 2}
+\author{David Wiedemann}
+\maketitle
+On démontre d'abord la propriété énoncée dans l'exercie 2, partie 2:
+\begin{lemma}
+	$(a,b) \in R$ si et seulement si $R_a = R_b$.
+\end{lemma}
+\begin{proof}
+On montre l'implication dans les deux sens.\\
+\framebox[1.1\width]{$  \Longrightarrow $}\\
+Supposons, par l'absurde, $(a,b) \notin R$ mais $R_a \cap R_b$ non vide.
+Supposons $ c \in R_a \cap R_b$, alors $c \in R_a$ et donc $(a,c) \in R$.
+De même, $c \in R_b$ et donc $(c,b) \in R$.\\
+Par la transitivité de la relation d'équivalence, on a donc:
+\[ 
+	(a,b) \in R
+\]
+ce qui est une contradiction à notre hypothèse.\\
+\framebox[1.1\width]{$  \Longleftarrow $}\\
+Supposons, par l'absurde, $(a,b) \in R$ mais $R_a \cap R_b = \emptyset$, alors
+\[ 
+	( a,b) \in R \Rightarrow b \in R_b \text{ et }  b \in R_a
+\]
+Ce qui est une contradiction à l'hypothèse que $R_a \cap R_b = \emptyset$.
+\end{proof}
+
+Ce lemme nous montre que deux classes d'équivalence différentes ne peuvent pas contenir d'éléments commun.\\
+Etant donné que chaque classe d'équivalence contient au moins 1 élément.
+Finalement, on sait que les classes d'équivalence forment une partition de $A$, il n'y a pas d'éléments dans $A$ qui n'appartienne pas à une classe d'équivalence. En effet, supposons que $p \in A$, $(p,p) \in R$ et donc $p \in R_p$.\\
+Grâce à ceci, on peut déduire que le nombre d'éléments de $R$ vaut la somme du nombre d'éléments des classes d'équivalence.\\
+\hr
+Si deux des trois classes d'équivalence ne contiennent qu'un seul élément, il faut que que la dernière classe d'équivalence en contienne 4.\\
+On sait, en utilisant de la combinatoire élémentaire, que une répartition avec répétition de 4 éléments sur 2 places a  $4\times 4=16$ possibilités.
+Les deux autres classes d'équivalence ont chacune 1 élément.\\
+En tout $R$, contiendra donc $4\times 4 + 1 + 1=18$.\\
+\hr
+Si une classe d'équivalence possède 1 élément, une autre 2 éléments et la dernière 3 éléments, $R$ contiendra
+$(3\times 3) + (2\times 2) + ( 1 \times 1 ) =14$ éléments.\\
+\hr
+Si chacune des trois classes d'équivalence possède 2 éléments $R$ contiendra
+$ (2 \times 2) + (2 \times 2) +(2 \times 2) = 12$ éléments.
+
+
+
+\end{document}
