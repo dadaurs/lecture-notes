@@ -1,0 +1,267 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Mon 28 Sep}{Groupes et Anneaux}
+\begin{thm}
+	Soit $A\subset G$ un ensemble,si $A=\emptyset$ alors $\eng{A}= \left\{ e_G \right\}$, sinon on pose
+	\[ 
+	A^{-1}= \left\{ g^{-1}, g\in A \right\} \subset G
+	\]
+	l'image de $A$ par l'inversion alors
+	\[ 
+		\eng{A} = \left\{ g_1\star\ldots\star g_n, g_i \in A \cup A^{-1} \right\} 
+	\]
+	En d'autres termes, $\eng{A}$ est l'ensemble des elements de $G$ qu'on peut former en multipliant ensemble des elements de $A$ et de son invers $A^{-1}$ de toutes les manieres possibles.
+\end{thm}
+\begin{proof}
+	Pour montrer que c'est $\eng{A}$, on procede par double inclusion.\\
+	$\supset$ : soit $H\subset G$ un ssgpe tq
+	\[ 
+	A\subset H \subset G
+	\]
+	Alors commme $H$ est stable par $\bullet^{-1}$	
+	\[ 
+	A^{-1}\subset H^{-1} =H
+	\]
+	Donc, $A\cup A^{-1}\subset H$ comme $H$ est stable par $\star$, si $ g_1,\ldots,g_n\in A\cup A^{-1}$
+	Le produit $ g_1\star g_2\star\ldots\star g_n \in H$
+	
+	Donc $ \left\{ g_1\star g_2\star \ldots \star g_n, g_i \in A\cup A^{-1} \right\} \subset H $
+	et donc $ \left\{ g_1\star g_2\star \ldots \star g_n, g_i \in A\cup A^{-1} \right\} \subset \bigcap_{A\subset H} H \subset \eng{A} $\\
+	$\subset$ : il suffit de mq $ \left\{ \ldots \right\} $ et un sous groupe de $G$.
+	En effet, $ \left\{ g_1\star \ldots\star g_n, n\geq 1, g_i \in A\cup A^{-1} \right\} \supset A $\\
+	Critere de ss-groupe:\\
+	a) Soit $g\in A \Rightarrow g^{-1} \in A^{-1}, g\star g^{-1} = e_G \in \left\{ g_1\star\ldots\star g_n, \ldots \right\} $\\
+	b)Soit $g=g_1\star g_2\star\star\ldots \star g_n$ et$g'=g'_1\star g'_2\star\star\ldots \star g'_n$\\
+	\[ 
+	n,n'\geq 1, g_i, g'_j \in A \cup A^{-1}
+	\]
+	Alors
+	\begin{align*}
+	g\star g' = g_1\star\ldots\star g_n\star g'_1\ldots g'_n \in \left\{ \ldots \right\} 	
+	\end{align*}
+	c) soit $g=g_1\star\ldots\star g_n$comme ci-dessus
+	\[ 
+	g^{-1}= g_n^{-1}\star g_{n-1} ^{-1}\star\ldots\star g_1^{-1} \in \left\{ \ldots \right\} 
+	\]
+	$ \left\{ \ldots \right\} $ est un sousgroupe de $G$ contenant $A$ donc il contient $\eng{A}$.
+\end{proof}
+\subsection{Morphismes de Groupes}
+\begin{defn}[Morphisme de Groupe]\index{Morphisme de Groupe}\label{defn:morphisme_de_groupe}
+	Soient $(G,\star)$ et $(H,\bullet)$ deux groupes, un morphisme de groupes $\phi: G \to H$ est une application telle que
+	\[ 
+		\forall g,g'\in G, \phi(g\star g')=\phi(g) \bullet \phi(g')
+	\]
+\end{defn}
+\begin{thm}
+Soit $\phi: G\to H$ un morphisme de groupes alors
+\begin{enumerate}
+	\item $\phi(e_G)= e_H$
+	\item $\forall g \in G, \phi(g^{-1})=\phi(g)^{-1}$
+	\item $\forall g,g' \in G, \phi(g\star g') = \phi(g) \bullet\phi(g')$
+\end{enumerate}
+\end{thm}
+\begin{proof}
+Il suffit de demontrer 1 et 2, 3 est vrai par definition.\\
+1)\\
+Soit $g\in G,\phi(g)=\phi(g\star e_G)= \phi(g) \bullet \phi(e_G)$.\\
+Donc $\phi(g) = \phi(g) \star\phi(e_G)$ et donc
+\begin{align*}
+h = h\bullet \phi(e_G)\\
+h^{-1}\bullet h = h^{-1}\bullet h \bullet \phi(e_G)
+\end{align*}
+2)\\
+ 
+\begin{align*}
+	\phi(g) \bullet \phi(g)^{-1} &= e_H\\
+	\phi(g) \bullet \phi(g^{-1}) &= \phi(g\star g^{-1})\\
+				     &= \phi(e_G) = e_H
+\end{align*}
+On conclut en utilisant l'unicite de l'inverse
+\[ 
+	\phi(g^{-1})=\phi(g)^{-1}
+\]
+
+
+
+ 
+
+\end{proof}
+\begin{defn}[Notations]
+\begin{itemize}
+	\item $Hom_{Gr} (G,H)$ l'ensemble des morphismes de groupe entre $G$ et $H$.
+	\item $End_{Gr} (G) = Hom _{Gr} ( G,G)$ les endomorphismes du groupe $G$.
+	\item $Isom_{Gr} ( G,H)$ l'ensemble des morphismes bijectifs
+	\item $Aut_{Gr} ( G)= Isom_{Gr} ( G,G)$ l'ensembles des automorphismes du groupe $G$.
+\end{itemize}
+\end{defn}
+\begin{exemple}
+\begin{itemize}
+\item 
+	\begin{align*}
+	e_H:
+	\begin{cases}
+	G\to H\\
+	g \to e_h
+	\end{cases}
+	\end{align*}
+	
+\item Soit $g\in G$ 
+	\begin{align*}
+	\exp_G: 
+	\begin{cases}
+	\mathbb{Z} \to G\\
+	n\to g^{n}
+	\end{cases}
+	\end{align*}
+\end{itemize}
+\item Si $G$ est commutatif note additivement
+	\begin{align*}
+	\bullet . g:
+	\begin{cases}
+	\mathbb{Z} \to G\\
+	n \to n.g
+	\end{cases}
+	\end{align*}
+
+\item Conjugaison dans un groupe: $(G, .)$
+	\begin{align*}
+	h \in G\\
+	Ad_h: 
+	\begin{cases}
+	G \to G\\
+	g\to h.g.h^{-1}
+	\end{cases}
+	\end{align*}
+	\begin{proof}
+	On veut montrer que $\forall g,g' \in G$ 
+	\[ 
+		Ad_h(g.g') = Ad_h(g).Ad_h(g')
+	\]
+	\begin{align*}
+		Ad_h(g).Ad_h(g') &= (h.g.h^{-1} ). ( h.g.h^{-1})\\
+				 &= h.g.h^{-1}.h.g'.h^{-1}\\
+				 &= h.g.e_G.g'.h^{-1}
+				 &= h.g.g'.h^{-1}  = Ad_h(g.g')
+	\end{align*}
+	Terminologie:\\
+	\[ 
+		Ad_h(g) = h.g.h^{-1} 	
+	\]
+	Le conjugue de $g$ par $g$.
+	
+	
+	
+	\end{proof}
+\end{exemple}
+\begin{rmq}
+$Ad_h:G\to G$ est bijectif.
+$Ad_h$ admet une application reciproque qui est $Ad_h^{-1}$
+\end{rmq}
+\begin{proof}
+$Ad_{h^{-1}} \circ Ad_h  ?= Id_G$\\
+$ Ad_h \circ Ad_{h^{-1}}  ?= Id_G$\\
+Il suffit de montrer le premier.
+\begin{align*}
+	Ad_{h^{-1}} \circ Ad_h(g) &= h^{-1}.(h.g.h^{-1}).h\\
+&= h^{-1}.h.g.h^{-1}.h\\
+=g = Id_G(g)
+\end{align*}
+car $ ( h^{-1}) ^{-1}=h$
+\end{proof}
+$\forall h \in G$, 
+\[ 
+	Ad_h \in Aut_{Gr} ( G)
+\]
+\begin{propo}
+	Soient $(G,\star), ( H,\ast), ( K,\bullet ))$ des groupes et $\phi:G\to H$ et $\psi: H\to K$ des morphismes de groupes alors la composee $\psi \circ \phi: G\to K$ est un morphisme de groupes
+\end{propo}
+\begin{proof}
+On veut montrer que 
+\[ 
+	\psi \circ \phi ( g \star g') =? \psi \circ \phi(g) \bullet \psi \circ(g')
+\]
+on a:
+\begin{align*}
+	\psi \circ \phi(g\star g') &= \psi ( \phi(g\star g'))\\
+				   &= \psi ( \phi(g) \ast \phi(g'))\\
+				   &=\psi(\phi(g)) \bullet \psi(\phi(g'))
+\end{align*}
+
+\end{proof}
+\begin{propo}
+Soit $\phi: G \to H$ un morphisme de groupe bijectif alors l'application reciproque $\phi^{-1}$ est un morphisme bijectif.
+\end{propo}
+\begin{proof}
+	Soit $\phi: G \to H$ un morphisme de groupe bijectif ( en tant qu'application), on veut montrer que $\phi^{-1}:H \to G$ verifie
+	\[ 
+		\phi^{-1}(h\star h') =? \phi^{-1}(h) \ast \phi^{-1}(h'), \forall h,h' \in H
+	\]
+	On calcule
+	\begin{align*}
+		\phi ( \phi^{-1}(h) \ast \phi^{-1}(h')) &= \phi(\phi^{-1}(h)) \star \phi(\phi^{-1}(h'))\\
+							&= h \star h'\\
+							\Rightarrow \phi^{-1}(h) \ast \phi^{-1}(h')
+	\end{align*}
+	est un antecedent de $h\star h'$ mais le seul antecedent de  $h\star h'$ c'est $\phi^{-1}(h\star h')$\\
+	$\Rightarrow \phi^{-1}(h) \ast \phi^{-1}(h') = \phi^{-1}(h\star h')$ 
+	
+	
+
+\end{proof}
+\begin{defn}[Groupes Isomorphes]\index{Groupes Isomorphes}\label{defn:groupes_isomorphes}
+	Soient $G$ et $H$ deux groupes si
+	\[ 
+		Isom_{gr} ( G,H) \neq \emptyset
+	\]
+	On dit que $G$ et $H$ sont isomorphes ( comme groupes)
+	\[ 
+	G \simeq _{Gr} H
+	\]
+	et si $Isom_{gr} ( G.H) \neq \emptyset$ alors
+	$Isom_{Gr} ( H,G) \neq 0, H \simeq_{Gr} G$
+\end{defn}
+La relation ``etre isomorphe'' dans la categorie des groupes est une relation d'equivalence :
+\begin{itemize}
+	\item $G\simeq_{Gr} G$ ( $Isom_{Gr(G,G) \ni Id_G} $)
+	\item Si $G\simeq _{Gr} H \Rightarrow  H \simeq_{Gr} G$
+	\item Si $G \simeq_{Gr} H$ et $H\simeq_{Gr} K \Rightarrow  G \simeq_{Gr} K$
+\end{itemize}
+\begin{exemple}
+Le groupe des automorphismes d'un groupe
+\[ 
+	Aut_{Gr} ( G) = Isom_{Gr} ( G,G) \subset Bij(G)
+\]
+
+\end{exemple}
+\begin{thm}
+	$Aut _{Gr} ( G)$ est un sous-groupe de $\left(Bij(G), \circ, Id_G, \bullet^{-1}\right)$
+\end{thm}
+\begin{proof}
+	Si $\phi$ et $\psi \in Isom_{Gr} ( G,G)$, alors $\psi\circ\phi$ est un morphisme et $\psi\circ\phi$ est bijectif
+	$\Rightarrow \in Isom_{Gr} ( G,G)$ \\
+	Si $\phi \in Isom_{Gr} ( G,G) \cup Bij(G,G)$ alors $\phi^{-1}$ est un morphisme donc
+	\[ 
+		Isom_{Gr} ( G,G) = Aut_{Gr} ( G)
+	\]
+	
+\end{proof}
+
+
+
+
+	
+
+
+
+
+
+		
+
+		
+	
+
+
+
+
+
+\end{document}	
