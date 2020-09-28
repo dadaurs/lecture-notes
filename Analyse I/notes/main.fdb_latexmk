@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex main.idx"] 1600861931 "main.idx" "main.ind" "main" 1601218553
-  "main.idx" 1601218553 382 b1822269fd1c34d2f2070330d2ec8bd9 "pdflatex"
+["makeindex main.idx"] 1601286528 "main.idx" "main.ind" "main" 1601286992
+  "main.idx" 1601286992 488 4bec08b349fbab6cb975d26ba0a63ebc "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
-["pdflatex"] 1601218552 "main.tex" "main.pdf" "main" 1601218553
+["pdflatex"] 1601286991 "main.tex" "main.pdf" "main" 1601286992
   "../../header.tex" 1599495079 102 d5f915c592d8c7a405eb2868277818c8 ""
   "../../preamble.tex" 1601033111 5731 c6642ab46c8658eb1919f83f7d10609f ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1591545468 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -268,17 +268,18 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1599553015 2514047 fbf118675b2f68bc3b0de1e3f8bfd828 ""
   "lectures/lec1.tex" 1600777912 5290 3120abcaac3336b832160323bc3b9e3b ""
   "lectures/lec2.tex" 1600777857 5356 14a81cc70e1a9d09233c9c77b5ee1e8c ""
-  "lectures/lec3.tex" 1601218551 5496 d5e79d87bc15082633b68f66e213afae ""
-  "main.aux" 1601218553 15083 1fe94116c51a5fb2b46140a2711c1775 "pdflatex"
-  "main.ind" 1600861931 489 582f73b75c9dc5ed6611094bcedb91cb "makeindex main.idx"
-  "main.loe" 1601218553 4174 d513277b21ad2d12d8480f9dde87ede9 "pdflatex"
-  "main.tex" 1600859819 236 e239d6abbdca9e3ae35537fe9dfcb3c6 ""
-  "main.toc" 1601218553 485 271edb8d7d2fc0b2571cf49233332fb1 "pdflatex"
+  "lectures/lec3.tex" 1601220691 5496 cd04a6ffbde3d1cf884f9c716470221b ""
+  "lectures/lec4.tex" 1601286991 5505 5bb9b3a64fccdfaf8db4258b241eb963 ""
+  "main.aux" 1601286992 18807 3bce30949b0e90e657160a30da2572f6 "pdflatex"
+  "main.ind" 1601286528 612 43859da71530cec933d481a5d7cee52e "makeindex main.idx"
+  "main.loe" 1601286992 5324 648493c6aadeb91ca47b8c777898e968 "pdflatex"
+  "main.tex" 1601280310 264 b3165aeb62f1ae7368e93b83ee7baeee ""
+  "main.toc" 1601286992 558 883063f7ccca1eb4f9cf31c0a39151d3 "pdflatex"
   (generated)
-  "main.aux"
-  "main.thm"
-  "main.log"
-  "main.toc"
-  "main.pdf"
-  "main.idx"
   "main.loe"
+  "main.pdf"
+  "main.log"
+  "main.idx"
+  "main.thm"
+  "main.toc"
+  "main.aux"

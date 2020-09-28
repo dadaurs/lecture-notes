@@ -1,0 +1,187 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Mon 28 Sep}{lundi}
+\begin{rmq}
+\begin{itemize}
+\item $\lim_{n \to  + \infty} \abs{x_n}  = \abs{\lim_{n \to  + \infty} x_n}$, ce qui est sous-entendu ici est que la limite existe.\\
+	%Si $x_n = (-1)^{n}$ par exemple
+\item $(x_n)_{n=1}^{\infty }$ convergence et limite sont inchangees si on modifie un nombre fini de termes.\\
+	En  particulier  $(x_n)_{n=17}^{\infty }$, rien ne change.
+\item $x_n \to l$ ( $n\to \infty $), equivalent a $\lim_{n \to  + \infty} x_{n} =l$
+\item On dit que $(x_n)$ converge vers $+\infty $ et on note $\lim_{n \to  + \infty} x_n = + \infty $, si $(x_n)$ diverge de la facon suivante:
+	\[ 
+	\forall R \in \mathbb{R}, \exists n_0 \forall n>n_0: x_n >R
+	\]
+	La definition est la meme si $x_n$ converge vers $- \infty $
+
+	
+\end{itemize}
+
+\end{rmq}
+\begin{propo}[Inversion d'une limite]\index{Inversion d'une limite}\label{propo:inversion_d_une_limite}
+	Supposons que $(x_n)$ converge vers $l \neq 0$, alors $\lim_{n \to  + \infty} \frac{1}{x_n}= \frac{1}{l}$
+\end{propo}
+\begin{crly}
+	Si $(x_n)$ converge vers $l$ et\\
+	Si $(y_n)$ converge vers $m \neq 0$ alors
+	\[ 
+	\lim_{n \to  + \infty} \frac{x_n}{y_n} = \frac{l}{m}
+	\]
+	Car $\frac{x_n}{y_n} = x_n \cdot \frac{1}{y_n}$
+\end{crly}
+\begin{lemma}
+Sous les hypotheses de la proposition,
+\[ 
+\exists n_0 \forall n \geq n_0 : x_n \neq 0
+\]
+
+\end{lemma}
+\begin{proof}
+	Appliquons la convergence a $\epsilon = \frac{\abs{l}}{2}$ ( car $l \neq 0$)
+	\[ 
+		\abs{x_n -l} < \epsilon \Rightarrow x_n \neq 0	
+	\]
+	
+\end{proof}
+\begin{proof}
+Preuve de la proposition\\
+Soit $\epsilon > 0$.\\
+On veut estimer
+\[ 
+	\abs{\frac{1}{x_n} - \frac{1}{l}} = \underbrace{\frac{\abs{l-x_n}}{\abs{x_n -l}}_{\geq \frac{\abs{l}}{2} \abs{l}} <? \epsilon}
+\]
+pour $n$ comme dans le lemme.
+On veut donc 
+ \[ 
+	 \abs{l-x_n} < \epsilon \frac{\abs{l}^{2}}{2}
+\]
+Donc $\exists n_1 \forall n \geq n_1$, on a bien $\abs{l-x_n} < \epsilon$
+\end{proof}
+\begin{exemple}
+On peut a present calculer
+\[ 
+	\lim_{n \to  + \infty} \frac{a_0+a_1n+a_2n^{2}+ \ldots + a_d n^{d}}{b_0+\ldots + b_f n^{f}}
+\]
+
+$a_d \neq 0, b_f \neq 0$ \\
+Si $d >f$ alors $ lim = \pm \infty $\\
+Si $d<f$ alors $lim =0$ \\
+
+Si $d=f$, alors $lim= \frac{a_d}{b_f}$\\
+Justification\\
+La suite peut s'ecrire
+\[ 
+\frac{a_d + a^{d-1} \frac{1}{n} + \ldots + a_0 \frac{1}{n^{d-1} }}{b_0 \frac{1}{n^{d} + \ldots + b_f n^{f-d}}}
+\]
+Si $f=d$, $\to \frac{a_d}{b_f}$ \\
+
+Si $f>d ,\to 0$\\
+Si  $f<d, \to \pm \infty $, selon signe de $\frac{a_d}{b_f}$
+
+\end{exemple}
+\begin{propo}
+	Soit $a\in \mathbb{R}$ avec $\abs{a} < 1$, alors
+	\[ 
+	\lim_{n \to  + \infty} a^{n} =0
+	\]
+	
+\end{propo}
+\begin{propo}
+	Si $(x_n)$ est monotone et bornee, alors elle converge.
+\end{propo}
+\begin{proof}
+	Soit $(x_n)$ croissante. Affirmation, $x_n \to s := \sup \left\{ x_n: n \in \mathbb{N} \right\} $\\
+	Soit $\epsilon >0$, $\exists n: x_n >s- \epsilon$ ( def. de sup)\\
+	$\forall n \geq n_0 :s-\epsilon <x_{n_0} \leq x_n \leq s \Rightarrow \abs{x_n -s} < \epsilon $\\
+	Idem, si elle etait decroissante.
+\end{proof}
+\begin{proof}
+	Remarque: $(x_n) \to 0 \iff ( \abs{x_n} \to 0)$.\\
+	\[ 
+		\ldots \abs{x_n-0} < \epsilon
+	\]
+	
+	Donc on va traiter le cas $a>0$, alors $(a^{n})_{n=1} ^{\infty }$ est decroissante.\\
+	Bornee ( par zero et 1) $\Rightarrow$ elle admet une limite $l$.\\
+	Or $\lim_{n \to  + \infty} a^{n} = \underbrace{\lim_{n \to  + \infty} a^{n+1}}_{a \cdot \lim_{n \to  + \infty} a^{n}}$
+	Donc $l=al$.
+	Si $l\neq 0$, $1=a$ absurde, donc $l$ nul.
+\end{proof}
+
+\begin{exemple}
+	Def $(x_n)$en posant $x_{n+1} =2 + \frac{1}{x_n}$\\
+	Observons que $x_n \geq 2 >0 \forall n$\\
+	Si  $(x_n)$ converge, alors
+	\[ 
+		l = \lim_{n \to  + \infty} x_n = \lim_{n \to  + \infty} (2 + \frac{1}{x_n}) = 2+ \frac{1}{l}
+	\]
+	Donc
+	\[ 
+		l^{2}-2l -1 = 0 \Rightarrow 1 + \sqrt{1+1} =l
+	\]
+	Or $l\geq 2 \Rightarrow l = 1+\sqrt{2}$ si $l$ existe.\\
+	A present, estimons $\abs{x_n -l}:$ 
+	\[ 
+		\abs{x_n-1 -\sqrt{2}} =	 \abs{2 + \frac{1}{x_{n-1}} = ( 2+\frac{1}{l})}\\
+		= \frac{\abs{l-x_{n-1} }}{x_{n-1} l} \leq \frac{\abs{x_{n-1} -l}}{4}
+	\]
+\[ 
+	\leq \ldots \leq \frac{\abs{x_{n-2} -l}}{4^{2}} \leq \frac{\abs{2-l}}{4^{n}}\to 0 
+\]
+car $\frac{1}{4^{n}} \to 0$
+\end{exemple}
+\begin{lemma}[Deux gendarmes]\index{Deux gendarmes}\label{lemma:deux_gendarmes}
+	Soit $( x_n ), ( y_n), ( z_n)$ trois suites avec 
+	\[ 
+	\lim_{n \to  + \infty} x_n = l = \lim_{n \to  + \infty} z_n
+	\]
+	si $x_n \leq y_n\leq z_n \forall n$, alors
+	\[ 
+	\lim_{n \to  + \infty} y_n =l
+	\]
+	
+\end{lemma}
+
+\begin{proof}
+repose sur le fait que 
+\[ 
+	\abs{x_n-l}, \abs{z_n-l} < \epsilon \Rightarrow l-\epsilon <x_n\leq y_n \leq z_n < l+\epsilon
+\]
+montre $\abs{y_n-l}<\epsilon$
+\end{proof}
+\section{Limsup et liminf}
+
+\begin{defn}[Limsup et liminf]\index{Limsup et liminf}\label{defn:limsup_et_liminf}
+	Soit $(x_n)$ une suite quelconque.\\
+	On definit la limite superieure par:
+	\[ 
+		\limsup_{n \to \infty } x_n :=\inf_{n} \sup \left\{ x_k, k\geq n \right\} 
+	\]
+	Attention: Ici on convient que
+	\[ 
+		\sup(A) = + \infty 
+	\]
+	si $A$ non majore
+	\[ 
+		\inf(A) = - \infty 
+	\]
+	si $A$ non minore\\
+	
+	On definit la limite superieure par:
+	\[ 
+		\liminf_{n \to \infty } x_n :=\sup_{n} \inf \left\{ x_k, k\geq n \right\} 
+	\]
+\end{defn}
+Notez :  $z_n := \sup \left\{ x_k : k \geq n \right\} $
+
+Cela definit une suite decroissante et donc $(z_n)$ converge vers son inf.\\
+Conclusion: $\limsup_{n\to \infty }x_n = \lim_{n \to  + \infty} z+n = \lim_{n \to  + \infty} \sup_{k\geq n} x_k $
+
+
+
+
+
+
+
+	
+\end{document}	

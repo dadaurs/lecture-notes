@@ -412,6 +412,8 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
 INPUT lectures/lec3.tex
 INPUT lectures/lec3.tex
+INPUT lectures/lec4.tex
+INPUT lectures/lec4.tex
 OUTPUT main.thm
 OUTPUT main.loe
 INPUT main.aux
