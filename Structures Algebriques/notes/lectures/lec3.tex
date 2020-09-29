@@ -1,0 +1,226 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Tue 29 Sep}{mardi}
+\begin{proof}
+
+
+C'est suffisant de montrer que
+\[ 
+	H(W) = W
+\]
+On montre la double inclusion
+$\subset:$ \\
+$W \subseteq \bigcap_{x \subseteq A, H(X) \subseteq X} X$, alors
+\begin{align*}
+	H(W) &\subseteq \bigcap_{x\subseteq A, H(X) \subseteq X} H(X)\\
+	     &\subseteq \bigcap_{x \subseteq A, H(X) \subseteq X} X =W 
+\end{align*}
+$\supseteq:$ \\
+$H(W)$ est un $X$ comme dans la definition de $W$.
+\[ 
+	\Rightarrow W \subseteq H(W)
+\]
+\end{proof}
+Question:\\
+$\abs{ \mathbb{R} } = \omega_1$?\\
+Hypothese du continu\\
+On peut montrer qu'on ne peut pas demontrer ca.
+\section{Theorie des nombres}
+\subsection{Algorithme d'Euclide}
+
+\begin{defn}
+	$a \in \mathbb{Z}, b \in \mathbb{Z}, b \neq 0$, alors
+	\[ 
+		\underbrace{( a,b)}_{ \text{ plus grand commun diviseur } }= \left\{ c \in \mathbb{Z}^{>0} \vert \text{    }  c \vert a, c \vert b \right\} 
+	\]
+	Cette valeur existe car il y a une borne superieure donnee par $\abs{b}$.\\
+	
+\end{defn}
+\begin{lemma}
+$ a_1, b \in \mathbb{Z}, a \neq 0, r \in \mathbb{Z}$
+\[ 
+	( a,b) = ( a,b+ra)
+\]
+
+\end{lemma}
+\begin{proof}
+Si qqchose divise a et b, il divse aussi a. Il divise aussi b + a
+\[ 
+	( b+ra) -ra = b
+\]
+Detail dans les notes moodle
+\end{proof}
+\begin{defn}[Algorithme d'Euclide]\index{Algorithme d'Euclide}\label{defn:algorithme_d_euclide}
+	$a,b \in \mathbb{Z}^{0}$, soit
+\begin{align*}
+a_1:= \max \left\{ a,b \right\} \\
+a_2 := \min \left\{ a,b \right\} 
+i:=2
+\end{align*}
+\textbf{ Pas recursif: }\\
+Si $qi \vert q_{i-1} \rightarrow$ on arrete et on pose $t:=i$.\\
+Sinon $q_{i-1} = s_i q_i + q_{i+1} $
+\begin{align*}
+q_i \not\vert q_{i-1} \Rightarrow q_{i+1 \neq 0}\\
+\text{ et } q_{i+1} < q_i
+\end{align*}
+\[ 
+q_1>q_2>q_3> \ldots q_t >0, \text{ avec } q_i \text{ entier }
+\]
+\end{defn}
+\begin{lemma}
+$\exists m,n \in \mathbb{Z}$ tel que
+\[ 
+am + bn = q_t
+\]
+
+\end{lemma}
+\begin{proof}
+On demontre que $q_i$ 
+\[ 
+m_i q_i + n_i q_{i+1} = q_t
+\]
+On utilise l'induction descendante sur $i$.
+$\exists m_i, n_i \in \mathbb{Z}$ \\
+$i=t-1$
+\[ 
+1 q_t + 0 q_{t-1} = q_t
+\]
+Pas d'induction\\
+\[ 
+q_i = s_o q_{i+1}  + q_{i+2} 
+\]
+Par hypothese d'induction
+\begin{align*}
+\underbrace{m_{i+1} q_{i+1 } + n_{i+1} q_{i+2}}_{= m_{i+1} q_{i+1} + n_{i+1} ( q_i - s_{i+1} q_{i+1} )} = q_t\\
+= \underbrace{n_{i+1}}_{m_i} q_i + \underbrace{( m_{i+1} - n_{i+1} s_{i+1})}_{n_i} q_{i+1} \\
+\end{align*}
+\end{proof}
+\begin{lemma}
+$q_t | q_i $ pour chaque $i$.
+\end{lemma}
+\begin{proof}
+On demontre de la meme facon que le lemme d'avant avec induction descendante.
+\end{proof}
+On peut combiner les deux lemmes:
+donc 
+\begin{align*}
+	(a,b) | q_t\\
+	q_t | ( a,b)
+\end{align*}
+Donc l'algorithme d'Euclide donne le pgcd.
+\subsection{Theoreme fondamental de l'arithmetique}
+\begin{defn}[Entier]\index{Entier}\label{defn:entier}
+	Soit $p \geq 2$ un entier
+	\begin{enumerate}
+	\item $p$ irreductible si pour chaque $a | p  \Rightarrow a=1$ ou $a=p$,  $a \in \mathbb{N}$
+	\item $p$ premier: $\forall a,b \in \mathbb{Z}^{>0}$ 
+		\[ 
+		p | a.b \Rightarrow p | a \text{ ou } p | b
+		\]
+	\end{enumerate}
+\end{defn}
+\begin{lemma}
+$q, a,b \in \mathbb{Z}^{>0}$ 
+\begin{align*}
+	q | a.b &\text{ et } ( q,a) =1\\
+		& \Rightarrow q | b
+\end{align*}
+\end{lemma}
+\begin{proof}
+	$(q,a) = 1$ 
+	\begin{align*}
+	1 = mq + na \text{ ,avec } m,n \in \mathbb{Z}\\
+	b= mqb + nab\\
+	\Rightarrow q | b
+	\end{align*}
+\end{proof}
+\begin{propo}
+Soit $p\geq 2$ entier\\
+p irreductible $\iff p$ premier
+\end{propo}
+\begin{proof}
+$\Leftarrow$ \\
+On veut montrer que $a.b = p, \Rightarrow a=1 \text{ ou } b=1$
+On sait que $p$ premier
+\[ 
+p | a.b \Rightarrow  p | a \text{ ou } p | b
+\]
+\[ 
+\underbrace{\Rightarrow}_{a,b \geq p} p | a \text{ ou }  p |b
+\]
+$\Rightarrow$ :\\
+$p$ irreductible
+\[ 
+p | ab
+\]
+Deux possibilites:\\
+\begin{enumerate}
+	\item $p|a$ on a fini 
+	\item $p \not | a \Rightarrow ( p,a) \neq p$\\
+		$p$ irreductible ( $(p,a) | p$), donc
+		\[ 
+			( p,a) =1
+		\]
+		Donc $\Rightarrow p | b$ 
+\end{enumerate}
+\end{proof}
+\begin{thm}
+$n \in \mathbb{Z}^{>0},$ \\
+\[ 
+n = \prod_{i=1} ^{r} p_i, \text{ avec } p \text{ premiers } 
+\]
+et c'est unique modulo l'ordre des premiers
+\end{thm}
+\begin{proof}
+Existence\\
+Induction sur $n$ \\
+$n=2$ premier donc verifie.\\
+Pas d'induction:
+2 possibilites:
+\begin{itemize}
+\item $n$ premier $\Rightarrow p_1 = n, r=1$ 
+\item $n$ n'est pas premier
+	$\Rightarrow$ pas irreductible\\
+	$\Rightarrow a.b =n$ \\
+	tel que $a,b < n$\\
+	$\Rightarrow a= \prod p_i$   et $b = \prod p_i$, donne la decomposition pour  $n$.
+\end{itemize}
+Unicite\\
+ \[ 
+n = \prod_{i=1} ^{r} p_i = \prod _{j=1} ^{s} q_j, \text{ avec  } r \leq s
+\]
+\begin{itemize}
+\item $s=1 \Rightarrow  r=1$ verifie
+\item $s>1$, alors
+	\[ 
+	q_1 | \prod_{i=1} ^{r} p_i
+	\]
+	$\Rightarrow q_1$ premier\\
+	\[ 
+	\Rightarrow  \forall l: q_1 | p_l
+	\]
+	donc
+	\begin{align*}
+	\frac{n}{q_1}= \prod_{i=1, i \neq l}^{r} p_i = \prod_{j=2} ^{s} a_j	
+	\end{align*}
+\end{itemize}
+
+
+
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

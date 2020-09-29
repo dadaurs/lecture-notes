@@ -1,0 +1,287 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Tue 29 Sep}{Noyau et Image}
+
+\section{Noyau et Image}
+
+\begin{propo}
+	Soit $\phi \in Hom_{Gr} ( G,H) $ un morphisme de groupes.
+	\begin{itemize}
+		\item Soit $K\subset G$ un sous groupe alors $\phi(K) \subset H$ est un sous-groupe. En particulier l'imaged de $\phi$,
+			\[ 
+				Im(\phi) = \phi(G)
+			\]
+			
+		\item Soit $L \subset H$ un sous-groupe de $H$, alors l'image inverse
+			\[ 
+				\phi^{-1}(L) = \left\{ g \in G, \phi(g) \in L \right\} \subset G
+			\]
+			est un sous-groupe de $G$. En particulier, $\phi^{-1}( \left\{ e_H \right\})$ est un sous-groupe
+	\end{itemize}
+	
+\end{propo}
+\begin{proof}
+Soit $K \subset G$ un sous-groupe.\\
+Soit
+\[ 
+	h,h' \in \phi(K)
+\]
+On veut montrer que $h\star h'^{-1}\in \phi(K)$.\\
+Il existe $k,k' \in K$ tel que $\phi(k)=h, \phi(k')=h'$ 
+\begin{align*}
+	h \star h'^{-1} &= \phi(k) \star \phi(k')^{-1}\\
+			&=\phi(k) \star \phi(k'^{-1})\\
+			&= \phi(k\ast k'^{-1}), \text{     } k\ast k'^{-1} \in K
+\end{align*}
+car $K$ sous-groupe.\\
+\[ 
+	h \star h'^{-1} \in \phi(K)
+\]
+Soit $L \subset H$ un sous-groupe, on veut montrer que
+\[ 
+	\phi^{-1}(L) \subset G
+\]
+est un sous-groupe
+Soient $g,g' \in \phi^{-1}(L)$, alors $\phi(g) = h \in L, \phi(g') = h' \in L$\\
+ \[ 
+	 g\star g'^{-1} \in \phi^{-1}(L)?
+\]
+on a
+\begin{align*}
+	\phi(g \star g'^{-1}) &= \phi(g) \ast \phi(g')^{-1}\\
+			      &=h \ast h'^{-1} \in L \text{ car $L$ sous-groupe } 
+\end{align*}
+\end{proof}
+\begin{defn}
+	Le sous-groupe $\phi^{-1}( \left\{ e_H \right\} )$ s'appelle le noyau de $\phi$ et est note
+	\[ 
+		\ker(\phi) = \phi^{-1}( \left\{ e_H \right\} ) = \left\{ g\in G, \phi(g) = e_H \right\} 
+	\]
+	L'importance du noyau vient du fait qu'il permet de tester facilement si un morphisme est injectif.
+\end{defn}
+\begin{thm}[Critere d'injectivite]\index{Critere d'injectivite}\label{thm:critere_d_injectivite}
+	Soit $\phi \in Hom_{Gr} ( G,H)$ un morphisme de groupes alors les proprietes suivantes sont equivalentes
+	\begin{itemize}
+	\item $\phi$ est injectif
+	\item $\ker(\phi) = \left\{ e_G \right\} $
+	\end{itemize}
+	
+\end{thm}
+\begin{proof}
+	$1 \rightarrow 2$\\
+	si $\phi $ est injectif, l'image reciproque de $ \left\{ e_H \right\} $ possede au plus un seul element. Mais comme $\phi$ est un morphisme $\phi(E_G) = e_H \Rightarrow \phi^{-1}( \left\{ e_H \right\} ) = \left\{ e_G \right\} $\\
+	$2 \rightarrow 1$\\
+	On se donneun $h \in H$ et on veut montrer que $\phi^{-1}( \left\{ h \right\} ) = \left\{ g \in G, \phi(g) =h \right\} $ n'a pas plus d'un element.\\
+	Si $\phi^{-1}( \left\{ h \right\} ) = \emptyset $ OK\\
+	Si $\phi^{-1}( \left\{ h \right\} ) \neq \emptyset$, soient $g,g' \in \phi^{-1}( \left\{ h \right\} )$ on veut montrer que $g=?g'$.\\
+	Par definition,  $\phi(g) = \phi(g') = h$ 
+	\begin{align*}
+		\phi(g) \ast \phi(g')^{-1} &= e_H\\
+				      &= \phi(g \ast g'^{-1}) \text{ car $\phi$ morphisme } 
+	\end{align*}
+	Donc, $g \ast g'^{-1} \in \ker(\phi) = \left\{ e_G \right\} $,
+	\[ 
+	\Rightarrow  g \ast g'^{-1} = e_G \Rightarrow g = g'
+	\]
+	
+	
+\end{proof}
+
+\begin{exemple}
+Ordre d'un element\\
+Soit $g \in G$ groupe
+\[ 
+\exp_g: \mathbb{Z} \to G\\
+n \in (  \mathbb{Z}, +) \to g^{n} \in G
+\]
+est un morphisme de groupes.
+\[ 
+ \ker(\exp_g) \subset \mathbb{Z}
+ q \cdot \mathbb{Z}, q \in \mathbb{Z}
+\]
+Si $q=0$, $\ker(\exp_q) = \left\{ 0 \right\} $
+\begin{align*}
+	\Rightarrow \mathbb{Z} &\to G\\
+	n &\to g^{n} \text{ est injective } 
+\end{align*}
+$\mathbb{Z}$ est isomorphe a $g^{\mathbb{Z}} (\mathbb{Z} \simeq g^{\mathbb{Z}})$
+\[ 
+G \supset g^{\mathbb{Z}} \simeq \mathbb{Z}
+\]
+donc $g$ est d'ordre infini.\\
+Si $q>0$, alors 
+\[ 
+g^{\mathbb{Z}} = \left\{ g^{0} = e_G, g, g^{2}, \ldots, g^{q-1} \right\} 
+\]
+est un sous-groupe de cardinal $q$ ( a demontrer en exercice)
+et donc $G$ contient un sous-groupe d'ordre $q$ 
+\[ 
+	q := \text{ ordre de $g$ } = ord(g)
+\]
+q est le plus petit entier $>0$ tel que
+\[ 
+g^{q} = e_G
+\]
+
+
+
+
+\end{exemple}
+\begin{exemple}[Conjugaison]
+$G \ni h$ 
+\begin{align*}
+Ad_h: g \to h .g .h^{-1}
+\end{align*}
+
+On a montrer que $Ad_h \in Aut_{Gr} ( G)$
+
+\end{exemple}
+On considere l'application
+\[ 
+	h \in G \to Ad_h \in Aut_{Gr} ( G)
+\]
+Cette application est un morphisme de groupes:\\
+On doit verifier que: $\forall h,h' \in G$ 
+\[ 
+	Ad_{h.h'} =Ad_{h} \circ Ad_{h'}
+\]
+On veut montrer que pour tout $g\in G$ 
+\[ 
+	Ad_{h.h'} = Ad_h(Ad_{h'} ( g))
+\]
+\begin{align*}
+	h.h'.g.(h.h')^{-1} &=  h.h'.g .h'^{-1} .h^{-1}\\
+			   &= h.(h'.g.h'^{-1}).h^{-1}\\
+			   &= Ad_h(Ad_{h'} ( g))\\
+	\ker ( Ad ) &= \left\{ h \in G \vert Ad_h = Id_G \right\} \\
+		    &= \left\{ h \in G \vert \forall g \in G Ad_h(g) = g \right\} \\
+		    &= \left\{ h \in G \vert \forall g \in G, h.g.h^{-1}=g\right\}\\
+	h.g.h^{-1} =g & \iff h.g= g.h
+\end{align*}
+On dit que $h$ commute avec $g$.
+\begin{align*}
+	\ker(Ad) &= \left\{ \text{ l'ensemble des $h$ dans $G$ qui commutent avec tous les elements de de $G$ }  \right\} \\
+&= \text{ Centre de  } G\\
+&= Z(G) = Z_{G} 
+\end{align*}
+$Z_G$ est un groupe commutatif de $G$ 
+\begin{exemple}[Translation]
+
+Soit $h \in G$ la translation a gauche par $h$ 
+\begin{align*}
+t_h:
+\begin{cases}
+G \to G\\
+g \to h.g
+\end{cases}
+\end{align*}
+Attention $t_h$ n'est pas un morphisme de groupes, car l'element neutre ne va pas sur lui meme ( sauf si $h = e_G, t_h = t _{e_G} = Id_G $)\\
+Par contre $t_h$ est bijective de reciproque $t_{h^{-1}} $\\
+
+$ t_{\bullet} :h \in G \to t_h \in Bij(G)$ 
+est un morphisme de groupe injectif, l'image s'appelle le groupe des translations ( a gauche) de $G$.\\
+Donc $G \simeq t_G \subset Bij(G)$ \\
+Tout groupe $G$ abstrait peut s'identifier ( est isomorphe) a un sous-groupe d'un groupe de bijections d'un ensemble.
+
+\end{exemple}
+\section{Anneaux}
+\begin{defn}[Anneaux]\index{Anneaux}\label{defn:anneaux}
+	Un anneau $(A,+,.,1_A)$  est la donee, d'un groupe commutatif $(A,+)$ ( note additivement)d'element neutre note $0_A$, d'une loi de composition interne ( dite de multiplication) 
+	\begin{align*}
+	\bullet.\bullet
+	\begin{cases}
+	A\times A \to A\\
+	( a,b) \to a.b
+	\end{cases}
+	\end{align*}	
+	et d'un element unite $1_A \in A$ ayant les proprietes suivantes
+	\begin{enumerate}
+	\item Associativite de la mutliplication
+		\[ 
+			\forall a,b,c \in A, ( a.b).c = a.(b.c) = a.b.c
+		\]
+		
+	\item Distributivite
+		\[ 
+			\forall a,b,c \in A ( a+b).c = a.c + b.c, c.(a+b) = c.a + c.b
+		\]
+		
+	\item Neutralite de l'unite
+		\[ 
+		\forall a \in A, a. 1_A = 1_A.a = a
+		\]
+		Un anneau est dit commutatif si de plus la multiplication est commutative
+		\[ 
+		\forall a,b \in A , a.b = b.a
+		\]
+		
+	\end{enumerate}
+\end{defn}
+\begin{lemma}
+Pour tout $a,b \in A$, on a
+\[ 
+0_A.a = a.0_A = 0_A
+\]
+On dit que l'element neutre de l'addition $0_A$ est absorbant. Pour l'oppose, on a
+\[ 
+	( -a).b = - ( a.b) = a.(-b)
+\]
+
+\end{lemma}
+\begin{proof}
+$\forall a \in A$\\
+ \begin{align*}
+	 a = a.1_A &= a.(1_A + 0_A)\\
+		   &= a. 1_A + a.0_A\\
+		 0_A = a.0_A
+ \end{align*}
+
+\end{proof}
+\begin{exemple}
+\begin{itemize}
+\item L'anneau nul: $ \left\{ 0 \right\} $
+\item $\mathbb{Z}, ( \mathbb{Q}, +, \bullet), ( \mathbb{R}, +,\bullet)$ 
+\item $ \mathcal{F}(X,\mathbb{R})$ des fonctions d'un ensemble $X$ a valeurs dans $\mathbb{R}$.
+	\[ 
+		+: f+g : x \in X \to f(x) + g(x) = ( f+g)(x)
+	\]
+	\[ 
+		0_{\mathcal{F}(X,\mathbb{R})} : x \to 0 \in \mathbb{R}
+	\]
+	\[ 
+		1_{\mathcal{F}(X,\mathbb{R}): x \to 1 \in \mathbb{R}} 
+	\]
+	$ \left( \mathcal{F}(X,A), + , \bullet \right)$ est un anneau ( commutatif si $A$ commutatif) generalisation du cas des fonctions reelles
+
+\item $\mathbb{R}[x] = \left\{ P(x) = a_0 + a_1x + \ldots + a_d x^{d}, a_0,a_1, \ldots, a_d \in \mathbb{R}, d \geq 0 \right\} $
+
+\item $A[x] = \left\{ P(x) = a_0+ a_1x+ \ldots + a_d x^{d}, a_0, \ldots a_d \in A d \geq 0 \right\} $\\
+	Anneau des polynomes a coefficients dans $A$.
+\item $(M,+)$ un groupe commutatif
+	\[ 
+		End(M) = End_Gr(M) = Hom_{Gr} (M,M)
+	\]
+	\begin{align*}
+		+: \psi, \phi \in End(M)\\
+		\phi + \psi : m \to 
+		 \phi(m) + \psi(m)
+	\end{align*}
+	Soient $\phi, \psi \in End(M)$ 
+	\begin{align*}
+		\phi \circ \psi \in End(M)\\
+		0_{End(M)} : m \in M \to 0_M \in M\\
+		1_{End(M)} : Id_M : m \in M \to m \in M	
+	\end{align*}
+	$\left( End(M), +, \circ, 0_M, Id_M\right)$ est un anneau
+\end{itemize}
+\end{exemple}
+
+
+
+
+
+
+
+
+
+\end{document}	
