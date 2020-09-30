@@ -1,0 +1,225 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Wed 30 Sep}{mercredi 30}
+\begin{thm}
+	$(x_n)$ converge $\iff \limsup_{n \to  \infty } x_n = \liminf_{n \to \infty } x_n$ 
+	Dans ce cas, la limite prend cette meme valeur.
+\end{thm}
+\begin{proof}
+$\Leftarrow$ :\\
+Soit $z_n= \sup \left\{ x_p: p \geq n \right\} $,
+\[ 
+y_n = \inf \left\{ x_p: p \geq n \right\} 
+\]
+Rappel: $(z_n) \to LS$ et $(y_n) \to LI$ \\
+Or, $y_n \leq x_n \leq z_n$. Donc par les 2 gendamrmes
+\[ 
+	\Rightarrow ( x_n) \to LS = LI
+\]
+ $\Rightarrow$ :\\
+ Hypothese: $\lim_{n \to  + \infty} x_n =l$.\\
+ A voir: $LS = LI =l$.\\
+ Montrons par exemple que 
+ \[ 
+ \lim_{n \to  + \infty} z_n = l
+ \]
+ ( i.e. $LS = l$)\\
+ Soit $\epsilon > 0$.
+ \begin{align*}
+ \exists N \forall n \geq N: \abs{x_n -l } < \frac{\epsilon}{2}\\
+ \text{ et } \forall n \geq N: \abs{z_n - LS} < \frac{\epsilon}{4}
+ \end{align*}
+ Def. de $z_N  \Rightarrow \exists p \geq N: \abs{x_p} > z_N - \frac{\epsilon}{4} $\\
+ A present 
+ \[ 
+	 \abs{LS -l} \leq \underbrace{\abs{LS -z_N}}_{< \frac{\epsilon}{4}} + \underbrace{\abs{z_n -x_p}}_{< \frac{\epsilon}{4}} + \underbrace{\abs{x_p -l}}_{< \frac{\epsilon}{2}}
+ \]
+ avec $p \geq N$ et $N \geq N$
+ Donc $\forall \epsilon > 0:$ 
+ \begin{align*}
+	 \abs{LS -l } < \epsilon
+ \end{align*}
+ Donc $LS =l$
+\end{proof}
+\begin{thm}[Premiere regle de d'Alembert]\index{Premiere regle de d'Alembert}\label{thm:premiere_regle_de_d_alembert}
+	Supposons $x_n \neq 0 \forall n$ \\
+	Supposons que $\rho = \lim_{n \to  + \infty} \abs{ \frac{x_{n+1} }{x_n} }$ existe\\
+	Si $\rho< 1$, alors $\lim_{n \to  + \infty} x_n =0$ \\
+	Si $\rho > 1$, alors $(x_n)$ diverge.
+\end{thm}
+\begin{rmq}
+Si $\rho =1$, on ne peut rien concluer
+\end{rmq}
+\begin{exemple}
+\begin{itemize}
+\item $x_n = n$ diverge, mais $\lim_{n \to  + \infty} \frac{n+1}{n} = 1$
+\item $x_n = \frac{1}{n}$ converge mais $\lim_{n \to  + \infty} \frac{\frac{1}{n+1}}{\frac{1}{n}}= 1$
+\end{itemize}
+\end{exemple}
+\begin{proof}
+Supposons $\rho < 1$.\\
+A voir: $x_n \to 0$.\\
+Soit $\rho < r < 1$.
+Convergence pour $\epsilon = r - \rho: \abs{\abs{ \frac{x_{n+1} }{x_n}} - \rho} < r - \rho$
+\[ 
+	\exists n_0 \forall n \geq n_0: \abs{ \frac{x_{n+1}}{x_n}} < r
+\]
+i.e. $\abs{x_{n+1} } < r \abs{x_n}$ de meme
+$\abs{x_{n+2}} < r \abs{x_{n+1} } < r^{2}\abs{x_n}$\\
+
+Conclusion $\forall m \geq n_0: \abs{x_{m} } < r ^{m-n_0} \abs{x_{n_0}} $\\
+Donc
+\[ 
+	\forall m \geq n_0: \abs{x_m} < r^{m} \abs{x_{n_0}} r^{-n_0} 
+\]
+Onn sait que $ \lim_{m \to  + \infty} r ^{m} =0$ donc
+\[ 
+	0 \leq \abs{x_m} \leq r^{m} c	
+\]
+avec $c$ constante
+Cas $\rho >1$.\\
+On va montrer que 
+$\abs{x_n}$ est non bornee.\\
+Soit $1 < r< \rho$.
+\[ 
+	\exists n_0 \forall n \geq n_0: \abs{x_{n+1}/x_n} > r
+\]
+Donc
+\[ 
+	\abs{x_{n+1} } > r \abs{x_n}
+\]
+comme avant:
+\[ 
+	x_m > r^{m-n_0} \abs{x_{n_0}} 
+\]
+\end{proof}
+\begin{rmq}
+Si $r >1$, alors $ \lim_{n \to  + \infty} r ^{n} = + \infty $
+$r^{n}$ est croissante donc il suffit de montrer que la suite est non bornee.\\
+Si elle etait bornee, soit $l = \lim_{n \to  + \infty} r^{n} \in \mathbb{R}$\\
+Mais $l = \lim_{n \to  + \infty} r^{n+1} = r l$\\
+Donc $l\neq 0 \Rightarrow  1 =r $ absurde.
+\end{rmq}
+\begin{defn}[Sous-suite]\index{Sous-suite}\label{defn:sous_suite}
+	Soit $(x_n)_{n=1} ^{\infty }$ une suite.\\
+	Une sous-suite de $(x_n)$ est une suite de la forme $(x_{n_k})_{k=1} ^{\infty }$, ou $(n_k)_{k=1} ^{\infty }$ est une suite strictement croissante de $N$.
+\end{defn}
+\begin{exemple}
+	Si $(x_n)$ est une suite, considerer:
+	\[ 
+	x_2,x_3,x_5,x_7,x_{11},x_{13},\ldots
+	\]
+	Ici, $n_k = 2,3,5,7,11,\ldots$
+\end{exemple}
+\begin{propo}
+Si $x_n$ converge, alors toute sous-suite converge vers la meme limite.
+\end{propo}
+\begin{proof}
+Soit $l= \lim_{n \to  + \infty} x_n$. Soit $( x_{ n_k } )_{k=1} ^{\infty }$ une sous-suite et $\epsilon > 0$.\\
+A voir: $\exists k_0 \forall k > k_0 : \abs{x_{n_k} -l} < \epsilon$\\
+Or $\exists n_0 \forall n > n_0: \abs{x_n -l} < \epsilon$.\\
+Donc il suffit de choisir $k_0$ tq $n_{k_0} \geq n_0$. \\
+( puisque la suite ($n_k$) est croissante.)
+\end{proof}
+
+
+\begin{thm}[Bolzano-Weierstrass]\index{Bolzano-Weierstrass}\label{thm:bolzano_weierstrass}
+	Toute suite bornee admet une sous-suite convergente
+\end{thm}
+\begin{proof}
+On va construire une sous-suite qui converge vers $s:= \limsup_{n \to \infty } x_n$ \\
+Ici, $(x_n)$ est la suite en question et on pose
+\[ 
+z_n = \sup \left\{ x_p : p \geq n \right\} 
+\]
+Par recurrence, $n_1$ quelconque.\\
+Supposons $n_{k-1} $ construit et construisons $n_k$:
+\[ 
+	\exists N \forall n \geq N : \abs{z_n -s} < \frac{1}{k}
+\]
+Choisissons un $n \geq N$, $n_{k-1} +1 $
+\[ 
+\exists p \geq n \text{ t.q. } x_p > z_n - \frac{1}{k}
+\]
+
+On definit $n_k = p$ ( $n_k > n_{k-1} $)\\
+Or, $ \underbrace{\abs{x_{n_k} -s}}_{< \frac{1}{k}} \leq \underbrace{\abs{x_{n_k} -z_n}}_{< \frac{1}{k}} + \underbrace{\abs{z_n -s }}_{<\frac{1}{k}}$\\
+Donc $(x_{n_k} \to s ( k \to \infty )$
+\end{proof}
+\begin{defn}[Point d'accumulation]\index{Point d'accumulation}\label{defn:point_d_accumulation}
+	$x$ est un point d'accumulation de la suite $x_n$ s'il existe une sous-suite qui converge vers $x$.
+\end{defn}
+\begin{exemple}
+	\begin{align*}
+	x= \limsup_{n \to \infty} x_n\\
+	x = \liminf_{n \to \infty } x_n
+	\end{align*}
+\end{exemple}
+\subsection{Suites de Cauchy}
+\begin{defn}[Suites de Cauchy]\index{Suites de Cauchy}\label{defn:suites_de_cauchy}
+	La suite $(x_n)$ est dire de Cauchy si 
+	\[ 
+		\forall \epsilon > 0 \exists N \forall n,n' \geq N: \abs{x_n -x_{n'}} < \epsilon
+	\]
+\end{defn}
+Attention:\\
+Il ne suffit pas de comparer $x_n$ et $x_{n+k} $ pour $k$ fixe.
+\begin{exemple}
+$x_n = \frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n}$
+\end{exemple}
+
+Cauchy $\iff \forall \epsilon > 0 \exists N \forall n \geq N \forall k \in \mathbb{N}: \abs{x_n - x_{n+k} } < \epsilon$
+
+\begin{lemma}
+	Si $(x_n)$ converge, elle est de Cauchy.
+\end{lemma}
+\begin{proof}
+Soit $\epsilon > 0$, soit $l$ la limite.\\
+Hypothese:\\
+avec $\frac{\epsilon}{2} : \exists N \forall n \geq N: \abs{x_{n} -l} < \frac{\epsilon}{2}$\\
+Si $n,n' \geq N$ 
+\[ 
+	\abs{x_n - x_{n'}} \leq \abs{x_n - l} + \abs{x_{n'} -l} < \epsilon
+\]
+
+\end{proof}
+\begin{thm}[Convergence des suites de Caucjy]\index{Convergence des suites de Caucjy}\label{thm:convergence_des_suites_de_caucjy}
+	Toute suite de Cauchy converge
+\end{thm}
+
+\begin{proof}
+Soit $( x_n )$ de Cauchy.\\
+\begin{lemma}
+	$(x_n)$ est bornee.
+	\begin{proof}
+	Soit $\epsilon = 10$ 
+	\[ 
+		\forall N \forall n,n' \geq N: \abs{x_n - x_{n'} } < 10
+	\]
+	Donc $\abs{( x_n )}$ est bornee par
+ \[ 
+	 \max( \abs{x_{N}} + 10, \abs{x_1} , \abs{x_2}, \ldots, \abs{x_{N-1}} )
+\]
+	\end{proof}
+\end{lemma}
+	Appliquer Bolzano-Weierstrass
+	\[ 
+		\exists \text{ sous-suite } ( x_{n_k})
+	\]
+	qui converge, soit $l$ sa limite.
+	A voir $(x_n)$ converge vers $l$.\\
+	soit $\epsilon > 0 \exists k_0 \forall k \geq k_0 \abs{x_{n_k} -l} < \frac{\epsilon}{2}$
+	\[ 
+		\exists N \forall n,n' \geq N: \abs{x_n - x_{n'} } < \frac{\epsilon}{2}
+	\]
+	Si $n \geq N, n_{k_0} $ alors
+	\[ 
+		\abs{x_n -l} \leq \abs{x_n - x_{n_k}} + \abs{x_{n_k} -l} < \epsilon
+	\]
+	
+
+\end{proof}
+	
+
+
+\end{document}	

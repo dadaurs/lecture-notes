@@ -15,18 +15,18 @@
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{6}{proof.6}%
 \contentsline {defn}{\numberline {2}Definition\thmtformatoptarg {Bornes}}{7}{defn.2}%
 \contentsline {axiom}{\numberline {9}Axiom\thmtformatoptarg {Axiome de completude}}{7}{axiom.9}%
-\contentsline {rmq}{\numberline {10}Remarque}{7}{rmq.10}%
+\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{7}{rmq.10}%
 \contentsline {defn}{\numberline {3}Definition\thmtformatoptarg {Supremum}}{7}{defn.3}%
-\contentsline {rmq}{\numberline {11}Remarque}{7}{rmq.11}%
-\contentsline {rmq}{\numberline {12}Remarque}{7}{rmq.12}%
-\contentsline {rmq}{\numberline {13}Remarque}{7}{rmq.13}%
+\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{7}{rmq.11}%
+\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{7}{rmq.12}%
+\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{7}{rmq.13}%
 \contentsline {propo}{\numberline {14}Proposition}{8}{propo.14}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{8}{proof.7}%
 \contentsline {crly}{\numberline {15}Corollaire\thmtformatoptarg {Propriete archimedienne}}{8}{crly.15}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{8}{proof.8}%
 \contentsline {thm}{\numberline {16}Theorème\thmtformatoptarg {La racine de deux existe}}{8}{thm.16}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{8}{proof.9}%
-\contentsline {rmq}{\numberline {17}Remarque}{9}{rmq.17}%
+\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{9}{rmq.17}%
 \contentsline {propo}{\numberline {18}Proposition\thmtformatoptarg {$\mathbb {Q}$ est dense dans $\mathbb {R}$}}{9}{propo.18}%
 \contentsline {lemma}{\numberline {19}Lemme}{9}{lemma.19}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{9}{proof.10}%
@@ -34,33 +34,56 @@
 \contentsline {propo}{\numberline {20}Proposition\thmtformatoptarg {Densite des irrationnels}}{10}{propo.20}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{10}{proof.12}%
 \contentsline {defn}{\numberline {4}Definition\thmtformatoptarg {Suite}}{11}{defn.4}%
-\contentsline {rmq}{\numberline {21}Remarque}{11}{rmq.21}%
-\contentsline {exemple}{\numberline {22}Exemple}{11}{exemple.22}%
+\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{11}{rmq.21}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{11}{exemple.22}%
 \contentsline {defn}{\numberline {5}Definition\thmtformatoptarg {Convergence de suites}}{11}{defn.5}%
 \contentsline {lemma}{\numberline {23}Lemme\thmtformatoptarg {Unicite de la limite}}{11}{lemma.23}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{11}{proof.13}%
-\contentsline {exemple}{\numberline {24}Exemple}{12}{exemple.24}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{12}{exemple.24}%
 \contentsline {defn}{\numberline {6}Definition}{12}{defn.6}%
 \contentsline {lemma}{\numberline {25}Lemme}{12}{lemma.25}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{12}{proof.14}%
-\contentsline {exemple}{\numberline {26}Exemple}{12}{exemple.26}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{12}{exemple.26}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{12}{proof.15}%
 \contentsline {propo}{\numberline {27}Proposition}{12}{propo.27}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{12}{proof.16}%
 \contentsline {lemma}{\numberline {28}Lemme}{13}{lemma.28}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{13}{proof.17}%
-\contentsline {rmq}{\numberline {29}Remarque}{13}{rmq.29}%
+\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{13}{rmq.29}%
 \contentsline {propo}{\numberline {30}Proposition\thmtformatoptarg {Inversion d'une limite}}{14}{propo.30}%
 \contentsline {crly}{\numberline {31}Corollaire}{14}{crly.31}%
 \contentsline {lemma}{\numberline {32}Lemme}{14}{lemma.32}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{14}{proof.18}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{14}{proof.19}%
-\contentsline {exemple}{\numberline {33}Exemple}{14}{exemple.33}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{14}{exemple.33}%
 \contentsline {propo}{\numberline {34}Proposition}{15}{propo.34}%
 \contentsline {propo}{\numberline {35}Proposition}{15}{propo.35}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{15}{proof.20}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{15}{proof.21}%
-\contentsline {exemple}{\numberline {36}Exemple}{15}{exemple.36}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{15}{exemple.36}%
 \contentsline {lemma}{\numberline {37}Lemme\thmtformatoptarg {Deux gendarmes}}{16}{lemma.37}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{16}{proof.22}%
 \contentsline {defn}{\numberline {7}Definition\thmtformatoptarg {Limsup et liminf}}{16}{defn.7}%
+\contentsline {thm}{\numberline {38}Theorème}{17}{thm.38}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{17}{proof.23}%
+\contentsline {thm}{\numberline {39}Theorème\thmtformatoptarg {Premiere regle de d'Alembert}}{17}{thm.39}%
+\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{18}{rmq.40}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{18}{exemple.41}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{18}{proof.24}%
+\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{18}{rmq.42}%
+\contentsline {defn}{\numberline {8}Definition\thmtformatoptarg {Sous-suite}}{18}{defn.8}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{19}{exemple.43}%
+\contentsline {propo}{\numberline {44}Proposition}{19}{propo.44}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{19}{proof.25}%
+\contentsline {thm}{\numberline {45}Theorème\thmtformatoptarg {Bolzano-Weierstrass}}{19}{thm.45}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{19}{proof.26}%
+\contentsline {defn}{\numberline {9}Definition\thmtformatoptarg {Point d'accumulation}}{19}{defn.9}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{19}{exemple.46}%
+\contentsline {defn}{\numberline {10}Definition\thmtformatoptarg {Suites de Cauchy}}{20}{defn.10}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{20}{exemple.47}%
+\contentsline {lemma}{\numberline {48}Lemme}{20}{lemma.48}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{20}{proof.27}%
+\contentsline {thm}{\numberline {49}Theorème\thmtformatoptarg {Convergence des suites de Caucjy}}{20}{thm.49}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{20}{proof.28}%
+\contentsline {lemma}{\numberline {50}Lemme}{20}{lemma.50}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{20}{proof.29}%

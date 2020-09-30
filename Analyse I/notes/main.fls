@@ -414,6 +414,8 @@ INPUT lectures/lec3.tex
 INPUT lectures/lec3.tex
 INPUT lectures/lec4.tex
 INPUT lectures/lec4.tex
+INPUT lectures/lec5.tex
+INPUT lectures/lec5.tex
 OUTPUT main.thm
 OUTPUT main.loe
 INPUT main.aux
