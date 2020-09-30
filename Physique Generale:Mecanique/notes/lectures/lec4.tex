@@ -1,0 +1,223 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Wed 30 Sep}{Dynamique du point materiel}
+\section{Dynamique du point materiel}
+
+Notions abordees:
+\begin{itemize}
+\item reperes, rappels d'analyse vectorielle
+\item referentiel, position, vitesse, acceleration normale et tangentielle
+\item rotations, repere en rotation, mouvement circulaire uniforme
+\item vitesse et acceleration en coordonnees cylindriques et spheriques
+\item contraintes et forces de liaison
+\end{itemize}
+\begin{defn}[Referentiel]
+	Un ensemble de $N$ points $(N \geq 4)$, non coplanaires, immobiles les uns par rapport aux autres.
+\end{defn}
+\begin{itemize}
+\item La description du mouvement d'un systeme se fait toujours par rapport a un certain referentiel.
+\item L'observateur et les appareils de mesure sont immobiles par rapport au referentiel ( ils ``font partie'' du referentiel)
+\item Le choice du referentie du referentiel est arbitraire
+\end{itemize}
+
+\begin{defn}[Repere]
+Origine $O$ et trois axes orthogonaux definis par des vecteurs de longueur unite
+\end{defn}
+\begin{figure}[ht]
+    \centering
+    \incfig{reperes}
+    \caption{reperes}
+    \label{fig:reperes}
+\end{figure}
+Vecteurs unitaires
+\[ 
+	\abs{\hat{x}_1}= \abs{\hat{x}_2}= \abs{\hat{x}_3} = 1
+\]
+Vecteurs orthonormaux
+\[ 
+\hat{x}_1 \cdot \hat{x}_2 = \hat{x}_2 \cdot \hat{x}_3 = \hat{x}_3 \cdot \hat{x}_1 = 0
+\]
+
+Base orthonormee
+\begin{align*}
+\hat{x}_i \cdot \hat{x}_j = \delta_{ij} = 
+\begin{cases}
+1 \text{ si } i =j\\
+0 \text{ si } i \neq j
+\end{cases}
+\end{align*}
+\subsection{Produit scaleaire}
+\begin{defn}[Produit scalaire]\index{Produit scalaire}\label{defn:produit_scalaire}
+	\begin{align*}
+		\vec{a} \cdot \vec{b} &= \abs{\vec{a}} \abs{\vec{b}} \cos \theta\\
+	\end{align*}
+\begin{figure}[ht]
+    \centering
+    \incfig{produit-scalaire}
+    \caption{produit scalaire}
+    \label{fig:produit-scalaire}
+\end{figure}
+	
+En composantes
+\[ 
+	\vec{a} \cdot \vec{b} = ( a_1 \hat{x}_1 + a_2 \hat{x}_2 + a_3 \hat{x}_3) \cdot \ldots = a_1b_1 + a_2b_2 +a_3 b_3
+\]
+Proprietes
+\begin{itemize}
+\item Commutativite
+\item Distributivite
+\item ...
+\end{itemize}
+
+
+\end{defn}
+
+
+
+\subsection{Projections et composantes d'un vecteur}
+Projection de $\vec{OP}$ sur l'axe u:
+\[ 
+	\vec{OP} \cdot \hat{u} = \abs{\vec{OP}} \abs{\vec{u}} \cos \theta = OP \cos \theta = OP'
+\]
+\begin{align*}
+\vec{OP} = \vec{OP'} \hat{u} + \vec{OP''} \vec{v} = \vec{OP}\cdot \hat{u} \hat{u} + \vec{OP} \hat{v} \hat{v}
+\end{align*}
+Coordonnees cartesiennes du point $P$ ou composantes du vecteur $\vec{OP}$
+\begin{align*}
+\begin{cases}
+x = \vec{OP} \cdot \hat{x}\\
+y = \vec{OP} \cdot \hat{y}\\
+z = \vec{OP} \cdot \hat{z}
+\end{cases}
+\end{align*}
+Donc
+\[ 
+\vec{OP} = x \hat{x} + y \hat{y} + z \hat{z}
+\]
+\subsection{Repere direct}
+Par convention, on n'utilise que des reperes dont la chiralite est definie par la ``regle du tire bouchon'' ou la ``la regle de la main droite'' .\\
+\begin{figure}[H]
+    \centering
+    \incfig{repere-droit}
+    \caption{repere droit}
+    \label{fig:repere-droit}
+\end{figure}
+\subsection{Produit vectoriel}
+\begin{defn}[Produit vectoriel]\index{Produit vectoriel}\label{defn:produit_vectoriel}
+\begin{figure}[ht]
+    \centering
+    \incfig{produit-vectoriel}
+    \caption{produit vectoriel}
+    \label{fig:produit-vectoriel}
+\end{figure}
+En composantes
+\[ 
+\vec{a} \land \vec{b} = 
+\begin{pmatrix}
+a_2b_3 = a_3b_2\\
+a_3 b_1 - a_1b_3\\
+a_1b_2 - a_2b_1
+\end{pmatrix}
+\]
+\end{defn}
+Proprieteres
+\begin{itemize}
+\item $\vec{a} \land \vec{b} = - \vec{b} \land \vec{a}$ 
+\item $\vec{a} \land ( \vec{b} + \vec{c})  = \vec{a} \land \vec{b} + \vec{a} \land \vec{c}$
+\item $\vec{a} \land ( \lambda \vec{b}) = \lambda(\vec{a} \land \vec{b}$ 
+\item $\vec{a} \land \vec{b} = \vec{0}$ si $\vec{a}, \vec{b}$ paralleles
+\end{itemize}
+%\subsection{Produit mixte et double produit vectoriel}
+\begin{defn}[Produit Mixte]\label{defn:produit_mixte}
+	\[ 
+		( \vec{a} \land \vec{b}) \cdot \vec{c} = \det (\vec{c}, \vec{a}, \vec{b})
+	\]
+		
+\end{defn}
+Proprietes:
+\begin{align*}
+	( \vec{a} \land \vec{b}) \cdot \vec{c} = ( \vec{c} \land \vec{a}) \cdot \vec{b} = ( \vec{b}\land \vec{c}) \cdot \vec{a}\\
+	( \vec{a} \land \vec{b}) \cdot \vec{c} = 0 \iff \vec{a}, \vec{b} \text{ et } \vec{c} \text{ coplanaires ( dans le meme plan) } 
+\end{align*}
+\begin{defn}[Double produit vectoriel]\index{Double produit vectoriel}\label{defn:double_produit_vectoriel}
+	\begin{align*}
+		\vec{a} \land ( \vec{b} \land \vec{c}) = ( \vec{a} \cdot \vec{c}) \vec{b} = ( \vec{a} \cdot \vec{b}) \vec{c}\\
+	\end{align*}
+\end{defn}
+%\subsection{Cinematique}
+\begin{figure}[H]
+    \centering
+    \incfig{trajectoire}
+    \caption{trajectoire}
+    \label{fig:trajectoire}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \incfig{curviligne}
+    \caption{curviligne}
+    \label{fig:curviligne}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \incfig{curviligne2}
+    \caption{curviligne2}
+    \label{fig:curviligne2}
+\end{figure}
+
+Donc 
+\[ 
+	\hat{\tau} \cdot \frac{d \hat{\tau}}{dt} = \frac{1}{2} \frac{d}{dt}( \hat{\tau}^{2}) = 0 \text{ car  } \tau ^{2} = 1 \forall t
+\]
+On peut approximer le mouvement localement par un cercle
+\begin{figure}[H]
+    \centering
+    \incfig{mouvement-approxime-par-cercle}
+    \caption{mouvement approxime par cercle}
+    \label{fig:mouvement-approxime-par-cercle}
+\end{figure}
+\[ 
+	\vec{a}_n(t) = v(t) \frac{d \tau}{dt} = v(t) \frac{d \tau}{ds} \cdot \frac{ds}{dt} = v(t)^{2} \cdot \frac{d \tau}{ds}
+\]
+On peut calculer la norme de $a_n$ 
+\begin{align*}
+	\abs{\vec{a}_n ( t)} = a_n(t) &= v^{2} \abs{ \frac{d \tau}{ds}} )\\
+				     &= v^{2} \frac{d \theta}{R(t) d \theta}\\
+				     &= \frac{v^{2}(t)}{R(t)}
+\end{align*}
+
+\subsection{Mouvement avec vitesse scalaire constante}
+Considerons un point materiel avec
+une vitesse scalaire $v = \frac{ds}{dt}$ constante non nulle\\
+un vecteur vitesse qui change de direction au cours du temps\\
+Acceleration
+\[ 
+	\vec{a} \cdot \vec{v} = \frac{d \vec{v}}{dt} \cdot \vec{v} = \frac{1}{2} \frac{d}{dt}(\vec{v}^{2}) = 0
+\]
+pas de composante tangentielle: $a_t = \frac{dv}{dt} = 0$
+Donc $a$ est toujours perpendiculaire a $v$.\\
+Force $\vec{F} = m \vec{a}$\\
+Donc 
+\[ 
+F = ma = m \frac{v^{2}}{R}
+\]
+force centripete
+\subsection{Systeme de coordonnees}
+\begin{defn}[Systeme de coordonnees]\index{Systeme de coordonnees}\label{defn:systeme_de_coordonnees}
+	Parametrisation , a un certain temps $t$, de la position des points du referentiel au mouen de trois nombres reels.
+\end{defn}
+Pour un referentiel donne il e xiste une infinite de systemes de coordonnes
+Exemples
+\begin{itemize}
+	\item Coordonnes cartesiennes $(x,y,z)$ 
+	\item Coordonnees cylindriques $(\rho, \phi, z)$ 
+	\item Coordonnes spheriques $(r, \Theta, \phi)$
+\end{itemize}
+Chaque vecteur du repere est parallele a la variation de la position due a une modification de la variable correspondante
+
+
+
+
+
+\end{document}
