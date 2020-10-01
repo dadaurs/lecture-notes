@@ -1,0 +1,47 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newcommand\hr{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+}
+
+\begin{document}
+\title{Série 3, Exercice 5}
+\author{David Wiedemann}
+\maketitle
+\section*{5.1}
+Si $\phi^{-1}\left( \left\{ h \right\} \right)$ vide, il n'y pas de solutions.\\
+Supposons $\phi^{-1}( \left\{ h \right\} )$ non vide, $\exists g_0$ tq. $\phi(g_0) = h$.\\
+Soit $e \in \ker \phi$, alors
+\[ 
+	\phi ( g_0 \cdot e   ) \underbrace{=}_{\phi \text{ morphisme } } h \cdot e_H = h
+\]
+ou $e_H$ est l'élément neutre dans $H$.\\
+Ceci est valable $\forall e \in \ker \phi$.
+\section*{5.2}
+Supposons à nouveau que $e \in \ker \phi$ et que $\phi^{-1}( \left\{ h \right\} )$ non vide.\\
+On pose, à nouveau, que $ \phi( g_0 ) =h $.
+\[ 
+	\phi(e. g_0) = e_H . h = h \text{ avec  $e_H$ l'élément neutre de $H$.} 
+\]
+\hr\\
+Ici, on voit que  $ g_0$ est une solution particulière à l'équation $\phi(g) =h$.\\
+Dans la résolution de systémes d'équations de la forme
+\[ 
+Ax =b, \text{ où $A$ est une matrice } 
+\]
+On peut trouver les solutions du systéme homogène:
+\[ 
+Ax=0, \text{ les solutions de ce système forment le $\ker$ } 
+\]
+et les superposer à la solution spécifique $b'$ qui satisfait
+\[ 
+A b' = b
+\]
+\end{document}
