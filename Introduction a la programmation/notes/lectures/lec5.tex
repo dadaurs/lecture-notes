@@ -1,0 +1,40 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Thu 01 Oct}{Programmation}
+Comment calculer l'expression suivante sans produire d'erreur 
+\[ 
+	\frac{ \sqrt{20+7x -x^{2}} \log (  \frac{1}{x+5})}{\frac{x}{10} - \sqrt{\log(x^{3} - 3x + 7} - \frac{x^{2}}{5}}
+\]
+Il faut decomposer
+\begin{lstlisting}
+if ( x + 5.0 ==0){
+cerr << "expressions invalide pour x=" << x<<endl;
+return 1;
+}
+\end{lstlisting}
+etc...
+\begin{lstlisting}
+if(x + 5.0 < 0.0) { 
+cerr << "expressions invalide pour x=" << x<<endl;
+return 1;
+}
+\end{lstlisting}
+Attention, ceci est du copier colle, il auriat fallu poser
+\begin{lstlisting}
+double aux(x+5.0);
+if (aux ==0){
+cerr << "expressions invalide pour x=" << x<<endl;
+return 1;
+}
+if(aux < 0.0) { 
+cerr << "expressions invalide pour x=" << x<<endl;
+return 1;
+}
+double resultat(log(1.0/aux));
+...
+\end{lstlisting}
+
+
+
+
+\end{document}	
