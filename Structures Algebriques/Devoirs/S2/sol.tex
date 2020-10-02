@@ -44,6 +44,15 @@ Etant donné que chaque classe d'équivalence contient au moins 1 élément.
 Finalement, on sait que les classes d'équivalence forment une partition de $A$, il n'y a pas d'éléments dans $A$ qui n'appartienne pas à une classe d'équivalence. En effet, supposons que $p \in A$, $(p,p) \in R$ et donc $p \in R_p$.\\
 Grâce à ceci, on peut déduire que le nombre d'éléments de $R$ vaut la somme du nombre d'éléments des classes d'équivalence.\\
 \hr
+Montrons que il y a trois manières différentes de répartir.\\
+On voit que 6 peut s'écrire de trois manières comme somme de trois nombres non-nuls:
+\begin{align*}
+	6&= 2+2+2\\
+	6&= 4+1+1\\
+	6&= 3+2+1
+\end{align*}
+
+\hr
 Si deux des trois classes d'équivalence ne contiennent qu'un seul élément, il faut que que la dernière classe d'équivalence en contienne 4.\\
 On sait, en utilisant de la combinatoire élémentaire, que une répartition avec répétition de 4 éléments sur 2 places a  $4\times 4=16$ possibilités.
 Les deux autres classes d'équivalence ont chacune 1 élément.\\
@@ -53,7 +62,22 @@ Si une classe d'équivalence possède 1 élément, une autre 2 éléments et la 
 $(3\times 3) + (2\times 2) + ( 1 \times 1 ) =14$ éléments.\\
 \hr
 Si chacune des trois classes d'équivalence possède 2 éléments $R$ contiendra
-$ (2 \times 2) + (2 \times 2) +(2 \times 2) = 12$ éléments.
+$ (2 \times 2) + (2 \times 2) +(2 \times 2) = 12$ éléments.\\
+\hr
+On peut construire des relations d'équivalence qui satisfont la répartition des éléments tel que ci-dessus.\\
+Soit $A = \left\{ x_1,x_2,x_3,x_4,x_5,x_6 \right\} $\\
+Soit $ A_1, A_2, A_3$	une partition de l'ensemble $A$, avec les trois ensembles non-vides.\\
+On pose que $( x_i,x_j ) \in R$ si $x_i$ et $x_j$ sont dans le même $A_k$.\\
+Cette relation satisfait les propriétés d'une relation d'équivalence, en effet:
+\begin{enumerate}
+	\item Identité:\\
+		Si $x_i \in A_k$, alors, clairement $(x_i, x_j) \in R$
+	\item Reflexivite:\\
+		Si $( x_i,x_j) \in R $, alors $x_i \in A_k$ et $x_j \in A_k$, donc $(x_j, x_i) \in R$.
+	\item Transitivité:\\
+		Si $(x_i, x_j) \in R$ et $(x_j,x_g) \in R$, alors $x_i,x_j, x_g \in A_k$, donc $(x_i,x_g) \in R$
+\end{enumerate}
+
 
 
 
