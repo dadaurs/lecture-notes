@@ -1,0 +1,200 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newcommand\hr{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}\newline
+}
+\newtheorem{theorem}{Théorème}
+\begin{document}
+\title{Série 3}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+On construit une bijection de $\mathbb{N}$ vers $\mathbb{Z}$.\\
+\begin{align*}
+	\phi \colon \mathbb{Z} &\to \mathbb{N}\\
+	m & \to 
+	\begin{cases}
+	2m \text{ si } m \geq 0\\
+	-2m +1 \text{ si } m < 0
+	\end{cases}
+\end{align*}
+On considère le 0 comme pair.\\
+Pour vérifier que cette application définit une injection, on montre la surjectivité dans les deux sens.\\
+\subsection*{Surjectivité}
+Soit $n \in \mathbb{N}$, si $n$ pair, $\exists k \in \mathbb{N} \text{ tel que } n = 2k$. Alors $k$ est l'antécédent de $k$ par $\phi$.\\
+Si $n$ impair, $\exists j \in \mathbb{N}$ tel que $2j+1=n$, on pose $k=-j$, alors $-2k+1 =n$.
+\subsection*{Injectivité}
+Supposons $\exists k,j \in \mathbb{Z}$ tel que $\phi(k)=\phi(j)$. Si $k$ et $j$ sont de signe différent, alors soit $\phi(k)$ ou $\phi(j)$ est impair et donc l'égalité ne peut pas tenir.\\
+Supposons donc $k, j  > 0$, alors $\phi(k) = 2k $ et $phi(j) = 2j$ donc $2k=2j$ et $j=k$.\\
+Si $k, j <0 $, alors $\phi(k) = -2k + 1$ et $\phi(j) = -2j +1$ donc $-2k+1 = -2j + 1 \Rightarrow k =j$.	\\
+
+On en déduit que l'application $\phi$ est bijective et que $|\mathbb{Z}| = |\mathbb{N}|$.
+\section*{2}
+Par Cantor-Schroeder-Bernstein, il suffit de trouver une injection de $ \mathbb{N}^{n} \to \mathbb{N}$
+et de $\mathbb{N} \to \mathbb{N}^{n}$.\\
+\subsection*{ Injection de $\mathbb{N} \to \mathbb{N}^{n}$}
+Soit 
+ \begin{align*}
+	 \phi: \mathbb{N} &\to \mathbb{N}^{n}\\ 
+	 k &\to (k, \underbrace{0, \ldots, 0}_{n-1 \text{ fois } })
+\end{align*}
+Cette application est clairement injective car $ ( m, 0, \ldots, 0) = (j, 0, \ldots, 0)$ implique $m=j$.
+\subsection*{Injection de $ \mathbb{N}^{n} \to \mathbb{N}$}
+Soit
+\begin{align*}
+	\psi: \mathbb{N}^{n} &\to \mathbb{N}\\
+	( a_1, \ldots, a_n) & \to \prod_{i=1} ^{n} p_{i} ^{a_i}
+\end{align*}
+où $ p_1, \ldots, p_n$ sont les $n$ premiers nombres premiers.\\
+L'injectivité de cette application suit directement de l'unicité de la décomposition en nombres premiers.\\
+En effet, si $ (a_1, \ldots, a_n) \neq ( b_1, \ldots ,b_n) \in \mathbb{N}^{n}$, alors l'unicité implique que
+\[ 
+\prod_{i=1} ^{n} p_i^{a_i} \neq \prod_{i=1} ^{n}p_i^{b_i}
+\]
+et donc l'application $\phi$ est injective.\\
+\hr
+On en déduit que $ |\mathbb{N}^{n}| = | \mathbb{N}|$
+\section*{3}
+On utilise à nouveau Cantor-Schroeder-Bernstein.\\
+\subsection*{Injection de $\mathbb{N} \to \mathbb{Q}$}
+L'application
+\begin{align*}
+	K: \mathbb{N} &\to \mathbb{Q}\\
+	 n &\to n
+\end{align*}
+est une injection.\\
+
+
+
+\subsection*{Injection de $\mathbb{Q} \to \mathbb{N}$}
+On montre un résultat préliminaire.\\
+\begin{theorem}
+Si $ A_1, \ldots, A_n$ des ensembles infini dénombrables, alors
+\[ 
+K=A_1 \times \ldots \times A_n \text{ est infini dénombrable. } 
+\]
+\end{theorem}
+\begin{proof}
+	Soit $(a_1, \ldots, a_n) \in K $.\\
+	Par hypothèse, $\exists \phi_1,\ldots, \phi_n$ des bijections $\phi_i: A_i \to \mathbb{N}, 0<i\leq n$.
+	% Demander si on peut Supposer ca une bijection.
+	L'application
+	\begin{align*}
+		\Phi: K &\to \mathbb{N}^{n}\\
+		( a_1,\ldots, a_n) &\to ( \phi_1(a_1), \ldots, \phi_n(a_n))
+	\end{align*}
+	est une bijection.\\
+	Par la partie 2, on sait qu'il existe une bijection de $\psi: \mathbb{N}^{n} \to \mathbb{N}$ et donc
+	\[ 
+	\Psi \circ \Phi
+	\]
+	est une bijection de $K \to \mathbb{N}$.
+\end{proof}
+%\begin{theorem}
+%Soit $|A| = |\mathbb{N}|$ et $|B| = |\mathbb{N}|$, alors $|A \times B | = |\mathbb{N}|$.\\
+%Par hypothèse, $\exists \phi: A \to \mathbb{N}, \psi: B \to \mathbb{N}$, avec $\phi$ et $\psi$ deux bijections.\\
+%Alors, l'application $G$, définie par
+%\begin{align*}
+	%G: A \times B & \to \mathbb{N}^{2}\\
+	%(a,b) & \to (\phi(a), \psi(b))
+%\end{align*}
+%est une bijection.\\
+%\end{theorem}
+%\begin{proof}
+
+
+%Pour le montrer on vérifie à nouveau l'injectivité et la surjectivité.
+%\subsection*{Surjectivité}
+%Soit $(m,n) \in \mathbb{N}^{2}$, l'élément $(\phi^{-1}(m), \psi^{-1}(n))$ est un antécédent.
+%\subsection*{Injectivité}
+
+%Supposons $(a,b)$ et $(a',b') \in A \times B$ deux antécédents de $(m,n) \in \mathbb{N}^{2}$, alors 
+%\[ 
+	%\phi(a) = \phi(a') \text{ et } \psi(b) = \psi(b')
+%\]
+%et donc $(m,n)$ possède un unique antécédent.\\
+%Finalement, on sait, par la partie 2, qu'il existe une bijection de $C:\mathbb{N}^{2} \to \mathbb{N}$, car la composition de deux bijections est une bijection, on en déduit que $C \circ G$ est une bijection de $A \times B \to \mathbb{N}^{2}$ \footnote{Avec la loi de composition d'applications usuelle}.\\
+%\end{proof}
+\hr
+On est pret à montrer l'injection de $\mathbb{Q} \to \mathbb{N}$.\\
+On construit une bijection de $ \mathbb{Z} \times \mathbb{N} \setminus \left\{ 0 \right\} \to \mathbb{N} $.\\
+Soit $\phi: \mathbb{Z} \to \mathbb{N}$ la bijection définie précédemment et $t_1: \mathbb{N} \setminus \left\{ 0 \right\} \to \mathbb{N}$ la bijection\footnote{L'injectivité et la surjectivité de cette bijection sont évidentes.}:
+\[ 
+t_1: n \to n-1
+\]
+On peut donc, par le théorème 1, construire une bijection de $G:\mathbb{Z} \times \mathbb{N} \setminus \left\{ 0 \right\} \to \mathbb{N} $.
+
+On définit la surjection\footnote{La surjectivité suit du fait qu'à chaque fraction, on puisse assimiler un 2-uplet.}
+ \begin{align*}
+	 Q: \mathbb{Z} \times \mathbb{N} \setminus \left\{ 0 \right\} &\to \mathbb{Q}\\
+	 ( a,b) & \to \frac{a}{b}
+\end{align*}
+Par l'exercice 5, de la série 2, on peut construire une injection $F$
+\begin{align*}
+	F: \mathbb{Q} &\to \mathbb{Z} \times \mathbb{N} \setminus \left\{ 0 \right\} 
+\end{align*}
+Et donc, l'application
+\[ 
+	G \circ F
+\]
+est une injection de $\mathbb{Q} \to \mathbb{N}$
+\section*{4}
+Soit $q(t) \in \mathbb{Q}[t]$, alors
+\[ 
+	q(t) = \sum_{i=1}^{n} q_i t^{i-1}, \text{ avec } q_i \in \mathbb{Q}
+\]
+Soit 
+ \begin{align*}
+	 Q: \mathbb{Q}[t] &\to \mathbb{Q}^{n}\\
+	 q(t) &\to (q_1, \ldots, q_n)
+\end{align*}
+Cette application est une bijection.
+\subsubsection*{Surjectivité}
+Soit $(a_1,\ldots, a_n) \in \mathbb{Q}^{n}$, alors le polynôme
+\[ 
+	a(t) = \sum_{i=1}^{n} a_i t^{i-1}
+\]
+est un antécédent de $a(t)$.
+\subsubsection*{Injectivité}
+Soit $a(t), b(t) \in \mathbb{Q}[t], a(t) \neq b(t)$, alors $\exists 0<i \leq n$ tq $a_i \neq b_i$, donc
+\[ 
+	Q(a(t)) = ( a_1, \ldots, a_n) \neq Q(b(t)) = ( a_1, \ldots, a_n)
+\]
+Par la partie 3, on sait que $\mathbb{Q}$ est infini dénombrable, et donc, par le théorème 1, $\mathbb{Q}^{n}$ l'est aussi. Donc $\exists M: \mathbb{Q}^{n} \to \mathbb{Q}$, $M$ une bijection.\\
+La fonction définie par
+\[ 
+M \circ Q
+\]
+est donc une bijection, et donc $\mathbb{Q}[t]$ est infini dénombrable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
