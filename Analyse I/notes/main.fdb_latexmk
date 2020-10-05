@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex main.idx"] 1601470549 "main.idx" "main.ind" "main" 1601470859
-  "main.idx" 1601470859 721 1156c454549e93fcace84a882be7a0be "pdflatex"
+["makeindex main.idx"] 1601886710 "main.idx" "main.ind" "main" 1601891801
+  "main.idx" 1601891801 744 b88ef9d77c4d3fd8415cf65a10892282 "pdflatex"
   (generated)
   "main.ind"
   "main.ilg"
-["pdflatex"] 1601470859 "main.tex" "main.pdf" "main" 1601470859
+["pdflatex"] 1601891800 "main.tex" "main.pdf" "main" 1601891801
   "../../header.tex" 1601361719 96 463a560c16c176df178dc43a2c4ba969 ""
   "../../preamble.tex" 1601453055 5777 cee6d2137c9bfede496781e09320dbb9 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1591545468 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -12,6 +12,7 @@
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1591545468 3584 2d666ecf6d466d8b007246bc2f94d9da ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1591545468 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1591545468 3584 13049b61b922a28b158a38aeff75ee9b ""
+  "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm0500.tfm" 1591545468 3584 178baad7ffca7f5d3428a83bd7cc64c3 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm0700.tfm" 1591545468 3584 cf973739aac7ab6247f9150296af7954 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm" 1591545468 3584 49064b465390a8e316a3c8417a050403 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm0900.tfm" 1591545468 3584 d3d8ac8b25ca19c0a40b86a5db1e8ccc ""
@@ -79,6 +80,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb" 1591545468 136101 f533469f523533d38317ab5729d00c8a ""
   "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb" 1591545468 131438 3aa300b3e40e5c8ba7b4e5c6cebc5dd6 ""
   "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb" 1591545468 94648 b03e7f03878c9582819008e1f17e2327 ""
+  "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb" 1591545468 184338 71ec80cd6b45d5405da0f23c65ebdef8 ""
   "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb" 1591545468 186554 e8f0fa8ca05e038f257a06405232745f ""
   "/usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb" 1591525385 27430 0e29b053ae98d5f87d872ee72a12d5f5 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1591545468 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -271,16 +273,17 @@
   "lectures/lec3.tex" 1601220691 5496 cd04a6ffbde3d1cf884f9c716470221b ""
   "lectures/lec4.tex" 1601286991 5505 5bb9b3a64fccdfaf8db4258b241eb963 ""
   "lectures/lec5.tex" 1601470857 7097 121a458c42b17aff4fb8cff6691ed738 ""
-  "main.aux" 1601470859 25121 da209258f0a626b0468ef24a929ca65e "pdflatex"
-  "main.ind" 1601470549 831 da6583f6e5cc0510aa3fac2080212c03 "makeindex main.idx"
-  "main.loe" 1601470859 7489 d0f731679dc1d4d39b16c4316a825777 "pdflatex"
-  "main.tex" 1601464282 292 20ba19a86ccae1f4a354061b5ec59629 ""
-  "main.toc" 1601470859 641 9a34b5261c532fbb8264906cde757020 "pdflatex"
+  "lectures/lec6.tex" 1601891798 5465 b9b42d09d44f85c55c67752ce95a6595 ""
+  "main.aux" 1601891801 30461 bda5ec0718bfe53da1bd84362c00ca8a "pdflatex"
+  "main.ind" 1601886710 849 66df83a932d579b6002b2fa7716e2281 "makeindex main.idx"
+  "main.loe" 1601891801 9305 a96a8b2cf550ff21c6653a69940372db "pdflatex"
+  "main.tex" 1601885755 320 b4d453b5c2cb2c910836bf8780902b2a ""
+  "main.toc" 1601891801 704 de6121601c8f4172b239accd342efcd2 "pdflatex"
   (generated)
-  "main.aux"
-  "main.pdf"
   "main.loe"
-  "main.log"
   "main.thm"
-  "main.idx"
   "main.toc"
+  "main.aux"
+  "main.log"
+  "main.pdf"
+  "main.idx"

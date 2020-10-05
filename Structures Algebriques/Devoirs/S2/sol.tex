@@ -18,7 +18,7 @@
 \maketitle
 On démontre d'abord la propriété énoncée dans l'exercie 2, partie 2:
 \begin{lemma}
-	$(a,b) \in R$ si et seulement si $R_a = R_b$.
+	$(a,b) \notin R$ si et seulement si $R_a \cap R_b = \emptyset$.
 \end{lemma}
 \begin{proof}
 On montre l'implication dans les deux sens.\\
@@ -40,11 +40,9 @@ Ce qui est une contradiction à l'hypothèse que $R_a \cap R_b = \emptyset$.
 \end{proof}
 
 Ce lemme nous montre que deux classes d'équivalence différentes ne peuvent pas contenir d'éléments commun.\\
-Etant donné que chaque classe d'équivalence contient au moins 1 élément.
-Finalement, on sait que les classes d'équivalence forment une partition de $A$, il n'y a pas d'éléments dans $A$ qui n'appartienne pas à une classe d'équivalence. En effet, supposons que $p \in A$, $(p,p) \in R$ et donc $p \in R_p$.\\
+Finalement, on sait que les classes d'équivalence forment une partition de $A$, il n'y a pas d'éléments dans $A$ qui n'appartienne pas à une classe d'équivalence. En effet, supposons que $p \in A$, $(p,p) \in R$ et donc $p \in R_p$, donc tout élément est dans une classe d'équivalence.\\
 Grâce à ceci, on peut déduire que le nombre d'éléments de $R$ vaut la somme du nombre d'éléments des classes d'équivalence.\\
 \hr
-Montrons que il y a trois manières différentes de répartir.\\
 On voit que 6 peut s'écrire de trois manières comme somme de trois nombres non-nuls:
 \begin{align*}
 	6&= 2+2+2\\
@@ -53,10 +51,44 @@ On voit que 6 peut s'écrire de trois manières comme somme de trois nombres non
 \end{align*}
 
 \hr
-Si deux des trois classes d'équivalence ne contiennent qu'un seul élément, il faut que que la dernière classe d'équivalence en contienne 4.\\
-On sait, en utilisant de la combinatoire élémentaire, que une répartition avec répétition de 4 éléments sur 2 places a  $4\times 4=16$ possibilités.
-Les deux autres classes d'équivalence ont chacune 1 élément.\\
-En tout $R$, contiendra donc $4\times 4 + 1 + 1=18$.\\
+On montre d'abord que 
+\[ 
+	| R_i \times R_i | = | R_i| ^{2}
+\]
+\begin{proof}
+On pose que $|R_i|=n$.\\
+Par définition $R_i \times R_i = \left\{ ( a,b) | a,b \in R_i \right\} $.\\
+La cardinalité de $R_i \times R_i$ est donc simplement la répartition de $n$ éléments sur 2 places, donc $n^{2}= | R_i|^{2}$
+\end{proof}
+Car les classes d'équivalences forment une partition de $A$, on a que:
+\[ 
+|R| = |R_1\times R_1| +|R_2\times R_2|+|R_3\times R_3|
+\]
+Ou $ R_1,R_2,R_3$ sont les trois classes d'équivalence sur $A$, engendrées par $R$.
+\begin{proof}
+Supposons 
+\[ 
+|R| < |R_1\times R_1| +|R_2\times R_2|+|R_3\times R_3|
+\]
+Sans perte de généralité, supposons que $R_1 \times R_1$ contient un élément de plus (il suffit de réindexer les ensembles si nécessaire).\\
+Donc, $\exists ( a,b) \in R_1 \times R_1 \Rightarrow  a, b \in R_1$, or ceci implique, par définition que $(a,b) \in  R$.\\
+Supposons donc
+\[ 
+|R| > |R_1\times R_1| +|R_2\times R_2|+|R_3\times R_3|
+\]
+Donc, $\exists ( a,b) \in R$, tel que $(a,b) \notin R_1, R_2, R_3$.\\
+Si $a=b$, alors l'élément $a$ définit une nouvelle classe d'équivalence ce qui est une contradiction à l'hypothèse qu'il y ait 3 classes d'équivalences.\\
+Si $a\neq b$, alors par hypothèse, $a \in R_i$ et $b \in R_j ( j \neq i)$, or par le lemme 1, ceci implique que $R_i = R_j$, ce qui contredit l'hypothèse qu'il y ait 3 classes d'équivalence.\\
+On en déduit que
+\[ 
+|R| = |R_1\times R_1| +|R_2\times R_2|+|R_3\times R_3|
+\]
+\end{proof}
+Il suffit maintenant de calculer les 3 cas énumérés plus haut.\\
+\hr
+Si une classe d'équivalence a 4 éléments,
+les deux autres classes d'équivalence ont chacune 1 élément.\\
+En tout $R$, contiendra donc $4\times 4 + 1\times 1 + 1 \times 1=18$ éléments.\\
 \hr
 Si une classe d'équivalence possède 1 élément, une autre 2 éléments et la dernière 3 éléments, $R$ contiendra
 $(3\times 3) + (2\times 2) + ( 1 \times 1 ) =14$ éléments.\\
@@ -67,16 +99,19 @@ $ (2 \times 2) + (2 \times 2) +(2 \times 2) = 12$ éléments.\\
 On peut construire des relations d'équivalence qui satisfont la répartition des éléments tel que ci-dessus.\\
 Soit $A = \left\{ x_1,x_2,x_3,x_4,x_5,x_6 \right\} $\\
 Soit $ A_1, A_2, A_3$	une partition de l'ensemble $A$, avec les trois ensembles non-vides.\\
+On remarque qu'on peut choisir les $ A_1, A_2, A_3$ en utilisant la répartition telle que définie ci-dessus ( ie. 2-2-2, 4-1-1 et 3-2-1).\\
 On pose que $( x_i,x_j ) \in R$ si $x_i$ et $x_j$ sont dans le même $A_k$.\\
 Cette relation satisfait les propriétés d'une relation d'équivalence, en effet:
 \begin{enumerate}
 	\item Identité:\\
-		Si $x_i \in A_k$, alors, clairement $(x_i, x_j) \in R$
+		Si $x_i \in A_k$, alors, clairement $(x_i, x_i) \in R$
 	\item Reflexivite:\\
 		Si $( x_i,x_j) \in R $, alors $x_i \in A_k$ et $x_j \in A_k$, donc $(x_j, x_i) \in R$.
 	\item Transitivité:\\
 		Si $(x_i, x_j) \in R$ et $(x_j,x_g) \in R$, alors $x_i,x_j, x_g \in A_k$, donc $(x_i,x_g) \in R$
 \end{enumerate}
+\hr
+On a donc montré qu'il y a 3 valeurs possibles pour la cardinalité de $R: 18,14$ ou $12$, et qu'il existe en effet des relations d'équivalence qui possèdent ce nombre d'éléments.
 
 
 

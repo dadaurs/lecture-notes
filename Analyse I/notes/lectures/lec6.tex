@@ -1,0 +1,261 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{6}{Mon 05 Oct}{lundi}
+\begin{rmq}
+Ecriture decimale:
+$3.1415\ldots$ ou encore $0.333\ldots$ veut dire
+\[ 
+3 + \frac{1}{10} + \frac{4}{100}+ \frac{1}{1000} + \frac{5}{10000} + \ldots
+\]
+une somme infinie de fractions.
+La difference entre le $n$ ieme terme et le $n'$ ieme terme:
+\[ 
+\leq 10^{-n} \to 0 \Rightarrow  \text{ Cauchy } 
+\]
+Cette limite est une "somme infinie".
+\end{rmq}
+\section{Series}
+But: definir les ``sommes infinies'' .\\
+\begin{align*}
+\to 
+\begin{cases}
+\text{ Existe? } \\
+\text{ Valeur? } 
+\end{cases}
+\end{align*}
+\begin{exemple}
+\[ 
+e = \frac{1}{0!}+ \frac{1}{1!} + \frac{1}{2!} + \ldots
+\]
+ou encore
+\[ 
+	\exp(x) = \frac{1}{0!}x^{0}+ \frac{1}{1!}x^{1} + \frac{1}{2!}x^{2} + \ldots
+\]
+ou
+\[ 
+\frac{1}{1}+ \frac{1}{2}+ \frac{1}{3}+\frac{1}{4}+\frac{1}{5}+ \ldots
+\]
+\end{exemple}
+\begin{defn}[Serie]\index{Serie}\label{defn:serie}
+	Le symbole $ \sum_{n=0}^{\infty }x_n$ représente
+	\[ 
+		x_0 + x_1+x_2 + \ldots \text{ et est défini par } 
+	\]
+	\[ 
+	\sum_{n=0}^{\infty } x_n = \lim_{n \to  + \infty} \sum_{k=0}^{\infty } x_k
+	\]
+	
+\end{defn}
+\hr\\
+On appelle 
+\[ 
+\sum_{n=0}^{\infty } x_n
+\]
+une série et on dit qu'elle converge/diverge lorsque la suite $s_n := x_0 + \ldots + x_n$ le fait.
+
+\begin{crly}
+	Si $ \sum_{n=0}^{\infty } x_n$ et $ \sum_{n=0}^{\infty } y_n$ existent, alors 
+	\[ 
+		\sum_{n=0}^{\infty } ( x_n + y_n) =  \sum_{n=0}^{\infty } x_n + \sum_{n=0}^{\infty } y_n
+	\]
+	
+\end{crly}
+\begin{proof}
+\[ 
+\sum_{n=0}^{\infty } x_n = \lim_{n \to  + \infty} s_n, s_n = \sum_{k=0}^{n}x_k
+\]
+\[ 
+\sum_{n=0}^{\infty } y_n = \lim_{n \to  + \infty} t_n, t_n = \sum_{k=0}^{n}y_k
+\]
+Alors
+\[ 
+	\sum_{n=0}^{\infty } ( x_n + y_n) = \lim_{n \to  + \infty} u_n, \text{ où } 
+\]
+\[ 
+	u_n = ( x_0+ y_0) + \ldots + ( x_n + y_n) = s_n + t_n
+\]
+Donc la limite 
+\[ 
+	\lim_{n \to  + \infty} u_n = \lim_{n \to  + \infty} ( s_n + t_n) = \sum_{n=0}^{\infty } x_n + \sum_{n=0}^{\infty } y_n
+\]
+
+\end{proof}
+\begin{crly}
+Pour $a \in \mathbb{R}, \sum_{n=0}^{\infty }a x_n = a \sum_{n=0}^{\infty } x_n$, si 
+\[ 
+\sum_{n=0}^{\infty} x_n
+\]
+existe.
+
+Sans preuve.
+\end{crly}
+\begin{crly}
+\[ 
+\sum_{n=n_0}^{ify}x_n \text{ existe si } \sum_{n=0}^{ \infty} x_n
+\]
+
+existe et vaut 
+\[ 
+	\sum_{n=0}^{ \infty} x_n - (x_0+x_1+ \ldots + x_{n_0-1} )
+\]
+n
+\end{crly}
+\begin{crly}[Critere de Cauchy pour les séries]
+	\[ 
+		\sum_{n=0}^{ \infty} x_n converge \iff \forall \epsilon >0 \exists N \forall n > N: \abs{ \sum_{p=N}^{n}x_p} < \epsilon
+	\]
+	
+	( Dans ce cas, $ \abs{ \sum_{n=N}^{ \infty} x_n } \leq \epsilon$)
+\end{crly}
+\begin{proof}
+Appliquer Cauchy à la suite $s_n$:
+\[ 
+	\exists n_0 \forall n,n'> n_0: \abs{s_n -s_{n'} } < \epsilon
+\]
+Alors
+\[ 
+\abs{ \sum_{p=n'+1}^{ n}x_p } < \epsilon
+\]
+\begin{exemple}
+Ecriture decimale,
+\end{exemple}
+
+\begin{propo}
+Si 
+\[ 
+\sum_{n=0}^{ \infty} x_n
+\]
+
+converge, alors
+\[ 
+\lim_{n \to  + \infty} x_n =0
+\]
+
+\end{propo}
+\begin{proof}
+	Appliquer Cauchy à $ \abs{ \underbrace{s_n - s_{n-1}}_{= x_n} }$\\
+	Attention, la réciproque est FAUSSE.
+\end{proof}
+2 Exemples\\
+\begin{propo}[Serie Geometrique]
+Soit $r \in \mathbb{R}$ avec $|r| <1$, alors
+\[ 
+\sum_{n=0}^{ \infty} r^{n}= \frac{1}{1-r} 
+\]
+
+\end{propo}
+\begin{proof}
+Soit
+\[ 
+s_n = r^{0}+ r^{1} + \ldots + r^{n} = \frac{1- r^{n+1}}{ 1 - r^{n}}
+\]
+Or 
+ \[ 
+\lim_{n \to  + \infty} r^{n+1} = 0
+\]
+Donc $ s_n \to \frac{1}{1-r}$.
+
+\end{proof}
+
+\[ 
+\frac{1}{2}+ \frac{1}{4}+ \ldots  = \sum_{n=1}^{ \infty } \frac{1}{2}^{n} = \frac{1}{1-\frac{1}{2}} -1 = 1
+\]
+\begin{propo}[Série Harmonique]
+\[ 
+	\sum_{n=1}^{ \infty} \frac{1}{n} \text{ diverge ( vers } + \infty)
+\]
+
+\end{propo}
+\begin{proof}
+Considérons
+\[ 
+\frac{1}{1}+ \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{2^{n}} + \underbrace{ \frac{1}{2^{n}+1} + \ldots + \frac{1}{2^{n+1}}}_{2^{n+1}-2^{n} = 2^{n} \text{ termes. } } + \ldots
+\]
+Tous ces termes sont $\geq \frac{1}{2^{n+1}}$ \\
+Cette somme est:
+\[ 
+s_{2^{n+1}} - s_{2^{n}} \geq 2^{n} \frac{1}{2^{n+1}} = \frac{1}{2}
+\]
+Contredit Cauchy pour $\epsilon = \frac{1}{2}$.\\
+
+\end{proof}
+Astuce utile:\\
+\[ 
+\sum_{n=}^{ \infty} \frac{1}{n-1}-\frac{1}{n}= 1
+\]
+
+\begin{proof}
+\[ 
+s_n = 1- \frac{1}{2} + \frac{1}{2} -\frac{1}{3} + \frac{1}{3} - \frac{1}{4} + \ldots + \frac{1}{n-1} - \frac{1}{n} = 1 - \frac{1}{n}
+\]
+Donc ca converge.\\
+C'est une série téléscopique
+
+\end{proof}
+\begin{propo}[Critère de Comparaison]
+Supposons  $0 \leq x_n \leq y_n$.\\
+Si  
+\[ 
+\sum_{n=0}^{ \infty} y_n \text{ converge, alors } \sum_{n=0}^{ \infty} x_n \text{ aussi } .
+\]
+\end{propo}
+\begin{proof}
+\[ 
+s_n = x_0 + \ldots + x_n
+\]
+est croissante. Donc converge $\iff ( s_n)$ bornée.\\
+Mais $y_0 + \ldots + y_n$ converge $\Rightarrow$ bornée et
+$s_n \leq y_0 + \ldots + y_n \Rightarrow $ $(s_n)$ bornée
+\end{proof}
+\begin{rmq}
+De plus, 
+\[ 
+\sum_{n=0}^{ \infty} x_n \leq \sum_{n=0}^{ \infty} y_n
+\]
+Si, par contre, 
+\[ 
+\sum_{n=0}^{ \infty} x_n \text{ diverge } \Rightarrow \sum_{n=0}^{ \infty} y_n \text{ diverge } 
+\]
+\end{rmq}
+\begin{crly}
+\[ 
+\sum_{n=1}^{ \infty} \frac{1}{n^{2}}
+\]
+converge.
+
+\end{crly}
+\begin{proof}
+	$\forall n \geq 2: \frac{1}{n^{2}} \leq \frac{1}{n(n-1)} = \frac{1}{n-1} - \frac{1}{n}$\\
+	Or 
+	\[ 
+	\sum_{n=2}^{ \infty} \frac{1}{n-1} - \frac{1}{n} \text{ converge. } 
+	\]
+	Donc, par comparaison, $ \sum_{n=2}^{ \infty} \frac{1}{n^{2}}$ converge
+	\[ 
+\Rightarrow \sum_{n=1}^{ \infty} \frac{1}{n^{2}} \text{ converge } .
+	\]
+	
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+\end{document}	
