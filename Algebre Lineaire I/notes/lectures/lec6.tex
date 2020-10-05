@@ -1,5 +1,249 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \lecture{6}{Mon 05 Oct}{Anneaux 2}
+\begin{proof}
+	Soit $\phi, \psi \in End_{Gr} ( M)$, on veut montrer que 
+	\[ 
+		\phi + \psi \in End_{Gr} ( M)
+	\]
+	Pour vérifier celà, on utilise le critère de morphisme: $\forall m,m' \in M$, alors
+	\[ 
+		( \phi + \psi)(m+ m') = ( \phi + \psi) ( m) +( \phi + \psi) ( m') 
+	\]
+	\begin{align*}
+		( \phi + \psi)(m + m') &= \phi(m+m') + \psi(m+m')\\
+		                 &=\phi(m) + \psi(m') + \psi(m) + \psi(m')\\
+				 \text{ $+$ est commutative } \\
+				 &= \phi(m) + \psi(m') + \phi(m') + \psi(m')\\
+				 &= ( \phi + \psi)(m) + ( \phi+ \psi)(m')
+	\end{align*}
+	Soit $\phi, \psi, \psi' \in End_{Gr} ( M)$ on veut montrer que
+	\begin{align*}
+		\phi \circ(\psi + \psi') &= \phi \circ \psi + \phi \circ \psi'\\
+	\end{align*}
+	On veut montrer que $\forall m \in M$ 
+	\[ 
+		\phi\circ(\psi + \psi') ( m) = ( \phi\circ \psi + \phi \circ \psi')(m)
+	\]
+	\begin{align*}
+		\phi((\psi+\psi')(m)) &= \phi( \psi(m) + \psi'(m))\\
+				      &= \phi(\psi(m)) + \phi(\psi'(m))\\
+				      &= ( \phi \circ \psi + \phi \circ \psi')(m)
+	\end{align*}
+	
+	Reste à faire: associativité de $+$ \\
+	$0_M$ est l'élément neutre de $+$ \\
+	$Id_M$ est l'unité pour $\circ$
+\end{proof}
+\subsection{Elément inversible}
+\begin{defn}[Element Inversible]\index{Element Inversible}\label{defn:element_inversible}
+	Un element $a \in A$ est inversible si il existe $b \in A$ tel que
+	\[ 
+	 a.b = b.a = 1_A.
+	\]
+	On dit alors que $b$ est un inverse de $a$ ( pour la multiplication).
+\end{defn}
+\begin{rmq}
+Si l'inverse existe, l'inverse est unique, et on le note $a^{-1}$.
+\end{rmq}
+Notation:\\
+On note $A^{\times}$ l'ensemble des éléments inversibles de $A$.
+\begin{propo}
+Soit $A ^{\times}$ l'ensemble des éléments inversibles, alors
+\[ 
+	( A^{\times}, . , 1_A, \bullet ^{-1})
+\]
+forme un groupe: le groupe des éléments inversibles de $A$.
+\end{propo}
 
-\end{document}	
+\begin{exemple}
+\begin{itemize}
+\item $\mathbb{Z}^{\times} = \left\{ \pm 1 \right\}, \mathbb{Q}^{\times} = \mathbb{Q}\setminus \left\{ 0 \right\} $
+\item $\mathbb{R}^{\times} = \mathbb{R} \setminus \left\{ 0 \right\} $ 
+\item $\mathcal{F}(X, \mathbb{R})^{X} = \left\{ f: X \to \mathbb{R}^{\times} \subset \mathbb{R} | f(x) \neq 0_{\mathbb{R}} \text{ pour tout  } x \in X \right\} $
+\item $\mathbb{R}[x]^{\times}=  \left\{ a_0 | a_0 \in \mathbb{R}^{\times} \right\} $
+\item $End_{Gr} ( M)^{\times}=Aut_{Gr} ( M) = Isom_{Gr} ( M,M)$
+\end{itemize}
+\end{exemple}
+\subsection{Sous-Anneau}
+\begin{defn}[Sous-Anneau]\index{Sous-Anneau}\label{defn:sous_anneau}
+	Soit $(A, + , .)$ un anneau. Un sous-anneau $B \subset A$ est un sous-groupe de $(A,+)$ qui est
+	\begin{itemize}
+	\item soit le sous-groupe trivial $ \left\{ 0_A \right\} ,$ 
+	\item soit qui contient l' unité $1_A$ et qui est stable par . :
+		\[ 
+		\forall b,b' \in B b.b' \in B
+		\]
+		Ains $(B, + , .)$ est un anneau.
+	\end{itemize}
+\end{defn}
+
+\begin{lemma}[Critère de sous-anneau]\index{Critère de sous-anneau}\label{lemma:critere_de_sous_anneau}
+	Soit $(A, + , .)$ un anneau et $B \subset A$ un sous-ensemble non-vide alors $B$ est un sous-anneau ssi $B = \left\{ 0_B \right\} $ ou bien $1_A \in B$ et
+	\[ 
+	\forall b, b',b'' \in B, b.b' - b'' \in B
+	\]
+	
+\end{lemma}
+\begin{proof}
+Si $B = \left\{ 0_A \right\} $ c'est un sous-anneau.\\
+Sinon $1_A \in B$ si on prend $b \in B$ alors
+\[ 
+0_A =1_A . b -b \in B
+\]
+Alors
+\begin{align*}
+\forall b,b' \in B\\
+b -b' = 1_A. b -b' \in B
+\end{align*}
+Donc $(B,+)$ est un sous-groupe.\\
+Soient $b,b' \in B$ alors
+\[ 
+b.b' - 0_A \in B
+\]
+$=b.b'$.
+
+\end{proof}
+\begin{exemple}
+\begin{itemize}
+\item $ \left\{ 0_A \right\} \subset A \subset A$ 
+\item $\mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}$ 
+\item $A$ un anneau
+	\[ 
+		A. Id_A := \left\{ a. Id_A : b \to a.b \right\} \subset End_{Gr} ( A).	
+	\]
+	est un sous-anneau
+\end{itemize}
+
+\end{exemple}
+
+\subsection{Morphismes d'anneaux}
+\begin{defn}[Morphisme d'anneaux]\index{Morphisme d'anneaux}\label{defn:morphisme_d_anneaux}
+	Soient $(A, + , .)$, et $(B, +, .)$ des anneaux. Un morphisme d'anneaux $\phi : A \mapsto B$ est un morphisme de groupes commutatif $\phi: ( A,+) \mapsto ( B, _)$ tel que
+	\begin{align*}
+		\phi(1_A) = 1_B \text{ ou bien  } \phi(1_A) = 0_B\\
+		\forall a, a' \in A, \phi(a.a') = \phi(a) . \phi(a')
+	\end{align*}
+\end{defn}
+\begin{rmq}
+	Si $ \phi(1_A) = 0_B$ alors $\phi = 0_B$ \\
+	Alors $\forall a \in A$
+	 \begin{align*}
+		 \phi(a) &= \phi(a.1_A)\\
+			 &= \phi(a) \phi(1_A) = 0_B
+	\end{align*}
+\end{rmq}
+Notation:
+On note les morphismes d'anneaux de $A$ vers $B$ 
+\[ 
+	Hom_{Ann} ( A,B), End_{Ann} ( A)= Hom_{Annn} ( A,A), Isom_{Ann} ( A,B), Aut_{Ann} ( A) = Isom_{Ann} (A,A)
+\]
+
+\begin{exemple}[Le morphisme canonique]
+Le morphisme cannonique:
+\begin{align*}
+Can_A : ( \mathbb{Z}, + , .) \to ( A, +, .)\\
+n &\to n. 1_A = 1_A + 1_A + \ldots + 1_A \text{ $n$ fois si $n \geq 0$ et $-n$ fois si $n<0$ } 
+\end{align*}
+est un morphisme d'anneaux.\\
+On doit vérifier que $Can_A$ est un morphisme entre les groups additifs.\\
+On doit montrer que $\forall m,n \in \mathbb{Z}$ 
+\[ 
+	( m \times n). 1_A = m. ( n.1_A)
+\]
+si $m$ et $n \geq 0$ 
+\begin{align*}
+	( m\times n) . 1_A &= \underbrace{1_A + \ldots + 1_A}_{m \times n \text{ fois } }\\
+			   &= \underbrace{1_A + \ldots + 1_A }_{n \text{ fois } } + \underbrace{1_A + \ldots + 1_A}_{n \text{ fois } } \text{ $m$ fois } \\
+			   &= m.(n.1_A)
+\end{align*}
+
+
+\end{exemple}
+\subsection{Noyau/Image}
+\begin{propo}[Noyau d'un morphisme d'anneau]
+Soient $\phi \in Hom _{Ann} ( A,B)$ un morphisme alors $\phi(A) \subset B$ est un sous-anneau. Par ailleurs le sous-groupe $\ker(\phi)$ est stable par multiplication par $A$:
+\[ 
+	\forall a \in A, k \in \ker(\phi) a.k \in \ker(\phi)
+\]
+\end{propo}
+
+\begin{proof}
+Soit $k \in \ker \phi, a \in A$ 
+\[ 
+a.k \in \ker \phi ?
+\]
+\begin{align*}
+	\phi(a.k) = \phi(a) . \phi(k) = \phi(a) . 0_B = 0_B
+\end{align*}
+
+\end{proof}
+\begin{thm}
+	$\phi(A) \subset B$ est un sous-anneau de $B$.
+\end{thm}
+\begin{proof}
+	Si $\phi(1_A) = 0_B \Rightarrow \phi = \underline{0}_B$ et donc
+	$\phi(A) = \left\{ 0_B \right\} \subset B$\\
+	Sinon $\phi(1_A) = 1_B$.
+	$B'= \phi(A)$ alors $1_B \in B', \phi(A)$ est un sous-groupe de $(B,+)$ \\
+	Soit $b,b' \in B'= \phi(A)$.
+	\[ 
+		b = \phi(a) , b'= \phi(a')  a,a' \in A
+	\]
+	Alors
+	\[ 
+		b.b' = \phi(a) . \phi(a') = \phi(a.a') \text{ car $\phi$ est un morphisme d'anneaux } 
+	\]
+	
+\end{proof}
+\subsection{Modules sur un Anneau}
+\begin{defn}[Modules sur un Anneau]\index{Modules sur un Anneau}\label{defn:modules_sur_un_anneau}
+	Soit $A$ un anneau, un $A$-module ( à gauche) est un groupe commutatif $(M,+)$ muni d' une loi de multiplication externe
+	\begin{align*}
+	\bullet \ast \bullet : A \times M \mapsto M\\
+	( a,m) \mapsto a \ast m
+	\end{align*}
+	
+	( appelée multiplication par les scalaires)ayant lles propriétés suivantes
+	\begin{itemize}
+	\item Associativité: $\forall a,a' \in A, m \in M,$ 
+		\[ 
+			( a.a') \ast m = a.(a'\ast m).
+		\]
+		
+	\item Distributivité: $\forall a,a' \in A, m,m' \in M$,
+		\[ 
+			( a+a') \ast m = a \ast m + a' \ast m, a \ast ( m +m') = a \ast m + a \ast m'.
+		\]
+		
+	\item Neutralité de $1_A$ : $\forall m \in M,$ 
+		\[ 
+		1_A . m = m
+		\]
+		
+	\end{itemize}
+	
+\end{defn}
+\begin{exemple}
+\begin{itemize}
+\item $ \left\{ 0_A \right\}  \subset A$ est un $A$-module
+\item $A$ est un $A$-module
+\item $(M,+)$ = groupe commutatif est canoniquement un $\mathbb{Z}$-module
+	\begin{align*}
+		\mathbb{Z} \times M &\to M\\
+		( n, \vec{m}) \to n \ast \vec{m} = \underbrace{\vec{m} + \vec{m} + \ldots}_{n \text{ fois } }
+	\end{align*}
+	
+	
+\end{itemize}
+
+\end{exemple}
+
+
+
+
+
+
+
+
+\end{document}	 
