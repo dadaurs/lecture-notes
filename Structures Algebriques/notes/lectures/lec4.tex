@@ -1,0 +1,67 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Tue 06 Oct}{mardi moitie}
+
+\section{Théorie des Groupes}
+\subsection{Groupe symmétrique de n}
+Le groupe $Bij(X)$ pour $X= \left\{ 1,\ldots,n \right\} \to S_n$
+\[ 
+\sigma \in S_n \to
+\begin{pmatrix}
+	1 & 2 &\ldots n\\
+	\sigma(1) & \sigma(2) &\ldots & \sigma(n)
+\end{pmatrix}
+\]
+La multiplication ( loi de composition) est simplement la composition des applications, attention le groupe n'est pas abélien.
+\[ 
+\begin{pmatrix}
+	1 &2 &3\\
+	2 &1 &3
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+	1 & 2 &3\\
+	2 &3 &1
+\end{pmatrix}
+= 
+\begin{pmatrix}
+	1 &2 &3\\
+	1 & 3 &2
+\end{pmatrix}
+\]
+Dans l'autre sens:
+\[ 
+\begin{pmatrix}
+	1 & 2 &3\\
+	2 &3 &1
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+	1 &2 &3\\
+	2 &1 &3
+\end{pmatrix}
+= 
+\begin{pmatrix}
+	1 &2 &3\\
+	3 &2 &1
+\end{pmatrix}
+\]
+Les autres exemples seront contruit par une relation d'équivalence, on note
+\[ 
+G / R
+\]
+Question:\\
+Quand est-ce que $G /R$ est-il un groupe?\\
+Construction:\\
+\[ 
+	[ g]= R_g= \left\{ h \in G | ( g,l)\in R \right\} 
+\]
+la classe de $G$.\\
+Multiplication sur $\frac{G}{R}$ \\
+Soit $x,y \in G/R$, alors
+\[ 
+	x = [ g] ,y \in [ f]
+\]
+
+
+\end{document}	

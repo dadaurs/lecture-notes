@@ -1,0 +1,214 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Tue 06 Oct}{Anneaux Et Modules}
+ \[ 
+	 A^{d}= \left\{ ( a_1,\ldots, a_d) a_1,\ldots, a_d \in A\right\}  
+\]
+C'est un $A$-module: le $A$-module libre de rang d.
+Soit
+\begin{align*}
+	\vec{x}=(a_1,\ldots,a_d)\\
+	\vec{x'}=(a'_1,\ldots,a'_d)\\
+	\in A^{d}\\
+	\vec{x} + \vec{x'} ( a_1+a'_1 , \ldots)
+\end{align*}
+Soit
+\begin{align*}
+a\in A, \vec{x} \in A^{d}\\
+a.\vec{x} := ( a.a_1,\ldots, \ldots,a.a_d)
+\end{align*}
+
+On vérifie ( en utilisant l'associativité de $(A,+, .)$ et la distributivité dans $A$)
+que $A^{d}$ est un $A$-module.
+\[ 
+1_A. \vec{x}= \vec{x}
+\]
+\begin{exemples}
+\begin{itemize}
+\item $\phi: A\to B , \ker \phi$ est un $A$ module pour la multiplication dans $A$.
+	\begin{align*}
+		\bullet.\bullet: A\times \ker \phi &\to \ker\phi\\
+	( a,k)&\to a.k
+	\end{align*}
+	
+
+\item $\mathcal{F}(X,A)$ fonctions de $X$ ( un ensemble quelconque) à valeurs dans $A$, on a vu que $\mathcal{F}(X,A)$ un groupe commutatif
+	\begin{align*}
+		A\times \mathcal{F}(X,A) &\to \mathcal{F}(X,A)\\
+		( a,f)&\to a.f:x\to a.f(x)
+	\end{align*}
+	Plus généralement, si $M$ est un $A$-module $\mathcal{F}(X,M)$ est un $A$-module.
+	\[ 
+	a \in A f:X\to M
+	\]
+\[ 
+	a\ast f: x \to a\ast f(x) \in M
+\]
+\end{itemize}
+
+	\begin{rmq}
+	Si $X$ possède $d$ éléments
+	\[ 
+		\mathcal{F}(X,A) = A^{\times} \simeq A^{d}
+	\]
+	
+	\end{rmq}
+\end{exemples}
+\begin{defn}[$A$-Algebre]\index{$A$-Algebre}\label{defn:_a_algebre}
+	Une $A$-algebre est un anneau $(B,+,.)$ possedant une structure de $A$-module qui verifie la propriete d'associativité suivante:
+	\[ 
+		\forall a \in A, b,b' \in B a \ast ( b.b')= ( a \ast b).b'
+	\]
+	
+\end{defn}
+
+$\mathbb{R}[x]$ est une $\mathbb{R}$-algèbre.
+\subsection{Sous-Module}
+\begin{defn}[Sous-Module]\index{Sous-Module}\label{defn:sous_module}
+	Un sous-module $N \subset M$ d' un $A$-module $M$ est un sous-groupe de $M$ qui est stable pour la mutliplication par les scalaires
+	\[ 
+	\forall a \in A, n \in B, a\ast n \in N
+	\]
+	
+\end{defn}
+\begin{defn}[Ideal]\index{Ideal}\label{defn:ideal}
+	Un ideal de $A$ est un sous-ensemble $I \subset A$ qui est un sous-module du module $A$. De manière équivalente, un idéal de $A$ est un sous-groupe $I \subset A$ qui est stable  par multiplication par les éléments de $A$:
+	\[ 
+	\forall a \in a, b \in I, a.b \in I
+	\]
+	
+\end{defn}
+\begin{rmq}
+Tout idéal $I \subset A$ est un noyau d' un morphisme d'anneau.
+\end{rmq}
+\begin{lemma}[Critère de Sous-Module]
+	Soit $N\subset M$ un sous-ensemble dûn $A$-module $M$ alors $N$ est un sous-module de $M$ ssi
+	\[ 
+	\forall a \in A, n,n' \in N, a \ast n + n' \in N.
+	\]
+	
+
+\end{lemma}
+\begin{proof}
+Si on prend $a=-1_A$, on a que 
+\begin{align*}
+\forall n,n' \in N -1_A \ast n + n'\in N\\
+-n + n' \in N
+\end{align*}
+Donc $N$ vérifie le critère de sous-groupe, donc est un sous-groupe de $(M,+)$.\\
+Comme $N$ est un sous-groupe $0_M \in N$, et $\forall a \in A \forall n \in N$ 
+\[ 
+a\ast n = a\ast n + 0_M \in N
+\]
+$N$ vérifie les 2 propriétés requises pour être un sous-module.
+\end{proof}
+\begin{exemple}
+$ \left\{ 0_M \right\} \subset M$ est clairement stable par multiplication
+\begin{itemize}
+	\item $d \leq d', A[x]_{\leq d} \leq A[x]_{\leq d'} \leq A[x]$ 
+	\item $\Delta A = \left\{ ( a,\ldots, a)= a.(1,\ldots,1) \right\} \subset A^{d}$ 
+		$\Delta A$ est un sous-module de $A^{d}$.
+		
+	\item Plus généralement,
+		\[ 
+			\vec{x}= ( a_1,\ldots,a_d), A.\vec{x} = \left\{ a.\vec{x}=(a.a_1,\ldots,a.a_n| a \inA \right\} 
+		\]
+		est un sous-module de $A^{d}$.
+		
+	\begin{proof}
+	Soient $a\in A, \vec{v},\vec{v'} \in A.\vec{x}$
+	\begin{align*}
+	\vec{v} = a'.(a_1,\ldots,a_d)=a'.\vec{x}\\
+	\vec{v'}=a' ' ( a_1.\ldots,a_d) = a ' '.\vec{x}
+	\end{align*}
+	
+	Critère de sous-module:
+	\begin{align*}
+		a.\vec{v} + \vec{v'} = a.a'.\vec{x} + a' '.\vec{x} = ( a.a'+a' ').\vec{x} \in A.\vec{x}
+	\end{align*}
+	
+	\end{proof}
+	
+\end{itemize}
+
+\end{exemple}
+\subsection{Module engendré par un ensemble}
+\begin{propo}
+Soit $M$ un $A$-module et $M_1, M_2$ des sous-modules alors
+\[ 
+M_1\cap M_2 \subset M
+\]
+est un sous-module et plus généralement soit $(M_i)_{i\in I } $ une collection de sous-modules alors
+\[ 
+\bigcap_{i\in I} M_i \subset M
+\]
+est un sous-module.
+\end{propo}
+\begin{defn}
+	Soit $X\subset M$ un sous-ensemble d' un $A$-module, le module engendré par $X$ est le plus petit sous-mdoule de $M$ contenatn $X$ ( l'intersection de tous les sous-modules contenant $X$)
+	\[ 
+		\eng{X} := \bigcap_{X \subset N \subset M} N.
+	\]
+	
+\end{defn}
+
+\begin{thm}
+	Soit $X\subset M$ un ensemble alors $\eng{X}$ est soit le module nul $ \left\{ 0_M \right\} $ si $X$ est vide, soit l'ensemble des combinaisons linéaires d'éléments de $X$ à coefficients dans $A$ :
+	\[ 
+		\eng{X} = CL_A(X) := \left\{ \sum_{i=1}^{ n}a_i \ast x_i,, n\geq 1, a_1,\ldots,a_n \inA, x_1,\ldots,x_n \inX \right\} .
+	\]
+	Pour tout $n\geq 1$.
+	
+\end{thm}
+\begin{proof}
+	$CL_A(X)$ on va montrer que $CL_A(X)$ est un sous-module contenant $X$ 
+	\[ 
+		\Rightarrow \eng{X} \subset CL_A(X)
+	\]
+	ensuite on va montrer que si $X\subset N \subset M$ est un sous-module contenant $X$ alors
+	\[ 
+		N \supset CL_A(X)
+	\]
+	\[ 
+		\Rightarrow CL_A(X) \subset \eng{X}
+	\]
+\hr\\
+On utilise le critère de sous-module:\\
+Soit $a \in A, u,v \in CL_A(X)$
+\[ 
+	a\ast u + v \in CL_A(X)
+\]
+Or
+\begin{align*}
+u= a_1x_1+ \ldots + a_n x_n, a_i \in  A, x_i \inX\\
+v= a'_1x'_1+ \ldots + a'_m x'_m a'_j \in A, x'_j \in X\\
+a\ast u +v = a.a_1\ast x_1 + \ldots + a.a_n\ast x_n + a'_1 \ast x'_1 + \ldots + a'_m \ast x'_m \in CL_{A} ( X)
+\end{align*}
+
+\[ 
+	X\subset CL_A(X)
+\]
+car 
+\[ 
+x=1_A. x = \text{ combinaison linéaire de longueur 1 } 
+\]
+
+\end{proof}
+
+
+\hr\\
+Soit $X\subset N\subset M$ un sous-module et soit $n\geq 1, a_1,\ldots,a_n \in A$
+\[ 
+x_1,\ldots x_n\in X
+\]
+Alors comme $N$ est stable par $\ast$ et que $x_1,\ldots,x_n\in X \subset N$ 
+\[ 
+\Rightarrow a_1\ast x_1 + \ldots + a_n \ast x_n \in N
+\]
+
+
+
+
+
+
+\end{document}	
