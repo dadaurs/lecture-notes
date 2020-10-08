@@ -419,6 +419,8 @@ INPUT lectures/lec5.tex
 INPUT lectures/lec6.tex
 INPUT lectures/lec6.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm0500.tfm
+INPUT lectures/lec7.tex
+INPUT lectures/lec7.tex
 OUTPUT main.thm
 OUTPUT main.loe
 INPUT main.aux

@@ -1,0 +1,199 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Wed 07 Oct}{mercredi}
+
+\section{Description des rotations spatiales}
+Une rotation spatiale est caractérisée par un axe de rotation ( dans l'espace), un sens de rotation et un angle de rotation.\\
+Deux points de vue
+\begin{itemize}
+	\item Rotation dûn systeme physique dans un repère fixe
+	\item Système physique décrit dans un repère en rotation
+\end{itemize}
+\begin{thm}
+Soit deux repères orthonormés droits de même origine, il existe toujours une rotation qui amène le premier sur le deuxième.
+\end{thm}
+
+\begin{figure}[ht]
+    \centering
+    \incfig{repere}
+    \caption{repere}
+    \label{fig:repere}
+\end{figure}
+\begin{align*}
+	\hat{\dot{e_1}} = \frac{d\hat{e_1}(t)}{dt} = E_{11} \hat{e}_1 + E_{21} \hat{e}_2 + E_{31} \hat{e}_3\\
+	\hat{\dot{e_2}} = \frac{d\hat{e_2}(t)}{dt} = E_{12} \hat{e}_1 + E_{22} \hat{e}_2 + E_{32} \hat{e}_3\\
+	\hat{\dot{e_3}} = \frac{d\hat{e_2}(t)}{dt} = E_{13} \hat{e}_1 + E_{23} \hat{e}_2 + E_{33} \hat{e}_3
+\end{align*}
+est équivalent à dire
+\[ 
+\dot{ \hat{e} }_i = \frac{d \hat{e}_i}{dt} = \sum_{j=1}^{ 3}E_{JI} \hat{e}_j
+\]
+C'est une écriture presque matricielle.
+On peut écrire
+\[ 
+\dot{ \hat{e} }_i = E \hat{e}_i \text{ avec } 
+\]
+\[ 
+\begin{pmatrix}
+	E_{11} & E_{12} & E_{13}\\
+	E_{21} & E_{22} & E_{23}\\
+	E_{31} & E_{32} & E_{33}
+\end{pmatrix}
+\]
+On a un repère orthonormé $\Rightarrow \hat{e}_i \cdot \hat{e}_j = \delta_{ij}$ 
+\[ 
+	\frac{d}{dt} \delta_{ij} =0 = \frac{d}{dt} ( \hat{e}_i \cdot \hat{e}_j) = \dot{\hat{e}}_i\cdot \hat{e}_j +\hat{e}_i \cdot \dot{\hat{e}} _j= ( E \hat{e}_i) \cdot \hat{e}_j + \hat{e}_i ( E \hat{e}_j)
+\]
+\[ 
+	=(E_{1i}  \hat{e}_i + E_{2i} \hat{e}_2 + E_{3i} \hat{e}_3) \cdot \hat{e}_j + \hat{e}_i(E_{1j}  \hat{e}_i + E_{2j} \hat{e}_2 + E_{3j} \hat{e}_3) = E_{ji} + E_{ij} 
+\]
+On a donc 6 contraintes ( ij=11,12,13,22,23,33)\\
+Donc 
+ \[ 
+\begin{pmatrix}
+	0 & E_{12} & E_{13} \\
+	- E_{12} & 0 & E_{23}\\
+	-E_{13} & - E_{23} & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+	0 & - \omega_3 & \omega_2\\
+	\omega_3 & 0 & - \omega_1\\
+	- \omega_2 & \omega_1 & 0
+\end{pmatrix}
+\]
+Pour un vecteur quelconque $\vec{r}(t)$.
+\[ 
+\frac{d \vec{r}}{dt} = E \vec{r}
+\begin{pmatrix}
+	0 & - \omega_3 & \omega_2\\
+	\omega_3 & 0 & - \omega_1\\
+	- \omega_2 & \omega_1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+r_1\\
+r_2\\
+r_3\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+\omega_1\\
+\omega_2\\
+\omega_3
+\end{pmatrix}
+\land
+\begin{pmatrix}
+r_1\\
+r_2\\
+r_3
+\end{pmatrix}
+\]
+
+On a donc
+\begin{thm}[Formule de Poisson]
+
+
+\[ 
+	\frac{ d \hat{e}_i}{dt} = \vec{\omega} \land \hat{e}_i
+\]
+\end{thm}
+
+\subsection{Interprétation du vecteur $\omega$}
+Si  $\vec{r}$ collinéaire à $\vec{\omega}$ alors $\frac{d \vec{r}}{dt}=0$, donc $\vec{r}$ ne bouge pas.\\
+Donc $\vec{\omega}$ définit l'axe de rotation au temps $t$.
+Sens de $\vec{\omega}=$ sens de rotation
+\[ 
+|d \vec{r} | = | \vec{\omega} \land \vec{r}| dt = | \vec{\omega} | dt | \vec{r}| \sin \theta
+\]
+Mais $|d \vec{r}| = | \vec{r}| \sin \theta$
+
+La norme de $\vec{\omega}$ est la vitesse angulaire de rotation.
+\subsubsection{Cas particulier}
+$\vec{\omega}=$ constante\\
+Alors
+\[ 
+\vec{v}= \frac{d \vec{r}}{dt} = \vec{\omega} \land \vec{r}
+\]
+et 
+\[ 
+	\vec{a} = \frac{d \vec{v}}{dt} = \frac{d}{dt} ( \vec{\omega} \land \vec{r}) = \vec{\omega} \land \frac{d \vec{r}}{dt}= \vec{\omega} \land ( \vec{\omega} \land \vec{r})
+\]
+\subsection{Vitesse et accélération en coordonnées cylindriques}
+Vitesse angulaire de rotation du repère
+\[ 
+	\vec{\omega} = \frac{d \phi}{dt}\hat{z} = \dot{\phi}\hat{z}
+\]
+
+\begin{align*}
+\vec{r}= \vec{OP} = \rho \hat{e}_{\rho} + z \hat{e}_z\\
+\vec{v} = \dot{ \vec{r} } = \dot{\rho} \hat{e}_{\rho}  + \rho \dot{\hat{e}}_{\rho}  + \dot{z} \hat{e}_z + z \dot{ \hat{e} }_z
+\end{align*}
+Par Poisson
+\begin{align*}
+	\dot{ \hat{e} }_{\rho} = \vec{\omega} \land \hat{e}_{rho}  = \dot{ \phi } \hat{e}_z \land \hat{e}_{\rho} = \dot{\phi} \hat{e}_{\phi} \\
+	\dot{\hat{e}}_{\phi}  = \vec{\omega} \land \hat{e}_{\phi} = \dot{\phi} \hat{e}_z \land \hat{e}_\phi = - \dot{\phi} \hat{e}_{\rho} 
+\end{align*}
+
+Donc
+\[ 
+	\vec{v} = \dot{ \vec{r} } = \dot{\rho} \hat{e}_{\rho}  + \rho \dot{\hat{e}}_{\rho}  + \dot{z} \hat{e}_z + z \dot{ \hat{e} }_z = \dot{\rho} \hat{e}_{\rho}  + \rho \dot{\phi} \hat{e}_{\phi} + \dot{z} \hat{e}_{z} 
+\]
+Donc
+\[ 
+	\vec{a} = \ddot{\vec{r}} = ( \ddot{\rho} - \rho \dot{\phi}^{2}) \hat{e}_{\rho}  + ( \rho \ddot{\phi} + 2 \dot{\rho} \dot{\phi} \hat{e}_{\phi} + \ddot{z} \hat{e}_z)
+\]
+\subsection{Pendule Mathématique}
+Contraintes
+\[ 
+\begin{cases}
+	\rho = L = \text{ connstante } \Rightarrow  \dot{\rho}=0 , \ddot{\rho} = 0\\
+	z=0, \dot{z} = 0, \ddot{z} = 0
+\end{cases}
+\]
+Donc l'accélération est
+\[ 
+	\vec{a} = - L \dot{\phi} ^{2}\hat{e}_{\rho} + L \ddot{\phi} \hat{e}_{\phi} 
+\]
+On a aussi
+\[ 
+m \vec{a} = \vec{F} + \vec{T}
+\]
+Donc
+\[ 
+\begin{cases}
+	-m L \dot{\phi} ^{2} = F \cos \phi -T \text{ sur  } \hat{e}_{\rho} \\
+	m L \ddot{\phi} = -F \sin \phi \text{ sur  } \hat{e}_{\phi} 
+\end{cases}
+\]
+Donc
+\[ 
+	\ddot{\phi} = - \frac{F}{mL} \sin \phi = - \frac{g}{L} \sin \phi
+\]
+Si les oscillations sont faibles, on a
+\[ 
+	\sin \phi \simeq \phi \Rightarrow \ddot{\phi} \simeq - \frac{g}{L}\phi
+\]
+
+\begin{thm}
+La force de liaison = force exercée sur le point matériel pour qu il obéisse a une contrainte géométrique
+\begin{itemize}
+\item Toujours perp. à la courbe ou à la surfacce
+\item jamais de composante tangente à la courbe ou la surface ( cad dans une direction ou le pout matériel peut bouger) 
+\item La force de liaision devient nulle $\iff$ la contrainte disparait.
+\end{itemize}
+
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

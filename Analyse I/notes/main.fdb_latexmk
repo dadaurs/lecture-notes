@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex main.idx"] 1601886710 "main.idx" "main.ind" "main" 1601891801
-  "main.idx" 1601891801 744 b88ef9d77c4d3fd8415cf65a10892282 "pdflatex"
+["makeindex main.idx"] 1602074128 "main.idx" "main.ind" "main" 1602075574
+  "main.idx" 1602075544 745 6c39dfa54636b200147c0954e39df1cb "pdflatex"
   (generated)
   "main.ind"
   "main.ilg"
-["pdflatex"] 1601891800 "main.tex" "main.pdf" "main" 1601891801
+["pdflatex"] 1602075574 "main.tex" "main.pdf" "main" 1602075574
   "../../header.tex" 1601361719 96 463a560c16c176df178dc43a2c4ba969 ""
   "../../preamble.tex" 1601453055 5777 cee6d2137c9bfede496781e09320dbb9 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1591545468 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -273,17 +273,18 @@
   "lectures/lec3.tex" 1601220691 5496 cd04a6ffbde3d1cf884f9c716470221b ""
   "lectures/lec4.tex" 1601286991 5505 5bb9b3a64fccdfaf8db4258b241eb963 ""
   "lectures/lec5.tex" 1601470857 7097 121a458c42b17aff4fb8cff6691ed738 ""
-  "lectures/lec6.tex" 1601891798 5465 b9b42d09d44f85c55c67752ce95a6595 ""
-  "main.aux" 1601891801 30461 bda5ec0718bfe53da1bd84362c00ca8a "pdflatex"
-  "main.ind" 1601886710 849 66df83a932d579b6002b2fa7716e2281 "makeindex main.idx"
-  "main.loe" 1601891801 9305 a96a8b2cf550ff21c6653a69940372db "pdflatex"
-  "main.tex" 1601885755 320 b4d453b5c2cb2c910836bf8780902b2a ""
-  "main.toc" 1601891801 704 de6121601c8f4172b239accd342efcd2 "pdflatex"
+  "lectures/lec6.tex" 1601896662 5465 b9b42d09d44f85c55c67752ce95a6595 ""
+  "lectures/lec7.tex" 1602075574 4741 3944aa68207cf9032dd238334ace74e3 ""
+  "main.aux" 1602075544 33821 942d2b1dc093ea316d7b46a0cc15e4c9 "pdflatex"
+  "main.ind" 1602074128 850 360ea5bac2a5bd306ec86f031f68e565 "makeindex main.idx"
+  "main.loe" 1602075544 10293 72a8509e93d532119ee7004e1003510f "pdflatex"
+  "main.tex" 1602069412 348 6d4cd1e666e07a240b87e61261141c4d ""
+  "main.toc" 1602075544 834 6fe55d0e258734bd8779bda0d7390cb0 "pdflatex"
   (generated)
-  "main.loe"
   "main.thm"
+  "main.loe"
   "main.toc"
   "main.aux"
-  "main.log"
   "main.pdf"
+  "main.log"
   "main.idx"

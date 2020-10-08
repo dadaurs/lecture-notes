@@ -1,111 +1,124 @@
-\contentsline {thm}{{Theorème}{1}{env. -400}}{3}{thm.1}%
-\contentsline {lemma}{{Lemme}{2}{Lemme}}{3}{lemma.2}%
-\contentsline {proof}{{Preuve}{}{}}{3}{proof.1}%
-\contentsline {proof}{{Preuve}{}{}}{3}{proof.2}%
-\contentsline {axiom}{{Axiom}{3}{Nombres Reels}}{4}{axiom.3}%
-\contentsline {lemma}{{Lemme}{4}{Theorem name}}{5}{lemma.4}%
-\contentsline {proof}{{Preuve}{}{}}{5}{proof.3}%
-\contentsline {propo}{{Proposition}{5}{Annulation de l'element neutre}}{5}{propo.5}%
-\contentsline {proof}{{Preuve}{}{}}{5}{proof.4}%
-\contentsline {crly}{{Corollaire}{6}{x fois moins 1 egale -x}}{5}{crly.6}%
-\contentsline {proof}{{Preuve}{}{}}{5}{proof.5}%
-\contentsline {axiom}{{Axiom}{7}{Nombres Reels II}}{6}{axiom.7}%
-\contentsline {defn}{{Definition}{1}{valeur absolue}}{6}{defn.1}%
-\contentsline {propo}{{Proposition}{8}{Inegalite du triangle}}{6}{propo.8}%
-\contentsline {proof}{{Preuve}{}{}}{6}{proof.6}%
-\contentsline {defn}{{Definition}{2}{Bornes}}{7}{defn.2}%
-\contentsline {axiom}{{Axiom}{9}{Axiome de completude}}{7}{axiom.9}%
-\contentsline {rmq}{{Remarque}{10}{}}{7}{rmq.10}%
-\contentsline {defn}{{Definition}{3}{Supremum}}{7}{defn.3}%
-\contentsline {rmq}{{Remarque}{11}{}}{7}{rmq.11}%
-\contentsline {rmq}{{Remarque}{12}{}}{7}{rmq.12}%
-\contentsline {rmq}{{Remarque}{13}{}}{7}{rmq.13}%
-\contentsline {propo}{{Proposition}{14}{}}{8}{propo.14}%
-\contentsline {proof}{{Preuve}{}{}}{8}{proof.7}%
-\contentsline {crly}{{Corollaire}{15}{Propriete archimedienne}}{8}{crly.15}%
-\contentsline {proof}{{Preuve}{}{}}{8}{proof.8}%
-\contentsline {thm}{{Theorème}{16}{La racine de deux existe}}{8}{thm.16}%
-\contentsline {proof}{{Preuve}{}{}}{8}{proof.9}%
-\contentsline {rmq}{{Remarque}{17}{}}{9}{rmq.17}%
-\contentsline {propo}{{Proposition}{18}{$\mathbb {Q}$ est dense dans $\mathbb {R}$}}{9}{propo.18}%
-\contentsline {lemma}{{Lemme}{19}{}}{9}{lemma.19}%
-\contentsline {proof}{{Preuve}{}{}}{9}{proof.10}%
-\contentsline {proof}{{Preuve}{}{Preuve de la densite}}{10}{proof.11}%
-\contentsline {propo}{{Proposition}{20}{Densite des irrationnels}}{10}{propo.20}%
-\contentsline {proof}{{Preuve}{}{}}{10}{proof.12}%
-\contentsline {defn}{{Definition}{4}{Suite}}{11}{defn.4}%
-\contentsline {rmq}{{Remarque}{21}{}}{11}{rmq.21}%
-\contentsline {exemple}{{Exemple}{22}{}}{11}{exemple.22}%
-\contentsline {defn}{{Definition}{5}{Convergence de suites}}{11}{defn.5}%
-\contentsline {lemma}{{Lemme}{23}{Unicite de la limite}}{11}{lemma.23}%
-\contentsline {proof}{{Preuve}{}{}}{11}{proof.13}%
-\contentsline {exemple}{{Exemple}{24}{}}{12}{exemple.24}%
-\contentsline {defn}{{Definition}{6}{}}{12}{defn.6}%
-\contentsline {lemma}{{Lemme}{25}{}}{12}{lemma.25}%
-\contentsline {proof}{{Preuve}{}{}}{12}{proof.14}%
-\contentsline {exemple}{{Exemple}{26}{}}{12}{exemple.26}%
-\contentsline {proof}{{Preuve}{}{}}{12}{proof.15}%
-\contentsline {propo}{{Proposition}{27}{}}{12}{propo.27}%
-\contentsline {proof}{{Preuve}{}{}}{12}{proof.16}%
-\contentsline {lemma}{{Lemme}{28}{}}{13}{lemma.28}%
-\contentsline {proof}{{Preuve}{}{}}{13}{proof.17}%
-\contentsline {rmq}{{Remarque}{29}{}}{13}{rmq.29}%
-\contentsline {propo}{{Proposition}{30}{Inversion d'une limite}}{14}{propo.30}%
-\contentsline {crly}{{Corollaire}{31}{}}{14}{crly.31}%
-\contentsline {lemma}{{Lemme}{32}{}}{14}{lemma.32}%
-\contentsline {proof}{{Preuve}{}{}}{14}{proof.18}%
-\contentsline {proof}{{Preuve}{}{}}{14}{proof.19}%
-\contentsline {exemple}{{Exemple}{33}{}}{14}{exemple.33}%
-\contentsline {propo}{{Proposition}{34}{}}{15}{propo.34}%
-\contentsline {propo}{{Proposition}{35}{}}{15}{propo.35}%
-\contentsline {proof}{{Preuve}{}{}}{15}{proof.20}%
-\contentsline {proof}{{Preuve}{}{}}{15}{proof.21}%
-\contentsline {exemple}{{Exemple}{36}{}}{15}{exemple.36}%
-\contentsline {lemma}{{Lemme}{37}{Deux gendarmes}}{16}{lemma.37}%
-\contentsline {proof}{{Preuve}{}{}}{16}{proof.22}%
-\contentsline {defn}{{Definition}{7}{Limsup et liminf}}{16}{defn.7}%
-\contentsline {thm}{{Theorème}{38}{}}{17}{thm.38}%
-\contentsline {proof}{{Preuve}{}{}}{17}{proof.23}%
-\contentsline {thm}{{Theorème}{39}{Premiere regle de d'Alembert}}{17}{thm.39}%
-\contentsline {rmq}{{Remarque}{40}{}}{18}{rmq.40}%
-\contentsline {exemple}{{Exemple}{41}{}}{18}{exemple.41}%
-\contentsline {proof}{{Preuve}{}{}}{18}{proof.24}%
-\contentsline {rmq}{{Remarque}{42}{}}{18}{rmq.42}%
-\contentsline {defn}{{Definition}{8}{Sous-suite}}{18}{defn.8}%
-\contentsline {exemple}{{Exemple}{43}{}}{19}{exemple.43}%
-\contentsline {propo}{{Proposition}{44}{}}{19}{propo.44}%
-\contentsline {proof}{{Preuve}{}{}}{19}{proof.25}%
-\contentsline {thm}{{Theorème}{45}{Bolzano-Weierstrass}}{19}{thm.45}%
-\contentsline {proof}{{Preuve}{}{}}{19}{proof.26}%
-\contentsline {defn}{{Definition}{9}{Point d'accumulation}}{19}{defn.9}%
-\contentsline {exemple}{{Exemple}{46}{}}{19}{exemple.46}%
-\contentsline {defn}{{Definition}{10}{Suites de Cauchy}}{20}{defn.10}%
-\contentsline {exemple}{{Exemple}{47}{}}{20}{exemple.47}%
-\contentsline {lemma}{{Lemme}{48}{}}{20}{lemma.48}%
-\contentsline {proof}{{Preuve}{}{}}{20}{proof.27}%
-\contentsline {thm}{{Theorème}{49}{Convergence des suites de Caucjy}}{20}{thm.49}%
-\contentsline {proof}{{Preuve}{}{}}{20}{proof.28}%
-\contentsline {lemma}{{Lemme}{50}{}}{20}{lemma.50}%
-\contentsline {proof}{{Preuve}{}{}}{20}{proof.29}%
-\contentsline {rmq}{{Remarque}{51}{}}{21}{rmq.51}%
-\contentsline {exemple}{{Exemple}{52}{}}{21}{exemple.52}%
-\contentsline {defn}{{Definition}{11}{Serie}}{21}{defn.11}%
-\contentsline {crly}{{Corollaire}{53}{}}{22}{crly.53}%
-\contentsline {proof}{{Preuve}{}{}}{22}{proof.30}%
-\contentsline {crly}{{Corollaire}{54}{}}{22}{crly.54}%
-\contentsline {crly}{{Corollaire}{55}{}}{22}{crly.55}%
-\contentsline {crly}{{Corollaire}{56}{Critere de Cauchy pour les séries}}{23}{crly.56}%
-\contentsline {proof}{{Preuve}{}{}}{23}{proof.31}%
-\contentsline {exemple}{{Exemple}{57}{}}{23}{exemple.57}%
-\contentsline {propo}{{Proposition}{58}{}}{23}{propo.58}%
-\contentsline {proof}{{Preuve}{}{}}{23}{proof.32}%
-\contentsline {propo}{{Proposition}{59}{Serie Geometrique}}{24}{propo.59}%
-\contentsline {proof}{{Preuve}{}{}}{24}{proof.33}%
-\contentsline {propo}{{Proposition}{60}{Série Harmonique}}{24}{propo.60}%
-\contentsline {proof}{{Preuve}{}{}}{24}{proof.34}%
-\contentsline {proof}{{Preuve}{}{}}{24}{proof.35}%
-\contentsline {propo}{{Proposition}{61}{Critère de Comparaison}}{25}{propo.61}%
-\contentsline {proof}{{Preuve}{}{}}{25}{proof.36}%
-\contentsline {rmq}{{Remarque}{62}{}}{25}{rmq.62}%
-\contentsline {crly}{{Corollaire}{63}{}}{25}{crly.63}%
-\contentsline {proof}{{Preuve}{}{}}{25}{proof.37}%
+\contentsline {thm}{{Theorème}{1}{env. -400}}{4}{thm.1}%
+\contentsline {lemma}{{Lemme}{2}{Lemme}}{4}{lemma.2}%
+\contentsline {proof}{{Preuve}{}{}}{4}{proof.1}%
+\contentsline {proof}{{Preuve}{}{}}{4}{proof.2}%
+\contentsline {axiom}{{Axiom}{3}{Nombres Reels}}{5}{axiom.3}%
+\contentsline {lemma}{{Lemme}{4}{Theorem name}}{6}{lemma.4}%
+\contentsline {proof}{{Preuve}{}{}}{6}{proof.3}%
+\contentsline {propo}{{Proposition}{5}{Annulation de l'element neutre}}{6}{propo.5}%
+\contentsline {proof}{{Preuve}{}{}}{6}{proof.4}%
+\contentsline {crly}{{Corollaire}{6}{x fois moins 1 egale -x}}{6}{crly.6}%
+\contentsline {proof}{{Preuve}{}{}}{6}{proof.5}%
+\contentsline {axiom}{{Axiom}{7}{Nombres Reels II}}{7}{axiom.7}%
+\contentsline {defn}{{Definition}{1}{valeur absolue}}{7}{defn.1}%
+\contentsline {propo}{{Proposition}{8}{Inegalite du triangle}}{7}{propo.8}%
+\contentsline {proof}{{Preuve}{}{}}{7}{proof.6}%
+\contentsline {defn}{{Definition}{2}{Bornes}}{8}{defn.2}%
+\contentsline {axiom}{{Axiom}{9}{Axiome de completude}}{8}{axiom.9}%
+\contentsline {rmq}{{Remarque}{10}{}}{8}{rmq.10}%
+\contentsline {defn}{{Definition}{3}{Supremum}}{8}{defn.3}%
+\contentsline {rmq}{{Remarque}{11}{}}{8}{rmq.11}%
+\contentsline {rmq}{{Remarque}{12}{}}{8}{rmq.12}%
+\contentsline {rmq}{{Remarque}{13}{}}{8}{rmq.13}%
+\contentsline {propo}{{Proposition}{14}{}}{9}{propo.14}%
+\contentsline {proof}{{Preuve}{}{}}{9}{proof.7}%
+\contentsline {crly}{{Corollaire}{15}{Propriete archimedienne}}{9}{crly.15}%
+\contentsline {proof}{{Preuve}{}{}}{9}{proof.8}%
+\contentsline {thm}{{Theorème}{16}{La racine de deux existe}}{9}{thm.16}%
+\contentsline {proof}{{Preuve}{}{}}{9}{proof.9}%
+\contentsline {rmq}{{Remarque}{17}{}}{10}{rmq.17}%
+\contentsline {propo}{{Proposition}{18}{$\mathbb {Q}$ est dense dans $\mathbb {R}$}}{10}{propo.18}%
+\contentsline {lemma}{{Lemme}{19}{}}{10}{lemma.19}%
+\contentsline {proof}{{Preuve}{}{}}{10}{proof.10}%
+\contentsline {proof}{{Preuve}{}{Preuve de la densite}}{11}{proof.11}%
+\contentsline {propo}{{Proposition}{20}{Densite des irrationnels}}{11}{propo.20}%
+\contentsline {proof}{{Preuve}{}{}}{11}{proof.12}%
+\contentsline {defn}{{Definition}{4}{Suite}}{12}{defn.4}%
+\contentsline {rmq}{{Remarque}{21}{}}{12}{rmq.21}%
+\contentsline {exemple}{{Exemple}{22}{}}{12}{exemple.22}%
+\contentsline {defn}{{Definition}{5}{Convergence de suites}}{12}{defn.5}%
+\contentsline {lemma}{{Lemme}{23}{Unicite de la limite}}{12}{lemma.23}%
+\contentsline {proof}{{Preuve}{}{}}{12}{proof.13}%
+\contentsline {exemple}{{Exemple}{24}{}}{13}{exemple.24}%
+\contentsline {defn}{{Definition}{6}{}}{13}{defn.6}%
+\contentsline {lemma}{{Lemme}{25}{}}{13}{lemma.25}%
+\contentsline {proof}{{Preuve}{}{}}{13}{proof.14}%
+\contentsline {exemple}{{Exemple}{26}{}}{13}{exemple.26}%
+\contentsline {proof}{{Preuve}{}{}}{13}{proof.15}%
+\contentsline {propo}{{Proposition}{27}{}}{13}{propo.27}%
+\contentsline {proof}{{Preuve}{}{}}{13}{proof.16}%
+\contentsline {lemma}{{Lemme}{28}{}}{14}{lemma.28}%
+\contentsline {proof}{{Preuve}{}{}}{14}{proof.17}%
+\contentsline {rmq}{{Remarque}{29}{}}{14}{rmq.29}%
+\contentsline {propo}{{Proposition}{30}{Inversion d'une limite}}{15}{propo.30}%
+\contentsline {crly}{{Corollaire}{31}{}}{15}{crly.31}%
+\contentsline {lemma}{{Lemme}{32}{}}{15}{lemma.32}%
+\contentsline {proof}{{Preuve}{}{}}{15}{proof.18}%
+\contentsline {proof}{{Preuve}{}{}}{15}{proof.19}%
+\contentsline {exemple}{{Exemple}{33}{}}{15}{exemple.33}%
+\contentsline {propo}{{Proposition}{34}{}}{16}{propo.34}%
+\contentsline {propo}{{Proposition}{35}{}}{16}{propo.35}%
+\contentsline {proof}{{Preuve}{}{}}{16}{proof.20}%
+\contentsline {proof}{{Preuve}{}{}}{16}{proof.21}%
+\contentsline {exemple}{{Exemple}{36}{}}{16}{exemple.36}%
+\contentsline {lemma}{{Lemme}{37}{Deux gendarmes}}{17}{lemma.37}%
+\contentsline {proof}{{Preuve}{}{}}{17}{proof.22}%
+\contentsline {defn}{{Definition}{7}{Limsup et liminf}}{17}{defn.7}%
+\contentsline {thm}{{Theorème}{38}{}}{18}{thm.38}%
+\contentsline {proof}{{Preuve}{}{}}{18}{proof.23}%
+\contentsline {thm}{{Theorème}{39}{Premiere regle de d'Alembert}}{18}{thm.39}%
+\contentsline {rmq}{{Remarque}{40}{}}{19}{rmq.40}%
+\contentsline {exemple}{{Exemple}{41}{}}{19}{exemple.41}%
+\contentsline {proof}{{Preuve}{}{}}{19}{proof.24}%
+\contentsline {rmq}{{Remarque}{42}{}}{19}{rmq.42}%
+\contentsline {defn}{{Definition}{8}{Sous-suite}}{19}{defn.8}%
+\contentsline {exemple}{{Exemple}{43}{}}{20}{exemple.43}%
+\contentsline {propo}{{Proposition}{44}{}}{20}{propo.44}%
+\contentsline {proof}{{Preuve}{}{}}{20}{proof.25}%
+\contentsline {thm}{{Theorème}{45}{Bolzano-Weierstrass}}{20}{thm.45}%
+\contentsline {proof}{{Preuve}{}{}}{20}{proof.26}%
+\contentsline {defn}{{Definition}{9}{Point d'accumulation}}{20}{defn.9}%
+\contentsline {exemple}{{Exemple}{46}{}}{20}{exemple.46}%
+\contentsline {defn}{{Definition}{10}{Suites de Cauchy}}{21}{defn.10}%
+\contentsline {exemple}{{Exemple}{47}{}}{21}{exemple.47}%
+\contentsline {lemma}{{Lemme}{48}{}}{21}{lemma.48}%
+\contentsline {proof}{{Preuve}{}{}}{21}{proof.27}%
+\contentsline {thm}{{Theorème}{49}{Convergence des suites de Caucjy}}{21}{thm.49}%
+\contentsline {proof}{{Preuve}{}{}}{21}{proof.28}%
+\contentsline {lemma}{{Lemme}{50}{}}{21}{lemma.50}%
+\contentsline {proof}{{Preuve}{}{}}{21}{proof.29}%
+\contentsline {rmq}{{Remarque}{51}{}}{22}{rmq.51}%
+\contentsline {exemple}{{Exemple}{52}{}}{22}{exemple.52}%
+\contentsline {defn}{{Definition}{11}{Serie}}{22}{defn.11}%
+\contentsline {crly}{{Corollaire}{53}{}}{23}{crly.53}%
+\contentsline {proof}{{Preuve}{}{}}{23}{proof.30}%
+\contentsline {crly}{{Corollaire}{54}{}}{23}{crly.54}%
+\contentsline {crly}{{Corollaire}{55}{}}{23}{crly.55}%
+\contentsline {crly}{{Corollaire}{56}{Critere de Cauchy pour les séries}}{24}{crly.56}%
+\contentsline {proof}{{Preuve}{}{}}{24}{proof.31}%
+\contentsline {exemple}{{Exemple}{57}{}}{24}{exemple.57}%
+\contentsline {propo}{{Proposition}{58}{}}{24}{propo.58}%
+\contentsline {proof}{{Preuve}{}{}}{24}{proof.32}%
+\contentsline {propo}{{Proposition}{59}{Serie Geometrique}}{25}{propo.59}%
+\contentsline {proof}{{Preuve}{}{}}{25}{proof.33}%
+\contentsline {propo}{{Proposition}{60}{Série Harmonique}}{25}{propo.60}%
+\contentsline {proof}{{Preuve}{}{}}{25}{proof.34}%
+\contentsline {proof}{{Preuve}{}{}}{25}{proof.35}%
+\contentsline {propo}{{Proposition}{61}{Critère de Comparaison}}{26}{propo.61}%
+\contentsline {proof}{{Preuve}{}{}}{26}{proof.36}%
+\contentsline {rmq}{{Remarque}{62}{}}{26}{rmq.62}%
+\contentsline {crly}{{Corollaire}{63}{}}{26}{crly.63}%
+\contentsline {proof}{{Preuve}{}{}}{26}{proof.37}%
+\contentsline {defn}{{Definition}{12}{Séries Alternées}}{27}{defn.12}%
+\contentsline {thm}{{Theorème}{64}{}}{27}{thm.64}%
+\contentsline {exemple}{{Exemple}{65}{}}{27}{exemple.65}%
+\contentsline {proof}{{Preuve}{}{}}{27}{proof.38}%
+\contentsline {defn}{{Definition}{13}{}}{28}{defn.13}%
+\contentsline {rmq}{{Remarque}{66}{}}{28}{rmq.66}%
+\contentsline {exemple}{{Exemple}{67}{}}{28}{exemple.67}%
+\contentsline {lemma}{{Lemme}{68}{}}{29}{lemma.68}%
+\contentsline {proof}{{Preuve}{}{}}{29}{proof.39}%
+\contentsline {thm}{{Theorème}{69}{}}{29}{thm.69}%
+\contentsline {exemple}{{Exemple}{70}{}}{29}{exemple.70}%
+\contentsline {proof}{{Preuve}{}{}}{29}{proof.40}%
+\contentsline {thm}{{Theorème}{71}{}}{30}{thm.71}%

@@ -23,7 +23,7 @@ que $A^{d}$ est un $A$-module.
 \[ 
 1_A. \vec{x}= \vec{x}
 \]
-\begin{exemples}
+\begin{exemple}
 \begin{itemize}
 \item $\phi: A\to B , \ker \phi$ est un $A$ module pour la multiplication dans $A$.
 	\begin{align*}
@@ -53,7 +53,7 @@ que $A^{d}$ est un $A$-module.
 	\]
 	
 	\end{rmq}
-\end{exemples}
+\end{exemple}
 \begin{defn}[$A$-Algebre]\index{$A$-Algebre}\label{defn:_a_algebre}
 	Une $A$-algebre est un anneau $(B,+,.)$ possedant une structure de $A$-module qui verifie la propriete d'associativité suivante:
 	\[ 
@@ -111,7 +111,7 @@ $ \left\{ 0_M \right\} \subset M$ est clairement stable par multiplication
 		
 	\item Plus généralement,
 		\[ 
-			\vec{x}= ( a_1,\ldots,a_d), A.\vec{x} = \left\{ a.\vec{x}=(a.a_1,\ldots,a.a_n| a \inA \right\} 
+			\vec{x}= ( a_1,\ldots,a_d), A.\vec{x} = \left\{ a.\vec{x}=(a.a_1,\ldots,a.a_n | a \in A \right\} 
 		\]
 		est un sous-module de $A^{d}$.
 		
@@ -119,12 +119,12 @@ $ \left\{ 0_M \right\} \subset M$ est clairement stable par multiplication
 	Soient $a\in A, \vec{v},\vec{v'} \in A.\vec{x}$
 	\begin{align*}
 	\vec{v} = a'.(a_1,\ldots,a_d)=a'.\vec{x}\\
-	\vec{v'}=a' ' ( a_1.\ldots,a_d) = a ' '.\vec{x}
+	\vec{v'}=a'' ( a_1,\ldots,a_d) = a''.\vec{x}
 	\end{align*}
 	
 	Critère de sous-module:
 	\begin{align*}
-		a.\vec{v} + \vec{v'} = a.a'.\vec{x} + a' '.\vec{x} = ( a.a'+a' ').\vec{x} \in A.\vec{x}
+		a.\vec{v} + \vec{v'} = a.a'.\vec{x} + a''.\vec{x} = ( a.a'+a'').\vec{x} \in A.\vec{x}
 	\end{align*}
 	
 	\end{proof}
@@ -155,7 +155,7 @@ est un sous-module.
 \begin{thm}
 	Soit $X\subset M$ un ensemble alors $\eng{X}$ est soit le module nul $ \left\{ 0_M \right\} $ si $X$ est vide, soit l'ensemble des combinaisons linéaires d'éléments de $X$ à coefficients dans $A$ :
 	\[ 
-		\eng{X} = CL_A(X) := \left\{ \sum_{i=1}^{ n}a_i \ast x_i,, n\geq 1, a_1,\ldots,a_n \inA, x_1,\ldots,x_n \inX \right\} .
+		\eng{X} = CL_A(X) := \left\{ \sum_{i=1}^{ n}a_i \ast x_i,, n\geq 1, a_1,\ldots,a_n \in A, x_1,\ldots,x_n \in X \right\} .
 	\]
 	Pour tout $n\geq 1$.
 	
@@ -180,7 +180,7 @@ Soit $a \in A, u,v \in CL_A(X)$
 \]
 Or
 \begin{align*}
-u= a_1x_1+ \ldots + a_n x_n, a_i \in  A, x_i \inX\\
+u= a_1x_1+ \ldots + a_n x_n, a_i \in  A, x_i \in X\\
 v= a'_1x'_1+ \ldots + a'_m x'_m a'_j \in A, x'_j \in X\\
 a\ast u +v = a.a_1\ast x_1 + \ldots + a.a_n\ast x_n + a'_1 \ast x'_1 + \ldots + a'_m \ast x'_m \in CL_{A} ( X)
 \end{align*}

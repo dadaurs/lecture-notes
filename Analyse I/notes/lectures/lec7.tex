@@ -1,0 +1,194 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Wed 07 Oct}{mercredi}
+\begin{defn}[Séries Alternées]
+	$(x_n)$ est alternée si $x_n \cdot x_{n+1} \leq 0 \forall n$
+\end{defn}
+\begin{thm}
+	Soit $(x_n)$ alternée, $|x_n|$ décroissante, et
+	\[ 
+	\lim_{n \to  + \infty} x_n =0
+	\]
+	Alors
+	\[ 
+	\sum_{n=0}^{ \infty} x_n \text{ converge. } 
+	\]
+	
+\end{thm}
+\begin{exemple}
+\[ 
+	\sum_{n=1}^{ \infty} \frac{(-1)^{n}}{n}
+\]
+converge. ( série harmonique alternée)\footnote{En fait la série converge vers $- \log 2$}
+\end{exemple}
+\begin{proof}
+On utilise cauchy.\\
+Soit $n,m \in \mathbb{N}$.
+\[ 
+\underbrace{x_n + x_{n+1}}_{\geq 0} + x_{n+2} + \ldots + x_{n+m-1} + x_{n+m} 
+\]
+Cas $x_n \geq 0$:\\
+Cas où $n$ pair
+\[ 
+0 \leq \sum_{p=n}^{ n_m}x_p \leq x_n
+\]
+Si $m$ impair:\\
+idem\\
+Que $n$ soit pair ou impair
+\[ 
+	\abs{ \sum_{p=n}^{ n+m}x_p} \leq |x_n|
+\]
+Or, soit $\epsilon > 0$ 
+\[ 
+\lim_{n \to  + \infty} x_n = 0 \Rightarrow 
+\]
+$\exists N \forall n > N| \abs{x_n} \leq \epsilon.$
+
+Donc $\forall n > N, m |$ 
+\[ 
+	\abs{x_{n} + \ldots + x_{n+m} } < \epsilon
+\]
+\end{proof}
+\subsubsection{Un calcul naif ( avec la série harmonique alternée)}
+Soit $S= \sum_{n=1}^{ \infty} \frac{(-1)^{n}}{n}$, existe par le théorème.\\
+Note: $S < 0.$\\
+ \[ 
+	 s_n = \underbrace{-1 + \frac{1}{2}}_{= -\frac{1}{2}} \underbrace{-\frac{1}{3} + \frac{1}{4} }_{< 0}- \ldots + \frac{(-1)^{n}}{n}
+\]
+$s_n < -\frac{1}{n}, \forall n \text{ pair }  \Rightarrow S \leq -\frac{1}{2}$
+
+\[ 
+-1 + \frac{1}{2} - \frac{1}{3} + \frac{1}{4} - \frac{1}{5} + \frac{1}{6} + \ldots
+\]
+à chaque terme $x_n$, on associe $x_{ 2n }$
+
+\begin{align*}
+= -\frac{1}{2} + \frac{1}{4} - \frac{1}{6} + \frac{1}{8} - \frac{1}{10}  + \ldots\\
+= \frac{1}{2} ( -1 + \frac{1}{2} - \frac{1}{3} + \frac{1}{4} - \frac{1}{5} + \ldots) = \frac{1}{2} S
+\end{align*}
+Donc $S = \frac{1}{2}S \Rightarrow S =0$ Faux!\\
+Conclusion:\\
+On ne peut pas permuter ( en général) les termes d'une série convergente ( somme infinie)
+\begin{defn}
+On dit que la somme de 
+\[ 
+\sum_{n=0}^{ \infty} x_n
+\]
+converge absolument si 
+\[ 
+\sum_{n=0}^{ \infty} | x_n|
+\]
+converge.\\
+Note: la valeur 
+\[ 
+\sum_{n=0}^{ \infty} |x_n | 
+\]
+ne nous intéresse pas
+\end{defn}
+\begin{rmq}
+Si $x_n \geq 0 \forall n$, aucune différence entre ``convergence'' et ``convergence absolue''.
+\end{rmq}
+\begin{exemple}
+\begin{itemize}
+\item La série harmonique alternée converge, mais pas absolument.
+\end{itemize}
+\begin{lemma}
+Convergence absolue implique la convergence.
+\end{lemma}
+\begin{proof}
+$\forall n: 0 \leq x_n + |x_n| \leq 2 |x_n|$\\
+Donc convergence absolue  $\Rightarrow$ 
+\[ 
+	\sum ( x_n + |x_n|)
+\]
+converge.\\
+Or $ -\sum_{n=0}^{ \infty} |x_n|$
+converge .\\
+Somme des deux sommes ci-dessus, implique que
+\[ 
+\sum_{n=0}^{ \infty} x_n
+\]
+
+\end{proof}
+\begin{thm}
+Si 
+\[ 
+\sum_{n=0}^{ \infty} x_n 
+\]
+converge absolument, alors toute permutation converge vers la même somme.
+\end{thm}
+\begin{exemple}
+\[ 
+	\sum_{n=0}^{ \infty} \frac{x^{n}}{n!}, \sum_{n=0}^{ \infty} (-1)^{n} \frac{x^{2n+1}}{(2n+1)!}
+\]
+\end{exemple}
+Clarification:\\
+Soit $\sigma$ une permutation de $\mathbb{N}$, i.e. bijection.\\
+La nouvelle série sera
+\[ 
+	\sum_{n=0}^{ \infty} y_n \text{ pour } y_n = x_{\sigma(n)} 
+\]
+Notons $s_n = x_0 + \ldots + x_n$ et 
+\[ 
+	t_n = y_0 + \ldots + y_n = x_{\sigma(0)} + \ldots + x_{\sigma(n)} 
+\]
+Le théorème dit: si $ \sum_{n=0}^{ \infty} |x_n|$ existe, alors $\lim s_n = \lim t_n$.
+\begin{proof}
+1er cas ``facile'' .\\
+Supposons $x_n \geq 0 \forall n$.\\
+Alors $ \sum_{n=0}^{ \infty} x_n = \sup \left\{ s_n | n \in \mathbb{N} \right\} $\\
+On va montrer que $ \underbrace{\sup_n s_n}_{=:s} \geq \underbrace{\sup_n t_n}_{=:t}$ et que $ \sup_n s_n \leq \sup_n t_n$\\
+Pour $s \geq t$ : \\
+Soit $\epsilon > 0$. Or , par déf, $\exists n t_n > t - \epsilon$\\
+ie
+\[ 
+y_0 + \ldots + y_n > t- \epsilon
+\]
+ie
+\[ 
+	x_{\sigma(0)} + \ldots + x_{\sigma(n)} > t - \epsilon
+\]
+Soit $m = max_{i=0,\ldots, n} \sigma(i)$, alors
+\[ 
+s_m \geq t - \epsilon
+\]
+donc 
+\[ 
+s = \sup s_n > t - \epsilon
+\]
+vrai $\forall \epsilon> 0 \Rightarrow  s \geq t$\\
+En considérant $\sigma ^{-1}$, on obtien de même $t \geq s \Rightarrow s =t$, donc
+le théorème vrai SI $x_n \geq 0$.\\
+2ème cas: $x_n \leq 0 \forall n$, idem\\
+Cas général:\\
+Posons $x_n = x'_n _ x''_n$, ou
+$x'_n = \max(x_n,0)$ et $x''_n = \min(x_n,0)$, alors
+ \[ 
+	 x_{\sigma(n)}  = x'_{\sigma(n)}  + x''_{\sigma(n)}
+\]
+On conclut en appliquant le cas ( 1) a  $x'_n$ et ( 2) ou $x''_n$
+\end{proof}
+\begin{thm}
+Supposons que 
+\[ 
+\sum_{n=0}^{ \infty} x_n
+\]
+converge, mais pas absolument.\\
+$\forall l \in \mathbb{R} \exists $ permutation $\sigma$ t.q.
+\[ 
+	\sum_{n=0}^{ \infty} x_{\sigma(n)}  = l.
+\]
+
+\end{thm}
+
+
+\end{exemple}
+
+
+
+
+
+
+
+
+\end{document}	

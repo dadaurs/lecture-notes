@@ -62,6 +62,66 @@ Soit $x,y \in G/R$, alors
 \[ 
 	x = [ g] ,y \in [ f]
 \]
+On définit
+\[ 
+x\cdot y := [ g\cdot f]
+\]
+Problème on peut choisir différents représentatifs.\\
+Donc Pour que la définition sooit sensée, iil faut que
+\[ 
+	[ g\cdot f]= [ g'\cdot f'] ( \forall ( g,g')\in R ( f,f')\in R)
+\]
+Pour l'inverse\\
+\begin{align*}
+x\in G /R\\
+x =[g]\\
+x^{-1} = [ g^{-1}]
+\end{align*}
+Elément neutre de $G/ R$:\\
+$[e] \in G /R$
+\begin{propo}
+La définition précédente nous donne une structure de groupe sur $G /R$.\\
+
+Les opérations sont bien définies.
+\[ 
+	( g,g')\in R ( h,h')\in R \Rightarrow ( g.h, g'.h')\in R
+\]
+\[ 
+	( g,g')\in R \Rightarrow ( g^{-1}, ( g')^{-1})\in R
+\]
+
+\end{propo}
+
+\begin{proof}
+Il faut vérifier les 3 conditions de groupe.\\
+\begin{itemize}
+	\item ( associativité)
+		\[ 
+			x\cdot ( y\cdot z)= [ g] \cdot [ f\cdot h]= [ g \cdot f] \cdot [ h] = ( x\cdot y)\cdot z
+		\]
+		Les deux autres propriétés sont laissées en exercice.
+\end{itemize}
+
+\end{proof}
+\begin{exemple}[$G = \mathbb{Z}, +$]
+Soit
+\[ 
+	R = \left\{ ( x,y) \in \mathbb{Z} \vert m | x-y \right\} 
+\]
+\hr\\
+\[ 
+	G /R = \left\{ m\cdot \mathbb{Z}, m \mathbb{Z}+1, \ldots, m\mathbb{Z}+ ( m-1) \right\} 
+\]
+Les éléments sont de $G /R$ sont des éléments et des groupes.\\
+Il faut vérifier que $+$ et $-$ sont bien définis par rapport à $R$ et ainsi on obtien le groupe
+\[ 
+	( \mathbb{Z} / m \mathbb{Z} , +) 
+\]
+
+
+\end{exemple}
+
+
 
 
 \end{document}	

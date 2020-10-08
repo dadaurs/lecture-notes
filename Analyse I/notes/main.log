@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.8)  5 OCT 2020 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.8)  7 OCT 2020 14:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -963,7 +963,7 @@ showing defn
 showing lemma
 (./main.loe [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) [2]) (./lectures/lec1.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]) [3]) (./lectures/lec1.tex
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 3.
  (/usr/share/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -995,7 +995,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
-[3
+[4
 
 ]
 
@@ -1033,7 +1033,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--88
  []
 
 Package mdframed Info: Not enough space on this page on input line 90.
-[4]
+[5]
 Package mdframed Info: Not enough space on this page on input line 90.
 
 Underfull \hbox (badness 10000) in paragraph at lines 92--94
@@ -1047,7 +1047,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--138
 
  []
 
-[5]
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
@@ -1059,7 +1059,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--160
 
 ) (./lectures/lec2.tex
 Package hyperref Info: bookmark level for unknown defn defaults to 0 on input line 5.
- [6]
+ [7]
 Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
@@ -1075,7 +1075,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
-[7]
+[8]
 Package mdframed Info: Not enough space on this page on input line 89.
 
 Underfull \hbox (badness 10000) in paragraph at lines 95--97
@@ -1087,7 +1087,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-[8]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
@@ -1096,14 +1096,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--155
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 160.
 
-[9]) (./lectures/lec3.tex
+[10]) (./lectures/lec3.tex
 Underfull \hbox (badness 10000) in paragraph at lines 16--18
 
  []
 
-[10]
+[11]
 Package hyperref Info: bookmark level for unknown exemple defaults to 0 on input line 46.
- [11] [12]
+ [12] [13]
 Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
@@ -1114,14 +1114,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
  []
 
 Package mdframed Info: Not enough space on this page on input line 23.
-[13]
+[14]
 Package mdframed Info: Not enough space on this page on input line 23.
 
 Underfull \hbox (badness 10000) in paragraph at lines 66--69
 
  []
 
-[14]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 75--77
 
  []
@@ -1131,32 +1131,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
-[15]
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 167--169
 
  []
 
-) (./lectures/lec5.tex [16] [17]
+) (./lectures/lec5.tex [17] [18]
 Underfull \hbox (badness 10000) in paragraph at lines 66--69
 
  []
 
-[18] [19]
+[19] [20]
 Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
-[20]) (./lectures/lec6.tex
+[21]) (./lectures/lec6.tex
 Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-[21] [22]
+[22] [23]
 Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
-[23]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 178--180
 
  []
@@ -1166,33 +1166,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
-[24] [25])
+[25] [26]) (./lectures/lec7.tex
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+
+ []
+
+[27] [28]
+Overfull \hbox (3.47044pt too wide) in paragraph at lines 117--119
+\T1/cmr/m/it/10 converge ab-so-lu-ment, alors toute per-mu-ta-tion converge vers la même somme. 
+ []
+
+[29]
+./lectures/lec7.tex:164: Double subscript.
+l.164 Posons $x_n = x'_n _
+                           x''_n$, ou
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./lectures/lec7.tex:164: Double subscript.
+<recently read> _
+                 
+l.164 Posons $x_n = x'_n _ x''_
+                               n$, ou
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+)
 \tf@thm=\write8
+ [30]
 \tf@loe=\write9
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 16.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 16.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 17.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 17.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 16.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 16.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 17.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 17.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 16.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 17.
  ) 
 Here is how much of TeX's memory you used:
- 28062 strings out of 480478
- 509754 string characters out of 5905960
- 781126 words of memory out of 5000000
- 43189 multiletter control sequences out of 15000+600000
+ 28105 strings out of 480478
+ 510374 string characters out of 5905960
+ 781148 words of memory out of 5000000
+ 43195 multiletter control sequences out of 15000+600000
  555694 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,16n,62p,976b,750s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on main.pdf (25 pages, 401076 bytes).
+Output written on main.pdf (30 pages, 416476 bytes).
 PDF statistics:
- 632 PDF objects out of 1000 (max. 8388607)
- 572 compressed objects within 6 object streams
- 277 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 699 PDF objects out of 1000 (max. 8388607)
+ 633 compressed objects within 7 object streams
+ 311 named destinations out of 1000 (max. 500000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,10 +1,11 @@
 \babel@toc {french}{}
-\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Buts du Cours}{3}{subsection.1.1}%
-\contentsline {section}{\numberline {2}Definir $\mathbb {R}$}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Exemple d'utilisation}{6}{subsection.2.1}%
-\contentsline {section}{\numberline {3}Suites et limites}{11}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Convergence}{11}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Limsup et liminf}{16}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Suites de Cauchy}{20}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Series}{21}{section.5}%
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Buts du Cours}{4}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Definir $\mathbb {R}$}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Exemple d'utilisation}{7}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Suites et limites}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Convergence}{12}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Limsup et liminf}{17}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Suites de Cauchy}{21}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Series}{22}{section.5}%
+\contentsline {subsubsection}{\numberline {5.0.1}Un calcul naif ( avec la série harmonique alternée)}{28}{subsubsection.5.0.1}%
