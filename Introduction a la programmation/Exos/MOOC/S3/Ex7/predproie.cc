@@ -4,10 +4,10 @@ using namespace std;
 
 int main()
 {
-  // RÃ©duire le format d'affichage
+  // Réduire le format d'affichage
   cout << setprecision(4);
 
-  // ParamÃ¨tres
+  // Paramètres
   double taux_croissance_lapins(0.3);
   double taux_attaque(0.01);
   double taux_croissance_renards(0.008);
@@ -18,7 +18,7 @@ int main()
   double lapins_i(0.0);
 
   /*****************************************************
-   * ComplÃ©ter le code Ã  partir d'ici
+   * Compléter le code à  partir d'ici
    *****************************************************/
 
   // ===== PARTIE 1 =====

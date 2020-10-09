@@ -10,10 +10,70 @@
     \noindent\rule[0.5ex]{\linewidth}{0.5pt}\newline
 }
 \newtheorem{theorem}{Théorème}
+\newtheorem{lemma}{Lemme}
 \begin{document}
 \title{Série 3}
 \author{David Wiedemann}
 \maketitle
+On utilisera sans preuve que la composition de deux injections et une injection, que la composition d'une bijection avec une injection est une injection, que la composition d'une injection avec une bijection est une injection et que la composition d'une bijection avec une bijection est une bijection.\\
+\begin{lemma}
+	$ $\\
+	\begin{enumerate}
+		\item $|A| \leq |B|$ et $|B| \leq |C|$ implique $|A| \leq |C|$.
+		\item $|A| \leq |B|$ et $|B| = |C|$ implique $|A| \leq |C|$.
+		\item $|A| = |B|$ et $|B| = |C|$ implique $|A| = |C|$.
+	\end{enumerate}
+\end{lemma}
+\begin{proof}
+	\begin{enumerate}
+		\item Si $|A| \leq |B|$ alors il existe une injection  $\phi: A \to B$\\
+		Si $|B| \leq |C|$, alors il existe une injection $\psi:B \to C$.\\
+		Donc 
+		\[ 
+			\psi \circ \phi : A \to C
+		\]
+		est une injection, et donc
+		$|A| \leq |C|$.
+	\item Si $|A| \leq |B|$ alors il existe une injection  $\phi: A \to B$\\
+	Si $|B| = |C|$, alors il existe une injection $\psi:B \to C$.\\
+	Donc
+		\[ 
+			\psi \circ \phi : A \to C
+		\]
+		est une injection, et donc $|A| \leq |C|$.
+	\item Si $|A| = |B|$, alors il existe une bijection  $\phi: A \to B$
+	 Si $|B| = |C|$, alors il existe une bijection  $\psi: B \to C$.\\
+	 Alors
+	 \[ 
+	 \psi \circ \phi : A \to C
+	 \]
+	 est une bijection et donc $|A| = |C|$
+	 
+	 
+		
+	\end{enumerate}
+\end{proof}
+
+
+\begin{theorem}
+	Il existe une infinité de nombres premiers.
+\end{theorem}
+
+\begin{proof}
+	Supposons par l'absurde qu'il existe un nombre fini de nombres premiers. Notons le nombre de nombres premiers $K$. On dénote par
+	\[ 
+	p_1,\ldots,p_K
+	\]
+	les $K$ nombres premiers.\\
+	Alors le nombre
+	\[ 
+	N=\prod_{i=1} ^{K} p_i + 1
+	\]
+	est premier.\\
+	En effet, par l'unicité de la décomposition en nombres premiers, $\exists p_k$ tel que $p_k | N+1$, or ceci implique que $p_k$ divise $1$ car $p_k | N$,\footnote{$p_k$ est un des facteurs de $N$ par définition} donc $p_k=1$ ce donc $p_k$ n'est pas premier. \\
+	Il existe donc un $K+1$-ième nombre premier.
+	
+\end{proof}
 \section*{1}
 On construit une bijection de $\mathbb{Z}$ vers $\mathbb{N}$.\\
 \begin{align*}
@@ -27,7 +87,7 @@ On construit une bijection de $\mathbb{Z}$ vers $\mathbb{N}$.\\
 On considère que le nombre 0 est pair.\\
 Pour vérifier que cette application définit une injection, on montre la surjectivité et l'injectivité.\\
 \subsection*{Surjectivité}
-Soit $n \in \mathbb{N}$, si $n$ pair, $\exists k \in \mathbb{N} \text{ tel que } n = 2k$. Alors $k$ est l'antécédent de $k$ par $\phi$.\\
+Soit $n \in \mathbb{N}$, si $n$ pair, $\exists k \in \mathbb{N} \text{ tel que } n = 2k$. Alors $k$ est l'antécédent de $n$ par $\phi$.\\
 Si $n$ impair, $\exists j \in \mathbb{N}$ tel que $2j+1=n$, on pose $k=-j$, alors $-2k+1 =n$ et $k$ est l'antécédent de $n$.
 \subsection*{Injectivité}
 Supposons $\exists k,j \in \mathbb{Z}$ tel que $\phi(k)=\phi(j)$. Si $k$ et $j$ sont de signe différent, alors soit $\phi(k)$ ou $\phi(j)$ est impair et donc l'égalité ne peut pas tenir.\\
@@ -59,7 +119,7 @@ En effet, si $ (a_1, \ldots, a_n) \neq ( b_1, \ldots ,b_n) \in \mathbb{N}^{n}$, 
 \]
 et donc l'application $\phi$ est injective.\\
 \hr
-On en déduit que $ |\mathbb{N}^{n}| = | \mathbb{N}|$
+On conclut avec Cantor-Schroeder-Bernstein et on a que $ |\mathbb{N}^{n}| = | \mathbb{N}|$
 \section*{3}
 On utilise à nouveau Cantor-Schroeder-Bernstein.\\
 \subsection*{Injection de $\mathbb{N} \to \mathbb{Q}$}
@@ -75,7 +135,7 @@ est une injection.\\
 \subsection*{Injection de $\mathbb{Q} \to \mathbb{N}$}
 On montre un résultat préliminaire.\\
 \begin{theorem}
-Si $ A_1, \ldots, A_n$ des ensembles infini dénombrables, alors
+Si $ A_1, \ldots, A_n$ $n$ ensembles infini dénombrables, alors
 \[ 
 K=A_1 \times \ldots \times A_n \text{ est infini dénombrable. } 
 \]
@@ -90,7 +150,7 @@ K=A_1 \times \ldots \times A_n \text{ est infini dénombrable. }
 		( a_1,\ldots, a_n) &\to ( \phi_1(a_1), \ldots, \phi_n(a_n))
 	\end{align*}
 	est une bijection.\\
-	En effet, soit $(b_1,\ldots,b_n) \in \mathbb{N}^{n}$, alors $(\phi^{-1}(b_1), \ldots, \phi^{-1}(b_n)) \in K$ est un antécédent, unique, de $(b_1,\ldots, b_n)$ et il existe $\forall b_i \in \mathbb{N}, 0 < i \leq n$.\\
+	En effet, soit $b=(b_1,\ldots,b_n) \in \mathbb{N}^{n}$, alors $(\phi^{-1}(b_1), \ldots, \phi^{-1}(b_n)) \in K$ est un antécédent, unique, de $(b_1,\ldots, b_n)$ et il existe $\forall b \in \mathbb{N}^{n} $.\\
 	Par la partie 2, on sait qu'il existe une bijection de $\Psi: \mathbb{N}^{n} \to \mathbb{N}$ et donc
 	\[ 
 	\Psi \circ \Phi
@@ -125,11 +185,11 @@ K=A_1 \times \ldots \times A_n \text{ est infini dénombrable. }
 \hr
 On est pret à montrer l'injection de $\mathbb{Q} \to \mathbb{N}$.\\
 On construit d'abord une bijection de $ \mathbb{Z} \times \mathbb{N} \setminus \left\{ 0 \right\} \to \mathbb{N} $.\\
-Soit $\phi: \mathbb{Z} \to \mathbb{N}$ la bijection définie précédemment et soit $t_1: \mathbb{N} \setminus \left\{ 0 \right\} \to \mathbb{N}$ la bijection\footnote{L'injectivité et la surjectivité de $t_1$ sont évidentes.}:
+Soit $\phi: \mathbb{Z} \to \mathbb{N}$ la bijection définie dans la partie 1 et soit $t_1: \mathbb{N} \setminus \left\{ 0 \right\} \to \mathbb{N}$ la bijection\footnote{L'injectivité et la surjectivité de $t_1$ sont évidentes.}:
 \[ 
 t_1: n \to n-1
 \]
-On peut donc, par le théorème 1, construire une bijection de $G:\mathbb{Z} \times \mathbb{N} \setminus \left\{ 0 \right\} \to \mathbb{N} $.
+On peut donc, par le théorème 2, construire une bijection de $G:\mathbb{Z} \times \mathbb{N} \setminus \left\{ 0 \right\} \to \mathbb{N} $.
 
 On définit la surjection\footnote{La surjectivité suit du fait qu'à chaque fraction, on puisse assimiler un 2-uplet.}
  \begin{align*}
@@ -140,7 +200,7 @@ Par l'exercice 5, de la série 2, on peut construire une injection $F$
 \begin{align*}
 	F: \mathbb{Q} &\to \mathbb{Z} \times \mathbb{N} \setminus \left\{ 0 \right\} 
 \end{align*}
-Et donc, on obtient que
+Et donc, par le lemme 1, on obtient que
 \begin{align*}
 |\mathbb{Q}| \leq |\mathbb{Z} \times \mathbb{N} \setminus \left\{ 0 \right\}| = |\mathbb{N}|\\
 \Rightarrow | \mathbb{Q}| \leq |\mathbb{N}|
@@ -149,48 +209,49 @@ Et donc, on obtient que
 On conclut avec Cantor-Schroeder-Bernstein.
 \section*{4}
 \begin{theorem}
-	On montre que l'union infinie dénombrable d'ensembles infinis dénombrables est, au plus, infini dénombrable.
+	On montre que l'union infinie dénombrable d'ensembles finis est, au plus, infini dénombrable.
 \end{theorem}
 \begin{proof}
 Soit
 \[ 
 K = \bigcup_{i \in \mathbb{N}} E_i
 \]
-et soit $|E_i| \leq |\mathbb{N}|$ .\\
-Supposons de plus que $i \neq j  \Rightarrow E_i \cap E_j = \emptyset$, et $E_k \neq \emptyset$\\
-On dénote par $s_{ik}$ le $i$-ème élément de $E_k$.\\
+et soit $|E_i| < |\mathbb{N}|$ .\\
+Supposons que les ensembles $E_k$ sont disjoints et qu'il sont tous non-vide.
+%Supposons de plus que $i \neq j  \Rightarrow E_i \cap E_j = \emptyset$, et $E_k \neq \emptyset$\\
+On dénote par $s_{ki}$ le $k$-ième élément de $E_i$.\\
 %Soit $p, q$ 2 nombres premiers différents.\\
 Soit $S$ l'application définie par
 \[
 S:
 \begin{array}{l}
 	K \mapsto \mathbb{N}^{2}\\
-	s_{ik} \mapsto ( i,k)
+	s_{ki} \mapsto (k,i)
 \end{array}
 \]
-Clairement, $S$ est injective.\\
+Clairement, $S$ est injective, car $k\leq|E_i|$ et $E_i$ fini.\\
 On a donc que
 \[ 
 |K| \leq |\mathbb{N}^{2}| = |\mathbb{N}|
 \]
-et donc que
+et donc, par le lemme 1, que
  \[ 
 |K| \leq |\mathbb{N}|
 \]
-Supposons maintenant que l'intersection n'est pas nécessairement vide, alors, par l'algorithme suivant, on peut se ramener au cas ci-dessus
+Supposons maintenant que l'intersection n'est pas nécessairement vide, alors, par l'algorithme suivant, on peut se ramener au cas ci-dessus.
 \begin{flushleft}
 Pour $i$ dans $\mathbb{N}$ \\
 \quad Pour $k$ entre 1 et $|E_k|$ \\
-\quad \quad Si $s_{ik}$ apparait pour la deuxième fois\\
-\quad \quad Supprimer la valeur $s_{ik} $ de tous les $E_n, n \in \mathbb{N}$\\
-\quad \quad Ajouter $s_{ik}$ à l'ensemble $U$\\
-\quad \quad Si $E_k = \emptyset$, alors supprimer $E_i$ et réindexer.
+\quad \quad Si $s_{ki}$ apparait pour la deuxième fois\\
+\quad \quad \quad Supprimer la valeur $s_{ik} $ de tous les $E_n, n\geq i \in \mathbb{N}$\\
+\quad \quad Si $E_i = \emptyset$, alors supprimer $E_i$ et réindexer.
 \end{flushleft}
 Alors, on a
 \[ 
-U \cup \bigcup_{i \in \mathbb{N}} E_i = K
+\bigcup_{i \in \mathbb{N}} E_i = K
 \]
 Qui est une réunion infinie dénombrable d'ensembles finis.\\
+Si on avait supprimé un nombre infini d'ensembles $E_i$ et qu'il en restait un nombre fini, on aurait une union finie d'ensembles finis, auquel cas le résultat est évident.\\
 Donc on a que
 \[ 
 |\bigcup_{i \in \mathbb{N}} E_i| \leq |\mathbb{N}|
@@ -221,45 +282,111 @@ Donc on a que
 
 \end{proof}
 
-Montrons d'abord que l'ensemble des polynômes de degré $n$ est de la même cardinalité que $\mathbb{Q}^{n}$
-On dénote par $\mathbb{Q}_n[t]$ l'ensemble des polynômes dans $\mathbb{Q}[t]$ de degré $n$.\\
-Soit $q(t) \in \mathbb{Q}_n[t]$.
-\[ 
-	q(t) = \sum_{i=1}^{n} q_i t^{i-1}, \text{ avec } q_i \in \mathbb{Q}
-\]
-Soit 
- \begin{align*}
-	 Q: \mathbb{Q}_n[t] &\to \mathbb{Q}^{n}\\
-	 q(t) &\to (q_1, \ldots, q_n)
+On construit une injection de $\mathbb{Q}[t]$ vers $\mathbb{N}$ en passant par l'ensemble des suites de $\mathbb{Z}$ qu'on dénotera par $\mathbb{Z}^{ \infty}$.\\
+On montre d'abord que  $|\mathbb{Q}[t]| =  | \mathbb{Z}[t]|$\footnote{L'ensemble des polynômes à coefficients dans $\mathbb{Z}$ }.\\
+On construit à nouveau une injection dans les deux sens.\\
+Soit l'injection
+\begin{align*}
+	\mathbb{Z}[t] &\mapsto \mathbb{Q}[t]\\
+	a(t) &\mapsto a(t)
 \end{align*}
-Cette application est une bijection.
-\subsubsection*{Surjectivité}
-Soit $(a_1,\ldots, a_n) \in \mathbb{Q}^{n}$, alors le polynôme
+On posera que
 \[ 
-	a(t) = \sum_{i=1}^{n} a_i t^{i-1}
+	a(t) = \frac{q_{0a} }{b_{0a}} + \frac{ q_{1a} }{b_{1a} } t^{1} + \ldots + \frac{q_{na} }{b_{na} }, \text{ avec } q_{ia} \in \mathbb{Z} \text{ et } b_{na} \in \mathbb{N} \setminus \left\{ 0 \right\} 
 \]
-est un antécédent de $ ( a_1, \ldots, a_n)$.
-\subsubsection*{Injectivité}
-Soit $a(t), b(t) \in \mathbb{Q}[t], a(t) \neq b(t)$, alors $\exists 0<i \leq n$ tq $a_i \neq b_i$ ( on dénote avec $_i$ le $i$-ème coefficient du polynôme ) , donc
+$n$ représent le degré de $a(t)$
+Alors l'injection définie par 
+\begin{align*}
+	\mathbb{Q}[t] & \mapsto \mathbb{Z}[t]\\
+	a(t) &\mapsto k \cdot a(t)
+\end{align*}
+avec $k= ( (b_{0a} ,c_{0a} ),(b_{1a} ,c_{1a} ), \ldots, (b_{na} ,c_{na}))$.\\
+On sait, par définition, que 
 \[ 
-	Q(a(t)) = ( a_1, \ldots, a_n) \neq Q(b(t)) = ( a_1, \ldots, a_n)
+	b | (b,c) \cdot c
 \]
-Par la partie 3, on sait que $\mathbb{Q}$ est infini dénombrable, et donc, par le théorème 1, $\mathbb{Q}^{n}$ l'est aussi. On a donc:
+donc tous les coefficients de $k \cdot a(t)$ sont entiers donc $k \cdot a(t)$ est bien dans $\mathbb{Z}[t]$.\\
+On peut facilement trouv
 
+Car chaque polynôme dans $\mathbb{Z}[t]$ possède un nombre fini d'éléments.
 \[ 
-	|\mathbb{Q}_n[t]| = | \mathbb{Q}^{n}| = |\mathbb{Q}| = |\mathbb{N}|
+	\forall a(t) \in \mathbb{Z}[t] \exists N \text{ tel que } \forall n > N, \text{ le $n$-ième élément de } Q(a(t)) \text{ vaut  } 0.
+\]
+On dénote l'ensemble des suites satisfaisant ce critère par $\mathbb{Q}_0^{ \infty}$.\\
+On crée l'injection
+\begin{align*}
+M:
+\mathbb{Q}_0^{ \infty} &\mapsto \mathbb{N}\\
+(a_0,a_1, \ldots, a_N, 0, \ldots) &\mapsto \prod_{i=0} ^{ N} p_{i+1} ^{a_i}
+\end{align*}
+Où $p_k$ dénote le $k$-ième nombre premier.\\
+L'injectivité de cette application suit directement de l'unicité de la décomposition en nombres premiers et du theorème 1.
+On a donc que
+\[ 
+	|\mathbb{Q}[t]| \leq |\mathbb{Q}_{0} ^{ \infty}| \leq |\mathbb{N}|
+\]
+Donc que
+\[ 
+	|\mathbb{Q}[t]| \leq |\mathbb{N}|
+\]
+
+On peut également trouver une injection de $\mathbb{N} \to \mathbb{Q}[t]$ définie par
+\begin{align*}
+	\mathbb{N} &\to \mathbb{Q}[t]\\
+	n &\to n 
+\end{align*}
+à nouveau, cette application est clairement injective.\\
+On a donc que
+\[ 
+	|\mathbb{Q}[t]| \geq |\mathbb{N}|
+\]
+On conclut avec Cantor-Schroeder-Bernstein, et on obtient que 
+\[ 
+	|\mathbb{Q}[t]| = |\mathbb{N}|
 \]
 
 
-est donc une bijection, et donc $\mathbb{Q}_n[t]$ est infini dénombrable.\\
-Grâce au théorème 2, on sait donc que
-\[ 
-	|\bigcup_{i \in \mathbb{N}} \mathbb{Q}_i[t]| = |\mathbb{N}|.
-\]
-Et donc l'ensemble des polynômes à coefficients dans $\mathbb{Q}$ est infini dénombrable.\\
-\hr\hr\hr
-Attention: le théorème montre que qu il y a une injection de l'union des polynômes dans $\mathbb{N}$, A CORRIGER\\
-\hr\hr\hr
+
+
+%Montrons d'abord que l'ensemble des polynômes de degré $n$ est de la même cardinalité que $\mathbb{Q}^{n}$
+%On dénote par $\mathbb{Q}_n[t]$ l'ensemble des polynômes dans $\mathbb{Q}[t]$ de degré $n$.\\
+%Soit $q(t) \in \mathbb{Q}_n[t]$.
+%\[ 
+	%q(t) = \sum_{i=1}^{n} q_i t^{i-1}, \text{ avec } q_i \in \mathbb{Q}
+%\]
+%Soit 
+ %\begin{align*}
+	 %Q: \mathbb{Q}_n[t] &\to \mathbb{Q}^{n}\\
+	 %q(t) &\to (q_1, \ldots, q_n)
+%\end{align*}
+%Cette application est une bijection.
+%\subsubsection*{Surjectivité}
+%Soit $(a_1,\ldots, a_n) \in \mathbb{Q}^{n}$, alors le polynôme
+%\[ 
+	%a(t) = \sum_{i=1}^{n} a_i t^{i-1}
+%\]
+%est un antécédent de $ ( a_1, \ldots, a_n)$.
+%\subsubsection*{Injectivité}
+%Soit $a(t), b(t) \in \mathbb{Q}[t], a(t) \neq b(t)$, alors $\exists 0<i \leq n$ tq $a_i \neq b_i$ ( on dénote avec $_i$ le $i$-ème coefficient du polynôme ) , donc
+%\[ 
+	%Q(a(t)) = ( a_1, \ldots, a_n) \neq Q(b(t)) = ( a_1, \ldots, a_n)
+%\]
+%Par la partie 3, on sait que $\mathbb{Q}$ est infini dénombrable, et donc, par le théorème 1, $\mathbb{Q}^{n}$ l'est aussi. On a donc:
+
+%\[ 
+	%|\mathbb{Q}_n[t]| = | \mathbb{Q}^{n}| = |\mathbb{Q}| = |\mathbb{N}|
+%\]
+
+
+%est donc une bijection, et donc $\mathbb{Q}_n[t]$ est infini dénombrable.\\
+%Grâce au théorème 2, on sait donc que
+%\[ 
+	%|\bigcup_{i \in \mathbb{N}} \mathbb{Q}_i[t]| = |\mathbb{N}|.
+%\]
+%Et donc l'ensemble des polynômes à coefficients dans $\mathbb{Q}$ est infini dénombrable.\\
+%\hr\hr\hr
+%Attention: le théorème montre que qu il y a une injection de l'union des polynômes dans $\mathbb{N}$, A CORRIGER\\
+%\hr\hr\hr
 
 \hr
 On pose
@@ -278,7 +405,7 @@ Soit
 $$z \in \bigcup_{a(t) \in \mathbb{Q}[t]} S_{a(t)}  $$
 donc $\exists b(t) \in \mathbb{Q}[t]$ tel que $b(a)=0$, donc $a$ algébrique, donc $a \in A$.\\
 \hr
-Or $ S_{a(t)} $ est fini $\forall a(t) \in \mathbb{Q}[t]$ et donc, par le théorème 2, on a que
+Or $ S_{a(t)} $ est fini $\forall a(t) \in \mathbb{Q}[t]$ et donc, par le théorème 3, on a que
 \[ 
 	|\bigcup_{a(t) \in \mathbb{Q}[t]} S_{a(t)} | = |\mathbb{N}|
 \]
