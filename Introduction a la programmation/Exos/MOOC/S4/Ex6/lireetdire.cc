@@ -34,18 +34,31 @@ int lire_et_dire(int nombre)
 {
 	int res=0;
 	int nb;
-	int nbav;
+	int nbav=0;
 	int i=1;
+	bool tamere=false;
 	nbav=separer_chiffre_gauche(nombre);
-	while(nombre!=0){
+	if(nombre==0){
+		dire_chiffre(res,1,nbav);
+		return res;
+	}
+	do{
+		tamere=false;
 		nb=separer_chiffre_gauche(nombre);
-		if(nb!=nbav){
-			dire_chiffre(res,i,nb);	
-			i=1;
-		}else{
+		if(nbav==nb){
+		while(nbav==nb){
 			i++;
+			nb=separer_chiffre_gauche(nombre);
 		}
-		nbav=nb;
+		}else{
+			tamere=true;
+		}
+			dire_chiffre(res,i,nbav);	
+			i=1;
+			nbav=nb;
+	}while(nombre!=0);
+	if(tamere){
+	dire_chiffre(res,i,nbav);	
 	}
 	return res;
 }
@@ -65,10 +78,8 @@ int main()
 {
   int nombre(1234);
   int fois(1);
-  int res=separer_chiffre_gauche(nombre);
-  cout<< nombre << endl<< res<<endl;
-  //cin >> nombre >> fois;
-  //repeter_lire_et_dire(nombre, fois);
-  //cout << nombre << endl;
+  cin >> nombre >> fois;
+  repeter_lire_et_dire(nombre, fois);
+  cout << nombre << endl;
   return 0;
 }
