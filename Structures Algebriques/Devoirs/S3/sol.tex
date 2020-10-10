@@ -209,36 +209,36 @@ Et donc, par le lemme 1, on obtient que
 On conclut avec Cantor-Schroeder-Bernstein.
 \section*{4}
 \begin{theorem}
-	On montre que l'union infinie dénombrable d'ensembles finis est, au plus, infini dénombrable.
+	On montre que l'union infinie dénombrable d'ensembles infinis dénombrables est, au plus, infini dénombrable.
 \end{theorem}
 \begin{proof}
 Soit
 \[ 
 K = \bigcup_{i \in \mathbb{N}} E_i
 \]
-et soit $|E_i| < |\mathbb{N}|$ .\\
-Supposons que les ensembles $E_k$ sont disjoints et qu'il sont tous non-vide.
-%Supposons de plus que $i \neq j  \Rightarrow E_i \cap E_j = \emptyset$, et $E_k \neq \emptyset$\\
-On dénote par $s_{ki}$ le $k$-ième élément de $E_i$.\\
-%Soit $p, q$ 2 nombres premiers différents.\\
-Soit $S$ l'application définie par
-\[
-S:
-\begin{array}{l}
-	K \mapsto \mathbb{N}^{2}\\
-	s_{ki} \mapsto (k,i)
-\end{array}
-\]
-Clairement, $S$ est injective, car $k\leq|E_i|$ et $E_i$ fini.\\
+et soit $|E_i| \leq |\mathbb{N}|$\footnote{Si un des ensembles est fini, celà ne change rien au résultat} .\\
+Sans perte de généralité, on peut supposer que tous les ensembles sont non-vides. Si un ensemble est vide, il ne contribue pas à l'union et il suffit donc de le supprimer et de réindexer les ensembles restant.\\
+On considère d'abord que tous les ensembles sont disjoints, on montrera par la suite qu'une union d'ensembles non-disjoints peut se ramener à ce cas.\\
+Car $|E_i| \leq |\mathbb{N}|$, il existe $\phi_i$ une injection de $E_i$ vers $\mathbb{N}$.\\
+Considérons donc l'injection
+\begin{align*}
+	\phi : K &\to \mathbb{N}^{2}\\
+	e &\to (\phi_i(e),i) 
+\end{align*}
+Le $i$ est bien déterminé car les ensembles $E_k$ sont disjoints.\\
+L'injectivité de l'application $\phi$ est immédiate, en effet si $( m,n )\neq (m',n')$, alors on distingue deux cas.\\
+Si $m\neq m', n = n'$ les éléments $\phi^{-1}_n(m) \neq \phi^{-1}_n(m')$ par injectivité de $\phi_n$.\\
+Si $m=m', n\neq n'$, alors $\phi^{-1}(m,n) \neq \phi^{-1}(m',n')$ car $E_n \cap E_{n'} = \emptyset.$\\
+Le cas où $m\neq m'$ et $n\neq n'$ est évident.\\
 On a donc que
 \[ 
-|K| \leq |\mathbb{N}^{2}| = |\mathbb{N}|
+|K| \leq |\mathbb{N}^{2}| \underbrace{=}_{ \text{ par la partie 2 } } |\mathbb{N}|
 \]
 et donc, par le lemme 1, que
  \[ 
 |K| \leq |\mathbb{N}|
 \]
-Supposons maintenant que l'intersection n'est pas nécessairement vide, alors, par l'algorithme suivant, on peut se ramener au cas ci-dessus.
+Supposons maintenant que les ensembles ne sont pas disjoints, alors, par l'algorithme suivant, on peut se ramener au cas d'ensembles disjoints.
 \begin{flushleft}
 Pour $i$ dans $\mathbb{N}$ \\
 \quad Pour $k$ entre 1 et $|E_k|$ \\
@@ -246,169 +246,92 @@ Pour $i$ dans $\mathbb{N}$ \\
 \quad \quad \quad Supprimer la valeur $s_{ik} $ de tous les $E_n, n\geq i \in \mathbb{N}$\\
 \quad \quad Si $E_i = \emptyset$, alors supprimer $E_i$ et réindexer.
 \end{flushleft}
-Alors, on a
-\[ 
-\bigcup_{i \in \mathbb{N}} E_i = K
-\]
-Qui est une réunion infinie dénombrable d'ensembles finis.\\
 Si on avait supprimé un nombre infini d'ensembles $E_i$ et qu'il en restait un nombre fini, on aurait une union finie d'ensembles finis, auquel cas le résultat est évident.\\
-Donc on a que
+On a donc montré que:
 \[ 
 |\bigcup_{i \in \mathbb{N}} E_i| \leq |\mathbb{N}|
 \]
-
-
-
-
-%Pour démontrer l'injectivité de cette fonction, on utilise l'unicité de la décomposition en nombres premiers\footnote{Qui a été démontrée en cours}.
-%En effet soit $a, b \in K, a\neq b$, alors $\exists i_a, i_b, k_a, k_b \in \mathbb{N}$ tel que
-%\[ 
-	%a= s_{i_a k_a} \text{ et } b = s_{i_b k_b} 
-%\]
-%car $a\neq b$, soit $i_a \neq i_b$ ou $k_a \neq k_b$, donc
-%\[ 
-	%S(a)= p^{i_a} \cdot q^{k_a} \neq p^{i_b}\cdot q^{k_b} = S(b)
-%\]
-%Donc l'application est injective, donc
- %\[ 
- %|K| \leq |\mathbb{N}|
-%\]
-%Supposons maintentant que l'intersection de deux  $E_k$ n'est pas vide, alors, grâce à l'algorithme suivant, on peut se ramener au cas ci-dessus
-
-
-
-
-
-
 \end{proof}
-
-On construit une injection de $\mathbb{Q}[t]$ vers $\mathbb{N}$ en passant par l'ensemble des suites de $\mathbb{Z}$ qu'on dénotera par $\mathbb{Z}^{ \infty}$.\\
-On montre d'abord que  $|\mathbb{Q}[t]| =  | \mathbb{Z}[t]|$\footnote{L'ensemble des polynômes à coefficients dans $\mathbb{Z}$ }.\\
-On construit à nouveau une injection dans les deux sens.\\
-Soit l'injection
-\begin{align*}
-	\mathbb{Z}[t] &\mapsto \mathbb{Q}[t]\\
-	a(t) &\mapsto a(t)
-\end{align*}
-On posera que
+On veut montrer que l'ensemble des polynômes à coefficients dans $\mathbb{Q}$, noté $\mathbb{Q}[t]$ est infini dénombrable.\\
+Considérons d'abord l'ensemble des polynômes de degré $n$ dans $\mathbb{Q}[t]$, noté $\mathbb{Q}^{n}[t]$.\\
+On posera que 
 \[ 
-	a(t) = \frac{q_{0a} }{b_{0a}} + \frac{ q_{1a} }{b_{1a} } t^{1} + \ldots + \frac{q_{na} }{b_{na} }, \text{ avec } q_{ia} \in \mathbb{Z} \text{ et } b_{na} \in \mathbb{N} \setminus \left\{ 0 \right\} 
-\]
-$n$ représent le degré de $a(t)$
-Alors l'injection définie par 
-\begin{align*}
-	\mathbb{Q}[t] & \mapsto \mathbb{Z}[t]\\
-	a(t) &\mapsto k \cdot a(t)
-\end{align*}
-avec $k= ( (b_{0a} ,c_{0a} ),(b_{1a} ,c_{1a} ), \ldots, (b_{na} ,c_{na}))$.\\
-On sait, par définition, que 
-\[ 
-	b | (b,c) \cdot c
-\]
-donc tous les coefficients de $k \cdot a(t)$ sont entiers donc $k \cdot a(t)$ est bien dans $\mathbb{Z}[t]$.\\
-On peut facilement trouv
-
-Car chaque polynôme dans $\mathbb{Z}[t]$ possède un nombre fini d'éléments.
-\[ 
-	\forall a(t) \in \mathbb{Z}[t] \exists N \text{ tel que } \forall n > N, \text{ le $n$-ième élément de } Q(a(t)) \text{ vaut  } 0.
-\]
-On dénote l'ensemble des suites satisfaisant ce critère par $\mathbb{Q}_0^{ \infty}$.\\
-On crée l'injection
-\begin{align*}
-M:
-\mathbb{Q}_0^{ \infty} &\mapsto \mathbb{N}\\
-(a_0,a_1, \ldots, a_N, 0, \ldots) &\mapsto \prod_{i=0} ^{ N} p_{i+1} ^{a_i}
-\end{align*}
-Où $p_k$ dénote le $k$-ième nombre premier.\\
-L'injectivité de cette application suit directement de l'unicité de la décomposition en nombres premiers et du theorème 1.
-On a donc que
-\[ 
-	|\mathbb{Q}[t]| \leq |\mathbb{Q}_{0} ^{ \infty}| \leq |\mathbb{N}|
-\]
-Donc que
-\[ 
-	|\mathbb{Q}[t]| \leq |\mathbb{N}|
+	a(t) \in \mathbb{Q}^{n}, a(t) = \sum_{i=0}^{ n} a_i t^{i}
 \]
 
-On peut également trouver une injection de $\mathbb{N} \to \mathbb{Q}[t]$ définie par
+On construit la bijection
 \begin{align*}
-	\mathbb{N} &\to \mathbb{Q}[t]\\
-	n &\to n 
+Q:	\mathbb{Q}^{n}[t] &\mapsto \mathbb{Q}^{n+1}\\
+	a(t) &\mapsto (a_0,a_1,\ldots, a_n)
 \end{align*}
-à nouveau, cette application est clairement injective.\\
-On a donc que
+La bijectivité de cette application est immédiate.\\
+Or on sait, par la partie 3, que $|\mathbb{Q}| = |\mathbb{N}|$. Il en suit, par le théorème 2 que $|\mathbb{Q}^{n}| = |\mathbb{N}|$, on en conclut que
 \[ 
-	|\mathbb{Q}[t]| \geq |\mathbb{N}|
+	|\mathbb{Q}^{n}[t] | = |\mathbb{N}^{n+1}| = |\mathbb{N}|
 \]
-On conclut avec Cantor-Schroeder-Bernstein, et on obtient que 
+On démontre maintenant que
+\[ 
+	\bigcup_{i \in \mathbb{N}} \mathbb{Q}^{i}[t]	= \mathbb{Q}[t]	
+\]
+On montre la double inclusion.\\
+L'inclusion de gauche à droite est immédiate.\\
+Soit $a(t) \in \mathbb{Q}[t]$, posons que $\deg a(t) = k$, alors $a(t) \in \mathbb{Q}^{k}[t]$ et donc
+$a(t) \in \bigcup_{i \in \mathbb{N}} \mathbb{Q}^{i}[t]$
+On peut maintenant conclure grâce au théorème 3, en effet
+\[ 
+\bigcup_{i \in \mathbb{N}} \mathbb{Q}^{i}[t]
+\]
+est une réunion infinie dénombrable d'ensembles infinis dénombrables, donc
+\[ 
+	|\mathbb{Q}[t]|=|\bigcup_{i \in \mathbb{N}} \mathbb{Q}^{i}[t]| \leq |\mathbb{N}|
+\]
+On peut facilement construire une injection de $\mathbb{N}$ à $\mathbb{Q}[t]$, comme par exemple
+\[ 
+	n \mapsto n \in \mathbb{Q}[t]
+\]
+
+Par Cantor-Schroeder-Bernstein, on conclut donc que
 \[ 
 	|\mathbb{Q}[t]| = |\mathbb{N}|
 \]
 
+L'ensemble des polynômes à coefficients dans $\mathbb{Q}$ est donc infini dénombrable.
 
 
 
-%Montrons d'abord que l'ensemble des polynômes de degré $n$ est de la même cardinalité que $\mathbb{Q}^{n}$
-%On dénote par $\mathbb{Q}_n[t]$ l'ensemble des polynômes dans $\mathbb{Q}[t]$ de degré $n$.\\
-%Soit $q(t) \in \mathbb{Q}_n[t]$.
-%\[ 
-	%q(t) = \sum_{i=1}^{n} q_i t^{i-1}, \text{ avec } q_i \in \mathbb{Q}
-%\]
-%Soit 
- %\begin{align*}
-	 %Q: \mathbb{Q}_n[t] &\to \mathbb{Q}^{n}\\
-	 %q(t) &\to (q_1, \ldots, q_n)
-%\end{align*}
-%Cette application est une bijection.
-%\subsubsection*{Surjectivité}
-%Soit $(a_1,\ldots, a_n) \in \mathbb{Q}^{n}$, alors le polynôme
-%\[ 
-	%a(t) = \sum_{i=1}^{n} a_i t^{i-1}
-%\]
-%est un antécédent de $ ( a_1, \ldots, a_n)$.
-%\subsubsection*{Injectivité}
-%Soit $a(t), b(t) \in \mathbb{Q}[t], a(t) \neq b(t)$, alors $\exists 0<i \leq n$ tq $a_i \neq b_i$ ( on dénote avec $_i$ le $i$-ème coefficient du polynôme ) , donc
-%\[ 
-	%Q(a(t)) = ( a_1, \ldots, a_n) \neq Q(b(t)) = ( a_1, \ldots, a_n)
-%\]
-%Par la partie 3, on sait que $\mathbb{Q}$ est infini dénombrable, et donc, par le théorème 1, $\mathbb{Q}^{n}$ l'est aussi. On a donc:
-
-%\[ 
-	%|\mathbb{Q}_n[t]| = | \mathbb{Q}^{n}| = |\mathbb{Q}| = |\mathbb{N}|
-%\]
 
 
-%est donc une bijection, et donc $\mathbb{Q}_n[t]$ est infini dénombrable.\\
-%Grâce au théorème 2, on sait donc que
-%\[ 
-	%|\bigcup_{i \in \mathbb{N}} \mathbb{Q}_i[t]| = |\mathbb{N}|.
-%\]
-%Et donc l'ensemble des polynômes à coefficients dans $\mathbb{Q}$ est infini dénombrable.\\
-%\hr\hr\hr
-%Attention: le théorème montre que qu il y a une injection de l'union des polynômes dans $\mathbb{N}$, A CORRIGER\\
-%\hr\hr\hr
 
 \hr
 On pose
 \[ 
 A = \left\{ z \in \mathbb{C} | z \text{ algébrique }  \right\}
 \]
-Soit $a(t) \in \mathbb{Q}[t]$, on dénote par $S_{a(t)}$, l'ensemble des solutions de l'équation $a(t)=0$.\\
+Soit $a(t) \in \mathbb{Q}[t]$, on dénote par $S_{a(t)}$, l'ensemble des solutions de l'équation $a(t)=0$. Cet ensemble est fini car un polynôme admet toujours un nombre fini de solutions.\\
 On veut montrer que 
 \[ 
 	A = \bigcup_{a(t) \in \mathbb{Q}[t]} S_{a(t)} 
 \]
 On montre la double inclusion.\\
-Soit $z \in A$, alors $\exists Z(t) \in \mathbb{Q}[t]$ tel que $Z(a)=0$, donc $z \in S_{Z(t)} $, donc 
+Soit $z \in A$, alors $\exists Z(t) \in \mathbb{Q}[t]$ tel que $Z(z)=0$, donc $z \in S_{Z(t)} $, donc 
 $$z \in \bigcup_{a(t) \in \mathbb{Q}[t]} S_{a(t)}. $$\\
 Soit
 $$z \in \bigcup_{a(t) \in \mathbb{Q}[t]} S_{a(t)}  $$
-donc $\exists b(t) \in \mathbb{Q}[t]$ tel que $b(a)=0$, donc $a$ algébrique, donc $a \in A$.\\
+donc $\exists b(t) \in \mathbb{Q}[t]$ tel que $b(z)=0$, donc $z$ algébrique, donc $a \in A$.\\
 \hr
 Or $ S_{a(t)} $ est fini $\forall a(t) \in \mathbb{Q}[t]$ et donc, par le théorème 3, on a que
 \[ 
-	|\bigcup_{a(t) \in \mathbb{Q}[t]} S_{a(t)} | = |\mathbb{N}|
+|A| =	|\bigcup_{a(t) \in \mathbb{Q}[t]} S_{a(t)} | \leq |\mathbb{N}|
 \]
+Or, les nombres entiers sont clairement des nombres algébriques, et donc il existe une injection
+\[ 
+\mathbb{N} \mapsto A
+\]
+Donc, par Cantor-Schroeder-Bernstein,
+\[ 
+|\mathbb{N}| = |A|
+\]
+
 Donc l'ensemble des nombres algébriques est dénombrable.
 
 
