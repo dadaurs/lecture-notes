@@ -1,0 +1,206 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Mon 12 Oct}{Series fin}
+
+\begin{thm}[Critere de d'Alembert 2]\index{Critere d'Alembert}\label{thm:critere_d_alembert}
+Supposons que $\lim_{n \to  + \infty} |\frac{x_{n+1} }{x_n}|  = \rho$ existe.\\
+Si $\rho <1$ alors
+\[ 
+\sum_{n=1}^{ \infty} x_n
+\]
+converge absolument.\\
+Si $\rho >1$, alors elle diverge.
+\end{thm}
+\begin{proof}
+	Si $\rho>1$, $x _n$ diverge donc ne converge pas vers 0, donc $\sum x_n$ diverge.\\
+	Supposons $\rho<1$. $\exists n_0 \forall n \geq n_0: \frac{x_{n+1} }{x_n} < \frac{\rho +1}{2}$.\\
+	On déduit que
+	\[ 
+		|x_n| \leq \left(  \frac{\rho +1}{2}\right) ^{n-n_0} |x_{n_0}| 
+	\]
+	Donc 
+	\[ 
+	\sum_{n=n_0}^{ \infty} |x_n| 
+	\]
+	peut etre comparee à 
+	\[ 
+		|x_{n_0}| \sum_{n=n_0}^{ \infty} \left( \frac{\rho+1}{2}\right) ^{n-n_0}
+	\]
+	Or la série ci-dessus est une série géometrique avec $\frac{\rho+1}{2}<1$, donc elle converge.\\
+	Donc 
+	 \[ 
+	\sum_{n=n_0}^{ \infty} |x_n| 
+	\]
+	converge car la série géometrique converge, il suit que 
+	\[ 
+	\sum_{n=0}^{ \infty} x_n
+	\]
+	converge absolument.
+\end{proof}
+\begin{exemple}
+Soit $x\in \mathbb{R}$. Alors $ \sum_{n=0}^{ \infty} \frac{x^{n}}{n!}$ converge absolument.\\
+\begin{proof}
+$x_n = \frac{x^{n}}{n!}$, alors
+\[ 
+| \frac{x_{n+1} }{x_n} | = | \frac{x}{n+1}| \to 0
+\]
+
+\end{proof}
+\end{exemple}
+\begin{exemple}
+\[ 
+	\sum_{n=0}^{ \infty} \frac{ ( -1)^{n} x^{2n+1}}{(2n+1)!}
+\]
+\[ 
+	x_n = \frac{(-1)^{2n+1}x^{2n+1}}{(2n+1)!}
+\]
+Alors
+\[ 
+	| \frac{x_{n+1} }{x_n} | = | \frac{x^{2}}{(2n+3)(2n+2)}| \to 0
+\]
+\end{exemple}
+\begin{rmq}
+Si $\rho=1$ on ne peut rien conclure.
+\begin{exemple}
+\[ 
+\sum \frac{1}{n} \text{ diverge, or }  \frac{x_{n+1}}{x_n} = \frac{n}{n+1}\to 1
+\]
+Idem pour
+\[ 
+	\sum n
+\]
+\end{exemple}
+\begin{exemple}
+\[ 
+\sum \frac{1}{n^{2}}
+\]
+converge, or 
+\[ 
+	\frac{x_{n+1}}{x_n} = \frac{n^{2}}{(n+1)^{2}}
+\]
+
+\end{exemple}
+
+\end{rmq}
+\begin{propo}
+	On admet que 
+	\[ 
+		\forall x \geq 0 \exists ! x^{\frac{1}{n}}: ( x^{\frac{1}{n}})^{n} = x
+	\]
+	Alors
+	\[ 
+	\lim_{n \to  + \infty} n^{\frac{1}{n}} = 1
+	\]
+\end{propo}
+\begin{proof}
+	Posons $\epsilon_n = n^{\frac{1}{n}}-1$, ( a voir : $\epsilon_n \to 0$).
+	\begin{align*}
+		n &= ( (1 + \epsilon_n)^{\frac{1}{n}})^{n} = 1 + n \epsilon_n + \frac{n(n-1)}{2}\epsilon^{2} \underbrace{\ldots}_{\geq 0}\\
+		  &\geq 1 + \frac{n(n-1)}{2}\epsilon_n^{2}\\
+		\Rightarrow & \epsilon_n \leq \left( \frac{2}{n}\right)^{\frac{1}{2}}
+	\end{align*}
+	
+\end{proof}
+\begin{thm}[Critere de la racine]\index{Critere de la racine}\label{thm:critere_de_la_racine}
+	Soit $L = \limsup_{n\to \infty} ( |x_n|)^{\frac{1}{n}}$.\\
+	Si $L <1$, alors $\sum x_n$ converge absolument\\
+	Si $L>1$, alors $ \sum x_n$ diverge.
+\end{thm}
+\begin{exemple}
+Soit 
+\begin{align*}
+x_n = 
+\begin{cases}
+\frac{1}{n!} \text{ si $n$ pair } \\
+0 \text{ si $n$ impair } 
+\end{cases}
+\end{align*}
+\end{exemple}
+\begin{exemple}
+	\begin{enumerate}
+	\item 
+	
+\[ 
+	\sum \frac{x_n}{n!}, alors
+	\[ 
+		|x_n|^{\frac{1}{n}}= \frac{1}{n!}^{\frac{1}{n}} \text{ donc } |x_n| \to 0 ( \text{ exo } )	
+	\]
+\item 
+	\[ 
+	\sum n \text{ diverge } , n^{\frac{1}{n}} \to 1
+	\]
+\item 
+	\[ 
+	\sum \frac{1}{n^{2}}
+	\]
+	converge, or
+	\[ 
+		\frac{1}{n^{2}}^{\frac{1}{n}} = \frac{1}{ n^{\frac{2}{n}}} \to 1
+	\]
+	
+	\end{enumerate}
+\end{exemple}
+\begin{proof}
+Si $L>1$,\\
+alors $\lim_{n \to  + \infty} \sup \left\{ |x_k|^{\frac{1}{k}}: k \geq n \right\} $.
+Donc $\exists n_0 \forall n > n_0: z_n >1$, i.e.
+\[ 
+	\exists k \geq n : |x_k| > 1^{k} =1
+\]
+$x_n$ ne converge pas vers zero $\implies$ la série ne converge pas.\\
+Si $L <1$,\\
+$\exists n_0 \forall n > n_0: z_n ; \frac{1+L}{2}$, or\\
+\[ 
+	|x_n| \leq z_n^{n}< \left( \frac{1+L}{2}\right)^{n}
+\]
+On conclut par converge avec la série géometrique.
+\end{proof}
+\begin{exemple}
+	Posons $x_0 = 0$, et $x_{n+1} = \frac{1+ nx_n}{2^{n+1}}$ \\
+	Notons ( exo par récurrence) 
+	\[ 
+	\forall n \leq 2^{n}
+	\]
+	Donc 
+	\[ 
+	0 \leq x_n \leq 1
+	\]
+	On a 
+	\[ 
+		x_n ^{\frac{1}{ n}} = \frac{(n+1)^{\frac{1}{n}}}{2\cdot 2^{\frac{1}{n}}} \to \frac{1}{2}
+	\]
+	
+	Le critère s'applique: $L <1$.
+	
+\end{exemple}
+\begin{lemma}
+	$\lim_{n \to  + \infty} \sqrt[n]{\frac{1}{n!}} = 0$
+\end{lemma}
+\begin{proof}
+	A voir: $( \sqrt[n]{n!} )^{2} \to + \infty$.\\
+	Or $n! = 1 \cdot 2\cdot 3 \cdot \ldots n \geq \frac{n}{2}(\frac{n}{2}+1)\cdot \ldots n$\\
+	Si $n$ pair.\\
+	
+	\begin{align*}
+	\frac{n}{2}(\frac{n}{2}+1)\cdot \ldots n\\
+	\geq ( \frac{n}{2})^{\frac{n}{2}}\\
+	\end{align*}
+	Donc $\sqrt[n]{(n!)^{2}} \geq \sqrt[n] { ( \frac{n}{2}^{n})} = \frac{n}{2} \to \infty$
+\end{proof}
+\section{Fonctions}
+
+En général, fonctions = applications = map.\\
+
+
+En analyse I, fonction = fonction de $\mathbb{R}$ vers $\mathbb{R}$ ou sur une partie $A \subseteq \mathbb{R}$.\\
+En analyse II, on ira de $\mathbb{R}^{n} \to \mathbb{R}^{n}$.
+
+
+
+
+
+
+
+	
+
+\end{document}	

@@ -1,0 +1,45 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newtheorem{theorem}{Théorème}
+\newtheorem{lemma}{Lemme}
+\begin{document}
+\title{Série 4}
+\author{David Wiedemann}
+\maketitle
+On dénotera par $e_{S_n} $ l'élément neutre de $S_n$.
+On utilisera le résultat démontré dans l'exercice 2 partie 3:
+\[ 
+	\forall S \in S_n, S \neq e_{S_n}  \implies \exists \sigma_1,\ldots,\sigma_k \text{ des permutations disjointes tel que } S = \prod_{i=1} ^{k} \sigma_i
+\]
+
+\begin{theorem}
+	Soit $S \in S_n, S \neq e_{S_n} $ un cycle d'ordre $o(S)=k$, on pose que
+	\[
+		S = \prod_{i=1} ^{m} \sigma_i
+	\]
+	Alors,
+	\[ 
+		o(\sigma_i) \leq k \quad \forall 0< i \leq m
+	\]
+\end{theorem}
+\begin{proof}
+	Supposons qu'il existe $\sigma_m$ tel que $n=o(\sigma_m) > k$, alors
+	 \[ 
+	S^{k}= \prod_{i=1} ^{m} \sigma_i^{k} \neq 0
+	\]
+	en effet, $\sigma_m^{k} \neq e_{S_n}$ car par définition $n$ est le plus petit entier tel que $\sigma_m^{n}=e_{S_n}$ et $k<n$.\\
+	Etant donné que $\sigma_m$ est disjoint des autres cycles, on en déduit le théorème.
+\end{proof}
+On sait, par l'exercice 2.5 que l'ordre d'un élément de $S_n$ est borné par $n!$.\\
+
+
+
+
+\end{document}

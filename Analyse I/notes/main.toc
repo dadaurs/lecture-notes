@@ -9,3 +9,4 @@
 \contentsline {subsection}{\numberline {4.1}Suites de Cauchy}{21}{subsection.4.1}%
 \contentsline {section}{\numberline {5}Series}{22}{section.5}%
 \contentsline {subsubsection}{\numberline {5.0.1}Un calcul naif ( avec la série harmonique alternée)}{28}{subsubsection.5.0.1}%
+\contentsline {section}{\numberline {6}Fonctions}{34}{section.6}%

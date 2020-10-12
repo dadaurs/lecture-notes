@@ -1,4 +1,4 @@
-\documentclass[11pt, a4paper, twoside]{article}
+\documentclass[11pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
@@ -26,7 +26,7 @@ On utilisera sans preuve que la composition de deux injections et une injection,
 \end{lemma}
 \begin{proof}
 	\begin{enumerate}
-		\item Si $|A| \leq |B|$ alors il existe une injection  $\phi: A \to B$\\
+		\item Si $|A| \leq |B|$ alors il existe une injection  $\phi: A \to B$.\\
 		Si $|B| \leq |C|$, alors il existe une injection $\psi:B \to C$.\\
 		Donc 
 		\[ 
@@ -34,14 +34,14 @@ On utilisera sans preuve que la composition de deux injections et une injection,
 		\]
 		est une injection, et donc
 		$|A| \leq |C|$.
-	\item Si $|A| \leq |B|$ alors il existe une injection  $\phi: A \to B$\\
-	Si $|B| = |C|$, alors il existe une injection $\psi:B \to C$.\\
+	\item Si $|A| \leq |B|$ alors il existe une injection  $\phi: A \to B$.\\
+	Si $|B| = |C|$, alors il existe une bijection $\psi:B \to C$.\\
 	Donc
 		\[ 
 			\psi \circ \phi : A \to C
 		\]
 		est une injection, et donc $|A| \leq |C|$.
-	\item Si $|A| = |B|$, alors il existe une bijection  $\phi: A \to B$
+	\item Si $|A| = |B|$, alors il existe une bijection  $\phi: A \to B$.\\
 	 Si $|B| = |C|$, alors il existe une bijection  $\psi: B \to C$.\\
 	 Alors
 	 \[ 
@@ -111,7 +111,7 @@ Soit
 	\psi: \mathbb{N}^{n} &\to \mathbb{N}\\
 	( a_1, \ldots, a_n) & \to \prod_{i=1} ^{n} p_{i} ^{a_i}
 \end{align*}
-où $ p_1, \ldots, p_n$ sont les $n$ premiers nombres premiers.\\
+où $ p_1, \ldots, p_n$ sont les $n$ premiers nombres premiers. Ces nombres premiers existent car, par le théorème 1, il y a une infinité de nombres premiers.\\
 L'injectivité de cette application suit directement de l'unicité de la décomposition en nombres premiers.\\
 En effet, si $ (a_1, \ldots, a_n) \neq ( b_1, \ldots ,b_n) \in \mathbb{N}^{n}$, alors l'unicité implique que
 \[ 
@@ -128,7 +128,7 @@ L'application
 	K: \mathbb{N} &\to \mathbb{Q}\\
 	 n &\to n
 \end{align*}
-est une injection.\\
+est évidemment une injection.\\
 
 
 
@@ -150,38 +150,13 @@ K=A_1 \times \ldots \times A_n \text{ est infini dénombrable. }
 		( a_1,\ldots, a_n) &\to ( \phi_1(a_1), \ldots, \phi_n(a_n))
 	\end{align*}
 	est une bijection.\\
-	En effet, soit $b=(b_1,\ldots,b_n) \in \mathbb{N}^{n}$, alors $(\phi^{-1}(b_1), \ldots, \phi^{-1}(b_n)) \in K$ est un antécédent, unique, de $(b_1,\ldots, b_n)$ et il existe $\forall b \in \mathbb{N}^{n} $.\\
+	En effet, soit $b=(b_1,\ldots,b_n) \in \mathbb{N}^{n}$, alors $(\phi^{-1}(b_1), \ldots, \phi^{-1}(b_n)) \in K$ est un antécédent, unique, de $(b_1,\ldots, b_n)$ et il existe pour tout $ b \in \mathbb{N}^{n} $.\\
 	Par la partie 2, on sait qu'il existe une bijection de $\Psi: \mathbb{N}^{n} \to \mathbb{N}$ et donc
 	\[ 
 	\Psi \circ \Phi
 	\]
 	est une bijection de $K \to \mathbb{N}$.
 \end{proof}
-%\begin{theorem}
-%Soit $|A| = |\mathbb{N}|$ et $|B| = |\mathbb{N}|$, alors $|A \times B | = |\mathbb{N}|$.\\
-%Par hypothèse, $\exists \phi: A \to \mathbb{N}, \psi: B \to \mathbb{N}$, avec $\phi$ et $\psi$ deux bijections.\\
-%Alors, l'application $G$, définie par
-%\begin{align*}
-	%G: A \times B & \to \mathbb{N}^{2}\\
-	%(a,b) & \to (\phi(a), \psi(b))
-%\end{align*}
-%est une bijection.\\
-%\end{theorem}
-%\begin{proof}
-
-
-%Pour le montrer on vérifie à nouveau l'injectivité et la surjectivité.
-%\subsection*{Surjectivité}
-%Soit $(m,n) \in \mathbb{N}^{2}$, l'élément $(\phi^{-1}(m), \psi^{-1}(n))$ est un antécédent.
-%\subsection*{Injectivité}
-
-%Supposons $(a,b)$ et $(a',b') \in A \times B$ deux antécédents de $(m,n) \in \mathbb{N}^{2}$, alors 
-%\[ 
-	%\phi(a) = \phi(a') \text{ et } \psi(b) = \psi(b')
-%\]
-%et donc $(m,n)$ possède un unique antécédent.\\
-%Finalement, on sait, par la partie 2, qu'il existe une bijection de $C:\mathbb{N}^{2} \to \mathbb{N}$, car la composition de deux bijections est une bijection, on en déduit que $C \circ G$ est une bijection de $A \times B \to \mathbb{N}^{2}$ \footnote{Avec la loi de composition d'applications usuelle}.\\
-%\end{proof}
 \hr
 On est pret à montrer l'injection de $\mathbb{Q} \to \mathbb{N}$.\\
 On construit d'abord une bijection de $ \mathbb{Z} \times \mathbb{N} \setminus \left\{ 0 \right\} \to \mathbb{N} $.\\
@@ -191,7 +166,7 @@ t_1: n \to n-1
 \]
 On peut donc, par le théorème 2, construire une bijection de $G:\mathbb{Z} \times \mathbb{N} \setminus \left\{ 0 \right\} \to \mathbb{N} $.
 
-On définit la surjection\footnote{La surjectivité suit du fait qu'à chaque fraction, on puisse assimiler un 2-uplet.}
+On définit la surjection\footnote{La surjectivité suit du fait qu'à chaque fraction, on puisse assimiler plusieurs 2-uplet.}
  \begin{align*}
 	 Q: \mathbb{Z} \times \mathbb{N} \setminus \left\{ 0 \right\} &\to \mathbb{Q}\\
 	 ( a,b) & \to \frac{a}{b}
@@ -243,10 +218,15 @@ Supposons maintenant que les ensembles ne sont pas disjoints, alors, par l'algor
 Pour $i$ dans $\mathbb{N}$ \\
 \quad Pour $k$ entre 1 et $|E_k|$ \\
 \quad \quad Si $s_{ki}$ apparait pour la deuxième fois\\
-\quad \quad \quad Supprimer la valeur $s_{ik} $ de tous les $E_n, n\geq i \in \mathbb{N}$\\
+\quad \quad \quad Supprimer la valeur $s_{ki} $ de tous les $E_n, n\geq i \in \mathbb{N}$\\
 \quad \quad Si $E_i = \emptyset$, alors supprimer $E_i$ et réindexer.
 \end{flushleft}
-Si on avait supprimé un nombre infini d'ensembles $E_i$ et qu'il en restait un nombre fini, on aurait une union finie d'ensembles finis, auquel cas le résultat est évident.\\
+Si on avait supprimé un nombre infini d'ensembles $E_i$ et qu'il en restait un nombre fini, alors on distingue deux cas:
+\begin{itemize}
+	\item On a une union finie d'ensembles finis, auquel cas le résultat est évident.
+	\item On a une union finie d'ensembles, au plus, infini dénombrables, et le résultat est également évident car l'injection  $\Phi$ définie ci-dessus reste 
+\end{itemize}
+
 On a donc montré que:
 \[ 
 |\bigcup_{i \in \mathbb{N}} E_i| \leq |\mathbb{N}|
@@ -264,7 +244,7 @@ On construit la bijection
 Q:	\mathbb{Q}^{n}[t] &\mapsto \mathbb{Q}^{n+1}\\
 	a(t) &\mapsto (a_0,a_1,\ldots, a_n)
 \end{align*}
-La bijectivité de cette application est immédiate.\\
+La bijectivité de cette application est immédiate, car deux polynômes sont égaux si leurs coefficients sont égaux.\\
 Or on sait, par la partie 3, que $|\mathbb{Q}| = |\mathbb{N}|$. Il en suit, par le théorème 2 que $|\mathbb{Q}^{n}| = |\mathbb{N}|$, on en conclut que
 \[ 
 	|\mathbb{Q}^{n}[t] | = |\mathbb{N}^{n+1}| = |\mathbb{N}|
@@ -287,7 +267,7 @@ est une réunion infinie dénombrable d'ensembles infinis dénombrables, donc
 \]
 On peut facilement construire une injection de $\mathbb{N}$ à $\mathbb{Q}[t]$, comme par exemple
 \[ 
-	n \mapsto n \in \mathbb{Q}[t]
+	n \mapsto n+1 \in \mathbb{Q}[t]
 \]
 
 Par Cantor-Schroeder-Bernstein, on conclut donc que
@@ -307,7 +287,7 @@ On pose
 \[ 
 A = \left\{ z \in \mathbb{C} | z \text{ algébrique }  \right\}
 \]
-Soit $a(t) \in \mathbb{Q}[t]$, on dénote par $S_{a(t)}$, l'ensemble des solutions de l'équation $a(t)=0$. Cet ensemble est fini car un polynôme admet toujours un nombre fini de solutions.\\
+Soit $a(t) \in \mathbb{Q}[t]$, on dénote par $S_{a(t)}$, l'ensemble des solutions de l'équation $a(t)=0$. Cet ensemble est fini car un polynôme admet toujours un nombre de solutions égal à son degré.\\
 On veut montrer que 
 \[ 
 	A = \bigcup_{a(t) \in \mathbb{Q}[t]} S_{a(t)} 
@@ -317,7 +297,7 @@ Soit $z \in A$, alors $\exists Z(t) \in \mathbb{Q}[t]$ tel que $Z(z)=0$, donc $z
 $$z \in \bigcup_{a(t) \in \mathbb{Q}[t]} S_{a(t)}. $$\\
 Soit
 $$z \in \bigcup_{a(t) \in \mathbb{Q}[t]} S_{a(t)}  $$
-donc $\exists b(t) \in \mathbb{Q}[t]$ tel que $b(z)=0$, donc $z$ algébrique, donc $a \in A$.\\
+donc $\exists b(t) \in \mathbb{Q}[t]$ tel que $b(z)=0$, donc $z$ algébrique, donc $z \in A$.\\
 \hr
 Or $ S_{a(t)} $ est fini $\forall a(t) \in \mathbb{Q}[t]$ et donc, par le théorème 3, on a que
 \[ 

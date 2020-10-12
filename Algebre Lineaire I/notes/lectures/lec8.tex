@@ -1,0 +1,250 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Mon 12 Oct}{Modules et Corps}
+
+\subsection{Morphismes de Modules}
+\begin{defn}[Morhpismes de Module]\index{Morhpismes de Module}\label{defn:morhpismes_de_module}
+	Soit $A$ un anneau et $M,N$ des $A$-modules, un morphisme de $A$-modules entre $M$ et $N$ est un morphisme de groupes
+	\[ 
+	\phi: M \to N
+	\]
+	qui est compatible avec les lois de multiplication externes $\ast_M$ et $\ast_N$ :
+	\[ 
+		\forall a \in A, m \in M, \phi(a \ast_M m) = a \ast_N \phi(m)
+	\]
+	On dit aussi que $\phi$ est une application $A$-linéaire.
+	
+\end{defn}
+
+\begin{rmq}
+$\forall a, a' \in A, m,m' \in M$
+\[ 
+	\phi(a\ast_M m + a' \ast_M m') = \phi(a \ast m) + \phi(a' \ast m') = a \ast_N \phi(M) + a' \ast_N \phi(m')
+\]
+
+\end{rmq}
+\begin{lemma}[Critere de l'application lineaire]\index{Critere de l'application lineaire}\label{lemma:critere_de_l_application_lineaire}
+	Soit $\phi: M \to N$ une application entre deux modules alors  $\phi$ est un morphisme si et seulement si
+	\[ 
+	\forall a \in A, m, m' \in M, \phi(a \ast_M m + m') = a \ast_N \phi(m) + \phi(m')
+	\]
+	
+\end{lemma}
+\begin{proof}
+$\Rightarrow$ a été fait ci-dessus.\\
+$\Leftarrow$:\\
+Si on prend $a=-1_A$, on obtien 
+\[ 
+	\forall m,m' \quad \phi(-m + m') = - \phi(m) + \phi(m')
+\]
+en prenant  $m=m'$ on obtient $\phi(0) = 0$, et en prenant $a=1$, on a 
+\[ 
+	\phi(m+m') = \phi(m) + \phi(m')
+\]
+$\Rightarrow$ $\phi$ est un morphisme de groupes additifs.\\
+Si on prend $m'= 0_M$ 
+\begin{align*}
+	\phi(a \ast m +0_M) &= \phi(a \ast m)\\
+			    &= a \ast \phi(m) + \phi(0_M) = a \ast \phi(m)
+\end{align*}
+
+\begin{propo}
+Soit $\phi : M \to N$ un morphisme de $A $-module et $M' \subset M$ et $N' \subset N$ des sous-modules, alors
+\[ 
+	\phi(M') \subset N et \phi^{-1}(N') \subset M
+\]
+sont des sous-modules de $M$ et $N$ respectivement. En particulier
+\[ 
+	\ker \phi = \phi^{-1} \left\{ 0_N \right\} \subset M \text{ et } Im \phi(M) \subset N
+\]
+\end{propo}
+\begin{proof}
+	Comme $\phi$ est un morphisme de groupes $\phi(M') \subset N$ est un sous-groupe de $N$ et 
+		$\phi^{-1}(N') \subset M$ est un sous-groupe de M
+	Reste a vérifier la stabilité par $\ast$.\\
+ 
+	On veut montrer que si $m' \in \phi^{-1}(N')$ alors 
+	\[ 
+		\forall a \in A \quad a \ast_M m' \in \phi^{-1}(N')
+	\]
+\begin{align*}
+	m' \in \phi^{-1}(N') \Rightarrow \phi(m') \in N'
+\end{align*}
+Comme $N'$ est un sous-module 
+\[ 
+	a \ast_N \phi(m') \in N'
+\]
+msid comme $\phi$ est linéaire
+\[ 
+	a \ast_N \phi(m') = \phi(a \ast_M m') \Rightarrow a \ast m' \in \phi^{-1}(N')
+\]
+
+\begin{itemize}
+	\item Si $M' \subset M$ est un sous-module alors $\phi(M')$ est un sous-module.
+	\item On sait que $\phi(M') \subset N$ est un sous-groupe\\
+		Reste a verifier que $\phi(M')$ est stable par $\ast$ dans $A$.\\
+		Soit $n' \in \phi(M')$ alors $n' = \phi(m') , m' \in M'$
+		Soit $a \in A$, $a \ast_N n' = a \ast N \phi(m')= \phi(a \ast_M m')$\\
+		Comme $M'$ est un sous-module 
+		\begin{align*}
+		a \ast_M m' \in M' \text{ et donc } \\
+		a \ast_N n' = \phi(a \ast_M m') \in \phi(M')
+		\end{align*}
+		
+\end{itemize}
+\end{proof}
+\begin{rmq}
+Le critère d'injectivité s'applique $\phi$ un morphisme de $A$-modules est injectif ssi $\ker \phi = \left\{ 0_m \right\} $ C'est vrai parce que c'est vrai quand on voit $\phi$ comme un morphisme de groupes.
+\end{rmq}
+\subsection{Structures Algebriques des espaces de morphismes}
+\begin{defn}
+On note
+\begin{align*}
+	Hom_{A-mod} ( M,N) , Isom_{A-mod} ( M,N)\\
+	End_{A-mod} ( M),= Hom_{A-Mod} (M,M)\\
+	Aut_{A-mod} ( M) = GL_{A-mod}(M) = Isom_{A-mod} ( M,M) 
+\end{align*}
+les ensembles de morphismes, morphismes bijectifs, d'endomorphismes et d'automorphismes des $A$-modules $M$ et $N$
+
+\end{defn}
+\begin{propo}
+Soient $\phi: L \to M$ et $\psi M \to N$ des morphisms de $A$-modules alors $\psi \circ \phi : L \to N$ un morphisme.
+\end{propo}
+\begin{proof}
+Soit $\phi: L \to M$, $\psi : M \to N$ des applications lineaires alors
+\[ 
+\psi \circ \phi \text{ est linéaire } 
+\]
+On sait que $\psi \circ \phi$ est un morphisme de groupes.\\
+Reste a voir que $\forall a \in A, l \in L$ 
+\[ 
+	\psi \circ \phi ( a \ast_L l)= a \ast_N \psi \circ \phi ( l)
+\]
+\[ 
+	\psi \circ \phi ( a \ast l) = \psi ( \phi(a \ast l)) = \psi( a \ast_M \phi(l)) = a \ast_N \psi\circ\phi (l )
+\]
+\end{proof}
+\begin{propo}
+	Soient $M$ et $N$ des $A$-modules alors $Hom_{A-mod} ( M,N)$ a une structure naturelle de groupe commutatif. \\
+	Si de plus $A$ est commutatif alors $Hom _{A-mod} ( M,N)$ a une structure de $A$-module
+\end{propo}
+
+\begin{proof}
+	Si $\phi$ et $\psi \in Hom _{A-mod} ( M,N)$, alors
+	\[ 
+		\phi + \psi : m \to \phi(m) + \psi(m)
+	\]
+	on sait que $\phi+ \psi$ est un morphisme de groupes et on montre que c'est meme un morphisme de modules.\\
+	\[ 
+		( \phi+ \psi)(a \ast m) = \phi(a \ast m) + \psi(a \ast m) = a \ast \phi(m) + a \ast \phi(m) = a \ast( \phi(m) + \psi(m))
+	\]
+	Donc $\phi + \psi \in Hom _{A-mod} ( M,N)$, donc la proposition est prouvee.
+\end{proof}
+\begin{thm}
+	Soit $M$ un $A$-module. L'ensemble $End _{A-mod} ( M)$des endomorphismes de $M$ est un sous-anneau de $ ( End, + , \circ)$ dont le groupe des unites est\\
+	$Aut_{A-mod} ( M)$;\\
+	de plus, si $A$ est commutatif, $End _{A-mod} ( M)$ possede une structure naturelle de $A$-module qui en fait une $A$-algebre.\\
+	$End _{A-mod} ( M)$ est appellee l'algebre des endomorphismes du $A$-module $M$
+\end{thm}
+\begin{proof}
+	On utilise le critère du sous-anneau.\\
+	On sait que $\phi \circ \psi + \Phi \in End_{Gr} ( M)$, et on doit vérifier que c'est compatible avec la loi de multiplication externe $\ast$
+	\begin{align*}
+	( \phi \circ \psi + \Phi)(a \ast m) =? a \ast ( \phi \circ \psi + \Phi)(m)\\
+	( \phi \circ \psi + \Phi)(a \ast m) = \phi \circ \psi ( a \ast m) + \Phi ( a \ast m)\\
+	= a \ast \phi \circ \psi(m) + a \ast \Phi(m)\\
+	= a \ast ( \phi \circ \psi(m) + \Phi(m))
+	\end{align*}
+	
+\end{proof}
+	
+\section{Corps}
+\begin{defn}[Corps]\index{Corps}\label{defn:corps}
+	Un corps $K$ est un anneau commutatif possédant au moins deux éléments $0_k \neq 1_k$ et tel que tout element non-nul est inversible:
+	\[ 
+	K^{\times} = K \setminus  \left\{ 0_K \right\} 
+	\]
+	
+\end{defn}
+
+\begin{exemple}
+\begin{itemize}
+\item $\mathbb{Q}, \mathbb{R}, \mathbb{C}$ sont des corps.
+\item $\mathbb{Z}$ n'est pas un corps, car $\mathbb{Z}^{\times}= \left\{ \pm 1 \right\} $
+\item $\mathbb{R}(x)$ Le corps des fractions rationelles à coefficients dans $\mathbb{R}$ 
+	\[ 
+		= \left\{ f(x) = \frac{P(x)}{Q(x)} , P(x), Q(x) \in \mathbb{R}[x], Q \neq 0\right\} 
+	\]
+	si $f(x) = \frac{P(x)}{Q(x)} \neq 0, f(x)^{-1}= \frac{Q(x)}{P(x)}$
+\end{itemize}
+\end{exemple}
+\begin{propo}
+	Soit $K$ un corps, $B$ un anneau et $\phi \in Hom_{Ann} ( K,B)$ un morphisme. Alors, si $\phi$ n'est pas nul ( $\phi \neq 0_B$) $\phi$ est injectif.
+	\[ 
+	\phi: K \inj B
+	\]
+	
+\end{propo}
+\begin{proof}
+Soit $\phi: K \to B $ un morphisme d'anneaux, supposons $\phi \neq 0_B$.\\
+Il existe $k  \in K $ tel que $\phi(k) \neq 0_B$, alors $k \neq 0_k$ ( sinon $\phi(k) = 0_B$)\\
+Comme $K$ est un corps, $k$ est inversible et il existe $k^{-1}$ tel que $k . k^{-1}= 1_K$.\\
+Montrons que $\phi$ est injectif:\\
+c'est à dire que 
+\[ 
+	\ker \phi = \left\{ 0_K \right\} .
+\]
+Supposons que non, alors soit $k \in \ker \phi$, tel que 
+\[ 
+	\phi(k) = 0_B \text{ et  } k \neq  0_K
+\]
+
+Comme $k$ est inversible
+\[ 
+	\phi(1_K) = \phi(k.k^{-1}) = \phi(k) . \phi(k^{-1}) = 0_B
+\]
+Donc si $\ker \phi \neq \left\{ 0_K \right\}$, alors $\phi(1_K) = 0_B$, mais alors $\forall \lambda \in K$
+\[ 
+	\phi( \lambda) = \phi(\lambda . 1_K) = \phi(\lambda) \phi(1_K) = 0_B
+\]
+Donc $\phi = 0_B$ ce qu'on a exclu. $\contra$
+
+
+\end{proof}
+\subsection{Corps des fractions}
+\begin{lemma}
+Soit $ \left\{ 0 \right\} \neq A \subset K$ un sous anneau non-nul d' un corps $K$, alors
+\[ 
+\forall a,b \in A, a.b = 0 \iff a =0 \text{ ou } b=0
+\]
+\end{lemma}
+\begin{defn}
+Un anneau tq si $a.b=0 \Rightarrow a=0 \text{ ou } b=0$ est appelé integre.
+\end{defn}
+\begin{proof}
+Soit $a,b \in A \subset K$, tel que $a.b =0_A = 0_K$, supposons que 
+$a \neq 0_K$, alors $a$ admet un inverse dans $K$, il existe $a^{-1}\in K$ tel que $a^{-1}.a = 1_K$.\\
+\[ 
+a.b = 0_K \Rightarrow a^{-1}.a.b = a^{-1}. 0_K \Rightarrow b =0_K
+\]
+
+\end{proof}
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+\end{proof}
+
+
+\end{document}	
