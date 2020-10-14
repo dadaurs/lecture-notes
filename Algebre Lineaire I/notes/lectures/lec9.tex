@@ -1,0 +1,270 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Tue 13 Oct}{Corps}
+\begin{propo}
+Soit $A$ un anneau integre, alirs il existe un corps $K$ et un morphisme d'anneau injectif
+\[ 
+\iota: A \inj K
+\]
+de sorte qu'on peut considerer $A$ comme un sous-anneau de $K$ en identifiant $A$ à $\iota(A) \subset K$ et tel que $K$ a la propriete de minimalite suivante: pout tout corps $K'$ et tout morphisme injectif
+\[ 
+\iota' : A \inj K'
+\]
+de sorte que $A$ peut etre identifie a un sous-crops de $K'$, il existe un morphisme ( necessairement injectif) 
+\[ 
+\iota' : K \inj K'
+\]
+prologeant le morphisme $\iota'$ ( ainsi $A$ et $K$ peuvent etre vus comme des sous-anneaux de  $K'$) 
+\end{propo}
+\begin{defn}
+On appelle ce corps $K$ le corps des fractions de $A$.
+\end{defn}
+
+\begin{exemple}
+\begin{itemize}
+\item $Frac(\mathbb{Z}) = \mathbb{Q}$	
+\item $Frac( \mathbb{R}[X]) = \mathbb{R}(X)$ ( défini comme avant)
+\end{itemize}
+\end{exemple}
+\begin{proof}
+Construison $K$.\\
+$A$ est intègre.\\
+On considère l'ensemble produit
+\[ 
+A \times A \setminus \left\{ 0 \right\} = \left\{ ( a,b) | a,b \in A, b \neq 0_A \right\} 
+\]
+On définit sur cet ensemble une relation.\\
+$ ( a,b) \sim ( a',b')$ si et seulement si $a.b' = a'.b$, la relation  $\sim$ est une relation d'équivalence.
+\begin{itemize}
+\item Symmetrique: Si $a.b'= a'.b \iff a'.b = a.b' \iff ( a',b')\sim ( a,b)$
+\item Reflexive: $ ( a,b) \sim ( a,b) \iff a.b = a.b$ 
+	\item Transitive: $(a,b) \sim ( a',b')$ et $(a',b') \sim ( a'', b'')$.\\
+		On a $a.b' = a'.b$ et $a'.b'' = a''.b'$.
+		\begin{align*}
+			\implies ab'b'' &= a'b'b''\\
+		\implies a.b''.b' &= a.b''.b'\\
+		\implies a.b''b' = a'b''b = a''b'b = a''bb'\\
+		\implies ( ab'' -a''b ). b' = 0_A
+		\end{align*}
+		Comme $A$ est intègre,
+		\[ 
+		ab'' - a''b = 0_A \text{ ou bien } b'= 0_A
+		\]
+		Donc 
+		\[ 
+	ab'' - a''b = 0_A	
+		\]
+		Donc $ ( a,b) \sim ( a'', b'')$
+\end{itemize}
+Soit $K = A \times A\setminus \left\{ 0 \right\} / \sim$ l'ensemble des classe d'équivalences.\\
+On note $\frac{a}{b}$ la classe de l'élément $(a,b)$.\\
+On va munir $K$ d'une addition et d'une multiplication d'un $0_K$, d'une $1_K$ ainsi que 
+\[ 
+\iota: A \inj K
+\]
+
+Il faut maintenant vérifier toutes les propriétés d'un corps.
+\[ 
++: \frac{a}{b} + \frac{a'}{b'}  = \frac{ab' + a'b}{bb'}
+\]
+$b.b'\neq 0_A$ vrai car $b,b' \neq 0$ et $A$ integre.
+
+On doit vérifier que cette définition ne dépend que des classes d'équivalence $\frac{a}{b}$ et $\frac{a'}{b'}$.\\
+Si $ ( a'',b'')\sim ( a',b')$ on veut voir que $\frac{a}{b} + \frac{a'}{b'} = \frac{a}{b} + \frac{a''}{b''}$.
+On doit vérifier que 
+\[ 
+	\underbrace{( ab' + a'b )}_{abb'b'' + a'b^{2}b''}.bb'' = \underbrace{( ab'' + a''b)}_{abb'b'' + a''b^{2}b'}.bb'
+\]
+On sait que $a'b'' = a''b'$.
+\[ 
+\Rightarrow a'b^{2}b'' = a''b^{2}b'
+\]
+On fait pareil pour définir la multiplication $\times$ 
+\[ 
+\frac{a}{b} \times \frac{a'}{b'} = \frac{a.a'}{b.b'}
+\]
+et on doit vérifier que si $\frac{a''}{b''} = \frac{a'}{b'}$alors $\frac{a}{b}\times \frac{a'}{b'} = \frac{a}{b} \times \frac{a''}{b''}$ sachant que $a'b'' = a'' b'$.\\
+On vérifie que  $+, \times$ sont commutatives, associatives, distributives.\\
+On définit $0_k = \frac{0}{1_A}$ et $1_K = \frac{1_A}{1_A}$ \\
+Enfin, dire que $\frac{a}{b} \neq 0_K \iff a \text{ et } b \neq 0_A$ et alors si $\frac{a}{b}\neq 0_K$ $\frac{b}{a}\times \frac{a}{b} = \frac{1_A}{1_A}= 1_K$.\\
+On a un morphisme injectif
+\[ 
+\iota: A \inj K
+\]
+donné par 
+\[ 
+	\iota(a) = \frac{a}{1_A}
+\]
+On vérifie que c'est un morphisme d'anneau et, si $\iota(a) = 0_K = \frac{0_A}{1_A} \iff \frac{a}{1_A} = \frac{0_A}{1_A} \iff a = 0_A$, donc
+\[ 
+\ker \iota = \left\{ 0_A \right\} 
+\]
+donc $\iota$ est injectif.
+\end{proof}
+\subsection{Caractéristique des Corps}
+$K$ un corps,
+\begin{align*}
+Can_K: \mathbb{Z} \to \mathbb{Z}\\
+n \to n.1_K = n_k\\
+\ker(Can_K) = p \mathbb{Z}, p \geq 0
+\end{align*}
+
+\begin{defn}[Caractéristique]\index{Caractéristique}\label{defn:caracteristique}
+	L'entier $p$ s'appelle la caractéristique du corps $K$ et se note
+	\[ 
+		car(K)
+	\]
+\end{defn}
+Si $p=0$ : $\ker Can_K = \left\{ 0_\mathbb{Z} \right\} $, donc $Can_K$ est injectif et donc $\mathbb{Z}$ peut être vu comme sous-anneau de $K$.
+\[ 
+n \in \mathbb{Z} \to n_K \in K
+\]
+Si $n \neq 0, n_K \neq 0$ et $\frac{1}{n_K}$ existe et pour tout $a,b \in \mathbb{Z},b \neq 0$, on définit 
+\[ 
+	( \frac{a}{b})_K = a_K /b_K \in K
+\]
+On dispose d'un morphisme injectif
+\begin{align*}
+Can_K : \mathbb{Q} \inj K\\
+\frac{a}{b} \to \frac{a_K}{b_K}
+\end{align*}
+Si $Car(K) = 0$, le corps $\mathbb{Q}$ est un sous-corps de $K$.
+\begin{lemma}
+	Si $car(K) > 0 $, alors $car(K)=p$ est un nombre premier.
+\end{lemma}
+\begin{proof}
+Si $p=1$, $\ker Can_K = \mathbb{Z}$ 
+\[ 
+	\Rightarrow Can_K ( 1) = 1_K =0_K \contra
+\]
+Donc $p\geq 2$.\\
+Soit une factorisation 
+\[ 
+p=q_1\cdot q_2
+\]
+non-triviale ( $ q_1,q_2 \geq 2$ )
+\[ 
+	0_K=Can_K(p) = Can_K(q_1\cdot q_2) = Can_K(q_1) \cdot Can_K(q_2)
+\]
+Comme $K$ est intègre, $Can_K(q_1) = 0_K$
+\begin{align*}
+q_1 \in \ker Can_K = p \mathbb{Z}\\
+q_1 = pk, k \in \mathbb{Z}\setminus \left\{ 0 \right\} 
+\end{align*}
+Donc $q_1\geq p$ mais comme $q_2 \geq 2	$
+\[ 
+q_2 \leq \frac{p}{2} < p
+\]
+Donc $p$ est premier.
+\end{proof}
+\begin{defn}
+\[ 
+	\mathbb{F}_p = Can_K(\mathbb{Z}) = \mathbb{Z}.1_K
+\]
+
+\end{defn}
+\begin{lemma}
+	L'anneau $\mathbb{F}_p$ est un corps fini de cardinal $p$.
+\end{lemma}
+\begin{proof}
+Si $n\in \mathbb{Z}$ et $k \in \mathbb{Z}$ 
+\[ 
+	( n+pk)_K = n_K + p_k . k_K = n_k
+\]
+Donc, si $r \in \left\{ 0, \ldots, p \right\} $ le reste de la division euclidienne de $n$ par $p$
+\[ 
+	\mathbb{Z}.1_K =  \left\{ 0_K, 1_K, \ldots, ( p-1)_K \right\} 
+\]
+$\mathcal{F}_p$ est de cardinal $p$.\\
+Il faut montrer que si $0<i \neq j \leq p-1$ 
+\[ 
+i_K \neq j_K
+\]
+mais 
+\[ 
+	i_K - j_K = ( i-j)_K
+\]
+et comme $0 \leq i,j \leq p-1$, $0 \neq |i-j| < p$
+Donc $i-j$ ne peut pas etre un multiple de $p$, donc $i-j \notin \ker Can_K$
+Donc 
+\[ 
+	( i-j)_K = i_K - j_K \neq 0_K
+\]
+
+\end{proof}
+\begin{lemma}
+	Un anneau commutatif integre et fini est un corps
+\end{lemma}
+\begin{proof}
+exercice
+\end{proof}
+$\mathbb{F}$ est integre car c'est un sous-anneau du corps $K$ et il est fini de cardinal  $p$.
+
+\begin{defn}
+	Le corps $ \mathbb{Q} \subset K$ si $car(K) = 0$ ou bien $\mathbb{F}_p \subset K$ ( si $car(K)=p > 0$) s'appelle le sous-corps premier de $K$.
+\end{defn}
+\begin{rmq}
+Le corps
+\[ 
+	\mathbb{F}_p \simeq ( \faktor{\mathbb{Z}}{p \mathbb{Z}}, + ,\times)
+\]
+l'anneau des classes de congruences module $p$
+\end{rmq}
+\subsection{Arithmétique des corps de caractéristique $p>0$}
+\begin{propo}
+Soit $K$ un corps de caractéristique $p>0$, alors l'application
+\begin{align*}
+\bullet^{p}: K \to K\\
+x \to x^{p}
+\end{align*}
+est un morphisme d'anneaux non-nul ( donc nécessairement injectif).
+\end{propo}
+\begin{defn}
+	Soit $K$ un corps de caractersitique $p$, le morphisme d'anneau precedent s'appelle le morphisme de Frobenius ( ou simplement le Frobenius)de $K$ se note
+	\[ 
+	frob_p: x \to x^{p}
+	\]
+\end{defn}
+\begin{proof}
+$\forall x, y \in K$
+\begin{align*}
+( x.y)^{p} = x.y.x.y.x.y.x.y \ldots\\
+= x^{p} y^{p}
+\end{align*}
+$\forall x,y \in K$ 
+\[ 
+	( x+y)^{p} = x^{p} + y^{p}
+\]
+Comme $K$ est commutatif, on a la formule du binome de Newton
+\begin{align*}
+	( x+y)^{p} &= \sum_{k=0}^{ p} \binom{k}{p} x^{k} y ^{p-k}\\
+&= x^{p} + y^{p} + \sum_{k=1}^{ p-1}\binom{k}{p} x^{k} y^{p-k}
+\end{align*}
+\begin{lemma}
+Si $1 \leq k \leq p-1$, alors
+\[ 
+	p | \binom{p}{k}
+\]
+
+\end{lemma}
+Or
+\[ 
+	\binom{p}{k} x^{k} y^{p-k} = \binom{p}{k}x^{k} y^{p-k} = 0_K \cdot x^{k} y^{p-k}
+\]
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

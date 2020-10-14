@@ -1,0 +1,171 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{6}{Wed 14 Oct}{mercredi}
+\subsection{Coordonnées sphériques}
+On a 
+\[ 
+	\vec{\omega} = \dot{\phi} \hat{z} + \dot{\theta}\hat{e}_{\phi} 
+\]
+Derivees des vecteurs de base
+\begin{align*}
+	\dot{e}_{r} = \vec{\omega} \land e_r = \dot{\theta} e_{\theta}  + \dot{\phi} \sin \theta e_{\phi} \\
+	\dot{e}_{\theta} = \vec{\omega} \land e_{\theta}  = -\dot{\theta} e_{r}  + \dot{\phi} \cos \theta e_{\phi} \\
+	\dot{e}_{\phi} = \vec{\omega} \land e_{\phi}  = -\dot{\phi} e_{r}  - \dot{\phi} \cos \theta e_{\phi} 
+\end{align*}
+Position vitese et acceleration dans ce repère
+\begin{align*}
+\vec{r} = \vec{OP} = r e_{r} 
+\end{align*}
+\subsection{Bille en équilibre dans un anneau en rotation}
+Referentiel = le laboratoire\\
+Repere lié au référentiel: $Oxyz$ \\\
+Vitesse angulaire de l'anneauè $ \vec{\omega} = \omega \hat{z}$ \\
+Coordonnées sphériques: $r,\theta,\phi$ \\
+Contrainte : la bille reste sur l'anneau
+\begin{align*}
+\begin{cases}
+	r= R, \dot{r} =0, \ddot{r}=0\\
+	\dot{\phi} = \omega, \ddot{\phi}=0
+\end{cases}
+\end{align*}
+Si bille en équilibre: $\dot \theta =0, \ddot \theta=0$
+
+Forces s'exercant sur la bille
+\begin{align*}
+\begin{cases}
+\text{ poids de la bille: } m \vec{g} = - mg \dot z\\
+\text{ force de liaison $\vec{N}$. } \vec{N} e_{\theta} =0
+\end{cases}
+\end{align*}
+On obtient que
+\begin{align*}
+m \vec{g} = -mg \cos \theta e_{r} + mg \sin \theta e_{\theta} \\
+\vec{N} = N_r e_r + N_{\phi} e_{\phi} 
+\end{align*}
+2eme loi de newton: $\vec{N} + m \vec{g} = m \vec{a}$ 
+\begin{align*}
+\begin{cases}
+\text{ sur  } e_r : N_r -mg \cos \theta = -m R \omega  ^{2} \sin^{2} \theta\\
+\text{ sur } e_{\theta} :mg \sin \theta = - mR \omega^{2}\sin \theta \cos \theta\\
+\text{ sur } e_{\phi} : N_{\phi} =0
+\end{cases}
+\end{align*}
+Pour la deuxieme equation, on a\\
+soit $\sin \theta = 0 ( \Rightarrow \theta=0 \text{ ou } \pi)$\\
+ou $\cos \theta = \frac{-g}{R \omega^{2}}$ ( seulement si $|\omega| \geq \sqrt{\frac{g}{R}}$)
+\section{Travail, énergie, forces conservatives}
+\subsection{Forces de Frottement}
+
+
+\begin{itemize}
+\item Forces exercees sur un corps par le fluide dans lequel il se déplace
+\item Ces forces s'opposent au mouvement du corps
+	\[ 
+		\vec{F}_{frot} = -f(v) \hat{v}, f(v) > 0
+	\]
+
+\item Elles résultent d' un grand nombre de phénomènes microscopiques, complexes à décrire
+\item On décrit donc les forces de frottement par des lois empiriques\\
+	Tirées de l'expérience\\
+	Non-fondamentales\\
+	Approximatives
+	
+\end{itemize}
+\subsection{Forces de frottement sec}
+$\bullet$ Force $F$ exercée par une surface sur un solide:\\
+\begin{itemize}
+\item composant normale à la surface $N=$ force de liaison
+\item composante tangente à la surface $F_{frot} =$ force de frottement sec
+\end{itemize}
+Lois de Coulomb:\\
+\begin{align*}
+\text{ si } v=0: F_{frot} \leq F_{frot} ^{max} = \mu_s N\\
+\text{ si } v\neq=: \vec{F}_{frot} = -\mu_c N \frac{\vec{v}}{v}
+\end{align*}
+\subsection{Coefficients de frottement}
+\begin{itemize}
+\item Dépendent de
+	\begin{itemize}
+	\item Natures des surfaces
+	\item Etat des surfaces
+	\item Température
+	\end{itemize}
+	
+\item En général
+	\[ 
+	\mu_c < \mu_s
+	\]
+	
+\item En premiere approximation ne dependent pas de 
+	\begin{itemize}
+		\item la vitesse ( si $ v \neq 0$)
+		\item la dimension des surfaces de contact ( surfaces planes)
+	\end{itemize}
+\end{itemize}
+Ne dépendent pas de la dimension de la surface de contac
+\begin{itemize}
+\item Sirface pas parfaitement plane
+\item Surface de contact véritable proportionnelle à la charge
+\end{itemize}
+
+\subsection{Impulsion et quantité de mouvement}
+\begin{itemize}
+\item Point matériel de masse m soumis à une force $F$ entre les points 1 et 2.
+\item Definition
+	\[ 
+	d \vec{I} = \vec{F} dt \Rightarrow \vec{I}_{12}  = \int_{1}^{2} d \vec{I} = \int_{t_1}^{t_2} \vec{F} dt
+	\]
+
+\item Si $F$ est la résultante des forces s'appliquant sur le point matériel
+	\begin{align*}
+	\vec{F} = m \vec{a} \Rightarrow \vec{I}_{12} = \int_{1}^{2} m \vec{a} dt = \int_{1}^{2}m d \vec{v}\\
+	= \int_{1}^{2} d ( m \vec{v}) = m \vec{v}_2 - m \vec{v}_1 = \vec{p}_2 - \vec{p}_1
+	\end{align*}
+	ou on a défini
+	\[ 
+	\vec{p}= m \vec{v}
+	\]
+	La variation de la quantité de mouvement est égale à l'impilsion de la somme des forces.
+	Donc, si $m$ est constante, on a
+	\[ 
+	\vec{F}= m \vec{a} \iff \vec{F} = \frac{d \vec{p}}{dt}
+	\]
+	
+\subsection{Travail et énérgie cinétique}
+Définition:
+\[ 
+\delta W = \vec{F} \cdot d \vec{r} \Rightarrow W_{12} = \int_{1}^{2} \delta W = \int_{1}^{2} \vec{F} \cdot d \vec{r}
+\]
+Si $F$ est la résultante des forces s'appliquant sur le point matériel ( et si m constante) 
+\begin{align*}
+W_{12} = \int_{1}^{2} m \vec{a} d \vec{r} = \int_{1}^{2} m \frac{d \vec{v}}{dt} \cdot \vec{v}d t\\
+= \int_{1}^{2} \frac{d}{dt} ( \frac{1}{2}m \vec{v}^{2})dt = K_2 - K_1
+\end{align*}
+où on a défini $K= \frac{1}{2}m \vec{v}^{2}$\\
+La variation de l'énergie cinétique est égale au travail de la somme des forces.
+\subsection{Travail et Puissance d'une force}
+\[ 
+W_{12} = \int_{1}^{2} \delta W = \int_{1}^{2} \vec{F} \cdot d \vec{r} = \int_{1}^{2} F \cos \alpha d s = \int_{1}^{2}F_t ds
+\]
+Seile la composante de $\vec{F}$ tangente à la trajectoire travaile, la composante normale à la trajectoire ne travaille pas.\\
+Puissance instantanée dûne force
+\[ 
+P=  \frac{\delta W}{dt} = \vec{F}\cdot \vec{v}
+\]
+
+
+
+	
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

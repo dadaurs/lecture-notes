@@ -1,0 +1,207 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Tue 13 Oct}{mardi}
+\subsection{Construction de Groupes avec des quotients}
+\begin{exemple}
+\[ 
+	G = ( \mathbb{Z},+)
+\]
+On dénote
+\[ 
+\faktor G R = \left\{ R_x | x\in G \right\} = \left\{ [ x] | x \in G \right\} 
+\]
+
+Dans ce cas
+\[ 
+\faktor {\mathbb{Z} } { m\mathbb{Z}} = \left\{ m \mathbb{Z}, m\mathbb{Z}+1, \ldots , m\mathbb{Z}+ m-1 \right\} 
+\]
+\end{exemple}
+\subsubsection{Recette générale}
+Construction de la structure de groupes sur $ \faktor G R$ 
+\begin{itemize}
+\item Représentant\\
+	\[ 
+	x \in \faktor G R
+	\]
+	$g$ est un représentant de $x$ si $x= [ g]$.
+\item $ [ g] \cdot [ f] = [ g \cdot f]$
+\item $[g]^{-1} = [ g^{-1}]$
+\item $e_{\faktor G R} = [ e]$
+\end{itemize}
+Il faut que ce soit bien défini, donc si
+\[ 
+	( g,g') \in R, ( f,f') \in R
+\]
+Alors
+\[ 
+	( g.f, g'.f') \in R
+\]
+De même, si $ ( g, g') \in R$ 
+\[ 
+	\Rightarrow ( g^{-1}, g'^{-1}) \in R
+\]
+
+\begin{exemple}
+	$ ( \faktor { \mathbb{Z}} { m \mathbb{Z}}, + )$\\
+	Il faut vérifier la condition la condition.\\
+	\begin{itemize}
+		\item  $( g,g' ) \in R, ( f,f') \in R \implies ( g.f, g'.f') \in R$, alors
+			\[ 
+				m | g-g' \text{ et } m | f-f' \text{ et }  m | g+f - ( g' + f')
+			\]
+
+		\item $(g,g') \in R$, alors $ ( g^{-1},g'^{-1}) \in R$, en effet
+			\[ 
+			m| g-g' \text{ et } m | -g - -g'
+			\]
+		
+	\end{itemize}
+	Donc on a vérifié que c'est un  groupe.
+	
+\end{exemple}
+\begin{exemple}
+$ \faktor { \mathbb{Z}} { m \mathbb{Z}}^{\times}$\\
+pas stable avec la multiplication.
+\end{exemple}
+Par contre
+$ ( \faktor { \mathbb{Z} } { m \mathbb{Z}}, \bullet)$ monoide avec $ [ 1]$ l'élément neutre.
+Mais $ [ 0]^{-1}$ n'existe pas
+Donc il faut jeter les classes qui n'ont pas d'inverses,i.e. tous les éléments sauf $[p]$, $p$ premiers.\\
+Donc  
+\[ 
+\left\{ [ g] \in \faktor { \mathbb{Z}} { m \mathbb{Z}} | ( g,m)=1 \right\} = ( \faktor { \mathbb{Z}} { m \mathbb{Z}} )^{\times} \subseteq \faktor { \mathbb{Z}} { m\mathbb{Z}}
+\]
+Pour le moment, il s'agit que d' un sous-ensemble\\
+On veut voir que la structure de monoide induit une structure de groupe sur $\faktor { \mathbb{Z}}{ m \mathbb{Z}}$.\\
+$ [ g], [ f] \in (  \faktor { \mathbb{Z}}{ m \mathbb{Z}})^{\times} \Rightarrow [ g.f] \in(  \faktor { \mathbb{Z}}{ m \mathbb{Z}})^{\times}$\\
+Autrement dit $ ( g,m)=1 ( f,m)=1 \Rightarrow ( g.f, m)=1$\\
+Clairement, $ \left\{ 1 \right\} \in(  \faktor { \mathbb{Z}}{ m \mathbb{Z}})^{\times}$\\
+De plus, soit $[g] \in (  \faktor { \mathbb{Z}}{ m \mathbb{Z}})^{\times}$, on veut montrer que
+\[ 
+\Rightarrow [ g^{-1}] \in (  \faktor { \mathbb{Z}}{ m \mathbb{Z}})^{\times}
+\]
+autrement dit,
+\[ 
+	( g,m)=1 \implies \exists f \in \mathbb{Z}, \exists x \in \mathbb{Z} \text{ tel que } g.f =1 + mx
+\]
+Ce qui est immédiat, par Bézout.\\
+Donc $(  \faktor { \mathbb{Z}}{ m \mathbb{Z}})^{\times}$ est un groupe!
+\begin{defn}[Homomorphismes de groupes]\index{Homomorphismes de groupes}\label{defn:homomorphismes_de_groupes}
+	Soient $G,H$ deux groupes.\\
+	Une application
+	\[ 
+	\phi: G \to H
+	\]
+	est un homomorphisme si 
+	\[ 
+		\forall g,f \in G: \phi(g.f) = \phi(g) . \phi(f)
+	\]
+	$\phi$ est un endomorphisme si $\phi$ est un homomorphisme 
+	\[ 
+	\phi: G \to G
+	\]
+	$\phi$ est un isomorphisme si 
+	\[ 
+	\phi: G \to H
+	\]
+	est un homomorphisme bijectif.\\
+$G$ et $H$ sont isomorphes si il existe
+\[ 
+	\phi: G \to H
+\]
+un isomorphisme. On note
+\[ 
+G \simeq H
+\]
+
+	
+\end{defn}
+\begin{lemma}
+\[ 
+\phi: G \to H
+\]
+un homomorphisme, alors
+\[ 
+	\phi ( g^{n}) = \phi(g)^{n}
+\]
+\end{lemma}
+\begin{proof}
+pour n=0:\\
+\begin{align*}
+\text{ à montrer: } \phi(e_G) = e_H\\
+e_H \cdot \phi(g) = \phi(g) = \phi(e_G.g) = \phi(e_G) \phi(g)
+\end{align*}
+Donc $e_H = \phi(e_G)$.\\
+Pour $n>0$ :
+\[ 
+	\phi(g^{n}) = \phi(g. \ldots. g) = \phi(g). \ldots . \phi(g) = \phi(g)^{n}
+\]
+Pour $n<0$:\\
+On a démontré la semaine passée
+\begin{align*}
+\phi(g)^{n} \cdot \phi(g)^{-n} = phi(g)^{0} = e_H\\
+\text{ Il suffit de montrer que } \\
+\phi(g^{n)} \text{ est aussi un inverse de } \phi(g)^{-n}\\
+\phi(g^{n}) \phi(g^{-n}) = \phi(g^{n} g^{-n}) = \phi(e_G) = e_H
+\end{align*}
+\end{proof}
+\begin{exemple}
+\begin{itemize}
+	\item  $ ( G,+)$ abélien, $n \in \mathbb{N}$ 
+		\[ 
+		G \ni x \mapsto n.x
+		\]
+	C'est un homomorphisme car
+	\[ 
+		n ( x+y) = nx + ny
+	\]
+
+\item 
+	\[ 
+	\phi: \mathbb{Z} \mapsto G
+	\]
+	quelconque, alors
+	\[ 
+		\phi(n\cdot 1) = \phi(1)^{n} \forall n \in \mathbb{Z}
+	\]
+	
+	
+		
+\end{itemize}
+\end{exemple}
+Autre direction:\\
+Est-ce qu'il existe
+\[ 
+\phi: \mathbb{Z} \to G
+\]
+tel que 
+\[ 
+	\phi(1) = g
+\]
+Il y a une seule possibilité que ce soit le cas, quand
+\[ 
+	\phi(n) = g^{n}
+\]
+C'est un homomorphisme:
+\[ 
+g^{n} g^{m} = g^{n+m}
+\]
+Cet homomorphisme existe donc, et il est uniquemenent determinem on l'appelle
+\[ 
+dexp_g
+\]
+pour ``exponentielle discrete'' 
+
+
+
+
+
+
+	
+
+
+
+
+
+
+\end{document}	

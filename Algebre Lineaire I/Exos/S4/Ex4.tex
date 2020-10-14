@@ -1,0 +1,99 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\begin{document}
+\title{Série 4}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+Il suffit de résoudre le système d'équations.\\
+On résout par substitution.\\
+Si $b=0$:\\
+On a donc que $ad = \pm 1$
+\begin{align*}
+\begin{cases}
+ax+ cy = m\\
+bx + dy = n
+\end{cases}
+\begin{cases}
+adx + dcy = dm\\
+-bcx - dcy = -cn
+\end{cases}\\
+\text{ On peut additionner les deux équations, en simplifiant on obtient }\\
+x  = \frac{dm-cn}{\Delta} =\pm( dm - cn )
+\end{align*}
+De même, on obtient que
+\begin{align*}
+	\begin{cases}
+	ax+ cy = m\\
+	bx + dy = n
+	\end{cases}
+\begin{cases}
+	-abx -bcy = -bm\\
+	abx + ady = an	
+\end{cases}
+\text{ et donc } 
+y = \frac{an-bm}{\Delta}= \pm( an-bm )
+\end{align*}
+
+\section*{2}
+
+Ce résultat suit directement du fait que $\mathbb{Z}$ est un anneaux, et donc stable par la multiplication, l'addition et la soustraction.\\
+Par hypothèse, $a, b,c,d \in \mathbb{Z}$, donc $\pm (an-bm)$ et $\pm ( dm-cn) \in \mathbb{Z}$ et donc $(x,y) \in \mathbb{Z}^{2}$
+\section*{3}
+Celà suit directement de la partie 1, en effet, soit $(m,n) \in \mathbb{Z}^{2}$, alors, en résolvant le  système d'équations de la partie 1, on peut trouver des coefficients $x, y \in \mathbb{Z}$ tel que 
+\[ 
+	x(a,b) + y(c,d) = ( n,m)
+\]
+Donc tout élément de $(n,m) \in \mathbb{Z}^{2}$ s'exprime comme combinaison linéaire de $(a,b)$ et $(c,d)$, donc
+$\langle \left\{ ( a,b), ( c,d) \right\} \rangle = \mathbb{Z}^{2} $
+
+\section*{4}
+Car $\Delta \neq 0$, on peut toujours encore admettre les solutions données dans la partie 1.\\
+Supposons, par l'absurde que, 
+\[ 
+\langle \left\{ ( a,b), ( c,d) \right\} \rangle = \mathbb{Z}^{2} 
+\]
+et que $\Delta =ad - bc \neq \pm 1$.\\
+Donc, $\forall (m,n) \in \mathbb{Z}^{2}$, il existe $x,y \in \mathbb{Z}$ tel que
+$x\cdot ( a,b) + y \cdot ( c,d)= (m,n)$.\\
+Par la partie 1, on a que 
+\[ 
+x = \frac{dm-cn}{\Delta} \text{ et }  y = \frac{an-bm}{\Delta}
+\]
+Pour que $x, y \in \mathbb{Z}$, il faut que $\Delta | dm -cn$ et que $\Delta | an-bm$ et ceci pour toutes les valeurs de $m$ et $n$, donc en particulier:
+\begin{align*}
+	\Delta &| d, \quad ( m=1, n=0)\\
+	\Delta &| c, \quad ( m=0, n=-1)\\
+	\Delta &| a, \quad ( m=0,n=1)\\
+	\Delta &| b, \quad ( m=-1,n=0)
+\end{align*}
+Donc, il existe $a', b', c', d' \in \mathbb{Z}$ tel que
+a
+\begin{align*}
+	c = \Delta \cdot c', \quad a = \Delta \cdot a'\\
+	b = \Delta \cdot b', \quad d = \Delta \cdot d'
+\end{align*}
+Donc 
+\begin{align*}
+	\Delta &= ad -bc\\
+	\Delta &= \Delta^{2}(a'd' - b'c')\\
+	1 &= \Delta(a'd' - b'c')\\
+	\frac{1}{\Delta} &= (a'd' - b'c')
+\end{align*}
+Or, par hypothèse, $\Delta \neq 1,-1,0$ et donc $a'd' - b'c'$ n'est pas entier.\\
+Donc, $\langle\{(a,b),(c,d) \}\rangle$ n'engendre pas $\mathbb{Z}^{2}$
+
+
+
+
+
+
+	
+\end{document}

@@ -1,4 +1,4 @@
-\documentclass[11pt, a4paper, twoside]{article}
+\documentclass[11pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
@@ -37,7 +37,44 @@ On utilisera le résultat démontré dans l'exercice 2 partie 3:
 	en effet, $\sigma_m^{k} \neq e_{S_n}$ car par définition $n$ est le plus petit entier tel que $\sigma_m^{n}=e_{S_n}$ et $k<n$.\\
 	Etant donné que $\sigma_m$ est disjoint des autres cycles, on en déduit le théorème.
 \end{proof}
-On sait, par l'exercice 2.5 que l'ordre d'un élément de $S_n$ est borné par $n!$.\\
+On sait, par l'exercice 2.5 que l'ordre d'un élément de $S_n$ est borné par $n!$, il n'y a donc qu'un cas fini de possibilités à considérer.\\
+Ramenons nous maintenant à $S_4$.\\
+On désignera par $\binom{\bullet}{\bullet}$ les coefficients binomiaux.
+\begin{itemize}
+\item Le nombre d'éléments dans $S_4$ dont l'ordre est 1, est clairement 1, c'est l'identité.\\
+\item Le nombre d'éléments dont l'ordre est 2 est:
+	\[ 
+		\binom{4}{2} + \binom{4}{2} \cdot \frac{1}{2} = 9
+	\]
+
+En effet, soit $S \in S_4$ d'ordre 2, alors on distingue 2 cas:\\
+Si $S = \sigma$ un cycle d'ordre 2, alors il y a clairement $\binom{4}{2}$ manières de choisir les deux éléments du cycle.\\
+Si $S= \sigma_1 \cdot \sigma_2$, avec $\sigma_1,\sigma_2$, deux cycles d'ordre 2, alors il y a $\binom{4}{2}$ manières de choisir la première permutation et la deuxième sera uniquement déterminée.\\
+Il faut diviser le deuxième coefficient binomial car l'ordre dans lequel on choisit les termes n'importe pas.
+\item Le nombre d'éléments dont l'ordre est 3 est:
+	\[ 
+		\binom{4}{3} \cdot 2 = 8
+	\]
+
+Si une permutation $S$ est d'ordre 3, elle peut être représentée par un seul cycle d'ordre 3.\\
+Il y a clairement $\binom{4}{3}$ manières de choisir les éléments du cycle.\\
+Il y a $\frac{3!}{3}=2$ manières d'arranger les trois termes choisis pour qu'ils forment des permutations distinctes.
+
+\item Le nombre d'éléments dont l'ordre est 4 est:
+	\[ 
+		\binom{4}{4} \cdot 6 = 6
+	\]
+A nouveau, si $S \in S_4$ une permutation d'ordre 4, elle peut être représentée par un cycle unique d'ordre 4.\\
+Il y a, clairement $\binom{4}{4}$ manières de choisir les éléments.\\
+Il y a $\frac{4!}{4}=6$ manières d'arranger ces 4 éléments pour qu'ils forment des cycles différents.
+\end{itemize}
+On peut maintenant facilement vérifier que
+\[ 
+1 + 6 + 8 + 6 = 24
+\]
+On a donc bien énuméré toutes les possibilités.
+
+
 
 
 
