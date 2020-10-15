@@ -1,0 +1,43 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\begin{document}
+\title{Série 5, Exercice 3}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+Supposons que $a^{n}\neq a^{m}, \forall n, m \in \mathbb{N}, n\neq m$, alors la suite définie par
+\[ 
+a_0,a_1,a_2,a_3,\ldots
+\]
+est contenue dans $A$, mais possède une infinité d'éléments distincts, ce qui contredit l'hypothèse que $A$ est fini.\\
+Donc il existe, $m,n \in \mathbb{N} $, tel que $a_n=a_m$
+\section*{2}
+Si $a^{m}=1_A$, alors $a^{m}-1_A = 0_A$ et on a fini.\\
+Supposons donc $n>m$ et $a^{n}=a^{m}\neq 1_A$.\\
+On a que $n-m>0$, donc $a^{n-m}$ est bien défini.\\
+\[ 
+a_n = a^{n} = a^{n-m} a^{m} = a^{m} = a_m
+\]
+Donc 
+\[ 
+a^{n-m}a^{m} = a^{m} \Rightarrow a^{n-m} = 1_A.
+\]
+\section*{3}
+Donc, pour tout $a \in A$, il existe$ n \in \mathbb{N}$ tel que
+\[ 
+a^{n}= 1_A
+\]
+Alors l'inverse de l'élément $a$ est l'élément
+\[ 
+a^{n-1}
+\]
+Donc l'ensemble $A\setminus \left\{ 0_A \right\} $ est stable par inversion, donc $A$ est un corps.
+\end{document}

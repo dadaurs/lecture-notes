@@ -1,0 +1,266 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Wed 14 Oct}{mercredi}
+\begin{defn}
+	On dit qu'une fonction $f$ est définie au voisinage de $x \in \mathbb{R}$, si
+	$\exists \epsilon>0: f$ définie sur
+	\[ 
+		]x-\epsilon,x[ \text{ et } ]x,x+\epsilon[
+	\]
+	
+\end{defn}
+\begin{exemple}
+	$f(x_0)=\frac{1}{x_0}$ défini au voisinage de 0.
+\end{exemple}
+\begin{defn}
+Soit $f$ définie au voisinage de $ x_0$.
+\[ 
+	\lim_{x \to x_0} f(x) =l
+\]
+signifie
+\[ 
+\forall \epsilon>0 \exists \delta >0 \forall x
+\]
+\[ 
+	0<|x-x_0| <\delta \Rightarrow |f(x) -l| < \epsilon
+\]
+
+\end{defn}
+\begin{thm}
+Soit $f$ définie au voisinage de $x_0$
+\[ 
+	\lim_{x \to x_0} f(x) = l \iff \forall \text{ suite } ( a_n)_{n=1} ^{ \infty}
+\]
+qui converge vers $ x_0$ et $a_n\neq x_0, \forall n$, on  a
+\[ 
+	\lim_{n \to \infty} f(a_n) =l
+\]
+\end{thm}
+\begin{rmq}
+	A priori, $f$ n'est pas définie en $a_n$, mais $\exists n_0, \forall n >n_0: a_n \in$ domaine de définition car $f$ définie au voisinage de $ x_0$
+\end{rmq}
+
+\begin{proof}
+$\Rightarrow$ \\
+Soit $a_n \neq x_0$, une suite convergent vers $x_0$. A voir: Soit  $\epsilon>0,$ cherche $ n_0 \forall n >n_0: |f(a_n) - l| < \epsilon$.\\
+Par hypothese, $\exists \delta>0 \forall x$ 
+\[ 
+	0 < |x-x_0| < \delta \Rightarrow |f(x)-l| <\epsilon \quad ( 1)
+\]
+Appliquer $\lim a_n = x_0$ à $\delta$ :
+\[ 
+	\exists n_0, \forall n >n_0: |a_n-x_0| < \delta 
+\]
+Appliquer à présent 1 à $x= a_n$\\
+$\Leftarrow$\\
+Soit  $\epsilon >0$, on cherche $\delta>0$ \\
+Supposons par l'absurde qu'aucun $\delta$ satisfait la définition.\\
+En particulier, $\delta = \frac{1}{n}$ 
+\[ 
+	\exists x_n: 0<|x_n-x_0| < \frac{1}{n} \text{ et } |f(x_n)-l| \geq \epsilon 
+\]
+Or
+\[ 
+	x_n \neq x_0 \text{ et } ( x_n) \to x_0
+\]
+Par hypothèse
+\[ 
+	\lim_{n \to \infty} f(x_n) =l
+\]
+En particulier, pour $\epsilon$,
+\[ 
+	\exists n_0 \forall n >n_0 : |f(x_n) -l| <\epsilon
+\]
+
+\end{proof}
+\begin{crly}
+	Si $\lim_{x \to x_0} l$ et $ \lim_{x \to x_0} f'(x) = l'$, alors
+	\[ 
+		\lim_{x \to x_0} f(x) + f'(x) = l+l'
+	\]
+Idem pour produit.	
+\end{crly}
+\begin{crly}
+	Si $f(x) \geq a, \quad \forall x$ au voisinage de $ x_0$ et
+	\[ 
+		\lim_{x \to x_0} f(x) = l, \text{ alors } l \geq a
+	\]
+	
+\end{crly}
+\begin{crly}
+Si
+\[ 
+	\lim_{x \to x_0} f(x)=l
+\]
+Alors
+\[ 
+	\lim_{x \to x_0} |f(x)| = |l|
+\]
+
+
+\end{crly}
+\begin{crly}
+Pour
+\[ 
+	\lim \frac{g(x)}{f(x)}
+\]
+il suffit de traiter $\lim \frac{1}{f(x)}$.
+
+\end{crly}
+\begin{lemma}
+	Si $ \lim_{x \to x_0} f(x) =l \neq 0$, alors
+	 \[ 
+		 \exists \epsilon>0 \forall x \in ]x_0-\epsilon,x_0[ \cup ]x_0,x_0+\epsilon[
+	\]
+	tel que $f(x) \neq 0$
+\end{lemma}
+\begin{proof}
+\[ 
+	|f(x) -l | < \frac{|l|}{2}
+\]
+dans un voisingae de $x_0$, alors
+$f(x) \neq 0$
+\end{proof}
+\begin{crly}
+	Si $\lim f(x) =l = \lim g(x)$ et 
+	\[ 
+		f(x) \leq h(x) \leq g(x) \forall x \text{ au voisinage de $x_0$ } 
+	\]
+	Alors
+	\[ 
+		\lim_{x \to x_0} h(x) =l
+	\]
+	
+\end{crly}
+\begin{crly}[Cauchy]
+	Soit $f$ définie au voisinage de $x_0$, alors
+	\[ 
+	\lim_{x \to x_0} f(x) \text{ existe  } \iff \forall \epsilon>0 \exists \delta >0 \forall x_1,x_2 \text{ avec } 
+	\]
+	\[ 
+		0< |x_i-x_0| < \delta \quad ( i=1,2)
+	\]
+	on a
+	\[ 
+		|f(x_i)- f(x_2)| < \epsilon
+	\]
+	
+	
+\end{crly}
+\begin{lemma}
+	Si $\lim f(a_n)$ existe $\forall$ suite ( $a_n \neq x_0$) convergeant vers $x_0$,alors
+	\[ 
+		\lim_{x \to x_0} f(x)
+	\]
+	existe
+\end{lemma}
+\begin{proof}
+	Il suffit de montrer que toutes ces limites $f(a_n)$ ont la même valeur.\\
+	En effet, on peut alors appliquer le théorème et $\lim_{x \to x_0} f(x) =l$ \\
+	Sinon, $ \lim_{n \to  + \infty} f(a_n) = l \neq l' = \lim_{n \to  + \infty} f(a'_n)$ pour deux telles suites $a_n$ et $a'_n$. A présent
+	\[ 
+	b_n = 
+	\begin{cases}
+	a_n \text{ si $a$ pair } \\
+	a'_n \text{ si $a$ impair } 
+	\end{cases}
+	\]
+
+	or $f(b_n)$ converge absurde car elle admet deux sous-suites avec limites distinctes $l,l'$.
+
+\end{proof}
+\begin{proof}
+Preuve du corollaire ci-dessus.\\
+Grace au lemme, il suffit de montrerr que $\forall$ suite $a_n \to x_0$, la suite $f(a_n)$ est de Cauchy.\\
+Par hypothèse, $\exists \delta>0 \forall x_1,x_2: 0< |x_i-x_0| < \delta$ implique
+\[ 
+	|f(x_1) -f(x_2)| < \epsilon
+\]
+Or, $\exists n_0 \forall n>n_0: |a_n -x_0| < \delta $.\\
+Applique $a_n=x_1$ et $a_m = x_2$ donne que $f(a_n)$ est de cauchy.
+\end{proof}
+\begin{crly}
+	Si $\lim_{x \to x_0} f(x)=l$ et $\lim_{x \to x_0} f(x) = l'$, alors $l=l'$.
+\end{crly}
+
+\begin{rmq}
+On a implicitement utilisé les concept de $+, \cdot, \leq$ sur les fonctions.\\
+\hr\\
+Ce n'est pourtant pas un corps.\\
+Par exemple, $\forall x,y \in $ corps
+\[ 
+xy=0 \Rightarrow x=0 \text{ ou } y=0
+\]
+
+\end{rmq}
+Les fonctions ont une opération supplémentaire
+\[ 
+f \circ g
+\]
+est définie par 
+\[ 
+	f\circ g ( x) = f(g(x))
+\]
+Soit $g: A \to B$ des parties de $\mathbb{R}$, et $f:B \to \mathbb{R}$
+avec $g$ défini au voisinage de $x_0$ et $f$ au voisinage de $ g_0$.\\
+\begin{propo}
+	Supposons $g(x) \neq g_0 \forall x$ au voisinage de $ x_0$\\
+	Si $\lim_{x \to x_0} g(x) =y_0$ et $\lim_{y \to y_0} f(y) = l $, alors
+	\[ 
+		\lim_{x \to x_0} f\circ g ( x) =l 
+	\]
+\end{propo}
+\begin{proof}
+Soit $\epsilon>0$, à voir $\exists \delta>0 \forall x:$ 
+\[ 
+	0< |x-x_0| < \delta \Rightarrow |f(g(x)) -l | < \epsilon
+\]
+2eme hup nous dit
+\[ 
+	\exists \eta > 0 \forall y: |y-y_0| <\eta \Rightarrow |f(y)-l| < \epsilon
+\]
+Idee: appliquer la premiere hypothèse à $\eta$ et poser $y=g(x)$.\\
+Ca marche, tant que $y\neq y_0$.
+\end{proof}
+\begin{exemple}
+Exemple délicat:\\
+Soit
+\[ 
+	g(x) =
+	\begin{cases}
+x\sin \frac{1}{x} \text{ si } x\neq 0\\
+0 \text{ si } x=0
+	\end{cases}
+\]
+Clairement $\lim_{x \to 0} =0$.\\
+On pose que
+\[ 
+	f(x)=
+	\begin{cases}
+	0 \text{ si } x\neq 0\\
+	1 \text{ si } x=0
+	\end{cases}
+\]
+On voit que $\lim_{y \to 0} f(y) = 0$.\\
+Or 
+\[ 
+	\lim_{x \to 0} f(g(x))
+\]
+n'existe pas.
+
+
+\end{exemple}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

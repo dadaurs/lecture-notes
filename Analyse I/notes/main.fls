@@ -232,6 +232,8 @@ INPUT /usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/share/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texmf-dist/tex/latex/faktor/faktor.sty
+INPUT /usr/share/texmf-dist/tex/latex/faktor/faktor.sty
 INPUT /usr/share/texmf-dist/tex/latex/python/python.sty
 INPUT /usr/share/texmf-dist/tex/latex/python/python.sty
 INPUT /usr/share/texmf-dist/tex/latex/xurl/xurl.sty
@@ -423,6 +425,8 @@ INPUT lectures/lec7.tex
 INPUT lectures/lec7.tex
 INPUT lectures/lec8.tex
 INPUT lectures/lec8.tex
+INPUT lectures/lec9.tex
+INPUT lectures/lec9.tex
 OUTPUT main.thm
 OUTPUT main.loe
 INPUT main.aux
