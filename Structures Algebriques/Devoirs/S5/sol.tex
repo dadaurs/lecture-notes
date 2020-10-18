@@ -1,0 +1,62 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newcommand\hr{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+}
+\begin{document}
+\title{Série 5, Exercice 6}
+\author{David Wiedemann}
+\maketitle
+Soit $A$ et $B$ deux groupes d'ordre 3.\\
+Regardons la loi de composition $\star$ sur $A$, la construction d'une loi de composition sur $B$.\\
+Posons $A= \left\{ e_A, a, a' \right\} $, on dénote par $e_A$ l'élément neutre.\\
+Clairement $e_A \star a = a, e_A \star a'= a', a \star e_A = a, a' \star e_A = a'$ car sinon $e_A$ ne serait pas l'élément neutre.\\
+Supposons maintenant que $a \star a' \neq e_A$, alors $a $ n'admet pas d'inverse, donc $a \star a' = e_A$.\\
+Le raisonnement est le même pour $a'$, en effet $a' \star a = e_A$.\\
+Finalement, on considère $a \star a$, supposons que $a \star a= e_A$, alors $a$ admet deux inverses ce qui est une contradiciton.\\
+Supposons donc que $a \star a = a$, alors $a \star a \star a' = a \star a'$ et donc $a = e_A$ ce qui est une contradiciton. Ce qui force $a \star a = a'$.\\
+Avec le même raisonnement, on montre que $a' \star a' = a$.\\
+\hr\\
+Donc, il y a une manière unique de construire une loi de composition sur un groupe d'ordre 3.\\
+On peut donc définir une table pour la composition sur $A$, ainsi
+\begin{align*}
+&\begin{array}{l|lll}
+\star & e_A  & a  & a' \\
+\hline
+e_A  & e_A  & a  & a' \\
+a  & a  & a' & e_A  \\
+a' & a' & e_A  & a  
+\end{array}\\
+&\text{ et de même pour un groupe $B= \left\{ e_B, b,b' \right\}$ d'ordre 3 \footnote{On dénote par $e_B$ à nouveau l'élément neutre.}} \\
+&\begin{array}{l|lll}
+\times & e_B  & b  & b' \\
+\hline
+e_B  & e_B  & b  & b' \\
+b  & b  & b' & e_B  \\
+b' & b' & e_B  & b  
+\end{array}
+\end{align*}
+Par la construction ci-dessus, on sait que la loi de composition sur $B$ est unique.\\
+On définit donc la bijection $\phi$ de $A$ vers $B$
+\begin{align*}
+\phi: 
+	x \in A \to 
+	\begin{cases}
+	e_B \text{ si  } x = e_A\\
+	b \text{ si } x = a\\ 
+	b' \text{ si } x = a'\\ 
+	\end{cases}
+\end{align*}
+On vérifie facilement qu'il s'agit d'un isomorphisme.
+
+
+
+
+\end{document}

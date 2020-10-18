@@ -20,6 +20,26 @@ On utilisera le résultat démontré dans l'exercice 2 partie 3:
 \]
 
 \begin{theorem}
+Un cycle de longeur $k$ est d'ordre $k$.
+\end{theorem}
+\begin{proof}
+ 	Soit $i_j$ le $j$-ième élément d'un cycle $\sigma$ de longueur $k$.\\
+	On voit que
+	\[ 
+	\sigma^{k-j} i_j = i_k
+	\]
+	Et par définition d'un cycle, on a donc que 
+	\[ 
+	\sigma^{k-j+1} i_j = i_1
+	\]
+	Et donc 
+	\[ 
+	i_j =\sigma^{j-1} i_1 = \sigma^{j-1} \sigma^{k-j+1} i_j = \sigma^{k} i_j
+	\]
+	Et ceci est valable pour tout $i_j$ dans le support de $\sigma$.	
+\end{proof}
+
+\begin{theorem}
 	Soit $S \in S_n, S \neq e_{S_n} $ une permutation d'ordre $o(S)=k$, par exercice 2, partie 3, on peut poser que
 	\[
 		S = \prod_{i=1} ^{m} \sigma_i
@@ -54,15 +74,16 @@ On désignera par $\binom{\bullet}{\bullet}$ les coefficients binomiaux.
 	\]
 
 En effet, soit $S \in S_4$ d'ordre 2, alors on distingue 2 cas:\\
-Si $S = \sigma$ un cycle d'ordre 2, alors il y a clairement $\binom{4}{2}$ manières de choisir les deux éléments du cycle.\\
+Si $S = \sigma$ un cycle de longueur 2, alors il y a clairement $\binom{4}{2}$ manières de choisir les deux éléments du cycle, et par le théorème 1, $\sigma$ est d'ordre 2.\\
 Si $S= \sigma_1 \cdot \sigma_2$, avec $\sigma_1,\sigma_2$, deux cycles d'ordre 2, alors il y a $\binom{4}{2}$ manières de choisir la première permutation et $\binom{2}{2}$ manières de choisir la deuxième.\\
-Il faut diviser le deuxième coefficient binomial car l'ordre dans lequel on choisit les cycles n'importe pas, ceci suit de la commutativité de cycles disjoints.
+Il faut diviser le deuxième coefficient binomial car l'ordre dans lequel on choisit les cycles n'importe pas, ceci suit de la commutativité de cycles disjoints.\\
+Il est évident que la composition de deux cycles d'ordre 2 est d'ordre 2.
 \item Le nombre d'éléments dont l'ordre est 3 est:
 	\[ 
 		\binom{4}{3} \cdot 2 = 8
 	\]
 
-Si une permutation $S$ est d'ordre 3, elle peut être représentée par un seul cycle d'ordre 3.\\
+Si une permutation $S$ est d'ordre 3, elle peut être représentée par un seul cycle de longueur 3, et donc d'ordre 3.\\
 Il y a clairement $\binom{4}{3}$ manières de choisir les trois éléments du cycle.\\
 Il y a $\frac{3!}{3}=2$ manières d'arranger les trois termes choisis pour qu'ils forment des permutations distinctes.
 
@@ -70,7 +91,7 @@ Il y a $\frac{3!}{3}=2$ manières d'arranger les trois termes choisis pour qu'il
 	\[ 
 		\binom{4}{4} \cdot 6 = 6
 	\]
-A nouveau, si $S \in S_4$ une permutation d'ordre 4, elle peut être représentée par un cycle unique d'ordre 4.\\
+A nouveau, si $S \in S_4$ une permutation d'ordre 4, elle peut être représentée par un cycle unique de longueur 4, et donc d'ordre 4.\\
 Il y a, clairement $\binom{4}{4}$ manières de choisir les éléments.\\
 Il y a $\frac{4!}{4}=6$ manières d'arranger ces 4 éléments pour qu'ils forment des cycles différents.
 \end{itemize}
