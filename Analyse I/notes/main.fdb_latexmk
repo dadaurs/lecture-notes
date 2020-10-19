@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex main.idx"] 1602492147 "main.idx" "main.ind" "main" 1602680482
-  "main.idx" 1602680482 819 e7af78b8f75a90ab955cae748c7ae7ee "pdflatex"
+["makeindex main.idx"] 1602492147 "main.idx" "main.ind" "main" 1603101649
+  "main.idx" 1603101592 819 e7af78b8f75a90ab955cae748c7ae7ee "pdflatex"
   (generated)
   "main.ind"
   "main.ilg"
-["pdflatex"] 1602680481 "main.tex" "main.pdf" "main" 1602680482
+["pdflatex"] 1603101649 "main.tex" "main.pdf" "main" 1603101649
   "../../header.tex" 1601361719 96 463a560c16c176df178dc43a2c4ba969 ""
   "../../preamble.tex" 1602575091 5797 a8de9d40ac6fd6bedfba803a2ba67000 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1591545468 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -270,24 +270,25 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1599553026 4855604 a2b69e422d881628e3d9a5db2035053f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1599553015 2514047 fbf118675b2f68bc3b0de1e3f8bfd828 ""
   "lectures/lec1.tex" 1600777912 5290 3120abcaac3336b832160323bc3b9e3b ""
+  "lectures/lec10.tex" 1603101648 4538 d0f4e3e3b1a993402d72ede989581183 ""
   "lectures/lec2.tex" 1600777857 5356 14a81cc70e1a9d09233c9c77b5ee1e8c ""
   "lectures/lec3.tex" 1601220691 5496 cd04a6ffbde3d1cf884f9c716470221b ""
   "lectures/lec4.tex" 1601286991 5505 5bb9b3a64fccdfaf8db4258b241eb963 ""
   "lectures/lec5.tex" 1601470857 7097 121a458c42b17aff4fb8cff6691ed738 ""
   "lectures/lec6.tex" 1601896662 5465 b9b42d09d44f85c55c67752ce95a6595 ""
   "lectures/lec7.tex" 1602490542 4741 34877c0a52f8f72333218a3d175d02fd ""
-  "lectures/lec8.tex" 1602674191 4817 99349331bbfca0f3a2a1ca29c119da73 ""
-  "lectures/lec9.tex" 1602680481 5832 5d4f898dbea04550721714716ea34965 ""
-  "main.aux" 1602680482 42719 e0dd919d60b6c4676e771cd09b080736 "pdflatex"
+  "lectures/lec8.tex" 1602680520 4817 99349331bbfca0f3a2a1ca29c119da73 ""
+  "lectures/lec9.tex" 1602680518 5832 5d4f898dbea04550721714716ea34965 ""
+  "main.aux" 1603101592 47873 aeafa76f87b4c7ca9ce537c1a6d75614 "pdflatex"
   "main.ind" 1602492147 914 6293f7bc7d37f602932ba736be18acee "makeindex main.idx"
-  "main.loe" 1602680482 13282 761b3ad40456d31dc2ba89ab727e6766 "pdflatex"
-  "main.tex" 1602674049 404 7a4d72f26f65896eab61a95fd0408561 ""
-  "main.toc" 1602680482 900 e9e641a7c9714dbcf0772be92a635d96 "pdflatex"
+  "main.loe" 1603101592 14990 d9829d2298f6c073677557e57eee08f7 "pdflatex"
+  "main.tex" 1603095207 433 255e3af4e53eca178d91671299f60ee5 ""
+  "main.toc" 1603101592 978 1d1b7b28fdebefb1bc1bed8f6d0c2b16 "pdflatex"
   (generated)
-  "main.log"
+  "main.loe"
   "main.thm"
   "main.toc"
+  "main.log"
   "main.idx"
-  "main.pdf"
-  "main.loe"
   "main.aux"
+  "main.pdf"

@@ -13,7 +13,15 @@
 \title{Série 4}
 \author{David Wiedemann}
 \maketitle
-On dénotera par $e_{S_n} $ l'élément neutre de $S_n$.
+On dénotera par $e_{S_n} $ l'élément neutre de $S_n$, défini par
+\[ 
+	e_{S_n}:x \to x	
+\]
+On vérifie facilement que $e_{S_n} $ vérifie les propriétés de l'élément neutre, en effet, on peut simplement considérer un cycle $S \in S_n$ et regarder sa conjugaison avec $e_{S_n}$, on dénotera $K$ l'ensemble de départ: 
+\[ 
+	\forall x \in K \quad e_{S_n} \circ S ( x) = e_{S_n}(S(x)) = S(x) = S(e_{S_n} ( x)) = S \circ e_{S_n} ( x)
+\]
+
 On utilisera le résultat démontré dans l'exercice 2 partie 3:
 \[ 
 	\forall S \in S_n, S \neq e_{S_n}  \implies \exists \sigma_1,\ldots,\sigma_k \text{ des permutations disjointes tel que } S = \prod_{i=1} ^{k} \sigma_i
@@ -26,41 +34,43 @@ Un cycle de longeur $k$ est d'ordre $k$.
  	Soit $i_j$ le $j$-ième élément d'un cycle $\sigma$ de longueur $k$.\\
 	On voit que
 	\[ 
-	\sigma^{k-j} i_j = i_k
+	\sigma^{k-j} ( i_j ) = i_k
 	\]
 	Et par définition d'un cycle, on a donc que 
 	\[ 
-	\sigma^{k-j+1} i_j = i_1
+	\sigma^{k-j+1}(  i_j  )= i_1
 	\]
 	Et donc 
 	\[ 
-	i_j =\sigma^{j-1} i_1 = \sigma^{j-1} \sigma^{k-j+1} i_j = \sigma^{k} i_j
+	i_j =\sigma^{j-1} ( i_1 ) = \sigma^{j-1} ( \sigma^{k-j+1} ( i_j ) ) = \sigma^{k} ( i_j )
 	\]
 	Et ceci est valable pour tout $i_j$ dans le support de $\sigma$.	
 \end{proof}
 
 \begin{theorem}
-	Soit $S \in S_n, S \neq e_{S_n} $ une permutation d'ordre $o(S)=k$, par exercice 2, partie 3, on peut poser que
+	Soit $S \in S_n, S \neq e_{S_n} $ une permutation d'ordre $o(S)=k$.\\
+	Par l'exercice 2, partie 3, on peut poser que
 	\[
-		S = \prod_{i=1} ^{m} \sigma_i
+		S = \prod_{i=1} ^{r} \sigma_i
 	\]
-	avec $\sigma_i, 0<i\leq m$ des cycles disjoints.\\
+	avec $\sigma_i, 0<i\leq r$ des cycles disjoints.\\
 	Alors,
 	\[ 
-		o(\sigma_i) \leq k \quad \forall 0< i \leq m
+		o(\sigma_i) \leq k \quad \forall 0< i \leq r
 	\]
 \end{theorem}
 \begin{proof}
-	Supposons qu'il existe $\sigma_m$ tel que $n=o(\sigma_m) > k$, alors
+	Supposons qu'il existe $\sigma_m, 0< m\leq r$ tel que $n=o(\sigma_m) > k$, alors
 	 \[ 
-		 S^{k}= \left(\prod_{i=1} ^{m} \sigma_i\right)^{k} = \prod_{i=1} ^{m} \sigma_i^{k}
+		 S^{k}= \left(\prod_{i=1} ^{r} \sigma_i\right)^{k} = \prod_{i=1} ^{r} \sigma_i^{k}
 	\]
 	où la deuxième égalité suit du fait que un produit de cycles disjoints commute (exercice 2 partie 2).\\
 	Or $\sigma_m^{k} \neq e_{S_n}$ car par définition $n$ est le plus petit entier tel que $\sigma_m^{n}=e_{S_n}$ et $k<n$.\\
 	Etant donné que $\sigma_m$ est disjoint des autres cycles, on en déduit que 
 	\[ 
-\prod_{i=1} ^{m} \sigma_i^{k} \neq e_{S_n} 
+\prod_{i=1} ^{r} \sigma_i^{k} \neq e_{S_n} 
 	\]
+	Et donc $k$ ne peut pas être l'ordre de $S$.
 \end{proof}
 Grâce à ce théorème, on sait que pour énumérer toutes les permutations d'ordre $n$, il suffit de considérer le produit de cycles dont l'ordre est inférieur ou égal à $n$.\\
 On sait, par l'exercice 2.5 que l'ordre d'un élément de $S_n$ est borné par $n!$, il n'y a donc qu'un cas fini de possibilités à considérer.\\
@@ -77,7 +87,7 @@ En effet, soit $S \in S_4$ d'ordre 2, alors on distingue 2 cas:\\
 Si $S = \sigma$ un cycle de longueur 2, alors il y a clairement $\binom{4}{2}$ manières de choisir les deux éléments du cycle, et par le théorème 1, $\sigma$ est d'ordre 2.\\
 Si $S= \sigma_1 \cdot \sigma_2$, avec $\sigma_1,\sigma_2$, deux cycles d'ordre 2, alors il y a $\binom{4}{2}$ manières de choisir la première permutation et $\binom{2}{2}$ manières de choisir la deuxième.\\
 Il faut diviser le deuxième coefficient binomial car l'ordre dans lequel on choisit les cycles n'importe pas, ceci suit de la commutativité de cycles disjoints.\\
-Il est évident que la composition de deux cycles d'ordre 2 est d'ordre 2.
+Il est immédiat que la composition de deux cycles d'ordre 2 est d'ordre 2.
 \item Le nombre d'éléments dont l'ordre est 3 est:
 	\[ 
 		\binom{4}{3} \cdot 2 = 8

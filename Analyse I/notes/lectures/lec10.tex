@@ -1,0 +1,171 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Mon 19 Oct}{fonctions}
+\subsection{Continuité}
+\begin{defn}
+	Soit $f$ définie au voisinage de $x_0$.\\
+	Alors $f$ est dite continue en $ x_0$ si 
+	\[ 
+		\lim_{x \to x_0} f(x) =f(x_0)
+	\]
+	
+\end{defn}
+Donc $f$ continue ( en $x_0$) si on peut ``sortir $f$ de la limite'' ( en $ x_0$ )
+\begin{propo}
+	$f$ continue en $ x_0 \iff$ toute suite $a_n$ tendant vers $x_0$, on a
+		\[ 
+			\lim_{n \to  + \infty} f(a_n) = f(x_0)
+		\]
+		
+\end{propo}
+\begin{proof}
+	Théorème de traduction pour $l=f(x_0)$
+\end{proof}
+\begin{rmq}
+	Pour parler de continuité en $x_0$, il faut que $f$ soit définie en $x_0$ et au voisinage de $ x_0$
+\end{rmq}
+\begin{crly}
+Si $f$ et $g$ sont continues en $ x_0$, alors $f+g$ et $f\cdot g$ aussi.
+\end{crly}
+\begin{proof}
+Idem que avant
+\end{proof}
+
+\begin{crly}
+	Si de plus $g(x_0) \neq 0$, alors $\frac{f}{g}$ est cont. en $x_0$.
+\end{crly}
+\begin{rmq}
+	On a montré que alors dans ce cas il existe un voisinage de $ x_0$ où $g(x)\neq 0$
+\end{rmq}
+\begin{propo}
+	Soit $g$ continue en $x_0$ et $f$ continue en $g(x_0)$, alors $f\circ g$ est continue en $x_0$.
+\end{propo}
+\begin{proof}
+Ecrivons la définition de $g$ continue en $ x_0$:
+\[ 
+	\forall \epsilon >0 \exists \delta >0 \forall x: \quad |x-x_0| <\delta \Rightarrow |g(x) -g(x_0)| <\epsilon
+\]
+Soit $\epsilon >0$. Cherche $\eta >0$ tq $\forall x$:
+\[ 
+	|x-x_0| < \eta \Rightarrow |f( \underbrace{g(x)}_{=y}) - f(g(x_0))| < \epsilon
+\]
+Continuité de $f$ en $g(x_0)$ appliquée à $\epsilon$ donne $\theta >0$ tq $\forall y$ 
+\[ 
+	|y-g(x_0)| \Rightarrow |f(y) - f(g(x_0))| < \epsilon
+\]
+continuité de $g$ en $x_0$ appliquée à $\theta$ 
+\[ 
+	\exists \eta >0 \forall x \quad |x-x_0| <\eta \Rightarrow |g(x) - g(x_0)|<\theta
+\]
+Pour $y=g(x)$ on a montré ce qu'il fallait.
+
+\end{proof}
+\begin{defn}[Terminologie Supplémentaire]
+	$f$ est définie au voisinage à gauche de $x_0$ si $\exists \epsilon>0$ tq $f$ est définie sur $]x_0-\epsilon,x_0[$.\\
+	De même à droite: $]x_0,x_0+\epsilon[$
+\end{defn}
+\begin{defn}
+	Soit $f$ définie au voisinage à droite de $x_0$ 
+	\[ 
+	\lim_{x \to x_0>} = l 
+	\]
+	signifie
+	\[ 
+		\forall \epsilon>0 \exists \delta>0 \forall x >x_0: |x-x_0| <\delta \Rightarrow |f(x)-l|<\epsilon
+	\]
+	La limite à gauche est définie de la même manière.
+\end{defn}
+
+
+
+\begin{defn}
+$f$ est continue à droite en $ x_0$ si
+\[ 
+	\lim_{x \to x_0>} f(x) = f(x_0)
+\]
+Idem à gauche.
+\end{defn}
+\begin{exo}
+\[ 
+	\lim_{x \to x_0} f(x) \text{ existe } \iff \text{ les limites à gauche et à droite existent et coincident. } 
+\]
+
+\end{exo}
+\begin{defn}
+	$f$ est continue sur $[a,b]$ si elle est continue sur $]a,b[$ et continue à droite en $a$, à gauche en $b$.
+\end{defn}
+
+\begin{defn}[Notation]
+	\[ 
+		\lim_{x \to x_0} f(x) = + \infty
+	\]
+	si
+	\[ 
+		\forall R \exists \delta >0 \forall x : 0 <|x-x_0| < \delta \Rightarrow f(x) >R	
+	\]
+	Idem pour $- \infty$
+
+\end{defn}
+
+\begin{defn}[Notation]
+\[ 
+	\lim_{x \to  + \infty} f(x) = l
+\]
+signifie
+\[ 
+	\forall \epsilon>0 \exists n_0 \forall x >n_0: |f(x)-l| < \epsilon
+\]
+
+\end{defn}
+On note $C( [ a,b])$ ou parfois $C^{0}( [ a,b])$ l'ensemble des fonctions continues sur $[a,b]$
+
+\begin{thm}
+	Toute fonction continue sur $[a,b]$ est bornée.
+\end{thm}
+\begin{proof}
+	Supposons par l'absurde $f$ non-bornée ( disons sans perte de généralité non majorée). \\
+	Donc $\forall n \in \mathbb{N} \exists x_n: f(x_n) >n$.\\
+	On a une suite $(x_n)_{n=1} ^{ \infty}$ de $[a,b]$\\
+	Par Bolzano-Weierstrass implique qu'on a une sous-suite  $x_{n_k}$ qui converge vers $x\in [ a,b]$ \\
+	$f$ continue en $x \iff f(x) = \lim_{k \to  + \infty} f(x_{ n_k })$
+\end{proof}
+\begin{thm}
+Toute fonction $f: [ a,b] \to \mathbb{R}$ continue atteint son $\sup$ donc max.
+\end{thm}
+\begin{proof}
+	On sait déjà que $f$ est bornée, soit donc $s:= \sup \left\{ f(x) | x\in [ a,b] \right\} $ \\
+	Si par l'absurde $f(x) \neq s \forall x \in [ a,b]$ posons
+	\[ 
+		g(x) = \frac{1}{f(x) -s}
+	\]
+	$g$ est continue et donc $g$ est bornée, disons par $B$.\\
+	Absurde car implique $|f(x)-s| > \frac{1}{B}$.
+\end{proof}
+
+\begin{propo}
+Soient $f,g$ deux fonctions continues sur un intervalle $I$.\\
+Soit $A\subseteq I$ une partie dense. Si
+\[ 
+f|_A = g|_A
+\]
+Alors $f=g$ sur tout $I$
+\end{propo}
+\begin{proof}
+Soit $x\in I$. Par densité,
+\[ 
+	\exists ( a_n)
+\]
+suite de $A$ avec $\lim_{n \to  + \infty} a_n=x$.\\
+\[ 
+	\text{ Continuité } f(x) = \lim_{n \to  + \infty} f(a_n) = \lim_{n \to  + \infty} g(a_n) = g(x)
+\]
+
+\end{proof}
+	
+
+
+
+
+
+	
+\end{document}	

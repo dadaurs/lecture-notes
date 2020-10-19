@@ -1,0 +1,232 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Mon 19 Oct}{EV}
+\section{Espaces Vectoriels}
+
+\begin{defn}[Espace Vectoriel]
+	Soit $K$ un corps, in $K$-espace vectoriel $V$ est simplement un $K$-module.\\
+	Les éléments de $V$ sont appelés vecteurs de $V$.
+
+\end{defn}
+\begin{exemple}
+$\mathbb{Q}^{d}, \mathbb{R}^{d}, \mathbb{C}^{d}, d \geq 1$\\
+Espaces de fonctions
+\[ 
+	\mathcal{F}(X;\mathbb{R}) \simeq \mathbb{R}^{X}
+\]
+Plus généralement, si $V$ est un $K$-ev
+\[ 
+	\mathcal{F}(X;V)=V^{X} \text{ est un $K$-ev } 
+\]
+
+
+\end{exemple}
+\begin{defn}[Produit]
+Si $V$ et $W$ sont des $K$-ev
+\[ 
+	V\times W = \left\{ ( v,w), v\in V, w \in W \right\} 
+\]
+
+\end{defn}
+\begin{defn}
+	Soit $V$ un $K$-espace vectoriel, un sous-espace vectoriel ( SEV) de $V$ est un sous-$K$ module $W \subset V$
+\end{defn}
+\begin{propo}[Critere de SEV]
+Un sous-ensemble $U\subset V$ d'un $K$-ev est un sev
+si
+\[ 
+\forall \lambda\in K, \vec{v}, \vec{v'} \in U \Rightarrow \lambda \vec{v} + \vec{v'} \in U
+\]
+
+\end{propo}
+\begin{exemple}
+\begin{itemize}
+\item $ \left\{ 0_V \right\} \subset V$
+\item $e \in V\quad K.e = \left\{ \lambda.e\quad \lambda \in K \right\} \subset V$ est un SEV.
+\end{itemize}
+
+\end{exemple}
+\begin{defn}
+Soient $V$ et $W$ deux $K$-espaces vectoriels, un morphisme $\phi:V\to W$ de $K$-modules est appelé une application $K$-linéaire.
+\end{defn}
+\begin{propo}[Critere d'application linéaire]
+	Une application entre espaces vectoriels $\phi: V \to W$ est linéaire ssi
+	\[ 
+		\forall \lambda \in K, \vec{v}, \vec{v'} \in V, \phi(\lambda.\vec{v} +\vec{v'}) = \lambda\phi(\vec{v})+\phi(\vec{v'})
+	\]
+	
+
+\end{propo}
+\begin{proof}
+C'est un cas particulier du critere de morphisme de modules.
+\end{proof}
+\begin{propo}
+Le noyau et l'image d' une application linéaire est un sev
+\end{propo}
+\begin{proof}
+C'est un cas particulier du critere de morphisme de modules.
+\end{proof}
+\begin{propo}
+$\phi$ une application linéaire. $\phi$ injective ssi
+\[ 
+\ker \phi = \left\{ 0 \right\} 
+\]
+\end{propo}
+\begin{defn}[Notations]
+On notera
+\[ 
+	Hom_{K-ev} ( V,W), Isom_{K-ev } ( V,W), Aut_{K-ev } ( V)= GL(V)
+\]
+Les ensembles des applications bijectives.
+\end{defn}
+
+\begin{defn}
+Une forme linéaire sur $V$ est une application linéaire a valeurs dans $K$ 
+\[ 
+l: V\mapsto K.
+\]
+On note l'ensemble des formes linéaires
+\[ 
+	V^{*} := End_{K-ev } ( V,K)
+\]
+C'est le dual.
+\end{defn}
+\begin{propo}
+Soit $l:V \mapsto K$, si $l\neq 0_K$, alors $l$ est surjective
+\[ 
+	l(V)=K.
+\]
+
+\end{propo}
+\begin{proof}
+Comme $l\neq 0_K$, il existe 
+\[ 
+	v\in V \text{ tel que } l(v)=x \neq 0_K
+\]
+Soit $y\in K$, on cherche $v'$ tel que $l(v')=y$.\\
+Comme $x\neq 0_K$, $x$ est inversible d'inverse
+$ x^{-1} $
+soit $v'= y.x^{-1}.v$, on a
+\[ 
+	l(v')=l(y.x^{-1}.v) = y.x^{-1}.l(v)= y.x^{-1}.x=y
+\]
+
+
+\end{proof}
+\section{Familles génératrices}
+\begin{defn}
+Soit $ \mathcal{F}\subset V$ un sous-ensemble, on note
+\[ 
+	\eng{ \mathcal{F}} = Vect( \mathcal{F}) = CL_K( \mathcal{F})
+\]
+le sous-espace vectoriel engendre par $ \mathcal{F}$.
+\end{defn}
+\begin{defn}
+Soient $X,Y\subset V$ des sev d' un espace vectoriels. Leur somme $X+Y\subset V$ est
+\[ 
+	X+Y = \eng{X\cup Y} \subset V
+\]
+est le sev engendré par les vecteurs de $X$ et de $Y$.
+\end{defn}
+\begin{lemma}
+On a 
+\[ 
+X+Y = \left\{ x+y, x\in X, y \in Y \right\} 
+\]
+
+\end{lemma}
+\begin{proof}
+Il suffit de montrer que $ \left\{ x+y ,    x\in X, y\in Y \right\} $ est un sev.\\
+En effet, si c'est le cas, il contient $X,Y$, il contient donc $X\cup Y$ et donc il contient $ \eng{X\cup Y}= X+Y$.\\
+De plus, comme $\eng{X\cup Y}$ contient tout élément $x\in X$ et tout élément $y\in Y$, il contient $x+y$ ( car c'est un sev )
+\[ 
+	\Rightarrow \eng{X\cup Y} = \left\{ x+y\quad x\in X, y \in Y \right\} 
+\]
+Soit $\lambda\in K, x+y $ et $ x'+y'\in \left\{ u+v\quad u\in X, v\in Y \right\} $.
+\begin{align*}
+\lambda(x+y) + ( x'+y')= \lambda x +\lambda y + x' + y'\\
+= ( \lambda x + x') + ( \lambda y + y') \in \left\{ u+v, u \in X, v \in Y \right\} 
+\end{align*}
+	
+\end{proof}
+\begin{defn}[Notations]
+	Si $X\cap Y$, on dit que $X$ et $Y$ sont en somme directe et on ecrit
+	\[ 
+	X \oplus Y \subset V
+	\]
+	pour leur somme.Si
+	\[ 
+	X \oplus Y =V
+	\]
+	on dit que $V$ est somme directe de $X$ et $Y$.
+
+\end{defn}
+
+\begin{propo}
+Soit $X$ et $Y$ en somme directe. Soit $W=X\oplus Y$, alors $w \in W$ s'écrit comme combinaison linéaire unique de $x\in X$ et $y\in Y$
+\end{propo}
+\begin{proof}
+Supposons $w=x+y= x'+y'$, alors
+ \begin{align*}
+\Rightarrow x+y=x'+y'\\
+\Rightarrow X\ni x-x' = y'-y \in Y
+\end{align*}
+Donc $x-x'=y'-y =0$
+\end{proof}
+
+\begin{defn}[Famille génératrice]\index{Famille génératrice}\label{defn:famille_generatrice}
+	Soit $V$ un $K$-ev. Un sous-ensemble $\mathcal{F}\in V$ est une famille génératrice si
+	\[ 
+		Vect( \mathcal{F}) = V
+	\]
+	ie. tout élément $v \in V$ peut s'écrire sous la forme d' une combinaison linéaire
+	\[ 
+	v= \sum_{i=1}^{ n}x_i e_i
+	\]
+	
+\end{defn}
+
+\begin{defn}[Espace vectoriel fini]\index{Espace vectoriel fini}\label{defn:espace_vectoriel_fini}
+	Un $K$-espace vectoriel non-nul est dit de dimension finie si il est de type fini comme $K$-module: si il exist un ensemble $\mathcal{F}$ fini tel que
+	\[ 
+		V= Vect( \mathcal{F})
+	\]
+	La dimension de $V$ est définie comme le minimum du cardinal de toutes les familles génératrices finies de $V$ 
+	\[ 
+		\dim_K(V)= \min_{\mathcal{F} \text{ genératrice } } | \mathcal{F}|
+	\]
+	Par convention, la dimension de l'espace vectoriel nul $ \left\{ 0_V \right\} $ est
+	\[ 
+		\dim_K( \left\{ 0_K \right\} )=0
+	\]
+	On peut prendre la famille vide comme famille génératrice
+\end{defn}
+\begin{thm}
+	Tout $K$-espace vectoriel de dimension finie est linre,c'est a dire isomorphe a $K^{d}$ pour un certain $d \geq 0$
+\end{thm}
+\begin{rmq}
+	$d=\dim_K(V)$
+\end{rmq}
+\begin{rmq}
+	On verra à la fin ce qui arrive aux espaces vectoriels qui ne sont pas de dimension finie.
+\end{rmq}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

@@ -427,6 +427,8 @@ INPUT lectures/lec8.tex
 INPUT lectures/lec8.tex
 INPUT lectures/lec9.tex
 INPUT lectures/lec9.tex
+INPUT lectures/lec10.tex
+INPUT lectures/lec10.tex
 OUTPUT main.thm
 OUTPUT main.loe
 INPUT main.aux
