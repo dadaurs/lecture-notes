@@ -1,0 +1,214 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Tue 20 Oct}{Espaces Vectoriels 2}
+Soit $V$ un $K$-ev de dimension finie et $G= \left\{ e_1, \cdots, e_n \right\} $ une famille de vecteurs.
+\begin{align*}
+CL_G: K ^{d} \to V\\
+( x_1, \cdots, x_d)  \to x_1.e_1+x_2e_2+\cdots + x_d e_d
+\end{align*}
+$CL_G$ est linéaire, suit du critere de combinaison linéaire.\\
+Dire que $G$ est génératrice $\iff CL_G$  est surjective, donc que $CL_G ( K^{d}) = V$.
+\subsection{Famille Libre}
+\begin{defn}[Famille Libre]
+	Soit $ \mathcal{F}= \left\{ e_1, \ldots, e_d \right\} \subset V $ et définissons
+	\[ 
+	CL_{ \mathcal{F}} : K^{d} \mapsto V
+	\]
+	une application pas forcément surjective.\\
+	Si cette application est injective, alors la famille $ \mathcal{F}$ est libre.
+\end{defn}
+Comme $CL_{\mathcal{F}} $ est linéaire, $CL_{\mathcal{F}} $ est injective si et seulement si
+\[ 
+\ker CL_{\mathcal{F}} = \left\{ 0_V \right\} 
+\]
+Donc $\vec{x} = \left( x_1, \ldots, x_n\right) $ ssi
+\[ 
+\sum_i x_i e_i = 0
+\]
+\begin{defn}
+	Un sous-ensemble fini $\mathcal{F} = \left\{ e_1, \ldots, e_d \right\} \subset V$ d'un espace vectoriel forme une famille libre de $V$ si et seulement si pour tous $x_1, \ldots, x_d \in K$ 
+	\[ 
+	\sum_i x_i e_i = 0_V \implies x_1= \cdots = x_d = 0
+	\]
+	Une famille $\mathcal{F}$ qui n'est pas libre est dite liée.
+\end{defn}
+
+\begin{propo}
+Une famille à $d$ éléments $ \mathcal{F}= \left\{ e_1, \cdots, e_d \right\} \subset V$ est liée si et seulement si il existe $i \in \left\{ 1,\cdots, d \right\} $ tel que $e_i$ peut s'exprimer comme combinaison linéaire des autres éléments de $ \mathcal{F}$ 
+\[ 
+	e_i \in CL( \mathcal{F}\setminus \left\{ e_i \right\} ) = CL \left( e_j, j\neq i\right) 
+\]
+\end{propo}
+\begin{proof}
+	Supposons $\mathcal{F}$ est liée, il existe $ ( x_1,\cdots, x_d) \neq 0_V$ tel que 
+	\[ 
+	x_1 e_1 + \cdots + x_d e_d = 0_V
+	\]
+	un des $x_i \neq 0_K$ on peut suposer sans perte de géneralité que $x_d \neq 0$, donc
+	\[ 
+- x_d e_d = x_1e_1 + \cdots + x_{d-1} e_{d-1} 	
+	\]
+Or $x_d\neq 0$ donc innversible, on obtient donc
+\[ 
+x  ( x_{d} ) ^{-1} \in K \setminus \left\{ 0 \right\} 
+\]
+
+Donc
+\begin{align*}
+e_d = \frac{x_1}{-x_d} e_1 + \cdots  + \frac{x_{d-1} }{-x_d}e_d	
+\end{align*}
+
+Si $e_d \in CL \left( \left\{ e_1, \cdots, e_{d-1}  \right\}  \right) $, avec
+avec
+\[ 
+e_d = y_1e_1 + \cdots + y_{d-1} e_{d-1} , y_i \in K
+\]
+Donc 
+\[ 
+0_V = y_1e_1 + \cdots + y_{d-1} e_{d-1}  -e_d \neq 0
+\]
+
+\end{proof}
+\begin{thm}
+	Soit $V$ un espace vectoriel non-nul de dimension $d$ et $\mathcal{F} = \left\{ v_1,\cdots,v_f \right\}\subset V $ une famille finie et libre, alors $f\leq d$
+\end{thm}
+\begin{proof}
+Par récurrence sur d.\\
+Supposons que l'espace est engendré par un élément $K$.
+\[ 
+d=1 \quad V= K.e,\quad e\neq 0
+\]
+Montrons que $ \mathcal{F} = \left\{ v_1, \cdots, v_f \right\} \subset V = K.e$ avec $ v_i = x_i .e \quad f\geq 2$
+Comme $v_1 \neq v_2, x_1.e = v_1, x_2.e = v_2$, alors $x_1$ ou $x_2 \neq 0_k$.\\
+Supposons $x_1\neq 0$, alors $v_2= x_2.e = \frac{x_2}{x_1}.x_1.e$ \\
+Alors $\mathcal{F}$ est liée car $v_2$ est cl de $v_1$.\\
+Dimesions $\dim V = d \geq 2$ et on suppose le résultat démontré en dimension $\leq d-1$.\\
+Soit $\mathcal{F}= \left\{ v_1,\cdots, v_f \right\} \subset V$ avec $f \geq d+1$, on veut montrer que $\mathcal{F}$ est liée.\\
+Soit $G= \left\{ e_1,\cdots, e_d \right\} $ une famille génératrice de $V$ pour $i= 1,\cdots, f$ 
+\[ 
+v_i = x_{i,1} e_1 + \cdots + x_{i,d} e_d
+\]
+avec $x_{i,j} j\leq d$ dans $K$.\\
+Comme $f> d\geq 1$, il existe $x_{i,j} \neq 0_K$.\\
+Quitte à permuter les $e_j$ et les $v_i$ on peut supposer que
+\[ 
+x_{f,d}  \neq 0_K
+\]
+On pose : $i\leq f$
+\[ 
+v'_i  := v_i - \left( \frac{ x_{i,d}  }{x_{f,d} }. v_f \right) 
+\]
+
+Si $i=f\quad v'_f = v_f - \frac{x_{f,d} }{x_{f,d} }v_f = 0_V$.\\
+Posons 
+\[ 
+	v'_i = x'_{i,1} e_1 + \cdots + x'_{i,d-1} e_{d-1}  + ( x_{i,d} - \frac{x_{i,d} }{x_{f,d} }x_{f,d}  ) e_d
+\]
+On a construit $f-1$ vecteurs $\mathcal{F}' =\left\{ v'_1, v'_2,\cdots, v'_{f-1}  \right\} $ qui sont contenus dans l'espace vectoriel
+\[ 
+	V' = CL ( \left\{ e_1,\cdots, e_{d-1}  \right\} ) \subset V
+\]
+Or
+\[ 
+\dim V' \leq d-1 \text{ comme  } f-1 > d-1
+\]
+la famille $\mathcal{F}'$ est liée par hypothèse de récurrence.\\
+Donc l'un des $v'_i$ est CL des autres $v'_{i'} i' \neq i, $ 
+On peut supposer que c'est $v'_1$ 
+\[ 
+	v'_1 = y_2 v'_2 + \cdots + y_{f-1} v'_{f-1} 
+\]
+Or
+\[ 
+	v'_1 = v_1 - \frac{x_{1,d} }{x_{f,d} }v_f = y_2 ( v_2 - ( ) v_f) + \cdots + y_{d-1} ( v_{d-1} - (  ) .v_f) 
+\]
+Donc
+\[ 
+	v_1 = y_2 (  v_2 - ( ) v_f) + \cdots + y_{d-1} ( v_{d-1} - ( ) v_f)  + \frac{x_{1d} }{x_{f,d} }v_f 
+\]
+Donc $v_1$ est cl de $v_2, \cdots, v_f$, donc $\mathcal{F}$ est liée.
+
+
+
+\end{proof}
+\begin{crly}
+$\dim K^{d}= d$
+\end{crly}
+\begin{proof}
+On sait que pour $K^{d}$, la base canonique 
+\[ 
+B_{d} ^{0}= \left\{ e_1^{0}, \cdots, e_{d} ^{0} \right\}  
+\]
+est génératrice, donc $\dim K^{d}\leq d$.\\
+Est libre : $d \leq \dim K^{d}$
+\end{proof}
+\subsection{Bases}
+\begin{defn}
+	Soit $V$ un espace vectoriel de dimnesion finie. Une famille $\mathcal{B} = \left\{ e_1, \cdots, e_d \right\} $ est une base de $V$ si l'une des contions equivalentes suivantes est vérifiée:
+	\begin{enumerate}
+	\item $\mathcal{B}$ est génératrice et libre
+	\item L'application combinaison linéaire de $\mathcal{B}$ 
+		\[ 
+		CL_{\mathcal{B}} : K^{d} \to V
+		\]
+		est un isomorphisme.
+	\item Pour tout $v\in V$ il existe un unique uplet $ ( x_1,\cdots, x_d) \in K^{d}$ tel que $v$ s'écrit sous la forme
+		\[ 
+		v= x_1e_1 + \cdots + x_d e_d
+		\]
+		
+	\end{enumerate}
+	
+\end{defn}
+\begin{rmq}
+\[ 
+|\mathcal{B}| = \dim V
+\]
+Une base à travers l'isomorphisme $CL_{\mathcal{B}} $ permet d'identifier un espace vectoriel abstrait $V$ avec un espace vectoriel concret $K^{d}$.
+
+\end{rmq}
+\begin{thm}
+Soit $V$ un $K$-espace vectoriel de dimension $d = \dim V \geq 1$ alors $V$ possède une base $\mathcal{B}$ et on a donc un isomorphisme de $K$-ev
+\[ 
+V \simeq K ^{d}
+\]
+Plus précisément
+\begin{enumerate}
+\item Soit $ \mathcal{K} \subset V$  une famille génératrice alors $\mathcal{K}$ contient une base de $V$. Si de plus $ |\mathcal{K}| =d$, alors $ \mathcal{K}$ est une base.
+\item Si $\mathcal{L}\subset V$ est lire alors $\mathcal{L}$ est contenue dans une base de $V$. Si $| \mathcal{L}| =d$, alors $\mathcal{L}$ est une base.
+\end{enumerate}
+
+\end{thm}
+\begin{proof}
+Soit $G$ une famille génératrice
+\[ 
+|G| = d' \geq d = \dim V
+\]
+Soit $B\subset G$ une famille génératrice de $G$ de taille minimale parmi les familles génératrices contenues dans $G$.\\
+$\mathcal{B}$ est libre ( et est donc une base) 
+\begin{align*}
+G = \left\{ e_1, \cdots e_n \right\} 
+\end{align*}
+Supposons que $\mathcal{B}$ est liée, alors il existe $e_{|B|} $ qui est cl de $ \left\{ e_1, \cdots e_{|B|-1}  \right\} $ \\
+Mais alors 
+\[ 
+	V= CL( \mathcal{B}) = CL( \left\{ e_1,\cdots, e_{|B|}  \right\} ) 
+\]
+mais comme $e_{|B|}$ est cl de $ \left\{ e_1, \cdots e_{|B|-1}   \right\} $
+\[ 
+	CL( \left\{ e_1,\cdots, e_{|B|-1}  \right\} ) \supset \left\{ e_1,\cdots, e_{|B|-1} , e_{|B|}   \right\} 
+\]
+Ca contredit la minimalité de $\mathcal{B}$. Donc $\mathcal{B}$ est libre et c'est une base.
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+\end{document}	

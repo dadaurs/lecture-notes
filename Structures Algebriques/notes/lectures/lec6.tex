@@ -1,0 +1,245 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{6}{Tue 20 Oct}{Th. des Groupes}
+\subsection{Produits de Groupes}
+
+\subsection{Produits de Groupes}
+
+\begin{defn}
+Soit $G,H$ deux groupes 
+\[ 
+	G\times H = \left\{ ( g,h) | g\in G, h \in H \right\} 
+\]
+si $|G|, |H| < \infty $, alors $|G\times H| = |G| \cdot |H|$, on munit $G\times H$ d'une structure de groupe avec la loi
+\[ 
+	( g,h) \cdot ( g',h') = ( g',h') 
+\]
+
+\end{defn}
+\begin{lemma}
+C'est un groupe avec
+\begin{itemize}
+	\item $e_{G\times H} = ( e_G, e_H) $ 
+	\item $( g,h) ^{-1}= ( g^{-1},h^{-1}) $
+\end{itemize}
+
+\end{lemma}
+\begin{proof}
+En exo
+\end{proof}
+
+\subsection{Propriété universelle des Produits}
+Si on a $G\times H$, on a deux projections ( homomorphismes)  naturels
+\begin{align*}
+F\times H \underbrace{\to}_{pr_H} H\\
+pr_F( ( f,h) )  = f\\
+pr_H( ( f,h) )  = h\\
+\end{align*}
+Ce sont trivialement des homomorphismes.
+
+\begin{propo}
+Soit $G,F,H$ des groupes
+\begin{align*}
+F\times H \underbrace{\to}_{pr_H} H  \\
+\text{ et } \\
+F\times H \underbrace{\to}_{pr_F} F\\
+\text{ de plus soit } 
+\beta: G \to H\\
+\alpha: G \to F
+\end{align*}
+Il existe un homomorphisme unique
+\[ 
+\gamma : G \to F\times H 
+\]
+tel que les compositions ci-dessus commutent.
+\begin{figure}[H]
+    \centering
+    \incfig{diagrammes-produits}
+    \caption{diagrammes produits}
+    \label{fig:diagrammes-produits}
+\end{figure}
+Donc que
+\[ 
+\alpha = pr_F \circ \gamma \text{ et } \beta = pr_H \circ \gamma
+\]
+Donc
+\[ 
+	\alpha ( g) = pr_F ( \gamma ( g) ) = pr_F( f,h) =f
+\]
+De plus 
+\[ 
+	\beta ( g)  = pr_H ( \gamma( g) ) = pr_H ( f,h)  =h
+\]
+Donc
+\[ 
+	\gamma ( g) = ( \alpha( g) , \beta( g) ) 
+\]
+\end{propo}
+\begin{proof}
+Il faut montrer que $\gamma$ est un homomorphisme.\\
+\begin{align*}
+	\gamma( g) \gamma( g')  &= ( \alpha( g) ,\beta( g) ) \cdot ( \alpha( g') , \beta( g') ) \\
+		     &= ( \alpha( g) \alpha( g') , \beta( g) \beta( g')  )\\
+		     &= ( \alpha( gg') ,\beta( gg') ) = \gamma( gg')
+\end{align*}
+On a utilisé que la composition d'homomorphismes est un homomorphisme.
+\end{proof}
+\begin{center}
+\textbf{Utilisation}
+\end{center}
+Regardons les homomorphismes de
+\[ 
+	\mathbb{Z}\to \faktor{\mathbb{Z}}{2\mathbb{Z}} \times \faktor { \mathbb{Z} } {3\mathbb{Z}} 
+\]
+est la meme chose que considérer les morphismes de 
+\begin{align*}
+	\mathbb{Z} \to \faktor{\mathbb{Z}}{2\mathbb{Z}}\\
+	\text{ et } \\
+	\mathbb{Z}\to \faktor{\mathbb{Z}}{3\mathbb{Z}}
+\end{align*}
+On peut par exemple prendre l'exponentielle discrete de $\mathbb{Z}\to \faktor{\mathbb{Z}}{2\mathbb{Z}}$ et 
+$\mathbb{Z}\to \faktor{\mathbb{Z}}{2\mathbb{Z}}$
+et les combiner.\\
+On ne doit pas vérifier que la ``composition''  est un morphisme car on l'a montré dans la propriété universelle.
+\subsection{Sous-groupes}
+
+\begin{defn}[Sous-Groupe]
+	Soit $ ( G,\cdot) $ un groupe et $H\subseteq G$ un sous-ensemble.\\
+	$H$ est un sous-groupe si
+	\begin{enumerate}
+	\item $ \left\{ h\cdot h' | h,h' \in H \right\} = H\cdot H \subseteq H $
+	\item $\cdot |_H : H\times H \to H$
+		nous donne un groupe sur $H$.
+	\end{enumerate}
+	
+\end{defn}
+\begin{propo}
+	Soit $H\subseteq ( G,\cdot) $ un sous-ensemble.\\
+	C'est un sous-groupe si et seulement si
+	\begin{enumerate}
+	\item $H\neq \emptyset$ 
+	\item $h,g \in H \implies h.g \in H$ 
+	\item $h \in H \implies h^{-1}\in H $
+	\end{enumerate}
+	
+	De plus, les éléments neutres de $G$ et de $H$ sont les mêmes, inverses aussi
+	
+\end{propo}
+\begin{proof}
+$\Rightarrow$ \\
+\begin{enumerate}
+\item $e_H \in H \Rightarrow H \neq \emptyset$
+\item Vrai
+\item Il faut démontrer que
+	\[ 
+	e_H = e_G
+	\]
+En effet
+\[ 
+e_H \cdot e_H = e_H = e_G \cdot e_H
+\]
+Or on peut simplifier, donc
+\[ 
+e_H = e_G
+\]
+$\Leftarrow$\\
+Il faut démontrer que $e_G \in H$. En effet
+\[ 
+	H \neq \emptyset \Rightarrow  \exists g \in H \Rightarrow g^{-1}g = e_G \in H
+\]
+
+\end{enumerate}
+
+\end{proof}
+\begin{exemple}
+\begin{enumerate}
+\item Sous-groupes triviaux\\
+	\begin{align*}
+	\left\{ e   \right\} \subseteq G\\
+	G \subseteq G
+	\end{align*}
+
+\item $ \left\{ 1,-1 \right\} \subseteq \left( \mathbb{Q}\setminus \left\{ 0 \right\} ,\cdot \right) $
+
+\item $m \mathbb{Z} = \left\{ mx | x \in \mathbb{Z} \right\} \subseteq \left( \mathbb{Z}, + \right)  $ 
+\item $\faktor{  \mathbb{Z}  }{ n\mathbb{Z} }, m |n$
+	être divisible par $m$ est bien définit sur les classes d'équivalences, autrement dit
+	\[ 
+	x,y \in \mathbb{Z}, n | x-y \text{ alors } m|x \iff m|y
+	\]
+	Donc
+	\[ 
+		\left\{ [ x] \in \faktor{\mathbb{Z}}{n\mathbb{Z}} | m | [ x]  \right\} \subseteq \faktor{\mathbb{Z}}{n\mathbb{Z}}	
+	\]
+	est un sous-groupe.
+	
+\end{enumerate}
+\end{exemple}
+\begin{defn}
+Soit 
+\[ 
+\phi: G \to H
+\]
+un morphisme.
+\begin{enumerate}
+\item noyau:
+	\[ 
+	\ker \phi = \left\{ g \in G | \phi g = e_H \right\}  \subset G
+	\]
+	
+\item image:
+	\[ 
+		Im \phi = \left\{ \phi( g) |g \in G \right\} \subset H
+	\]
+	
+\end{enumerate}
+
+\end{defn}
+\begin{propo}
+L'image et le noyau sonnt des sous-groupes.
+\end{propo}
+
+\begin{proof}
+La preuve pour l'image est dans le cours.\\
+\[ 
+	\ker \phi \neq \emptyset, \text{ car } \phi( e_G) = e_H
+\]
+On démontre que c'est stable par composition
+\[ 
+g,f\in \ker \phi
+\]
+, alors
+\begin{align*}
+	\phi( g.f) = \phi( g) .\phi(f) = e_H \cdot e_H e_H
+\end{align*}
+On vérifie que c'est stable par inversion.
+\begin{align*}
+g \in \ker \phi\\
+\phi( g) ^{-1}= \phi( g^{-1}) 
+\end{align*}
+donc c'est fini.
+\end{proof}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	
