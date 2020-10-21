@@ -1,0 +1,89 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{faktor}
+\DeclareMathOperator*{\Hom}{Hom}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\begin{document}
+\title{Série 6}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+Soit $g \in G$ un élément satisfaisant $g^{2}= e_G$, où $e_G$ dénote l'élément neutre.\\
+On construit alors l'application de $\faktor { \mathbb{Z}} { 2\mathbb{Z}}$ vers $G$.\\
+\begin{align*}
+	\phi_g: & 
+	\begin{array}{ll}
+	\quad [ 0 ] \to e_G\\
+	\quad [ 1 ] \to g
+	\end{array}
+\end{align*}
+Montrons que tous les homomorphismes de $\faktor { \mathbb{Z}} { 2\mathbb{Z}}$ vers $G$.\\
+En effet, supposons qu'il existe un homomorphisme $\phi$ tel que $\phi( 1) ^{2}\neq e_G$, alors 
+\[ 
+	e_G = \phi( [ 0] ) =	\phi( [ 1 ]+[ 1 ])  = \phi( [ 1] ) ^{2} \neq e_G
+\]
+Ce qui est une contradiction. Donc tous les homomorphismes sont de la forme $\phi_g$.\\
+Dénotons par $G_2= \left\{ g \in G | g^{2} = e_G \right\} $, alors on définit l'application
+\begin{align*}
+	G_2 &\mapsto \Hom\left( \faktor { \mathbb{Z}} { 2\mathbb{Z}},G\right)  \\
+	g &\mapsto \phi_g\\
+\end{align*}
+\section*{2}
+Posons, comme dans l'exercice 2, $G=H=\faktor { \mathbb{Z}} { 2\mathbb{Z}}$.\\
+On sait que le groupe $\left( \faktor { \mathbb{Z}} { 8\mathbb{Z}} \right)^{\times} $ contient $4$ éléments:
+\[ 
+1,3,5,7
+\]
+Clairement, 1 sera l'élément neutre, les 3 éléments restants sont tous des 2-torsions. Donc par la section 1, les seuls morphismes de $\left( \faktor { \mathbb{Z}} { 8\mathbb{Z}} \right)^{\times}$ sont de la forme $\phi_g$.\\
+Définissons donc $\alpha = \phi_3$ et $\beta= \phi_5$.\\
+Car $( \faktor { \mathbb{Z}} { 8\mathbb{Z}} )^{\times}$ et $\faktor { \mathbb{Z}} { 2\mathbb{Z}} $ sont des groupes abéliens, les hypothèses de l'exercice 2 s'appliquent et il existe un unique homomorphisme $\phi$ de
+\begin{align*}
+\faktor { \mathbb{Z}} { 2\mathbb{Z}} \times \faktor { \mathbb{Z}} { 2\mathbb{Z}} \mapsto ( \faktor { \mathbb{Z}} { 8\mathbb{Z}} )^{\times}
+\end{align*}
+Il ne reste plus qu'à vérifier qu'il s'agit d'un morphisme bijectif.\\
+Si on traduit l'exercice 2 aux conditions de cet exercice, on obtient un diagramme tel que celui-ci:\\
+\begin{figure}[h]
+    \centering
+    \incfig{diagramme}
+\end{figure}
+
+
+
+Dans l'exercice 2, on a trouvé que $\phi(g,h) = \phi_3( g) \cdot \phi_5( h)$ où $g \in G, h \in H$. \\
+Pour montrer la bijectivité de $\phi$, on montre la surjectivité et l'injectivité.\\
+Clairement, chaque élément de $( \faktor { \mathbb{Z}} { 8\mathbb{Z}} )^{\times}$ est atteint, en effet:
+\begin{align*}
+	\phi(0,0) = \phi_3(0 )  \cdot \phi_5( 0) = 1\\
+	\phi(1,0) = \phi_3(1 )  \cdot \phi_5( 0) = 3\\
+	\phi(0,1) = \phi_3(0 )  \cdot \phi_5( 1) = 5\\
+	\phi(1,1) = \phi_3(1 )  \cdot \phi_5( 1) = 7\\
+\end{align*}
+
+De la liste ci-dessus, il suit également que $\phi$ est injective.
+
+
+
+
+
+
+
+
+\end{document}
