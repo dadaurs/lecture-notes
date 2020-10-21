@@ -93,7 +93,7 @@
 \contentsline {crly}{\numberline {53}Corollaire}{23}{crly.53}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{23}{proof.30}%
 \contentsline {crly}{\numberline {54}Corollaire}{23}{crly.54}%
-\contentsline {crly}{\numberline {55}Corollaire}{23}{crly.55}%
+\contentsline {crly}{\numberline {55}Corollaire}{24}{crly.55}%
 \contentsline {crly}{\numberline {56}Corollaire\thmtformatoptarg {Critere de Cauchy pour les séries}}{24}{crly.56}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{24}{proof.31}%
 \contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{24}{exemple.57}%
@@ -103,7 +103,7 @@
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{25}{proof.33}%
 \contentsline {propo}{\numberline {60}Proposition\thmtformatoptarg {Série Harmonique}}{25}{propo.60}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{25}{proof.34}%
-\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{25}{proof.35}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{26}{proof.35}%
 \contentsline {propo}{\numberline {61}Proposition\thmtformatoptarg {Critère de Comparaison}}{26}{propo.61}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{26}{proof.36}%
 \contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{26}{rmq.62}%
@@ -114,15 +114,15 @@
 \contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{27}{exemple.65}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{27}{proof.38}%
 \contentsline {defn}{\numberline {13}Definition}{28}{defn.13}%
-\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{28}{rmq.66}%
-\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{28}{exemple.67}%
+\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{29}{rmq.66}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{29}{exemple.67}%
 \contentsline {lemma}{\numberline {68}Lemme}{29}{lemma.68}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{29}{proof.39}%
 \contentsline {thm}{\numberline {69}Theorème}{29}{thm.69}%
 \contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{29}{exemple.70}%
-\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{29}{proof.40}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{30}{proof.40}%
 \contentsline {thm}{\numberline {71}Theorème}{30}{thm.71}%
-\contentsline {thm}{\numberline {72}Theorème\thmtformatoptarg {Critere de d'Alembert 2}}{30}{thm.72}%
+\contentsline {thm}{\numberline {72}Theorème\thmtformatoptarg {Critere de d'Alembert 2}}{31}{thm.72}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{31}{proof.41}%
 \contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{31}{exemple.73}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{31}{proof.42}%
@@ -132,32 +132,32 @@
 \contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{32}{exemple.77}%
 \contentsline {propo}{\numberline {78}Proposition}{32}{propo.78}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{32}{proof.43}%
-\contentsline {thm}{\numberline {79}Theorème\thmtformatoptarg {Critere de la racine}}{32}{thm.79}%
-\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{32}{exemple.80}%
+\contentsline {thm}{\numberline {79}Theorème\thmtformatoptarg {Critere de la racine}}{33}{thm.79}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{33}{exemple.80}%
 \contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{33}{exemple.81}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{33}{proof.44}%
-\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{33}{exemple.82}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{34}{exemple.82}%
 \contentsline {lemma}{\numberline {83}Lemme}{34}{lemma.83}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{34}{proof.45}%
 \contentsline {defn}{\numberline {14}Definition}{34}{defn.14}%
 \contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{34}{exemple.84}%
-\contentsline {defn}{\numberline {15}Definition}{34}{defn.15}%
+\contentsline {defn}{\numberline {15}Definition}{35}{defn.15}%
 \contentsline {thm}{\numberline {85}Theorème}{35}{thm.85}%
 \contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{35}{rmq.86}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{35}{proof.46}%
-\contentsline {crly}{\numberline {87}Corollaire}{35}{crly.87}%
+\contentsline {crly}{\numberline {87}Corollaire}{36}{crly.87}%
 \contentsline {crly}{\numberline {88}Corollaire}{36}{crly.88}%
 \contentsline {crly}{\numberline {89}Corollaire}{36}{crly.89}%
 \contentsline {crly}{\numberline {90}Corollaire}{36}{crly.90}%
 \contentsline {lemma}{\numberline {91}Lemme}{36}{lemma.91}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{36}{proof.47}%
-\contentsline {crly}{\numberline {92}Corollaire}{36}{crly.92}%
+\contentsline {crly}{\numberline {92}Corollaire}{37}{crly.92}%
 \contentsline {crly}{\numberline {93}Corollaire\thmtformatoptarg {Cauchy}}{37}{crly.93}%
 \contentsline {lemma}{\numberline {94}Lemme}{37}{lemma.94}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{37}{proof.48}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{37}{proof.49}%
-\contentsline {crly}{\numberline {95}Corollaire}{37}{crly.95}%
-\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{37}{rmq.96}%
+\contentsline {crly}{\numberline {95}Corollaire}{38}{crly.95}%
+\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{38}{rmq.96}%
 \contentsline {propo}{\numberline {97}Proposition}{38}{propo.97}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{38}{proof.50}%
 \contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{38}{exemple.98}%
@@ -169,13 +169,13 @@
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{39}{proof.52}%
 \contentsline {crly}{\numberline {102}Corollaire}{39}{crly.102}%
 \contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{39}{rmq.103}%
-\contentsline {propo}{\numberline {104}Proposition}{39}{propo.104}%
+\contentsline {propo}{\numberline {104}Proposition}{40}{propo.104}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{40}{proof.53}%
 \contentsline {defn}{\numberline {17}Definition\thmtformatoptarg {Terminologie Supplémentaire}}{40}{defn.17}%
 \contentsline {defn}{\numberline {18}Definition}{40}{defn.18}%
 \contentsline {defn}{\numberline {19}Definition}{40}{defn.19}%
 \contentsline {exo}{\numberline {105}Exercice}{40}{exo.105}%
-\contentsline {defn}{\numberline {20}Definition}{40}{defn.20}%
+\contentsline {defn}{\numberline {20}Definition}{41}{defn.20}%
 \contentsline {defn}{\numberline {21}Definition\thmtformatoptarg {Notation}}{41}{defn.21}%
 \contentsline {defn}{\numberline {22}Definition\thmtformatoptarg {Notation}}{41}{defn.22}%
 \contentsline {thm}{\numberline {106}Theorème}{41}{thm.106}%
@@ -184,3 +184,15 @@
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{41}{proof.55}%
 \contentsline {propo}{\numberline {108}Proposition}{42}{propo.108}%
 \contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{42}{proof.56}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{42}{exemple.109}%
+\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{42}{rmq.110}%
+\contentsline {defn}{\numberline {23}Definition}{42}{defn.23}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{43}{exemple.111}%
+\contentsline {exemple}{\numberline {\let \autodot \@empty }Exemple}{43}{exemple.112}%
+\contentsline {propo}{\numberline {113}Proposition}{43}{propo.113}%
+\contentsline {exo}{\numberline {114}Exercice}{43}{exo.114}%
+\contentsline {thm}{\numberline {115}Theorème}{43}{thm.115}%
+\contentsline {rmq}{\numberline {\let \autodot \@empty }Remarque}{43}{rmq.116}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{43}{proof.57}%
+\contentsline {thm}{\numberline {117}Theorème\thmtformatoptarg {Théorème de la valeur intermédiaire (TVI)}}{44}{thm.117}%
+\contentsline {proof}{\numberline {\let \autodot \@empty }Preuve}{44}{proof.58}%

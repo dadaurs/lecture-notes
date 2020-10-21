@@ -1,0 +1,206 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Wed 21 Oct}{Energie cinetique}
+%\subsection{Impulsion et quantite de mouvement}
+\[ 
+	d \vec{I} = \vec{F} dt \Rightarrow \vec{I}_{12} = \int_{ 1 }^{ 2 }\delta W
+\]
+Puissance instantanee d'une force
+\[ 
+P= \frac{\delta W}{dt} = \frac{\vec{F} \cdot d \vec{r}}{dt}= \vec{F} \cdot \vec{v}
+\]
+\subsection{Théorème de l'énergie cinétique}
+On a montré que le travail d'une force est egale a la difference des energies cinétiques.\\
+Pour un point matériel:
+\[ 
+K_2 - K_1 = W_{12} \iff \frac{dK}{dt}=P = \vec{F} \cdot \vec{v}
+\]
+Pour un systeme de points materiels, on aura
+\[ 
+K^{to}_2 - K^{tot}_1 = W^{tot,ext}_{12} + W^{tot,int} _{12}  \iff \frac{d K^{tot}}{dt} = P^{tot,ext} + P^{tot,int}
+\]
+\subsection{Voiture en accélération}
+Forces extérieures s'exercant sur la voiture
+\begin{itemize}
+\item poids $mg$ 
+\item reaction du sol $N$ 
+\item frottements de la route sur les roues
+\item frottements de l'air sur la carrosserie
+\end{itemize}
+On peut appliquer la deuxieme loi de Newton
+\[ 
+m \vec{g} + \vec{N} + \vec{F}_{route} + \vec{F}_{air} \Rightarrow 
+\begin{cases}
+N= mg\\
+ma = F_{route} - F_{air} 
+\end{cases}
+\]
+Clairement, $F_{route} $ ne travaille pas ( roulement sans glissement)\\
+aucune force extérieure ne travaille  sauf $F_{air} $ \\
+Le travail de $F_{air} $ est négatif et cause une diminution d'énergie cinétique\\
+mais l'énergie augment
+$\Rightarrow$ il y a des forces internes dont letravail est positif
+\[ 
+\frac{d K ^{voiture}}{dt}= \underbrace{P^{tot,ext}}_{<0} + P^{tot,int } >0
+\]
+\subsection{Conservation de l'énergie mécanique}
+\begin{itemize}
+\item Si $W_{12} \neq 0$ alors l'énergie cinétique $K$ n'est pas conservée
+\item Cependant, dans certains cas particuliers, $\vec{F}$ ne dépend que de la position et ``dérive du potentiel'' , cad qu'il existe une energie potentielle $V( \vec{r}) $ tel que
+	\[ 
+		W_{12} = \int_{ 1 }^{ 2 } \vec{F}( \vec{r}) \cdot d \vec{r} = V( \vec{r}_1)  - V( \vec{r}_2) \forall \vec{r}_1, \vec{r}_2 \iff \vec{F}( \vec{r}) = - 
+			\begin{pmatrix}
+			\partial V( \vec{r}) / \partial x\\		
+			\partial V( \vec{r}) / \partial y\\		
+			\partial V( \vec{r}) / \partial z\\		
+			\end{pmatrix}
+	\]
+	
+\end{itemize}
+Si on peut ecrire notre force ainsi, on la nomme conservative\\
+Dans ce cas, on a 
+\[ 
+	W_{12} = V( \vec{r}_1) - V( \vec{r}_2) = K_2-K_1
+\]
+On remarque alors que $ K_1 + V( \vec{r}_1) $ est constante, on note donc
+\[ 
+	E = K + V( \vec{r}) 
+\]
+
+
+
+\subsection{Travail de la force de pesanteur}
+\begin{align*}
+	W_{12} &= \int_{ 1 }^{ 2 }\vec{F} d \vec{r} = \int_{ 1 }^{ 2 } -mg \hat{e}_z \cdot d \vec{r}\\
+	       &= - \int_{ 1 }^{ 2 } mg dz = - [ mgz] _{1} ^{2}\\
+	       &=mgz_1- mgz_2
+\end{align*}
+Le travail ne dépend que des coordonnées $z$ des points $1$ et $2$ : il ne dépend pas de la trajectoire.\\
+On peut s'imaginer une trajectoire de 1 a 2 et de 2 à 1
+\[ 
+W_{1\to 2 \to 1} = \int_{ 1 }^{ 2 } m \vec{g} \cdot d \vec{r} + \int_{ 2 }^{ 1 } m \vec{g} \cdot d \vec{r} = W_{12} + W_{21} = 0
+\]
+On note
+\[ 
+\oint m \vec{g} d \vec{r} = 0
+\]
+\subsection{Travail de la force de rappel d'un ressort}
+On a 
+\[ 
+\vec{F} = - k \Delta \vec{x} = - k x \hat{e}_x
+\]
+Donc on pose
+\begin{align*}
+W_{12} = \int_{ 1 }^{ 2 } \vec{F} \cdot d \vec{r} = \int_{ 1 }^{ 2 }-k x dx\\
+= - [ \frac{1}{2}k x^{2}] _{1} ^{2} = \frac{1}{2}k x_1^{2} - \frac{1}{2}k x_2^{2}
+\end{align*}
+\subsection{Travail d'une force centrale en $\frac{1}{r^{2}}$}
+On pose
+\[ 
+W_{12}= \int_{ 1 }^{ 2 }\vec{F} \cdot d \vec{l} = \int_{ 1 }^{ 2 } - \frac{Gm M}{r^{2}} \hat{e}_r \cdot d \vec{l} = -\frac{GmM}{r_1} + \frac{GmM}{r_2}
+\]
+\subsection{Forces conservatives}
+Ce sont les forces dont le travail ne dépend que des points de départ et d'arrivée ( quels que soient ces points) , et non de la trajectoire entre les deux
+\begin{center}
+\textbf{Propriétés}
+\end{center}
+\begin{itemize}
+\item $\oint \vec{F} . d \vec{r} = 0, \forall$ courbe fermée
+\item $\exists$ une fonction $V( \vec{r}) $ tel que
+	\[ 
+		\int_{ 1 }^{ 2 } = - [ V ( \vec{r}_2) - V( \vec{r}_1) ] , \forall \vec{r}_1, \vec{r}_2
+	\]
+	
+
+\item $\exists$ une fonction $V( \vec{r}) $ ( potentiel) tell que
+	\[ 
+		\vec{F}( \vec{r}) = - \vec{\nabla} V( \vec{r}) 
+	\]
+\end{itemize}
+\subsection{Energie potentielle}
+potentiel dont une force conservative dérive = energie potentielle du point matériel soumis a cette force.\\
+L'énergie potentielle est définie à une constante arbitraire près.\\
+
+On a 
+\[ 
+V = \int_{ \text{ position du point matériel }  }^{ \text{ position de référence }  } \vec{F}\cdot d \vec{r}
+\]
+\subsection{Théorème de l'énergie}
+\begin{itemize}
+\item Point matériel soumis à 
+	\begin{itemize}
+		\item des forces  conservatives $F_k = - \vec{\nabla} V_k ( \vec{r}) $ 
+		\item des forces conservatives de résultante $\vec{F}^{NC}$
+	\end{itemize}
+	
+
+\item Energie mécanique
+	\[ 
+		E( \vec{r},\vec{v})  = K( \vec{v}) + V( \vec{r}) = \frac{1}{2}m \vec{v}^{2} + \sum_k V_k ( \vec{r}) 
+	\]
+	
+\item Entre les points 1 et 2, on a 
+	\begin{align*}
+	K_2 - K_1 = W_{12} = V( \vec{r}_1) - V( \vec{r}_2) + W_{12}^{NC}\\
+	\Rightarrow E_2 - E_1 = W_{12}^{NC}\iff  \frac{dE}{dt} = P^{NC} = \vec{F}^{NC} \cdot  \vec{v}
+	\end{align*}
+	Donc la variation de l'énergie mécanique est égale au travail des forces non-conservatives.
+	
+\item Si seules des forces conservatives travaillent
+	\[ 
+	E= \text{ constante } 
+	\]
+
+	
+\end{itemize}
+\subsection{Lugeur}
+Un lugeur part au repos au point 1: quelle est sa vitesse au point 2
+Point de départ 1: $z_1 = h, v_1=0$ 
+\[ 
+E_1 = \frac{1}{2}m v_1^{2} + mg z_1 = mgh
+\]
+Point de d'arrivée 2: $z_2 = 0, v_2 =?$ 
+\[ 
+E_2 = \frac{1}{2}m v_2^{2} + mgz_2= \frac{1}{2}mv_2^{2}
+\]
+Or par le th de l'énergie cinétique, on a 
+\[ 
+E_2 - E_1 = W_{12}^{NC}= \int_{ 1 }^{ 2 } \vec{F} _{frot} \cdot d \vec{r} = \int_{ 1 }^{ 2 } - F_{frot} ds = -mg \mu_c \cos \alpha \frac{h}{\sin \alpha}
+\]
+
+Donc
+\begin{align*}
+\frac{1}{2}mv_2^{2} - mgh = -mg \mu_c \frac{h}{\tan \alpha}\\
+\frac{1}{2} mv_2^{2} = mgh ( 1 - \frac{\mu_c}{\tan \alpha}) 
+\end{align*}
+Donc
+\[ 
+	v_2 = \sqrt { 2gh ( 1- \frac{\mu_c}{\tan \alpha}) } 
+\]
+\subsection{L'énergie mécanique: intégrale première}
+Si $E= \frac{1}{2}mv^{2} + V( \vec{r}) $ est constante, alors, par dérivation
+\begin{align*}
+	0 &= \frac{d}{dt} ( \frac{1}{2}m v^{2} + V( \vec{r}) ) = \frac{1}{2}m \frac{d}{dt} ( \vec{v}\cdot \vec{v}) + \frac{d V( \vec{r}) }{dt}\\
+	  &= m \vec{a} \cdot \vec{v} + \left( \frac{\partial V ( \vec{r}) }{\partial x} \frac{dx}{dt} + \frac{\partial V( \vec{r}) }{\partial y} \frac{dy}{dt} + \frac{\partial V( \vec{r}) }{\partial }\frac{dz}{dt} \right) \\
+	  &= m \vec{a} \cdot \vec{v} + \vec{\nabla} V( \vec{r}) \cdot \vec{v} = ( m \vec{a} - \vec{F}) \cdot \vec{v}
+\end{align*}
+Et donc $\vec{F} = m \vec{a}$
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

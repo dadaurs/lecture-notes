@@ -1,0 +1,110 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Wed 21 Oct}{limites de fonctions}
+Comment définir $3^{\pi}$?\\
+\begin{exemple}
+	Supposons que $f$ soit définie et continue sur $I \setminus \left\{ x_0 \right\} $, où $I$ est un intervalle ouvert et $x_0\in I$.\\
+	Si $ \lim_{x \to x_0} f( x) $ existe, on obtient une fonction continue sur $I$ en définissant $f( x_0) := \lim_{x \to x_0} f( x) $.\\
+	Ca s'appelle le ``prolongement par continuité''.
+\end{exemple}
+Un exemple de preuve de continuité:\\
+\[ 
+	f( x)  =\sqrt{x } \text{ sur } ]0,+ \infty[
+\]
+Soit $\epsilon> 0$, cherche $\delta$ \\
+Veut: $\forall x: |x-x_0| <\delta \Rightarrow  | \sqrt{x} - \sqrt{x_0}|< \epsilon$.\\
+Or, $|\sqrt{x} - \sqrt{x_0}| = \frac{x -x_0}{\sqrt{x} + \sqrt{x_0}} < \epsilon$ si $\delta = \sqrt{x_0} \epsilon> 0$
+\begin{rmq}
+Ce $\delta$ montre la continuité en $y \forall y \geq x_0$
+\end{rmq}
+\begin{defn}
+	$f$ est dite uniformément continue sur $I$ ( où $I$ est un intervalle ou plus généralement $I \subseteq \mathbb{R}$) si $\forall \epsilon > 0 \exists \delta> 0 \forall x, x_0 \in I$:
+	\[ 
+		|x- x_0| < \delta \Rightarrow  |f( x) - f( x_0) | < \epsilon
+	\]
+	
+\end{defn}
+Comparer à $f$ continue sur $I$ :
+\[ 
+\forall x_0 \in I \forall \epsilon > 0 \exists \delta > 0 \forall x: 
+\]
+\[ 
+	|x-x_0| < \delta \Rightarrow |f( x) - f( x_0) | < \epsilon
+\]
+Le point clé est que le delta dépend que de $\epsilon$ et pas de $x_0$.
+
+\begin{exemple}
+	$f( x) = \sqrt{x}$ est uniformément continue sur $[1, + \infty [ $ \\
+	Et aussi sur $[\frac{1}{100}, + \infty[ $.
+\end{exemple}
+\begin{exemple}
+	$f( x) = x^{2}$ non uniformément continu sur $[0,+ \infty[$. Considérons
+	\[ 
+		|f( x) - f( x_0) | = |x-x_0| ( x+x_0) 
+	\]
+	
+\end{exemple}
+\begin{propo}
+Si $f$ et $g$ sont uniformément continues sur $I$, alors $f+g$ aussi.kéw
+Attention:\\
+Faux pour $f.g$ et pour $\frac{1}{f}$.
+\end{propo}
+\begin{exo}
+	Supposons $f$ uniformément continue sur $[a,b]$ et $ [ b,c ] $, alors $f$ uniformément continue sur $[a,c]$
+\end{exo}
+\begin{thm}
+	Soit $f: [ a,b] \to \mathbb{R}$ continue, alors $f$ est uniformément continue sur $[a,b]$
+\end{thm}
+\begin{rmq}
+	Donc $f( x) = \sqrt x$ est uniformément continue sur $[0,1]$.
+\end{rmq}
+\begin{proof}
+Si, par l'absurde, $f$ n'est pas uniformément continue, alors: 
+\begin{align*}
+\exists \epsilon > 0 \forall \delta> 0 \exists x,x_0:\\
+|x-x_0|< \delta \text{ mais }  |f( x) - f( x_0) | \geq \epsilon
+\end{align*}
+Pour $n \in \mathbb{N}^{*}$, on applique ca à $\delta = \frac{1}{n}$, alors
+\[ 
+	\Rightarrow \exists y_n, z_n : |y_n - z_n| < \frac{1}{n}; |f( y_n)  - f( z_n) | \geq \epsilon
+\]
+Car $y_n$ suite de $[a,b]$, par Bolzano-Weierstrass $\Rightarrow \exists \text{ sous-suite } y_{n_k} $ convergente.\\
+Alors $ \lim_{k \to  + \infty} z_{n_k} = y$ car $|z_{n_k} - y_{n_k} | < \frac{1}{n_k}$.\\
+Le théorème de traduction implique
+\[ 
+	\lim_{k \to  + \infty} f( y_{n_k}  ) = f( y) = \lim_{k \to  + \infty} f( z_{n_k} ) 
+\]
+Mais $|f ( y_{n_k} - f( z_{n_k} ) ) \geq \epsilon$.\\
+$\contra$
+\end{proof}
+\begin{thm}[Théorème de la valeur intermédiaire (TVI)]
+Soit $f: [ a,b] \to \mathbb{R}$ continue.\\
+$\forall c$ entre $f( a) $ et $f( b) $, $\exists x \in [a,b] : f( x) = c$.
+\end{thm}
+\begin{proof}
+	Sans perte de géneralité, $f( a) < c < f( b) $; et $c=0$ ( sinon remplacer $f$ par $f-c$).\\
+	Supposons par l'absurde $f( a) <0 < f( b) $ mais $f( x) \neq 0 \forall x$.\\
+	Alors $\frac{1}{f}$ est continue. Donc bornée. Donc $\exists \alpha> 0$ tq $|f( x) | \geq \alpha \forall x$.\\
+	On sait que $f$ est uniformément continue sur $[a,b]$.\\
+	Appliquer à $\alpha$.\\
+	Donc, $\exists \delta> 0 \forall y,z: |y-z| < \delta \Rightarrow |f( y) - f( z) | < \alpha$.\\
+	Prenons $n \in \mathbb{N}$ avec $\frac{b-a}{n} < \delta$ ( Archimède) \\
+	Posons $a_i = a+ i \frac{b-a}{n} ( i=0,1, \ldots, n) $.\\
+	Domc $\forall i \forall y, z \in [ a_i, a_{i+1} ] $ 
+	\[ 
+		|f( y) - f( z) | < \alpha
+	\]
+	Donc $\forall i$, soit $f$ est $\leq - \alpha$ sur tout $[x_i, x_{i+1}] $ soit $\geq \alpha$ pour tout $[x_i, x_{i+1} ]$.\\
+
+	Or $f( a) < 0$ donc $\leq -\alpha$ Donc $f\leq - \alpha$ sur $[a_0,a_1]$ \\
+	Or $f( a) < 0$ donc $\leq -\alpha$ Donc $f\leq - \alpha$ sur $[a_1,a_2]$, etc.\\
+	Or $f( a_n) =b$, donc $\contra$
+
+\end{proof}
+
+
+
+
+
+
+\end{document}	
