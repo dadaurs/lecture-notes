@@ -15,17 +15,33 @@
 \author{David Wiedemann}
 \maketitle
 Soit $A$ et $B$ deux groupes d'ordre 3.\\
-Regardons la loi de composition $\star$ sur $A$, la construction d'une loi de composition sur $B$.\\
+Regardons la loi de composition $\star$ sur $A$, on va montrer que la manière de construire cette loi de composition est unique.\\
+
 Posons $A= \left\{ e_A, a, a' \right\} $, on dénote par $e_A$ l'élément neutre.\\
 Clairement $e_A \star a = a, e_A \star a'= a', a \star e_A = a, a' \star e_A = a'$ car sinon $e_A$ ne serait pas l'élément neutre.\\
-Supposons maintenant que $a \star a' \neq e_A$, alors $a $ n'admet pas d'inverse, donc $a \star a' = e_A$.\\
-Le raisonnement est le même pour $a'$, en effet $a' \star a = e_A$.\\
-Finalement, on considère $a \star a$, supposons que $a \star a= e_A$, alors $a$ admet deux inverses ce qui est une contradiciton.\\
-Supposons donc que $a \star a = a$, alors $a \star a \star a' = a \star a'$ et donc $a = e_A$ ce qui est une contradiciton. Ce qui force $a \star a = a'$.\\
+Supposons maintenant que $a \star a' \neq e_A$.\\
+$\quad$ Si $a \star a' = a$, alors ceci force $a \star a = e_A $ et $a' \star a' = e_A $ car sinon $a$ est $a'$ non-inversible.\\
+$\quad$ Ce qui implique que
+\begin{align*}
+a \star a \star a' \star a' = e_A\\
+a \star e_A \star a' = e_A\\
+a \star a' = e_A
+\end{align*}
+Ce qui est une contradiction à l'hypothèse.\\
+
+On trouve de la même manière que $a \star a' =a'$ contredit l'hypothèse que $a\star a'\neq e_A$.\\
+
+Donc $a \star a' = e_A$.\\
+
+
+
+
+Finalement, on considère $a \star a$, supposons que $a \star a= e_A$, alors $a$ admet deux inverses $a$ et $a'$ ce qui est une contradiciton.\\
+Supposons donc que $a \star a = a$, alors $a \star a \star a' = a \star a'$ et donc $a = e_A$ ce qui est une contradiciton. Ceci force donc $a \star a = a'$.\\
 Avec le même raisonnement, on montre que $a' \star a' = a$.\\
 \hr\\
 Donc, il y a une manière unique de construire une loi de composition sur un groupe d'ordre 3.\\
-On peut donc définir une table pour la composition sur $A$, ainsi
+Afin de mieux visualiser la chose on peut représenter la loi de composition qu'on vient de construire avec un tableau.
 \begin{align*}
 &\begin{array}{l|lll}
 \star & e_A  & a  & a' \\
@@ -54,7 +70,18 @@ On définit donc la bijection $\phi$ de $A$ vers $B$
 	b' \text{ si } x = a'\\ 
 	\end{cases}
 \end{align*}
-On vérifie facilement qu'il s'agit d'un isomorphisme.
+Il reste à vérifier qu'il s'agit d'un morphisme.\\
+On remarque que les tableaux ci-dessus sont symmétriques, cette symmétrie implique que $( A, \star) $ et $( B, \times) $ sont des groupes symmétriques.\\
+Cette observation nous permet de réduire le nombre de cas à vérifier pour montrer que $\phi$ est un isomorphisme.\\
+Pour montrer que $\phi$ est un morphisme, on vérifie toutes les combinaisons possibles.
+\begin{align*}
+	\phi( e_A \star a) &= e_B \times b = \phi( e_A) \times \phi( a) \\
+	\phi( e_A \star a') &= e_B \times b' = \phi( e_A)  \times \phi( a')\\
+	\phi( a' \star a) &= \phi(a \star a') = \phi( e_A)  = b' \times b = e_B=\phi( a') \times \phi( a) = \phi( a) \times \phi( a') \\
+	\phi(a \star a) &= \phi( a') = b' = b \times b = \phi( a) \times \phi( a)\\
+	\phi( a' \star a') &= \phi( a) = b = b' \times b' = \phi( a') \times \phi( a') 
+\end{align*}
+
 
 
 
