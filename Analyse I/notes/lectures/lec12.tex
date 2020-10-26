@@ -1,0 +1,192 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Mon 26 Oct}{Fonctions}
+
+\begin{crly}
+$\forall n \in \mathbb{N}^{*} \forall x \geq 0: \exists y \geq 0: y^{n}=x$\\
+Comme ce $y$ est unique ( axiome de $<$) on peut donc définir $\sqrt[n] { x} = y $
+\end{crly}
+\begin{proof}
+	Considérons la fonction $f: \mathbb{R}^{+} \to \mathbb{R}^{+}$, $f( y) = y^{n}$.\\
+	$f$ est continu, $f( 0) = 0, \lim_{x \to  + \infty} f( x) = + \infty $.\\
+	Rappel: i.e.
+	\[ 
+		\exists y_0 \forall y \geq y_0: f( y) \geq x
+	\]
+	TVI pour $ [ 0, y] $ : $\exists z $ tq $f( z) = x$.
+\end{proof}
+\begin{flushleft}
+\textbf{Rappel}
+\end{flushleft}
+\begin{itemize}
+\item $ax+b = 0$ adment une solution ( en $x$) si $a\neq 0$ 
+\item $ax^{2} + bx + c$ admet parfois une solution
+\item $ax^{3}+ bx^{2} + cx + d= 0$ admet une solution ( $a\neq 0$) 
+\item degré 4 admet parfois une solution
+\item degré 5: pas de formule avec ``juste'' des racines.
+\end{itemize}
+\begin{crly}
+Tout polynôme de degré impair admet des racines.
+\end{crly}
+\begin{proof}
+\[ 
+a_n x^{n} + a_{n-1} x^{n-1} + \ldots + a_0 = 0
+\]
+$n$ impair, $a_n \neq 0$ \\
+Or $ \lim_{x \to  + \infty} f( x) = + \infty $ ( si $a_n > 0$ $- \infty $ si $a_n < 0$) \\
+En effet
+\[ 
+	a_n x^{n} ( 1 + \frac{a_{n-1} }{a_n} x^{-1} + \ldots ) 
+\]
+Donc $\exists x_1: f( x_1) > 0$ ( resp.$< 0$).\\
+De même, $\lim_{x \to - \infty  } f( x) = - \infty $ ( resp $+ \infty $).\\
+Donc
+\[ 
+	\exists x_2: f( x_2) < 0
+\]
+TVI sur $[x_2, x_1]$ $\Rightarrow$ $\exists x: f( x) = 0$
+
+\end{proof}
+\begin{crly}
+Soit $f: [ a,b] \to \mathbb{R}$ continue.\\
+$f( [ a,b ]) = [ m, M]  $ où $m = \min_{x \in [ a,b] } f( x)  $et $ M = \max_{x\in [ a,b] } f( x) $
+\end{crly}
+
+\begin{propo}[1er theoreme de la fonction implicite]
+	Soit $f: [ a,b] \to \mathbb{R}$ continue, strictement monotone.\\
+	Donc ( corrolaire précédent) , $f$ est bijective 
+	\[ 
+	f: [ a,b]  \to [ m,M] 
+	\]
+	i.e. $\exists f^{-1}: [ m,M] \to [ a,b] $ \\
+	Alors $f^{-1}$ est continue
+\end{propo}
+\begin{proof}
+Sans perte de géneralité, $f$ strictement croissante.\\
+\begin{lemma}
+Soit $g: [ m,M] \to [ a,b] $ surjective et strictement croissante.\\
+Alors $g$ est continue
+\end{lemma}
+\begin{proof}
+En $x_0$ \\
+Soit $\epsilon> 0: \exists x_1: g( x_1) > g( x_0) - \epsilon$ \\
+De même, $\exists x_2: g( x_2) < g( x_0)  + \epsilon$.\\
+Donc sur $[x_1, x_2]$ $f$ prend des valeurs entre $g( x_0) -\epsilon$ et $g( x_0) + \epsilon$
+\end{proof}
+Appliquer à $g= f^{-1}$.\\
+C'est surjectif, par définition du domaine de $f^{-1}$, i.e. l'image de $f$.
+
+\end{proof}
+\begin{crly}
+Soit $f: [ a,b] \to [ a,b] $ continue.\\
+Alors $\exists x \in [ a,b] : f( x) = x$.
+\end{crly}
+\begin{proof}
+Considérer $g$ 
+\[ 
+g: [ a,b]  \to \mathbb{R}
+\]
+avec 
+\[ 
+	g( x) = x-f( x) 
+\]
+Donc 
+\begin{align*}
+g( a)  = a- f( a) \leq 0\\
+g( b)  = b - f( b) \geq 0
+\end{align*}
+TVI $\Rightarrow \quad \exists x: g( x) = 0$ i.e. $f( x) = x$
+\end{proof}
+\section{Suites de Fonctions}
+But: donner un sens à 
+\begin{center}
+``\textit{$f_n$ converge vers une fonction $f$}''
+\end{center}
+\begin{defn}
+	$( f_n)$ converge ponctuellement vers $f$ si
+	\[ 
+		\forall x : \quad \lim_{n \to  + \infty} f_n( x) = f( x) 
+	\]
+\end{defn}
+\begin{exemple}
+\begin{itemize}
+\item 
+\begin{figure}[ht]
+    \centering
+    \incfig{fonction1}
+    \caption{fonction1}
+    \label{fig:fonction1}
+\end{figure}
+\item 
+\begin{figure}[ht]
+    \centering
+    \incfig{fonction2}
+    \caption{fonction2}
+    \label{fig:fonction2}
+\end{figure}
+Ponctuellement, $f_n \to f$ où
+\begin{align*}
+	f( x) =
+	\begin{cases}
+	0 \text{ si } x<1\\
+	1 \text{ si } x=1
+	\end{cases}
+\end{align*}
+\begin{rmq}
+\[ 
+	\lim_{x \to 1} f_n( x) = 1
+\]
+On pourrait donc prendre
+\[ 
+	\lim_{n \to  + \infty} \lim_{x \to 1} f_n( x) = 1
+\]
+Par contre
+\[ 
+	\lim_{x \underbrace{\to}_{<} 1} \lim_{n \to  + \infty} f_n( x)  = 0
+\]
+
+\end{rmq}
+Donc, attention à la continuité!
+\item 
+\begin{figure}[ht]
+    \centering
+    \incfig{fonction3}
+    \caption{fonction3}
+    \label{fig:fonction3}
+\end{figure}
+$f_n$ est continue pour tout $n$, 
+\[ 
+\max f_n = 1
+\]
+Or $f_n \to 0$ ponctuellement.
+\item 
+\begin{figure}[ht]
+    \centering
+    \incfig{fonction4}
+    \caption{fonction4}
+    \label{fig:fonction4}
+\end{figure}
+Or, à nouveau, $f_n \to f=0$
+
+\end{itemize}
+\end{exemple}
+\begin{defn}[Convergence uniforme de fonctions]
+	Une suite $( f_n) _{n=1} ^{ \infty }$ converge uniformément sur $A \subseteq \mathbb{R}$ sur $f$ si:
+	\[ 
+		\forall \epsilon > 0 \exists n_0 \forall n \geq n_0 \forall x |f_n( x) - f( x) | < \epsilon
+	\]
+	
+
+\end{defn}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

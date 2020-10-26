@@ -1,0 +1,240 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Mon 26 Oct}{Espaces Vectoriels 3}
+
+Continuation de la preuve de \ref{thm:isom_de_Kd_vers_V}
+\begin{proof}
+Soit $\alpha \subset V$ libre. Soit  $\mathcal{B}\subset V$ une base.\\
+Alors $\alpha\cup \mathcal{B}$ est génératrice et contient $\alpha$.\\
+Soit $\mathcal{B}'$ une famille génératrice contenant $\alpha$ et contenue dans $\alpha \cup \mathcal{B}$, de taille minimale.\\
+On va montrer que $\mathcal{B}'$ est libre et que ce sera une base contenant $\alpha$ ( et même contenue dans $\alpha \cup \mathcal{B}$) \\
+Si $\alpha = \mathcal{B}'$, on a fini: $|\alpha| = |\mathcal{B}'|$ et  $\alpha$ est une base.\\
+Quitte à renuméroter $\mathcal{B}'$ on peut supposer que
+\[ 
+\mathcal{B}' = \left\{ \underbrace{e_1, \ldots, e_{|\alpha|}}_{\in \alpha} , e_{|\alpha|+1} , \ldots  \right\} 
+\]
+Soient $x_1, \ldots, x_{d}' \in K$ tel que
+\[ 
+	x_1 e_1 + x_2e_2 + \ldots + x_{|\alpha|} e_{|\alpha|}  + e_d x_d = 0_V
+\]
+Si tous les $x_{|\alpha| + i} = 0$ pour $i \geq 1$, alors on a
+\[ 
+0_V = x_1e_1 + \ldots + e_{|\alpha|} x_{|\alpha|} 
+\]
+Mais comme $\alpha$ est libre $\Rightarrow$ 
+\[ 
+x_1 = \ldots = x_{|\alpha|}  = 0_K
+\]
+
+Si il existe $x_{|\alpha|+i} i \geq 1$ qui est non nul, alors
+\[ 
+	e_{|\alpha| + 1}  = \frac{x_1}{- x_{|\alpha| + i}} e_1 + \ldots + \frac{x_{|\alpha|} }{x_{|\alpha| + i}} e_{|\alpha|}  + \ldots
+\]
+Ce qui implique que $V$ est engendré par $ \left\{ e_1, \ldots, e_{|\alpha|}  \right\} \setminus e_{|\alpha| + i} $ Ce qui contredit la minimalité de la famille génératrice $\mathcal{B}'$ parce que 
+\[ 
+\mathcal{B}' - \left\{ e_{|\alpha| + i}  \right\}
+\]
+est génératrice et contient $\alpha$
+
+\end{proof}
+\begin{thm}[Dimension de SEV]\label{thm:dim_de_sev}
+	Soit $V$ un espace vectoriel de dimension finie, et $W \subset V$ un sous-espace vectoriel alors
+	\begin{enumerate}
+		\item $W$ est de dimension finie et $\dim W \leq \dim V$ 
+		\item Si $\mathcal{B}_W$ est une base de $W$, alors il existe une base $\mathcal{B}_V$ de contenant $\mathcal{B}_W$ 
+		\item Si $\dim W = \dim V$, alors $W = V$
+	\end{enumerate}
+	
+\end{thm}
+\begin{proof}
+	Si $W = \left\{ 0_V \right\} $, on a fini\\
+	Sinon, si $W \neq \left\{ 0_V \right\} $, alors $W$ contient une famille non-vide $\alpha$ qui est libre.\\
+	Soit $\alpha \subset W$ libre et de cardinal maximal ( parmi les familles libres) 
+	On va montrer que $\alpha$ est génératrice de $W$ ( et $\alpha$ sera une base de $W$) .\\
+	Si $\alpha$ n'est pas génératrice, il existe $e \in W \setminus \eng{\alpha}$.\\
+	Ce qui implique que $e$ n'est pas combinaison linéaire des éléments de $\alpha$ 
+	$\Rightarrow$ $\alpha \cup \left\{ e  \right\} $ est libre, et elle est contenue dans $W$, ce qui contredit la maximalité de $|\alpha|$.\\
+	Donc $W$ est de dimension finie, $\dim W = |\alpha| \leq \dim V$ \\
+	Si $|\alpha| = \dim V$, $\alpha$ est libre dans $V$ et de taille $\dim V$.\\
+	Donc $\alpha$ est une base de $V$, et donc $W = V$
+\end{proof}
+\subsection{Espaces vectoriels de dimension infinie}
+\begin{exemple}
+\begin{itemize}
+	\item $\mathcal{F}( \mathbb{R}, \mathbb{R}) = \mathbb{R}^{\mathbb{R}}$ n'est pas de dimension finie
+	\item $\mathcal{C}( \mathbb{R},\mathbb{R}) $ fonctions continues 
+	\item $\mathbb{R}[x]$ fonctions polynomiales sur $\mathbb{R}$ n'ont pas de dimension finie
+\end{itemize}
+\end{exemple}
+\begin{defn}
+Soit $V$ un $K$-ev. Un sous-ensemble $G \subset V$ est une famille génératrice si
+\[ 
+	Vect( G) = V
+\]
+ie. tout élément $v \in V$ peut s'écrire sous la forme d'une combinaison linéaire finie d'éléments de $G$ il existe $e_1, \ldots e_D \in G$, $x_1, \ldots x_d \in K$ tq
+\[ 
+v = x_1 e_1 + \ldots + x_d e_d
+\]
+
+\end{defn}
+\begin{defn}
+	Soit $V$ un $K-$ ev, un sous-ensemble $\mathcal{L} \subset V$ est une famille libre si tout sous-ensemble fini $\mathcal{L}' \subset \mathcal{L}$ est libre: $\forall d \geq 1$ et tout $ \left\{ e_1, \ldots, e_d \right\} \subset \mathcal{L}$, on a 
+	\[ 
+	x_1e_1+ \ldots + x_d e_d = 0_V \iff x_1= \ldots = x_d = 0_k
+	\]
+		
+\end{defn}
+\begin{defn}
+	Une base $\mathcal{B} \subset V$ est une famille libre et génératrice: tout élément de $v$ est représentable comme combinaison linéaire finie d'éléments de $\mathcal{B}$
+\end{defn}
+
+\begin{thm}
+Dans une théorie des ensembles contenant l'axiome du choix, tout espace vectoriel possède une base et toutes les bases de $V$ ont le même cardinal: pour toutes bases $\mathcal{B}, \mathcal{B}'$, il exists une bijection 
+\[ 
+\mathcal{B} \simeq \mathcal{B}'
+\]
+La dimension de $V$ est de cardinal d'une base
+\[ 
+\dim V = |\mathcal{B}|
+\]
+
+\end{thm}
+\begin{lemma}[Lemme de Zorn]
+	Soit $E$ un ensemble ordonné tel que tout sous-ensemble $A \subset E$ totalement ordonné possède un majorant alors $E$ possède un élément maximal.
+\end{lemma}
+\begin{propo}
+	Soit $\phi: V \to W$ une application linéaire avec $V$ de dimension finie. Soit $G = \left\{ e_1, \ldots , e_g \right\} \subset V$ une famille génératrice, alors
+	\[ 
+		\phi( G) = \left\{ \phi( e_1), \ldots, \phi( e_g)  \right\} \subset W
+	\]
+	est une famille génératrice de $Im( \phi) $ et on a
+	\[ 
+	\dim Im \phi \leq \dim V
+	\]
+	
+\end{propo}
+\begin{defn}
+Soit $\phi: V \to W$ une application linéaire. Le rang de  $\phi$ est la dimension de $Im \phi$:
+\[ 
+	rg( \phi) = \dim Im \phi
+\]
+
+\end{defn}
+\begin{proof}
+Soit $G = \left\{ e_1, \ldots, e_g \right\} \subset V$ génératrice et soit 
+\[ 
+	\phi( G) = \left\{ \phi( e_1) ,\ldots, \phi( e_g)  \right\} \subset W
+\]
+Soit $w \in Im \phi$ on veut montrer que $w$ est $CL( \phi( G) ) $.\\
+Comme $w \in Im \phi$, $w = \phi( v), v\in V $ et comme $G$ est génératrice de $V$ 
+\[ 
+v= x_1 e_1 + \ldots + x_g e_G, \quad x_i \in K
+\]
+Donc 
+\[ 
+	w= \phi( v) = x_1 \phi( e_1)  + \ldots + x_g \phi( e_g) 
+\]
+
+Soit $G= B$ une base, alors
+\[ 
+|B| = \dim V
+\]
+et 
+\[ 
+	\dim Im \phi( V) \leq |phi( B) |\leq |B|
+\]
+
+\end{proof}
+\begin{crly}
+Une application linéaire envoyant une base sur une base est un isomorphisme
+\end{crly}
+\begin{proof}
+$\phi: V \to W$\\
+$B$ une base de $\phi$ et on suppose que
+\[ 
+	\phi( B) = \left\{ \phi( e_1) , \ldots, \phi( e_d)  \right\} = \text{ Base de  } W
+\]
+Alors $\phi: V \simeq W$.\\
+$\phi$ est surjective car $\phi( B) $ engendre l'image de $\phi$ et comme $\phi( B) $ est ube base de $W$ 
+\[ 
+	\eng{\phi( B) } = Im \phi = W
+\]
+$\phi$ est injective: Soit $v \in \ker \phi$ 
+\[ 
+v = x_1e_1 + \ldots + x_d e_d
+\]
+$\phi( v) = 0 = x_1 \phi( e_1) + \ldots + x_d \phi( e_d) $\\
+Mais car $ \left\{ \phi( e_1) , \ldots, \phi( e_d)  \right\} $ est libre dans $W$.\\
+Donc $x_1= \ldots = x_d = 0$ $\Rightarrow$  $v=0$
+\end{proof}
+\begin{thm}[Le théorème noyau-image]
+	Soit $\phi: V \mapsto W$ une application linéaire avec $V$ de dimension finie. On a
+	\[ 
+	\dim V = \dim \ker \phi + \dim Im \phi
+	\]
+	
+	
+\end{thm}
+\begin{proof}
+	Soit $ \left\{ e_1, \ldots, e_k \right\} $ une base de $\ker \phi$ ( $k \leq \dim V$) \\
+	Soit $ \left\{ f_1, \ldots, f_r \right\} $ une base de $Im \phi$ ( $r \leq \dim V$) , alors
+	\[ 
+		f_1= \phi( e_1') , \ldots, f_r = \phi( e_r') \text{ avec } e'_j \in V
+	\]
+On va montrer que
+\[ 
+\left\{ e_1, \ldots, e_k, e_1', \ldots, e_r' \right\} \subset V
+\]
+c'est une base de $V$. Alors
+\[ 
+\dim V  = | \left\{ ... \right\} | = k+r
+\]
+Montrons que la famille est libre:\\
+Soit $x_1, \ldots, x_k, x'_1, \ldots, x'_r\in K$ tel que
+\[ 
+x_1 e_1 + \ldots + x'_r e'_r = 0_V
+\]
+On a 
+\begin{align*}
+\phi( 0_V) = \phi( x_1e_1 + \ldots + x'_r e'_r) = 0_W\\
+= x_1 \phi( e_1)  + \ldots x'_r e'_r\\
+= x'_1 f_1 + \ldots + x'_r f_r \Rightarrow x'_1 = \ldots x'_r = 0
+\end{align*}
+Il reste
+\[ 
+0_V = x_1 e_1 + \ldots + x_k e_k
+\]
+Donc $ \left\{ e_1, \ldots, e_k \right\} $ est linre $\Rightarrow \quad x_1 = \ldots = x_k=  0_K$ \\
+Montrons que $ \left\{ e_1, \ldots, e_k, e'_1, \ldots, e'_r \right\} $ est génératrice.\\
+Soit $v \in V$ on veut montrer que $v$ est cl de la famille.\\
+\begin{align*}
+\phi( v) = \underbrace{w}_{\in Im \phi} = x_1' f_1 + \ldots x'_r f_r\\
+= x'_1 \phi( e'_1)  + \ldots + x'_r \phi( e'_r) \\
+= \phi( x'_1 e'_1 + \ldots + x'_r e'_r)
+\end{align*}
+Donc $\phi( v) = \phi( v') $, or
+\[ 
+	v - v' \in \ker \phi \text{ car } \phi( v- v') = \phi( v) - \phi( v') = 0_W
+\]
+Donc 
+\begin{align*}
+	v-v' &= x_1e_1 + \ldots + x_k e_k\\
+	     &\text{ donc } \\
+	     &= x_1 e_1 + \ldots + x_k e_k + x'_1 e'_1 + \ldots + x_r' e'_r
+\end{align*}
+
+
+
+
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+\end{document}	
