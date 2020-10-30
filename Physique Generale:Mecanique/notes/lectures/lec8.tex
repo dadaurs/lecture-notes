@@ -1,0 +1,196 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Wed 28 Oct}{Gravitation}
+\section{Gravitation, Moment Cinétique}
+\subsection{Lois de Kepler}
+\begin{itemize}
+	\item 2ème loi:(lois des aires) Le rayon-vecteur du Soleil à une planète balaie des aires égales en des temps égaux
+	\item 1ère loi:( 1609) Les Trajectoires des planètes sont des ellipses dont le soleil occupe l'un des foyers.
+	\item 3eme loi:( 1609) Les carrés des périodes de révolution sont proportionnels aux cubes des grands axes:
+		\[ 
+		\frac{ \text{ période } ^{2}}{ \text{ grand axe } ^{3}}= \text{ constante } 
+		\]
+		
+\end{itemize}
+\subsection{Le développement de la dynamique}
+\begin{itemize}
+\item Qu'est-ce qui fait bouger les planètes
+	\begin{itemize}
+	\item Avant Galilée/Nerwton
+		\begin{itemize}
+		\item Le mouvement naturel d'un corps est l'immobilité
+		\item Une planète doit constamment être poussee dans la direction de son mouvement
+		\end{itemize}
+
+	\item Apres Galilée
+
+		\begin{itemize}
+		\item Le mouvement naturel d'un corps est rectiligne uniforme
+		\end{itemize}
+		
+	
+	\end{itemize}
+
+\item Newton tire les consequences des lois de Kepler
+	\begin{itemize}
+		\item La 2eme loi et la planeite de l orbite impliquent que la force ( et donc l'acceleration) subie par une planete pointe toujours vers le soleil
+		\item En utilisant de plus la 3eme loi, Newton montrer que la force est proportionelle à $\frac{1}{r^{2}}$ 
+		\item A partir de là, il prédit une trajectoire elliptique!
+	\end{itemize}
+	
+
+\end{itemize}
+\subsection{Mouvement central et loi des aires}
+\begin{defn}
+	Un point $P$ de masse $m$ a un mouvement central si son accélération passe toujours par un même point $O$ $\iff$ $\vec{r}( t) = \vec{OP}$ reste toujours parallèle à $\vec{a}( t) $
+\end{defn}
+\underline{ Conséquences }
+Le vecteur moment cinétique $\vec{L}= \vec{r} \land m \vec{v}$ reste constant et le mouvement est plan.
+\[ 
+	\frac{d}{dt} ( \vec{r} \land m \vec{v}) = \vec{v} \land m \vec{v} + \vec{r} \land m \vec{a} = 0
+\]
+L'aire balayée par unité de temps par le vecteur $\vec{r}( t) $ est constante ( loi des aires) 
+\[ 
+	d A = \frac{1}{2} r v dt \sin( \vec{r}, \vec{v}) \iff \frac{dA}{dt} = \frac{1}{2}|\vec{r}\land \vec{v}| = \frac{L}{2m}
+\]
+Donc on a
+\[ 
+\text{ mouvement central } \iff \text{ moment cinetique constant } \iff \text{ loi des aire+ mouvement dans un plan } 
+\]
+\subsection{Mouvement central}
+Composante horizontale
+\[ 
+	F_p = \vec{F} \cdot \hat{e}_{\rho} = - mg \cos\alpha\sin \alpha
+\]
+
+
+\begin{figure}[ht]
+    \centering
+    \incfig{mouvement_central}
+    \caption{mouvement_central}
+    \label{fig:mouvement_central}
+\end{figure}
+Le support de $\vec{F_p}$ passe toujours par $O$ 
+\[ 
+|\vec{F_p}| = mg \cos \alpha \sin\alpha
+\]
+\subsection{Déduction de la force de Gravitation en $\frac{1}{r^{2}}$}
+Supposons une orbite circulaire.\\
+Calculons le moment cinétique
+\begin{align*}
+	\vec{L}_O &= \vec{r} \land m \vec{v} = m \vec{r} \land ( \omega \land \vec{r}) \\
+		  &= m r^{2} \vec{\omega}
+\end{align*}
+Par la 2ème loi de Kepler
+$\vec{L} = \text{ constante } $, on en déduit
+\[ 
+\Rightarrow  \vec{\omega} = \text{ constante } \Rightarrow |\vec{v}| = v = \omega r
+\]
+Donc on a un mouvement circulaire uniforme.\\
+Par la 3eme loi de Kepler
+\[ 
+T^{2} = C r^{3}
+\]
+Par la deuxieme loi de Newton
+\[ 
+	F= ma = m \frac{v^{2}}{r} = \frac{m}{r} ( \frac{2 \pi r}{T}) ^{2} = \frac{m}{r} \frac{r \pi^{2} r^{2}}{C r^{3}} = \frac{4 \pi^{2}}{C} m \frac{1}{r^{2}}
+\]
+Posons $\xi = \frac{4\pi^{2}}{C}$, on a donc
+\[ 
+=\xi m \frac{1}{r^{2}}
+\]
+Donc
+\[ 
+	\Rightarrow T = 2 \pi \sqrt{\frac{r^{3}}{\xi}}
+\]
+\subsection{Loi de gravitation universelle}
+\begin{thm}[Gravitation Universelle]\index{Gravitation Universelle}\label{thm:gravitation_universelle}
+	\[ 
+	\vec{F}= - G \frac{Mm}{r^{2}}\hat{e}_r - G \frac{Mm}{r^{3}} \vec{r}
+	\]
+	
+\end{thm}
+
+
+\subsection{Champ de gravitation}
+Une masse ponctuelle $M$ produit un champ gravitationnel $\vec{g}( \vec{r}) $ à la position $r$ :
+\[ 
+	\vec{g}( \vec{r}) - \frac{GM}{r^{2}}\frac{\vec{r}}{r}
+\]
+Quel est le champ gravitationnel produit par une masse $M$ non ponctuelle supposée sphérique de rayon $R$ et homogène?( par exemple la terre) \\
+Réponse: Si $r\geq R$, le même champ que produirait une masse $M$ ponctuelle située au centre de la terre ( conséquence de la forme en $\frac{1}{r^{2}}$)
+\subsection{Energie potentielle gravifique}
+Energie potentielle
+\[ 
+	V( r)  = - \frac{GMm}{r}
+\]
+Approximation à la surface de la terre ( h<< R) 
+\begin{align*}
+\frac{1}{r} = \frac{1}{R+h} = \frac{R-h}{R^{2}-h^{2}}\simeq \frac{R-h}{R^{2}}=\frac{1}{R} - \frac{h}{R^{2}}\\
+\Rightarrow V( r) = - \frac{GMm}{r} \simeq - \frac{GMm}{R} + \frac{GM}{R^{2}}mh
+\end{align*}
+On a 
+\begin{align*}
+	V( r) = - \frac{GMm}{r}
+\end{align*}
+\[ 
+\Rightarrow \text{ Force } = F_1\hat{x}_1 + F_2 \hat{x}_2 + F_3 \hat{x}_3
+\]
+On a donc
+\[ 
+F_i = - \frac{\partial V}{\partial x_i} = - \frac{\partial V}{\partial r}\cdot \frac{\partial r}{\partial x_i} = - \frac{GMm}{r^{2}} \frac{2 x_i}{2r} - \frac{GMm}{r^{2}} \frac{x_i}{r}
+\]
+Et donc
+\[ 
+	\vec{F} = - \frac{GMm}{r^{2}} \frac{\vec{r}}{r}
+\]
+\subsection{Mouvement dans un potentiel central}
+Si le potentiel ne dépend que de la distance à l'origine, $V= V( r) $, alors on a une force centrale
+\[ 
+	\vec{F} = - \nabla V( r) 
+\]
+Force centrale $\iff$ vecteur moment cinétique constante $\Rightarrow$ mouvement plan
+
+	Dans le plan du mouvement, on a 
+	\[ 
+	\begin{cases}
+	\vec{r} = r \hat{e}_r\\
+	\vec{v} = \dot{r} \hat{e}_r + r \dot{\theta}\hat{e}_\theta
+	\end{cases}
+	\]
+	
+	Constantes du mouvement
+
+	\begin{align*}
+		\vec{L} = \vec{r} \land m \vec{v} = mr \hat{e}_r \land ( \dot{r} \hat{e}_r + r \dot{\theta} \hat{e}_\theta) = m r^{2} \dot{\theta} \hat{e}_z\\
+		\text{ de meme } \\
+		E= \frac{1}{2}m \vec{v}^{2} + V( r)  = \frac{1}{2}m ( \dot{r} \hat{e}_r + r \dot{\theta} \hat{e}_\theta) ^{2} + V( r)  = \frac{m \dot{r}^{2}}{2} + \frac{L^{2}}{2 m r^{2}}+ V( r) 	
+	\end{align*}
+
+
+\subsection{Intégrales premières d'un mouvement central}
+Point matériel soumis à une force centrale
+\[ 
+\vec{F} = - \frac{dV}{dr}\hat{e}_r
+\]
+$\vec{ma} = \vec{F}$ projeté sur $\hat{e}_\theta$ 
+\[ 
+	m( r \ddot{\theta} + 2 \dot{r} \dot{\theta}) = 0 \iff \frac{d}{dt}( mr^{2}\dot{\theta}) = 0
+\]
+$\vec{ma} = \vec{F}$ projeté sur $\hat{e}_r$ 
+On obtient
+\[ 
+	\frac{d}{dt} \left( \frac{m \dot{r}^{2}}{2} + \frac{L^{2}}{2 m r^{2}}+ V( r) \right) =0
+\]
+
+
+	
+
+
+
+
+
+
+
+
+\end{document}	

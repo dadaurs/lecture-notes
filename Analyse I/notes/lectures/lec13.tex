@@ -1,0 +1,165 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{13}{Wed 28 Oct}{Suites de Fonctions 2}
+\begin{rmq}
+La convergence uniforme implique la convergence ponctuelle
+\end{rmq}
+\begin{propo}
+	Soit $( f_n) $ une suite de fonctions qui converge uniformément.\\
+	Supposons que 
+	\[ 
+		\lim_{n \to  + \infty} \underbrace{\lim_{x \to x_0} f_n( x)}_{=l_n} 
+	\]
+	existe.\\
+	Alors
+	\[ 
+		\lim_{x \to x_0} \lim_{n \to  + \infty} f_n( x) = \lim_{n \to  + \infty} \lim_{x \to x_0} f_n( x) 
+	\]
+	
+\end{propo}
+\begin{proof}
+	Soit $f$ la limite de $( f_n) $.\\
+	Hyp: $\forall n: l_n = \lim_{x \to x_0} f_n( x) $existe et
+	$l = \lim_{n \to  + \infty} l_n$.\\
+	But: $\lim_{x \to x_0} f( x) =l$.\\
+	Soit donc $\epsilon > 0$, alors
+	\[ 
+	\exists n_0\forall n\geq n_0: |l_n-l|< \frac{\epsilon}{3}
+	\]
+	De plus, par convergence uniformee
+	\[ 
+	\exists n_0\forall n \geq n_0
+	\begin{cases}
+	|l_n-l|< \frac{\epsilon}{3}\\
+	\forall x: |f_n( x) -f( x) |< \frac{\epsilon}{3}
+	\end{cases}
+	\]
+	Donc
+	\[ 
+		\exists \delta> 0 \forall x: 0< |x-x_0| < \delta \Rightarrow |f_{n_0} ( x) - l_{n_0} | < \frac{\epsilon}{3}
+	\]
+Soit $0< |x-x_0|< \delta$, on veut
+\[ 
+	|f( x) -l| <\epsilon
+\]
+Or
+\[ 
+	|f( x) -l| \leq |f( x) -f_{n_0} ( x) | + |f_{n_0} ( x) -l_{n_0} | + |l_{n_0} -l|< \epsilon
+\]
+
+	
+\end{proof}
+
+
+
+
+\begin{thm}
+Toute limite uniforme de fonctions continues est continue.
+\end{thm}
+\begin{proof}
+	Soit $f$ la limite uniforme de $( f_n) $, $f_n$ est continue $\forall n$.\\
+	Soit $x_0$ avec $f_n$ définie au voisinage de $x_0$.\\
+	A voir: $f$ continue en $x_0$, i.e.
+	\[ 
+		f( x_0) = \lim_{x \to x_0} f( x) = \lim_{x \to x_0} \lim_{n \to  + \infty} f_n( x) = \lim_{n \to  + \infty} \lim_{x \to x_0} f_n( x) = f( x_0)  
+	\]
+	
+\end{proof}
+\begin{thm}[Dini]
+	Soit $( f_n) $ une suite décroissante de fonctions continues.\\
+	Si $( f_n) $ converge ponctuellement vers $f$ continue, alors $f_n$ converge uniformément vers $f$ sur $[a,b]$.
+
+\end{thm}
+\begin{exo}
+Trouver un contre exemple sans l'hypothèse décroissante.
+\end{exo}
+\begin{proof}
+Par l'absurde, 
+\[ 
+	\exists \epsilon> 0 \forall n_0\exists n\geq n_0 \exists x_n: |f_n( x_n) - f( x_n) | \geq \epsilon
+\]
+Par Bolzano-Weierstrass $\Rightarrow$ 
+\[ 
+	( x_{n_k} ) \text{ qui converge vers  } x
+\]
+et tel que
+\[ 
+	|f_{n_k} ( x_{n_k} ) - f( x_{n_k} ) | \geq \epsilon
+\]
+Convergence de $f_{n} ( x) $ implique
+\[ 
+	\exists k: |f_{n_k} ( x) -f( x) |< \frac{\epsilon}{3}
+\]
+Continuité de $f_{n_k} $ et de $f$ en $x$ 
+\[ 
+\exists \delta> 0 \forall y: |x-y|< \delta \Rightarrow 
+\begin{cases}
+	|f( y) - f( x) |< \frac{\epsilon}{3}\\
+	|f_{n_k} ( y) - f_{n_k} ( x)| < \frac{\epsilon}{3}
+\end{cases}
+\]
+Choisir un $k'$ tel que $|x_{n_k'} -x|< \delta$ \\
+Comme 
+\begin{itemize}
+	\item $|f( x) -f( x_{n_k} )| < \frac{\epsilon}{3}$ 
+	\item  $|f_{n_k} ( x) - f_{n_k} ( x_{n_k'} ) |< \frac{\epsilon}{3}$
+	\item $f \leq f_{n_k'} \leq f_{n_k} $
+\end{itemize}
+Donc 
+\[ 
+	|f_{n_k'} ( x_{n_k'} ) - f( x_{n_k'} ) | < \epsilon 
+\]
+Absurde.
+
+\end{proof}
+\section{Dérivation}
+\begin{defn}
+	Soit $f$ définie au voisinage de $x_0$.\\
+	On dit que $f$ est dérivable en $x_0$ si
+	\[ 
+		\lim_{x \to x_0} \frac{f( x) -f( x_0) }{x-x_0}
+	\]
+	existe.\\
+	Alors cette limite s'appelle la dérivée de $f$ en $x_0$, notée $f'( x_0) $.
+\end{defn}
+\begin{rmq}
+Si $f$ est dérivable partout, alors on obtient une fonction $f'$.\\
+On définit de même la dérivée gauche et droite.
+\end{rmq}
+\begin{propo}
+Si $f$ et $g$ sont dérivables en $x_0$, alors $f+g$ aussi et
+\[ 
+	( f+g) ' = f'+g'
+\]
+\end{propo}
+\begin{proof}
+\[ 
+	\lim_{x \to x_0} \frac{f(x) + g( x) - f( x_0) + g( x_0) }{x-x_0} = f'( x_0) + g'( x_0) 
+\]
+
+\end{proof}
+\begin{propo}
+	Soit $f$ définie au voisinage de $x_0$. Alors 
+	\[ 
+	f \text{ dérivable en  } x_0 \iff \exists a \in \mathbb{R} \exists \text{ fonction  } r \text{ au voisinage de $x_0$ tel que } 
+	\]
+	\begin{enumerate}
+		\item $f( x) = f( x_0) + a( x-x_0) + r( x) $ 
+		\item $\lim_{x \to x_0} \frac{r( x) }{x-x_0}=0$
+	\end{enumerate}
+	Dans ce cas, $a= f'( x_0) $
+	
+	
+\end{propo}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

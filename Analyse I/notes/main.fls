@@ -480,6 +480,8 @@ INPUT ./figures/fonction4.pdf
 INPUT ./figures/fonction4.pdf
 INPUT ./figures/fonction4.pdf
 INPUT ./figures/fonction4.pdf
+INPUT lectures/lec13.tex
+INPUT lectures/lec13.tex
 OUTPUT main.thm
 OUTPUT main.loe
 INPUT main.aux

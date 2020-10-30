@@ -1,0 +1,388 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{13}{Tue 27 Oct}{Applications lineaires}
+\begin{crly}
+	Soit $\phi:V \to W$ une application lineaire entre espaces de dimension finie
+	\begin{itemize}
+	\item Si $\phi$ est injective et $\dim W = \dim V$, alors $\phi$ est bijective
+	\item Si $\phi$ est surjective et $\dim W = \dim V$, alors $\phi$ est bijective
+	\end{itemize}
+	
+\end{crly}
+\begin{proof}
+Si $\phi$ est injective, alors $\ker \phi = \left\{ 0_V \right\} $, et donc
+\[ 
+\dim V = \dim \ker \phi + \dim Im \phi = \dim Im \phi = \dim W
+\]
+De même, si $\phi$ surjective, alors
+\[ 
+Im \phi = W \text{ et donc } \dim Im \phi = \dim W
+\]
+Donc on a
+\[ 
+\dim W = \dim V = \dim \ker \phi + \dim W
+\]
+Donc $\dim \ker \phi = 0$ et donc $\phi$ est innjective $\Rightarrow$ bijective.
+
+\end{proof}
+\begin{crly}
+	Deux espaces vectoriels de dimension finie sont isomorphes si et seulement si ils ont meme dimension
+\end{crly}
+\begin{proof}
+Soit $V$ et $W$ de même dimension =d.\\
+En choisissant $B$ une base de $V$ et $B'$ de $W$\\
+On a les isomorphismes
+\[ 
+CL_B: K^{d}\simeq V \text{ et } CL_{B'} \simeq W
+\]
+Donc $V$ et $W$ sont isomorphes.\\
+Si $V \simeq W$, alors $\ker \phi = \left\{ 0_V \right\}$ et $Im \phi = W$, on a alors
+\[ 
+\dim V = \dim \ker \phi + \dim Im \phi = 0+ \dim W
+\]
+
+\end{proof}
+\subsection{Formes linéaires}
+\[ 
+l: V \to K
+\]
+On rappelle que si $l \neq \underline{0}_k$, alors $l$ est surjective $l( V) = K$.\\
+\[ 
+\dim V = \dim \ker l + \dim K = \dim \ker l + 1
+\]
+Donc, si $l: V \to L, l \neq \underline{0}_K$, alors $\dim \ker l = \dim V -1$ , alors $\ker l$ est un hyperplan vectoriel de $V$.
+\subsection{Espaces d'applications linéaires}
+Soient $V,W$ de $\dim < \infty $, alors
+\[ 
+	Hom_{K-ev} ( V,W) \text{ a une structure de $K-ev$  }
+\]
+donné par 
+\[ 
+	( \phi + \psi) ( v)  = \phi( v) + \psi( v) 
+\]
+et que
+\[ 
+	\lambda \in K \quad ( \lambda. \phi  ) ( v)  = \lambda( \phi( v) ) 
+\]
+\begin{thm}
+	Si $V$ et $W$ sont de dimension finie, alors $Hom_K ( V,W) $ est de dimension fini
+	\[ 
+		\dim ( Hom_K( V,W) ) = \dim V . \dim W
+	\]
+	
+\end{thm}
+
+\begin{proof}
+	On va montrer que 
+	\[ 
+		Hom( V,W) \simeq W^{\dim V}
+	\]
+
+
+	Soit $B = \left\{ e_1, \ldots, e_d \right\} $ une base de $V$ 
+	\begin{align*}
+	eval_B: Hom( V,W)  \to W^{\dim V}\\
+	\phi \to ( \phi( e_1), \phi( e_2) , \ldots, \phi( e_d)  ) 
+	\end{align*}
+	
+On va montrer que $eval_B$ est un isomorphisme d'espaces vectoriels.\\
+$eval_B$ est linéaire: 
+\[ 
+	eval_B ( \lambda\phi+ \psi) = ( \lambda\phi( e_1) + \psi( e_1) , \ldots, \lambda\phi( e_d) + \psi( e_d) )  = \lambda eval_B( \phi) + eval_B ( \psi) 
+\]
+Montrons que 
+$eval_B$ est injective, si
+\[ 
+	eval_B( \phi) = ( 0_W, \ldots, 0_W) 
+\]
+Implique
+\[ 
+\forall v \in V \quad v = x_1e_1+ \ldots + x_d e_d
+\]
+Donc
+\[ 
+	\phi( v) = x_1 \phi( e_1) + \ldots + x_d \phi( e_d) = 0_W
+\]
+Donc $\phi$ injectif.\\
+Soit $( w_1, \ldots, w_d) \in W^{\dim V} $ et soit $\phi$ l'application définie pour tout $v \in V$ par
+\[ 
+	\phi( v) = x_1w_1 + \ldots + x_d w_d
+\]
+si $v= x_1e_1 + \ldots +x_d e_d$.\\
+C'est bien défini car $B$ est une base de $V$ et la combinaison linéaire qui représente $V$ est unique.\\
+Alors $\phi$ est linéaire et 
+\[ 
+	\phi( e_i) = w_i \quad i= 1\ldots d
+\]
+Donc $eval_B$ est surjective et donc bijective
+\end{proof}
+\begin{rmq}
+	 \[ 
+		 eval_B: Hom( V,W) \simeq W^{\dim V}
+	\]
+	dépend du choix de $B$.
+\end{rmq}
+\begin{rmq}
+Si on choisit $B'$ une base de $W$, 
+\[ 
+W \simeq K^{d'}
+\]
+et donc on obtient un isomorphisme 
+\[ 
+	Hom_K ( V,W) = ( K^{d'} )^{d}
+\]
+
+\end{rmq}
+\subsection{Formes linéaires et dualité}
+\begin{defn}
+On note l'espace des formes linéaires $l: V \to K$ 
+\[ 
+	V^{*} = Hom( V, K) 
+\]
+et on l'appelle le dual de $V$ \\
+Comme $\dim K = 1$, on a
+\[ 
+	\dim ( V^{*}) = \dim Hom( V,K)  = \dim V
+\]
+En particulier un espace vectoriel $V$ et son dual sont isomorphes. Plus précisément, soit
+\[ 
+B = \left\{ e_1, \ldots, e_d \right\} 
+\]
+une base de $V$, on a alors un isomorphisme
+\[ 
+	eval_B: l \to ( l( e_1) , \ldots, l( e_d) ) \in K^{d}
+\]
+
+\end{defn}
+\begin{defn}
+Soit $B$ une base de $V$, la base duale de $B$, $B^{*}\subset V^{*}$ est l'image réciproque de la base canonique $B_d^{0} = \left\{ e_i^{0},i \leq d \right\} \subset K^{d}$ par l'application $eval_B$. On pose
+\[ 
+	e_i^{*}= eval_B^{-1}( e_i^{0}) 
+\]
+De sorte que
+\[ 
+B^{*}= \left\{ e_i^{*}, i \leq d \right\} 
+\]
+et c'est une base ( car image d'une base par un isomorphisme) .
+\end{defn}
+
+\begin{propo}
+Soit $B= \left\{ e_1, \ldots,, e_d \right\} \subset V$ et $B^{*}= \left\{ e_1^{*}, \ldots e_d^{*}\subset V^{*} \right\} $ la base duale. On a
+\[ 
+	\forall i, j \leq d, \quad e_i^{*}( e_j) = \delta_{ij} 
+\]
+
+
+\end{propo}
+\begin{proof}
+	Calculons $e_1^{*} = eval_B^{-1}( ( 1,0,0\ldots) ) $\\
+	Donc 
+	\[ 
+		eval_B( e_1^{*}= ( 1,0,0\ldots) ) = ( e_1^{*}( e_1) ,\ldots) 
+	\]
+	idem pour $e_i^{*}$.
+	
+\end{proof}
+\begin{rmq}
+L'application $eval_B$ donne
+\[ 
+V^{*} \simeq K^{d} \simeq V
+\]
+Donc l'isomorphisme composé $V^{*}\simeq V$ est celui qui envoie $e_i$ sur $e_i^{*}$.\\
+Cet isomorphisme dépend du choix de $B$( pas canonique) .
+\end{rmq}
+\begin{defn}[Application linéaire duale]
+	Soit $\phi:V \to W$ à partie de $\phi$, on construit ( canoniquement) une application
+	\[ 
+		\phi^{*}: W^{*}\to V^{*} \text{ ( application linéaire duale de $\phi$)  } 
+	\]
+	Soit $l' \in W^{*} \to \phi^{*}( l') $ donné par
+	\[ 
+		\phi^{*}( l') ( v) = l'( \phi( v) ) = \l' \circ \phi
+	\]
+	$\phi^{*}$ est linéaire et
+	\[ 
+		\bullet ^{*}: \phi \in Hom( V,W)  \to \phi^{*} \in Hom( W^{*}, V^{*}) 
+	\]
+	est linéaire.
+	
+
+\end{defn}
+\subsection{Représentation paramétrique d'unn sev cartesienne}
+$W \subset V$, Soit $ \left\{ e_1, \ldots, e_{d'}  \right\} $ une base de $W$, alors tout vecteur de $W$ s'écrit
+\[ 
+w= x_1e_1+ \ldots + x_{d'} e_{d'} 
+\]
+Alors
+\[ 
+W= \left\{ w= x_1e_1 + \ldots \right\} 
+\]
+On a alors une représentation paramétrique de tout vecteur
+\[ 
+w \in W, \quad w= x_1e_1 + \ldots + x_{d'} e_{d'} 
+\]
+de paramètre $x_1, \ldots, x_{ d' }$.\\
+Note: Il n'est pas nécessaire que
+ $ \left\{ e_1, \ldots e_{d'}  \right\} $ soit une base, il suffit que ce soit une famille génératricre de $W$.
+
+ \begin{center}
+ Représentation cartésienne
+ \end{center}
+ \begin{propo}
+ Soit $W \subset V$ un sev. Il existe $d_V - d_W$ formes linéaires
+ \[ 
+ \mathcal{L}_W^{*}= \left\{ l_1, \ldots, l_{d_v-d_W}  \right\}  \subset V^{*}
+ \]
+ linéairement indépendantes ( ie tq $\mathcal{L}_W^{*}$ soit libre) telles que
+ \[ 
+	 W = \left\{ v \in V, l_1( v) = \ldots = l_{d_v-d_w} ( v) = 0 \right\} 
+ \]
+ De maniere equivalente, $W = \ker \phi_{\mathcal{L}_W^{*}} $ avec
+ \[ 
+	 \phi_{\mathcal{L}_W^{*}}: v \in V \to ( l_1( v) , \ldots, l_{d_v - d_W} ( v) ) \in K^{d_v -d_w}
+ \]
+ 
+ \end{propo}
+ \begin{proof}
+ Soit $W \subset V$ et soit $ \left\{ e_1, \ldots, e_{d'}  \right\} $ une base de $W$.\\
+ Il existe $e_{d'+1} , \ldots , e_{d} \in V $ tel que
+ \[ 
+ \left\{ e_1, \ldots e_d \right\} 
+ \]
+ forme une base de $V$.\\
+ $W$ est l'ensemble des vecteurs $V$ dont les coordonnées suivant les vecteurs $e_{d'+1} , \ldots e_d$ sont nulles.
+\[ 
+v = x_1e_1 + \ldots x_{d'} e_{d'} + \ldots + x_d e_d
+\]
+Donc
+\[ 
+	W = \left\{ v \in V | e_{d'++1} ^{*}( v) = \ldots = e_{d} ^{*}( v) =0_K \right\} 
+\]
+
+ \end{proof}
+ 
+ \subsection{Une base de $Hom_k( V,W) $}
+ 
+Soit $B = \left\{ e_1, \ldots, e_d \right\} \subset V $ et $B*$ la base duale
+\[ 
+B' = \left\{ f_1, \ldots, f_{ d' } \right\} | i \leq d' = \dim W \quad j \leq d = \dim V
+\]
+Alors
+\begin{align*}
+e_{ij} : V \to W\\
+v \to e_j^{*}( v) . f_i
+\end{align*}
+On dispose de $d . d'$ applications $e_{ij} $ 
+\begin{lemma}
+L'application $e_{ij} : V \to W$ est linéaire, de rang 1, d'image $K. f_i$ et de noyau
+\[ 
+	\ker e_{ij} = \eng( B - \left\{ e_j \right\} ) 
+\]
+L'hyperplan vectoriel engendré par les vecteurs de la base $B$ moins le vecteur $e_j$
+
+\end{lemma}
+\begin{proof}
+$e_{ij} $ est linéaire car
+\[ 
+e_j^{*}: V \to K
+\]
+est linéaire.\\
+Vérification simple avec critère.\\
+
+On a 
+\[ 
+	Im( e_{ij} ) = Im( e_j^{*}) .f_i = K.f_i
+\]
+de dimension 1.\\
+\[ 
+	\ker e_{ij}  = \left\{ v \in V \text{ tel que } e_j^{*}( v) .f_i = 0_W \right\} 
+\]
+mais comme $f_i \neq 0_W$ ( car $f_i$ fait partie d'une base).
+\[ 
+	e_j^{*}( v) .f_i = 0_w
+\]
+si et seulement si
+\[ 
+e_j ^{*}= 0_K
+\]
+Donc 
+\[ 
+	\ker e_{ij} = \left\{ v \in V \text{ tel que } e_j^{*}( v) = 0_K \right\} 
+\]
+
+
+\end{proof}
+\begin{thm}
+La famille d'applications linéaires
+\[ 
+	B_{B,B'} = \left\{ e_{ij}, i \leq d', j \leq d \right\} \subset Hom( V,W) 
+\]
+forme une base de $Hom( V,W) $
+\end{thm}
+
+
+\begin{proof}
+	$B_{B,B'} $ est de taille $d.d' = \dim Hom( V,W)  $ pour montrer que c'est une base, il suffit de montrer que $B_{B,B'}$ est libre.\\
+	Soient $m_{ij} , i\leq d', j \leq d $ des scalaires tel que
+	\[ 
+		\sum_{i=1}^{d'} \sum_{j}^{ d}m_{ij} e_{ij} = \underline{0}_W
+	\]
+	On veut montrer que $m_{ij} = 0_K$.\\
+	\begin{align*}
+	\left( \sum_{i,j} m_{ij} e_{ij}  \right) ( e_k) \\
+	= \sum_i \sum_j m_{ij} e_{ij} ( e_k) \\
+	= \sum_i \sum_j m_{ij} e_{j} ^{*}( e_k) . f_i	\\
+	= \sum_{i=1}^{ d'}m_{ik} f_{i} = 0 
+	\end{align*}
+	Donc $m_{ik} =0	$  car les $f_i$ forment une famille libre.
+	
+\end{proof}
+\begin{propo}
+	Soit $\phi: V \to W$ une application linéaire et $ ( m_{ij} ) $ les coordonnées dans la base $B_{B,B'}$. Alors pour $k= 1,\ldots, d$ les
+	\[ 
+	m_{i,k} 
+	\]
+	sont les coordonnées de $\phi( e_k) $ dans la base $B'$
+\end{propo}
+\begin{proof}
+On a 
+\begin{align*}
+e_{ij} ( e_k) = \sum_{i\leq d'} \sum_{j\leq d} m_{ij} e_{j} ^{*}( e_k) .f_i\\
+= \sum_{i\leq d'} m_{ik} .f_i 
+\end{align*}
+\begin{propo}
+Avec les notations précédentes, si $v= \sum_{j=1} ^{d}x_j e_j$, on a
+\[ 
+	\phi( v) = \sum_{i=1}^{ d'}y_i f_i \text{ avec } y_i = \sum_{j\leq d}m_{ij} x_j
+\]
+
+\end{propo}
+\begin{proof}
+\[ 
+	\phi( v) = \phi( \sum_{k=1}^{ d}x_{k} e_k ) = \sum_{k=1}^{ d}x_k \phi( e_k) = \sum_{k=1}^{ d}x_k \phi( e_k) = \sum_{k=1} ^{d}x_k \sum_{k\leq d'} m_{ik} f_k = \sum_{i\leq d'} \left( \sum_{k=1}^{ d} m_{ik} x_k \right) f_i
+\]
+et par définition
+\[ 
+\sum_{i\leq d'} y_i f_i
+\]
+
+
+\end{proof}
+
+
+
+
+\end{proof}
+
+
+	
+ 
+		
+	
+
+
+
+
+
+
+\end{document}	

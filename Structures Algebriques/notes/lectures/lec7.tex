@@ -1,0 +1,131 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Tue 27 Oct}{theorie des groupes}
+Supposons $o( g) \neq \infty $, alors on note
+\[ 
+	|\eng{g}| = 0( g) 
+\]
+
+On remarque que
+\[ 
+	g^{n}= ( g^{0( g) })^{r} \cdot g^{s}
+\]
+\begin{propo}
+$\phi: G \to H$ avec 
+\[ 
+\ker \phi = \left\{ e  \right\} 
+\]
+Alors $\phi$ injectif.
+\end{propo}
+\begin{proof}
+Soient $g,h \in G$.\\
+Supposons $\phi( g) = \phi( h) $. On a 
+\[ 
+	\phi( g^{-1}h) = \phi( g^{-1})  \phi( h)  = \phi( g) ^{-1} \phi( h) = e
+\]
+Donc $g^{-1}h \in \ker \phi$
+Donc
+\begin{align*}
+g^{-1}h= e\\
+g= h
+\end{align*}
+\end{proof}
+\subsection{L'homomorphisme $\sgn$ }
+Rappelons que un cycle $\sigma \in S_n$ tel que $\exists a_1, \ldots, a_r$ éléments différents de 
+\[ 
+\left\{1,\ldots,n \right\} 
+\]
+\begin{align*}
+	\sigma( a_1) = a_2\\
+	\vdots\\
+	\sigma( a_{r-1} ) = a_r\\
+	\sigma( a_r) = a_1\\
+	\sigma( i) = i \text{ sinon } 
+\end{align*}
+\begin{propo}
+Soit $\sigma \in S_n$, avec $\sigma$ un produit de cycles disjoints de taille $\geq 2$.\\
+Cette décomposition est unique modulo l'ordre des cycles
+\end{propo}
+\begin{propo}
+$\sigma \in S_n$, alors on peut ecrire $\sigma$ comme un produit de transpositions.
+\end{propo}
+\begin{proof}
+Il suffit de poser 
+\[ 
+	\sigma = ( a_1 \ldots a_r) 
+\]
+On peut écrire $\sigma$ comme produit de transpositions.\\
+Induction sur $r$\\
+\begin{itemize}
+\item $r=2$ 
+\end{itemize}
+On peut simplement envoyer chaque élément sur son prochain.
+\end{proof}
+\begin{defn}[$\sgn$ ]
+\[ 
+\sgn : S_n \to \left\{ -1,1 \right\} 
+\]
+On dénote
+\[ 
+	\sgn \sigma = ( -1) ^{ |\left\{ ( i,j)  \in \mathbb{N}^{2} | 1 \leq j < i \leq n, \sigma( j) < \sigma( i)  \right\}| } 
+\]
+
+
+\end{defn}
+
+\begin{lemma}
+$\sigma \in S_n$ et
+\[ 
+1 \leq r < s \leq n
+\]
+On définit
+\[ 
+	\tau = \sigma( rs) 
+\]
+Alors
+\[ 
+	\sgn( \tau) = - \sgn( \sigma) 
+\]
+
+\end{lemma}
+\begin{proof}
+	Si on applique $( rs) $ les autres éléments restent les mêmes.\\
+	On a donc que
+	\[ 
+		\tau( r) = \sigma( s) \text{ et } \tau( s) = \sigma( r) 
+	\]
+	
+\begin{itemize}
+\item $i\neq j \notin \left\{ r,s \right\} $ implique
+	\begin{align*}
+		\sigma( i) = \tau( i) \\
+		\sigma( j) = \tau( j) 
+	\end{align*}
+Pas de changement.
+\item Soit $j < r$ ou $j>s$, alors
+	Donc $j$ et $r$ sont en inversion pour $\sigma$ si et seulement si $j$ et $s$ sont en inversions pour $\tau$
+Donc il n'y a pas de contribution au nombre de paires d'inversions.
+\item Si $r< j < s$, alors $r$ et $j$ pour $\tau$ est le même que $s$ et $j$ pour $\sigma$. ( car $\tau( r) = \sigma( s)$ et $\tau( j) = \sigma( j) $) 
+\end{itemize}
+et $s$ et $j$ sont en inversion pour $\tau$ si et seulement si $r$ et $j$ ne sont pas en inversion pour  $\tau$ \\
+Si  $r$ et $s$ sont en inversion pour $\tau$ si et seulement si $r$
+et $s$ ne sont pas en inverson pour $\sigma$
+\end{proof}
+\begin{crly}
+$\sgn$ est un homomorphisme
+\end{crly}
+\begin{proof}
+$\sigma, \tau \in S_n$, alors
+\[ 
+	\sgn( \sigma\tau) = ( -1) ^{r+s} = \sgn \sigma \sng \tau
+\]
+
+\end{proof}
+
+
+
+
+
+
+
+\end{document}	

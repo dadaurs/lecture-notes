@@ -1,0 +1,279 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{faktor}
+\newtheorem{thm}{Théorème}
+\newcommand{\f}{\faktor}
+\newcommand{\bbz}{\mathbb{Z}}
+\DeclareMathOperator*{\pr}{pr}
+\newcommand\hr{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+}
+\begin{document}
+\title{Série 7}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+Supposons que $( m,n) =1$.\\
+On utilise la propriété du produit universelle pour construire un morphisme entre $\f { \mathbb{Z}} { nm \mathbb{Z}} $.\\
+Soit l'application $\alpha$ définie par
+\[ 
+\alpha : k \in \f { \mathbb{Z}} { nm\mathbb{Z}} \mapsto [ k] _n \in \f { \mathbb{Z}} { n\mathbb{Z}} 
+\]
+De même on définit l'application $\beta$ par
+\[ 
+\beta : k \in \f { \mathbb{Z}} { nm\mathbb{Z}} \mapsto [ k] _m \in \f { \mathbb{Z}} { m\mathbb{Z}} 
+\]
+où $[.]_m$ est la classe de congruence modulo m d' un élément.
+
+Vérifions que ces applications sont linéaires.\\
+On vérifie facilement que $\alpha$ et $\beta$ sont des morphismes, en effet 
+\[ 
+	\alpha( 0) = 0
+\]
+car 0 est congru à 0 modulo n.\\
+Soit $a,b \in \f { \mathbb{Z}} { nm\mathbb{Z}} $, alors
+ \[ 
+	 \alpha( a + b)  = [ a+b]_n = [ a]_n + [ b]_n
+\]
+où la dernière égalité suit directement de la définition de classe d'équivalence modulo n.\\
+On vérifie de la même manière que $\beta$ est linéaire.\\
+Par la propriété du produit universel, il existe donc un morphisme $\phi$ de $\f { \mathbb{Z} } { nm\mathbb{Z}} $ vers $\f { \mathbb{Z}} { n \mathbb{Z}} \times \f { \mathbb{Z}} { m \mathbb{Z}} $.\\
+
+De plus, on sait que $\pr_n \circ \phi = \alpha$ et $\pr_m \circ \phi =\beta$ où $\pr_n$ est la projection sur $ \f { \mathbb{Z}} { n \mathbb{Z}}$ et $\pr_m  $ la projection sur $\f { \mathbb{Z}} { m \mathbb{Z}}$.\\
+
+Vérifions que $\phi$ est un isomorphisme.\\
+Car
+\[
+\left|\f { \mathbb{Z}} { nm \mathbb{Z}}\right| = \left|\f { \mathbb{Z}} { n \mathbb{Z}} \times\f { \mathbb{Z}} { m \mathbb{Z}}\right| 
+\]
+Il suffit, par l'exercice 1 de la série 5, de vérifier que $\phi$ est injective.\\
+
+Supposons que $\phi( k) =( 0,0) $ et montrons que ceci implique $k=0$.\\
+Si $\phi( k) = (0,0) $, alors $\alpha( k) = 0 $ et $\beta( 0) $.
+Donc $[k]_n = 0$ et $[k]_m= 0$, donc $k$ est un multiple de $n$ et de $m$.
+Car $n$ et $m$ sont premiers entre eux, ceci implique qu'il existe $a$ tel que $k= anm$, donc $k=0$.\\
+
+Supposons maintenant que $( n,m) \neq1$.\\
+Supposons par l'absurde qu'il existe un isomorphisme $\phi$ entre $\f { \mathbb{Z}} { nm \mathbb{Z}} $ et $\f { \mathbb{Z}} { n\mathbb{Z}} \times\f { \mathbb{Z}} { m \mathbb{Z}} $.
+On sait que les isomorphismes préservent les ordres des éléments, on a donc en particulier
+\[ 
+	o( 1) = nm.
+\]
+Ce qui implique
+\[ 
+	o(\phi( 1)) = nm
+\]
+Or, posons que $( n,m) = a$,  alors $a|nm$ et donc $\frac{nm}{a}$ est un entier.\\
+Car $\frac{nm}{a}$ est un multiple de $n$, on trouve que pour tout $k \in \f { \mathbb{Z}} { n\mathbb{Z}}$ 
+\[ 
+\frac{nm}{a} \cdot [ k ] = [ 0 ]
+\]
+et de même, $\forall k \in\f { \mathbb{Z}} { m\mathbb{Z}} $
+
+\[ 
+\frac{nm}{a} \cdot [ k ] = [ 0 ]
+\]
+Donc l'ordre de $ \phi( 1) $ est borné par $\frac{nm}{a}$ ce qui est une contradiction au fait que $\phi$ est bijective.\\
+Donc, il ne peut pas y avoir d'isomorphismes si $( n,m) \neq 1$.
+\section*{2}
+\begin{thm}
+Soit $A$ un groupe, et $B\simeq C$ deux groupes isomorphes, alors
+\[ 
+A \times B \simeq A \times C
+\]
+\end{thm}
+\begin{proof}
+	On sait qu'il existe un isomorphisme $\phi$ entre $B$ et $C$, on peut donc construire un isomorphisme ainsi
+	\begin{align*}
+	A \times B \mapsto A \times C\\
+	(a,b) \mapsto ( a, \phi( b) ) 
+	\end{align*}
+La vérification que cette application est un isomorphisme est immédiate car $\phi$ est un isomorphisme.
+\end{proof}
+	
+
+On procède par récurrence sur $r$.\\
+On sait que le cas $r=2$ est vrai par la partie 1. ( Le cas $r=1$ est trivialement vrai)\\
+Supposons donc vrai pour $r$ et montrons pour $r+1$.\\
+On sait que $(n_r, n_i) =1$ et $( n_{r+1} , n_i) =1$ pour tout $0<i<r$. On en déduit que $( n_r \cdot n_{r+1} , n_i) =1$. Ceci suit directement de la décomposition en nombre premiers, en effet $n_{r+1} $ et $n_r$ ne partagent pas de facteurs avec les $n_i$ et donc $n_r \cdot n_{r+1} $ non plus.\\
+En posant donc que $n_r\cdot n_{r+1}= p $, on trouve
+\begin{align}
+	\f { \mathbb{Z}} { ( n_1\ldots n_{r+1})\mathbb{Z}} \simeq \f { \mathbb{Z}} { ( n_1\ldots n_{r-1} p) \mathbb{Z}} &\simeq \prod_{i=1}^{r-1}\f { \mathbb{Z}} { n_i \mathbb{Z} }  \times \f { \mathbb{Z}} { p \mathbb{Z}} \\
+							      &\simeq \prod_{i=1}^{r-1} \f { \mathbb{Z}} { n_i \mathbb{Z} }\times \f { \mathbb{Z}} { n_r n_{r+1} \mathbb{Z}} \\
+							      &\simeq \prod_{i=1}^{r-1}\f { \mathbb{Z}} { n_i \mathbb{Z} }  \times \f { \mathbb{Z}} { n_r \mathbb{Z}} \times \f { \mathbb{Z}} { n_{r+1} \mathbb{Z}} \\
+							      &\simeq \prod_{i=1}^{r+1}\f { \mathbb{Z}} { n_i \mathbb{Z}} 
+\end{align}
+où l'égalité (1) suit de l'hypothèse de récurrence, et l'égalité (3) suit du théorème 1.\\
+La forme de l'isomorphisme ci-dessus est donné par la généralisation de l'isomorphisme donné en 1 à plusieurs entiers, c'est à dire
+\[ 
+	k \in \f { \mathbb{Z}} { ( n_1\ldots n_{r}) \mathbb{Z}} \mapsto ( [ k]_{n_1} , \ldots [k]_{n_r} ) 
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%Supposons que $( n,m) =1$, alors il existe $d_1, \ldots, d_a$ des nombres premiers tel que $\prod_{i=1}^{a}d_i = n$ et des nombres premiers $p_1,\ldots, p_b$ tel que $\prod_{i=1} ^{b}p_i = m$, avec $p_i \neq d_j \forall i, j\geq 0$\footnote{Il faut noter ici que des éléments $d_i$ et $d_j$ pourraient être les mêmes}.\\
+%De plus, par l'unicité de la décomposition en nombres premiers, on sait que 
+%\[ 
+%\forall k \in \faktor { \mathbb{Z} } { nm \mathbb{Z}} \text{ tel que } k = \prod_{i \in D}  d_i \prod_{j \in P}  p_j
+%\]
+%où $P$ et $D$ sont des sous-ensembles de $\mathbb{N}$ dont les éléments maximaux ne dépassent pas $a$ respectivement $b$.\\
+
+%Ainsi, on peut créer deux applications de $\faktor { \mathbb{Z} } { nm \mathbb{Z}} $ vers $\faktor { \mathbb{Z}} { n \mathbb{Z}} $ et $ \faktor { \mathbb{Z}} { m \mathbb{Z}} $ de la manière suivante
+%\begin{align*}
+	%\alpha:
+	%\begin{array}{ll}
+		%\faktor { \mathbb{Z} } { nm \mathbb{Z}} &\mapsto \faktor { \mathbb{Z}} { n \mathbb{Z}}  \\
+	%k &\mapsto  \prod_{i \in D} d_i
+	%\end{array}\\
+	%\\
+	%\beta:
+	%\begin{array}{ll}
+		%\faktor { \mathbb{Z} } { nm \mathbb{Z}} &\mapsto \faktor { \mathbb{Z}} { m \mathbb{Z}} \\
+	%k &\mapsto  \prod_{i \in D} d_i
+	%\end{array}\\
+%\end{align*}
+%De la propriété universelle des produits, il suit qu'il existe un homomorphisme $\phi$ entre $\faktor { \mathbb{Z} } { nm \mathbb{Z}} $ et $\f { \bbz}{n\bbz} \times \f {\bbz} { m\bbz} $. On sait que ce morphisme satisfait:
+%\[ 
+%\pr_{n} \circ \phi = \alpha \text{ et } \pr_m \circ \phi = \beta
+%\]
+%où $\pr_n$ et $\pr_m$ dénote les projections respectives sur $\f { \bbz} { n \bbz}  $ et $\f { \bbz } { m \bbz } $.\\
+
+%Or on sait que
+%\[ 
+%\left|\f { \bbz}{n\bbz} \times \f {\bbz} { m\bbz}\right| = nm
+%\]
+%et que
+%\[ 
+	%\left|\f{\bbz}{nm\bbz}\right| = nm.
+%\]
+%Or, par l'exercice 1 de la série 5, on sait que $\phi$ injective implique $\phi$ bijective.\\
+%Vérifions que $\phi$ est injective, donc que
+%\[ 
+%\ker \phi = \left\{ 0 \right\} 
+%\]
+%Soit $k \in \f{\bbz } { nm \bbz } $ non-nul, on sait que 
+%\[ 
+%k = \prod_{i \in D} d_i \prod_{j \in P} p_j
+%\]
+%Supposons, par l'absurde, que
+%\[ 
+	%\phi( k) = 0
+%\]
+%Alors, par la propriété universelle des produits, on a
+%\[ 
+%\prod_{i\in D} d_i \equiv n \mod n \text{ et } \prod_{i \in P} p_i \equiv m \mod m
+%\]
+%Ce qui implique 
+%\[ 
+%\prod_{i\in D} d_i \prod_{j \in P}  \equiv nm \mod nm 
+%\]
+%Et donc que l'élément $k$ est nul, ce qui contredit l'hypothèse.\\
+%On a donc montré que le noyau de l'homomorphisme $\phi$ est réduit à 0, il suit que $\phi$ est injective et donc, par l'exercice 1 de la série 5, bijective.\\
+
+%On a donc construit un homomorphisme bijectif entre $ \f {\bbz} { nm\mathbb{Z}}  $ et $ \f {\bbz} { n\mathbb{Z}} \times \f {\bbz} { m\mathbb{Z}} $, il suit que ces groupes sont isomorphes.\\
+
+%\hr\\
+
+%Supposons maintenant que $( n,m) \neq 1$, et supposons qu'il existe un isomorphisme
+%\[ 
+%\phi: \f { \mathbb{Z}} { nm \mathbb{Z}} \mapsto \f { \mathbb{Z}} { n \mathbb{Z}} \times \f { \mathbb{Z}}  { m \mathbb{Z}} 
+%\]
+%Or, car $\phi$ est bijectif, $\phi$ préserve l'ordre des éléments d'un groupe.\\
+%Supposons, sans perte de généralité que $n< m$ ( il suffit de changer les éléments sinon). Alors, car $n$ et $m$ sont premiers entre eux, il existe $c$ tel que
+%\[ 
+%n^{c} = m \text{ avec $0<c<m$. } 
+%\]
+
+
+
+		
+
+
+
+
+
+
+
+
+\end{document}
