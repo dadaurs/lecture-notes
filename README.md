@@ -7,4 +7,4 @@
 
 [Introduction a la programmation](Introduction&#32;a&#32;la&#32;programmation/notes/main.pdf)
 
-[Physique Generale:Mecanique](Physique&#32;Generale:Mecanique/notes/main.pdf)
+[Mecanique Generale](Mecanique&#32Generale/notes/main.pdf)
