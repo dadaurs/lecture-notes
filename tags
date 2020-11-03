@@ -59,6 +59,7 @@ Champ de gravitation	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{C
 Coefficients de frottement	Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Coefficients de frottement}$/;"	u	section:Travail, énergie, forces conservatives
 Comment, a partir d'un probleme concret, trouver une solution?	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Comment, a partir d'un probleme concret, trouver une solution?}$/;"	u	section:Definition formelle des algorithmes
 Complexite: notation $\\Theta$	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Complexite: notation $\\Theta$}$/;"	u	section:Definition formelle des algorithmes
+Composition d'applications linéaires	Algebre Lineaire I/notes/lectures/lec14.tex	/^\\subsection{Composition d'applications linéaires}$/;"	u	section:Espaces Vectoriels
 Composition/Associativite	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Composition\/Associativite}$/;"	u	section:Le language des Ensembles
 Conclusion	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Conclusion}$/;"	u	section:Definition formelle des algorithmes
 Conservation de l'énergie mécanique	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Conservation de l'énergie mécanique}$/;"	u	section:Travail, énergie, forces conservatives
@@ -141,6 +142,7 @@ Le langage C++	Introduction a la programmation/notes/lectures/lec3.tex	/^\\subse
 Le language des Ensembles	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\section{Le language des Ensembles}$/;"	s
 Le modele du ``point materiel''	Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Le modele du ``point materiel'' }$/;"	s
 Lecture Notes For Math Bachelor	README.md	/^# Lecture Notes For Math Bachelor$/;"	c
+Les matrices carrées	Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Les matrices carrées}$/;"	u	section:Matrices
 Les tris	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Les tris}$/;"	u	section:Definition formelle des algorithmes
 Limsup et liminf	Analyse I/notes/lectures/lec4.tex	/^\\section{Limsup et liminf}$/;"	s
 Loi de gravitation universelle	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Loi de gravitation universelle}$/;"	u	section:Gravitation, Moment Cinétique
@@ -149,6 +151,7 @@ Lois de conservation	Mecanique Generale/notes/lectures/lec1.tex	/^\\subsection{L
 Lois de newton	Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Lois de newton}$/;"	s
 Lugeur	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Lugeur}$/;"	u	section:Travail, énergie, forces conservatives
 Maison	Introduction a la programmation/Exos/MOOC/S7/Ex2/maison.cc	/^struct Maison {$/;"	s	file:
+Matrices	Algebre Lineaire I/notes/lectures/lec14.tex	/^\\section{Matrices}$/;"	s
 Methodologie	Introduction a la programmation/notes/lectures/lec2.tex	/^\\subsubsection{Methodologie}$/;"	b	subsection:Algorithmes""Formalisation d'algorithmes
 Modelisation de la force d'un ressort	Mecanique Generale/notes/lectures/lec3.tex	/^\\subsection{Modelisation de la force d'un ressort}$/;"	u	section:Oscillateurs Harmoniques
 Module engendré par un ensemble	Algebre Lineaire I/notes/lectures/lec7.tex	/^\\subsection{Module engendré par un ensemble}$/;"	u	section:Anneaux
@@ -181,6 +184,7 @@ Position	Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^struct Po
 Preuves	Structures Algebriques/notes/lectures/lec1.tex	/^\\section{Preuves}$/;"	s
 Preuves	current-course/notes/lectures/lec1.tex	/^\\section{Preuves}$/;"	s
 Probleme de plus court chemin	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Probleme de plus court chemin}$/;"	u	section:Definition formelle des algorithmes
+Produit de Matrices	Algebre Lineaire I/notes/lectures/lec14.tex	/^\\subsection{Produit de Matrices}$/;"	u	section:Matrices
 Produit scaleaire	Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection{Produit scaleaire}$/;"	u	section:Dynamique du point materiel
 Produit vectoriel	Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection{Produit vectoriel}$/;"	u	section:Dynamique du point materiel
 Produits de Groupes	Structures Algebriques/notes/lectures/lec6.tex	/^\\subsection{Produits de Groupes}$/;"	u	section:Théorie des Groupes
@@ -192,6 +196,7 @@ Propriété universelle des Produits	Structures Algebriques/notes/lectures/lec6.
 Propriété universelle des Produits	current-course/notes/lectures/lec6.tex	/^\\subsection{Propriété universelle des Produits}$/;"	u	section:Théorie des Groupes
 Qu'est-ce qu'un algorithme?	Introduction a la programmation/notes/lectures/lec2.tex	/^\\subsubsection{Qu'est-ce qu'un algorithme?}$/;"	b	subsection:Algorithmes""Formalisation d'algorithmes
 Quelques notions mathematiques	Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Quelques notions mathematiques}$/;"	s
+Rang d'une Matrice	Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Rang d'une Matrice}$/;"	u	section:Matrices
 Recette générale	Structures Algebriques/notes/lectures/lec5.tex	/^\\subsubsection{Recette générale}$/;"	b	subsection:Théorie des Groupes""Construction de Groupes avec des quotients
 Recette générale	current-course/notes/lectures/lec5.tex	/^\\subsubsection{Recette générale}$/;"	b	subsection:Théorie des Groupes""Construction de Groupes avec des quotients
 Recherche	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Recherche}$/;"	u	section:Definition formelle des algorithmes
@@ -216,6 +221,7 @@ Suites et limites	Analyse I/notes/lectures/lec3.tex	/^\\section{Suites et limite
 Surjectivité	Structures Algebriques/Devoirs/S3/sol.tex	/^\\subsection*{Surjectivité}$/;"	u	section:1
 Surjectivité	current-course/Devoirs/S3/sol.tex	/^\\subsection*{Surjectivité}$/;"	u	section:1
 Systeme de coordonnees	Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection{Systeme de coordonnees}$/;"	u	section:Dynamique du point materiel
+Theoreme de Lagrange	Structures Algebriques/notes/lectures/lec8.tex	/^\\subsection{Theoreme de Lagrange}$/;"	u
 Theoreme fondamental de l'arithmetique	Structures Algebriques/notes/lectures/lec3.tex	/^\\subsection{Theoreme fondamental de l'arithmetique}$/;"	u	section:Theorie des nombres
 Theoreme fondamental de l'arithmetique	current-course/notes/lectures/lec3.tex	/^\\subsection{Theoreme fondamental de l'arithmetique}$/;"	u	section:Theorie des nombres
 Theorie des nombres	Structures Algebriques/notes/lectures/lec3.tex	/^\\section{Theorie des nombres}$/;"	s
@@ -224,6 +230,7 @@ Théorie des Groupes	Structures Algebriques/notes/lectures/lec4.tex	/^\\section{
 Théorie des Groupes	current-course/notes/lectures/lec4.tex	/^\\section{Théorie des Groupes}$/;"	s
 Théorème de l'énergie	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Théorème de l'énergie}$/;"	u	section:Travail, énergie, forces conservatives
 Théorème de l'énergie cinétique	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Théorème de l'énergie cinétique}$/;"	u	section:Travail, énergie, forces conservatives
+Transposition	Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Transposition}$/;"	u	section:Matrices
 Travail d'une force centrale en $\\frac{1}{r^{2}}$	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Travail d'une force centrale en $\\frac{1}{r^{2}}$}$/;"	u	section:Travail, énergie, forces conservatives
 Travail de la force de pesanteur	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Travail de la force de pesanteur}$/;"	u	section:Travail, énergie, forces conservatives
 Travail de la force de rappel d'un ressort	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Travail de la force de rappel d'un ressort}$/;"	u	section:Travail, énergie, forces conservatives
@@ -472,6 +479,7 @@ defn:modules_sur_un_anneau	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\begin{
 defn:morhpismes_de_module	Algebre Lineaire I/notes/lectures/lec8.tex	/^\\begin{defn}[Morhpismes de Module]\\index{Morhpismes de Module}\\label{defn:morhpismes_de_modul/;"	l
 defn:morphisme_d_anneaux	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\begin{defn}[Morphisme d'anneaux]\\index{Morphisme d'anneaux}\\label{defn:morphisme_d_anneaux}$/;"	l
 defn:morphisme_de_groupe	Algebre Lineaire I/notes/lectures/lec4.tex	/^\\begin{defn}[Morphisme de Groupe]\\index{Morphisme de Groupe}\\label{defn:morphisme_de_groupe}$/;"	l
+defn:multiplication_matricielle	Algebre Lineaire I/notes/lectures/lec14.tex	/^\\begin{defn}[Multiplication Matricielle]\\index{Multiplication Matricielle}\\label{defn:multipl/;"	l
 defn:notation_additive	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\begin{defn}[Notation additive]\\label{defn:notation_additive}$/;"	l
 defn:notation_exponentielle	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\begin{defn}[Notation exponentielle]\\label{defn:notation_exponentielle}$/;"	l
 defn:notation_multiple	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\begin{defn}[Notation multiple]\\index{Notation multiple}\\label{defn:notation_multiple}$/;"	l
@@ -480,6 +488,7 @@ defn:point_materiel	Mecanique Generale/notes/lectures/lec1.tex	/^\\begin{defn}[P
 defn:produit_mixte	Mecanique Generale/notes/lectures/lec4.tex	/^\\begin{defn}[Produit Mixte]\\label{defn:produit_mixte}$/;"	l
 defn:produit_scalaire	Mecanique Generale/notes/lectures/lec4.tex	/^\\begin{defn}[Produit scalaire]\\index{Produit scalaire}\\label{defn:produit_scalaire}$/;"	l
 defn:produit_vectoriel	Mecanique Generale/notes/lectures/lec4.tex	/^\\begin{defn}[Produit vectoriel]\\index{Produit vectoriel}\\label{defn:produit_vectoriel}$/;"	l
+defn:rang_d_une_matrice	Algebre Lineaire I/notes/lectures/lec15.tex	/^\\begin{defn}[Rang d'une matrice]\\index{Rang d'une matrice}\\label{defn:rang_d_une_matrice}$/;"	l
 defn:relations_d_equivalence	Structures Algebriques/notes/lectures/lec2.tex	/^\\begin{defn}[Relations d'equivalence]\\index{Relations d'equivalence}\\label{defn:relations_d_e/;"	l
 defn:relations_d_equivalence	current-course/notes/lectures/lec2.tex	/^\\begin{defn}[Relations d'equivalence]\\index{Relations d'equivalence}\\label{defn:relations_d_e/;"	l
 defn:serie	Analyse I/notes/lectures/lec6.tex	/^\\begin{defn}[Serie]\\index{Serie}\\label{defn:serie}$/;"	l
@@ -1748,6 +1757,7 @@ thm:env_400	Analyse I/notes/lectures/lec1.tex	/^\\begin{thm}[env. -400]\\label{t
 thm:gravitation_universelle	Mecanique Generale/notes/lectures/lec8.tex	/^\\begin{thm}[Gravitation Universelle]\\index{Gravitation Universelle}\\label{thm:gravitation_uni/;"	l
 thm:isom_de_Kd_vers_V	Algebre Lineaire I/notes/lectures/lec11.tex	/^\\begin{thm}\\label{thm:isom_de_Kd_vers_V}$/;"	l
 thm:la_racine_de_deux_existe	Analyse I/notes/lectures/lec2.tex	/^\\begin{thm}[La racine de deux existe]\\index{La racine de deux existe}\\label{thm:la_racine_de_/;"	l
+thm:petit_theoreme_de_fermat	Structures Algebriques/notes/lectures/lec8.tex	/^\\begin{thm}[Petit theoreme de Fermat]\\index{Petit theoreme de Fermat}\\label{thm:petit_theorem/;"	l
 thm:premiere_regle_de_d_alembert	Analyse I/notes/lectures/lec5.tex	/^\\begin{thm}[Premiere regle de d'Alembert]\\index{Premiere regle de d'Alembert}\\label{thm:premi/;"	l
 thm:sous_groupe_de_mathbb_z_	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\begin{thm}[Sous groupe de $\\mathbb{Z}$]\\index{Sous groupe de $\\mathbb{Z}$}\\label{thm:sous_/;"	l
 tirer_couleur	Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^char tirer_couleur()$/;"	f	typeref:typename:char

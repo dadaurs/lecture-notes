@@ -1,0 +1,143 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{14}{Mon 02 Nov}{Applications Lineaires, Matrices}
+\subsection{Composition d'applications linéaires}
+\[ 
+\phi: U \to V, \psi: V \to W \text{ et } \psi \circ \phi: U \to W
+\]
+Soit 
+ \[ 
+B = \left\{ e_k, k \leq d \right\} , B' = \left\{ f_j, j \leq d' \right\}, B'' = \left\{ g_i, i \leq d'' \right\} 
+\]
+et finalement
+\[ 
+	B_{B,B'} = \left\{ e_k^{*}. f_j \right\}, B_{B',B''}  = \left\{ f_j^{*}.g_i \right\} , B_{B,B''} = \left\{ e_k^{*}.g_i \right\} 
+\]
+\begin{thm}
+	Soient $( n_{jk} ) _{j\leq d', k \leq d} $ les coordonn;es de $\phi$ dans la base $B_{B,B'} $ et $( m_{ij} ) _{i\leq d'', j \leq d'} $ les coordonnees de $\phi$ dans la base $B_{B',B''} $. Alors les coordonnees $( l_{ik} )_{i\leq d'', k \leq d}$de $\psi\circ \phi$ dans la base $B_{B,B''} $ sont donnees par
+	\[ 
+	l_{ik} = \sum_{j=1}^{ d'} m_{ij} . n_{jk} 
+	\]
+	
+\end{thm}
+\begin{proof}
+\[ 
+\phi = \sum_{j\leq d'}\sum_{ k \leq d}n_{jk} e_{k} ^{*} . f_j
+\]
+et 
+\[ 
+\psi = \sum_{j\leq d'} \sum_{i\leq d''} m_{ij} f_j^{*}. g_i
+\]
+On veut calculer
+\[ 
+	\psi\circ \phi( e_k) = \sum_{i\leq d''}  l_{ik} g_i
+\]
+On voit que 
+\begin{align*}
+	\phi( e_k) &= \sum_{j\leq d'} \sum_{k'\leq d} n_{jk'} e^{*}_{k'} ( e_k) f_j = \sum_{j\leq d'} n_{jk} f_j\\
+&=\psi( \phi( e_k) ) = \psi(  \sum_{j\leq d'} n_{jk} f_j) \\
+&= \sum_{j\leq d'}n_{jk} \psi( f_j) \\
+&= \sum_{j\leq d'} n_{jk } \sum_{i\leq d''} m_{ij} g_i\\
+&= \sum_{i\leq d''} \left( \sum_{j\leq d'}n_{jk} m_{ij} \right) g_i\\
+&= \sum_{i\leq d''} \left( \sum_{j\leq d'}m_{ij} n_{j}  \right) g_i
+\end{align*}
+\section{Matrices}
+On a donc défini l'application linéaire
+\[ 
+	CL_{B_{B,B'} } : ( m_{ij} ) _{i\leq d', j \leq d} \in K^{d' d}\mapsto \phi = \sum_{i\leq d'} \sum_{j\leq d} m_{ij} e_{ij} \in \hom ( V,W) 
+\]
+\begin{defn}
+Les systeme de coordonnées à 2 indices $i\leq d'$ et $j \leq d$ s' appellent des matrices.\\
+On le note
+\[ 
+	M_{d'\times d} ( K) = \left\{ ( m_{ij} ) _{i\leq d', j \leq d} , m_{ij} \in K \right\} 
+\]
+Un element de $M_{d'\times d} ( K) $ est appelé matrice de dimensions $d'\times d$ ou matrice $d'\times d$. On les notes sous forme de tableaux.
+\end{defn}
+\begin{defn}
+	Soient $B \subset V$, $B' \subset W$ des bases comme ci-dessous et $B_{B,B'} \subset \hom( V,W) $ la base de $\hom( V,W) $ associee. L'application reciproque $Cl_{B_{B,B'} } ^{-1}$ sera également notee
+	\[ 
+		Mat_{B',B} : \hom( V,W) \to M_{d'\times d}( K) 
+	\]
+	Explicitement, si on a la décomposition $\phi == \sum_{i\leq d'} \sum_{j \leq d} m_{ij} e_{ij} $, alors on a
+	\[ 
+		Mat_{B',B} ( \phi)  = ( m_{ij } ( \phi) ) _{i\leq d', j \leq d} =
+		\begin{pmatrix}
+			m_{11} & m_{12} &\ldots m_{1d} \\
+			\vdots & \ldots & \ldots\\
+			m_{d'1} & m_{d'2} &\ldots m_{d'd} 
+		\end{pmatrix}
+	\]
+	
+\end{defn}
+L'espace $M_{d' \times d} ( K) = ( K^{d'}) ^{d}$ est un $K$-ev: on définit la somme de 2 matrices en sommant les coefficients:
+\[ 
+	( m_{ij} ) + ( n_{ij} ) = ( m_{ij} + n_{ij} ) _{\leq d', j \leq d} 
+\]
+On définit de la même manière la multiplication par les scalaires.
+\subsection{Produit de Matrices}
+On a introduit les matrices à partir d'applications linéaires.\\
+On se souvient que le produit de deux matrices $m_{ij} $ et $n_{j k} $ est défini par
+\[ 
+l_{ik} = \sum m_{ij} n_{j k} 
+\]
+\begin{defn}[Multiplication Matricielle]\index{Multiplication Matricielle}\label{defn:multiplication_matricielle}
+	Soient $d, d', d'' \geq 1$ et $M \in M_{d'' \times d'} ( K) , N \in M_{d'\times d} ( K) $, on définit le produit des matrices $M$ et $N$ comme étant la matrice
+	\[ 
+	L= M.N = M\times N
+	\]
+	avec 
+	\[ 
+		L= ( l_{ik} ) _{i\leq d'', k \leq d} = ( \sum_{j=1}^{ d'} m_{ij} n_{j k} ) _{i\leq d'', k \leq d} \in M_{d'' \times d} ( K) 
+	\]
+	
+\end{defn}
+
+\begin{thm}
+	Le produit de matrices ainsi défini a les propriétés suivantes
+	\begin{enumerate}
+		\item Distributive à gauche: pour $\lambda \in K$, $M,M' \in M_{d'' \times d'} ( K) $ 
+			\[ 
+				( \lambda.M+ M'). N = \lambda.M.N + M'.N.
+			\]
+			\item 
+			\item distributive à droite pour $\lambda \in K$, $M,M' \in M_{d'' \times d'} ( K) $ 
+			\[ 
+				 N.( \lambda.M+ M') = \lambda.N.M + N.M'.
+			 \]
+
+		 \item Neutralité de l'identité: Pour $M \in M_{d''\times d'} ( K) , N,N' \in M_{d' \times d} ( K) $
+			 \[ 
+			 Id_{d''} .M = M
+		 \]
+			 
+
+		 \item La matrice nulle est absorbante: pour $M \in M_{d'' \times d'} ( K) $ 
+			 \[ 
+				 0_{d''d'} .M = 0_{d''d'}
+			 \]
+
+		\item Associativité
+			\[ 
+				( L.M) .N = L.(M.N) 
+			\]
+			
+			 
+			
+	\end{enumerate}
+	
+\end{thm}
+
+\begin{proof}
+Par le calcul direct.
+\end{proof}
+
+
+
+
+
+\end{proof}
+
+
+
+\end{document}	

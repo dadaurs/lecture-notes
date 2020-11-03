@@ -1,0 +1,339 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Tue 03 Nov}{3 Novembre}
+\subsection{Theoreme de Lagrange}
+\begin{defn}
+	Soit $H \leq G$, une classe à gauche ( resp. à droite) est un sous-ensemble 
+	\[ 
+	g.H = \left\{ g.h | h \in H \right\} 
+	\]
+	Ce n'est pas forcément un sous-groupe.
+\end{defn}
+\begin{exemple}
+	Soit $G= S_3$,
+	\[ 
+		H = \left\{ \eng{( 12) } \right\} = \left\{ id, ( 12)  \right\} 
+	\]
+Regardons les classe à gauche
+\begin{enumerate}
+\item $g= Id$ 
+	\[ 
+		Id.H = \left\{ Id, ( 12)  \right\} = ( 12).H
+	\]
+
+\item $g= ( 13) $ 
+	\[ 
+		( 13) . H = \left\{ ( 13) ,( 123)  \right\} 
+	\]
+
+\item 
+	\[ 
+		( 23) .H = \left\{ ( 23) ,( 132)  \right\} 
+	\]
+	
+	
+\end{enumerate}
+\end{exemple}
+\begin{lemma}
+\[ 
+|gH| = |H| \forall g \in G
+\]
+\end{lemma}
+\begin{proof}
+\[ 
+	\beta: x \mapsto g^{-1}x
+\]
+et 
+ \[ 
+gy \leftarrow y : \alpha
+\]
+Ces deux applications sont inverses $\Rightarrow$ ils sont en bijection.
+\end{proof}
+\begin{propo}
+Soit $H \leq G$.\\
+On définit
+\[ 
+	R = \left\{ ( g,f) \in G \times G | g^{-1}f \in H \right\}  \subseteq G \times G
+\]
+Alors
+\begin{enumerate}
+\item $R$ est une relation d'équivalence
+\item les classes d'équivalence de $R$ sont les classes à gauche
+\end{enumerate}
+
+\end{propo}
+\begin{proof}
+\begin{enumerate}
+	\item reflexivite $g^{-1}g = e \in H$ donc $( g,g)  \in R$ 
+	\item Symétrie $( g,f)  \in R$ donc $g^{-1}f\in H$ 
+		\[ 
+	f^{-1}g = f^{-1}( g^{-1} )^{-1} = ( g^{-1}f) ^{-1} \in H
+		\]
+	\item Transitivité $( g,f ) \in R$, $( f,h) \in R$, alors $g^{-1}f, f^{-1}h \in H$,
+		\[ 
+		g^{-1}h = g^{-1}f f^{-1}h \in H
+		\]
+		Donc $( g,h) \in R$
+	
+
+\end{enumerate}
+On veut $R_g = gH$ 
+\[ 
+	R_g =  \left\{ f \in G | ( g,f) \in R \right\}  = \left\{ f \in G | g^{-1}f \in H \right\} = \left\{ f \in G | \exists x \in H: f = gx \right\} = gH
+\]
+
+
+\end{proof}
+En somme:\\
+$H \leq G$ \\
+Les classes à gauche 
+\begin{itemize}
+\item Ont les même tailles
+
+
+\item $H_1,\ldots, H_r$ sont les classes à gauche
+	\[ 
+	G = \amalg_i H_{i} 
+	\]
+
+	La notation $\amalg_i$ signifie que l intersection deux-à-duex est vide.
+	
+
+	Donc, si $G$ est fini
+	\[ 
+	|G| = \sum |H_i| = r|H|
+	\]
+\end{itemize}
+\begin{thm}[Lagrange]
+	$G$ est fini et $H\leq G$, alors
+	\[ 
+	|H| \big\vert |G|
+	\]
+	De plus $\frac{|G|}{|H|}= \text{ nombre de classes à gauche } = [ G: H] $
+	
+\end{thm}
+\begin{crly}
+$g \in G$, alors
+\[ 
+	\Rightarrow o( g) \big\vert |G|
+\]
+
+\end{crly}
+\begin{proof}
+	$H = \eng{g}$ et ensuite on utilise Lagrange.
+\end{proof}
+\begin{defn}
+$G$ groupe est cyclique si il existe $g \in G$ tel que 
+\[ 
+	\eng{g} = G
+\]
+
+\end{defn}
+\begin{crly}
+$|G| = p > 0$ avec $p$ premier, alors $G$ cyclique
+\end{crly}
+\begin{proof}
+$g \in G \setminus \left\{ e  \right\} $, donc
+\[ 
+	1 < o( g)  | p
+\]
+par Lagrange.\\
+Donc $o( g) = p $ et donc $\eng{g} = G$.
+\end{proof}
+\begin{thm}[Petit theoreme de Fermat]\index{Petit theoreme de Fermat}\label{thm:petit_theoreme_de_fermat}
+	Soit $m> 0$ et $a$ entier, avec
+	\[ 
+		( a,m) =1
+	\]
+	Alors 
+	\[ 
+		a^{\phi( m) }\equiv 1 ( m) 
+	\]
+	
+\end{thm}
+\begin{proof}
+On sait que
+\[ 
+	[ a]  \in \left( \faktor { \mathbb{Z}} { m \mathbb{Z}} \right) ^{\times}
+\]
+Donc par lagrange
+\[ 
+	o( [ a] ) | \phi( m) 
+\]
+et donc
+\[ 
+	[ a] ^{\phi( m) } = [ 1] = [ a^{\phi( m) }] 
+\]
+
+\end{proof}
+Prenons un groupe $G$
+
+et une relation d'équivalence $R$ sur $G$.\\
+On a vu que 
+\[ 
+\faktor G R
+\]
+est un groupe si la multiplication et l'inverse sont bien définis.\\
+Dans ce cas
+\[ 
+[ g] \cdot [ h] = [ gh] 
+\]
+Il est équivalent de demander que
+\begin{align*}
+\xi: G \to G / R\\
+g \to Rg
+\end{align*}
+est un homomorphisme de groupe et donc
+\[ 
+R_g \cdot R_h = R_{gh} 
+\]
+On applique çà aux classes à gauche
+\[ 
+	R= \left\{ ( g,f) | g^{-1}f \in H \right\} 
+\]
+On essaie de tourner 
+\[ 
+G / R = \left\{ \text{ classes à gauche }  \right\} 
+\]
+C'est nécessaire que 
+\begin{align*}
+\xi_h : G \to G/ H\\
+g \to gH
+\end{align*}
+est un homomorphisme.\\
+\[ 
+\ker \xi_h = H
+\]
+Quelles conditions est-ce que ca pose?
+\begin{defn}
+	$H \leq G$ est \underline{normal} si $\forall g \in G$ 
+	\[ 
+	\forall h \in H
+	\]
+	on a 
+	\[ 
+	g^{-1}h g \in H
+	\]
+	On appelle ceci le conjugué de $h $ par $g$.
+	
+\end{defn}
+\begin{defn}[Groupe simple]
+	Si $H \leq G$ normal $\Rightarrow$ $H$ trivial.
+
+\end{defn}
+\begin{propo}
+	Soit $\phi: G \to H$ un homomorphisme, alors le noyau de cet homomorphisme est normal $\ker \phi$ est normal.
+\end{propo}
+\begin{proof}
+Soit $g\in G$, $h \in \ker \phi$ 
+\[ 
+	\phi( g^{-1}h g)  = \phi( g^{-1}) \phi( h) \phi( g) = \phi( g^{-1}) e \phi( g) = e
+\]
+
+\end{proof}
+\begin{thm}
+$H \unlhd G$ et $R$ relation d'équivalence des classes à gauche de $H$ 
+\item $G / R$ un groupe et
+
+\item 
+	\begin{align*}
+	\xi_H : G \to G / R\\
+	g \mapsto g H
+	\end{align*}
+	un homomorphisme.
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

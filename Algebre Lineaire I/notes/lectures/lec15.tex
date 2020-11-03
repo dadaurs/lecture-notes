@@ -1,0 +1,201 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{15}{Tue 03 Nov}{Matrices}
+\subsection{Rang d'une Matrice}
+On a déjà défini le rang d'une application linéaire.
+\begin{defn}[Rang d'une matrice]\index{Rang d'une matrice}\label{defn:rang_d_une_matrice}
+	Soit $M \in M_{d'\times d} ( K) $.\\
+	Le rang de $M$ 
+	\[ 
+		rg( M) = \text{ dimension de l'espace engendré par les colonnes de $M$ dans l'espace $Col_{d} ( K) $ } 
+	\]
+	
+\end{defn}
+\begin{propo}
+Soit $\phi: V \to W$ et $M= mat_{B'B} \phi$, alors
+\[ 
+	rg( M) = rg( \phi) = \dim \phi( V) 
+\]
+
+\end{propo}
+\begin{proof}
+	$M$ est formée de colonnes dont les coordonnées sont celle des $\phi( e_j) j \leq d$ dans la base $B'= \left\{ f_i, i \leq d' \right\} $.
+\end{proof}
+\begin{rmq}
+	Le rang de $M$ est $\leq min( d,d')  $.
+	\[ 
+	\text{ rang de  } M= \text{ dimension d'un espace engendré par $d$ vecteurs } 
+	\]
+	Sa dimension sera toujours $\leq d$.\\
+	Cet espace est contenu dans $Col_{d'} ( K) $ qui est de $\dim d'$
+\end{rmq}
+\subsection{Transposition}
+Soient $\phi: V \to W$ et $\phi^{*}: W^{*}\to V^{*}$.
+\begin{thm}
+	Soit $( m_{ij} ) = Mat_{B,B'} ( \phi) , ( m_{ij} ^{*}) = Mat_{B',B} ( \phi^{*}) $. Alors on a
+	\[ 
+	m_{ij} = m_{ji}^{*}
+	\]
+	On dit que $mat( \phi^{*}) $ est la transposée de $mat( \phi) $ et on la note $^{t}mat( \phi) $
+\end{thm}
+\begin{defn}
+	La transposition est l'application des matrices $d'\times d$ vers les matrices $d\times d'$ définie par
+	\[ 
+		^{t}\bullet: ( m_{ij})_{i\leq d', j \leq d}  \mapsto ( m_{ji} ) _{j\leq d, i \leq d'} 
+	\]
+	
+\end{defn}
+\begin{propo}
+La transposition est 
+\begin{enumerate}
+\item Linéaire
+\item Involutive: $^{t}( ^{t}M) = M$ 
+\item Multiplicativité: pour  deux matrices $M$ et $N$, alors on a
+	\[ 
+		^{t}(M.N ) = ^{t}N.^{t}M
+	\]
+	
+\end{enumerate}
+
+\end{propo}
+\begin{proof}
+	Il suffit de montrer que
+	\[ 
+	\phi: U \mapsto V \quad \psi: V \to W
+	\]
+	et 
+	\[ 
+	\psi\circ\phi: U \mapsto W
+	\]
+	Alors 
+	\[ 
+		( \psi\circ\phi) ^{*} = \phi^{*}\circ \psi^{*}
+	\]
+On a
+\[ 
+	( \psi\circ\phi) ^{*}: l'' \to l'' \circ \psi\circ\phi = ( l''\circ\psi) \circ\phi = \phi^{*}( l''\circ\psi) = \phi^{*}( \psi^{*}( l'') ) 
+\]
+
+\end{proof}
+\begin{propo}
+	Soit $M \in M_{d'\times d} ( K) $ on a
+	\[ 
+		rg( M) = rg( ^{t}M) .
+	\]
+	Soit $\varphi \in Hom( V,W)$, on a
+	\[ 
+		rg( \phi) = rg( \phi^{*}) 	
+	\]
+	
+\end{propo}
+\begin{proof}
+Soit une base $B= \left\{ e_1,\ldots, e_d \right\}\subset V $, alors on a
+\[ 
+	\phi( B) = \left\{ \phi( e_1) ,\ldots, \phi( e_d)  \right\} 
+\]
+engendre $\phi( V) $ si $\dim \phi( V) = r = rg \phi$ oon peut extraire de $\phi( B) $ une base de $\phi( V) $.\\
+Supposons que cette base soit
+\[ 
+	\left\{ \phi( e_1)=f_1, \ldots , \phi( e_r) = f_r \right\} \subset W
+\]
+C'est une famille libre de $W$.\\
+On peut la compléter pour former une base de $W$:
+\[ 
+B' = \left\{ f_1,\ldots, f_r,f_{r+1} ,\ldots, f_{d'}  \right\} 
+\]
+On regarde 
+\[ 
+B' = \left\{ f_1,\ldots, f_r, f_{r+1} ,\ldots, f_{d'}  \right\} 
+\]
+et on lui associe
+\[ 
+B'^{*}= \left\{ f_1^{*}, \ldots, f_d^{*} \right\} 
+\]
+On considère donc 
+\[ 
+\phi^{*}: W^{*}\to V^{*}
+\]
+On a
+\[ 
+	rg\phi^{*}= \dim \phi^{*}( W^{*}) = \dim \eng{ \phi^{*}( f_1^{*}) , \ldots}
+\]
+	On va montrer que 
+	\[ 
+		\left\{ \phi^{*}( f_1^{*}) , \ldots \right\} \subset V^{*}
+	\]
+est libre.\\
+Soient $x_1, \ldots, x_r\in K$ tel que
+\[ 
+	x_1\phi^{*}( f_1^{*}) + \ldots = 0_K
+\]
+On a que $\forall j \leq d$ et $\forall e_j \in B$
+\begin{align*}
+&( x_1\phi^{*}+ \ldots) ( e_{j} ) \\
+&= x_1 \phi^{*}( f_1^{*}) e_j + \ldots = x_j f_j^{*}( \phi( e_j) ) = x_{j}  f_j^{*}( f_j) = x_{j} 
+\end{align*}
+Et donc
+\[ 
+	rg( \phi^{*}) \leq rg( \phi) 
+\]
+Donc pour toute matrice $M$, on a $rg( ^{t}M) \geq rg( M) $.\\
+Donc en particulier
+\[ 
+	rg( ^{t}( ^{t}( M) ) ) \geq rg( ^{t}( M) ) 
+\]
+Et donc 
+\[ 
+	rg( M) = rg( ^{t} M ) 
+\]
+Et donc
+\[ 
+	rg( \phi) = rg( ^{*}\phi) 
+\]
+
+
+
+
+\end{proof}
+\subsection{Les matrices carrées}
+On note
+\[ 
+	M_{d} ( K) = M_{d\times d} ( K) 
+\]
+On remarque que la multiplication des matrices induit sur les matrices carrées de taille $d$ une loi de composition interne.\\
+Cette loi est
+\begin{itemize}
+\item distributive
+\item associative
+\item $Id_d$ est neutrre pour la multiplication
+\item $0_d= 0_{d\times d} $ est absorbante
+\end{itemize}
+Donc
+\[ 
+	( M_{d} ( K) ,+,\cdot) 
+\]
+est un anneau non-commutatif.\\
+Et de plus comme $M_d( K) $ est un $K$-ev, donc
+\[ 
+	M_d( K) 
+\]
+est une $K$-algebre.\\
+Soit $V$ de $\dim d$, $B=$ base et $B'=B$ une base
+\begin{align*}
+	End( V) = Hom( V,W) &\to M_d( K) \\
+	\phi&\to mat_{B,B} ( \phi) 
+\end{align*}
+$mat_{B,B} ( \bullet) $ est un isomorphisme de $K$-ev mais c'est également un isomorphisme d'anneaux.\\
+On a
+\[ 
+	mat_{B,B} ( \psi\circ\phi) = mat_{B,B} ( \psi) \cdot mat_{BB} ( \phi) 
+\]
+
+
+
+
+
+
+	
+
+
+
+\end{document}	

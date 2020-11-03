@@ -1,0 +1,216 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{14}{Mon 02 Nov}{Derivees}
+\begin{crly}
+$f$ dérivable en $x_0$ implique $f$ continue en $x_0$.
+\end{crly}
+\begin{proof}
+	$f( x) = \underbrace{f( x_0) + f'( x_0) (  x-x_0)}_{ \text{ continue pour tout $x$ } } + \underbrace{r( x)}_{ \text{ continu en $x_0$ } } $
+\end{proof}
+\begin{propo}
+Soient $f,g$ dérivables en $x_0$ 
+\begin{itemize}
+	\item $f+g$ est dérivable en $x_0$ et $( f+g) ' = f' + g'$
+	\item $fg$ est dérivable en $x_0$ et 
+		\[ 
+			( fg) ' = f'g + fg' \text{ ( règle de Leibnitz)  } 
+		\]
+	
+	\item Si $g( x_0)  \neq 0$, alors $\frac{f}{g}$ est dérivable en $x_0$ et
+		\[ 
+			( \frac{f}{g}) ' = \frac{f'g- fg'}{g^{2}}
+		\]
+		
+		
+\end{itemize}
+
+\end{propo}
+\begin{proof}
+\begin{itemize}
+\item Somme est déja faite
+\item Produit:
+	\begin{align*}
+		&\frac{f( x) g( x) - f( x_0) g( x_0) }{x-x_0} \\
+		&=\frac{f( x) g( x) - f( x_0) g( x) }{x-x_0} + \frac{f(x_0) g( x) - f( x_0) g( x_0)   }{x-x_0}\\
+		&= \underbrace{\frac{f( x) - f( x_0) }{x-x_0}}_{\to f'( x_0) 	} \underbrace{g( x)}_{\to g( x_0) }  + f( x_0) \underbrace{\frac{g( x) - g( x_0) }{x-x_0}}_{\to g'( x_0)}
+	\end{align*}
+
+\item Quotient:\\
+	Il suffit d'appliquer Leibnitz à $f$ et $\frac{1}{g}$ 
+	\[ 
+		\left( \frac{f}{g}\right) ' = \left( f \frac{1}{g}\right) ' = f' \frac{1}{g} + f \left( \frac{1}{g}\right) ' 
+	\]
+	Il suffit de montrer que
+	\[ 
+	\left( \frac{1}{g} \right) = - \frac{g'}{g^{2}}
+	\]
+	
+	Soit donc $g( x_0) \neq 0$.
+	\[ 
+		\frac{\frac{1}{g( x) - \frac{1}{g( x_0) }}}{x-x_0} = \frac{1}{g( x) g( x_0) } \frac{g( x_0) - g( x) }{x-x_0}
+	\]
+
+	
+
+\end{itemize}
+
+\end{proof}
+\begin{exemple}
+	Soit $n \in \mathbb{Z}$, $n< 0$, $f( x) = x^{n} = \frac{1}{x^{|n|}}$ 
+	Donc 
+	\[ 
+		( x^{|n|}) ' = |n| x^{|n|-1}
+	\]
+	Donc, par la proposition
+	\[ 
+		f'( x)  = \frac{- |n| x^{|n|-1}}{x^{2|n|}}
+	\]
+	Or $|n| = -n$, alors
+	\[ 
+		f'( x)  = nx^{-n-1+ 2n}= n x^{n-1}
+	\]
+	
+	
+\end{exemple}
+\begin{propo}
+Donc, on trouve
+\[ 
+	\forall n \in \mathbb{Z}, f( x) = x^{n} \Rightarrow f'( x) = n x^{n-1}
+\]
+Attention, ne pas écrire $ ( x^{n}) '$
+\end{propo}
+\begin{thm}[Chain Rule]
+
+\[ 
+	( f \circ g) ' = ( f' \circ g ) . g'
+\]
+Soit $g$ dérivable en $x_0$ et $f$ en $g( x_0) $, alors $f\circ g$ esst dérivable en $x_0$ avec la formule ci-dessus.
+\end{thm}
+\begin{proof}
+Definissons $h$ par
+\[ 
+	h( y) = 
+	\begin{cases}
+		\frac{f( y ) - f( g( x_0) ) }{y - g( x_0) } \text{  si } y \neq g( x_0) \\
+		f'( g( x_0) ) \text{ si } y = g( x_0) 
+	\end{cases}
+\]
+Alors $h$ est continue en $g( x_0) $ ( par définition de $f$ dérivable en $g( x_0) $).
+
+On a alors
+\begin{align*}
+&\lim_{x \to x_0} \frac{f( g( x) ) - f( g( x_0) ) }{x-x_0}\\
+&= \lim_{x \to x_0} h( g( x) ) \frac{g( x) - g( x_0)  }{x-x_0}\\
+&= f'( g( x_0) ) \cdot g'( x_0)
+\end{align*}
+
+\end{proof}
+
+\begin{thm}
+	Soit $f: ]a,b[ \to ]c,d[$ bijective, continue.\\
+	Si $f$ est dérivable en $x_0$ et $f'( x_0) \neq 0$, alors
+	$f^{-1}$ est dérivable en $y_0= f( x_0) $ et
+	\[ 
+		( f^{-1} )'( y_0)  = \frac{1}{f'( x_0) }= \frac{1}{f'( f^{-1}( y_0) ) }
+	\]
+	
+\end{thm}
+\begin{proof}
+\begin{align*}
+	L= \frac{f^{-1}( y) - f^{-1}( y_0) }{y-y_0}\\
+	= \left( \frac{f( f^{-1}( y) ) - f( f^{-1}( y_0) )  }{f^{-1}( y)- x_0} \right)^{-1}
+\end{align*}
+En posant $x= f^{-1}( y) $, on obtient
+\begin{align*}
+	\left( \frac{f( x) - f( x_0) }{x-x_0} \right)^{-1}
+\end{align*}
+Or, $f^{-1}$ est continue, donc quand $y \to y_0$, on a que $x\to x_0$.\\
+Donc, la limite pour $y\to y_0$ de L est
+\[ 
+	\lim_{x \to x_0} \left( \frac{f( x) - f( x_0) }{x-x_0}\right) ^{-1} = \frac{1}{f'( x_0) }
+\]
+
+
+
+\end{proof}
+
+
+
+	
+	
+	
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	
+
