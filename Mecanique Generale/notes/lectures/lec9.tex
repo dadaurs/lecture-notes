@@ -1,0 +1,131 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Wed 04 Nov}{Systemes de points Materiels}
+\subsection{2eme loi et theoreme du moment cinétique}
+La résultante des forces appliquées au point matériel $P$ :
+\[ 
+\vec{F}= \sum \vec{F}_i
+\]
+Quantité de mouvement du point matériel de masse $m$ 
+\[ 
+\vec{p}= m \vec{v}
+\]
+En dérivant, et en appliquant la deuxieme loi de Newton, on trouve
+\[ 
+\frac{d \vec{p}}{dt}= \vec{F}
+\]
+Le moment de la force résultante $\vec{F}$ par rapport à un point $O$ du référentiel
+\[ 
+\vec{M}_O = \vec{r} \land \vec{F} = \sum \vec{r} \land \vec{F}_i
+\]
+Moment cinétique du point matériel par rapport au point $O$ : 
+\[ 
+\vec{L}_O = \vec{r} \land \vec{p} = \vec{r} \land m \vec{v}
+\]
+Le théorème du moment cinétique dit
+\[ 
+\frac{d \vec{L}_O}{dt}= \vec{M}_O
+\]
+
+\subsection{Systeme de points matériels}
+
+On suppose ue chaque point matériel $P_a$ du système subit:
+\begin{itemize}
+\item une force extérieure $F_a^{ext}$ dont l'origine est extérieure au système
+\item des forces intérieures $F^{\beta\to \alpha}$ exercées par les autres points $P_\beta$ du système 
+\end{itemize}
+On peut appliquer la troisième de Newton, à $\alpha$ et $\beta$.
+Donc
+\[ 
+\vec{F}^{\beta\to\alpha} + \vec{F}^{\alpha\to \beta}=0
+\]
+et
+\[ 
+	\vec{M}^{\beta\to\alpha} + \vec{M}^{\alpha\to \beta}= ( \vec{r}_\alpha - \vec{r}_\beta) \land \vec{F}^{\beta \to \alpha}=0
+\]
+
+\begin{align*}
+\sum_{\alpha} \sum_{\beta\neq \alpha}\vec{F}^{\beta\to\alpha} =0\\
+\sum_{\alpha} \sum_{\beta\neq \alpha}\vec{M}^{\beta\to\alpha} =0
+\end{align*}
+On définit la quantité de mouvement totale
+\[ 
+\vec{p} = \sum_\alpha \vec{p}_\alpha
+\]
+Si on dérive $\vec{p}$, on obtient
+\[ 
+\frac{d \vec{p}}{dt} = \sum_\alpha \sum_{\beta\neq\alpha} \vec{F}^{\beta\to \alpha} + \sum_\alpha \vec{F}_\alpha ^{ext} = \vec{F}^{ext}
+\]
+On trouve donc
+\[ 
+\frac{d \vec{p}}{dt} = \vec{F}^{ext} 
+\]
+De la même manière, on trouve,
+\[ 
+\frac{d \vec{L}_O}{dt}= \sum_{\alpha} \vec{M}_{O,\alpha} ^{ext} = \vec{M}_{O} ^{ext}
+\]
+
+On a donc trouvé les \underline{lois générales de la dynamique pour un système de points matériels}
+
+\begin{align*}
+\frac{d \vec{p}}{dt} = \vec{F}^{ext} \\
+\frac{d \vec{L}_O}{dt} = \vec{M}_{O} ^{ext}
+\end{align*}
+
+\subsection{Système à l'équilibre}
+Un système est à l'équilibre si
+\[ 
+\begin{cases}
+	\vec{r}_\alpha( t) = \text{ constante } \\
+	\vec{v}_\alpha( t) = constante
+\end{cases}
+\]
+Dans ce cas, on a
+\[ 
+\begin{cases}
+\vec{p}= \sum_\alpha m_\alpha \vec{v}_\alpha = 0\\
+\vec{L}_O = \sum_\alpha \vec{r}_\alpha \land m_\alpha \vec{v}_\alpha = 0
+\end{cases}
+\]
+et donc
+\[ 
+\begin{cases}
+\frac{d \vec{p}}{dt}=0\\
+\frac{d \vec{L}_O}{dt} =0
+\end{cases}
+\]
+et donc
+\[ 
+\vec{F}^{ext}=0 \text{ et } \vec{M}_O^{ext}=0
+\]
+\hr\\
+On appellera un système ``partiellement isolé'' selon une direction fixe $\hat{u}$ :
+\begin{align*}
+\vec{F}^{ext}\cdot \hat{u} =0 \Rightarrow \vec{p}\cdot \hat{u}= \text{ constante } \\
+\vec{M}^{ext}_O\cdot \hat{u} =0 \Rightarrow \vec{L}_O \cdot \hat{u} = \text{ constante } \\
+\end{align*}
+\subsection{Centre de masse}
+Le centre de masse est un point de l'espace $G$ défini par
+\[ 
+\vec{r}_G = \frac{1}{M} \sum_\alpha m_\alpha \vec{r}_\alpha
+\]
+où $M$ est la somme des masses.\\
+Si les masses $m_\alpha$ sont constantes, la vitesse du centre de masse est
+\[ 
+\vec{v}_G = \frac{d \vec{r}_G}{dt}= \frac{1}{M} \sum_\alpha m_\alpha \vec{v}_\alpha = \frac{\vec{p}}{M} \Rightarrow \vec{p}= M \vec{v}_G
+\]
+Donc
+\[ 
+\frac{d \vec{p}}{dt}= \vec{F}^{ext} \Rightarrow M\vec{a}_G = \vec{F}^{ext}
+\]
+C'est le theoreme du centre de masse.
+
+
+
+
+
+
+
+
+
+\end{document}	
