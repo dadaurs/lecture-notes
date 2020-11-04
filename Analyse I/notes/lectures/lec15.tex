@@ -1,0 +1,236 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{15}{Wed 04 Nov}{Derivees}
+\begin{exemple}
+	Soit $f( x) = \sqrt[q]{x} = x ^{\frac{1}{q}}$.\\
+	Donc la dérivée est
+	\[ 
+		f'( x) = \frac{1}{q ( x^{\frac{1}{q}})^{q-1}}= \frac{1}{q} x^{ \frac{1-q}{q}} = \frac{1}{q} x^{\frac{1}{q}-1}
+	\]
+On sait donc dériver des puissances rationelles quelconques	
+\[ 
+	f( x) = x^{\frac{p}{q}} = g( h( x) ) 
+\]
+donc
+\begin{align*}
+	f'( x) = p( x^{\frac{1}{q}}) ^{p-1} \frac{1}{q} x^{\frac{1}{q}-1}\\
+	= \frac{p}{q} x^{\frac{p-1}{q}+ \frac{1}{q}-1} = \frac{p}{q} x^{\frac{p}{q}-1}
+\end{align*}
+
+\end{exemple}
+\subsection{Applications de la dérivée}
+\subsubsection{Recherche d'extremums}
+\begin{defn}[Point Critique]
+	$x$ est un point critique de $f$ si $f$ est dérivable en $x$ et $f'( x)=0 $.
+\end{defn}
+
+\begin{rmq}
+	Bien que $x=0$ soit un point critique de $f( x) =x^{3}$, cette fonction est strictement croissante.
+\end{rmq}
+\begin{defn}
+	$x$ est un maximum local de $f$ si il existe un voisinage de $x$ sur lequel $x$ est un ( vrai) maximum.
+\end{defn}
+La définition pour les minimas est équivalente.\\
+Plus généralement, on parlera d'extremums.
+\begin{propo}
+	Soit $f$ dérivable en $x_0$ ( donc définie dans son voisinage).\\
+	Si $x_0$ est un extremum local de $f$, alors c'est un point critique.
+\end{propo}
+\begin{rmq}
+\begin{enumerate}
+\item La réciproque est fausse.
+\item Si $f$ n'est pas dérivable, on peut très bien avoir un max / min.
+\item Dérivable à droite ( gauche) pas suffisant.
+\end{enumerate}
+\end{rmq}
+\begin{proof}
+Sans perte de géneralité, $x_0$ est un max local de $f$.\\
+Dérivée à gauche:
+\[ 
+	\lim_{x \to x_0-}  \frac{f( x) - f( x_0) }{x-x_0} \geq 0
+\]
+De même, dérivée à droite
+\[ 
+	\lim_{x \to x_0+}  \frac{f( x) - f( x_0) }{x-x_0} \leq 0
+\]
+Donc, $f'( x_0) = 0$.
+\end{proof}
+\begin{propo}[Méthode de recherche d'extremum]
+	Pour $f:[a,b] \mapsto \mathbb{R}$.\\
+	Les candidats sont
+	\begin{enumerate}
+		\item Les points critiques dans $] a,b[$ 
+		\item Les points non-différentiables
+		\item Les bornes: $a,b$
+	\end{enumerate}
+	
+	
+
+\end{propo}
+\begin{thm}[theoreme de Rolle]\index{theoreme de Rolle}\label{thm:theoreme_de_rolle}
+	Soit $f: [ a,b] \to \mathbb{R}$ continnue et dérivable sur $]a,b[$.
+	Si $f( a) = f( b) $ alors $\exists x \in ]a,b[: f'( x) = 0$ 
+	
+\end{thm}
+\begin{proof}
+	$\exists x_1 \in [ a,b] : \sup_{x\in [ a,b]} f( x) = f( x_1)   $.\\
+	Si $x_1 \in ]a,b[$, alors $f'( x_1) = 0$ par la proposition.\\
+	Cas restant: $x_1= a$ ou $b$.\\
+	\[ 
+		\exists x_2 \in [ a,b] \text{ min } : \inf_{x \in [ a,b] } f( x)  = f( x_2) 
+	\]
+	Le seul cas restant est donc:
+	\begin{center}
+	$\max$ et $\min$ atteints en $a$ ou $b$.
+	\end{center}
+	Or $f( a) = f( b)$, donc $\max f = \min f$, donc $f$ constante.
+\end{proof}
+\begin{thm}[théorème des accroissements finis TAF]\index{théorème des accroissements finis TAF}\label{thm:theoreme_des_accroissements_finis_taf}
+	Soit $f: [ a,b] \to \mathbb{R}$ continue et dérivable sur $]a,b[$.\\
+	Alors $\exists x \in ]a,b[: f'( x) = \frac{f( b) -f( a) }{b-a}$.
+\end{thm}
+\begin{proof}
+	Posons $g( x) = f( x) - \frac{f( b) - f( a) }{b-a} ( x-a)  $ 
+	$g$ est aussi continue dérivable.\\
+	Or 
+	\[ 
+		g( a) = f( a) \text{ et } g( b) = f( a)  
+	\]
+	Donc $g$ satisfait l'hypothèse de rolle.\\
+	Donc, par Rolle
+	\[ 
+		\exists x \in ]a,b[ : g'( x)  = 0
+	\]
+	Or 
+	\[ 
+		g'( x) = f'( x) - \frac{f( b) -f( a) }{b-a} = 0
+	\]
+	
+\end{proof}
+\begin{crly}
+Si $f'= 0$, alors $f$ constante.\\
+Plus précisément:\\
+Soit
+\[ 
+	f:[a,b] \to \mathbb{R}
+\]
+continue dérivable sur $]a,b[$ tel que $f'( x) = 0 \forall x \in ]a,b[$, alors $f$ est constante sur $[a,b]$
+\end{crly}
+\begin{proof}
+	Si, par l'absurde, il existe $x,y \in [ a,b] $ avec $f( x) \neq f( y) $.\\
+	Par TAF pour  $[x,y]$, il existe $z \in ]x,y[$ :
+\[ 
+	f'( x) = \frac{f( y) - f( x) }{y-x}\neq 0
+\]
+Absurde.
+\end{proof}
+\begin{crly}
+	$f'>0$ ( sur un intervalle) implique $f$ strictement croissante.
+\end{crly}
+\begin{proof}
+	Soit $x< y$, à voir $f( x) < f( y) $.\\
+	Or, par TAF $\Rightarrow$ $\exists z \in ]x,y[$ 
+	\[ 
+		f'( z) = \frac{f( y) -f( x) }{y-x}> 0
+	\]
+\end{proof}
+\begin{crly}
+	$f'\geq 0$ ( sur un intervalle) $\iff$ $f$ croissante ( pas forcément strictement) 
+\end{crly}
+\begin{proof}
+$\Leftarrow$ :\\
+\[ 
+	\lim_{x \to x_0} \frac{f( x) -f( x_0) }{x-x_0} \geq 0
+\]
+$\Rightarrow$ :\\
+Par l'absurde:
+\[ 
+	\exists x < y \text{ tel que } f( x) > f( y) 
+\]
+Par TAF $\Rightarrow \exists z \in ]x,y[$ tel que
+\[ 
+	f'( z) = \frac{f( y) - f( x) }{y-x} < 0
+\]
+Ce qui est absurde.
+
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

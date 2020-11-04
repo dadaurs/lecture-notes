@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex main.idx"] 1603708311 "main.idx" "main.ind" "main" 1604314671
-  "main.idx" 1604314671 820 a3e2a31269916492984d08a46d571292 "pdflatex"
+["makeindex main.idx"] 1604496726 "main.idx" "main.ind" "main" 1604498375
+  "main.idx" 1604498374 912 8465ffb2d64c2f6a70c1394e821c5430 "pdflatex"
   (generated)
-  "main.ind"
   "main.ilg"
-["pdflatex"] 1604314670 "main.tex" "main.pdf" "main" 1604314671
+  "main.ind"
+["pdflatex"] 1604498373 "main.tex" "main.pdf" "main" 1604498375
   "../../header.tex" 1601361719 96 463a560c16c176df178dc43a2c4ba969 ""
   "../../preamble.tex" 1603796486 5959 3ba07a4623eb94873bdb29d200c6eb80 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1591545468 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -270,7 +270,8 @@
   "lectures/lec11.tex" 1603289489 4297 8d6d87be93abfb8312db44bd37c869e2 ""
   "lectures/lec12.tex" 1603890501 4554 5f4b382716b8a226f719c716206ea451 ""
   "lectures/lec13.tex" 1603893665 4040 233607601bf9a14a9415d7200d4b78e3 ""
-  "lectures/lec14.tex" 1604314668 3668 7ee07a00abdb254a5993f4d8e5e7b16a ""
+  "lectures/lec14.tex" 1604314874 3669 95f84eba880ef50ee917f1fae570f742 ""
+  "lectures/lec15.tex" 1604498373 4637 bcd45b19b90486af51a7d00dc38644d6 ""
   "lectures/lec2.tex" 1600777857 5356 14a81cc70e1a9d09233c9c77b5ee1e8c ""
   "lectures/lec3.tex" 1601220691 5496 cd04a6ffbde3d1cf884f9c716470221b ""
   "lectures/lec4.tex" 1601286991 5505 5bb9b3a64fccdfaf8db4258b241eb963 ""
@@ -279,16 +280,16 @@
   "lectures/lec7.tex" 1603207318 4742 00eb8a84afe90181f44b093f0ee4910a ""
   "lectures/lec8.tex" 1603206988 4817 99349331bbfca0f3a2a1ca29c119da73 ""
   "lectures/lec9.tex" 1602680518 5832 5d4f898dbea04550721714716ea34965 ""
-  "main.aux" 1604314671 60439 5a85968d30510d415cdf7ffd2951abf8 "pdflatex"
-  "main.ind" 1603708311 915 bb1ca5dd22b14bddeb6ecd1e9551443a "makeindex main.idx"
-  "main.loe" 1604314671 18883 d80e959dfa584d2a235e289881a72d68 "pdflatex"
-  "main.tex" 1604308057 572 ca5474a673db2796d0b0027cfb3a3e70 ""
-  "main.toc" 1604314671 1122 ca87213fd621cc6a67bbbe76c9bbc07e "pdflatex"
+  "main.aux" 1604498374 65377 6d3db6d6d68082dc433f408927e8a5f3 "pdflatex"
+  "main.ind" 1604496726 997 ba0e0f4584d7524a7fb4c835ae3e9bd4 "makeindex main.idx"
+  "main.loe" 1604498374 20379 29b99751355a7e63b7671038087e3b38 "pdflatex"
+  "main.tex" 1604491812 601 83b6bdc30e34f18e0075ee2d55693868 ""
+  "main.toc" 1604498374 1315 dc51111022eeec5e06cfe52ea48a924b "pdflatex"
   (generated)
+  "main.idx"
   "main.toc"
+  "main.aux"
+  "main.log"
   "main.thm"
   "main.pdf"
-  "main.idx"
-  "main.log"
-  "main.aux"
   "main.loe"
