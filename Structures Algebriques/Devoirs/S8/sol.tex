@@ -1,0 +1,117 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\begin{document}
+\title{Série 8}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+Montrons la double implication.\\
+Supposons d'abord que $H$ est un sous-groupe normal de $G$, alors
+\[ 
+\forall h \in H, g \in G\quad ghg^{-1} \in H
+\]
+Montrons que ceci implique l'égalité 
+\[ 
+	H = \bigcup_{h \in H} C( h) 
+\]
+où on dénote par $C( H) $ la classe de conjugaison de $h$.\\
+Montrons la double inclusion de ces ensembles.\\
+
+Supposons qu'il existe $h \in H$ avec  $C( h) \not\subset H $, ceci implique que $khk^{-1} \in C( H) $ mais $khk^{-1} \notin H$, donc $H$ n'est pas un sous-groupe normal ce qui est une contradicition.\\
+Montrons l'inclusion dans l'autre sens, comme montré dans l'exercice 3.2 de la même série, tout élément est dans sa propre classe de conjugaison, et donc
+ \[ 
+\forall	 h \in H, h \in C( h) 
+\]
+Montrons maintenant l'implication dans l'autre sens.\\
+Supposons 
+\[ 
+	H = \bigcup_{h \in H} C( h) 
+\]
+Montrons que $H$ est un sous-groupe normal ( on suppose par hypothèse que c'est un sous-groupe).\\
+Soit $g \in G$ et $h \in H$, il suffit de montrer que 
+\[ 
+ghg^{-1}\in H
+\]
+pour montrer que $H$ est normal.\\
+Or, en effet, $ \forall g \in G, \forall h \in H, ghg^{-1}\in C( h) $ et l'élément est donc dans $\bigcup_{h \in H} C( h) $ et donc dans $H$.\\
+On en déduit que $H$ est un sous-groupe normal.
+\section*{2}
+On sait que tout sous-groupe de $S_3$ est cyclique, donc en particulier un sous-groupe normal.\\
+De plus on sait que tout élément de $S_3$ s'écrit comme un cycle d'ordre 2 ou d'ordre 3.\\
+Supposons qu'il existe un sous-groupe normal $H$ de $S_3$ qui est engendré par un élément d'ordre $2$ \\
+Posons $H = \langle ( ab) \rangle$,  avec $a,b \in \left\{ 1,2,3 \right\} $.\\
+On vérifie alors facilement que
+\[ 
+	( bc) ( ab) ( bc) = ( ac) 
+\]
+ici, $c$ est un élément dans $ \left\{ 1,2,3 \right\} $ et qui est différent de $a$ et de $b$ 
+
+et que donc $H$ n'est pas clos sous l'opération de conjugaison.\\
+Considérons donc le sous-groupe engendré par un cycle d'ordre 3: $( abc) $.\\
+Il n'existe que deux cycles d'ordre 3 dans $S_3$ : $( 123) $ et $( 132) $, on remarque que le sous-groupe engendré par $( 123) $ contient 3 éléments: $ \left\{ Id, ( 123) ,( 132)\right\} $, vérifions que $\langle ( 123) \rangle$ est normal.\\
+Car $( 123)^{-1}= ( 132)  $, il nous faut seulement vérifier la conjugaison par des cycles d'ordre 2.
+\begin{align*}
+	( 12) ( 123) ( 12) = ( 132) \\
+	( 13) ( 123) ( 13) = ( 132) \\
+	( 23) ( 123) ( 23) = ( 132)
+\end{align*}
+et
+\begin{align*}
+	( 12) ( 132) ( 12) = ( 123) \\
+	( 13) ( 132) ( 13) = ( 123) \\
+	( 23) ( 132) ( 23) = ( 123)
+\end{align*}
+Donc le sous-groupe engendré par $( 123) $ est un sous-groupe normal. Or on sait que tous les sous-groupes de $S_3$ sont cycliques et que un sous-groupe engendré par un élément d'ordre 2 n'est pas normal.\\
+Donc $\langle ( 123) \rangle$ est le seul sous-groupe normal de $S_3$.\\
+\section*{3}
+Dans l'exercice 5, on a montré que tous les sous-groupes de $A_4$ sont engendrés par, soit un cycle d'ordre 3 ou un produit de deux cycles d'ordre 2 disjoints.\\
+Montrons d'abord que un sous-groupe normal de $A_4$ ne peut pas contenir de trois cycle.
+Soit $H$ un sous-groupe normal et $( abc)\in H $ un cycle d'ordre 3.
+\[ 
+	( cd)(abc ) ( cd) = ( abd) 
+\]
+Donc $H$ contient deux trois-cycles qui ne fixent pas le même élément, et donc par l'exercice 5.3, $H$ est le sous-groupe trivial $A_4$.\\
+On en déduit que un sous-groupe normal de $A_4$ ne peut que contenir des produits de cycles d'ordre 2.\\
+Vérifions d'abord que l'ensemble des permutations de $A_4$ s'écrivant comme le produit de deux 2-cycles ( avec l'élément neutre)  est un sous-groupe.\\
+Soit $( ab) ( cd) $ un produit de 2-cycles, alors on vérifie la multiplication avec les autres éléments de l'ensemble
+\begin{align*}
+	( ab) ( cd) ( ac) ( bd) = ( ad) ( bc) \\
+	( ab) ( cd) ( ad) ( bc) = ( ac) ( bc) \\
+	( ac) ( bd) ( ab) ( cd)= ( ad) ( bc) \\
+	 ( ad) ( bc) ( ab) ( cd)= ( ac) ( bc)
+\end{align*}
+On voit également que chaque élément est son propre inverse, car
+\[ 
+	( ab) ( cd) ( ab) ( cd) = ( ab) ( ab) ( cd) ( cd) = Id
+\]
+Donc l'ensemble des permutations de $A_4$ s'écrivant comme produit de 2-cycles ( qu'on nommera $H$) forme un sous-groupe.
+Vérifions que $H$ est un sous-groupe normal de $A_4$.\\
+Il ne reste qu'à vérifier que la conjugaison par des 3-cycles est close.\\
+Soit $( ab) ( cd) \in H$, alors
+\begin{align*}
+	( abc) ( ab) ( cd) ( acb) = ( ad) ( bc)\\
+	( acb) ( ab) ( cd) ( abc) = ( ac) ( bd)\\
+	( abd) ( ab) ( cd) ( adb) = ( ac) ( bd)\\
+	( adb) ( ab) ( cd) ( abd) = ( ad) ( bc)\\
+	( bcd) ( ab) ( cd) ( bdc) = ( ac) ( bd)\\
+	( bdc) ( ab) ( cd) ( bcd) = ( ad) ( bc)\\
+	( acd) ( ab) ( cd) ( adc) = ( ad) ( bc)\\
+	( adc) ( ab) ( cd) ( acd) = ( ac) ( bd) 
+\end{align*}
+Donc $H$ est stable par conjugaison dans $A_4$.
+
+
+
+
+
+
+
+
+\end{document}
