@@ -27,12 +27,14 @@ $\\times$: Produit cartesien	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subs
 2	current-course/Devoirs/S3/sol.tex	/^\\section*{2}$/;"	s
 2	current-course/Devoirs/S6/sol.tex	/^\\section*{2}$/;"	s
 2	current-course/Devoirs/S7/sol.tex	/^\\section*{2}$/;"	s
+2	current-course/Devoirs/S8/sol.tex	/^\\section*{2}$/;"	s
 2eme loi et theoreme du moment cinétique	Mecanique Generale/notes/lectures/lec9.tex	/^\\subsection{2eme loi et theoreme du moment cinétique}$/;"	u	section:Gravitation, Moment Cinétique
 3	Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{3}$/;"	s
 3	Algebre Lineaire I/Exos/S5/Ex3.tex	/^\\section*{3}$/;"	s
 3	Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{3}$/;"	s
 3	Structures Algebriques/Devoirs/S8/sol.tex	/^\\section*{3}$/;"	s
 3	current-course/Devoirs/S3/sol.tex	/^\\section*{3}$/;"	s
+3	current-course/Devoirs/S8/sol.tex	/^\\section*{3}$/;"	s
 4	Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{4}$/;"	s
 4	Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{4}$/;"	s
 4	current-course/Devoirs/S3/sol.tex	/^\\section*{4}$/;"	s
@@ -260,7 +262,7 @@ Valeurs litterales	Introduction a la programmation/notes/lectures/lec3.tex	/^\\s
 Vecteurs	Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Vecteurs}$/;"	s
 Vitesse et accélération en coordonnées cylindriques	Mecanique Generale/notes/lectures/lec5.tex	/^\\subsection{Vitesse et accélération en coordonnées cylindriques}$/;"	u	section:Description des rotations spatiales
 Voiture en accélération	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Voiture en accélération}$/;"	u	section:Travail, énergie, forces conservatives
-\\@lecture	fancy-preamble.tex	/^    \\subsection*{\\@lecture}$/;"	u	section:1
+\\@lecture	fancy-preamble.tex	/^    \\subsection*{\\@lecture}$/;"	u	section:3
 \\@lecture	preamble.tex	/^    \\subsection*{\\@lecture}$/;"	u
 \\texttt{auto}	Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{\\texttt{auto}}$/;"	u	section:Etude de cas
 \\texttt{const} et \\texttt{constexpr}	Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{ \\texttt{const} et \\texttt{constexpr} }$/;"	u	section:Etude de cas
