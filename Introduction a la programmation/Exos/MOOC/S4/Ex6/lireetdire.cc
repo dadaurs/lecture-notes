@@ -32,34 +32,31 @@ void dire_chiffre(int& nombre, int repetitions_chiffre, int chiffre)
 
 int lire_et_dire(int nombre)
 {
+
 	int res=0;
 	int nb;
 	int nbav=0;
 	int i=1;
-	bool tamere=false;
-	nbav=separer_chiffre_gauche(nombre);
+	//bool tamere=false;
+	//nbav=separer_chiffre_gauche(nombre);
 	if(nombre==0){
 		dire_chiffre(res,1,nbav);
 		return res;
 	}
 	do{
-		tamere=false;
 		nb=separer_chiffre_gauche(nombre);
 		if(nbav==nb){
 		while(nbav==nb){
 			i++;
 			nb=separer_chiffre_gauche(nombre);
 		}
-		}else{
-			tamere=true;
-		}
 			dire_chiffre(res,i,nbav);	
 			i=1;
 			nbav=nb;
 	}while(nombre!=0);
-	if(tamere){
-	dire_chiffre(res,i,nbav);	
-	}
+	//if(tamere){
+	//dire_chiffre(res,i,nbav);	
+	//}
 	return res;
 }
 
@@ -76,7 +73,7 @@ void repeter_lire_et_dire(int& nombre, int fois)
 
 int main()
 {
-  int nombre(1234);
+  int nombre(1);
   int fois(1);
   cin >> nombre >> fois;
   repeter_lire_et_dire(nombre, fois);

@@ -13,7 +13,7 @@ struct Position{
 bool binaire(Carte const& carte){
 	for(auto i: carte){
 		for(auto j: i){
-			if (j != 0 || j!=1){
+			if (not ( j==0 || j==0 )){
 				return false;
 			}
 		}
@@ -28,25 +28,6 @@ void affiche(Carte const& carte){
 		cout<<endl;
 		}
 cout<<"----"<<endl;
-}
-bool a_etang(vector<int> tab){
-	size_t ind=0;
-	int pool;
-	while(ind<tab.size()){
-		bool dabord0=false;
-		while(tab[ind]==0){
-			++ind;
-			dabord0=true;
-		}
-		if(dabord0){pool++;}
-
-		while(tab[ind]==1){
-			++ind;
-		}
-	}
-	if(2<pool)
-		return true;
-	return false;
 }
 size_t trouver_premier1(vector<int>& tab){
 	int i=0;
@@ -77,11 +58,9 @@ bool verifie_et_modifie(Carte& carte){
 		return false;
 	}
 	for(size_t i=0;i<carte.size();++i){
-		if(a_etang(carte[i])){
 				effacer_etang(carte[i]);
 			}
 
-}
 	return true;
 }
 int check_autour(Carte carte, size_t i, size_t j){

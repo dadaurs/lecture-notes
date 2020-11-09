@@ -1,0 +1,257 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{16}{Mon 09 Nov}{lundi}
+\begin{thm}
+	L'espace $M_d( K) $ muni de l'addition des matrices et de la multiplication est un anneau ( non-commutatif en general) dont l'element neutre est la matrice carree nulle $0_d = 0_{d\times d} $ et dont l'unite est la matrice identite $\id_d$
+\end{thm}
+\begin{thm}
+	Soit $V$ de dimension finie $d$ et $B$ une base de $V$, l'application 
+	\[ 
+		Mat_B: End( V) \mapsto M_d( K) 
+	\]
+	est un isomorphisme d'anneaux ( et donc de $K $-algebres) pour les lois d'addition et de multiplication decrites precedemment.
+\end{thm}
+De plus, on a que
+\[ 
+	^{t}\bullet: M_d( K) \mapsto M_{d} ( K) 
+\]
+est un endomorphisme.
+\subsection{Le groupe lineaire}
+\[ 
+	End( V) ^{\times}= \left\{ \phi \in End( V) \text{ qui sont bijectifs et donc inversible pour la composition  }  \right\} 
+\]
+On note
+\[ 
+	M_d( K) ^{\times}= GL_d( K) = \text{ le groupe lineaire de  } K^{d}
+\]
+
+Donc
+\begin{align*}
+mat_B: GL( V) \mapsto GL_d( K) \\
+\phi \mapsto mat_B( \phi) 
+\end{align*}
+\begin{propo}[Critere d'inversibilite]
+	Pour qu'une matrice carree $M= ( m_{ij} ) _{i,j\leq d} \in M_d( K) $soit inversible il faut et il suffit que la famille des collonnes $Col( M) $ forme une famille libre.
+\end{propo}
+\begin{proof}
+	Si $M= mat_B( \phi) \phi\in End( V) $.\\
+	Si $Col( M) $ est une famille libre, l'ensemble des images des elements de $B$ forme une famille libre, elle est de taille $d$, donc elle est generatrice.\\
+	Donc $\phi$ est surjective et injective.
+\end{proof}
+\begin{rmq}
+Dans ce critere, il est equivalent de regarder la famille des lignes.
+\end{rmq}
+\begin{propo}
+	La transposition est une bijection de $GL_d( K) $ sur lui-meme qui verifie
+	\[ 
+		\forall M,N \in GL_d( K) ^{t}M^{-1}= ^{t}M^{-1}, ^{t}( M.N)= ^{t}N. ^{t}M
+	\]
+	
+\end{propo}
+\begin{proof}
+Si $M$ est inversible
+\[ 
+\exists N= M^{-1}
+\]
+tel que
+\[ 
+M.M^{-1}= Id\quad M^{-1}M= Id
+\]
+On utilise la formule de transposition sur $M.M^{-1}$
+
+\end{proof}
+\subsection{Changement de Base}
+
+Soient $B\subset V$ et $B'\subset W$ et $\phi: V \to W$.\\
+A nouveau, supposons que $B_n\subset V$ et $B'_n\subset W$, avec
+\[ 
+	\phi \to mat_{B'_nB_n} ( \phi) = M_n
+\]
+Quelle est la relation entre $M$ et $M_n$.
+\begin{propo}[Formule de changement de base]
+	Soient $B,B_n\subset V$ et $B',B'_n\subset W$ des bases de $V$ et $W$. On a la relation
+	\[ 
+		Mat_{B'_nB_n} ( \phi) = Mat_{B'_nB'}(\id_w) Mat_{B'B} ( \phi).Mat_{B,B_n} ( \id_v) 
+	\]
+	
+
+\end{propo}
+
+\begin{proof}
+On a 
+\[ 
+\phi= \id_w \circ\phi\circ\id_v
+\]
+On utilise le calcul des matrices associee a des compositions d'applications lineaires dans ces bases convenables.\\
+On a
+\[ 
+\phi: V \to V \to W
+\]
+avec
+\[ 
+	mat_{B'B'} ( \phi\circ \id_v) = mat_{B'B} ( \phi) mat_{BB_n } ( \phi) 
+\]
+
+\end{proof}
+\begin{defn}[Matrice de Passage]
+	\[ 
+		M_{BB_n} = M_{BB_n} ( \id_v) = \text{ la matrice exprimant les coordonnees de  } \left\{ \id_v( e_{nj} j\leq d)  \right\} = B_n
+	\]
+	exprimes dans la base $B$.
+
+\end{defn}
+
+\begin{rmq}
+Les $M_{BB_n} $ sont inversibles.
+\end{rmq}
+\begin{propo}
+Soit trois bases $B,B_1,B_2\subset V$, on a
+\begin{enumerate}
+\item Formule d'inversion
+	\[ 
+	Mat_{BB_1} Mat_{BB_1} = \id_d
+	\]
+	En particulier une matrice de passage est inversible ( dans $M_d( K) $) et son inverse est la matrice de passage de la base initiale a la nouvelle base
+
+\item Formule de transitivite
+	\[ 
+	Mat_{BB_2} = Mat_{BB_1} Mat_{B_1B} 
+	\]
+
+\end{enumerate}
+
+\end{propo}
+\begin{proof}
+Consequence directe de la formule de la matrice associee a la composition de 2 applications lineaires appliquees a 
+\[ 
+\phi = \id_V \quad \psi=\id
+\]
+Si on applique la formule a $B_2=B$ on trouve le resultat desire.
+
+
+\end{proof}
+Le cas des endomorphismes si $W= V$, $B'=B$ et $B'_n = B_n$.\\
+Soit $\phi \in End( V) $ 
+\[ 
+	mat_{B_nB_n}( \phi) = mat_{B_nB} mat_{BB} ( \phi) mat_{BB_n} 
+\]
+On a vu que 
+\[ 
+mat_{B_nB} = mat_{BB_n}^{-1}
+\]
+Donc la formule de changement de base de $\phi$.
+\[ 
+	mat_{B_nB_n} (\phi) = mat_{BB_n}^{-1} mat_{BB} ( \phi) mat_{BB_n} 
+\]
+
+Si la base de depart egal a la base d'arrivee, on le note
+\[ 
+	mat_{B_n} ( \phi) = mat_{B_nB} mat_B( \phi) mat_{B_nB} ^{-1}
+\]
+\begin{defn}
+	Deux matrices $M$ et $N \in M_{d'\times d} ( K) $sont dites equivalentes si il existe des matrices inversibles $A \in GL_{d'} ( K), B\in GL_d( K)  $ telles que
+	\[ 
+	N= A.M.B
+	\]
+		
+\end{defn}
+\begin{propo}
+Deux matrices sont equivalents si et seulement si il existe $V$ de dimension $d$ et $W$ de dimension $d' $, des bases $B,B_n\subset V$et $B'B'_n\subset W$ et une application lineaire $\phi> V \to W$ telles que
+\[ 
+	M= mat_{B'B} ( \phi) N= mat_{B'_nB_n} ( \phi) 
+\]
+
+\end{propo}
+\begin{proof}
+	Si $M= mat_{B'B} ( \phi)$ et $N= mat_{B'_nB_n} ( \phi) $, alors
+	\[ 
+	N= mat_{B'_nB'} M.mat_{BB_n} 
+	\]
+	
+\end{proof}
+\begin{propo}
+Si $M$ et $N$ sont equivalents alors
+\[ 
+	rg( M) = rg( N) 
+\]
+\end{propo}
+\begin{proof}
+	\[ 
+		rg( M) = rg( \phi) = rg( N) 
+	\]
+	
+\end{proof}
+\begin{rmq}
+La relation ``etre equivalent'' est une relation d'equivalence.
+\end{rmq}
+\subsection{Conjugaison}
+\begin{defn}
+	Soit $C\in GL_d( K) $ une matrice inversible. On note $Ad( C)$ l'application dite de conjugaison par $C$ :
+	\[ 
+		Ad( C) : M \mapsto C.M.C^{-1}
+	\]
+	
+\end{defn}
+\begin{propo}
+	La conjugaison $Ad( C)$ est un automorphisme de l'algebre $M_d( K) $ 
+\end{propo}
+\begin{proof}
+	\begin{align*}
+		C.( \lambda M + N).C^{-1}= \lambda Ad( C) .M + Ad(  C).N
+	\end{align*}
+	Multiplicativite
+	\begin{align*}
+	CMNC^{-1}= CM\id NC^{-1}= CMC^{-1}CNC^{-1}
+	\end{align*}
+	Identite
+	\begin{align*}
+	C^{-1}CMC^{-1}C = M
+	\end{align*}
+	
+	
+	
+\end{proof}
+\begin{defn}[Application Adjointe]
+	\[ 
+		Ad: C \in GL_d( K) \to Ad( C)  \in GL( M_d( K) ) 
+	\]
+	$Ad$ est un morphisme de groupe.\\
+	On le verifie...
+
+
+\end{defn}
+On donne un nom a $\Im( Ad) = Ad( GL_d) $, on l'appelle le groupe des automorphismes interieurs.
+
+\begin{propo}
+	L'application adjointe $Ad( \bullet) $ est un morphisme de groupes. Son noyau est forme par les matrices scalaires
+	\[ 
+	\ker Ad = K^{\times}\id
+	\]
+	
+\end{propo}
+\begin{proof}
+
+	
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+\end{document}	

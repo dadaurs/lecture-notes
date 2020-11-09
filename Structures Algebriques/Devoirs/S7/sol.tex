@@ -21,7 +21,7 @@
 \maketitle
 \section*{1}
 Supposons que $( m,n) =1$.\\
-On utilise la propriété du produit universelle pour construire un morphisme entre $\f { \mathbb{Z}} { nm \mathbb{Z}} $.\\
+On utilise la propriété du produit universelle pour construire un morphisme entre $\f { \mathbb{Z}} { nm \mathbb{Z}} $ et $\f { \mathbb{Z}} { n \mathbb{Z}} \times \f { \mathbb{Z}} { m\mathbb{Z}} $.\\
 Soit l'application $\alpha$ définie par
 \[ 
 \alpha : k \in \f { \mathbb{Z}} { nm\mathbb{Z}} \mapsto [ k] _n \in \f { \mathbb{Z}} { n\mathbb{Z}} 
@@ -32,7 +32,7 @@ De même on définit l'application $\beta$ par
 \]
 où $[.]_m$ est la classe de congruence modulo m d' un élément.
 
-Vérifions que ces applications sont linéaires.\\
+Vérifions que ces applications sont des morphismes.\\
 On vérifie facilement que $\alpha$ et $\beta$ sont des morphismes, en effet 
 \[ 
 	\alpha( 0) = 0
@@ -40,10 +40,10 @@ On vérifie facilement que $\alpha$ et $\beta$ sont des morphismes, en effet
 car 0 est congru à 0 modulo n.\\
 Soit $a,b \in \f { \mathbb{Z}} { nm\mathbb{Z}} $, alors
  \[ 
-	 \alpha( a + b)  = [ a+b]_n = [ a]_n + [ b]_n
+	 \alpha( a + b)  = [ a+b]_n = [ a]_n + [ b]_n = \alpha( a) + \alpha( b) 
 \]
 où la dernière égalité suit directement de la définition de classe d'équivalence modulo n.\\
-On vérifie de la même manière que $\beta$ est linéaire.\\
+On vérifie de la même manière que $\beta$ est un morphisme.\\
 Par la propriété du produit universel, il existe donc un morphisme $\phi$ de $\f { \mathbb{Z} } { nm\mathbb{Z}} $ vers $\f { \mathbb{Z}} { n \mathbb{Z}} \times \f { \mathbb{Z}} { m \mathbb{Z}} $.\\
 
 De plus, on sait que $\pr_n \circ \phi = \alpha$ et $\pr_m \circ \phi =\beta$ où $\pr_n$ est la projection sur $ \f { \mathbb{Z}} { n \mathbb{Z}}$ et $\pr_m  $ la projection sur $\f { \mathbb{Z}} { m \mathbb{Z}}$.\\
@@ -55,10 +55,11 @@ Car
 \]
 Il suffit, par l'exercice 1 de la série 5, de vérifier que $\phi$ est injective.\\
 
-Supposons que $\phi( k) =( 0,0) $ et montrons que ceci implique $k=0$.\\
-Si $\phi( k) = (0,0) $, alors $\alpha( k) = 0 $ et $\beta( 0) $.
+Soit $k\in \f { \mathbb{Z}} { nm\mathbb{Z}} $ et supposons que $\phi(  k ) =( 0,0) $ et montrons que ceci implique $ k =0$.\\
+Si $\phi(  k ) = (0,0) $, alors $\alpha(  k ) = 0 $ et $\beta(  k )=0 $.
 Donc $[k]_n = 0$ et $[k]_m= 0$, donc $k$ est un multiple de $n$ et de $m$.
-Car $n$ et $m$ sont premiers entre eux, ceci implique qu'il existe $a$ tel que $k= anm$, donc $k=0$.\\
+Car $n$ et $m$ sont premiers entre eux \footnote{Si $n$ et $m$ sont premiers entre eux, ils ne partagent aucun facteur premier, d 'où l'égalité $k= anm$}, ceci implique qu'il existe $a$ tel que $k= anm$, donc $[ k ]_{nm} =0$.\\
+Donc l'application $\phi$ est injective et donc bijective.
 
 Supposons maintenant que $( n,m) \neq1$.\\
 Supposons par l'absurde qu'il existe un isomorphisme $\phi$ entre $\f { \mathbb{Z}} { nm \mathbb{Z}} $ et $\f { \mathbb{Z}} { n\mathbb{Z}} \times\f { \mathbb{Z}} { m \mathbb{Z}} $.
@@ -71,7 +72,7 @@ Ce qui implique
 	o(\phi( 1)) = nm
 \]
 Or, posons que $( n,m) = a$,  alors $a|nm$ et donc $\frac{nm}{a}$ est un entier.\\
-Car $\frac{nm}{a}$ est un multiple de $n$, on trouve que pour tout $k \in \f { \mathbb{Z}} { n\mathbb{Z}}$ 
+Car $\frac{nm}{a}$ est un multiple de  $n$, on trouve que pour tout $k \in \f { \mathbb{Z}} { n\mathbb{Z}}$ 
 \[ 
 \frac{nm}{a} \cdot [ k ]_n = [ 0 ]
 \]
@@ -81,7 +82,7 @@ Par le même argument, $\forall k \in\f { \mathbb{Z}} { m\mathbb{Z}} $
 \[ 
 \frac{nm}{a} \cdot [ k ]_m = [ 0 ]
 \]
-Donc l'ordre de $ \phi( 1) $ est borné par $\frac{nm}{a}$ ce qui est une contradiction au fait que $\phi$ est bijective.\\
+Donc l'ordre de $ \phi( 1) $ est borné par $\frac{nm}{a}$ ce qui est une contradiction au fait que $\phi$ est un isomorphisme.\\
 Donc, il ne peut pas y avoir d'isomorphismes si $( n,m) \neq 1$.
 \section*{2}
 \begin{thm}
@@ -114,10 +115,21 @@ En posant donc que $n_r\cdot n_{r+1}= p $, on trouve
 où l'égalité (1) suit de l'hypothèse de récurrence, et l'égalité (3) suit du théorème 1.\\
 La forme de l'isomorphisme ci-dessus est donné par la généralisation de l'isomorphisme donné en 1 à plusieurs entiers, c'est à dire
 \[ 
-	k \in \f { \mathbb{Z}} { ( n_1\ldots n_{r}) \mathbb{Z}} \mapsto ( [ k]_{n_1} , \ldots [k]_{n_r} ) 
+	\Phi: k \in \f { \mathbb{Z}} { ( n_1\ldots n_{r}) \mathbb{Z}} \mapsto ( [ k]_{n_1} , \ldots [k]_{n_r} ) 
 \]
-
-
+La vérification que $\Phi$ est un isomorphisme se fait comme dans la partie 1.\\
+En effet, il est clair que
+\[ 
+	\Phi( k+j) = \left( [ k+j]_{n_1}, \ldots \right) = \left( [ k]_{n_1} + [ j]_{n_1} , \ldots \right) = \Phi( k) + \Phi(j) 
+\]
+Et on vérifie également que
+\[ 
+	\Phi( 0) = \left( [ 0]_{n_1}, \ldots\right) = 0
+\]
+Finalement, par le même argument que dans la partie 1, il suffit de vérifier que $\ker \Phi = \left\{ 0 \right\} $. \\
+Soit $k \in \f { \mathbb{Z}} { ( n_1\ldots n_{r} ) \mathbb{Z}} $ et supposons que $\Phi( k) = 0$.\\
+Car les $n_i$ sont tous premiers entre eux, ceci entraine que $k$ est multiple de tous les $n_i$ et donc que $k=0$.\\
+Donc l'application $\Phi$ est un isomorphisme.
 
 
 

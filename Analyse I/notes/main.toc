@@ -15,3 +15,4 @@
 \contentsline {section}{\numberline {8}Dérivation}{52}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Applications de la dérivée}{55}{subsection.8.1}%
 \contentsline {subsubsection}{\numberline {8.1.1}Recherche d'extremums}{55}{subsubsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.2}Principe de Bernoulli-L'Hospital}{60}{subsection.8.2}%

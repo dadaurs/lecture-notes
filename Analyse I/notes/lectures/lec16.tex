@@ -1,0 +1,145 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{16}{Mon 09 Nov}{Lundi 09}
+\begin{defn}[Fonctions Lipschitzienne]
+La fonction $f$ est Lipschitz sur un intervalle $I$ si il existe $l$ tel que $\forall x, y \in I$ 
+\[ 
+	|f( x) -f( y) | \leq l \cdot |x-y|
+\]
+
+\end{defn}
+\begin{rmq}
+Si $f$ est Lipschitz, $f$ est continue, même uniformément continue sur $I$, poser $\delta = \frac{\epsilon}{l}$.\\
+On dit aussi  ``L-lipschitz''.
+\end{rmq}
+\begin{crly}
+Si $f$ est dérivable et $|f'|\leq L$ sur $I$, alors $f$ est L-lipschitz sur $I$
+\end{crly}
+\begin{proof}
+	TAF sur $[x,y]$, donc
+	\[ 
+		\exists z \in ]x,y[: f( x) - f( y) = f'( z) ( x-y) 
+	\]
+\end{proof}
+\begin{rmq}
+	$f( x) = \sqrt x$ sur $[0,1]$ est uniformément continue, mais sa dérivée est non-bornée sur $]0,1[$.
+\end{rmq}
+\begin{crly}[Théorème de Darboux]
+Soit $f$ continu en $x_0$.
+Si $f$ est dérivable au voisinage de $x_0$ et si 
+\[ 
+	\lim_{x \to x_0} f'( x) 
+\]
+existe, alors $f$ est dérivable en $x_0$.
+
+\end{crly}
+
+\begin{proof}
+	TAF sur $[x_0,x]$.\\
+	Donc il existe $z \in ]x_0,x[$ tel que 
+	\[ 
+		f'( z)  = \frac{f( x) - f( x_0) }{x-x_0}
+	\]
+	Posons $l= \lim_{x \to x_0} f'( x) $, donc
+	\[ 
+		l = \lim_{x \to x_0} \frac{f( x) - f( x_0) }{x-x_0}
+	\]
+	Donc $f'( x_0) $ existe et est égal à $l$.
+\end{proof}
+
+\begin{rmq}
+	Nous avons prouvé que $f'( x_0) $ existe et de plus $f'( x_0) = \lim_{x \to x_0} f'( x) $.\\
+Donc la dérivée est continue.
+\end{rmq}
+\begin{thm}[Theoreme de Cauchy]\index{Theoreme de Cauchy}\label{thm:theoreme_de_cauchy}
+	Soient $f,g : [ a,b] \to \mathbb{R}$ continue et dérivable sur $]a,b[$.\\	
+	Supposns que $g'$ ne s'annule pas sur $[a,b]$, alors 
+	\[ 
+		\exists c \in ]a,b[ \text{ tel que } \frac{f( b) - f( a) }{g( b) - g( a) } = \frac{f'( c) }{g'( c) }
+	\]
+	
+\end{thm}
+\begin{proof}
+Considérons
+\[ 
+	h( x)  = f( x) - f( a) - ( g(x ) - g( a)  ) \frac{f( b) - f( a) }{g( b) - g( a) }
+\]
+On a 
+\begin{align*}
+	h( a) = 0\\
+	h( b) = 0
+\end{align*}
+Rolle ( pour $h$) implique $\exists c \in ]a,b[ $ tel que
+\[ 
+	h'( c) = 0
+\]
+Or  
+\[ 
+	h'( c)  = f'( c) - \frac{f( b) - f( a) }{g( b) - g( a) }g'( c) 
+\]
+i.e. $\frac{f'( c) }{g'( c) }= \frac{f( b) - f( a) }{g( b) - g( a) } $
+
+\end{proof}
+\subsection{Principe de Bernoulli-L'Hospital}
+Idée:\\
+Calculer des limites du type $\frac{0}{0}$.
+\begin{thm}[Bernoulli-L'Hospital]
+	Soient $f,g: ]a,b[ \to \mathbb{R}$ dérivables avec
+	\[ 
+		\lim_{x \to a +} f( x) = 0 = \lim_{x \to a+} g( x) 
+	\]
+	Supposons 
+	\[ 
+		\lim_{x \to a+} \frac{f'( x) }{g'( x) }	
+	\]
+	existe et $g'( x) \neq 0$ au voisinage à droite de $a$.\\
+	Alors
+	\[ 
+		\lim_{x \to a+} \frac{f( x) }{g( x) }= \lim_{x \to a+} \frac{f'( x) }{g'( x) }
+	\]
+	
+	
+
+\end{thm}
+\begin{proof}
+	On étend $f$ et $g$ par continuité sur $[a,b[$ en posant $f( a) = 0 =g( a) $.\\
+	Soit $a<x<b$. Appliquons Cauchy sur  $[a,x]$.\\
+	Donc $\exists c \in ]a,x[$ tel que $\frac{f'( c_x) }{g'( c_x) }= \frac{f( x) - f( a) }{g( x) - g( a) } = \frac{f( x) }{g( x) } $.\\
+	Par hypothèse, la limite
+	\[ 
+		\lim_{x \to a+} \frac{f'( x) }{g'( x) }= \lim_{x \to a+} \frac{f'( c_x) }{g'( c_x) }
+	\]
+	existe.
+\end{proof}
+\begin{thm}[BH pour l'infini]
+	Soient $f,g: ]a,+ \infty [ \to \mathbb{R} $ dérivable.\\
+	Supposons $\lim_{x \to  + \infty} f( x) = 0 = \lim_{x \to  + \infty} g( x)  $
+	Si $ \lim_{x \to  + \infty} \frac{f'( x) }{g'( x) }$ existe, alors
+	\[ 
+		\lim_{x \to  + \infty} \frac{f( x) }{g( x) }= \lim_{x \to  + \infty} \frac{f'( x) }{g'( x) }
+	\]
+	
+	
+	
+\end{thm}
+
+\begin{proof}
+Sans perte de géneralité $a>0$. \\
+On définit $\phi, \psi: ]0,\frac{1}{a}[ \to \mathbb{R}$ par 
+\[ 
+	\phi( x) = f( \frac{1}{x}), \psi( x) = g( \frac{1}{x}) 
+\]
+BH pour $\frac{\phi}{\psi}$ sur $]0,\frac{1}{a}$ 
+\[ 
+	\lim_{x \to 0+} = \lim_{x \to 0+} \frac{\phi'( x) }{\psi'( x) }
+\]
+
+
+
+\end{proof}
+
+
+
+
+
+\end{document}	

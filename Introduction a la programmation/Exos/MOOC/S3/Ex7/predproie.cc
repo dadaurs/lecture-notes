@@ -46,7 +46,7 @@ int main()
   for(int i = 1; i<=duree;++i){
 	lapins *= (1.0 + taux_croissance_lapins - taux_attaque * prenards);
 	renards *= (1.0 + taux_attaque * plapins * taux_croissance_renards - taux_mortalite);
-	cout << "Après" << i << " mois, il y a " << lapins << " et " << renards << " renards" << endl;
+	cout << "Après " << i << " mois, il y a " << lapins << " lapins et " << renards << " renards" << endl;
 	prenards = renards;
 	plapins = lapins;
 
@@ -74,8 +74,10 @@ int main()
   //cout << "mais la population est remontée ! Ouf !" << endl;
 
   double perc;
-  for ( int taux= taux_debut; taux <= taux_fin; taux+=1){
-  cout <<  endl << "***** Le taux d'attaque vaut "<< perc << "%" <<  endl;
+  double taux=taux_debut*1.0;
+  while(taux<taux_fin){
+  perc= taux*1.0/100;
+  cout <<  endl << "***** Le taux d'attaque vaut "<< taux << "%" <<  endl;
   bool extinction_renards=false;
   bool extinction_lapins=false;
   bool pop_renards_ouf=false;
@@ -83,9 +85,11 @@ int main()
   bool renards_pouf=false;
   bool lapins_pouf=false;
   bool pouf=false;
-  perc= taux/100;
   plapins = lapins_i;
   prenards = renards_i;
+  lapins=plapins;
+  renards=prenards;
+  int dur;
 
   for(int i = 1; i<=duree;++i){
 	lapins *= (1.0 + taux_croissance_lapins -  perc * prenards );
@@ -118,26 +122,27 @@ int main()
 	plapins = lapins;
 
 
+	++taux;
   }
   if(!extinction_renards && !extinction_lapins && !pouf){
-  cout << "Après" << duree << " mois, il y a " << lapins << " lapins et " << renards << " renards." << endl;
+  cout << "Après " << duree << " mois, il y a " << lapins << " lapins et " << renards << " renards." << endl;
   cout << "Les lapins et les renards ont des populations stables." << endl;
   }
   if( extinction_renards ){
-  cout << "Après" << duree << " mois, il y a " << lapins << " lapins et " << renards << " renards." << endl;
+  cout << "Après " << duree << " mois, il y a " << lapins << " lapins et " << renards << " renards." << endl;
   cout << "Les renards ont été en voie d'extinction" << endl;
 	  if( pop_renards_ouf ){
 	  cout << "mais la population est remontée ! Ouf !" << endl;
 	  }else if(renards_pouf){
-  		cout << "et les renards ont disparu :-(" << endl;
+		  cout << "et les renards ont disparu :-(" << endl;
 	  }
   }
   if (extinction_lapins){
   cout << "Les lapins ont été en voie d'extinction" << endl;
-  	if(pop_lapins_ouf){
+	  if(pop_lapins_ouf){
 	 cout << "mais la population est remontée ! Ouf !" << endl;
 	} else if (lapins_pouf){
-  	cout << "et les lapins ont disparu :-(" << endl;
+	  cout << "et les lapins ont disparu :-(" << endl;
 	}
   }
   }

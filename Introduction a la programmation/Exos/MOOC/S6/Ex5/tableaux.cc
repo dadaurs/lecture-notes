@@ -4,8 +4,8 @@ using namespace std;
 
 int somme_consecutifs_max(vector<int> tab){
 int max=tab[0];
-int r;
-int i=0;
+int r=0;
+size_t i=0;
 while(i<tab.size()){
 if(tab[i]==0){
 		r=0;
@@ -47,9 +47,18 @@ vector<vector<int>> tranches_max(vector<vector<int>> tab){
 
 
 }
+void printarr(vector<vector<int>> t){
+	for(auto i:t){
+	for(auto j:i){
+		cout<< j;
+	}
+	cout<<endl;
+	}
+}
 
 
 int main(){
-
+	vector<vector<int>> t= {{2,1,0,2},{0,1,0,3},{1,3,0,0},{0,2,2,0}};
+	printarr(tranches_max(t));
 return 0;
 }

@@ -11,9 +11,9 @@ return debut + (((c - debut) + dec) % 26);
 
 }
 char code(char c, int d){
-	if(c > 'a' && c<'z'){
+	if(c >= 'a' && 'z'>=c){
 	return decale(c,'a',d);
-	}else if(c > 'A' && c<'Z'){
+	}else if(c >= 'A' && 'Z'>=c){
 	return decale(c,'A',d);
 	}
 	return c;
@@ -22,7 +22,7 @@ char code(char c, int d){
 }
 string code(string s,int  d){
 	string enc;
-	for(int i=0;i<s.size();i++){
+	for(size_t i=0;i<s.size();i++){
 		enc+=code(s[i],d);
 	}
 return enc;
@@ -30,7 +30,7 @@ return enc;
 }
 string decode(string s,int  d){
 	string enc;
-	for(int i=0;i<s.size();i++){
+	for(size_t i=0;i<s.size();i++){
 		enc+=code(s[i],-d);
 	}
 return enc;
@@ -41,6 +41,5 @@ return enc;
 
 
 int main(){
-
 return 0;
 }
