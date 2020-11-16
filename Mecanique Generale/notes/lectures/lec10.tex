@@ -1,0 +1,92 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Wed 11 Nov}{Chocs ou collisions entre deux corps}
+On veut faire la somme
+\[ 
+\sum_{\alpha} m_\alpha \vec{r}_\alpha ^{*}
+\]
+On a 
+\begin{align*}
+	&\sum_\alpha m_\alpha( \vec{r}_\alpha - \vec{r}_G) \\
+	&= \underbrace{\sum_{\alpha} \vec{r}_\alpha}_{=M\vec{r}_G} - \sum_\alpha m_\alpha \vec{r}_G =0
+\end{align*}
+La quantite de mouvement totale par rapport au centre de masse est
+\begin{align*}
+	\sum_{\alpha} m_\alpha \vec{v}_{\alpha} ^{*} = \sum_{\alpha} m_\alpha \frac{d}{dt} \left( \right) 
+\end{align*}
+\subsection{Probleme a deux corps}
+\begin{align*}
+\vec{R} = \frac{m_1 \vec{r}_1 +m_2\vec{r}_2}{m_1+m_2} = \text{ coordonnees du centre de masse } \\
+\vec{r}= \vec{r_1} - \vec{r_2} = \text{ coordonnees relatives } 
+\end{align*}
+On peut determiner l'equation du mouvement, on trouve
+\[ 
+	0 = ( m_1+m_2) \ddot{\vec{R}}
+\]
+On trouve
+\[ 
+	\vec{F}_{2\to 1} ( m_1+m_2) = m_1m_2 \ddot{\vec{r}}
+\]
+
+On trouve donc
+\[ 
+\vec{F}_{2\to 1} = \mu \ddot{ \vec{r} } \text{ ou } \mu= \frac{m_1m_2}{m_1+m_2}
+\]
+La quatite de mouvement totale est
+\[ 
+\vec{p}_{tot} = M \vec{V}
+\]
+En developpant le moment cinetique total, on trouve
+\[ 
+	\vec{L}_{tot,)} = \vec{R} \land M \vec{V} + \vec{L}_{tot,G} ^{*}
+\]
+le premier theorem de Koenig.\\
+De meme, on trouve le deuxieme theoreme de Koenig
+\[ 
+K_{tot} = \frac{1}{2}M \vec{V}^{2} + K_{tot} ^{*}
+\]
+
+\section{Chocs ou collisions entre deux corps}
+On peut separer une collision en 3 etapes
+\begin{itemize}
+\item L'etat initial, $F=0$ 
+\item Collision, $F\neq 0, F= ???$ 
+\item etat final $F=0$
+\end{itemize}
+\subsection{Chocs entre deux points materiels}
+On choisit sans perte de géneralité, un referentiel dans lequel l'une des deux boules est initialement au repos.\\
+Conservation de la quantite de mouvement totale
+\[ 
+m_1 \vec{v}_{1i} = m_1 \vec{v}_{1f}  + m_2 \vec{v}_{2f} 
+\]
+
+On peut projeter sur $x$ et $y$ 
+\begin{align*}
+m_1  v_{1i} = m_1 v_{1f}  \cos \theta_1 + m_2 v_{2f}  \cos \theta_2\\
+0 = m_1 v_{1f} \sin \theta_1 - m_2 v_{2f} \sin \theta_2
+\end{align*}
+\subsection{Choc elastique}
+C'est quand la variation de l'energie cinetique est nulle..\\
+Donc
+\[ 
+m_2 v_{2f}^{2} = m_1 v_{1i} ^{2} - m_1 v_{1f} ^{2}
+\]
+On substitue l'equation ci-dessus
+\[ 
+m_1 ^{2} v_{1i} ^{2} + m_1^{2} v_{1f} ^{2} - 2 m_1^{2}	v_{1i} v_{1f}  \cos \theta_1 = m_2^{2} v_{2f} ^{2}
+\]
+Finalement, on obtient
+\[ 
+	v_{1i} ^{2} + v_{1f} ^{2} - 2 v_{1i} v_{1f}  \cos \theta_1 = \frac{m_2^{2}}{m_1^{2}}v_{2f} ^{2} = \frac{m_2}{m_1^{2}}( m_1 v_{1i} ^{2} - m_1 v_{1f} ^{2})  = \frac{m_2}{m_1}v_{1i} ^{2} - \frac{m_2}{m_1}v_{1f} ^{2}
+\]
+
+
+
+ 
+
+
+
+
+
+
+\end{document}	

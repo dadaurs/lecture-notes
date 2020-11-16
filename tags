@@ -7,146 +7,130 @@
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
 $\\mathcal{P}(E)$ l'ensemble des sous-ensembles	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{$\\mathcal{P}(E)$ l'ensemble des sous-ensembles}$/;"	u	section:Le language des Ensembles
-$\\mathcal{P}(E)$ l'ensemble des sous-ensembles	current-course/notes/lectures/lec1.tex	/^\\subsection{$\\mathcal{P}(E)$ l'ensemble des sous-ensembles}$/;"	u	section:Le language des Ensembles
 $\\times$: Produit cartesien	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{$\\times$: Produit cartesien}$/;"	u	section:Le language des Ensembles
-$\\times$: Produit cartesien	current-course/notes/lectures/lec1.tex	/^\\subsection{$\\times$: Produit cartesien}$/;"	u	section:Le language des Ensembles
 1	Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{1}$/;"	s
 1	Algebre Lineaire I/Exos/S5/Ex3.tex	/^\\section*{1}$/;"	s
 1	Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{1}$/;"	s
 1	Structures Algebriques/Devoirs/S6/sol.tex	/^\\section*{1}$/;"	s
 1	Structures Algebriques/Devoirs/S7/sol.tex	/^\\section*{1}$/;"	s
 1	Structures Algebriques/Devoirs/S8/sol.tex	/^\\section*{1}$/;"	s
-1	current-course/Exos/S4/Ex4.tex	/^\\section*{1}$/;"	s
-1	current-course/Exos/S5/Ex3.tex	/^\\section*{1}$/;"	s
+1.4	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{1.4}$/;"	s
+1.5	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{1.5}$/;"	s
 2	Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{2}$/;"	s
 2	Algebre Lineaire I/Exos/S5/Ex3.tex	/^\\section*{2}$/;"	s
 2	Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{2}$/;"	s
 2	Structures Algebriques/Devoirs/S6/sol.tex	/^\\section*{2}$/;"	s
 2	Structures Algebriques/Devoirs/S7/sol.tex	/^\\section*{2}$/;"	s
 2	Structures Algebriques/Devoirs/S8/sol.tex	/^\\section*{2}$/;"	s
-2	current-course/Exos/S4/Ex4.tex	/^\\section*{2}$/;"	s
-2	current-course/Exos/S5/Ex3.tex	/^\\section*{2}$/;"	s
+2.1.2	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{2.1.2}$/;"	s
+2.3.1	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{2.3.1}$/;"	s
 2eme loi et theoreme du moment cinétique	Mecanique Generale/notes/lectures/lec9.tex	/^\\subsection{2eme loi et theoreme du moment cinétique}$/;"	u	section:Gravitation, Moment Cinétique
 3	Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{3}$/;"	s
 3	Algebre Lineaire I/Exos/S5/Ex3.tex	/^\\section*{3}$/;"	s
 3	Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{3}$/;"	s
 3	Structures Algebriques/Devoirs/S8/sol.tex	/^\\section*{3}$/;"	s
-3	current-course/Exos/S4/Ex4.tex	/^\\section*{3}$/;"	s
-3	current-course/Exos/S5/Ex3.tex	/^\\section*{3}$/;"	s
 4	Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{4}$/;"	s
 4	Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{4}$/;"	s
-4	current-course/Exos/S4/Ex4.tex	/^\\section*{4}$/;"	s
 4.1	Algebre Lineaire I/Exos/S2/Ex4/sol.tex	/^\\section*{4.1}$/;"	s
-4.1	current-course/Exos/S2/Ex4/sol.tex	/^\\section*{4.1}$/;"	s
+4.1	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{4.1}$/;"	s
 4.2	Algebre Lineaire I/Exos/S2/Ex4/sol.tex	/^\\section*{4.2}$/;"	s
-4.2	current-course/Exos/S2/Ex4/sol.tex	/^\\section*{4.2}$/;"	s
+4.2	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{4.2}$/;"	s
 4.3	Algebre Lineaire I/Exos/S2/Ex4/sol.tex	/^\\section*{4.3}$/;"	s
-4.3	current-course/Exos/S2/Ex4/sol.tex	/^\\section*{4.3}$/;"	s
 5.1	Algebre Lineaire I/Exos/S3/sol.tex	/^\\section*{5.1}$/;"	s
-5.1	current-course/Exos/S3/sol.tex	/^\\section*{5.1}$/;"	s
 5.2	Algebre Lineaire I/Exos/S3/sol.tex	/^\\section*{5.2}$/;"	s
-5.2	current-course/Exos/S3/sol.tex	/^\\section*{5.2}$/;"	s
+6.1	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{6.1}$/;"	s
+6.2	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{6.2}$/;"	s
+6.3	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{6.3}$/;"	s
 A quoi ca sert?	Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsection{A quoi ca sert?}$/;"	u	section:Information, Calcul et Communication
 Algorithme d'Euclide	Structures Algebriques/notes/lectures/lec3.tex	/^\\subsection{Algorithme d'Euclide}$/;"	u	section:Theorie des nombres
 Algorithmes	Introduction a la programmation/notes/lectures/lec2.tex	/^\\section{Algorithmes}$/;"	s
 Anneaux	Algebre Lineaire I/notes/lectures/lec5.tex	/^\\section{Anneaux}$/;"	s
-Anneaux	current-course/notes/lectures/lec5.tex	/^\\section{Anneaux}$/;"	s
 Applications de la dérivée	Analyse I/notes/lectures/lec15.tex	/^\\subsection{Applications de la dérivée}$/;"	u	section:Dérivation
+Applications de la dérivée	current-course/notes/lectures/lec15.tex	/^\\subsection{Applications de la dérivée}$/;"	u	section:Dérivation
 Applications entre ensembles	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Applications entre ensembles}$/;"	u	section:Le language des Ensembles
 Applications entre ensembles	Structures Algebriques/notes/lectures/lec2.tex	/^\\section{Applications entre ensembles}$/;"	s
-Applications entre ensembles	current-course/notes/lectures/lec1.tex	/^\\subsection{Applications entre ensembles}$/;"	u	section:Le language des Ensembles
 Arithmétique des corps de caractéristique $p>0$	Algebre Lineaire I/notes/lectures/lec9.tex	/^\\subsection{Arithmétique des corps de caractéristique $p>0$}$/;"	u	section:Anneaux
-Arithmétique des corps de caractéristique $p>0$	current-course/notes/lectures/lec9.tex	/^\\subsection{Arithmétique des corps de caractéristique $p>0$}$/;"	u	section:Anneaux
 Associativite	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{Associativite}$/;"	b	subsection:Le language des Ensembles""Composition/Associativite
-Associativite	current-course/notes/lectures/lec1.tex	/^\\subsubsection{Associativite}$/;"	b	subsection:Le language des Ensembles""Composition/Associativite
 Bases	Algebre Lineaire I/notes/lectures/lec11.tex	/^\\subsection{Bases}$/;"	u	section:Espaces Vectoriels
-Bases	current-course/notes/lectures/lec11.tex	/^\\subsection{Bases}$/;"	u	section:Espaces Vectoriels
+Bernoulli-L'hospital pour infini sur infini	Analyse I/notes/lectures/lec17.tex	/^\\subsection{Bernoulli-L'hospital pour infini sur infini}$/;"	u	section:Dérivation
+Bernoulli-L'hospital pour infini sur infini	current-course/notes/lectures/lec17.tex	/^\\subsection{Bernoulli-L'hospital pour infini sur infini}$/;"	u	section:Dérivation
 Bille en équilibre dans un anneau en rotation	Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Bille en équilibre dans un anneau en rotation}$/;"	u	section:Description des rotations spatiales
 Buts du Cours	Analyse I/notes/lectures/lec1.tex	/^\\subsection{Buts du Cours}$/;"	u	section:Introduction
+Buts du Cours	current-course/notes/lectures/lec1.tex	/^\\subsection{Buts du Cours}$/;"	u	section:Introduction
 Calcul scientifique	Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsubsection{Calcul scientifique}$/;"	b	subsection:Information, Calcul et Communication""A quoi ca sert?
 Caractéristique des Corps	Algebre Lineaire I/notes/lectures/lec9.tex	/^\\subsection{Caractéristique des Corps}$/;"	u	section:Anneaux
-Caractéristique des Corps	current-course/notes/lectures/lec9.tex	/^\\subsection{Caractéristique des Corps}$/;"	u	section:Anneaux
 Cardinal d'un ensemble	Structures Algebriques/notes/lectures/lec2.tex	/^\\subsection{Cardinal d'un ensemble}$/;"	u	section:Applications entre ensembles
 Carte	Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^typedef vector<vector<int>> Carte;$/;"	t	typeref:typename:vector<vector<int>>	file:
 Cas particulier	Mecanique Generale/notes/lectures/lec5.tex	/^\\subsubsection{Cas particulier}$/;"	b	subsection:Description des rotations spatiales""Interprétation du vecteur $\\omega$
 Centre de masse	Mecanique Generale/notes/lectures/lec9.tex	/^\\subsection{Centre de masse}$/;"	u	section:Gravitation, Moment Cinétique
 Champ de gravitation	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Champ de gravitation}$/;"	u	section:Gravitation, Moment Cinétique
-Changement de Base	Algebre Lineaire I/notes/lectures/lec16.tex	/^\\subsection{Changement de Base}$/;"	u
+Changement de Base	Algebre Lineaire I/notes/lectures/lec16.tex	/^\\subsection{Changement de Base}$/;"	u	section:Matrices
+Choc elastique	Mecanique Generale/notes/lectures/lec10.tex	/^\\subsection{Choc elastique}$/;"	u	section:Chocs ou collisions entre deux corps
+Chocs entre deux points materiels	Mecanique Generale/notes/lectures/lec10.tex	/^\\subsection{Chocs entre deux points materiels}$/;"	u	section:Chocs ou collisions entre deux corps
+Chocs ou collisions entre deux corps	Mecanique Generale/notes/lectures/lec10.tex	/^\\section{Chocs ou collisions entre deux corps}$/;"	s
 Coefficients de frottement	Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Coefficients de frottement}$/;"	u	section:Travail, énergie, forces conservatives
 Comment, a partir d'un probleme concret, trouver une solution?	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Comment, a partir d'un probleme concret, trouver une solution?}$/;"	u	section:Definition formelle des algorithmes
 Complexite: notation $\\Theta$	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Complexite: notation $\\Theta$}$/;"	u	section:Definition formelle des algorithmes
 Composition d'applications linéaires	Algebre Lineaire I/notes/lectures/lec14.tex	/^\\subsection{Composition d'applications linéaires}$/;"	u	section:Espaces Vectoriels
-Composition d'applications linéaires	current-course/notes/lectures/lec14.tex	/^\\subsection{Composition d'applications linéaires}$/;"	u	section:Espaces Vectoriels
 Composition/Associativite	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Composition\/Associativite}$/;"	u	section:Le language des Ensembles
-Composition/Associativite	current-course/notes/lectures/lec1.tex	/^\\subsection{Composition\/Associativite}$/;"	u	section:Le language des Ensembles
 Conclusion	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Conclusion}$/;"	u	section:Definition formelle des algorithmes
-Conjugaison	Algebre Lineaire I/notes/lectures/lec16.tex	/^\\subsection{Conjugaison}$/;"	u
+Conjugaison	Algebre Lineaire I/notes/lectures/lec16.tex	/^\\subsection{Conjugaison}$/;"	u	section:Matrices
 Conservation de l'énergie mécanique	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Conservation de l'énergie mécanique}$/;"	u	section:Travail, énergie, forces conservatives
 Construction de Groupes avec des quotients	Structures Algebriques/notes/lectures/lec5.tex	/^\\subsection{Construction de Groupes avec des quotients}$/;"	u	section:Théorie des Groupes
 Continuité	Analyse I/notes/lectures/lec10.tex	/^\\subsection{Continuité}$/;"	u	section:Series
+Continuité	current-course/notes/lectures/lec10.tex	/^\\subsection{Continuité}$/;"	u	section:Series
 Convergence	Analyse I/notes/lectures/lec3.tex	/^\\subsection{Convergence}$/;"	u	section:Suites et limites
+Convergence	current-course/notes/lectures/lec3.tex	/^\\subsection{Convergence}$/;"	u	section:Suites et limites
 Coordonnées sphériques	Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Coordonnées sphériques}$/;"	u	section:Description des rotations spatiales
 Corps	Algebre Lineaire I/notes/lectures/lec8.tex	/^\\section{Corps}$/;"	s
-Corps	current-course/notes/lectures/lec8.tex	/^\\section{Corps}$/;"	s
 Corps des fractions	Algebre Lineaire I/notes/lectures/lec8.tex	/^\\subsection{Corps des fractions}$/;"	u	section:Corps
-Corps des fractions	current-course/notes/lectures/lec8.tex	/^\\subsection{Corps des fractions}$/;"	u	section:Corps
 Couleur	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^enum Couleur { vide,rouge, jaune};$/;"	g	file:
 Definir $\\mathbb{R}$	Analyse I/notes/lectures/lec1.tex	/^\\section{Definir $\\mathbb{R}$}$/;"	s
+Definir $\\mathbb{R}$	current-course/notes/lectures/lec1.tex	/^\\section{Definir $\\mathbb{R}$}$/;"	s
 Definition formelle des algorithmes	Introduction a la programmation/notes/lectures/lec4.tex	/^\\section{Definition formelle des algorithmes}$/;"	s
 Description des rotations spatiales	Mecanique Generale/notes/lectures/lec5.tex	/^\\section{Description des rotations spatiales}$/;"	s
 Dichotomie	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Dichotomie}$/;"	u	section:Definition formelle des algorithmes
 Dynamique du point materiel	Mecanique Generale/notes/lectures/lec4.tex	/^\\section{Dynamique du point materiel}$/;"	s
 Déduction de la force de Gravitation en $\\frac{1}{r^{2}}$	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Déduction de la force de Gravitation en $\\frac{1}{r^{2}}$}$/;"	u	section:Gravitation, Moment Cinétique
 Dérivation	Analyse I/notes/lectures/lec13.tex	/^\\section{Dérivation}$/;"	s
+Dérivation	current-course/notes/lectures/lec13.tex	/^\\section{Dérivation}$/;"	s
 Elément inversible	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\subsection{Elément inversible}$/;"	u	section:Anneaux
-Elément inversible	current-course/notes/lectures/lec6.tex	/^\\subsection{Elément inversible}$/;"	u	section:Anneaux
 Energie potentielle	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Energie potentielle}$/;"	u	section:Travail, énergie, forces conservatives
 Energie potentielle gravifique	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Energie potentielle gravifique}$/;"	u	section:Gravitation, Moment Cinétique
 Ensembles	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Ensembles}$/;"	u	section:Le language des Ensembles
 Ensembles	Structures Algebriques/notes/lectures/lec1.tex	/^\\subsection{Ensembles}$/;"	u	section:Preuves
-Ensembles	current-course/notes/lectures/lec1.tex	/^\\subsection{Ensembles}$/;"	u	section:Le language des Ensembles
 Equations Differentielles	Mecanique Generale/notes/lectures/lec2.tex	/^\\subsection{Equations Differentielles}$/;"	u	section:Quelques notions mathematiques
 Espaces Vectoriels	Algebre Lineaire I/notes/lectures/lec10.tex	/^\\section{Espaces Vectoriels}$/;"	s
-Espaces Vectoriels	current-course/notes/lectures/lec10.tex	/^\\section{Espaces Vectoriels}$/;"	s
 Espaces d'applications linéaires	Algebre Lineaire I/notes/lectures/lec13.tex	/^\\subsection{Espaces d'applications linéaires}$/;"	u	section:Espaces Vectoriels
-Espaces d'applications linéaires	current-course/notes/lectures/lec13.tex	/^\\subsection{Espaces d'applications linéaires}$/;"	u	section:Espaces Vectoriels
 Espaces vectoriels de dimension infinie	Algebre Lineaire I/notes/lectures/lec12.tex	/^\\subsection{Espaces vectoriels de dimension infinie}$/;"	u	section:Espaces Vectoriels
-Espaces vectoriels de dimension infinie	current-course/notes/lectures/lec12.tex	/^\\subsection{Espaces vectoriels de dimension infinie}$/;"	u	section:Espaces Vectoriels
 Etude de cas	Introduction a la programmation/notes/lectures/lec3.tex	/^\\section{Etude de cas}$/;"	s
 Examen	Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^typedef vector<qcm> Examen;$/;"	t	typeref:typename:vector<qcm>	file:
 Exemple d'utilisation	Analyse I/notes/lectures/lec2.tex	/^\\subsection{Exemple d'utilisation}$/;"	u	section:3
+Exemple d'utilisation	current-course/notes/lectures/lec2.tex	/^\\subsection{Exemple d'utilisation}$/;"	u	section:Chocs ou collisions entre deux corps
 Exemple de loi physique: l'addition des vitesse	Mecanique Generale/notes/lectures/lec1.tex	/^\\subsection{Exemple de loi physique: l'addition des vitesse}$/;"	u	section:Physique
 Exemples	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{Exemples}$/;"	b	subsection:Le language des Ensembles""Ensembles
-Exemples	current-course/notes/lectures/lec1.tex	/^\\subsubsection{Exemples}$/;"	b	subsection:Le language des Ensembles""Ensembles
 Exercice	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{ Exercice }$/;"	b	subsection:Le language des Ensembles""$\\mathcal{P}(E)$ l'ensemble des sous-ensembles
-Exercice	current-course/notes/lectures/lec1.tex	/^\\subsubsection{ Exercice }$/;"	b	subsection:Le language des Ensembles""$\\mathcal{P}(E)$ l'ensemble des sous-ensembles
 Expression	Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{Expression}$/;"	u	section:Etude de cas
 Famille Libre	Algebre Lineaire I/notes/lectures/lec11.tex	/^\\subsection{Famille Libre}$/;"	u	section:Espaces Vectoriels
-Famille Libre	current-course/notes/lectures/lec11.tex	/^\\subsection{Famille Libre}$/;"	u	section:Espaces Vectoriels
 Familles génératrices	Algebre Lineaire I/notes/lectures/lec10.tex	/^\\subsection{Familles génératrices}$/;"	u	section:Espaces Vectoriels
-Familles génératrices	current-course/notes/lectures/lec10.tex	/^\\subsection{Familles génératrices}$/;"	u	section:Espaces Vectoriels
 Fonctions	Analyse I/notes/lectures/lec8.tex	/^\\section{Fonctions}$/;"	s
 Fonctions	Mecanique Generale/notes/lectures/lec2.tex	/^\\subsection{Fonctions}$/;"	u	section:Quelques notions mathematiques
+Fonctions	current-course/notes/lectures/lec8.tex	/^\\section{Fonctions}$/;"	s
 Force de pesanteur et chute des corps	Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Force de pesanteur et chute des corps}$/;"	s
 Forces conservatives	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Forces conservatives}$/;"	u	section:Travail, énergie, forces conservatives
 Forces de Frottement	Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Forces de Frottement}$/;"	u	section:Travail, énergie, forces conservatives
 Forces de frottement sec	Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Forces de frottement sec}$/;"	u	section:Travail, énergie, forces conservatives
 Formalisation d'algorithmes	Introduction a la programmation/notes/lectures/lec2.tex	/^\\subsection{Formalisation d'algorithmes}$/;"	u	section:Algorithmes
 Formes linéaires	Algebre Lineaire I/notes/lectures/lec13.tex	/^\\subsection{Formes linéaires}$/;"	u	section:Espaces Vectoriels
-Formes linéaires	current-course/notes/lectures/lec13.tex	/^\\subsection{Formes linéaires}$/;"	u	section:Espaces Vectoriels
 Formes linéaires et dualité	Algebre Lineaire I/notes/lectures/lec13.tex	/^\\subsection{Formes linéaires et dualité}$/;"	u	section:Espaces Vectoriels
-Formes linéaires et dualité	current-course/notes/lectures/lec13.tex	/^\\subsection{Formes linéaires et dualité}$/;"	u	section:Espaces Vectoriels
 Graphe	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{Graphe}$/;"	b	subsection:Le language des Ensembles""Applications entre ensembles
-Graphe	current-course/notes/lectures/lec1.tex	/^\\subsubsection{Graphe}$/;"	b	subsection:Le language des Ensembles""Applications entre ensembles
 Gravitation, Moment Cinétique	Mecanique Generale/notes/lectures/lec8.tex	/^\\section{Gravitation, Moment Cinétique}$/;"	s
 Grille	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^typedef  array<array<Couleur,7>,6> Grille;$/;"	t	typeref:typename:array<array<Couleur,7>,6>	file:
 Groupe engendre par un ensemble	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\subsection{Groupe engendre par un ensemble}$/;"	u	section:Sous-Groupe
-Groupe engendre par un ensemble	current-course/notes/lectures/lec3.tex	/^\\subsection{Groupe engendre par un ensemble}$/;"	u	section:Sous-Groupe
 Groupe symmétrique de n	Structures Algebriques/notes/lectures/lec4.tex	/^\\subsection{Groupe symmétrique de n}$/;"	u	section:Théorie des Groupes
 Groupes	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\section{Groupes}$/;"	s
-Groupes	current-course/notes/lectures/lec2.tex	/^\\section{Groupes}$/;"	s
+Groupes diedraux	Structures Algebriques/notes/lectures/lec9.tex	/^\\subsection{Groupes diedraux}$/;"	u	section:Théorie des Groupes
 Image,Preimage	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Image,Preimage}$/;"	u	section:Le language des Ensembles
-Image,Preimage	current-course/notes/lectures/lec1.tex	/^\\subsection{Image,Preimage}$/;"	u	section:Le language des Ensembles
 Impulsion et quantité de mouvement	Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Impulsion et quantité de mouvement}$/;"	u	section:Travail, énergie, forces conservatives
 Information, Calcul et Communication	Introduction a la programmation/notes/lectures/lec1.tex	/^\\section{Information, Calcul et Communication}$/;"	s
 Injection de $ \\mathbb{N}^{n} \\to \\mathbb{N}$	Structures Algebriques/Devoirs/S3/sol.tex	/^\\subsection*{Injection de $ \\mathbb{N}^{n} \\to \\mathbb{N}$}$/;"	u	section:2
@@ -158,6 +142,7 @@ Instructions elementaires	Introduction a la programmation/notes/lectures/lec4.te
 Interprétation du vecteur $\\omega$	Mecanique Generale/notes/lectures/lec5.tex	/^\\subsection{Interprétation du vecteur $\\omega$}$/;"	u	section:Description des rotations spatiales
 Introduction	Analyse I/notes/lectures/lec1.tex	/^\\section{Introduction}$/;"	s
 Introduction	Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsection{Introduction}$/;"	u	section:Information, Calcul et Communication
+Introduction	current-course/notes/lectures/lec1.tex	/^\\section{Introduction}$/;"	s
 Intégrales premières d'un mouvement central	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Intégrales premières d'un mouvement central}$/;"	u	section:Gravitation, Moment Cinétique
 Invariance par changement de referentiel	Mecanique Generale/notes/lectures/lec1.tex	/^\\subsection{Invariance par changement de referentiel}$/;"	u	section:Physique
 L'homomorphisme $\\sgn$	Structures Algebriques/notes/lectures/lec7.tex	/^\\subsection{L'homomorphisme $\\sgn$ }$/;"	u	section:Théorie des Groupes
@@ -167,37 +152,30 @@ La gestion d'information	Introduction a la programmation/notes/lectures/lec1.tex
 La mecanique classique	Mecanique Generale/notes/lectures/lec1.tex	/^\\section{La mecanique classique}$/;"	s
 Le développement de la dynamique	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Le développement de la dynamique}$/;"	u	section:Gravitation, Moment Cinétique
 Le groupe Symmetrique	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\subsection{Le groupe Symmetrique}$/;"	u	section:Groupes
-Le groupe Symmetrique	current-course/notes/lectures/lec2.tex	/^\\subsection{Le groupe Symmetrique}$/;"	u	section:Groupes
-Le groupe lineaire	Algebre Lineaire I/notes/lectures/lec16.tex	/^\\subsection{Le groupe lineaire}$/;"	u
+Le groupe lineaire	Algebre Lineaire I/notes/lectures/lec16.tex	/^\\subsection{Le groupe lineaire}$/;"	u	section:Matrices
 Le langage C++	Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{Le langage C++}$/;"	u	section:Etude de cas
 Le language des Ensembles	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\section{Le language des Ensembles}$/;"	s
-Le language des Ensembles	current-course/notes/lectures/lec1.tex	/^\\section{Le language des Ensembles}$/;"	s
 Le modele du ``point materiel''	Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Le modele du ``point materiel'' }$/;"	s
 Lecture Notes For Math Bachelor	README.md	/^# Lecture Notes For Math Bachelor$/;"	c
 Les matrices carrées	Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Les matrices carrées}$/;"	u	section:Matrices
-Les matrices carrées	current-course/notes/lectures/lec15.tex	/^\\subsection{Les matrices carrées}$/;"	u	section:Matrices
 Les tris	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Les tris}$/;"	u	section:Definition formelle des algorithmes
 Limsup et liminf	Analyse I/notes/lectures/lec4.tex	/^\\section{Limsup et liminf}$/;"	s
+Limsup et liminf	current-course/notes/lectures/lec4.tex	/^\\section{Limsup et liminf}$/;"	s
 Loi de gravitation universelle	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Loi de gravitation universelle}$/;"	u	section:Gravitation, Moment Cinétique
 Lois de Kepler	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Lois de Kepler}$/;"	u	section:Gravitation, Moment Cinétique
 Lois de conservation	Mecanique Generale/notes/lectures/lec1.tex	/^\\subsection{Lois de conservation}$/;"	u	section:Physique
 Lois de newton	Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Lois de newton}$/;"	s
 Lugeur	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Lugeur}$/;"	u	section:Travail, énergie, forces conservatives
 Maison	Introduction a la programmation/Exos/MOOC/S7/Ex2/maison.cc	/^struct Maison {$/;"	s	file:
+Match	Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^struct Match{$/;"	s	file:
 Matrices	Algebre Lineaire I/notes/lectures/lec14.tex	/^\\section{Matrices}$/;"	s
-Matrices	current-course/notes/lectures/lec14.tex	/^\\section{Matrices}$/;"	s
 Methodologie	Introduction a la programmation/notes/lectures/lec2.tex	/^\\subsubsection{Methodologie}$/;"	b	subsection:Algorithmes""Formalisation d'algorithmes
 Modelisation de la force d'un ressort	Mecanique Generale/notes/lectures/lec3.tex	/^\\subsection{Modelisation de la force d'un ressort}$/;"	u	section:Oscillateurs Harmoniques
 Module engendré par un ensemble	Algebre Lineaire I/notes/lectures/lec7.tex	/^\\subsection{Module engendré par un ensemble}$/;"	u	section:Anneaux
-Module engendré par un ensemble	current-course/notes/lectures/lec7.tex	/^\\subsection{Module engendré par un ensemble}$/;"	u	section:Anneaux
 Modules sur un Anneau	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\subsection{Modules sur un Anneau}$/;"	u	section:Anneaux
-Modules sur un Anneau	current-course/notes/lectures/lec6.tex	/^\\subsection{Modules sur un Anneau}$/;"	u	section:Anneaux
 Morphismes d'anneaux	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\subsection{Morphismes d'anneaux}$/;"	u	section:Anneaux
-Morphismes d'anneaux	current-course/notes/lectures/lec6.tex	/^\\subsection{Morphismes d'anneaux}$/;"	u	section:Anneaux
 Morphismes de Groupes	Algebre Lineaire I/notes/lectures/lec4.tex	/^\\subsection{Morphismes de Groupes}$/;"	u	section:Sous-Groupe
-Morphismes de Groupes	current-course/notes/lectures/lec4.tex	/^\\subsection{Morphismes de Groupes}$/;"	u	section:Sous-Groupe
 Morphismes de Modules	Algebre Lineaire I/notes/lectures/lec8.tex	/^\\subsection{Morphismes de Modules}$/;"	u	section:Anneaux
-Morphismes de Modules	current-course/notes/lectures/lec8.tex	/^\\subsection{Morphismes de Modules}$/;"	u	section:Anneaux
 Mouvement Rectiligne Uniforme	Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Mouvement Rectiligne Uniforme}$/;"	s
 Mouvement avec vitesse scalaire constante	Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection{Mouvement avec vitesse scalaire constante}$/;"	u	section:Dynamique du point materiel
 Mouvement central	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Mouvement central}$/;"	u	section:Gravitation, Moment Cinétique
@@ -205,14 +183,10 @@ Mouvement central et loi des aires	Mecanique Generale/notes/lectures/lec8.tex	/^
 Mouvement dans un potentiel central	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Mouvement dans un potentiel central}$/;"	u	section:Gravitation, Moment Cinétique
 Mouvement rectiligne uniformement accelere	Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Mouvement rectiligne uniformement accelere}$/;"	s
 Notations	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Notations}$/;"	u	section:Le language des Ensembles
-Notations	current-course/notes/lectures/lec1.tex	/^\\subsection{Notations}$/;"	u	section:Le language des Ensembles
 Noyau et Image	Algebre Lineaire I/notes/lectures/lec5.tex	/^\\section{Noyau et Image}$/;"	s
-Noyau et Image	current-course/notes/lectures/lec5.tex	/^\\section{Noyau et Image}$/;"	s
 Noyau/Image	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\subsection{Noyau\/Image}$/;"	u	section:Anneaux
-Noyau/Image	current-course/notes/lectures/lec6.tex	/^\\subsection{Noyau\/Image}$/;"	u	section:Anneaux
 Objectifs du cours de mecanique generale	Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Objectifs du cours de mecanique generale}$/;"	s
 Operations sur les ensembles	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Operations sur les ensembles}$/;"	u	section:Le language des Ensembles
-Operations sur les ensembles	current-course/notes/lectures/lec1.tex	/^\\subsection{Operations sur les ensembles}$/;"	u	section:Le language des Ensembles
 Oscillateur force	Mecanique Generale/notes/lectures/lec3.tex	/^\\subsection{Oscillateur force}$/;"	u	section:Oscillateurs Harmoniques
 Oscillateur harmonique amorti	Mecanique Generale/notes/lectures/lec3.tex	/^\\subsection{Oscillateur harmonique amorti}$/;"	u	section:Oscillateurs Harmoniques
 Oscillateurs Harmoniques	Mecanique Generale/notes/lectures/lec3.tex	/^\\section{Oscillateurs Harmoniques}$/;"	s
@@ -223,13 +197,16 @@ Personne	Introduction a la programmation/Exos/MOOC/S7/Ex2/maison.cc	/^struct Per
 Phenomes de resonnance	Mecanique Generale/notes/lectures/lec3.tex	/^\\subsection{Phenomes de resonnance}$/;"	u	section:Oscillateurs Harmoniques
 Physique	Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Physique}$/;"	s
 Plan du cours	Introduction a la programmation/notes/lectures/lec1.tex	/^\\section{Plan du cours}$/;"	s
+Polynome de Taylor et developpements limites	Analyse I/notes/lectures/lec17.tex	/^\\section{Polynome de Taylor et developpements limites}$/;"	s
+Polynome de Taylor et developpements limites	current-course/notes/lectures/lec17.tex	/^\\section{Polynome de Taylor et developpements limites}$/;"	s
 Position	Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^struct Position{$/;"	s	file:
 Position	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^typedef size_t Position;$/;"	t	typeref:typename:size_t	file:
 Preuves	Structures Algebriques/notes/lectures/lec1.tex	/^\\section{Preuves}$/;"	s
 Principe de Bernoulli-L'Hospital	Analyse I/notes/lectures/lec16.tex	/^\\subsection{Principe de Bernoulli-L'Hospital}$/;"	u	section:Dérivation
+Principe de Bernoulli-L'Hospital	current-course/notes/lectures/lec16.tex	/^\\subsection{Principe de Bernoulli-L'Hospital}$/;"	u	section:Dérivation
+Probleme a deux corps	Mecanique Generale/notes/lectures/lec10.tex	/^\\subsection{Probleme a deux corps}$/;"	u	section:Gravitation, Moment Cinétique
 Probleme de plus court chemin	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Probleme de plus court chemin}$/;"	u	section:Definition formelle des algorithmes
 Produit de Matrices	Algebre Lineaire I/notes/lectures/lec14.tex	/^\\subsection{Produit de Matrices}$/;"	u	section:Matrices
-Produit de Matrices	current-course/notes/lectures/lec14.tex	/^\\subsection{Produit de Matrices}$/;"	u	section:Matrices
 Produit scaleaire	Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection{Produit scaleaire}$/;"	u	section:Dynamique du point materiel
 Produit vectoriel	Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection{Produit vectoriel}$/;"	u	section:Dynamique du point materiel
 Produits de Groupes	Structures Algebriques/notes/lectures/lec6.tex	/^\\subsection{Produits de Groupes}$/;"	u	section:Théorie des Groupes
@@ -239,35 +216,32 @@ Propriété universelle des Produits	Structures Algebriques/notes/lectures/lec6.
 Qu'est-ce qu'un algorithme?	Introduction a la programmation/notes/lectures/lec2.tex	/^\\subsubsection{Qu'est-ce qu'un algorithme?}$/;"	b	subsection:Algorithmes""Formalisation d'algorithmes
 Quelques notions mathematiques	Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Quelques notions mathematiques}$/;"	s
 Rang d'une Matrice	Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Rang d'une Matrice}$/;"	u	section:Matrices
-Rang d'une Matrice	current-course/notes/lectures/lec15.tex	/^\\subsection{Rang d'une Matrice}$/;"	u	section:Matrices
 Recette générale	Structures Algebriques/notes/lectures/lec5.tex	/^\\subsubsection{Recette générale}$/;"	b	subsection:Théorie des Groupes""Construction de Groupes avec des quotients
 Recherche	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Recherche}$/;"	u	section:Definition formelle des algorithmes
 Recherche d'extremums	Analyse I/notes/lectures/lec15.tex	/^\\subsubsection{Recherche d'extremums}$/;"	b	subsection:Dérivation""Applications de la dérivée
+Recherche d'extremums	current-course/notes/lectures/lec15.tex	/^\\subsubsection{Recherche d'extremums}$/;"	b	subsection:Dérivation""Applications de la dérivée
 Relation de composition par les applications reciproques	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\subsection{Relation de composition par les applications reciproques}$/;"	u
-Relation de composition par les applications reciproques	current-course/notes/lectures/lec2.tex	/^\\subsection{Relation de composition par les applications reciproques}$/;"	u	section:Gravitation, Moment Cinétique
 Relations d'equivalence	Structures Algebriques/notes/lectures/lec2.tex	/^\\subsection{Relations d'equivalence}$/;"	u	section:Applications entre ensembles
 Repere direct	Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection{Repere direct}$/;"	u	section:Dynamique du point materiel
 Représentation paramétrique d'unn sev cartesienne	Algebre Lineaire I/notes/lectures/lec13.tex	/^\\subsection{Représentation paramétrique d'unn sev cartesienne}$/;"	u	section:Espaces Vectoriels
-Représentation paramétrique d'unn sev cartesienne	current-course/notes/lectures/lec13.tex	/^\\subsection{Représentation paramétrique d'unn sev cartesienne}$/;"	u	section:Espaces Vectoriels
 Resolution d'une equation du second degre	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Resolution d'une equation du second degre}$/;"	u	section:Definition formelle des algorithmes
 Sequence	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^typedef  vector<int> Sequence;$/;"	t	typeref:typename:vector<int>	file:
 Series	Analyse I/notes/lectures/lec6.tex	/^\\section{Series}$/;"	s
+Series	current-course/notes/lectures/lec6.tex	/^\\section{Series}$/;"	s
 Sous-Anneau	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\subsection{Sous-Anneau}$/;"	u	section:Anneaux
-Sous-Anneau	current-course/notes/lectures/lec6.tex	/^\\subsection{Sous-Anneau}$/;"	u	section:Anneaux
 Sous-Ensembles	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Sous-Ensembles}$/;"	u	section:Le language des Ensembles
-Sous-Ensembles	current-course/notes/lectures/lec1.tex	/^\\subsection{Sous-Ensembles}$/;"	u	section:Le language des Ensembles
 Sous-Groupe	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\section{Sous-Groupe}$/;"	s
-Sous-Groupe	current-course/notes/lectures/lec3.tex	/^\\section{Sous-Groupe}$/;"	s
 Sous-Module	Algebre Lineaire I/notes/lectures/lec7.tex	/^\\subsection{Sous-Module}$/;"	u	section:Anneaux
-Sous-Module	current-course/notes/lectures/lec7.tex	/^\\subsection{Sous-Module}$/;"	u	section:Anneaux
 Sous-groupes	Structures Algebriques/notes/lectures/lec6.tex	/^\\subsection{Sous-groupes}$/;"	u	section:Théorie des Groupes
 SousSequence	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^struct SousSequence{$/;"	s	file:
 Structures Algebriques des espaces de morphismes	Algebre Lineaire I/notes/lectures/lec8.tex	/^\\subsection{Structures Algebriques des espaces de morphismes}$/;"	u	section:Anneaux
-Structures Algebriques des espaces de morphismes	current-course/notes/lectures/lec8.tex	/^\\subsection{Structures Algebriques des espaces de morphismes}$/;"	u	section:Anneaux
 Structures de controle	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Structures de controle}$/;"	u	section:Definition formelle des algorithmes
 Suites de Cauchy	Analyse I/notes/lectures/lec5.tex	/^\\subsection{Suites de Cauchy}$/;"	u	section:Limsup et liminf
+Suites de Cauchy	current-course/notes/lectures/lec5.tex	/^\\subsection{Suites de Cauchy}$/;"	u	section:Limsup et liminf
 Suites de Fonctions	Analyse I/notes/lectures/lec12.tex	/^\\section{Suites de Fonctions}$/;"	s
+Suites de Fonctions	current-course/notes/lectures/lec12.tex	/^\\section{Suites de Fonctions}$/;"	s
 Suites et limites	Analyse I/notes/lectures/lec3.tex	/^\\section{Suites et limites}$/;"	s
+Suites et limites	current-course/notes/lectures/lec3.tex	/^\\section{Suites et limites}$/;"	s
 Surjectivité	Structures Algebriques/Devoirs/S3/sol.tex	/^\\subsection*{Surjectivité}$/;"	u	section:1
 Systeme de coordonnees	Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection{Systeme de coordonnees}$/;"	u	section:Dynamique du point materiel
 Systeme de points matériels	Mecanique Generale/notes/lectures/lec9.tex	/^\\subsection{Systeme de points matériels}$/;"	u	section:Gravitation, Moment Cinétique
@@ -279,7 +253,6 @@ Théorie des Groupes	Structures Algebriques/notes/lectures/lec4.tex	/^\\section{
 Théorème de l'énergie	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Théorème de l'énergie}$/;"	u	section:Travail, énergie, forces conservatives
 Théorème de l'énergie cinétique	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Théorème de l'énergie cinétique}$/;"	u	section:Travail, énergie, forces conservatives
 Transposition	Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Transposition}$/;"	u	section:Matrices
-Transposition	current-course/notes/lectures/lec15.tex	/^\\subsection{Transposition}$/;"	u	section:Matrices
 Travail d'une force centrale en $\\frac{1}{r^{2}}$	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Travail d'une force centrale en $\\frac{1}{r^{2}}$}$/;"	u	section:Travail, énergie, forces conservatives
 Travail de la force de pesanteur	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Travail de la force de pesanteur}$/;"	u	section:Travail, énergie, forces conservatives
 Travail de la force de rappel d'un ressort	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Travail de la force de rappel d'un ressort}$/;"	u	section:Travail, énergie, forces conservatives
@@ -288,8 +261,8 @@ Travail et énérgie cinétique	Mecanique Generale/notes/lectures/lec6.tex	/^\\s
 Travail, énergie, forces conservatives	Mecanique Generale/notes/lectures/lec6.tex	/^\\section{Travail, énergie, forces conservatives}$/;"	s
 Trigonometrie	Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Trigonometrie}$/;"	s
 Un calcul naif ( avec la série harmonique alternée)	Analyse I/notes/lectures/lec7.tex	/^\\subsubsection{Un calcul naif ( avec la série harmonique alternée)}$/;"	b	section:Fonctions
+Un calcul naif ( avec la série harmonique alternée)	current-course/notes/lectures/lec7.tex	/^\\subsubsection{Un calcul naif ( avec la série harmonique alternée)}$/;"	b	section:Fonctions
 Une base de $Hom_k( V,W) $	Algebre Lineaire I/notes/lectures/lec13.tex	/^ \\subsection{Une base de $Hom_k( V,W) $}$/;"	u	section:Espaces Vectoriels
-Une base de $Hom_k( V,W) $	current-course/notes/lectures/lec13.tex	/^ \\subsection{Une base de $Hom_k( V,W) $}$/;"	u	section:Espaces Vectoriels
 Valeurs litterales	Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{Valeurs litterales}$/;"	u	section:Etude de cas
 Vecteurs	Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Vecteurs}$/;"	s
 Vitesse et accélération en coordonnées cylindriques	Mecanique Generale/notes/lectures/lec5.tex	/^\\subsection{Vitesse et accélération en coordonnées cylindriques}$/;"	u	section:Description des rotations spatiales
@@ -351,8 +324,11 @@ all	Introduction a la programmation/Exos/MOOC/S8/Ex4/Makefile	/^all:$/;"	t
 apparier	Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void apparier(char test,char &cand1,char &cand2, char &cand3, int &num)$/;"	f	typeref:typename:void
 auteur	Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^string auteur;$/;"	m	struct:lettre	typeref:typename:string	file:
 axiom:axiome_de_completude	Analyse I/notes/lectures/lec2.tex	/^\\begin{axiom}[Axiome de completude]\\label{axiom:axiome_de_completude}$/;"	l
+axiom:axiome_de_completude	current-course/notes/lectures/lec2.tex	/^\\begin{axiom}[Axiome de completude]\\label{axiom:axiome_de_completude}$/;"	l
 axiom:nombres_reels	Analyse I/notes/lectures/lec1.tex	/^\\begin{axiom}[Nombres Reels]\\index{Nombres Reels}\\label{axiom:nombres_reels}$/;"	l
+axiom:nombres_reels	current-course/notes/lectures/lec1.tex	/^\\begin{axiom}[Nombres Reels]\\index{Nombres Reels}\\label{axiom:nombres_reels}$/;"	l
 axiom:nombres_reels_ii	Analyse I/notes/lectures/lec1.tex	/^\\begin{axiom}[Nombres Reels II]\\index{Nombres Reels II}\\label{axiom:nombres_reels_ii}$/;"	l
+axiom:nombres_reels_ii	current-course/notes/lectures/lec1.tex	/^\\begin{axiom}[Nombres Reels II]\\index{Nombres Reels II}\\label{axiom:nombres_reels_ii}$/;"	l
 base	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^     inkscape:snap-global="false">$/;"	i
 base	Analyse I/notes/figures/fonction1.svg	/^     inkscape:document-rotation="0">$/;"	i
 base	Analyse I/notes/figures/fonction2.svg	/^     inkscape:snap-global="false">$/;"	i
@@ -386,7 +362,10 @@ base	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^     ink
 base	Structures Algebriques/notes/figures/qq.svg	/^     inkscape:window-maximized="1">$/;"	i
 base	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^     inkscape:document-rotation="0">$/;"	i
 base	Structures Algebriques/notes/figures/test.svg	/^     inkscape:window-maximized="1">$/;"	i
-base	current-course/notes/figures/schemacomposition.svg	/^     inkscape:snap-global="false">$/;"	i
+base	current-course/notes/figures/fonction1.svg	/^     inkscape:document-rotation="0">$/;"	i
+base	current-course/notes/figures/fonction2.svg	/^     inkscape:snap-global="false">$/;"	i
+base	current-course/notes/figures/fonction3.svg	/^     inkscape:snap-global="false">$/;"	i
+base	current-course/notes/figures/fonction4.svg	/^     inkscape:snap-global="false">$/;"	i
 binaire	Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^bool binaire(Carte const& carte){$/;"	f	typeref:typename:bool
 cc	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://creativecommons.org/ns#
 cc	Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://creativecommons.org/ns#
@@ -421,7 +400,10 @@ cc	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^   sodipod
 cc	Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://creativecommons.org/ns#
 cc	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://creativecommons.org/ns#
 cc	Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://creativecommons.org/ns#
-cc	current-course/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://creativecommons.org/ns#
+cc	current-course/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://creativecommons.org/ns#
+cc	current-course/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://creativecommons.org/ns#
+cc	current-course/notes/figures/fonction3.svg	/^   sodipodi:docname="fonction3.svg">$/;"	n	uri:http://creativecommons.org/ns#
+cc	current-course/notes/figures/fonction4.svg	/^   sodipodi:docname="fonction4.svg">$/;"	n	uri:http://creativecommons.org/ns#
 check_autour	Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^int check_autour(Carte carte, size_t i, size_t j){$/;"	f	typeref:typename:int
 code	Introduction a la programmation/Exos/MOOC/S6/Ex4/cesar.cc	/^char code(char c, int d){$/;"	f	typeref:typename:char
 code	Introduction a la programmation/Exos/MOOC/S6/Ex4/cesar.cc	/^string code(string s,int  d){$/;"	f	typeref:typename:string
@@ -466,97 +448,79 @@ dc	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^   sodipod
 dc	Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
 dc	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
 dc	Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
-dc	current-course/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
+dc	current-course/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
+dc	current-course/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
+dc	current-course/notes/figures/fonction3.svg	/^   sodipodi:docname="fonction3.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
+dc	current-course/notes/figures/fonction4.svg	/^   sodipodi:docname="fonction4.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
 debut	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^size_t debut;$/;"	m	struct:SousSequence	typeref:typename:size_t	file:
 decale	Introduction a la programmation/Exos/MOOC/S6/Ex4/cesar.cc	/^char decale(char c, char debut, int dec){$/;"	f	typeref:typename:char
 decode	Introduction a la programmation/Exos/MOOC/S6/Ex4/cesar.cc	/^string decode(string s,int  d){$/;"	f	typeref:typename:string
 def:divison_dentiers	Structures Algebriques/notes/lectures/lec1.tex	/^\\begin{defn}[division d'entiers]\\label{def:divison_dentiers}$/;"	l
 def:notations_bijection	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{defn}[Notations Bijection]\\index{notations}\\index{bijectivite}\\label{def:notations_bi/;"	l
-def:notations_bijection	current-course/notes/lectures/lec2.tex	/^\\begin{defn}[Notations Bijection]\\index{notations}\\index{bijectivite}\\label{def:notations_bi/;"	l
 def:notations_injection	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{defn}[Notations Injection]\\index{notations}\\index{injectivite}\\label{def:notations_in/;"	l
-def:notations_injection	current-course/notes/lectures/lec2.tex	/^\\begin{defn}[Notations Injection]\\index{notations}\\index{injectivite}\\label{def:notations_in/;"	l
 def:notations_surjection	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{defn}[Notations Surjection]\\index{notations}\\index{surjectivite}\\label{def:notations_/;"	l
-def:notations_surjection	current-course/notes/lectures/lec2.tex	/^\\begin{defn}[Notations Surjection]\\index{notations}\\index{surjectivite}\\label{def:notations_/;"	l
 defn:_a_algebre	Algebre Lineaire I/notes/lectures/lec7.tex	/^\\begin{defn}[$A$-Algebre]\\index{$A$-Algebre}\\label{defn:_a_algebre}$/;"	l
-defn:_a_algebre	current-course/notes/lectures/lec7.tex	/^\\begin{defn}[$A$-Algebre]\\index{$A$-Algebre}\\label{defn:_a_algebre}$/;"	l
 defn:algorithme_d_euclide	Structures Algebriques/notes/lectures/lec3.tex	/^\\begin{defn}[Algorithme d'Euclide]\\index{Algorithme d'Euclide}\\label{defn:algorithme_d_euclid/;"	l
 defn:anneaux	Algebre Lineaire I/notes/lectures/lec5.tex	/^\\begin{defn}[Anneaux]\\index{Anneaux}\\label{defn:anneaux}$/;"	l
-defn:anneaux	current-course/notes/lectures/lec5.tex	/^\\begin{defn}[Anneaux]\\index{Anneaux}\\label{defn:anneaux}$/;"	l
 defn:bijectivite	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{defn}[Bijectivite]\\index{Bijectivite}\\label{defn:bijectivite}$/;"	l
-defn:bijectivite	current-course/notes/lectures/lec2.tex	/^\\begin{defn}[Bijectivite]\\index{Bijectivite}\\label{defn:bijectivite}$/;"	l
 defn:bornes	Analyse I/notes/lectures/lec2.tex	/^\\begin{defn}[Bornes]\\index{Bornes}\\label{defn:bornes}$/;"	l
+defn:bornes	current-course/notes/lectures/lec2.tex	/^\\begin{defn}[Bornes]\\index{Bornes}\\label{defn:bornes}$/;"	l
 defn:caracteristique	Algebre Lineaire I/notes/lectures/lec9.tex	/^\\begin{defn}[Caractéristique]\\index{Caractéristique}\\label{defn:caracteristique}$/;"	l
-defn:caracteristique	current-course/notes/lectures/lec9.tex	/^\\begin{defn}[Caractéristique]\\index{Caractéristique}\\label{defn:caracteristique}$/;"	l
 defn:cardinal_d_un_ensemble	Structures Algebriques/notes/lectures/lec2.tex	/^\\begin{defn}[Cardinal d'un ensemble]\\index{Cardinal d'un ensemble}\\label{defn:cardinal_d_un_e/;"	l
 defn:classes_d_equivalence	Structures Algebriques/notes/lectures/lec2.tex	/^\\begin{defn}[Classes d'equivalence]\\index{Classes d'equivalence}\\label{defn:classes_d_equival/;"	l
 defn:convergence_de_suites	Analyse I/notes/lectures/lec3.tex	/^\\begin{defn}[Convergence de suites]\\index{Convergence de suites}\\label{defn:convergence_de_su/;"	l
+defn:convergence_de_suites	current-course/notes/lectures/lec3.tex	/^\\begin{defn}[Convergence de suites]\\index{Convergence de suites}\\label{defn:convergence_de_su/;"	l
 defn:corps	Algebre Lineaire I/notes/lectures/lec8.tex	/^\\begin{defn}[Corps]\\index{Corps}\\label{defn:corps}$/;"	l
-defn:corps	current-course/notes/lectures/lec8.tex	/^\\begin{defn}[Corps]\\index{Corps}\\label{defn:corps}$/;"	l
 defn:double_produit_vectoriel	Mecanique Generale/notes/lectures/lec4.tex	/^\\begin{defn}[Double produit vectoriel]\\index{Double produit vectoriel}\\label{defn:double_prod/;"	l
 defn:element_inversible	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\begin{defn}[Element Inversible]\\index{Element Inversible}\\label{defn:element_inversible}$/;"	l
-defn:element_inversible	current-course/notes/lectures/lec6.tex	/^\\begin{defn}[Element Inversible]\\index{Element Inversible}\\label{defn:element_inversible}$/;"	l
 defn:entier	Structures Algebriques/notes/lectures/lec3.tex	/^\\begin{defn}[Entier]\\index{Entier}\\label{defn:entier}$/;"	l
 defn:espace_vectoriel_fini	Algebre Lineaire I/notes/lectures/lec10.tex	/^\\begin{defn}[Espace vectoriel fini]\\index{Espace vectoriel fini}\\label{defn:espace_vectoriel_/;"	l
-defn:espace_vectoriel_fini	current-course/notes/lectures/lec10.tex	/^\\begin{defn}[Espace vectoriel fini]\\index{Espace vectoriel fini}\\label{defn:espace_vectoriel_/;"	l
 defn:exponentielle	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\begin{defn}[exponentielle]\\label{defn:exponentielle}$/;"	l
-defn:exponentielle	current-course/notes/lectures/lec3.tex	/^\\begin{defn}[exponentielle]\\label{defn:exponentielle}$/;"	l
 defn:famille_generatrice	Algebre Lineaire I/notes/lectures/lec10.tex	/^\\begin{defn}[Famille génératrice]\\index{Famille génératrice}\\label{defn:famille_generatri/;"	l
-defn:famille_generatrice	current-course/notes/lectures/lec10.tex	/^\\begin{defn}[Famille génératrice]\\index{Famille génératrice}\\label{defn:famille_generatri/;"	l
 defn:formalisation_des_applications	Structures Algebriques/notes/lectures/lec2.tex	/^\\begin{defn}[Formalisation des applications]\\index{Formalisation des applications}\\label{defn/;"	l
 defn:groupe_abstrait	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{defn}[Groupe abstrait]\\index{groupe}\\label{defn:groupe_abstrait}$/;"	l
-defn:groupe_abstrait	current-course/notes/lectures/lec2.tex	/^\\begin{defn}[Groupe abstrait]\\index{groupe}\\label{defn:groupe_abstrait}$/;"	l
 defn:groupes_commutatifs	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{defn}[Groupes commutatifs]\\index{groupes}\\label{defn:groupes_commutatifs}$/;"	l
-defn:groupes_commutatifs	current-course/notes/lectures/lec2.tex	/^\\begin{defn}[Groupes commutatifs]\\index{groupes}\\label{defn:groupes_commutatifs}$/;"	l
 defn:groupes_isomorphes	Algebre Lineaire I/notes/lectures/lec4.tex	/^\\begin{defn}[Groupes Isomorphes]\\index{Groupes Isomorphes}\\label{defn:groupes_isomorphes}$/;"	l
-defn:groupes_isomorphes	current-course/notes/lectures/lec4.tex	/^\\begin{defn}[Groupes Isomorphes]\\index{Groupes Isomorphes}\\label{defn:groupes_isomorphes}$/;"	l
 defn:homomorphismes_de_groupes	Structures Algebriques/notes/lectures/lec5.tex	/^\\begin{defn}[Homomorphismes de groupes]\\index{Homomorphismes de groupes}\\label{defn:homomorph/;"	l
 defn:ideal	Algebre Lineaire I/notes/lectures/lec7.tex	/^\\begin{defn}[Ideal]\\index{Ideal}\\label{defn:ideal}$/;"	l
-defn:ideal	current-course/notes/lectures/lec7.tex	/^\\begin{defn}[Ideal]\\index{Ideal}\\label{defn:ideal}$/;"	l
 defn:injectivite	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{defn}[Injectivite]\\index{Injectivite}\\label{defn:injectivite}$/;"	l
-defn:injectivite	current-course/notes/lectures/lec2.tex	/^\\begin{defn}[Injectivite]\\index{Injectivite}\\label{defn:injectivite}$/;"	l
 defn:l_ensemble_quotient	Structures Algebriques/notes/lectures/lec2.tex	/^\\begin{defn}[L'ensemble quotient]\\index{L'ensemble quotient}\\label{defn:l_ensemble_quotient}$/;"	l
 defn:limsup_et_liminf	Analyse I/notes/lectures/lec4.tex	/^\\begin{defn}[Limsup et liminf]\\index{Limsup et liminf}\\label{defn:limsup_et_liminf}$/;"	l
+defn:limsup_et_liminf	current-course/notes/lectures/lec4.tex	/^\\begin{defn}[Limsup et liminf]\\index{Limsup et liminf}\\label{defn:limsup_et_liminf}$/;"	l
 defn:modules_sur_un_anneau	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\begin{defn}[Modules sur un Anneau]\\index{Modules sur un Anneau}\\label{defn:modules_sur_un_an/;"	l
-defn:modules_sur_un_anneau	current-course/notes/lectures/lec6.tex	/^\\begin{defn}[Modules sur un Anneau]\\index{Modules sur un Anneau}\\label{defn:modules_sur_un_an/;"	l
 defn:morhpismes_de_module	Algebre Lineaire I/notes/lectures/lec8.tex	/^\\begin{defn}[Morhpismes de Module]\\index{Morhpismes de Module}\\label{defn:morhpismes_de_modul/;"	l
-defn:morhpismes_de_module	current-course/notes/lectures/lec8.tex	/^\\begin{defn}[Morhpismes de Module]\\index{Morhpismes de Module}\\label{defn:morhpismes_de_modul/;"	l
 defn:morphisme_d_anneaux	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\begin{defn}[Morphisme d'anneaux]\\index{Morphisme d'anneaux}\\label{defn:morphisme_d_anneaux}$/;"	l
-defn:morphisme_d_anneaux	current-course/notes/lectures/lec6.tex	/^\\begin{defn}[Morphisme d'anneaux]\\index{Morphisme d'anneaux}\\label{defn:morphisme_d_anneaux}$/;"	l
 defn:morphisme_de_groupe	Algebre Lineaire I/notes/lectures/lec4.tex	/^\\begin{defn}[Morphisme de Groupe]\\index{Morphisme de Groupe}\\label{defn:morphisme_de_groupe}$/;"	l
-defn:morphisme_de_groupe	current-course/notes/lectures/lec4.tex	/^\\begin{defn}[Morphisme de Groupe]\\index{Morphisme de Groupe}\\label{defn:morphisme_de_groupe}$/;"	l
 defn:multiplication_matricielle	Algebre Lineaire I/notes/lectures/lec14.tex	/^\\begin{defn}[Multiplication Matricielle]\\index{Multiplication Matricielle}\\label{defn:multipl/;"	l
-defn:multiplication_matricielle	current-course/notes/lectures/lec14.tex	/^\\begin{defn}[Multiplication Matricielle]\\index{Multiplication Matricielle}\\label{defn:multipl/;"	l
 defn:notation_additive	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\begin{defn}[Notation additive]\\label{defn:notation_additive}$/;"	l
-defn:notation_additive	current-course/notes/lectures/lec3.tex	/^\\begin{defn}[Notation additive]\\label{defn:notation_additive}$/;"	l
 defn:notation_exponentielle	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\begin{defn}[Notation exponentielle]\\label{defn:notation_exponentielle}$/;"	l
-defn:notation_exponentielle	current-course/notes/lectures/lec3.tex	/^\\begin{defn}[Notation exponentielle]\\label{defn:notation_exponentielle}$/;"	l
 defn:notation_multiple	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\begin{defn}[Notation multiple]\\index{Notation multiple}\\label{defn:notation_multiple}$/;"	l
-defn:notation_multiple	current-course/notes/lectures/lec3.tex	/^\\begin{defn}[Notation multiple]\\index{Notation multiple}\\label{defn:notation_multiple}$/;"	l
 defn:point_d_accumulation	Analyse I/notes/lectures/lec5.tex	/^\\begin{defn}[Point d'accumulation]\\index{Point d'accumulation}\\label{defn:point_d_accumulatio/;"	l
+defn:point_d_accumulation	current-course/notes/lectures/lec5.tex	/^\\begin{defn}[Point d'accumulation]\\index{Point d'accumulation}\\label{defn:point_d_accumulatio/;"	l
 defn:point_materiel	Mecanique Generale/notes/lectures/lec1.tex	/^\\begin{defn}[Point materiel]\\index{Point materiel}\\label{defn:point_materiel}$/;"	l
 defn:produit_mixte	Mecanique Generale/notes/lectures/lec4.tex	/^\\begin{defn}[Produit Mixte]\\label{defn:produit_mixte}$/;"	l
 defn:produit_scalaire	Mecanique Generale/notes/lectures/lec4.tex	/^\\begin{defn}[Produit scalaire]\\index{Produit scalaire}\\label{defn:produit_scalaire}$/;"	l
 defn:produit_vectoriel	Mecanique Generale/notes/lectures/lec4.tex	/^\\begin{defn}[Produit vectoriel]\\index{Produit vectoriel}\\label{defn:produit_vectoriel}$/;"	l
 defn:rang_d_une_matrice	Algebre Lineaire I/notes/lectures/lec15.tex	/^\\begin{defn}[Rang d'une matrice]\\index{Rang d'une matrice}\\label{defn:rang_d_une_matrice}$/;"	l
-defn:rang_d_une_matrice	current-course/notes/lectures/lec15.tex	/^\\begin{defn}[Rang d'une matrice]\\index{Rang d'une matrice}\\label{defn:rang_d_une_matrice}$/;"	l
 defn:relations_d_equivalence	Structures Algebriques/notes/lectures/lec2.tex	/^\\begin{defn}[Relations d'equivalence]\\index{Relations d'equivalence}\\label{defn:relations_d_e/;"	l
 defn:serie	Analyse I/notes/lectures/lec6.tex	/^\\begin{defn}[Serie]\\index{Serie}\\label{defn:serie}$/;"	l
+defn:serie	current-course/notes/lectures/lec6.tex	/^\\begin{defn}[Serie]\\index{Serie}\\label{defn:serie}$/;"	l
 defn:sous_anneau	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\begin{defn}[Sous-Anneau]\\index{Sous-Anneau}\\label{defn:sous_anneau}$/;"	l
-defn:sous_anneau	current-course/notes/lectures/lec6.tex	/^\\begin{defn}[Sous-Anneau]\\index{Sous-Anneau}\\label{defn:sous_anneau}$/;"	l
 defn:sous_group	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\begin{defn}[Sous-groupe]\\index{Sous-group}\\label{defn:sous_group}$/;"	l
-defn:sous_group	current-course/notes/lectures/lec3.tex	/^\\begin{defn}[Sous-groupe]\\index{Sous-group}\\label{defn:sous_group}$/;"	l
 defn:sous_groupe_engendre	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\begin{defn}[Sous-groupe engendre]\\index{Sous-groupe engendre}\\label{defn:sous_groupe_engendr/;"	l
-defn:sous_groupe_engendre	current-course/notes/lectures/lec3.tex	/^\\begin{defn}[Sous-groupe engendre]\\index{Sous-groupe engendre}\\label{defn:sous_groupe_engendr/;"	l
 defn:sous_module	Algebre Lineaire I/notes/lectures/lec7.tex	/^\\begin{defn}[Sous-Module]\\index{Sous-Module}\\label{defn:sous_module}$/;"	l
-defn:sous_module	current-course/notes/lectures/lec7.tex	/^\\begin{defn}[Sous-Module]\\index{Sous-Module}\\label{defn:sous_module}$/;"	l
 defn:sous_suite	Analyse I/notes/lectures/lec5.tex	/^\\begin{defn}[Sous-suite]\\index{Sous-suite}\\label{defn:sous_suite}$/;"	l
+defn:sous_suite	current-course/notes/lectures/lec5.tex	/^\\begin{defn}[Sous-suite]\\index{Sous-suite}\\label{defn:sous_suite}$/;"	l
 defn:suite	Analyse I/notes/lectures/lec3.tex	/^\\begin{defn}[Suite]\\index{Suite}\\label{defn:suite}$/;"	l
+defn:suite	current-course/notes/lectures/lec3.tex	/^\\begin{defn}[Suite]\\index{Suite}\\label{defn:suite}$/;"	l
 defn:suites_de_cauchy	Analyse I/notes/lectures/lec5.tex	/^\\begin{defn}[Suites de Cauchy]\\index{Suites de Cauchy}\\label{defn:suites_de_cauchy}$/;"	l
+defn:suites_de_cauchy	current-course/notes/lectures/lec5.tex	/^\\begin{defn}[Suites de Cauchy]\\index{Suites de Cauchy}\\label{defn:suites_de_cauchy}$/;"	l
 defn:supremum	Analyse I/notes/lectures/lec2.tex	/^\\begin{defn}[Supremum]\\label{defn:supremum}$/;"	l
+defn:supremum	current-course/notes/lectures/lec2.tex	/^\\begin{defn}[Supremum]\\label{defn:supremum}$/;"	l
 defn:surjectivite	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{defn}[Surjectivite]\\index{Surjectivite}\\label{defn:surjectivite}$/;"	l
-defn:surjectivite	current-course/notes/lectures/lec2.tex	/^\\begin{defn}[Surjectivite]\\index{Surjectivite}\\label{defn:surjectivite}$/;"	l
 defn:systeme_de_coordonnees	Mecanique Generale/notes/lectures/lec4.tex	/^\\begin{defn}[Systeme de coordonnees]\\index{Systeme de coordonnees}\\label{defn:systeme_de_coor/;"	l
 defn:valeur_absolue	Analyse I/notes/lectures/lec2.tex	/^\\begin{defn}[valeur absolue]\\label{defn:valeur_absolue}$/;"	l
+defn:valeur_absolue	current-course/notes/lectures/lec2.tex	/^\\begin{defn}[valeur absolue]\\label{defn:valeur_absolue}$/;"	l
 defs2	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^     id="defs2">$/;"	i
 defs2	Analyse I/notes/figures/fonction1.svg	/^     id="defs2">$/;"	i
 defs2	Analyse I/notes/figures/fonction2.svg	/^     id="defs2" \/>$/;"	i
@@ -590,7 +554,10 @@ defs2	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^     id
 defs2	Structures Algebriques/notes/figures/qq.svg	/^     id="defs2" \/>$/;"	i
 defs2	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^     id="defs2">$/;"	i
 defs2	Structures Algebriques/notes/figures/test.svg	/^     id="defs2" \/>$/;"	i
-defs2	current-course/notes/figures/schemacomposition.svg	/^     id="defs2">$/;"	i
+defs2	current-course/notes/figures/fonction1.svg	/^     id="defs2">$/;"	i
+defs2	current-course/notes/figures/fonction2.svg	/^     id="defs2" \/>$/;"	i
+defs2	current-course/notes/figures/fonction3.svg	/^     id="defs2" \/>$/;"	i
+defs2	current-course/notes/figures/fonction4.svg	/^     id="defs2" \/>$/;"	i
 degres	Structures Algebriques/Devoirs/S1/sol.tex	/^\\begin{lemma}\\label{degres}$/;"	l
 demander_annee	Introduction a la programmation/Exos/MOOC/S4/Ex7/datedepaques.cc	/^int demander_annee(){$/;"	f	typeref:typename:int
 demander_et_jouer	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^void demander_et_jouer(Couleur joueur, Grille &g){$/;"	f	typeref:typename:void
@@ -601,6 +568,8 @@ differens types de complexite	Introduction a la programmation/notes/lectures/lec
 dire_chiffre	Introduction a la programmation/Exos/MOOC/S4/Ex6/lireetdire.cc	/^void dire_chiffre(int& nombre, int repetitions_chiffre, int chiffre)$/;"	f	typeref:typename:void
 distribution	Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^std::uniform_int_distribution<int> distribution;$/;"	v	typeref:typename:std::uniform_int_distribution<int>
 div	Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^complexe div(complexe a, complexe b){$/;"	f	typeref:typename:complexe
+e1	Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^	string e1;$/;"	m	struct:Match	typeref:typename:string	file:
+e2	Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^	string e2;$/;"	m	struct:Match	typeref:typename:string	file:
 echange	Introduction a la programmation/Exos/MOOC/S4/Ex2/echange.cc	/^void echange(int &i, int &j){$/;"	f	typeref:typename:void
 effacer_etang	Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^void effacer_etang(vector<int>& tab){$/;"	f	typeref:typename:void
 ellipse1061	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^       ry="5.7737026" \/>$/;"	i
@@ -636,9 +605,13 @@ fig:curviligne	Mecanique Generale/notes/lectures/lec4.tex	/^    \\label{fig:curv
 fig:curviligne2	Mecanique Generale/notes/lectures/lec4.tex	/^    \\label{fig:curviligne2}$/;"	l
 fig:diagrammes-produits	Structures Algebriques/notes/lectures/lec6.tex	/^    \\label{fig:diagrammes-produits}$/;"	l
 fig:fonction1	Analyse I/notes/lectures/lec12.tex	/^    \\label{fig:fonction1}$/;"	l
+fig:fonction1	current-course/notes/lectures/lec12.tex	/^    \\label{fig:fonction1}$/;"	l
 fig:fonction2	Analyse I/notes/lectures/lec12.tex	/^    \\label{fig:fonction2}$/;"	l
+fig:fonction2	current-course/notes/lectures/lec12.tex	/^    \\label{fig:fonction2}$/;"	l
 fig:fonction3	Analyse I/notes/lectures/lec12.tex	/^    \\label{fig:fonction3}$/;"	l
+fig:fonction3	current-course/notes/lectures/lec12.tex	/^    \\label{fig:fonction3}$/;"	l
 fig:fonction4	Analyse I/notes/lectures/lec12.tex	/^    \\label{fig:fonction4}$/;"	l
+fig:fonction4	current-course/notes/lectures/lec12.tex	/^    \\label{fig:fonction4}$/;"	l
 fig:mouvement-approxime-par-cercle	Mecanique Generale/notes/lectures/lec4.tex	/^    \\label{fig:mouvement-approxime-par-cercle}$/;"	l
 fig:oscillateur-amorti	Mecanique Generale/notes/lectures/lec3.tex	/^    \\label{fig:oscillateur-amorti}$/;"	l
 fig:preuve-fonction-bizarre	Structures Algebriques/notes/lectures/lec2.tex	/^    \\label{fig:preuve-fonction-bizarre}$/;"	l
@@ -651,7 +624,6 @@ fig:ressort	Mecanique Generale/notes/lectures/lec3.tex	/^    \\label{fig:ressort
 fig:ressort-plan-horizontal	Mecanique Generale/notes/lectures/lec3.tex	/^    \\label{fig:ressort-plan-horizontal}$/;"	l
 fig:schema-relation-d-equivalence	Structures Algebriques/notes/lectures/lec2.tex	/^    \\label{fig:schema-relation-d-equivalence}$/;"	l
 fig:schemacomposition	Algebre Lineaire I/notes/lectures/lec1.tex	/^    \\label{fig:schemacomposition}$/;"	l
-fig:schemacomposition	current-course/notes/lectures/lec1.tex	/^    \\label{fig:schemacomposition}$/;"	l
 fig:trajectoire	Mecanique Generale/notes/lectures/lec4.tex	/^    \\label{fig:trajectoire}$/;"	l
 fig:types-d'ammortissement	Mecanique Generale/notes/lectures/lec3.tex	/^    \\label{fig:types-d'ammortissement}$/;"	l
 fin	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^size_t fin;$/;"	m	struct:SousSequence	typeref:typename:size_t	file:
@@ -671,6 +643,7 @@ g837	Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^         id=
 g839	Analyse I/notes/figures/fonction1.svg	/^         id="g839">$/;"	i
 g839	Mecanique Generale/notes/figures/produit-scalaire.svg	/^         id="g839">$/;"	i
 g839	Mecanique Generale/notes/figures/repere.svg	/^         id="g839">$/;"	i
+g839	current-course/notes/figures/fonction1.svg	/^         id="g839">$/;"	i
 g841	Mecanique Generale/notes/figures/curviligne2.svg	/^         id="g841">$/;"	i
 g841	Mecanique Generale/notes/figures/mouvement_central.svg	/^         id="g841">$/;"	i
 g841	Mecanique Generale/notes/figures/reperes.svg	/^         id="g841">$/;"	i
@@ -680,12 +653,12 @@ g843	Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^         tra
 g849	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^         id="g849">$/;"	i
 g849	Mecanique Generale/notes/figures/cercletrigo.svg	/^         id="g849">$/;"	i
 g849	Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^       transform="translate(11.112501)">$/;"	i
-g849	current-course/notes/figures/schemacomposition.svg	/^         id="g849">$/;"	i
 g851	Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^       transform="translate(-0.92827672,0.41745575)">$/;"	i
 g857	Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^         id="g857">$/;"	i
 g863	Analyse I/notes/figures/fonction1.svg	/^         id="g863">$/;"	i
 g863	Mecanique Generale/notes/figures/repere-droit.svg	/^         id="g863">$/;"	i
 g863	Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^         transform="translate(4.790664,-0.37591318)">$/;"	i
+g863	current-course/notes/figures/fonction1.svg	/^         id="g863">$/;"	i
 g865	Mecanique Generale/notes/figures/reperes.svg	/^         id="g865">$/;"	i
 g865	Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^       transform="translate(8.1068266,0.41177166)">$/;"	i
 g867	Mecanique Generale/notes/figures/mouvement_central.svg	/^         id="g867">$/;"	i
@@ -702,7 +675,6 @@ g885	Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^         id="g885
 g885	Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^         id="g885">$/;"	i
 g887	Mecanique Generale/notes/figures/repere.svg	/^         style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">$/;"	i
 g889	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^         id="g889">$/;"	i
-g889	current-course/notes/figures/schemacomposition.svg	/^         id="g889">$/;"	i
 g891	Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^         transform="translate(4.790664,-0.37591318)">$/;"	i
 g891	Structures Algebriques/notes/figures/diagrammes-produits.svg	/^         id="g891">$/;"	i
 g893	Mecanique Generale/notes/figures/repere.svg	/^         id="g893">$/;"	i
@@ -719,7 +691,6 @@ g918	Mecanique Generale/notes/figures/curviligne.svg	/^         id="g918">$/;"	i
 g928	Mecanique Generale/notes/figures/repere.svg	/^         id="g928">$/;"	i
 g938	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^         id="g938">$/;"	i
 g938	Mecanique Generale/notes/figures/repere-droit.svg	/^         id="g938">$/;"	i
-g938	current-course/notes/figures/schemacomposition.svg	/^         id="g938">$/;"	i
 g942	Mecanique Generale/notes/figures/trajectoire.svg	/^         id="g942">$/;"	i
 g946	Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^         id="g946">$/;"	i
 g949	Structures Algebriques/Devoirs/S6/figures/diagramme.svg	/^         id="g949">$/;"	i
@@ -767,7 +738,10 @@ grid815	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^     
 grid815	Structures Algebriques/notes/figures/qq.svg	/^       dotted="false" \/>$/;"	i
 grid815	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^       dotted="false" \/>$/;"	i
 grid815	Structures Algebriques/notes/figures/test.svg	/^       dotted="false" \/>$/;"	i
-grid815	current-course/notes/figures/schemacomposition.svg	/^       dotted="false" \/>$/;"	i
+grid815	current-course/notes/figures/fonction1.svg	/^       dotted="false" \/>$/;"	i
+grid815	current-course/notes/figures/fonction2.svg	/^       dotted="false" \/>$/;"	i
+grid815	current-course/notes/figures/fonction3.svg	/^       dotted="false" \/>$/;"	i
+grid815	current-course/notes/figures/fonction4.svg	/^       dotted="false" \/>$/;"	i
 i	Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^	double i;$/;"	m	struct:complexe	typeref:typename:double	file:
 i	Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^	int i;$/;"	m	struct:Position	typeref:typename:int	file:
 initialise	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^void initialise(Grille &g){$/;"	f	typeref:typename:void
@@ -804,7 +778,10 @@ inkscape	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^   s
 inkscape	Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inkscape	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inkscape	Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
-inkscape	current-course/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
+inkscape	current-course/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
+inkscape	current-course/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
+inkscape	current-course/notes/figures/fonction3.svg	/^   sodipodi:docname="fonction3.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
+inkscape	current-course/notes/figures/fonction4.svg	/^   sodipodi:docname="fonction4.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 j	Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^	int j;$/;"	m	struct:Position	typeref:typename:int	file:
 jaune	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^enum Couleur { vide,rouge, jaune};$/;"	e	enum:Couleur	file:
 joue	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^bool joue(Grille &g, size_t i, Couleur c){$/;"	f	typeref:typename:bool
@@ -842,18 +819,23 @@ layer1	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^     t
 layer1	Structures Algebriques/notes/figures/qq.svg	/^     transform="translate(0,-177)" \/>$/;"	i
 layer1	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^     transform="translate(0,-177)">$/;"	i
 layer1	Structures Algebriques/notes/figures/test.svg	/^     transform="translate(0,-177)" \/>$/;"	i
-layer1	current-course/notes/figures/schemacomposition.svg	/^     transform="translate(0,-177)">$/;"	i
+layer1	current-course/notes/figures/fonction1.svg	/^     transform="translate(0,-177)">$/;"	i
+layer1	current-course/notes/figures/fonction2.svg	/^     transform="translate(0,-177)">$/;"	i
+layer1	current-course/notes/figures/fonction3.svg	/^     transform="translate(0,-177)">$/;"	i
+layer1	current-course/notes/figures/fonction4.svg	/^     transform="translate(0,-177)">$/;"	i
 lemma:composition_d_applications_surjectives_et_injectives	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{lemma}[Composition d'applications surjectives et injectives]\\index{surjectivite}\\index/;"	l
-lemma:composition_d_applications_surjectives_et_injectives	current-course/notes/lectures/lec2.tex	/^\\begin{lemma}[Composition d'applications surjectives et injectives]\\index{surjectivite}\\index/;"	l
 lemma:critere_de_l_application_lineaire	Algebre Lineaire I/notes/lectures/lec8.tex	/^\\begin{lemma}[Critere de l'application lineaire]\\index{Critere de l'application lineaire}\\lab/;"	l
-lemma:critere_de_l_application_lineaire	current-course/notes/lectures/lec8.tex	/^\\begin{lemma}[Critere de l'application lineaire]\\index{Critere de l'application lineaire}\\lab/;"	l
 lemma:critere_de_sous_anneau	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\begin{lemma}[Critère de sous-anneau]\\index{Critère de sous-anneau}\\label{lemma:critere_de_/;"	l
-lemma:critere_de_sous_anneau	current-course/notes/lectures/lec6.tex	/^\\begin{lemma}[Critère de sous-anneau]\\index{Critère de sous-anneau}\\label{lemma:critere_de_/;"	l
 lemma:deux_gendarmes	Analyse I/notes/lectures/lec4.tex	/^\\begin{lemma}[Deux gendarmes]\\index{Deux gendarmes}\\label{lemma:deux_gendarmes}$/;"	l
+lemma:deux_gendarmes	current-course/notes/lectures/lec4.tex	/^\\begin{lemma}[Deux gendarmes]\\index{Deux gendarmes}\\label{lemma:deux_gendarmes}$/;"	l
 lemma:lemme	Analyse I/notes/lectures/lec1.tex	/^\\begin{lemma}[Lemme]\\index{Lemme}\\label{lemma:lemme}$/;"	l
+lemma:lemme	current-course/notes/lectures/lec1.tex	/^\\begin{lemma}[Lemme]\\index{Lemme}\\label{lemma:lemme}$/;"	l
 lemma:theorem_name	Analyse I/notes/lectures/lec1.tex	/^\\begin{lemma}[Theorem name]\\index{Theorem name}\\label{lemma:theorem_name}$/;"	l
+lemma:theorem_name	current-course/notes/lectures/lec1.tex	/^\\begin{lemma}[Theorem name]\\index{Theorem name}\\label{lemma:theorem_name}$/;"	l
 lemma:unicite_de_la_limite	Analyse I/notes/lectures/lec3.tex	/^\\begin{lemma}[Unicite de la limite]\\index{Unicite de la limite}\\label{lemma:unicite_de_la_lim/;"	l
+lemma:unicite_de_la_limite	current-course/notes/lectures/lec3.tex	/^\\begin{lemma}[Unicite de la limite]\\index{Unicite de la limite}\\label{lemma:unicite_de_la_lim/;"	l
 lemma:x_fois_moins_1_egale_x	Analyse I/notes/lectures/lec1.tex	/^\\begin{crly}[x fois moins 1 egale -x]\\label{lemma:x_fois_moins_1_egale_x}$/;"	l
+lemma:x_fois_moins_1_egale_x	current-course/notes/lectures/lec1.tex	/^\\begin{crly}[x fois moins 1 egale -x]\\label{lemma:x_fois_moins_1_egale_x}$/;"	l
 lettre	Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^struct lettre{$/;"	s	file:
 lignes_max	Introduction a la programmation/Exos/MOOC/S6/Ex5/tableaux.cc	/^vector<size_t> lignes_max(vector<vector<int>> tab){$/;"	f	typeref:typename:vector<size_t>
 lire_couleur	Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^char lire_couleur()$/;"	f	typeref:typename:char
@@ -896,6 +878,7 @@ main	Introduction a la programmation/Exos/MOOC/S7/Ex1/selection.cc	/^int main(){
 main	Introduction a la programmation/Exos/MOOC/S7/Ex2/maison.cc	/^int main(){$/;"	f	typeref:typename:int
 main	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^int main(){$/;"	f	typeref:typename:int
 main	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Introduction a la programmation/Exos/MOOC/S8/Ex3/trideshell.cc	/^int main(){$/;"	f	typeref:typename:int
 main	Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^int main(){$/;"	f	typeref:typename:int
 main	Introduction a la programmation/Exos/MOOCnnt/S1/Ex1/ex1.cpp	/^int main(){$/;"	f	typeref:typename:int
 main	Introduction a la programmation/Exos/MOOCnnt/S1/Ex2/ex2.cpp	/^int main()$/;"	f	typeref:typename:int
@@ -934,8 +917,8 @@ marker-arrow-0.5308	Structures Algebriques/notes/figures/diagrammes-produits.svg
 marker-arrow-0.5308	Structures Algebriques/notes/figures/diagrammes-produits.svg	/^       markerWidth="0.911">$/;"	i
 marker-arrow-0.5308	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^       markerWidth="0.911">$/;"	d
 marker-arrow-0.5308	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^       markerWidth="0.911">$/;"	i
-marker-arrow-0.5308	current-course/notes/figures/schemacomposition.svg	/^       markerWidth="0.911">$/;"	d
-marker-arrow-0.5308	current-course/notes/figures/schemacomposition.svg	/^       markerWidth="0.911">$/;"	i
+marker-arrow-0.5308	current-course/notes/figures/fonction1.svg	/^       markerWidth="0.911">$/;"	d
+marker-arrow-0.5308	current-course/notes/figures/fonction1.svg	/^       markerWidth="0.911">$/;"	i
 marker-arrow-0.5308-3	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^       markerWidth="0.911">$/;"	d
 marker-arrow-0.5308-3	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^       markerWidth="0.911">$/;"	i
 marker-arrow-0.5308-3	Analyse I/notes/figures/fonction1.svg	/^       markerWidth="0.911">$/;"	d
@@ -964,8 +947,8 @@ marker-arrow-0.5308-3	Structures Algebriques/Devoirs/S6/figures/diagramme.svg	/^
 marker-arrow-0.5308-3	Structures Algebriques/Devoirs/S6/figures/diagramme.svg	/^       markerWidth="0.911">$/;"	i
 marker-arrow-0.5308-3	Structures Algebriques/notes/figures/diagrammes-produits.svg	/^       markerWidth="0.911">$/;"	d
 marker-arrow-0.5308-3	Structures Algebriques/notes/figures/diagrammes-produits.svg	/^       markerWidth="0.911">$/;"	i
-marker-arrow-0.5308-3	current-course/notes/figures/schemacomposition.svg	/^       markerWidth="0.911">$/;"	d
-marker-arrow-0.5308-3	current-course/notes/figures/schemacomposition.svg	/^       markerWidth="0.911">$/;"	i
+marker-arrow-0.5308-3	current-course/notes/figures/fonction1.svg	/^       markerWidth="0.911">$/;"	d
+marker-arrow-0.5308-3	current-course/notes/figures/fonction1.svg	/^       markerWidth="0.911">$/;"	i
 marker-arrow-0.5308-35	Mecanique Generale/notes/figures/curviligne2.svg	/^       markerWidth="0.911">$/;"	d
 marker-arrow-0.5308-35	Mecanique Generale/notes/figures/curviligne2.svg	/^       markerWidth="0.911">$/;"	i
 marker-arrow-0.5308-36	Mecanique Generale/notes/figures/repere-droit.svg	/^       markerWidth="0.911">$/;"	d
@@ -996,8 +979,6 @@ marker-arrow-0.5308-6	Mecanique Generale/notes/figures/trajectoire.svg	/^       
 marker-arrow-0.5308-6	Mecanique Generale/notes/figures/trajectoire.svg	/^       markerWidth="0.911">$/;"	i
 marker-arrow-0.5308-6	Structures Algebriques/notes/figures/diagrammes-produits.svg	/^       markerWidth="0.911">$/;"	d
 marker-arrow-0.5308-6	Structures Algebriques/notes/figures/diagrammes-produits.svg	/^       markerWidth="0.911">$/;"	i
-marker-arrow-0.5308-6	current-course/notes/figures/schemacomposition.svg	/^       markerWidth="0.911">$/;"	d
-marker-arrow-0.5308-6	current-course/notes/figures/schemacomposition.svg	/^       markerWidth="0.911">$/;"	i
 marker-arrow-0.5308-62	Mecanique Generale/notes/figures/curviligne2.svg	/^       markerWidth="0.911">$/;"	d
 marker-arrow-0.5308-62	Mecanique Generale/notes/figures/curviligne2.svg	/^       markerWidth="0.911">$/;"	i
 marker-arrow-0.5308-7	Mecanique Generale/notes/figures/cercletrigo.svg	/^       markerWidth="0.911">$/;"	d
@@ -1051,15 +1032,18 @@ metadata5	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^   
 metadata5	Structures Algebriques/notes/figures/qq.svg	/^     id="metadata5">$/;"	i
 metadata5	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^     id="metadata5">$/;"	i
 metadata5	Structures Algebriques/notes/figures/test.svg	/^     id="metadata5">$/;"	i
-metadata5	current-course/notes/figures/schemacomposition.svg	/^     id="metadata5">$/;"	i
+metadata5	current-course/notes/figures/fonction1.svg	/^     id="metadata5">$/;"	i
+metadata5	current-course/notes/figures/fonction2.svg	/^     id="metadata5">$/;"	i
+metadata5	current-course/notes/figures/fonction3.svg	/^     id="metadata5">$/;"	i
+metadata5	current-course/notes/figures/fonction4.svg	/^     id="metadata5">$/;"	i
 min2	Introduction a la programmation/Exos/MOOC/S4/Ex5/min2.cc	/^double min2(double a, double b){$/;"	f	typeref:typename:double
 min3	Introduction a la programmation/Exos/MOOC/S4/Ex5/min2.cc	/^double min3(double a, double b, double c){$/;"	f	typeref:typename:double
 mult	Introduction a la programmation/Exos/MOOC/S5/Ex2/matrices.cc	/^vector<vector<double>> mult(vector<vector<double>> A, vector<vector<double>> B){$/;"	f	typeref:typename:vector<vector<double>>
 mult	Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^complexe mult(complexe a, complexe b){$/;"	f	typeref:typename:complexe
 nom	Introduction a la programmation/Exos/MOOC/S7/Ex2/maison.cc	/^	string nom;$/;"	m	struct:Personne	typeref:typename:string	file:
+nouvmatch	Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^void nouvmatch(Match &m, string eq1, string eq2){$/;"	f	typeref:typename:void
 ns06b007c80101	Mecanique Generale/notes/figures/systemes-de-coordonnees.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns21dcb4580101	Structures Algebriques/Devoirs/S6/figures/diagramme.svg	/^   sodipodi:docname="diagramme.svg">$/;"	n	uri:http://www.w3.org/2000/svg
-ns22b39ff40101	current-course/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns27bdc7ee0101	Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^   sodipodi:docname="types-d'ammortissement.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns31ae2c050101	Mecanique Generale/notes/figures/trajectoire.svg	/^   sodipodi:docname="trajectoire.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns3a5815d50101	Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://www.w3.org/2000/svg
@@ -1079,6 +1063,10 @@ ns9ba0bab70101	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodip
 ns9c8152280101	Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns9ecdcbca0101	Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^   sodipodi:docname="ressort-plan-horizontal.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns9fc4d4bc0101	Mecanique Generale/notes/figures/cercletrigo.svg	/^   sodipodi:docname="cercletrigo.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+nsadbfde400101	current-course/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+nsadd1f6c10101	current-course/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+nsade40f420101	current-course/notes/figures/fonction3.svg	/^   sodipodi:docname="fonction3.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+nsadf627c30101	current-course/notes/figures/fonction4.svg	/^   sodipodi:docname="fonction4.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 nsc088e6a10101	Mecanique Generale/notes/figures/curviligne.svg	/^   sodipodi:docname="curviligne.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 nscca2471b0101	Mecanique Generale/notes/figures/repere-droit.svg	/^   sodipodi:docname="repere-droit.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 nsd1c83c330101	Mecanique Generale/notes/figures/curviligne2.svg	/^   sodipodi:docname="curviligne2.svg">$/;"	n	uri:http://www.w3.org/2000/svg
@@ -1138,6 +1126,10 @@ path831	Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^         
 path831	Mecanique Generale/notes/figures/trajectoire.svg	/^       d="m 22.690738,204.4984 c 17.278323,1.90285 39.624677,1.25549 45.441722,22.09801 11.21958/;"	i
 path831	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       ry="40.069748" \/>$/;"	i
 path831	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^       ry="20.483728" \/>$/;"	i
+path831	current-course/notes/figures/fonction1.svg	/^       id="path831" \/>$/;"	i
+path831	current-course/notes/figures/fonction2.svg	/^       id="path831" \/>$/;"	i
+path831	current-course/notes/figures/fonction3.svg	/^       id="path831" \/>$/;"	i
+path831	current-course/notes/figures/fonction4.svg	/^       id="path831" \/>$/;"	i
 path833	Analyse I/notes/figures/fonction1.svg	/^       id="path833" \/>$/;"	i
 path833	Analyse I/notes/figures/fonction2.svg	/^       id="path833" \/>$/;"	i
 path833	Analyse I/notes/figures/fonction3.svg	/^       id="path833" \/>$/;"	i
@@ -1152,6 +1144,10 @@ path833	Mecanique Generale/notes/figures/repere.svg	/^         id="path833" \/>$
 path833	Mecanique Generale/notes/figures/reperes.svg	/^       id="path833" \/>$/;"	i
 path833	Mecanique Generale/notes/figures/ressort.svg	/^       id="path833" \/>$/;"	i
 path833	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^       ry="6.0206037" \/>$/;"	i
+path833	current-course/notes/figures/fonction1.svg	/^       id="path833" \/>$/;"	i
+path833	current-course/notes/figures/fonction2.svg	/^       id="path833" \/>$/;"	i
+path833	current-course/notes/figures/fonction3.svg	/^       id="path833" \/>$/;"	i
+path833	current-course/notes/figures/fonction4.svg	/^       id="path833" \/>$/;"	i
 path835	Analyse I/notes/figures/fonction1.svg	/^       id="path835" \/>$/;"	i
 path835	Analyse I/notes/figures/fonction2.svg	/^       id="path835" \/>$/;"	i
 path835	Analyse I/notes/figures/fonction3.svg	/^       id="path835" \/>$/;"	i
@@ -1163,6 +1159,10 @@ path835	Mecanique Generale/notes/figures/repere.svg	/^       id="path835" \/>$/;
 path835	Mecanique Generale/notes/figures/ressort.svg	/^       id="path835" \/>$/;"	i
 path835	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       ry="12.000168" \/>$/;"	i
 path835	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^       ry="6.3633924" \/>$/;"	i
+path835	current-course/notes/figures/fonction1.svg	/^       id="path835" \/>$/;"	i
+path835	current-course/notes/figures/fonction2.svg	/^       id="path835" \/>$/;"	i
+path835	current-course/notes/figures/fonction3.svg	/^       id="path835" \/>$/;"	i
+path835	current-course/notes/figures/fonction4.svg	/^       id="path835" \/>$/;"	i
 path837	Analyse I/notes/figures/fonction1.svg	/^           id="path837" \/>$/;"	i
 path837	Analyse I/notes/figures/fonction2.svg	/^       d="M 39.584532,260.60738 C 67.454929,259.54331 91.064271,236.77282 97.698948,210.612 l 0./;"	i
 path837	Mecanique Generale/notes/figures/mouvement_central.svg	/^       id="path837" \/>$/;"	i
@@ -1170,6 +1170,8 @@ path837	Mecanique Generale/notes/figures/produit-scalaire.svg	/^           id="p
 path837	Mecanique Generale/notes/figures/repere.svg	/^           id="path837" \/>$/;"	i
 path837	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       ry="19.356339" \/>$/;"	i
 path837	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^       ry="4.9694796" \/>$/;"	i
+path837	current-course/notes/figures/fonction1.svg	/^           id="path837" \/>$/;"	i
+path837	current-course/notes/figures/fonction2.svg	/^       d="M 39.584532,260.60738 C 67.454929,259.54331 91.064271,236.77282 97.698948,210.612 l 0./;"	i
 path839	Mecanique Generale/notes/figures/curviligne2.svg	/^           id="path839" \/>$/;"	i
 path839	Mecanique Generale/notes/figures/mouvement_central.svg	/^           id="path839" \/>$/;"	i
 path839	Mecanique Generale/notes/figures/reperes.svg	/^           id="path839" \/>$/;"	i
@@ -1181,26 +1183,28 @@ path843	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^  
 path845	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^       id="path845" \/>$/;"	i
 path845	Mecanique Generale/notes/figures/cercletrigo.svg	/^       id="path845" \/>$/;"	i
 path845	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^       id="path845" \/>$/;"	i
-path845	current-course/notes/figures/schemacomposition.svg	/^       id="path845" \/>$/;"	i
 path846	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       ry="8.5949926" \/>$/;"	i
 path847	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^           id="path847" \/>$/;"	i
 path847	Mecanique Generale/notes/figures/cercletrigo.svg	/^           id="path847" \/>$/;"	i
 path847	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^       id="path847" \/>$/;"	i
-path847	current-course/notes/figures/schemacomposition.svg	/^           id="path847" \/>$/;"	i
 path849	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^       id="path849" \/>$/;"	i
 path850	Analyse I/notes/figures/fonction2.svg	/^       d="m 39.577875,261.09439 c 14.565825,-1.11883 30.521812,2.30221 43.683706,-5.7701 6.50892/;"	i
+path850	current-course/notes/figures/fonction2.svg	/^       d="m 39.577875,261.09439 c 14.565825,-1.11883 30.521812,2.30221 43.683706,-5.7701 6.50892/;"	i
 path851	Analyse I/notes/figures/fonction3.svg	/^       id="path851" \/>$/;"	i
 path851	Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^       id="path851" \/>$/;"	i
 path851	Mecanique Generale/notes/figures/ressort.svg	/^       id="path851" \/>$/;"	i
+path851	current-course/notes/figures/fonction3.svg	/^       id="path851" \/>$/;"	i
 path853	Analyse I/notes/figures/fonction4.svg	/^       id="path853" \/>$/;"	i
 path853	Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^       id="path853" \/>$/;"	i
 path853	Mecanique Generale/notes/figures/produit-scalaire.svg	/^       d="m 43.584653,232.80445 c 2.400587,1.15017 3.703833,4.02149 3.278317,6.60321" \/>$/;"	i
+path853	current-course/notes/figures/fonction4.svg	/^       id="path853" \/>$/;"	i
 path855	Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^       id="path855" \/>$/;"	i
 path857	Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^       id="path857" \/>$/;"	i
 path857	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       ry="7.4122066" \/>$/;"	i
 path859	Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^       id="path859" \/>$/;"	i
 path861	Analyse I/notes/figures/fonction1.svg	/^           id="path861" \/>$/;"	i
 path861	Mecanique Generale/notes/figures/repere-droit.svg	/^           id="path861" \/>$/;"	i
+path861	current-course/notes/figures/fonction1.svg	/^           id="path861" \/>$/;"	i
 path862	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       id="path862" \/>$/;"	i
 path863	Mecanique Generale/notes/figures/curviligne2.svg	/^       id="path863" \/>$/;"	i
 path863	Mecanique Generale/notes/figures/mouvement_central.svg	/^       id="path863" \/>$/;"	i
@@ -1213,8 +1217,10 @@ path867	Analyse I/notes/figures/fonction3.svg	/^       id="path867" \/>$/;"	i
 path867	Mecanique Generale/notes/figures/curviligne2.svg	/^       id="path867" \/>$/;"	i
 path867	Mecanique Generale/notes/figures/ressort.svg	/^       id="path867" \/>$/;"	i
 path867	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       id="path867" \/>$/;"	i
+path867	current-course/notes/figures/fonction3.svg	/^       id="path867" \/>$/;"	i
 path869	Analyse I/notes/figures/fonction4.svg	/^       id="path869" \/>$/;"	i
 path869	Mecanique Generale/notes/figures/curviligne2.svg	/^       id="path869" \/>$/;"	i
+path869	current-course/notes/figures/fonction4.svg	/^       id="path869" \/>$/;"	i
 path871	Mecanique Generale/notes/figures/cercletrigo.svg	/^           id="path871" \/>$/;"	i
 path871	Mecanique Generale/notes/figures/curviligne2.svg	/^           id="path871" \/>$/;"	i
 path871	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       id="path871" \/>$/;"	i
@@ -1226,22 +1232,25 @@ path880	Mecanique Generale/notes/figures/trajectoire.svg	/^       id="path880" \
 path881	Mecanique Generale/notes/figures/repere.svg	/^           id="path881" \/>$/;"	i
 path883	Analyse I/notes/figures/fonction3.svg	/^       id="path883" \/>$/;"	i
 path883	Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^           id="path883" \/>$/;"	i
+path883	current-course/notes/figures/fonction3.svg	/^       id="path883" \/>$/;"	i
 path885	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^       id="path885" \/>$/;"	i
 path885	Analyse I/notes/figures/fonction4.svg	/^       id="path885" \/>$/;"	i
-path885	current-course/notes/figures/schemacomposition.svg	/^       id="path885" \/>$/;"	i
+path885	current-course/notes/figures/fonction4.svg	/^       id="path885" \/>$/;"	i
 path887	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^           id="path887" \/>$/;"	i
 path887	Structures Algebriques/notes/figures/diagrammes-produits.svg	/^       id="path887" \/>$/;"	i
-path887	current-course/notes/figures/schemacomposition.svg	/^           id="path887" \/>$/;"	i
 path889	Mecanique Generale/notes/figures/repere.svg	/^         id="path889" \/>$/;"	i
 path889	Structures Algebriques/notes/figures/diagrammes-produits.svg	/^           id="path889" \/>$/;"	i
 path891	Mecanique Generale/notes/figures/repere.svg	/^           id="path891" \/>$/;"	i
 path894	Analyse I/notes/figures/fonction1.svg	/^       id="path894" \/>$/;"	i
 path894	Mecanique Generale/notes/figures/repere-droit.svg	/^           id="path894" \/>$/;"	i
+path894	current-course/notes/figures/fonction1.svg	/^       id="path894" \/>$/;"	i
 path895	Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^       id="path895" \/>$/;"	i
 path896	Analyse I/notes/figures/fonction1.svg	/^       id="path896" \/>$/;"	i
+path896	current-course/notes/figures/fonction1.svg	/^       id="path896" \/>$/;"	i
 path897	Mecanique Generale/notes/figures/ressort.svg	/^       id="path897" \/>$/;"	i
 path899	Mecanique Generale/notes/figures/ressort.svg	/^           id="path899" \/>$/;"	i
 path901	Analyse I/notes/figures/fonction4.svg	/^       id="path901" \/>$/;"	i
+path901	current-course/notes/figures/fonction4.svg	/^       id="path901" \/>$/;"	i
 path904	Mecanique Generale/notes/figures/cercletrigo.svg	/^       id="path904" \/>$/;"	i
 path904	Mecanique Generale/notes/figures/curviligne2.svg	/^           id="path904" \/>$/;"	i
 path906	Mecanique Generale/notes/figures/cercletrigo.svg	/^           id="path906" \/>$/;"	i
@@ -1262,10 +1271,8 @@ path923	Mecanique Generale/notes/figures/ressort.svg	/^       id="path923" \/>$/
 path924	Mecanique Generale/notes/figures/repere.svg	/^         id="path924" \/>$/;"	i
 path926	Mecanique Generale/notes/figures/repere.svg	/^           id="path926" \/>$/;"	i
 path934	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^       id="path934" \/>$/;"	i
-path934	current-course/notes/figures/schemacomposition.svg	/^       id="path934" \/>$/;"	i
 path936	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^           id="path936" \/>$/;"	i
 path936	Mecanique Generale/notes/figures/repere-droit.svg	/^           id="path936" \/>$/;"	i
-path936	current-course/notes/figures/schemacomposition.svg	/^           id="path936" \/>$/;"	i
 path938	Mecanique Generale/notes/figures/trajectoire.svg	/^       id="path938" \/>$/;"	i
 path939	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^       id="path939" \/>$/;"	i
 path940	Mecanique Generale/notes/figures/trajectoire.svg	/^           id="path940" \/>$/;"	i
@@ -1330,23 +1337,24 @@ prenom	Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^string preno
 printarr	Introduction a la programmation/Exos/MOOC/S6/Ex5/tableaux.cc	/^void printarr(vector<vector<int>> t){$/;"	f	typeref:typename:void
 produit	Structures Algebriques/Devoirs/S1/sol.tex	/^\\begin{lemma}\\label{produit}$/;"	l
 propo:_mathbb_q_est_dense_dans_mathbb_r_	Analyse I/notes/lectures/lec2.tex	/^\\begin{propo}[$\\mathbb{Q}$ est dense dans $\\mathbb{R}$]\\index{$\\mathbb{Q}$ est dense dans $/;"	l
+propo:_mathbb_q_est_dense_dans_mathbb_r_	current-course/notes/lectures/lec2.tex	/^\\begin{propo}[$\\mathbb{Q}$ est dense dans $\\mathbb{R}$]\\index{$\\mathbb{Q}$ est dense dans $/;"	l
 propo:annulation_de_l_element_neutre	Analyse I/notes/lectures/lec1.tex	/^\\begin{propo}[Annulation de l'element neutre]\\index{Annulation de l'element neutre}\\label{pro/;"	l
+propo:annulation_de_l_element_neutre	current-course/notes/lectures/lec1.tex	/^\\begin{propo}[Annulation de l'element neutre]\\index{Annulation de l'element neutre}\\label{pro/;"	l
 propo:critere_de_sous_groupe	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\begin{propo}[Critere de Sous-groupe]\\index{Critere de Sous-groupe}\\label{propo:critere_de_so/;"	l
-propo:critere_de_sous_groupe	current-course/notes/lectures/lec3.tex	/^\\begin{propo}[Critere de Sous-groupe]\\index{Critere de Sous-groupe}\\label{propo:critere_de_so/;"	l
 propo:densite_des_irrationnels	Analyse I/notes/lectures/lec3.tex	/^\\begin{propo}[Densite des irrationnels]\\label{propo:densite_des_irrationnels}$/;"	l
+propo:densite_des_irrationnels	current-course/notes/lectures/lec3.tex	/^\\begin{propo}[Densite des irrationnels]\\label{propo:densite_des_irrationnels}$/;"	l
 propo:division_avec_reste	Structures Algebriques/notes/lectures/lec1.tex	/^\\begin{propo}[Division avec reste]\\index{division}\\index{reste}\\label{propo:division_avec_re/;"	l
 propo:intersection_de_sous_groupes	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\begin{propo}[Intersection de sous-groupes]\\index{Intersection de sous-groupes}\\label{propo:i/;"	l
-propo:intersection_de_sous_groupes	current-course/notes/lectures/lec3.tex	/^\\begin{propo}[Intersection de sous-groupes]\\index{Intersection de sous-groupes}\\label{propo:i/;"	l
 propo:inverse_d_une_composition	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{propo}[Inverse d'une composition]\\index{inverse}\\index{composition}\\label{propo:inver/;"	l
-propo:inverse_d_une_composition	current-course/notes/lectures/lec2.tex	/^\\begin{propo}[Inverse d'une composition]\\index{inverse}\\index{composition}\\label{propo:inver/;"	l
 propo:inversion_d_une_limite	Analyse I/notes/lectures/lec4.tex	/^\\begin{propo}[Inversion d'une limite]\\index{Inversion d'une limite}\\label{propo:inversion_d_u/;"	l
+propo:inversion_d_une_limite	current-course/notes/lectures/lec4.tex	/^\\begin{propo}[Inversion d'une limite]\\index{Inversion d'une limite}\\label{propo:inversion_d_u/;"	l
 propo:lois_de_groupe	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\begin{propo}[Lois de Groupe]\\index{Lois de Groupe}\\label{propo:lois_de_groupe}$/;"	l
-propo:lois_de_groupe	current-course/notes/lectures/lec3.tex	/^\\begin{propo}[Lois de Groupe]\\index{Lois de Groupe}\\label{propo:lois_de_groupe}$/;"	l
 propo:paradoxe_de_russel	Structures Algebriques/notes/lectures/lec1.tex	/^\\begin{propo}[Paradoxe de Russel]\\index{Paradoxe}\\index{Russel}\\label{propo:paradoxe_de_russ/;"	l
 propo:surjectivite_de_la_composition	Structures Algebriques/notes/lectures/lec2.tex	/^\\begin{propo}[Surjectivite de la composition]\\index{Surjectivite de la composition}\\label{pro/;"	l
 propr:bijectivite	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{propr}[Bijectivite]\\index{Bijectivite}\\label{propr:bijectivite}$/;"	l
-propr:bijectivite	current-course/notes/lectures/lec2.tex	/^\\begin{propr}[Bijectivite]\\index{Bijectivite}\\label{propr:bijectivite}$/;"	l
 propr:propriete_des_applications	Structures Algebriques/notes/lectures/lec2.tex	/^\\begin{propr}[Propriete des applications]\\index{Propriete des applications}\\label{propr:propr/;"	l
+pt1	Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^	int pt1;$/;"	m	struct:Match	typeref:typename:int	file:
+pt2	Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^	int pt2;$/;"	m	struct:Match	typeref:typename:int	file:
 qcm	Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^struct qcm{$/;"	s	file:
 question	Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^string question;$/;"	m	struct:qcm	typeref:typename:string	file:
 r	Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^	double r;$/;"	m	struct:complexe	typeref:typename:double	file:
@@ -1383,7 +1391,10 @@ rdf	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^   sodipo
 rdf	Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
-rdf	current-course/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdf	current-course/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdf	current-course/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdf	current-course/notes/figures/fonction3.svg	/^   sodipodi:docname="fonction3.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdf	current-course/notes/figures/fonction4.svg	/^   sodipodi:docname="fonction4.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 reponses	Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^vector<string> reponses;$/;"	m	struct:qcm	typeref:typename:vector<string>	file:
 rouge	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^enum Couleur { vide,rouge, jaune};$/;"	e	enum:Couleur	file:
 scalaire	Introduction a la programmation/Exos/MOOC/S5/Ex1/scalaire.cc	/^double scalaire(vector<double> u, vector<double> v){$/;"	f	typeref:typename:double
@@ -1422,7 +1433,10 @@ sodipodi	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^   s
 sodipodi	Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 sodipodi	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 sodipodi	Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
-sodipodi	current-course/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
+sodipodi	current-course/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
+sodipodi	current-course/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
+sodipodi	current-course/notes/figures/fonction3.svg	/^   sodipodi:docname="fonction3.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
+sodipodi	current-course/notes/figures/fonction4.svg	/^   sodipodi:docname="fonction4.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 solution	Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^int solution;$/;"	m	struct:qcm	typeref:typename:int	file:
 somme	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^int somme;$/;"	m	struct:SousSequence	typeref:typename:int	file:
 somme	Structures Algebriques/Devoirs/S1/sol.tex	/^\\begin{lemma}\\label{somme}$/;"	l
@@ -1463,7 +1477,10 @@ svg	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^   sodipo
 svg	Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 svg	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 svg	Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
-svg	current-course/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+svg	current-course/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+svg	current-course/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+svg	current-course/notes/figures/fonction3.svg	/^   sodipodi:docname="fonction3.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+svg	current-course/notes/figures/fonction4.svg	/^   sodipodi:docname="fonction4.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 svg8	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	i
 svg8	Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	i
 svg8	Analyse I/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	i
@@ -1497,7 +1514,10 @@ svg8	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^   sodip
 svg8	Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">$/;"	i
 svg8	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	i
 svg8	Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	i
-svg8	current-course/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	i
+svg8	current-course/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	i
+svg8	current-course/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	i
+svg8	current-course/notes/figures/fonction3.svg	/^   sodipodi:docname="fonction3.svg">$/;"	i
+svg8	current-course/notes/figures/fonction4.svg	/^   sodipodi:docname="fonction4.svg">$/;"	i
 swap	Introduction a la programmation/Exos/MOOC/S8/Ex3/trideshell.cc	/^void swap(tab& t, int a, int b){$/;"	f	typeref:typename:void
 tab	Introduction a la programmation/Exos/MOOC/S8/Ex3/trideshell.cc	/^typedef vector<int> tab;$/;"	t	typeref:typename:vector<int>	file:
 text1001	Mecanique Generale/notes/figures/curviligne2.svg	/^       x="34.033768"><tspan$/;"	i
@@ -1535,11 +1555,12 @@ text1428	Structures Algebriques/Devoirs/S6/figures/diagramme.svg	/^       x="122
 text1442	Structures Algebriques/Devoirs/S6/figures/diagramme.svg	/^       x="118.90628"><tspan$/;"	i
 text833	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^       x="40.45158"><tspan$/;"	i
 text833	Structures Algebriques/notes/figures/diagrammes-produits.svg	/^       x="125.526"><tspan$/;"	i
-text833	current-course/notes/figures/schemacomposition.svg	/^       x="40.45158"><tspan$/;"	i
 text837	Mecanique Generale/notes/figures/produit-vectoriel.svg	/^       x="56.379177"><tspan$/;"	i
 text839	Analyse I/notes/figures/fonction3.svg	/^       x="31.906904"><tspan$/;"	i
 text839	Analyse I/notes/figures/fonction4.svg	/^       x="32.421276"><tspan$/;"	i
 text839	Mecanique Generale/notes/figures/ressort.svg	/^       x="14.345931"><tspan$/;"	i
+text839	current-course/notes/figures/fonction3.svg	/^       x="31.906904"><tspan$/;"	i
+text839	current-course/notes/figures/fonction4.svg	/^       x="32.421276"><tspan$/;"	i
 text841	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       x="34.549919"><tspan$/;"	i
 text844	Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^       x="4.7857294"><tspan$/;"	i
 text845	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       x="135.19044"><tspan$/;"	i
@@ -1553,7 +1574,9 @@ text853	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^  
 text854	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^       x="121.16977"><tspan$/;"	i
 text855	Analyse I/notes/figures/fonction3.svg	/^       x="43.348358"><tspan$/;"	i
 text855	Mecanique Generale/notes/figures/ressort.svg	/^       x="118.19426"><tspan$/;"	i
+text855	current-course/notes/figures/fonction3.svg	/^       x="43.348358"><tspan$/;"	i
 text857	Analyse I/notes/figures/fonction4.svg	/^       x="38.280857"><tspan$/;"	i
+text857	current-course/notes/figures/fonction4.svg	/^       x="38.280857"><tspan$/;"	i
 text860	Mecanique Generale/notes/figures/curviligne.svg	/^       x="87.607162"><tspan$/;"	i
 text861	Structures Algebriques/notes/figures/diagrammes-produits.svg	/^       x="127.14587"><tspan$/;"	i
 text861	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       x="132.73357"><tspan$/;"	i
@@ -1566,12 +1589,14 @@ text865	Mecanique Generale/notes/figures/reperes.svg	/^       x="60.843689"><tsp
 text867	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^       transform="scale(1.0603782,0.94305978)"><tspan$/;"	i
 text868	Analyse I/notes/figures/fonction2.svg	/^       x="37.235626"><tspan$/;"	i
 text868	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       x="60.374115"><tspan$/;"	i
+text868	current-course/notes/figures/fonction2.svg	/^       x="37.235626"><tspan$/;"	i
 text869	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^       x="124.45272"><tspan$/;"	i
 text871	Analyse I/notes/figures/fonction3.svg	/^       x="24.971025"><tspan$/;"	i
 text871	Mecanique Generale/notes/figures/ressort.svg	/^       x="95.748398"><tspan$/;"	i
+text871	current-course/notes/figures/fonction3.svg	/^       x="24.971025"><tspan$/;"	i
 text873	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^       x="65.947395"><tspan$/;"	i
 text873	Analyse I/notes/figures/fonction4.svg	/^       x="43.88052"><tspan$/;"	i
-text873	current-course/notes/figures/schemacomposition.svg	/^       x="65.947395"><tspan$/;"	i
+text873	current-course/notes/figures/fonction4.svg	/^       x="43.88052"><tspan$/;"	i
 text875	Structures Algebriques/notes/figures/diagrammes-produits.svg	/^       x="63.552673"><tspan$/;"	i
 text875	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       x="59.971066"><tspan$/;"	i
 text878	Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^       x="141.24763"><tspan$/;"	i
@@ -1581,7 +1606,9 @@ text880	Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^       x="
 text884	Mecanique Generale/notes/figures/trajectoire.svg	/^       x="5.8132415"><tspan$/;"	i
 text885	Mecanique Generale/notes/figures/ressort.svg	/^       x="111.35555"><tspan$/;"	i
 text887	Analyse I/notes/figures/fonction3.svg	/^       x="83.77478"><tspan$/;"	i
+text887	current-course/notes/figures/fonction3.svg	/^       x="83.77478"><tspan$/;"	i
 text889	Analyse I/notes/figures/fonction4.svg	/^       x="84.573021"><tspan$/;"	i
+text889	current-course/notes/figures/fonction4.svg	/^       x="84.573021"><tspan$/;"	i
 text893	Mecanique Generale/notes/figures/produit-scalaire.svg	/^       x="60.902546"><tspan$/;"	i
 text894	Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^       x="104.03008"><tspan$/;"	i
 text896	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       x="71.048698"><tspan$/;"	i
@@ -1590,18 +1617,22 @@ text898	Mecanique Generale/notes/figures/trajectoire.svg	/^       x="33.485596">
 text899	Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^       x="87.499901"><tspan$/;"	i
 text900	Analyse I/notes/figures/fonction1.svg	/^       x="106.41473"><tspan$/;"	i
 text900	Mecanique Generale/notes/figures/mouvement_central.svg	/^       x="89.908859"><tspan$/;"	i
+text900	current-course/notes/figures/fonction1.svg	/^       x="106.41473"><tspan$/;"	i
 text901	Analyse I/notes/figures/fonction3.svg	/^       x="35.085636"><tspan$/;"	i
 text901	Structures Algebriques/Devoirs/S6/figures/diagramme.svg	/^       x="38.498775"><tspan$/;"	i
+text901	current-course/notes/figures/fonction3.svg	/^       x="35.085636"><tspan$/;"	i
 text907	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^       x="64.026024"><tspan$/;"	i
 text908	Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^       x="104.53804"><tspan$/;"	i
 text912	Mecanique Generale/notes/figures/trajectoire.svg	/^       x="10.868768"><tspan$/;"	i
 text913	Analyse I/notes/figures/fonction4.svg	/^       x="42.801968"><tspan$/;"	i
+text913	current-course/notes/figures/fonction4.svg	/^       x="42.801968"><tspan$/;"	i
 text914	Analyse I/notes/figures/fonction1.svg	/^       x="48.389652"><tspan$/;"	i
+text914	current-course/notes/figures/fonction1.svg	/^       x="48.389652"><tspan$/;"	i
 text921	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^       x="22.005325"><tspan$/;"	i
 text922	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^       x="89.628548"><tspan$/;"	i
-text922	current-course/notes/figures/schemacomposition.svg	/^       x="89.628548"><tspan$/;"	i
 text926	Mecanique Generale/notes/figures/trajectoire.svg	/^       x="10.868768"><tspan$/;"	i
 text928	Analyse I/notes/figures/fonction1.svg	/^       x="46.257454"><tspan$/;"	i
+text928	current-course/notes/figures/fonction1.svg	/^       x="46.257454"><tspan$/;"	i
 text933	Structures Algebriques/Devoirs/S6/figures/diagramme.svg	/^       x="9.8701124"><tspan$/;"	i
 text934	Mecanique Generale/notes/figures/trajectoire.svg	/^       x="131.03571"><tspan$/;"	i
 text936	Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^       x="3.9767277"><tspan$/;"	i
@@ -1621,33 +1652,38 @@ text979	Mecanique Generale/notes/figures/curviligne.svg	/^       x="127.05631"><
 text988	Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^       x="101.14365"><tspan$/;"	i
 text989	Mecanique Generale/notes/figures/repere-droit.svg	/^       x="39.683296"><tspan$/;"	i
 thm:bolzano_weierstrass	Analyse I/notes/lectures/lec5.tex	/^\\begin{thm}[Bolzano-Weierstrass]\\index{Bolzano-Weierstrass}\\label{thm:bolzano_weierstrass}$/;"	l
+thm:bolzano_weierstrass	current-course/notes/lectures/lec5.tex	/^\\begin{thm}[Bolzano-Weierstrass]\\index{Bolzano-Weierstrass}\\label{thm:bolzano_weierstrass}$/;"	l
 thm:composition_de_fonctions	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\begin{thm}[Composition de fonctions]\\index{Composition de fonctions}\\label{thm:composition_d/;"	l
-thm:composition_de_fonctions	current-course/notes/lectures/lec1.tex	/^\\begin{thm}[Composition de fonctions]\\index{Composition de fonctions}\\label{thm:composition_d/;"	l
 thm:convergence_des_suites_de_caucjy	Analyse I/notes/lectures/lec5.tex	/^\\begin{thm}[Convergence des suites de Caucjy]\\index{Convergence des suites de Caucjy}\\label{t/;"	l
+thm:convergence_des_suites_de_caucjy	current-course/notes/lectures/lec5.tex	/^\\begin{thm}[Convergence des suites de Caucjy]\\index{Convergence des suites de Caucjy}\\label{t/;"	l
 thm:critere_d_alembert	Analyse I/notes/lectures/lec8.tex	/^\\begin{thm}[Critere de d'Alembert 2]\\index{Critere d'Alembert}\\label{thm:critere_d_alembert}$/;"	l
+thm:critere_d_alembert	current-course/notes/lectures/lec8.tex	/^\\begin{thm}[Critere de d'Alembert 2]\\index{Critere d'Alembert}\\label{thm:critere_d_alembert}$/;"	l
 thm:critere_d_injectivite	Algebre Lineaire I/notes/lectures/lec5.tex	/^\\begin{thm}[Critere d'injectivite]\\index{Critere d'injectivite}\\label{thm:critere_d_injectivi/;"	l
-thm:critere_d_injectivite	current-course/notes/lectures/lec5.tex	/^\\begin{thm}[Critere d'injectivite]\\index{Critere d'injectivite}\\label{thm:critere_d_injectivi/;"	l
 thm:critere_de_la_racine	Analyse I/notes/lectures/lec8.tex	/^\\begin{thm}[Critere de la racine]\\index{Critere de la racine}\\label{thm:critere_de_la_racine}$/;"	l
+thm:critere_de_la_racine	current-course/notes/lectures/lec8.tex	/^\\begin{thm}[Critere de la racine]\\index{Critere de la racine}\\label{thm:critere_de_la_racine}$/;"	l
 thm:dim_de_sev	Algebre Lineaire I/notes/lectures/lec12.tex	/^\\begin{thm}[Dimension de SEV]\\label{thm:dim_de_sev}$/;"	l
-thm:dim_de_sev	current-course/notes/lectures/lec12.tex	/^\\begin{thm}[Dimension de SEV]\\label{thm:dim_de_sev}$/;"	l
 thm:env_400	Analyse I/notes/lectures/lec1.tex	/^\\begin{thm}[env. -400]\\label{thm:env_400}$/;"	l
+thm:env_400	current-course/notes/lectures/lec1.tex	/^\\begin{thm}[env. -400]\\label{thm:env_400}$/;"	l
 thm:gravitation_universelle	Mecanique Generale/notes/lectures/lec8.tex	/^\\begin{thm}[Gravitation Universelle]\\index{Gravitation Universelle}\\label{thm:gravitation_uni/;"	l
 thm:isom_de_Kd_vers_V	Algebre Lineaire I/notes/lectures/lec11.tex	/^\\begin{thm}\\label{thm:isom_de_Kd_vers_V}$/;"	l
-thm:isom_de_Kd_vers_V	current-course/notes/lectures/lec11.tex	/^\\begin{thm}\\label{thm:isom_de_Kd_vers_V}$/;"	l
 thm:la_racine_de_deux_existe	Analyse I/notes/lectures/lec2.tex	/^\\begin{thm}[La racine de deux existe]\\index{La racine de deux existe}\\label{thm:la_racine_de_/;"	l
+thm:la_racine_de_deux_existe	current-course/notes/lectures/lec2.tex	/^\\begin{thm}[La racine de deux existe]\\index{La racine de deux existe}\\label{thm:la_racine_de_/;"	l
 thm:petit_theoreme_de_fermat	Structures Algebriques/notes/lectures/lec8.tex	/^\\begin{thm}[Petit theoreme de Fermat]\\index{Petit theoreme de Fermat}\\label{thm:petit_theorem/;"	l
 thm:premiere_regle_de_d_alembert	Analyse I/notes/lectures/lec5.tex	/^\\begin{thm}[Premiere regle de d'Alembert]\\index{Premiere regle de d'Alembert}\\label{thm:premi/;"	l
+thm:premiere_regle_de_d_alembert	current-course/notes/lectures/lec5.tex	/^\\begin{thm}[Premiere regle de d'Alembert]\\index{Premiere regle de d'Alembert}\\label{thm:premi/;"	l
 thm:sous_groupe_de_mathbb_z_	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\begin{thm}[Sous groupe de $\\mathbb{Z}$]\\index{Sous groupe de $\\mathbb{Z}$}\\label{thm:sous_/;"	l
-thm:sous_groupe_de_mathbb_z_	current-course/notes/lectures/lec3.tex	/^\\begin{thm}[Sous groupe de $\\mathbb{Z}$]\\index{Sous groupe de $\\mathbb{Z}$}\\label{thm:sous_/;"	l
 thm:theoreme_de_cauchy	Analyse I/notes/lectures/lec16.tex	/^\\begin{thm}[Theoreme de Cauchy]\\index{Theoreme de Cauchy}\\label{thm:theoreme_de_cauchy}$/;"	l
+thm:theoreme_de_cauchy	current-course/notes/lectures/lec16.tex	/^\\begin{thm}[Theoreme de Cauchy]\\index{Theoreme de Cauchy}\\label{thm:theoreme_de_cauchy}$/;"	l
 thm:theoreme_de_rolle	Analyse I/notes/lectures/lec15.tex	/^\\begin{thm}[theoreme de Rolle]\\index{theoreme de Rolle}\\label{thm:theoreme_de_rolle}$/;"	l
+thm:theoreme_de_rolle	current-course/notes/lectures/lec15.tex	/^\\begin{thm}[theoreme de Rolle]\\index{theoreme de Rolle}\\label{thm:theoreme_de_rolle}$/;"	l
 thm:theoreme_des_accroissements_finis_taf	Analyse I/notes/lectures/lec15.tex	/^\\begin{thm}[théorème des accroissements finis TAF]\\index{théorème des accroissements finis/;"	l
+thm:theoreme_des_accroissements_finis_taf	current-course/notes/lectures/lec15.tex	/^\\begin{thm}[théorème des accroissements finis TAF]\\index{théorème des accroissements finis/;"	l
 tirer_couleur	Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^char tirer_couleur()$/;"	f	typeref:typename:char
 tranchemax1	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^SousSequence tranchemax1(Sequence seq){$/;"	f	typeref:typename:SousSequence
 tranchemax2	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^SousSequence tranchemax2(Sequence seq){$/;"	f	typeref:typename:SousSequence
 tranchemax3	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^SousSequence tranchemax3(Sequence seq){$/;"	f	typeref:typename:SousSequence
 tranches_max	Introduction a la programmation/Exos/MOOC/S6/Ex5/tableaux.cc	/^vector<vector<int>> tranches_max(vector<vector<int>> tab){$/;"	f	typeref:typename:vector<vector<int>>
-trishell	Introduction a la programmation/Exos/MOOC/S8/Ex3/trideshell.cc	/^void trishell(tab t){$/;"	f	typeref:typename:void
+trishell	Introduction a la programmation/Exos/MOOC/S8/Ex3/trideshell.cc	/^void trishell(tab& t){$/;"	f	typeref:typename:void
 trouver_dernier1	Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^size_t trouver_dernier1(vector<int>& tab){$/;"	f	typeref:typename:size_t
 trouver_premier1	Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^size_t trouver_premier1(vector<int>& tab){$/;"	f	typeref:typename:size_t
 tspan1001	Mecanique Generale/notes/figures/cercletrigo.svg	/^         style="stroke-width:0.264583">$R$<\/tspan><\/text>$/;"	i
@@ -1684,11 +1720,12 @@ tspan1426	Structures Algebriques/Devoirs/S6/figures/diagramme.svg	/^         sty
 tspan1440	Structures Algebriques/Devoirs/S6/figures/diagramme.svg	/^         style="stroke-width:0.264583">$\\phi_5$<\/tspan><\/text>$/;"	i
 tspan831	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^         style="stroke-width:0.264583">$X$<\/tspan><\/text>$/;"	i
 tspan831	Structures Algebriques/notes/figures/diagrammes-produits.svg	/^         style="stroke-width:0.264583">$F\\times H$<\/tspan><\/text>$/;"	i
-tspan831	current-course/notes/figures/schemacomposition.svg	/^         style="stroke-width:0.264583">$X$<\/tspan><\/text>$/;"	i
 tspan835	Mecanique Generale/notes/figures/produit-vectoriel.svg	/^         style="stroke-width:0.264583">$\\vec{a}$<\/tspan><\/text>$/;"	i
 tspan837	Analyse I/notes/figures/fonction3.svg	/^         style="stroke-width:0.264583">$\\frac{1}{n}$<\/tspan><\/text>$/;"	i
 tspan837	Analyse I/notes/figures/fonction4.svg	/^         style="stroke-width:0.264583">$n$<\/tspan><\/text>$/;"	i
 tspan837	Mecanique Generale/notes/figures/ressort.svg	/^         style="stroke-width:0.264583">Position a vide<\/tspan><\/text>$/;"	i
+tspan837	current-course/notes/figures/fonction3.svg	/^         style="stroke-width:0.264583">$\\frac{1}{n}$<\/tspan><\/text>$/;"	i
+tspan837	current-course/notes/figures/fonction4.svg	/^         style="stroke-width:0.264583">$n$<\/tspan><\/text>$/;"	i
 tspan839	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^         style="stroke-width:0.264583">$x$<\/tspan><\/text>$/;"	i
 tspan842	Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^         style="stroke-width:0.264583">Ammortissement sous-critique<\/tspan><\/text>$/;"	i
 tspan843	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^         style="stroke-width:0.264583">$X_B= f(X)$<\/tspan><\/text>$/;"	i
@@ -1702,7 +1739,9 @@ tspan851	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^ 
 tspan852	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^         style="stroke-width:0.264583">$ \\tau(t + \\Delta t) - \\tau ( t) = d \\tau $<\/tspan></;"	i
 tspan853	Analyse I/notes/figures/fonction3.svg	/^         style="stroke-width:0.264583">$\\frac{2}{n}$<\/tspan><\/text>$/;"	i
 tspan853	Mecanique Generale/notes/figures/ressort.svg	/^         style="stroke-width:0.264583">Ressort allonge par un poids<\/tspan><\/text>$/;"	i
+tspan853	current-course/notes/figures/fonction3.svg	/^         style="stroke-width:0.264583">$\\frac{2}{n}$<\/tspan><\/text>$/;"	i
 tspan855	Analyse I/notes/figures/fonction4.svg	/^         style="stroke-width:0.264583">$\\frac{1}{n}$<\/tspan><\/text>$/;"	i
+tspan855	current-course/notes/figures/fonction4.svg	/^         style="stroke-width:0.264583">$\\frac{1}{n}$<\/tspan><\/text>$/;"	i
 tspan858	Mecanique Generale/notes/figures/curviligne.svg	/^         style="stroke-width:0.264583">$s(t)$<\/tspan><\/text>$/;"	i
 tspan859	Structures Algebriques/notes/figures/diagrammes-produits.svg	/^         style="stroke-width:0.264583">$F$<\/tspan><\/text>$/;"	i
 tspan859	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^         style="stroke-width:0.264583">$Y$<\/tspan><\/text>$/;"	i
@@ -1715,12 +1754,14 @@ tspan863	Mecanique Generale/notes/figures/reperes.svg	/^         style="stroke-w
 tspan865	Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^         style="stroke-width:0.194917">$A$<\/tspan><\/text>$/;"	i
 tspan866	Analyse I/notes/figures/fonction2.svg	/^         style="stroke-width:0.264583">$f_n( x) = x^{n}$<\/tspan><\/text>$/;"	i
 tspan866	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^         style="stroke-width:0.264583">$g\\vert_Y: Y \\mapsto Y_A$<\/tspan><\/text>$/;"	i
+tspan866	current-course/notes/figures/fonction2.svg	/^         style="stroke-width:0.264583">$f_n( x) = x^{n}$<\/tspan><\/text>$/;"	i
 tspan867	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^         style="stroke-width:0.367277">$\\tau(t + dt)$<\/tspan><\/text>$/;"	i
 tspan869	Analyse I/notes/figures/fonction3.svg	/^         style="stroke-width:0.264583">$1$<\/tspan><\/text>$/;"	i
 tspan869	Mecanique Generale/notes/figures/ressort.svg	/^         style="stroke-width:0.264583">$M$<\/tspan><\/text>$/;"	i
+tspan869	current-course/notes/figures/fonction3.svg	/^         style="stroke-width:0.264583">$1$<\/tspan><\/text>$/;"	i
 tspan871	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^         style="stroke-width:0.264583">$Y$<\/tspan><\/text>$/;"	i
 tspan871	Analyse I/notes/figures/fonction4.svg	/^         style="stroke-width:0.264583">$\\frac{2}{n}$<\/tspan><\/text>$/;"	i
-tspan871	current-course/notes/figures/schemacomposition.svg	/^         style="stroke-width:0.264583">$Y$<\/tspan><\/text>$/;"	i
+tspan871	current-course/notes/figures/fonction4.svg	/^         style="stroke-width:0.264583">$\\frac{2}{n}$<\/tspan><\/text>$/;"	i
 tspan873	Structures Algebriques/notes/figures/diagrammes-produits.svg	/^         style="stroke-width:0.264583">$G$<\/tspan><\/text>$/;"	i
 tspan873	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^         style="stroke-width:0.264583">$f\\vert_x :X \\mapsto X_B$<\/tspan><\/text>$/;"	i
 tspan876	Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^         style="stroke-width:0.264583">$x(t)=e^{\\gamma t}[A\\exp(\\omega_2t)+B\\exp(-\\omega_2t/;"	i
@@ -1730,7 +1771,9 @@ tspan878	Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^         
 tspan882	Mecanique Generale/notes/figures/trajectoire.svg	/^         style="stroke-width:0.264583">$x$<\/tspan><\/text>$/;"	i
 tspan883	Mecanique Generale/notes/figures/ressort.svg	/^         style="stroke-width:0.264583">Masse $M$ en equilibre<\/tspan><\/text>$/;"	i
 tspan885	Analyse I/notes/figures/fonction3.svg	/^         style="stroke-width:0.264583">$1$<\/tspan><\/text>$/;"	i
+tspan885	current-course/notes/figures/fonction3.svg	/^         style="stroke-width:0.264583">$1$<\/tspan><\/text>$/;"	i
 tspan887	Analyse I/notes/figures/fonction4.svg	/^         style="stroke-width:0.264583">$1$<\/tspan><\/text>$/;"	i
+tspan887	current-course/notes/figures/fonction4.svg	/^         style="stroke-width:0.264583">$1$<\/tspan><\/text>$/;"	i
 tspan891	Mecanique Generale/notes/figures/produit-scalaire.svg	/^         style="stroke-width:0.264583">$\\vec{b}$<\/tspan><\/text>$/;"	i
 tspan892	Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^         style="stroke-width:0.264583;fill:white;fill-opacity:1;marker-end:none;marker-start:non/;"	i
 tspan894	Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^         style="stroke-width:0.264583">bijective<\/tspan><\/text>$/;"	i
@@ -1739,18 +1782,22 @@ tspan896	Mecanique Generale/notes/figures/trajectoire.svg	/^         style="stro
 tspan897	Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^         style="stroke-width:0.264583">$m$<\/tspan><\/text>$/;"	i
 tspan898	Analyse I/notes/figures/fonction1.svg	/^         style="stroke-width:0.264583">$1+ \\frac{1}{n}$<\/tspan><\/text>$/;"	i
 tspan898	Mecanique Generale/notes/figures/mouvement_central.svg	/^         style="stroke-width:0.264583">$\\vec{F_p}$<\/tspan><\/text>$/;"	i
+tspan898	current-course/notes/figures/fonction1.svg	/^         style="stroke-width:0.264583">$1+ \\frac{1}{n}$<\/tspan><\/text>$/;"	i
 tspan899	Analyse I/notes/figures/fonction3.svg	/^         style="stroke-width:0.264583">$f_n$<\/tspan><\/text>$/;"	i
 tspan899	Structures Algebriques/Devoirs/S6/figures/diagramme.svg	/^         style="stroke-width:0.264583">$\\faktor { \\mathbb{Z}} { 2\\mathbb{Z}} $<\/tspan><\/tex/;"	i
+tspan899	current-course/notes/figures/fonction3.svg	/^         style="stroke-width:0.264583">$f_n$<\/tspan><\/text>$/;"	i
 tspan905	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^         style="stroke-width:0.264583">$\\vec{r}(t+ dt)$<\/tspan><\/text>$/;"	i
 tspan906	Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^         style="stroke-width:0.264583">$\\gamma = \\omega_0$<\/tspan><\/text>$/;"	i
 tspan910	Mecanique Generale/notes/figures/trajectoire.svg	/^         style="stroke-width:0.264583">$z$<\/tspan><\/text>$/;"	i
 tspan911	Analyse I/notes/figures/fonction4.svg	/^         style="stroke-width:0.264583">$f_n$<\/tspan><\/text>$/;"	i
+tspan911	current-course/notes/figures/fonction4.svg	/^         style="stroke-width:0.264583">$f_n$<\/tspan><\/text>$/;"	i
 tspan912	Analyse I/notes/figures/fonction1.svg	/^         style="stroke-width:0.264583">$f_n$<\/tspan><\/text>$/;"	i
+tspan912	current-course/notes/figures/fonction1.svg	/^         style="stroke-width:0.264583">$f_n$<\/tspan><\/text>$/;"	i
 tspan919	Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^         style="stroke-width:0.264583">$\\vec{r}(t)$<\/tspan><\/text>$/;"	i
 tspan920	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^         style="stroke-width:0.264583">$Z$<\/tspan><\/text>$/;"	i
-tspan920	current-course/notes/figures/schemacomposition.svg	/^         style="stroke-width:0.264583">$Z$<\/tspan><\/text>$/;"	i
 tspan924	Mecanique Generale/notes/figures/trajectoire.svg	/^         style="stroke-width:0.264583">$O$<\/tspan><\/text>$/;"	i
 tspan926	Analyse I/notes/figures/fonction1.svg	/^         style="stroke-width:0.264583">$1$<\/tspan><\/text>$/;"	i
+tspan926	current-course/notes/figures/fonction1.svg	/^         style="stroke-width:0.264583">$1$<\/tspan><\/text>$/;"	i
 tspan931	Structures Algebriques/Devoirs/S6/figures/diagramme.svg	/^         style="stroke-width:0.264583">$\\faktor { \\mathbb{Z}} { 2\\mathbb{Z}} \\times \\faktor/;"	i
 tspan932	Mecanique Generale/notes/figures/trajectoire.svg	/^         style="stroke-width:0.264583">$\\lim_{\\Delta t \\to 0}  \\frac{\\vec{r}(t + \\Delta t)/;"	i
 tspan934	Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^         style="stroke-width:0.264583">Ammortissement sur-critique<\/tspan><\/text>$/;"	i

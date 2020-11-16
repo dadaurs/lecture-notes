@@ -1,18 +1,20 @@
 \babel@toc {french}{}
-\contentsline {section}{\numberline {1}Introduction}{5}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Buts du Cours}{5}{subsection.1.1}%
-\contentsline {section}{\numberline {2}Definir $\mathbb {R}$}{6}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Exemple d'utilisation}{8}{subsection.2.1}%
-\contentsline {section}{\numberline {3}Suites et limites}{13}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Convergence}{13}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Limsup et liminf}{18}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Suites de Cauchy}{22}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Series}{23}{section.5}%
-\contentsline {subsubsection}{\numberline {5.0.1}Un calcul naif ( avec la série harmonique alternée)}{29}{subsubsection.5.0.1}%
-\contentsline {section}{\numberline {6}Fonctions}{35}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Continuité}{40}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Suites de Fonctions}{47}{section.7}%
-\contentsline {section}{\numberline {8}Dérivation}{52}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Applications de la dérivée}{55}{subsection.8.1}%
-\contentsline {subsubsection}{\numberline {8.1.1}Recherche d'extremums}{55}{subsubsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.2}Principe de Bernoulli-L'Hospital}{60}{subsection.8.2}%
+\contentsline {section}{\numberline {1}Introduction}{6}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Buts du Cours}{6}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Definir $\mathbb {R}$}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Exemple d'utilisation}{9}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Suites et limites}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Convergence}{14}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Limsup et liminf}{19}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Suites de Cauchy}{23}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Series}{24}{section.5}%
+\contentsline {subsubsection}{\numberline {5.0.1}Un calcul naif ( avec la série harmonique alternée)}{30}{subsubsection.5.0.1}%
+\contentsline {section}{\numberline {6}Fonctions}{36}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Continuité}{41}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Suites de Fonctions}{48}{section.7}%
+\contentsline {section}{\numberline {8}Dérivation}{53}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Applications de la dérivée}{56}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}Recherche d'extremums}{56}{subsubsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.2}Principe de Bernoulli-L'Hospital}{61}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Bernoulli-L'hospital pour infini sur infini}{62}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Polynome de Taylor et developpements limites}{63}{section.9}%

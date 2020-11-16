@@ -488,6 +488,10 @@ INPUT lectures/lec15.tex
 INPUT lectures/lec15.tex
 INPUT lectures/lec16.tex
 INPUT lectures/lec16.tex
+INPUT lectures/lec17.tex
+INPUT lectures/lec17.tex
+INPUT lectures/lec18.tex
+INPUT lectures/lec18.tex
 OUTPUT main.thm
 OUTPUT main.loe
 INPUT main.aux

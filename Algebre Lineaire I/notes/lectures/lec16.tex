@@ -230,9 +230,151 @@ On donne un nom a $\Im( Ad) = Ad( GL_d) $, on l'appelle le groupe des automorphi
 	
 \end{propo}
 \begin{proof}
-
+Si $C= \lambda.\id$, avec $\lambda\neq 0$, $\lambda\in K^{\times}$, alors
+\[ 
+C^{-1} = \lambda^{-1}\id
+\]
+Donc
+\[ 
+CMC^{-1}= M
+\]
+Donc
+\[ 
+	K^{\times}\id \subset \ker Ad( \bullet) 
+\]
+Soit Donc $C \in GL_d( K) $ telle que
+\[ 
+	\forall M \in M_d( K) 
+\]
+on a
+\[ 
+CMC^{-1}= M
+\]
+Il suit
+\[ 
+	CM = MC \Rightarrow CM-MC = 0
+\]
+Donc
+\[ 
+	\forall M [ C,M] = CM-MC = 0
+\]
+L'application $M\to [ C,M]$ est lineaire et dire que pour tout $M$ 
+\[ 
+[ C,M] = 0 \iff [ C,E] =0
+\]
+pour $E$ une base des matrices carrees.\\
+On prend la base canonique.\\
+\begin{lemma}
+\[ 
+E_{ij} E_{kl} = \delta_{j k} E_{il} 
+\]
+\end{lemma}
+\begin{proof}[du lemme]
+	\[ 
+	E_{ij} = mat_{B_0} E_{ij} 
+	\]
+	Donc
+	\[ 
+		E_{ij} ( v) = e_j^{*}. e_i
+	\]
+	Donc 
+	\[ 
+		E_{ij} E_{kl} ( v) = E_{ij} ( E_l^{*}( v) e_k) = e_l^{*}( v) E_{ij} ( e_k)  = e_l^{*}( v) e_j^{*}( e_k) e_i
+	\]
 	
+
+
+	Or $e_{j}^{*}( e_k)  = \delta_{jk} $.\\
+	Donc
+	\[ 
+		E_{ij} E_{kl} ( v) = \delta _{j k} e_{l} ^{*}( v) e_i = \delta _{jk} E_{il} ( v) 
+	\]
+	
+
 \end{proof}
+Soit $C$ tel que pour tout $E_{ij} $ on a 
+\[ 
+C E_{ij}  = E_{ij} C
+\]
+Donc
+\[ 
+C = \sum_{k,l\leq d} c_{kl} E_{kl} 
+\]
+Donc
+\begin{align*}
+	E_{ij} . C &= E_{ij} ( \sum_{k,l} c_{kl} E_{kl} ) \\
+		   &= \sum_{k,l} c_{kl} E_{ij} E_{kl}\\
+		   &= \sum_{k,l} c_{kl} \delta_{jk} E_{il} \\
+		   &= \sum_{l\leq d} c_{jl} E_{il} 
+\end{align*}
+De meme
+\begin{align*}
+	C. E_{ij} &= \sum_{k,l\leq d} c_{kl} E_{kl} E_{ij}\\
+                  &= \sum_{k,l\leq d } c_{kl} \delta_{li} E_{kj}\\
+		  &= \sum_{k\leq d} c_{ki} E_{kj} 
+\end{align*}
+Seule possibilite pour l'egalite est que $c_{ki} = 0$ sauf si $k=i$ de meme $c_{jl} =0$ sauf si $l=j$.\\
+Donc 
+\[ 
+CE_{ij} = E_{ij} C
+\]
+si et seulement si
+\[ 
+c_{ii} E_{ij} = C_{jj} E_{ij} 
+\]
+et les $c_{ki} = 0$ si $k\neq i$ et $c_{jl} =0$ si $l\neq j$.
+Donc $c_{ii} = c_{jj} $ valable $\forall i,j \leq d$ et $C_{ii} \neq 0$ car $C$ inversible.
+\end{proof}
+
+
+
+\begin{defn}
+	On dit que deux matrices $M.N$ sont semblables on conjuguees si il existe $C \in GL_d( K) $ tel que
+	\[ 
+	N= CMC^{-1}
+	\]
+	
+\end{defn}
+\begin{propo}
+La relation etre semblable est une relation d'equivalence.
+\end{propo}
+\begin{proof}
+\begin{itemize}
+\item Reflexive
+	\[ 
+	M= \id M\id^{-1}
+	\]
+
+\item Symmetrique si $N= CMC^{-1}$ 
+	\[ 
+	M= C^{-1}NC
+	\]
+
+\item Transitive
+	\[ 
+	N= CMC^{-1} \text{ et } O = DND^{-1}
+	\]
+	Alors
+	\[ 
+		O= DCMC^{-1}D^{-1} = ( DC) M ( DC) ^{-1}
+	\]
+	
+	
+\end{itemize}
+La classe d'equivalence de $M$ s'appelle la classe de conjugaison de $M$.
+
+\end{proof}
+\begin{rmq}
+	$M$ et $N \in M_d( K) $sont semblables si et seulement il existe $V$ de $\dim d$, deux bases $B,B_n$ de $V$ et $\phi \in End( V) $ tel que
+	\[ 
+	M= mat_B \phi
+	\]
+	et 
+	\[ 
+		N= mat_{B_n} \phi
+	\]
+	
+\end{rmq}
 
 
 

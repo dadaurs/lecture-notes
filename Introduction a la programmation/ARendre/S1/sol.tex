@@ -1,0 +1,82 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\begin{document}
+\title{Rendu semaines 7-8}
+\author{David Wiedemannn}
+\maketitle
+\section*{1.5}
+Il y a plusieurs problemes avec ce programme.
+\begin{itemize}
+	\item \texttt{n} est un entier, tandis que \texttt{v.size()} est de type \texttt{ size\textunderscore t }.
+	\item On ne verifie pas que le tableau contient un element, il se pourrait qu'il est vide, ce qui donnerait une erreur.
+	\item Dans la derniere etape de la boucle for, on accede a un element qui n'est pas dans le tableau ( les tableaux sont numerotes de 0 a $n-1$ pas jusqu'a $n$) 
+\item Bien qu'on initiales $m$ a la valeur d'un double, $m$ prendra toujours des valeurs entieres car $s$ est un entier et \texttt{ v.size()} l'est aussi.
+\end{itemize}
+\section*{2.1.2}
+L'erreur maximale qu'on peut faire est de $0.2$ car $6-5.8=0.2$, donc l'erreur relative est
+\[ 
+\frac{0.2}{5.8} \simeq 0.0344
+\]
+\section*{2.3.1}
+On a 
+\[ 
+10011100_2= 156_{10} 
+\]
+\section*{4.1}
+La fonction \texttt{f} regarde si un element \texttt{a} est contenu dans un tableau.\\
+On regarde si la difference entre les elements est plus petite qu'une certaine precision donnee car l'operateur \texttt{==} a des comportements mal definis quand on compare des doubles.\\
+Un meilleur nom pour la fonction serait donc "contient".\\
+
+La premiere fonction \texttt{g} prend en argument deux tableaux \texttt{v1}, \texttt{v2}  de double et un entier i et retourne un tableau qui contient tous les elements du tableau \texttt{v1}  qui sont pas dans \texttt{v2} et dont l'indice est inferieur a i.
+
+La deuxieme fonction g prend deux tableaux \texttt{v1}, \texttt{v2} et retourne tous les elements qui sont dans \texttt{v1} mais pas dans \texttt{v2}.
+\section*{4.2}
+La fonction $g$ est recursive et fait toujours un appel a soi meme.
+La fonction \texttt{f} a une complexite constante , pour \texttt{v2} fixe.
+On a donc une formule recursive qui definit la complexite de l'algorithme $C( n) $  :
+\[ 
+	C( n) = 6C( n-1) 
+\]
+de plus on voit que $C( 0) =1$ et donc la complexite est en $\Theta( n) $.
+
+La complexite de \texttt{g} en fonction de la taille de \texttt{v2} ( qu'on notera  $m$) est en $\Theta( m) $.\\
+En effet, notons la taille de \texttt{v1}  $n$, alors $n$ est fixe, on doit donc parcourir le tableau $m$ fois dans l'appel de la fonction $g$.
+\section*{1.4}
+On voit que la periode d'echantillonage etait de $\frac{1}{30}$, donc la frequence d'echantillonage $f_e$ etait de $30$.\\
+On sait de plus que
+\[ 
+	X_I( m \frac{1}{30}) = a_m = 7 \sin ( \frac{2\pi}{3}m + \frac{\pi}{6}) + 3 \sin ( \frac{4\pi}{5}m + \frac{\pi}{4}) + 2 \sin ( \frac{2\pi}{6}m) 
+\]
+On sait que $f$ peut etre reconstruite car la frequence d'interpolation est assez elevee ( clairement  2 fois plus grande que la bande passante.), on a donc,
+\[ 
+	f( t) = 7 \sin ( \frac{2\pi}{3}30 t + \frac{\pi}{6}) + 3 \sin ( \frac{4\pi}{5}30t + \frac{\pi}{4}) + 2 \sin ( \frac{2\pi}{6}30t) 
+\]
+en simplifiant, on trouve
+\[ 
+	f( t) = 7 \sin ( \frac{20\pi}{3} t + \frac{\pi}{6}) + 3 \sin ( 24\pi t + \frac{\pi}{4}) + 2 \sin ( \pi t) 
+\]
+\section*{6.1}
+Le but est clairement d'encoder un fichier texte, en remplacant chaque lettre par un code binaire.
+\section*{6.2}
+L'erreur est ( en tout cas selon google) que l'operateur << n'arrive pas a lire le type string.
+\section*{6.3}
+Voici la liste des erreurs que j'ai pu trouver:
+\begin{itemize}
+\item On modifie la valeur de $c$ dans la boucle a l'interieur d'une  boucle for, ce qui rend le code plus difficilement lisible.
+\item Les fonctions n'ont pas ete prototypee
+\item Si la valeur de $c$ ( qui est un char mais qui est represente comme entier) est 16, dans la boucle while, on accederait au 16 element du tableau, qui n'existe pas.
+\item Si le texte est tres grand, la taille de la variable "resultat" dans la fonction encodage pourrait devenir trop grande et produire des problemes d'execution.
+\item Avec cette maniere d'encoder du texte, on est pas sur que l'encodage est unique, par exemple \texttt{11001} pourrait soit representer le 1er element du tableau suivi du 0-ieme element ou bien juste le 11-eme element du tableau.
+\end{itemize}
+	
+
+
+
+\end{document}

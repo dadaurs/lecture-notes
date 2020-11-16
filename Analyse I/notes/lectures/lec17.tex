@@ -1,0 +1,109 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{17}{Wed 11 Nov}{BH}
+\subsection{Bernoulli-L'hospital pour infini sur infini}
+\begin{thm}
+	Soient $f,g: ]a,b[ \to \mathbb{R}$ derivables tel que
+	\[ 
+		\lim_{x \to a+} f( x) = + \infty = \lim_{x \to a+} g( x) 
+	\]
+	Si $ \lim_{x \to a+} \frac{f'( x) }{g'( x) }$ existe, alors $ \lim_{x \to a+} \frac{f( x) }{g( x) }$ existe aussi, avec la meme valeur
+\end{thm}
+\begin{proof}
+	Le principe est que pour calculer la limite d'une expression $A$ ( pour $x \to a$), on peut remplacer $A$ par
+	\[ 
+	ABC
+	\]
+	pour autant que $\lim_{x \to a+} BC= 1$. \\
+	Soit $\epsilon > 0$. Posons $l= \lim_{x \to a+} \frac{f'( x) }{g'( x) } $ 
+	A montrer: Pour $x$ suffisamment proche de $a$
+	\[ 
+		| \frac{f( x) }{g( x) }-l | < \epsilon
+	\]
+
+	On sait que $\exists y \forall a <c <y$ 
+	\[ 
+		|\frac{f'( c) }{g'( c) }-l| < \frac{\epsilon}{2}
+	\]
+	Par Cauchy sur $[x,y]$, on a 
+	\[ 
+		\forall a<x<y: | \frac{f( x) -f( y) }{g( x) -g( y) }-l| < \frac{\epsilon}{2}
+	\]
+	Ecrivons donc
+	\[ 
+		\frac{f( x) }{g( x) }= \frac{f( x) - f( y) }{g( x) -g( y) } \frac{f( x) }{f( x) - f( y) } \frac{g( x) -g( y) }{g( x) }
+	\]
+En effet, pour notre $y$ :
+\[ 
+	\lim_{x \to a+} \frac{f( x) }{f( x) -f( y) }= \lim_{x \to a+} \frac{1}{1-\frac{ g( y )}{f( x) }}=1
+\]
+
+
+	
+	
+	
+\end{proof}
+\section{Polynome de Taylor et developpements limites}
+But: Approximer des fonctions par polynomes.\\
+\begin{defn}[Polynome de Taylor]
+	Soit $I$ un intervalle ouvert, $a\in I$ et $f:I \to \mathbb{R}$ $n$ fois derivable.\\
+	Le polynome de Taylor de $f$ en $a$ et d'ordre $n$ est
+	\[ 
+		\sum_{k=0}^{ n} \frac{1}{k!} f^{( k)} ( a)  ( x-a) ^{k}
+	\]
+	
+
+\end{defn}
+\begin{thm}[Formule de Taylor]
+Supposons $f$ $n+1$ fois derivable
+\[ 
+	\forall x \exists t \in ]a,x[ \text{ tel que } 
+\]
+\[ 
+	f( x) = \sum_{k=1}^{ n} \frac{1}{k!}f^{( k) }( a) ( x-a) ^{k} + \frac{1}{( n+1) !} f^{( n+1) }( t)  ( x-a) ^{n+1}
+\]
+
+
+\end{thm}
+\begin{rmq}
+Excellent si $f$ raisonnable car $\frac{1}{( n+1 )!}$ tres petit.
+\end{rmq}
+\begin{proof}
+	On note $T( y) $ pour le polynome de taylor.\\
+	Soit
+	\[ 
+		g( y) = f( y) - T( y) + \frac{T( x) - f( x) }{( x-a)^{n+1}} ( y-a) ^{n+1}
+	\]
+	On remarque que
+	\[ 
+		g^{( k) }( a) = \text{ cst. } ( n+1)( n)\ldots( n+1-k) ( y-a) ^{n+1-k} = 0
+	\]
+	Or, $g( x) =0$.\\
+	On applique donc Rolle a $g$ sur $[a,x]$
+	Par Rolle, $\exists x_1 \in ]a,x[$ tel que $g'( x_1) = 0$.\\
+	Rolle pour $g'$ sur $[a,x_1]$.\\
+	\[ 
+		\exists x_2 \in ]a,x_1[ \text{ tel que } g''( x_2) =0
+	\]
+	etc...\\
+	Rolle pour $g^{( n) }$ sur $[a,x_n]$, donc
+	\[ 
+		\exists t \in ]a,x_n[ \text{ tel que } g^{( n+1) }( t) =0
+	\]
+Donc
+\[ 
+	0= g^{( n+1) }( t) = f^{( n+1) }( t) + \frac{T( x) - f( x) }{( x-a) ^{n+1}} ( n+1) !
+\]
+Donc 
+\[ 
+	-T( x) + f( x) = f^{( n+1) }( t) ( x-a) ^{n+1} \frac{1}{( n+1) !}
+\]
+
+\end{proof}
+
+
+
+
+
+
+\end{document}	

@@ -1,0 +1,257 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Tue 10 Nov}{10 mardi}
+\begin{thm}
+	Soit $H$ un sous-groupe normal de $G$.\\
+Les deux propositions suivantes sont equivalentes:
+\begin{enumerate}
+\item $G / R_h$ est un groupe
+\item $\xi_H$ est un homomorphisme
+\end{enumerate}
+\end{thm}
+\begin{proof}
+	Automatique si la multiplication est bien definie par rapport a $R_h$ ( deja fait).\\
+\begin{enumerate}
+\item Soient $( g,g') \in R_H$ et $( h,h') \in R_H$ 
+	Il faut montrer que $( gh,g'h')\in R_H$ 
+	\[ 
+		( gh) ^{-1}g'h' = h^{-1}g^{-1}g'h' = h^{-1}h' h'^{-1}g^{-1}g'h' \in H
+	\]
+\item Soient $( g,g') \in R_H$ \\
+	Il faut montrer
+
+	\[ 
+	( g^{-1} g'^{-1} ) \in R_H
+	\]
+	On verifie
+	\[ 
+		( g^{-1} )^{-1}( g') ^{-1}= g g'^{-1}= g g'^{-1}g g^{-1} \in H
+	\]
+	
+	
+	 
+
+\end{enumerate}
+	
+\end{proof}
+\begin{rmq}
+Notons que
+\[ 
+|G / H| = |G:H| = \frac{|G|}{|H|}
+\]
+
+\end{rmq}
+\begin{thm}
+\begin{itemize}
+\item $H$ sous-groupe normal de $G$ 
+\item $\xi_H: G \to G /H$ 
+\item $\phi: G \to F$
+\end{itemize}
+tel que $H \subseteq \ker \phi$.\\
+Alors, il existe un unique $\eta: G / H \to F$ tel que
+\[ 
+\phi = \eta \circ \xi_H
+\]
+\end{thm}
+\begin{proof}
+Il y a une possibilite pour $\eta$, si
+\[ 
+	\eta( gH)  = \eta( \xi_H ( g) ) = \phi( g) 
+\]
+Il faut encore verifier que $\eta $ est un homomorphisme.\\
+Montrons que $\eta$ est bien defini.
+Supposons que $gH= g'H$, alors $( g,g') \in R_H$, donc $g^{-1}g'\in H$ \\
+Donc 
+\[ 
+	\eta ( gH) = \phi( g) \text{ et } \eta( g'H) = \phi( g') 
+\]
+Or $H \subseteq \ker \phi$, donc
+\[ 
+	\phi( g^{-1}g') = e 
+\]
+Or car $\phi$ est un homomorphisme, on a 
+\[ 
+	\phi( g) = \phi( g') 
+\]
+Donc $\eta$ est bien definit.\\
+Montrons que $\eta$ est un homomorphisme.
+\[ 
+	\eta( gH .g'H) = \eta( gg'H) = \phi( gg') = \phi( g) \phi( g') = \eta( g) \eta( g') 
+\]
+Montrons que si $H = \ker \phi \Rightarrow \eta$ injectif\\
+\[ 
+gH \in \ker \eta
+\]
+, donc
+\[ 
+	e= \eta( gH) = \phi( g) 
+\]
+Donc $g \in \ker \phi$, donc $g \in H$, donc $gH = H$, donc 
+\[ 
+gH = e_{G /H} 
+\]
+Donc $\eta$ est injectif.\\
+On peut donc considerer $G /H$ comme un sous-groupe de $F$.
+Donc
+\[ 
+	G / H \simeq Im( \eta) 
+\]
+\end{proof}
+
+\begin{crly}
+Donc
+\[ 
+G / \ker \phi \simeq Im \phi
+\]
+Pour n'importe quel homomorphisme $\phi$.
+\end{crly}
+\begin{crly}
+\[ 
+\frac{|G|}{|\ker\phi|}= |Im\phi|
+\]
+\end{crly}
+\begin{crly}
+\begin{itemize}
+\item $\phi: G \to H$ 
+\item $|G|= n$, $|H|= m$ 
+\item $( n,m) =1$
+\end{itemize}
+Alors $\phi = e_H$
+\end{crly}
+\begin{proof}
+$Im \phi \leq H$, donc par Lagrange 
+\[ 
+|Im\phi| \big\vert m
+\]
+De meme
+\[ 
+|\ker \phi| \big \vert n
+\]
+Donc 
+\[ 
+| G / \ker \phi | = \frac{n}{|\ker \phi|}\big \vert n
+\]
+Donc  $|Im \phi| = | G / \ker \phi| = 1$, donc 
+\[ 
+Im \phi = \left\{ e_H \right\} \text{ et } \ker \phi = G
+\]
+Et donc $\phi = e_H$.
+
+\end{proof}
+\begin{crly}
+\[ 
+	\eng{g} \simeq \mathbb{Z} / o( g) \mathbb{Z}
+\]
+
+\end{crly}
+\begin{proof}
+\[ 
+dexp_g: \mathbb{Z} \to G
+\]
+On a vu que 
+\[ 
+	Im dexp_g = \eng{g}
+\]
+et que 
+\[ 
+	\ker dexp_g = o( g)  \mathbb{Z}
+\]
+Donc
+\[ 
+	\eng{g} = \mathbb{Z} / o( g)  \mathbb{Z}
+\]
+
+\end{proof}
+\begin{crly}
+Soit $|G|= p$ avec $p$ premier, alors
+\[ 
+G \simeq \mathbb{Z} / p \mathbb{Z}
+\]
+
+\end{crly}
+\begin{proof}
+On a vu que
+\[ 
+g \in G \setminus \left\{ 0 \right\} 
+\]
+, alors $\eng{g} = G$.\\
+Et $o( g) = p$.
+\end{proof}
+\subsection{Groupes diedraux}
+Graphe simple non oriente
+\begin{defn}[Graphe nonoriente]
+	C'est un ensemble $V$ de sommets et
+	\[ 
+	E \subseteq \left\{ S \subseteq V \big\vert |S| = 2 \right\} 
+	\]
+	( l'ensemble des arretes) 
+
+\end{defn}
+\begin{defn}[Isomorphismes des graphes]
+
+
+	Soit $G= ( V,E) $ et $G'= ( V',E') $ deux graphes.\\
+	 \[ 
+	\phi: V \to V'
+	\]
+	est un isomorphisme si
+	\begin{itemize}
+	\item $\phi$ bijection
+	\item $ \left\{ v,w \right\} \in E \iff \left\{ \phi( v) , \phi( w)  \right\} \in E'$
+	\end{itemize}
+\end{defn}
+\begin{defn}[Groupe diedral]
+	Le groupe diedral est l'ensemble des automorphismes d'un graphe.
+
+\end{defn}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

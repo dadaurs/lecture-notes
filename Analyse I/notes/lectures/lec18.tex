@@ -1,0 +1,111 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{18}{Mon 16 Nov}{Developpements Limites}
+De maniere generale, si
+\[ 
+	P( x) = \sum_{k=0}^{ n}c_k ( x-a) ^{k}
+\]
+Alors
+\[ 
+	P^{( k) }( a) = k! c_k
+\]
+\begin{defn}[Developpement limite]
+Soit $f$ une fonction definie au voisinage de $a$.\\
+Un developpement limit ( DL) d'ordre $n$ pour $f$ en $a$ est la donnee d'un polynome 
+\[ 
+	\sum_{j=0}^{ n}a_j ( x-a)^{j} 
+\]
+( la partie principale) et d'une fonction $r$ ( le reste) tel que
+\begin{enumerate}
+	\item $f( x) = \sum a_j ( x-a)^{j}+ r( x) $ 
+	\item $\lim_{x \to a} \frac{r( x) }{( x-a)^{n}}$
+\end{enumerate}
+
+\end{defn}
+\begin{rmq}
+Le cas $n=1$ correspond a notre critere de differentiabilite de $f$ en $a$.\\
+Admettre un DL d'ordre 1 en $a$ $\iff$ $f$ derivable en $a$.
+\end{rmq}
+\begin{rmq}
+	Admettre un DL d'ordre 0 en $a$ $\iff$ $ \lim_{x \to a} f( x) $ existe.
+\end{rmq}
+\begin{rmq}
+	Si on note $r( x) = \epsilon( x) ( x-a)^{n}$, on obtient 
+	\begin{enumerate}
+		\item $f( x) = \sum_{j=0}^{ n}a_j ( x-a) ^{j} + \epsilon( x) ( x-a) ^{n}$
+		\item $\lim_{x \to a} \epsilon( x) = 0$
+	\end{enumerate}
+	Ceci montre que si $f$ admet un DL d'ordre $n$, alors $\forall k \leq n$ 
+	\[ 
+		f^{( k) }( a) = k! a_k
+	\]
+	
+	
+\end{rmq}
+\begin{propo}
+Si un DL d'ordre $n$ existe, il est unique.
+\end{propo}
+\begin{proof}
+Suffit de montrer l'unicite de la partie principale. Or, les coefficients $a_j$ sont determines par les derivees de $f$,
+\[ 
+	f^{( k) }( a)  ( k\leq n) 
+\]
+qui existent bel et bien par la remarque precedente.
+\end{proof}
+\begin{propo}
+Si $f$ admet un DL d'ordre $n$ en $a$, elle adment aussi un DL d'ordre $m \leq n$ en $a$.
+\end{propo}
+\begin{proof}
+On a qu'a tronquer la partie principale de la somme.
+\end{proof}
+\begin{thm}
+	Soit $f\in C^{n+1}( I) $, $I$ intervalle ouvert, $a\in I$.\\
+	Alors $f$ admet un DL d'ordre $n$ en $a$, et la partie principale est le polynome de Taylor.
+\end{thm}
+\begin{proof}
+	On va juste utiliser que $f^{( n+1) }$ est bornee sur un voisinage de $a$.\\
+	A voir:\\
+	\[ 
+		\lim_{x \to a} \frac{\frac{1}{n+1!}f^{( n+1) ( t)( x-a)^{n+1} }}{( x-a) ^{n}} = 0
+	\]
+	
+\end{proof}
+\begin{exo}
+	Si $f$ et $g$ admettent des DL d'ordre $n$ en $a$, alors $f+g$, $f\cdot g$ et $f\circ g$(ici: $f$ admet DL en $g( a) $)  aussi.\\
+	Les parties principales seront la somme, respectivement produit, resp. composition des parties principales.
+\end{exo}
+\begin{exemple}[Un Bel Exemple]
+	Soit
+	\begin{align*}
+		f( x) =
+		\begin{cases}
+		0 \text{ si  } x=0\\
+		\exp( - \frac{1}{x^{2}}) \text{ si } x\neq 0
+		\end{cases}
+	\end{align*}
+	On voit que $f \in C^{ \infty } ( \mathbb{R}) $.\\
+	\begin{lemma}
+		$f^{( k) }= f . \frac{P}{Q}$, pour deux polynomes $P, Q$.
+	\end{lemma}
+	Conclusion:\\
+	$f$ est une fonction $C^{ \infty }$ avec $f^{( k) }( 0) =0 \forall k$.\\
+	Tous les polynomes de Taylor de $f$ en $0$ sont nuls,
+	\[ 
+		T( x) = \sum_{k=0}^{ n} \frac{1}{k!}0 ( x-a) ^{k}= 0	
+	\]
+	$f$ admet un DL d'ordre $n$ en zero $\forall n$, partie principale 0.
+	
+	
+
+\end{exemple}
+
+
+
+
+
+
+
+
+
+
+\end{document}	
