@@ -76,26 +76,14 @@ Dans l'exercice 5, on a montré que tous les sous-groupes de $A_4$ sont engendr�
 Montrons d'abord que un sous-groupe normal de $A_4$ ne peut pas contenir de trois cycle.
 Soit $H$ un sous-groupe normal et $( abc)\in H $ un cycle d'ordre 3.
 \[ 
-	( cd)(abc ) ( cd) = ( abd) 
+	( cd)( ab) (abc ) ( ab) ( cd) = ( adb) 
 \]
 Donc $H$ contient deux trois-cycles qui ne fixent pas le même élément, et donc par l'exercice 5.3, $H$ est le sous-groupe trivial $A_4$.\\
 On en déduit que un sous-groupe normal de $A_4$ ne peut que contenir des produits de cycles d'ordre 2.\\
-Vérifions d'abord que l'ensemble des permutations de $A_4$ s'écrivant comme le produit de deux 2-cycles ( avec l'élément neutre)  est un sous-groupe.\\
-Soit $( ab) ( cd) $ un produit de 2-cycles, alors on vérifie la multiplication avec les autres éléments de l'ensemble
-\begin{align*}
-	( ab) ( cd) ( ac) ( bd) = ( ad) ( bc) \\
-	( ab) ( cd) ( ad) ( bc) = ( ac) ( bc) \\
-	( ac) ( bd) ( ab) ( cd)= ( ad) ( bc) \\
-	 ( ad) ( bc) ( ab) ( cd)= ( ac) ( bc)
-\end{align*}
-On voit également que chaque élément est son propre inverse, car
-\[ 
-	( ab) ( cd) ( ab) ( cd) = ( ab) ( ab) ( cd) ( cd) = Id
-\]
-Donc l'ensemble des permutations de $A_4$ s'écrivant comme produit de 2-cycles ( qu'on nommera $H$) forme un sous-groupe.
-Des calculs ci-dessus, on tire que la conjugaison par des 2-cycles est close.\\
-Vérifions que $H$ est un sous-groupe normal de $A_4$.\\
-Il ne reste qu'à vérifier que la conjugaison par des 3-cycles est close.\\
+Notons donc $F$ le sous-groupe des produits de deux 2-cycles disjoints.\\
+On a montré que $F$ forme un sous-groupe de $A_4$ dans l'exercice 5.\\
+Etant donné qu'il forme un sous-groupe, pour montrer que $F$ est normal, il faut seulement montrer que la conjugaison par des éléments n'appartenant pas au groupe est close.\\
+Les éléments n'appartenant pas au groupe sont des 3-cycles.\\
 Soit $( ab) ( cd) \in H$, alors
 \begin{align*}
 	( abc) ( ab) ( cd) ( acb) = ( ad) ( bc)\\

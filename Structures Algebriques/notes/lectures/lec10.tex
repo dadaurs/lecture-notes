@@ -1,0 +1,39 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Tue 17 Nov}{mardi}
+\begin{exemple}
+\[ 
+\mathbb{Z} \to \mathbb{Z} / n \mathbb{Z}
+\]
+\[ 
+n \mapsto [ n] 
+\]
+
+ $\left\{\text{  homoms } \mathbb{Z} / n \mathbb{Z} \to G \right\} \leftrightarrow \left\{ \text{ hohoms } \mathbb{Z} \to G | n \mathbb{Z} \leq \ker \phi \right\} $
+\end{exemple}
+\subsection{Sous-groupes engendres par plusieurs elements}
+\begin{lemma}
+$H_i \leq G$ $\forall i \in I$, alors $\bigcap_i H_i \leq G$
+\end{lemma}
+\begin{proof}
+\begin{enumerate}
+\item $\bigcap_i \neq \emptyset$ parce que $e \in H_i$ 
+\item $g,h \in \bigcap_i H_i$ $\Rightarrow$ $\forall i g.h, g^{-1} \in H_i$.
+\end{enumerate}
+\end{proof}
+\begin{defn}
+$S \subseteq G$ des sous-ensembles, alors
+\[ 
+	\eng{S} = \text{ plus petit sous-groupe contenant $S$ } 
+\]
+Il existe parce que
+\[ 
+	\eng{S} = \bigcap_{S \subseteq H \leq G} H
+\]
+
+\end{defn}
+
+
+
+
+\end{document}	

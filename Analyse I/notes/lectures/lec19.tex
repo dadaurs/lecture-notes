@@ -1,0 +1,88 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{19}{Wed 18 Nov}{Developpements Limites}
+\subsection{Utilisations de la 2eme derivee}
+\begin{propo}
+	Soit $f$ deux fois derivable et $a$ un point critique ( i.e. $f'( a) =0$)\\
+	Si $f''( a) <0$, alors $a$ est un maximum local strict.\\
+	Idem pour $f''( a) > 0$.\\
+	Attention la reciproque fausse
+\end{propo}
+\begin{proof}
+$f'$ est strictement decroissante sur un voisinage de $a$.
+\end{proof}
+\subsection{Convexite, Concavite}
+\begin{defn}[Convexe]
+	Une fonction $f$ est convexe, si $\forall x < y\forall \lambda \in [ 0,1] $ 
+	\[ 
+		f( ( 1-\lambda)x + \lambda y) \leq ( 1-\lambda) f( x) + \lambda f( y) 
+	\]
+	
+
+\end{defn}
+\begin{propo}
+$f$ convexe $\iff$ 
+\[ 
+\forall \lambda_1, \ldots , \lambda_n \in [ 0,1] \text{ avec } 
+\]
+\[ 
+\sum_{i=1}^{ n}\lambda_i =1
+\]
+\[ 
+	f ( \sum_{i=1}^{ n}\lambda_i x_i) \leq \sum_{i=1} ^{n} \lambda_i f( x_i) 
+\]
+$\forall x_1,\ldots, x_n$
+\end{propo}
+\begin{proof}
+$\Rightarrow$ \\
+La convexite correspond au cas $n= 2$\\
+Supposons vrai pour $n-1$ ( $k \geq 3$) 
+Ecrivons
+\begin{align*}
+	\sum_{i=1}^{ n} \lambda_i x_i = ( 1- \lambda_n)   \sum_{i=1}^{ n-1} \frac{\lambda_i}{1-\lambda_n} x_i + \lambda_n x_n\\
+	\text{ Par Hypothese de recurrence } \\
+	f (  \sum_{i=1}^{ n}\lambda_i x_i) \leq ( 1- \lambda_n) f( \sum_{i=1}^{ n-1}\frac{\lambda_i }{1- \lambda_n}x_i) + \lambda_n f( x_n)
+\end{align*}
+
+\end{proof}
+\begin{thm}
+Si $f$ est derivable et $f'$ est croissante, alors $f$ est convexe.
+\end{thm}
+\begin{crly}
+Si $f$ est deux fois derivable et $f''\geq 0$, alors $f$ est convexe.
+\end{crly}
+\begin{proof}
+$f'$ existe, croissante.\\
+A montrer.\\
+Soient $a,b \in \mathbb{R}$ et $\lambda\in [ 0,1] $,
+\[ 
+	f( \lambda a + ( 1-\lambda) b) \leq \lambda f(a )  + ( 1- \lambda) f( b) 
+\]
+sans perte de géneralité $a< b$\\
+Posons $ x = \lambda a  + ( 1-\lambda) b$
+TAF sur  $[a,x]$ et $ [ x,b] $ :
+\[ 
+\exists a < x_1 < x < x_2 < b \text{ tel que } 
+\]
+\[ 
+	f( x) - f( a)  = f'( x_1) ( x-a) 
+\]
+de meme
+\[ 
+	f( b) - f( x)  = f'( x_2) ( b-x) 
+\]
+On a donc
+\[ 
+	\lambda f( a)  + ( 1-\lambda) f( b) = \lambda ( f( x) - f'( x_1) ( x-a) ) + ( 1-\lambda) \left( f( x)  + f'( x_2) ( \lambda ( b-a) )  \right) = f( x) + ( b-a) \lambda( 1-\lambda) f'( x_2) - ( b-a) \lambda ( 1-\lambda) f'( x_1) 
+\]
+Or $f'$ croissant.
+\end{proof}
+
+
+
+
+
+
+
+
+\end{document}	

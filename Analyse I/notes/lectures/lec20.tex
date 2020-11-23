@@ -1,0 +1,189 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{20}{Mon 23 Nov}{Series Entieres}
+\section{Series Entieres}
+But:\\
+Etudier des fonctions du type
+\[ 
+	\sum_{n=0}^{ \infty } a_n ( x-x_0) ^{n}
+\]
+Motivations:\\
+\begin{itemize}
+\item Fonctions familiaires,utiles du type $\sin,\cos,\exp,\ldots$ 
+\item polynomes de Taylor $\rightarrow$ serie de Taylor?
+\end{itemize}
+\begin{rmq}
+	Nous travaillons surtout avec $x_0=0$, $f( x) = \sum_{n=0}^{ \infty } a_n x^{n}$ \\
+	Pour retrouver le cas general:
+	se ramener a $f( x-x_0) $.
+\end{rmq}
+\begin{defn}
+On dit qu'un serie de fonctions 
+\[ 
+	\sum_{n=0}^{ \infty } f_n( x) 
+\]
+converge uniformement absolument sur  $I$ vers $f$ si
+\[ 
+	\sum_{n=0}^{ \infty } |f_n|
+\]
+converge uniformement, i.e.
+\[ 
+\forall \epsilon > 0 \exists n_0 \forall x \in I:
+\]
+\[ 
+	\sum_{n=n_0}^{ \infty } | f_n( x) | < \epsilon
+\]
+
+\end{defn}
+\begin{thm}
+Supposons que $ \sum_{n=0}^{ \infty } a_n y^{n}$ converge pour $y\neq 0$.\\
+Alors
+\[ 
+\sum_{n=0}^{ \infty } a_n x^{n}
+\]
+converge $\forall x \in ] - |y|,|y|[$.\\
+De plus, pour tout $ 0< r< |y|$, $ \sum_{n=0}^{ \infty }a_n x^{n}$ converge uniformement et absolument sur $[-r,r]$
+\end{thm}
+\begin{proof}
+Il suffit de montrer le deuxieme point.\\
+Puisque $ \sum_{n=0}^{ \infty } a_n y^{n}$ converge, on sait que $( a_n y_n) \to 0$ et donc $a_n y^{n}$ est bornee. Donc $\exists B> 0 \forall n: |a_n y_n| \leq B$.\\
+Fixons $0< r<|y|$ et considerons $x \in [ -r,r] $.\\
+Remarque:\\
+$|a_n x^{n}| = |a_n y^{n}| | \frac{x}{y}|^{n} \leq B( \frac{r}{|y|}) ^{n}$.\\
+Pour convergence absolue, par comparaison, on etudie
+\[ 
+	\sum_{n=0}^{ \infty } B ( \frac{r}{|y|}) ^{n}
+\]
+Converge, car c'est une serie geometrique de raison $\frac{r}{|y|}< 1$	
+\end{proof}
+\begin{crly}
+	$\forall 0< r < |y|$. On obtient une fonction continue $f( x) = \sum_{n=0}^{ \infty }a_n x^{n}$ de $x \in [ -r,r] $\\
+\end{crly}
+\begin{rmq}
+	Bien que $f( y) $ existe par hypothese, l'existence et la continuite en $\pm y$ peut etre problematique.
+\end{rmq}
+Considerons $ \sum_{n=0}^{ \infty }a_n x^{n}$ 
+\begin{defn}
+Le rayon de convergence de cette serie entiere est 
+\[ 
+R := \sup \left\{ |y|: \sum_{n=0}^{ \infty }a_n y^{n} \text{ converge }  \right\} 
+\]
+
+\end{defn}
+\begin{crly}
+\[ 
+	f( x)  = \sum_{n=0}^{ \infty }a_n x^{n}
+\]
+est une fonction continue ( et qui existe) sur $]-R,R[$.\\
+De plus $ \sum_{n=0}^{ \infty }a_n x^{n}$ diverge $\forall x$ avec $|x|> R$
+\end{crly}
+\begin{rmq}
+\begin{enumerate}
+\item Pour $|x| = R$, tout peut arriver
+\item Pour $ \sum a_n ( x-x_0) ^{n}$, on obtient un intervalle de convergence $]x_0-R, x_0+R[$.
+\end{enumerate}
+\end{rmq}
+\begin{crly}
+	 \[ 
+		 R = \frac{1}{ \limsup_{n\to \infty } \sqrt[n]{|a_n|}}
+	\]
+, avec $R= + \infty $ si $\limsup =0$
+\end{crly}
+\begin{proof}
+Critere de la racine pour $|x| < R$ :
+\[ 
+	\limsup \sqrt[n]{|a_n x^{n}|} = |x| \limsup \sqrt[n]{|a_n|}<1 \Rightarrow \text{ converge } 
+\]
+\end{proof}
+\begin{thm}
+	Soit $f( x) = \sum a_n x^{n}$ de rayon de convergence $R\neq 0$.\\
+	\begin{enumerate}
+	\item La serie $ \sum_{n=1}^{ \infty } n a_n x^{n-1}$ a le meme rayon de convergence $R$.
+	\item $f$ est derivable sur $]-R,R[$ et sa derivee est $ \sum_{n=1}^{ \infty } n a_n x^{n-1}$
+	\end{enumerate}
+	
+\end{thm}
+\begin{proof}
+	On fixe $0<r<R$ et on travaille sur $[-r,r]$.\\
+	Pour tout $n$, appliquer Taylor a la fonction $x^{n}$ au point $x_0$.\\
+	Donc $\exists t$ ( entre $x_0$ et $x$) tel que
+	\[ 
+		x^{n} = x_0^{n} + n x_0^{n-1} ( x-x_0) + \frac{1}{2!}n ( n-1) t ^{n-2}( x-x_0)^{2} ( x-x_0) 
+	\]
+On trouve
+\[ 
+	\frac{x^{n}-x_0^{n}}{x-x_0} = n x_0^{n-1} + \frac{1}{2}n ( n-1) t^{n-2}
+\]
+On s'interesse a $ \frac{f( x) - f( x_0) }{x-x_0}$
+\begin{align*}
+=\sum_{n=0}^{ \infty } a_n \frac{x^{n}- x_0^{n}}{x-x_0}\\
+= \sum_{n=0}^{ \infty } n a_n x_0^{n-1} + \frac{1}{2}n ( n-1) ( x-x_0) \sum_{n=0}^{ \infty } t^{n-2}_{x,n} 
+\end{align*}
+
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

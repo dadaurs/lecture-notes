@@ -10,25 +10,37 @@ $\\mathcal{P}(E)$ l'ensemble des sous-ensembles	Algebre Lineaire I/notes/lecture
 $\\times$: Produit cartesien	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{$\\times$: Produit cartesien}$/;"	u	section:Le language des Ensembles
 1	Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{1}$/;"	s
 1	Algebre Lineaire I/Exos/S5/Ex3.tex	/^\\section*{1}$/;"	s
+1	Structures Algebriques/Devoirs/S10/sol.tex	/^\\section*{1}$/;"	s
 1	Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{1}$/;"	s
 1	Structures Algebriques/Devoirs/S6/sol.tex	/^\\section*{1}$/;"	s
 1	Structures Algebriques/Devoirs/S7/sol.tex	/^\\section*{1}$/;"	s
 1	Structures Algebriques/Devoirs/S8/sol.tex	/^\\section*{1}$/;"	s
+1.1	Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{1.1}$/;"	s
+1.2	Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{1.2}$/;"	s
+1.3	Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{1.3}$/;"	s
 1.4	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{1.4}$/;"	s
 1.5	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{1.5}$/;"	s
 2	Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{2}$/;"	s
 2	Algebre Lineaire I/Exos/S5/Ex3.tex	/^\\section*{2}$/;"	s
+2	Structures Algebriques/Devoirs/S10/sol.tex	/^\\section*{2}$/;"	s
 2	Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{2}$/;"	s
 2	Structures Algebriques/Devoirs/S6/sol.tex	/^\\section*{2}$/;"	s
 2	Structures Algebriques/Devoirs/S7/sol.tex	/^\\section*{2}$/;"	s
 2	Structures Algebriques/Devoirs/S8/sol.tex	/^\\section*{2}$/;"	s
+2.1.1	Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{2.1.1}$/;"	s
 2.1.2	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{2.1.2}$/;"	s
+2.2.1	Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{2.2.1}$/;"	s
+2.2.2	Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{2.2.2}$/;"	s
+2.2.3	Introduction a la programmation/ARendre/S2/sol.tex	/^\\subsection*{2.2.3}$/;"	u	section:2.2.2
 2.3.1	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{2.3.1}$/;"	s
 2eme loi et theoreme du moment cinétique	Mecanique Generale/notes/lectures/lec9.tex	/^\\subsection{2eme loi et theoreme du moment cinétique}$/;"	u	section:Gravitation, Moment Cinétique
 3	Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{3}$/;"	s
 3	Algebre Lineaire I/Exos/S5/Ex3.tex	/^\\section*{3}$/;"	s
+3	Structures Algebriques/Devoirs/S10/sol.tex	/^\\section*{3}$/;"	s
 3	Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{3}$/;"	s
 3	Structures Algebriques/Devoirs/S8/sol.tex	/^\\section*{3}$/;"	s
+3.1	Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{3.1}$/;"	s
+3.2	Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{3.2}$/;"	s
 4	Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{4}$/;"	s
 4	Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{4}$/;"	s
 4.1	Algebre Lineaire I/Exos/S2/Ex4/sol.tex	/^\\section*{4.1}$/;"	s
@@ -81,8 +93,11 @@ Continuité	Analyse I/notes/lectures/lec10.tex	/^\\subsection{Continuité}$/;"	u
 Continuité	current-course/notes/lectures/lec10.tex	/^\\subsection{Continuité}$/;"	u	section:Series
 Convergence	Analyse I/notes/lectures/lec3.tex	/^\\subsection{Convergence}$/;"	u	section:Suites et limites
 Convergence	current-course/notes/lectures/lec3.tex	/^\\subsection{Convergence}$/;"	u	section:Suites et limites
+Convexite, Concavite	Analyse I/notes/lectures/lec19.tex	/^\\subsection{Convexite, Concavite}$/;"	u	section:Polynome de Taylor et developpements limites
+Convexite, Concavite	current-course/notes/lectures/lec19.tex	/^\\subsection{Convexite, Concavite}$/;"	u	section:Polynome de Taylor et developpements limites
 Coordonnées sphériques	Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Coordonnées sphériques}$/;"	u	section:Description des rotations spatiales
 Corps	Algebre Lineaire I/notes/lectures/lec8.tex	/^\\section{Corps}$/;"	s
+Corps Solide indeformable	Mecanique Generale/notes/lectures/lec11.tex	/^\\subsection{Corps Solide indeformable}$/;"	u	section:Rotations Du Solide
 Corps des fractions	Algebre Lineaire I/notes/lectures/lec8.tex	/^\\subsection{Corps des fractions}$/;"	u	section:Corps
 Couleur	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^enum Couleur { vide,rouge, jaune};$/;"	g	file:
 Definir $\\mathbb{R}$	Analyse I/notes/lectures/lec1.tex	/^\\section{Definir $\\mathbb{R}$}$/;"	s
@@ -106,7 +121,7 @@ Espaces vectoriels de dimension infinie	Algebre Lineaire I/notes/lectures/lec12.
 Etude de cas	Introduction a la programmation/notes/lectures/lec3.tex	/^\\section{Etude de cas}$/;"	s
 Examen	Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^typedef vector<qcm> Examen;$/;"	t	typeref:typename:vector<qcm>	file:
 Exemple d'utilisation	Analyse I/notes/lectures/lec2.tex	/^\\subsection{Exemple d'utilisation}$/;"	u	section:3
-Exemple d'utilisation	current-course/notes/lectures/lec2.tex	/^\\subsection{Exemple d'utilisation}$/;"	u	section:Chocs ou collisions entre deux corps
+Exemple d'utilisation	current-course/notes/lectures/lec2.tex	/^\\subsection{Exemple d'utilisation}$/;"	u
 Exemple de loi physique: l'addition des vitesse	Mecanique Generale/notes/lectures/lec1.tex	/^\\subsection{Exemple de loi physique: l'addition des vitesse}$/;"	u	section:Physique
 Exemples	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{Exemples}$/;"	b	subsection:Le language des Ensembles""Ensembles
 Exercice	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{ Exercice }$/;"	b	subsection:Le language des Ensembles""$\\mathcal{P}(E)$ l'ensemble des sous-ensembles
@@ -150,6 +165,7 @@ L'énergie mécanique: intégrale première	Mecanique Generale/notes/lectures/le
 La conduite de processus	Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsubsection{La conduite de processus}$/;"	b	subsection:Information, Calcul et Communication""A quoi ca sert?
 La gestion d'information	Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsubsection{La gestion d'information}$/;"	b	subsection:Information, Calcul et Communication""A quoi ca sert?
 La mecanique classique	Mecanique Generale/notes/lectures/lec1.tex	/^\\section{La mecanique classique}$/;"	s
+Le Corps des Nombres Complexes	Algebre Lineaire I/notes/lectures/lec18.tex	/^\\section{Le Corps des Nombres Complexes}$/;"	s
 Le développement de la dynamique	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Le développement de la dynamique}$/;"	u	section:Gravitation, Moment Cinétique
 Le groupe Symmetrique	Algebre Lineaire I/notes/lectures/lec2.tex	/^\\subsection{Le groupe Symmetrique}$/;"	u	section:Groupes
 Le groupe lineaire	Algebre Lineaire I/notes/lectures/lec16.tex	/^\\subsection{Le groupe lineaire}$/;"	u	section:Matrices
@@ -173,6 +189,7 @@ Methodologie	Introduction a la programmation/notes/lectures/lec2.tex	/^\\subsubs
 Modelisation de la force d'un ressort	Mecanique Generale/notes/lectures/lec3.tex	/^\\subsection{Modelisation de la force d'un ressort}$/;"	u	section:Oscillateurs Harmoniques
 Module engendré par un ensemble	Algebre Lineaire I/notes/lectures/lec7.tex	/^\\subsection{Module engendré par un ensemble}$/;"	u	section:Anneaux
 Modules sur un Anneau	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\subsection{Modules sur un Anneau}$/;"	u	section:Anneaux
+Moment cinetique par rapport a un point quelconque	Mecanique Generale/notes/lectures/lec11.tex	/^\\subsection{Moment cinetique par rapport a un point quelconque}$/;"	u	section:Rotations Du Solide
 Morphismes d'anneaux	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\subsection{Morphismes d'anneaux}$/;"	u	section:Anneaux
 Morphismes de Groupes	Algebre Lineaire I/notes/lectures/lec4.tex	/^\\subsection{Morphismes de Groupes}$/;"	u	section:Sous-Groupe
 Morphismes de Modules	Algebre Lineaire I/notes/lectures/lec8.tex	/^\\subsection{Morphismes de Modules}$/;"	u	section:Anneaux
@@ -181,6 +198,7 @@ Mouvement avec vitesse scalaire constante	Mecanique Generale/notes/lectures/lec4
 Mouvement central	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Mouvement central}$/;"	u	section:Gravitation, Moment Cinétique
 Mouvement central et loi des aires	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Mouvement central et loi des aires}$/;"	u	section:Gravitation, Moment Cinétique
 Mouvement dans un potentiel central	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Mouvement dans un potentiel central}$/;"	u	section:Gravitation, Moment Cinétique
+Mouvement plan-sur-plan	Mecanique Generale/notes/lectures/lec11.tex	/^\\subsection{Mouvement plan-sur-plan}$/;"	u	section:Rotations Du Solide
 Mouvement rectiligne uniformement accelere	Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Mouvement rectiligne uniformement accelere}$/;"	s
 Notations	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Notations}$/;"	u	section:Le language des Ensembles
 Noyau et Image	Algebre Lineaire I/notes/lectures/lec5.tex	/^\\section{Noyau et Image}$/;"	s
@@ -225,14 +243,18 @@ Relations d'equivalence	Structures Algebriques/notes/lectures/lec2.tex	/^\\subse
 Repere direct	Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection{Repere direct}$/;"	u	section:Dynamique du point materiel
 Représentation paramétrique d'unn sev cartesienne	Algebre Lineaire I/notes/lectures/lec13.tex	/^\\subsection{Représentation paramétrique d'unn sev cartesienne}$/;"	u	section:Espaces Vectoriels
 Resolution d'une equation du second degre	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Resolution d'une equation du second degre}$/;"	u	section:Definition formelle des algorithmes
+Rotations Du Solide	Mecanique Generale/notes/lectures/lec11.tex	/^\\section{Rotations Du Solide}$/;"	s
 Sequence	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^typedef  vector<int> Sequence;$/;"	t	typeref:typename:vector<int>	file:
 Series	Analyse I/notes/lectures/lec6.tex	/^\\section{Series}$/;"	s
 Series	current-course/notes/lectures/lec6.tex	/^\\section{Series}$/;"	s
+Series Entieres	Analyse I/notes/lectures/lec20.tex	/^\\section{Series Entieres}$/;"	s
+Series Entieres	current-course/notes/lectures/lec20.tex	/^\\section{Series Entieres}$/;"	s
 Sous-Anneau	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\subsection{Sous-Anneau}$/;"	u	section:Anneaux
 Sous-Ensembles	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Sous-Ensembles}$/;"	u	section:Le language des Ensembles
 Sous-Groupe	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\section{Sous-Groupe}$/;"	s
 Sous-Module	Algebre Lineaire I/notes/lectures/lec7.tex	/^\\subsection{Sous-Module}$/;"	u	section:Anneaux
 Sous-groupes	Structures Algebriques/notes/lectures/lec6.tex	/^\\subsection{Sous-groupes}$/;"	u	section:Théorie des Groupes
+Sous-groupes engendres par plusieurs elements	Structures Algebriques/notes/lectures/lec10.tex	/^\\subsection{Sous-groupes engendres par plusieurs elements}$/;"	u	section:Théorie des Groupes
 SousSequence	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^struct SousSequence{$/;"	s	file:
 Structures Algebriques des espaces de morphismes	Algebre Lineaire I/notes/lectures/lec8.tex	/^\\subsection{Structures Algebriques des espaces de morphismes}$/;"	u	section:Anneaux
 Structures de controle	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Structures de controle}$/;"	u	section:Definition formelle des algorithmes
@@ -247,6 +269,7 @@ Systeme de coordonnees	Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection
 Systeme de points matériels	Mecanique Generale/notes/lectures/lec9.tex	/^\\subsection{Systeme de points matériels}$/;"	u	section:Gravitation, Moment Cinétique
 Système à l'équilibre	Mecanique Generale/notes/lectures/lec9.tex	/^\\subsection{Système à l'équilibre}$/;"	u	section:Gravitation, Moment Cinétique
 Theoreme de Lagrange	Structures Algebriques/notes/lectures/lec8.tex	/^\\subsection{Theoreme de Lagrange}$/;"	u	section:Théorie des Groupes
+Theoreme du Moment Cinetique Generalise	Mecanique Generale/notes/lectures/lec11.tex	/^\\subsection{Theoreme du Moment Cinetique Generalise}$/;"	u	section:Rotations Du Solide
 Theoreme fondamental de l'arithmetique	Structures Algebriques/notes/lectures/lec3.tex	/^\\subsection{Theoreme fondamental de l'arithmetique}$/;"	u	section:Theorie des nombres
 Theorie des nombres	Structures Algebriques/notes/lectures/lec3.tex	/^\\section{Theorie des nombres}$/;"	s
 Théorie des Groupes	Structures Algebriques/notes/lectures/lec4.tex	/^\\section{Théorie des Groupes}$/;"	s
@@ -263,12 +286,15 @@ Trigonometrie	Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Trigonometr
 Un calcul naif ( avec la série harmonique alternée)	Analyse I/notes/lectures/lec7.tex	/^\\subsubsection{Un calcul naif ( avec la série harmonique alternée)}$/;"	b	section:Fonctions
 Un calcul naif ( avec la série harmonique alternée)	current-course/notes/lectures/lec7.tex	/^\\subsubsection{Un calcul naif ( avec la série harmonique alternée)}$/;"	b	section:Fonctions
 Une base de $Hom_k( V,W) $	Algebre Lineaire I/notes/lectures/lec13.tex	/^ \\subsection{Une base de $Hom_k( V,W) $}$/;"	u	section:Espaces Vectoriels
+Utilisations de la 2eme derivee	Analyse I/notes/lectures/lec19.tex	/^\\subsection{Utilisations de la 2eme derivee}$/;"	u	section:Polynome de Taylor et developpements limites
+Utilisations de la 2eme derivee	current-course/notes/lectures/lec19.tex	/^\\subsection{Utilisations de la 2eme derivee}$/;"	u	section:Polynome de Taylor et developpements limites
 Valeurs litterales	Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{Valeurs litterales}$/;"	u	section:Etude de cas
 Vecteurs	Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Vecteurs}$/;"	s
+Vitesse et acceleration d'un point solide	Mecanique Generale/notes/lectures/lec11.tex	/^\\subsection{Vitesse et acceleration d'un point solide}$/;"	u	section:Rotations Du Solide
 Vitesse et accélération en coordonnées cylindriques	Mecanique Generale/notes/lectures/lec5.tex	/^\\subsection{Vitesse et accélération en coordonnées cylindriques}$/;"	u	section:Description des rotations spatiales
 Voiture en accélération	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Voiture en accélération}$/;"	u	section:Travail, énergie, forces conservatives
 \\@lecture	fancy-preamble.tex	/^    \\subsection*{\\@lecture}$/;"	u	section:3
-\\@lecture	preamble.tex	/^    \\subsection*{\\@lecture}$/;"	u
+\\@lecture	preamble.tex	/^    \\subsection*{\\@lecture}$/;"	u	section:Rotations Du Solide
 \\texttt{auto}	Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{\\texttt{auto}}$/;"	u	section:Etude de cas
 \\texttt{const} et \\texttt{constexpr}	Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{ \\texttt{const} et \\texttt{constexpr} }$/;"	u	section:Etude de cas
 add	Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^complexe add(complexe a, complexe b){$/;"	f	typeref:typename:complexe

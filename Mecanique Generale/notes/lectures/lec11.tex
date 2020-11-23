@@ -1,0 +1,75 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Wed 18 Nov}{Rotations Du Solide}
+\section{Rotations Du Solide}
+\subsection{Corps Solide indeformable}
+\begin{defn}[Solide indeformable]
+	Systeme de points materiels fixes les uns par rapport aux autres.
+\end{defn}
+Le nombre de points materiels peut etre tres grand, on remplace alors les sommes sur ces points par des integrales.
+\[ 
+	\vec{r}_G = \frac{1}{M} \int \vec{r} dm ( \vec{r}) = \frac{1}{M}\int \vec{r} \rho( \vec{r}) d^{3} \vec{r}
+\]
+\subsection{Vitesse et acceleration d'un point solide}
+On fixe un repere sur le solide, soit $y$ un vecteur dans ce vecteur.
+\[ 
+	\frac{d \vec{y}}{dt}= \frac{d}{dt} ( \sum y_i \hat{y}_i) = \sum y_i \frac{d \vec{y}_i}{dt}= \vec{\omega} \land \sum y_i \hat{y}_{i} = \vec{\omega} \land \vec{y}
+\]
+Pour tout point $P$ du solide
+\[ 
+	\vec{v}_p = \frac{d}{dt}( \vec{r}_A + \vec{AP}) = \vec{v}_A + \frac{d}{dt} \vec{AP} = \vec{v}_A + \vec{\omega}\land \vec{AP}
+\]
+De meme
+\[ 
+	\vec{a}_p = \vec{a}_A + \dot{  \vec{\omega} } \land \vec{AP} + \vec{\omega} \land ( \vec{\omega} \land \vec{AP}) 
+\]
+\subsection{Mouvement plan-sur-plan}
+\begin{defn}
+	mouvement tel qu'un plan du solide $S$ reste constamment dans un plan fixe $\Pi$ du referentiel\\
+	$\iff$ \\
+	a tout instant les vitesse de tous les points du solide sont paralleles a un plan fixe $\Pi$ du referentiel
+\end{defn}
+
+\subsection{Moment cinetique par rapport a un point quelconque}
+\begin{align*}
+	\vec{L}_Q = \sum_{\alpha} Q \vec{P}_\alpha \land m_\alpha \vec{v}_\alpha = \sum_\alpha ( \vec{QO} + \vec{OP}_\alpha) \land m \vec{v}_\alpha\\
+	= \vec{QO} \land \sum_\alpha m \vec{v}_\alpha + \sum_\alpha \vec{OP}_\alpha \land m \vec{v}_\alpha\\
+	= \vec{L}_O + \vec{QO} \land M \vec{v}_G
+\end{align*}
+\begin{thm}[Theoreme du Transfert]
+\[ 
+\vec{L}_Q = \vec{L}_O + \vec{QO} \land M \vec{v}_G
+\]
+
+\end{thm}
+\begin{align*}
+\vec{L}_G = \sum_\alpha \vec{r}_\alpha ^{*} \land m_\alpha \vec{v}_\alpha\\
+= \sum_{\alpha} \vec{r}_\alpha ^{*} \land m_\alpha \vec{v}_\alpha ^{*} + (  \sum_\alpha m_\alpha \vec{r}_\alpha ^{*}) \land \vec{v}_G = \vec{L}_G ^{*}
+\end{align*}
+Avec ca, on a donc que
+\[ 
+	\vec{L}_Q = \vec{L}_G ^{ ( *) } + \vec{QG} \land M \vec{v}_G
+\]
+
+\subsection{Theoreme du Moment Cinetique Generalise}
+\begin{align*}
+	\frac{d L_Q}{dt} = \frac{d \vec{L}_O}{dt} + \frac{d}{dt} ( \vec{QO} \land M \vec{v}_G)  = \vec{M}_O ^{ \text{ ext } } + \vec{QO} \land M \vec{a}_G - \vec{V}_Q \land M \vec{v}_G
+\end{align*}
+On a 
+\[ 
+	\vec{M}_Q ^{ext} = \sum_\alpha M_{Q,\alpha} ^{ \text{ ext } } = \sum_\alpha \vec{QP}_\alpha \land \vec{F}_\alpha ^{ \text{ ext } } = \sum_\alpha ( \vec{QO} + \vec{OP}_\alpha) \land \vec{F}_\alpha ^{ext} = \vec{QO} \land \vec{F}^{ext} + \sum_\alpha \vec{OP}_\alpha \land \vec{F}_\alpha ^{ext}
+\]
+Donc
+\[ 
+\frac{d \vec{L}_Q}{dt} = \vec{M}_Q ^{ext} - \vec{v}_Q \land M \vec{v}_G
+\]
+On remarque que si $Q=G$, ou $\vec{v}_Q // \vec{v}_G$, on a le theoreme du moment cinetique
+
+
+
+
+
+
+
+
+\end{document}	

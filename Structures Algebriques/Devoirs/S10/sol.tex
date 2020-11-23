@@ -1,0 +1,100 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\DeclareMathOperator*{\om}{Hom}
+\DeclareMathOperator*{\aut}{Aut}
+\DeclareMathOperator*{\id}{Id}
+
+\newtheorem{thm}{Theorème}
+
+
+
+\begin{document}
+\title{Série 10}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+Montrons que l'application est injective.\\
+En effet, soient $\phi, \psi \in \om(G,H ) $ et supposons que
+\[ 
+	( \phi( g_1) , \ldots, \phi( g_r) ) = ( \psi( g_1) , \ldots, \psi( g_r) )
+\]
+Soit $a \in G$, car $G= \langle g_1, \ldots, g_r \rangle$, on sait que $a= \prod_i g_i^{a_i}$, on a alors que
+\[ 
+	\phi( a) = \phi\left( \prod_i g_i ^{a_i}\right) = \prod_i \phi( g_i ^{a_i} )  = \prod_i \phi( g_i) ^{a_i} = \prod_i \psi( g_i) ^{a_i}= \prod_i \psi\left( g_i^{a_i}\right) = \psi\left( \prod_i g_i ^{a_i}\right) = \psi( a) 
+\]
+On en conclut que $\phi= \psi$, et donc l'application est injective.
+\section*{2}
+Par l'exercice 2, on sait que $S_3 = \langle ( 12) , ( 23) \rangle$, et donc, en particulier, $S_3 = \langle ( 12) , ( 23), ( 13)\rangle $.\\
+On en déduit
+\[ 
+	\forall \Sigma \in S_3, \Sigma = ( 12) ^{a} ( 23) ^{b} ( 13) ^{c}
+\]
+Montrons qu'un automorphisme de $\aut( S_3) $ peut seulement permuter ces 3 cycles.\\
+On sait que $S_3$ est seulement composé de deux-cycles et de trois-cycles.\\
+Supposons d'abord qu'il existe $\phi \in \aut( S_3) $ tel que
+\[ 
+	\phi( ( ab) ) = ( abc) 
+\]
+Alors, on voit que
+\[ 
+	\id = \phi( \id) = \phi( ( ab) ( ab) ) = \phi( ( ab) ) \phi( ( ab )) = ( abc) ( abc) = ( acb) 
+\]
+Ce qui est une contradiction.\\
+Le raisonnement est le même si on suppose que $\phi( ( ab) ) = ( acb) $.\\
+Car un produit de deux 2-cycles dans $S_3$ est un 3-cycle, on a montré que $\phi( ( ab )) $ doit être un autre 2-cycle.\\
+Car $\phi$ est une bijection, $\phi$ doit permuter les 2-cycles.
+On définit donc l'application
+\[ 
+	\Psi: \phi\in \aut( S_3) \to 
+	\begin{pmatrix}
+		( 12) & ( 23) & ( 13) \\
+		\phi( 12) & \phi( 23) & \phi( 13) \\
+	\end{pmatrix}
+\]
+
+On voit que $\Psi( \id_{S_3} )= \id$, où $\id_{S_3} $ est l'automorphisme identité de $S_3$ et $\id$ est la permutation identité de $S_{( 12) ,( 23) , ( 13) } $.\\
+Posons $\alpha,\beta\in \aut( S_3) $, $\Psi( \alpha) = A, \Psi( \beta) = B$, montrons que $\Psi( \alpha\circ \beta) = A.B$.\\
+Par la partie 1, il suffit de considérer l'image des éléments engendrant le groupe.\\
+Or, par définition de $\Psi$, pour $( ab) \in \left\{ ( 12) , ( 23) ,( 13)  \right\} $, \[\Psi(\alpha\circ\beta)( ab) = \alpha\circ\beta( ab) = A.B( ab)   \]
+Montrons que cette application est injective.\\
+En effet, supposons que $\phi\in \aut( S_3) $ et $\Psi( \phi) = \id$, alors, pour tout $\sigma\in S_3$, il existe $x,y,z \in \left\{ 0,1 \right\} $ et $a,b,c \in \left\{ 1,2,3 \right\} $ avec $a,b,c$ deux-à-deux différents tel que
+\[ 
+\phi( \sigma) = \phi( ( ab)^{a}( bc) ^{b} ( ac) ^{c} ) = ( ab) ^{a} ( bc)^{b} ( ac) ^{c}	
+\]
+Donc $\ker \Psi = \left\{  \id_{S_3}\right\}$, et donc $\Psi$ est injective.
+\section*{3}
+Grace à la partie 2, il suffit de montrer que la conjugaison par un cycle correspond à la permutation de deux-cycles.\\
+En effet, soit $\sigma \in S_3$, on a que $\sigma = ( ab)^{x}( bc)^{y}( ac)^{z} $, avec $a,b,c$.\\
+Grâce à l'exercice 2, il nous suffit de verifier la conjugaison par des 2-cycles, car n'importe-quelle permutation s'écrit comme produit de 2-cycles.\\
+On a donc
+\begin{align*}
+	( ab) ( ab) ( ab) = ( ab) \\
+	( ab) ( bc) ( ab) = ( ac) \\
+	( ab) ( ac) ( ab) = ( bc) \\
+	( ab) ( ab) ( bc) ( ab) = ( ab) ( ac)\\
+	( ab) ( ab) ( ac) ( ab) = ( ab) ( bc)\\
+	( ab) ( bc) ( ac) ( ab) = ( ac) ( bc)\\
+	( ab) ( bc) ( ab) ( ab) = ( ac) ( ab)\\
+	( ab) ( ac) ( ab) ( ab) = ( bc) ( ab)\\
+	( ab) ( ac) ( bc) ( ab) = ( bc) ( ac)\\
+	( ab) ( ab) ( bc) ( ac) ( ab) = ( ab) ( ac) ( bc)\\
+	( ab) ( ab) ( ac) ( bc) ( ab) = ( ab) ( bc) ( ac)\\
+	( ab) ( ac) ( ab) ( bc) ( ab) = ( bc) ( ab) ( bc) \\
+	( ab) ( ac) ( bc) ( ab)( ab)  = ( bc) ( ac) ( ab)\\
+	( ab) ( bc) ( ac)( ab)( ab)  =  ( ac) ( bc) ( ab)\\
+	( ab) ( bc) ( ab)( ac)( ab)  =  ( ac) ( ab) ( bc) \\
+\end{align*}
+On remarque donc que la conjugaison par un deux cycle est une permutation des deux-cycles de la transposition.\\
+On a donc également une injection entre l'ensemble des conjugaisons et l'ensemble des automorphismes de $S_3$.\\
+On conclut avec Cantor-Schroeder-Bernstein.
+
+
+
+\end{document}

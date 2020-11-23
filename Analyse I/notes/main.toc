@@ -18,3 +18,6 @@
 \contentsline {subsection}{\numberline {8.2}Principe de Bernoulli-L'Hospital}{61}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}Bernoulli-L'hospital pour infini sur infini}{62}{subsection.8.3}%
 \contentsline {section}{\numberline {9}Polynome de Taylor et developpements limites}{63}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Utilisations de la 2eme derivee}{66}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Convexite, Concavite}{66}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Series Entieres}{67}{section.10}%

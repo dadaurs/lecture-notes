@@ -1,0 +1,164 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{18}{Mon 16 Nov}{Corps des Nombres Complexes}
+\section{Le Corps des Nombres Complexes}
+Prenons $K= \mathbb{R}$ et $\mathcal{M} = M_2( \mathbb{R}) $. Soit $I$ la matrice
+\[ 
+I = 
+\begin{pmatrix}
+	0 & -1\\
+	1 & 0
+\end{pmatrix}
+\]
+\begin{defn}
+L'espace des nombres complexes $\mathbb{C}$ est le sous-espace vectoriel engendre par $\id$ et $I$ 
+\[ 
+\mathbb{C} = \mathbb{R}.\id + \mathbb{R}.I
+\]
+
+\end{defn}
+\begin{thm}
+L'espace des nombres complexes est de dimension 2 et $ \left\{ \id, I \right\} $ en forme une base.\\
+De plus $\mathbb{C}$ est une sous-algebre commutative de $M_2( \mathbb{R}) $ et est en fait un corps. Le corps des nombres reel s'injecte dans $\mathbb{C}$ via l'application
+\[ 
+x \in \mathbb{R} \mapsto x. \id \in \mathbb{C}
+\]
+( les nombres reels s'identifient aux matrices scalaires).
+\end{thm}
+\begin{proof}
+La famille $ \left\{ \id, I \right\} $ est libre $\Rightarrow$ base de $\mathbb{C}$.\\
+$\mathbb{C}$ est un sev de  $M_2( \mathbb{R}) $, pour montrer que $\mathbb{C}$ est un sous-anneau de $M_2( \mathbb{R}) $, il suffit de montrer que $\mathbb{C}$ est stable par produit.
+
+\begin{rmq}
+$I^{2} = - \id$ \\
+En particulier, $I$ est inversible et
+\[ 
+	I^{-1} = -I = ^{t}I
+\]
+
+\end{rmq}
+Soit  $z= x \id + y I$ et $z'=x'\id + y'I$.
+\begin{align*}
+	z.z' &= xx'\id + x'yI + xy'I - yy'\id\\
+	     &= ( xx'-yy') \id + ( xy' + yx') I
+\end{align*}
+Donc $\mathbb{C}$ est un sous-anneau de $M_2( \mathbb{R}) $.\\
+Montrons que $\mathbb{C}$ est un corps.\\
+$\mathbb{C}$ est un corps: $0_2 = 0_{\mathbb{C}}\neq \id = 1_{\mathbb{C}}  $.\\
+Il reste a montrer que $z \in \mathbb{C}\setminus 0_{\mathbb{C}} $ est inversible.
+\begin{align*}
+	z^{2} - 2xz &= ( x^{2}-y^{2}) \id + 2xy I - 2x( x\id+ yI) \\
+		    &= -( x^{2} + ^{2}) \id
+\end{align*}
+Or $z \neq 0_2 \iff ( x,y) \neq ( 0,0) \iff x^{2}+y^{2}\neq 0$.\\
+Et donc
+\[ 
+	\id = \frac{-1}{x^{2}+y^{2}}( z^{2}-2xz) 
+\]
+Donc
+\[ 
+	z^{-1}= \frac{-1}{x^{2}+y^{2}}( z-2x) 
+\]
+On trouve, en developpant que
+\[ 
+\frac{1}{x^{2}+y^{2}}  \quad ^{t}z = z^{-1}
+\]
+\end{proof}
+\begin{rmq}
+On peut identifier $\mathbb{R}$ avec l'algebre $\mathbb{R}\id$ des matrices scalaires
+\[ 
+x\in \mathbb{R}\to x \id
+\]
+
+\end{rmq}
+\begin{defn}
+Le reel $x$ est appele partie reelle de $z$ et le reel $y$ est la partie imaginaire de $z$ 
+\[ 
+x= \re z, y = \im z
+\]
+Dans la notation matricielle, la transposition $z \mapsto ^{t}z$ envoie
+\[ 
+x+iy \mapsto x-iy
+\]
+Avec la notation simplifiee, on note
+\[ 
+	\bar{z} = x-iy
+\]
+et s'appelle la conjugaison complexe de $z$. On a alors
+\[ 
+	z.\bar{z} = x^{2}+y^{2}\geq 0
+\]
+Le nombre $( z.\bar{z}) ^{\frac{1}{2}}$ se note
+\[ 
+	|z| = ( x^{2}+y^{2})^{\frac{1}{2}}
+\]
+et s'appelle le module de $z$. On a donc
+\[ 
+	z\bar{z} = |z|^{2}
+\]
+
+\end{defn}
+\begin{propo}
+On a les proprietes suivantes
+\begin{enumerate}
+\item Les applications partie reelle et imaginaire sont lineaires
+\item La conjugaisonn complexe est un automorphisme du corps $\mathbb{C}$.\\
+	De plus $\bar{\bar{z}} = z$ et on a 
+	\[ 
+		\bar{z} = z \iff z= x \in \mathbb{R}			
+	\]
+
+\item Le module $z \mapsto |z|$ est multiplicatif:
+	\[ 
+	|z.z'| = |z|.|z'|
+	\]
+	et on a 
+	\[ 
+	z=0 \iff |z| = 0
+	\]
+	
+	
+\end{enumerate}
+
+\end{propo}
+\begin{proof}
+$\re,\im$ sont lineaires car ce sont les formes lineaires 1ere et 2eme coordonnees de $z\in \mathbb{C}$ dans la base $ \left\{ \id, I \right\} $.\\
+De meme $z \mapsto \bar{z}$ est lineaire.\\
+etc
+\end{proof}
+On remarque que $|\bullet|$ est un morphisme de groupe multiplicatif
+
+\begin{propo}
+On a un isomorphisme de groupes
+\[ 
+	pol: \mathbb{C}^{\times}\simeq \mathbb{R}_{>0} \times \mathbb{C}^{( 1) }
+\]
+donne par
+\[ 
+	z \in \mathbb{C}^{\times} \mapsto pol( z)  = ( |z|, \frac{z}{|z|}) 
+\]
+
+\end{propo}
+\begin{proof}
+On a que
+\[ 
+	\frac{z.z'}{|z.z'|}= ( \frac{z}{|z|}) ( \frac{z'}{|z'|}) 
+\]
+et 
+\[ 
+	| \frac{z}{|z|}| = \frac{( x^{2}+y^{2})^{\frac{1}{2}} }{|( x^{2}+y^{2}) ^{\frac{1}{2}}|}
+\]
+
+Donc l'application $pol$ est un morphisme.\\
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+\end{document}	
