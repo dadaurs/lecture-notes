@@ -117,8 +117,30 @@ On trouve
 On s'interesse a $ \frac{f( x) - f( x_0) }{x-x_0}$
 \begin{align*}
 =\sum_{n=0}^{ \infty } a_n \frac{x^{n}- x_0^{n}}{x-x_0}\\
-= \sum_{n=0}^{ \infty } n a_n x_0^{n-1} + \frac{1}{2}n ( n-1) ( x-x_0) \sum_{n=0}^{ \infty } t^{n-2}_{x,n} 
+= \sum_{n=0}^{ \infty } n a_n x_0^{n-1} + \sum_{n=2}^{ \infty}\frac{1}{2}n ( n-1) ( x-x_0)  t^{n-2}_{x,n} 
 \end{align*}
+Il reste a demontrer 
+\[ 
+	\sum_{n=2}^{ \infty } \frac{n( n-1) }{2} a_n t^{n-2}
+\]
+converge et reste borne sur $[-r,r]$.\\
+Alors 
+\[ 
+	\lim_{x \to x_0} ( x-x_0) \sum_{n=2}^{ \infty } \frac{n( n-1) }{2} a_n t^{n-1 } =0
+\]
+Rappel:
+$t$ se trouve entre $x$ et $x_0$, en particulier dans $[-r,r]$, donc 
+\[ 
+	| \sum_{n=2}^{ \infty } \frac{n( n-1) }{2} a_n t^{n-2}| \leq \frac{1}{2} | \sum_{n=2}^{ \infty } n ( n-1) r^{n-2} a_n |
+\]
+Il suffit donc de prouver que cette derniere serie converge, donc de montrer
+\[ 
+	\sum_{n=2}^{ \infty }( n-1) n |a_n| r^{n} < + \infty 	
+\]
+
+Donc il suffit de montrer que $r$ est dans le rayon de convergence.\\
+Or $ \lim_{n \to  + \infty} \sqrt[n] { n ( n-1) } =1$.
+Donc le rayon de convergence est $R$.
 
 
 \end{proof}

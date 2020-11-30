@@ -1,0 +1,73 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{21}{Tue 24 Nov}{Matrices Elementaires}
+Les matrices ci-dessus s'appellent les matrices de transformation elementaire, ce sont tous des matrices inversibles.\\
+\begin{defn}
+On dit que $N$ est ligne-equivalente a $M$ si et seulement si il existe une suite de transformations elementaires qui transforme $M$ en $N$.
+\end{defn}
+\begin{propo}
+	La relation etre ``ligne-equivalente'' est une relation d'equivalence sur $M_{d'\times d} ( K)$.\\
+De plus deux matrices $M,N$ ligne-equivalentes sont equivalentes au sens de la notion d'equivalence de deux matrices.
+\end{propo}
+\begin{proof}
+La ``ligne-equivalence'' est reflexive $M \sim M$ car l'identite est une transformation elementaire.\\
+Elle est symetrique: si $N$ est obtenue a partir de $M$ par une suite de transformations elementaires $M$ est obtenue a partir de $N$ en appliquant la suite des transformations inverses dans l'ordre oppose.\\
+C'est transitif, car si  $N \sim M$ et $M$ et $O\sim N$, alors $O \sim M$.\\
+Si $N \sim M$, alors $N= T_1T_2\ldots T_k M$, et donc $N=TM\id$.			
+\end{proof}
+\begin{propo}
+	Si $N \in M_{d'\times d} ( K) $ est ligne equivalente a $M$, alors toute ligne de $N$ est combinaison lineaire des lignes de $M$.
+	\[ 
+		\forall i \leq d', Lig_i( N)  \in \eng{L_1,\ldots, L_{d'} } \subset K^{d}
+	\]
+	et inversement les lignes de $M$ sont combinaisons lineaires des lignes de $N$.
+\end{propo}
+\subsection{Echelonage}
+\begin{defn}
+	Une matrice $M= ( m_{ij} ) \in M_{d'\times d} ( K)  $ est echelonnee si elle est nulle ou bien si
+	\begin{enumerate}
+	\item Il existe $1 \leq j_1 \leq j_r \leq d$ tels que
+		\begin{itemize}
+		\item Pour la ligne $L_1$, le premier terme non-nul est le $j_1$-ieme: on a $m_{1j} =0$ pour tout $j<j_1$ et $m_{1j_1} \neq 0$ 
+		\item Pour la ligne $L_2$, le premier terme non-nul est le $j_2$-ieme: on a $m_{2j}=0 $ pour tout $j<j_2$ et $m_{2j_2}\neq 0 $
+		\item \vdots
+		\end{itemize}
+		
+	\item Si $r<d$ les lignes $L_{r+1,\ldots, L_{d'} } $ sont toutes nulles.
+	\end{enumerate}
+Les $j_1< \ldots< j_r$ sont appeles les echelons de $M$ et les $m_{ij_i} $ sont les pivots	
+\end{defn}
+\begin{defn}
+Si de plus 
+\[ 
+m_{ij_1} = m_{2j_2} = \ldots = 1
+\]
+La matrice est echelonnee reduite
+\end{defn}
+\begin{thm}
+Toute matrice est ligne-equivalente a une matrice echelonnee reduite.
+\end{thm}
+\begin{proof}
+	$M \in M_{d'\times d} ( K) $.\\
+	Si $M= 0$, on a fini.\\
+	Si $M\neq 0$, soit $j_1\leq $, le plus petit indice d'une colonne qui est non-nul.\\
+	Par definition, il existe $i\leq d'$ tel que $m_{ij_1} \neq 0$.\\
+	On echange la ligne $L_1$, avec la ligne $L_i$.\\
+	On remplace $L_2 L_3\ldots L_{d'} $ par $L_2- m_{2j_1} L_1, \ldots$ \\
+	En appliquant ceci recursivement, on trouve une matrice echelonnee.
+\end{proof}
+\begin{propo}
+Deux matrices ligne-equivalentes et echelonnees reduites sont egales.
+\end{propo}
+
+	
+
+
+
+
+
+
+
+
+
+\end{document}	

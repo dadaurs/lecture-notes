@@ -1,0 +1,43 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{20}{Mon 23 Nov}{Operations Elementaires}
+\begin{thm}
+	Soit $P( X) $ un polynome reel non-constant alors l'equation admet au moins une solution dans $\mathbb{C}$.
+\end{thm}
+\begin{thm}[Gauss-Wantzel]
+On peut exprimer les parties reelles et imaginaires du nombre complexe $\omega_n = e^{i 2 \pi / n} $ par extraction successive de racines carrees si et seulement si
+\[ 
+n=2k \text{ ou bien  } n = 2^{k} \prod_i p_i
+\]
+ou $\prod_i p_i$ est un produit ( non-vide) de nombres premiers tous distincts et ``de Fermat'' : on dit qu'un nombre premier $p_i$ est de Fermat si $p_i = F_{f_i} = 2^{2^{f_i}}+1$, avec $f_i \geq 0$ un entier
+\end{thm}
+\section{Operations Elementaires Sur Les Matrices}
+\begin{defn}[Operations Elementaires]
+	\begin{enumerate}
+	\item $T_{ij} \quad L_i \rightleftarrows L_j\quad i,j \leq d'$ 
+	\item $D_{i,\lambda} \lambda\neq 0 L_i \to \lambda L_i$
+	\item $CL_{ij,\mu} : L_i \to L_i + \mu L_j$
+	\end{enumerate}
+\end{defn}
+\begin{propo}
+Ces operations sont des applications lineaires bijectives
+\end{propo}
+\begin{propo}
+Les trois operations elementaires sont obtenues par multiplication a gauche de $M$ par des matrices convenables: pour $1\leq i,j \leq d'$ 
+\begin{itemize}
+\item $T_{ij} $ 
+\item $D_{i,\lambda} $ 
+\item $Cl_{ij,\mu} $
+\end{itemize}
+ou les matrices carrees $T_{ij} , D_{i\lambda} , Cl_{ij,\mu} $ sont definies par
+\begin{align*}
+T_{ij}  = \id -E_{ii}  - E_{jj} + E_{ij} + E_{ji} \\
+D_{i,\lambda} = \id + ( \lambda -1)  E_{ii} , \lambda\neq 0\\
+Cl_{ij,\mu}  = \id + \mu. E_{ij} 
+\end{align*}
+
+\end{propo}
+
+
+
+\end{document}	

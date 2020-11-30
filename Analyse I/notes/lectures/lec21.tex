@@ -1,0 +1,172 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{21}{Wed 25 Nov}{Series de Taylor}
+\begin{rmq}
+Si $f$ est $C^{ \infty }$, on peut definir sa serie de Taylor en $x_0$ 
+\[ 
+	\sum_{n=0}^{ \infty }\frac{1}{n!} f^{( n) }( x_0) ( x-x_0)^{n}
+\]
+C'est donc une serie entiere.
+\end{rmq}
+Attention, en general, cette serie n'est pas $f$!\\
+En revanche, si $f$ est definie par une serie entiere $ \sum a_n x^{n}$, alors sa serie de Taylor est elle-meme $\sum a_n x^{n}$.
+\begin{crly}
+	Soit $f( x) = \sum a_n x^{n}$ et soit $R$ son rayon de convergence.\\
+	Alors $f$ est $C^{ \infty }$ sur $]-R,R[$
+\end{crly}
+\begin{proof}
+Par recurrence, puisque la derivee est a nouveau une serie entiere, il suffit de montrer le cas $n=1$.\\
+\[ 
+	f'( 0) = \sum_{n=1}^{ \infty }n a_n x^{n-1} = 1. a_1
+\]
+
+\end{proof}
+\begin{propo}
+\begin{enumerate}
+	\item $\exp( x) > 0 \forall x$ 
+	\item $\exp$ est croissante et convexe
+	\item $ \lim_{x \to  + \infty} \exp( x) = + \infty $ 
+	\item $\exp( x+y) = \exp x \exp y$
+	\item $\exp -x = \frac{1}{\exp x}$
+\end{enumerate}
+
+\end{propo}
+\begin{proof}
+Derivons $x \mapsto \exp x \exp -x$, on a 
+\[ 
+	\exp' x \exp -x + \exp x \exp' -x -1 = 0
+\]
+De plus 
+\[ 
+\exp 0 \exp -0 = 1
+\]
+Donc $\exp x \neq 0 \forall x$ et $\exp -x = \frac{1}{\exp x}$
+Fixons $y$. Derivons $x \mapsto \frac{\exp x+y}{\exp x}$, on trouve
+\[ 
+\frac{\exp x+y- \exp x+y \exp x}{\exp x} =0
+\]
+Donc la fonction est constante. De plus, en  $x=0$, on trouve $\exp y$, donc $\forall x $ 
+\[ 
+\exp y \exp x = \exp x+y
+\]
+On a 
+\[ 
+\exp x = \exp \frac{x}{2} + \frac{x}{2} = \left( \exp \frac{x}{2}  \right)^{2} > 0
+\]
+On a finalement
+\[ 
+\exp x \geq x
+\]
+pour $x\geq 0$, de meme
+\[ 
+\exp -x = \frac{1}{\exp x}
+\]
+il en suit les deux limites.
+
+
+
+
+\end{proof}
+
+
+
+
+\begin{crly}
+$\exp$ est une bijection entre les reels et les reels strictements positifs et admet donc un inverse $C^{ \infty }$ notee $\log$
+\end{crly}
+\begin{thm}[Lemme d'Abel]
+	Soit $f( x) = \sum a_n x^{n}$.\\
+	On suppose $R \neq 0$.\\
+	Si $\sum a_n R^{n}$ converge, alors $f$ est continue ( a gauche) en $R$.\footnote{Meme theoreme en $-R$ }\\
+\end{thm}
+\begin{proof}
+	On suppose que $f( R) $ converge.\\
+	Spg $f( R) = 0$.\\
+	Notons $b_n = a_n R^{n}$ et $g( w) = \sum b_n w^{n}$ \\
+	Donc, il s'agit de prouver:
+	\[ 
+		\lim_{w \to 1-} g( w) = 0.
+	\]
+	Soit $s_n= b_0+ b_1 + \ldots + b_n$, donc $s_n \to 0$.\\
+	Pour $g( w) = \sum b_n w^{n}$, or 
+	\[ 
+		b_0 + b_1 w + \ldots b_n w^{n}= s_0 + ( s_1-s_0) w + \ldots + ( s_n - s_{n-1} ) w^{n}
+	\]
+
+Or
+\[ 
+	= s_0 ( 1- w)  + s_1 w ( 1-2)  + \ldots s_{n-1} w^{n-1  }( 1-w) + s_n w^{n}
+\]
+Donc $g( w) = ( 1-w) \sum s_n w^{n} $\\
+Il suffit donc de prouver que 
+\[ 
+\sum s_n w^{n}
+\]
+converge et reste bornee independament de $\omega \in [ 0,1] $.\\
+Or $s_n$ converge.
+\[ 
+	| \sum_{n=n_0} ^{ \infty } s_n w^{n}| \leq \epsilon \sum w^{n} = \epsilon w^{n_0} \frac{1}{1-w}
+\]
+Or 
+\[ 
+	|g( w) | \leq ( 1-w)  \left\{ | \sum^{n_0-1} s_n w^{n}  | + \epsilon w^{n_0} \frac{1}{1-w}\right\}
+\]
+Donc $g( w) $ converge vers 0.
+
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

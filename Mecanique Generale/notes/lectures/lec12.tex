@@ -1,0 +1,40 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Wed 25 Nov}{Moment Cinetique}
+\subsection{Moment Cinetique d'un solide quelconque}
+Soit $A$ un point du solide.
+\begin{align}
+	\vec{L}_A = \sum_\alpha \vec{AP}_\alpha \land m \vec{v}_\alpha = \sum_\alpha \vec{AP}_\alpha + m_\alpha ( \vec{v}_\alpha + \vec{\omega} \land \vec{AP}_\alpha) \\
+	= \sum_\alpha m_\alpha \vec{AP}_\alpha \land \vec{v}_A + \sum_\alpha m_\alpha \left[\vec{AP}_\alpha \land ( \vec{\omega} \land \vec{AP}_\alpha)\right] \\
+\end{align}
+\subsection{Moment d'inertie par rapport a un axe de rotation fixe}
+\[ 
+	\vec{L}_C = \sum_\alpha m_\alpha \left[ ( \vec{CP})^{2} \vec{\omega} - ( \vec{CP}_\alpha \cdot \vec{\omega}) \vec{CP}_\alpha\right] 
+\]
+Si on projette $L_C$ sur l'axe de rotation, on trouve
+\[ 
+L_\Delta = \vec{L} \cdot \hat{\omega} = \omega \sum_\alpha m_\alpha d_\alpha^{2}
+\]
+On definit
+\[ 
+I_\Delta = \sum_\alpha m_\alpha d_\alpha^{2}
+\]
+C'est le moment d'inertie du solide.
+
+En developpant l'expression, on trouve
+\[ 
+	\vec{L}_G = \tilde{I}_G \cdot \vec{\omega}
+\]
+\subsection{Tenseur d'inertie}
+Par rapport a un point $A$ appartenant au solide
+\[ 
+	\vec{L}_A = \vec{AG} \land  M \vec{v}_A + \tilde{I}_A \cdot \vec{\omega}
+\]
+
+
+
+
+
+
+
+\end{document}	

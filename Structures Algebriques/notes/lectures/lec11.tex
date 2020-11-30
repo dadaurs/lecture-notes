@@ -1,0 +1,141 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Tue 24 Nov}{Groupe des Quaternions}
+\begin{crly}
+Soit $\phi:G \to H$ homomorphisme et $S \subseteq G$, alors
+\[ 
+	\phi( \eng{S})  = \eng{\phi( S) }
+\]
+
+\end{crly}
+\begin{proof}
+	\begin{align*}
+		\eng{\phi( S) } = \left\{ y_1\ldots y_r | y_i \in \phi( S) \text{ ou } y ^{-1}_i \in \phi( S)  \right\} \\
+		= \eng{\phi( z_1) \ldots \phi( z_r) \in H | z_i \in S  \text{ ou } z_i^{-1}\in S}\\
+		= \eng{\phi( z_1 \ldots z_r)  \in H | z_i \in S  \text{ ou } z_i^{-1}\in S}\\
+	\end{align*}
+\end{proof}
+\begin{center}
+\textbf{Prochain But}
+\end{center}
+Description de $\eng{H,F}$ pour $H,F \leq G$ quand c'est plus facile
+\begin{defn}
+$H\leq G$, le normalisateur:
+\[ 
+	N_G( H) = \left\{ g \in G | gHg^{-1} = H \right\} 
+\]
+
+\end{defn}
+\begin{rmq}
+Si $|G| < \infty $ alors 
+\[ 
+	N_G ( H) = G \iff H \trianglelefteq G
+\]
+
+\end{rmq}
+\begin{propo}
+	$N_G( H) \leq G$.
+\end{propo}
+\begin{proof}
+	$N_G( H) \neq \emtpyset$, car l'element neutre est dans le normalisateur.\\
+	$g,f \in N_G( H) $ $\Rightarrow$ $gf \in N_G( H) $, car 
+	\[ 
+		gf H ( gf) ^{-1}= gf H f^{-1}g^{-1}= gHg^{-1}= H
+	\]
+	$g \in N_G( H) \Rightarrow g^{-1}\in N_G( H) $, donc
+	\[ 
+	g^{-1}H ( g^{-1} )^{-1}= g^{-1}g H g^{-1}g = H
+	\]
+	
+\end{proof}
+\begin{propo}
+	$H,F \leq G$, $F\subseteq N_G( H) $ 
+	\[ 
+		\eng{H,F} = HF =FH
+	\]
+	ou
+	\[ 
+	HF = \left\{ hf \in G | h \in H, f \in F \right\} 
+	\]
+	\[ 
+	FH = \left\{ fh \in G | h \in H, f \in F \right\} 
+	\]
+	
+	
+\end{propo}
+\begin{proof}
+\[ 
+	HF \subseteq \eng{H,F}
+\]
+Pour l'autre direction, il suffit de montrer que $HF$ est un sous-groupe.$HF\neq \emptyset$, car l'element neutre est dedans.\\
+$hf, h'f' \in HF$, alors
+\[ 
+hfh'f' = hfh'f^{-1}ff' \in HF
+\]
+
+
+\end{proof}
+\subsection{Groupes Lineaires}
+\begin{defn}
+	$GL( n,K) $ sont les matrices inversibles de la taille $n\times n$ sur un corps $K$.
+\end{defn}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

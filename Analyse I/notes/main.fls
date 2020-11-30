@@ -496,6 +496,9 @@ INPUT lectures/lec19.tex
 INPUT lectures/lec19.tex
 INPUT lectures/lec20.tex
 INPUT lectures/lec20.tex
+INPUT lectures/lec21.tex
+INPUT lectures/lec21.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/ec-qplri.tfm
 OUTPUT main.thm
 OUTPUT main.loe
 INPUT main.aux
