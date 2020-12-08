@@ -1,0 +1,153 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{22}{Mon 30 Nov}{Engendrement du groupe lineaire}
+\begin{propo}
+Si $M$ et $N$ sont lignes equivalents
+\[ 
+	rg( M) = rg( N) 
+\]
+
+\end{propo}
+\begin{proof}
+Si $M \sim_{ lig } N \Rightarrow M \sim N $.
+\end{proof}
+\subsection{Engendrement du groupe lineaire}
+\begin{propo}
+	Soit $M \in M_d( K) $ une matrice carree alors $M$ est inversible si et seulement si $M$ est ligne equivalente a la matrice identite $\id$.
+\end{propo}
+\begin{proof}
+	$M$ est inversible si et seulement si $rg( M) =d$, et donc $M$ inversible si et seulement si $M$ est ligne equivalente a $R$, $R \in M_d( K) $ une matrice a $d$ echelons.\\
+	$R= \id$.
+\end{proof}
+\begin{crly}
+	Le groupe lineaire $GL_d( K) $ est engendre par les matrices de transformation elementaires.
+\end{crly}
+\begin{proof}
+	Soit $M \in GL_d( K)$, donc
+	\[ 
+	M \sim_{lig} \id
+	\]
+	Donc, il existe $T_1, \ldots ,T_k$ des matrices de transformations elementaires tel que
+	\[ 
+	\id = T_k \ldots T_1 M
+	\]
+	Donc
+	\[ 
+	M = T_1^{-1}\ldots T_k^{-1}
+	\]
+	
+\end{proof}
+
+\subsection{Extraction d'une base}
+Soit 
+\[ 
+G = \left\{ w_1, \ldots , w_l \right\} \subset K^{d}
+\]
+et $W = \eng{G}$.
+\begin{propo}
+	Soit $M \in M_{l\times d} ( K) $ la matrice dont les $l$ lignes sont formees des vecteurs lignes $w_i, i \leq l$. Soit $R$ la matrice echelonee reduite associee a $M$ et 
+	\[ 
+		w'_i = Lig_I( R) 
+	\]
+	Les lignes de $R$ possedent $r$ echelons on a
+	\[ 
+	\dim W = r
+	\]
+	et les $r$ premieres lignes
+	\[ 
+	\mathcal{B} _W = \left\{ w_i', i \leq r \right\} 
+	\]
+	forment une base de $W$.
+\end{propo}
+\begin{proof}
+On a vu que les lignes de $R$ sont CL des lignes de $M$.\\
+Mais on sait que les $w_i', i \leq r$ forment une famille libre et 
+\[ 
+rg R = rg M = \dim W
+\]
+
+\end{proof}
+\subsection{Resolution de systemes lineaires}
+Soit $\phi: V \to W$ et $w \in W$, on cherche l'ensemble des $v \in V$ tel que
+\[ 
+	\phi( v) = w
+\]
+On cherche l'ensemble des antecedents de $w \in W $ par l'application $\phi$.\\
+On cherche 
+\[ 
+	\phi^{-1}( \left\{ w \right\} ) = \left\{ v \in V \quad \phi( v) = w \right\} 
+\]
+C'est un cas particulier d'une question sur les groupes
+\[ 
+	\phi: ( G, \cdot) \to ( H,\cdot) 
+\]
+\begin{lemma}
+Soit $\phi: G \mapsto H$ un morphisme de groupes, alors pour tout $h \in H$, on pose
+\[ 
+	Sol_\phi( h) = \phi ^{-1}(  \left\{ h \right\} ) = \left\{ g \in G, \phi( g) =h \right\} \subset G
+\]
+la preimage de $h$ par $\phi$. En particulier, $Sol_\phi( e_H) = \ker \phi$. Alors $Sol_\phi( h) $ est
+\begin{itemize}
+	\item soit l'ensemble vide ( ssi $h \notin \phi( G) $) 
+	\item soit il existe $g_0\in Sol_\phi( h) $ et
+		\[ 
+			Sol_\phi( h) = g_0Sol_\phi( e_H) = g_0\ker \phi = \left\{ g_0.k, \phi( k) =e_H \right\} 
+		\]
+		
+\end{itemize}
+
+
+\end{lemma}
+
+\begin{proof}
+	Si $h \notin \phi( G) $, il n'existe pas de $g$ tel que
+	\[ 
+		\phi( g) =h 
+	\]
+	et 
+	\[ 
+		Sol_\phi( h) = \emptyset
+	\]
+	
+	Si $h \in \phi( G) $, alors $\exists g_0 \in G $ tel que $\phi( g_0) =h$,
+	donc l'ensemble n'est pas vide.\\
+	Alors
+	\[ 
+		\phi( g) =h = \phi( g_0) 
+	\]
+	et donc
+	\[ 
+		\phi( g_0) ^{-1}\phi( g) = e_h
+	\]
+	Donc
+	\[ 
+		g_0^{-1}g = k \in \ker \phi = Sol_\phi( e_H) 
+	\]
+	Reciproquement, soit $g= g_0k, k \in \ker \phi$, alors
+	\[ 
+		\phi( g) = \phi( g_0) \phi( k) = \phi( g_0) = h
+	\]
+	
+	
+\end{proof}
+\begin{crly}
+	$G= ( V,+) , H = ( W,+) , \phi: V \to W$ une application lineaire.\\
+	Soit $w \in W$.\\
+	Si $w \notin \phi( W) $, l'ensemble des solutions est vide.\\
+	Sinon, $w \in \phi( V) $, soit $v_0$, un antecedent, alors
+	\[ 
+		Sol_\phi( w) = \left\{ v \in V | \phi( v) = w \right\} = v_0 + \ker \phi
+	\]
+	
+\end{crly}
+\begin{defn}
+Les inconnues $v_{j_i} $ pour $j_i$ etant un echelon sont appellees inconues principales du systeme. Les inconnues $v_j$ pour $j\leq d$ qui n'est pas un echelon sont appellees inconnues libres dy systeme.
+\end{defn}
+
+
+	
+
+
+
+
+\end{document}	

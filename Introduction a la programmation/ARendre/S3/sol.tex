@@ -1,0 +1,94 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{listings}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\begin{document}
+\title{Rendu Semaine 12 et 13}
+\author{David Wiedemann}
+\maketitle
+\section*{2.4.1}
+Un type possible est
+\begin{lstlisting}
+struct Paquet{
+bool donnee;
+int seq;
+int data
+};
+\end{lstlisting}
+\section*{2.4.2}
+\begin{lstlisting}
+bool bon_ordre(Paquet A,Paquet B) { 
+if( A.seq< B.seq) { 
+return true;
+} 
+return false;
+} 
+\end{lstlisting}
+\section*{2.4.3}
+Je suppose la liste L non vide, il suffirait de return un entier quelconque si c'etait le cas.
+\begin{lstlisting}
+int recevoir_TCP(Paquet P, int i, vector<Paquet> L){
+if( P.donnee==false) { 
+return i;
+} 
+Paquet acquit;
+acquit.data= P.data;
+acquit.seq = P.seq;
+acquit.donnee= false;
+send( acquit);
+
+if( P.seq != i+1) {
+insert( P) ;
+return i;
+} 
+affiche_paquet( P);
+if(L[0].seq+1==P.seq) { 
+int i( 0);
+while(L[i].seq-1== L[i+1].seq && i<L.size( )-1 ) {
+affiche(L[i]);
+++i;
+} 
+} 
+return i;
+}
+\end{lstlisting}
+\section*{2.3.2}
+Le message, une fois encrypte, sera de la forme
+\[ 
+238^{79}\mod 889
+\]
+Et, pour decrypter l'entier 532, on trouvera
+\[ 
+532^{319}\mod 889
+\]
+\section*{2.3.3}
+Etant donne qu'on ne se soucie pas de complexite algorithmique, une fonction avec une complexite en ordre lineaire semble suffisante...
+\begin{lstlisting}
+int exp_et_modulo( int x, int y, int z) { 
+int n=1;
+for( int i( 0);i<y;++i) { 
+	n*=x;
+
+} 
+return n%z;
+} 
+\end{lstlisting}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

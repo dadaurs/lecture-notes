@@ -1,0 +1,208 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{24}{Mon 07 Dec}{Integrales}
+\begin{propo}
+	Soit $f \in C^{0}( [ a,b] ) $ et $( \sigma_j) $ une suite de subdivisions.\\
+	On suppose que la maille tend vers 0.\\
+	Alors
+	\[ 
+	\lim_{j \to  + \infty} R_{\sigma_j} = \int_{ a }^{ b }f
+	\]
+	pour toute somme de Riemann $R_{\sigma_j} $ associee a $\sigma_j$.\\
+\end{propo}
+\begin{exemple}
+	Soit $\sigma_j = ( x_0, \ldots, x_j) $ avec
+	\[ 
+	x_i = a + i \frac{b-a}{j}
+	\]
+	On a alors
+	\[ 
+		R= \sum_{i=1}^{ j}f( \xi_i) ( x_i - x_{i-1} ) 
+	\]
+	
+	
+\end{exemple}
+\begin{proof}
+L'uniforme continuite dit
+\[ 
+\forall \epsilon> 0 \exists \delta>0 \forall x,y:
+\]
+\[ 
+	|x-y| < \delta \Rightarrow |f( x) - f( y) | < \epsilon
+\]
+Donc, si $h( \sigma) <\delta$, alors
+$f( \xi_i) , m_i, M_i$ different au plus de $\epsilon$.
+
+\end{proof}
+\begin{lemma}
+	Soient $f_1\leq f_2$ integrables sur $[a,b]$.\\
+	Alors $\int_{ a }^{ b }f_1\leq \int_{ a }^{ b } f_2$.
+\end{lemma}
+\begin{proof}
+	$\forall \sigma \forall [ x_{i-1} , x_i] : m_i ( f_1) \leq m_i( f_2) $.\\
+	Fini.
+\end{proof}
+\begin{lemma}
+	Si $f$ est integrable sur $[a,b]$, alors $|f|$ aussi et $\int_{ a }^{ b }|f|\geq | \int_{ a }^{ b }f|$
+\end{lemma}
+\begin{proof}
+Suit de l'inegalite triangulaire pour les sommes.
+\end{proof}
+\begin{lemma}
+	Si $f$ est integrable sur $[a,b]$ et $a<c<d<b$, alors $f$ integrable sur $[c,d]$.
+\end{lemma}
+\begin{proof}
+	A montrer, $\forall  \epsilon> 0$, on cherche $\sigma$ subdivision de $[c,d]$ tel que $\overline{S}_\sigma( f) < \underline{S}_\sigma( f) + \epsilon$.\\
+	Or, par hypothese, $\exists \tau$ sbdivision de $[a,b]$ tel que
+	\[ 
+		\overline{S}_\tau < \underline{S}_\tau( f) +\epsilon	
+	\]
+	Posons $\rho= \tau \cup \left\{ c,d \right\} $.\\
+	On sait que $\overline{S}_\rho( f) \leq \overline{S}_\tau( f) $.\\
+	Posons $\sigma$ la subdivision $\rho$ sans les elements avant c et apres $d$.\\
+	\[ 
+		\overline{S}_\sigma( f) -\underline{S}_\sigma( f) = \overline{S}_\rho( f) - \underline{S}_\rho( f) - \sum_{i=1}^{ k}( M_i-m_i) ( x_i - x_{i-1} ) - \sum_{i=l+1}^{ n}( M_i-m_{i} ) ( x_i-x_{i-1} ) 
+	\]
+	
+	
+\end{proof}
+\begin{propo}
+	Soit $f$ integrable sur $[a,b]$ et $a<c<b.$ Aors
+	\[ 
+	\int_{ a }^{ b }f = \int_{ a }^{ c }f + \int_{ c }^{ b }f
+	\]
+	De plus, si $f$ est integrable sur $[a,c]$ et sur $[c,b]$, alors $f$ est integrable sur $[a,b]$
+\end{propo}
+\begin{proof}
+Soit $\epsilon>0$.\\
+Puisque $f$ est integrable sur $[a,c]$ et $[c,b]$, $\exists  \sigma$ et $\tau$.\\
+On a alors
+\[ 
+	\overline{S}_\sigma( f) < \underline{S}_\sigma( f) + \frac{\epsilon}{2}
+\]
+$\sigma\cup\tau$ est une subdivision de $[a,b]$ et
+\[ 
+	\overline{S}_{\sigma\cup\tau} = \overline{S}_\sigma + \overline{S}_\tau
+\]
+Donc, puisque vrai pour tout $\epsilon$, on a fini.\\
+On a seulement utilise les hypotheses que $f$ est integrable sur $[a,c]$ et sur $[c,b]$, donc la 2eme partie de la proposition est aussi demontree.	
+\end{proof}
+
+\begin{rmq}
+Si $a>b$, on definit
+\[ 
+\int_{ a }^{ b }f = - \int_{ a }^{ b }f
+\]
+On note aussi
+\[ 
+\int_{ a }^{ a }f=0
+\]
+
+\end{rmq}
+\begin{crly}
+\[ 
+\forall a,b,c : \int_{ a }^{ b }f = \int_{ a }^{ c }f+ \int_{ c }^{ b }f
+\]
+
+\end{crly}
+\begin{lemma}
+	Soit $f$ integrable sur $[a,b] $. Alors 
+	\[ 
+		\inf ( f) ( b-a) \leq \int_{ a }^{ b }f \leq \sup f ( b-a) 
+	\]
+	
+\end{lemma}
+\begin{proof}
+	Il suffit de considerer $\underline{S}_{[a,b]} $ et $\overline{S}_{[a,b]} $
+\end{proof}
+\begin{propo}[Theoreme de la moyenne]
+	Soit $f$ une fonction continue sur $[a,b]$.\\
+	Alors $\exists c\in ] a,b[ $ tel que 
+	\[ 
+		\int_{ a }^{ b } = f( c) ( b-a) 
+	\]
+	
+\end{propo}
+\begin{proof}
+Le lemme ci-dessus implique que
+\[ 
+\inf f\leq \frac{1}{b-a} \int_{ a }^{ b }f \leq \sup f
+\]
+Comme $f$ est continue sur $[a,b]$, $\inf f$ et $\sup f$ sont des valeurs de $f$.\\
+Donc $\frac{\int_{a}^{b}f}{b-a}$ est une valeur intermediaire, donc par TVI, on a fini.
+\end{proof}
+\begin{defn}[Primitive]
+Soit $f$ une fonction.\\
+On dit qu'une fonction $F$ est une primitive de $f$ si $F$ est derivable et $F'=f$.
+\end{defn}
+\begin{rmq}
+\begin{enumerate}
+\item Si une primitive  $F$ existe, alors il y en a plusieurs: $F+c$
+\item TAF im plique que toute autre primitive est de cette forme.
+	\[ 
+		F_2' = f = F' \Rightarrow ( F_2-F) ' = 0 \Rightarrow F_2 -F \text{ est constant par TAF } 
+	\]
+	
+\item De nombreuses fonctions sont sans primitives: theoreme de Darboux.
+\end{enumerate}
+
+\end{rmq}
+\begin{crly}
+	Toute fonction continue est la derivee d'une fonction ( derivable) 
+\end{crly}
+
+\begin{thm}[Theoreme Fondamental]
+	Soit $f:[a,b] \to \mathbb{R}$ continue.\\
+	Definissons $F:[a,b] \to \mathbb{R}$ par
+	\[ 
+		F( x) = \int_{ a }^{ x }f
+	\]
+	Alors $F$ est une primitive de $f$.
+
+\end{thm}
+\begin{proof}
+	On sait deja que $F( x) = \int_{ a }^{ x }f$ est bien defini.\\
+	Soit $x_0\in]a,b[$, alors pour $x\in [ a,b] $ :
+	\[ 
+		\underbrace{F( x) -F( x_0) }_{x-x_0} = \frac{\int_{ a }^{ x }f - \int_{ a }^{ x_0 }f}{x-x_0}= \frac{\int_{ x }^{ x_0 }f}{x-x_0}
+	\]
+	Pour la derniere egalite, il suffit de distinguer les cas.\\
+	A demontrer: $\lim_{x \to x_0} \frac{\int_{ x_0 }^{ x }f}{x-x_0}$ existe et vaut $f( x).$\\
+	Par le theoreme de la moyenne, $\exists c_x \in [ x_0,x ] $ 
+	\[ 
+		\int_{ x_0 }^{ x }f = f(x) ( x-x_0) 
+	\]
+	
+	Donc, reste a montrer $\lim_{x \to x_0} f( c_x) = f( x_0) $.\\
+	Or $\lim_{x \to x_0} c( x) = x_0$.\\
+	Comme $f$ est continue, on conclut par limite de composition.
+	
+\end{proof}
+\begin{thm}[Fondamental, reformulation]	
+	Soit $f$ continue sur $[a,b]$ et $G$ une primitive de $f$.\\
+	Alors 
+	\[ 
+		\int_{ a }^{ b }f= G( b) - G( a) 
+	\]
+	
+\end{thm}
+\begin{proof}
+	Posons $F( x) = \int_{ a }^{ x }f$ TAF $\Rightarrow$ $\exists c \in \mathbb{R}: G = F+c$. Or $F( a) = 0 \Rightarrow  c= G( a) $ \\
+	Et $ \int_{ a }^{ b }f= F( b) = G( b) - G( A) $.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

@@ -1,0 +1,48 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{13}{Tue 08 Dec}{Produit Semi-Direct}
+\begin{propo}
+	Soit $F,H \leq G$ et $F \leq N_G( H) $ et $F \cap H= \left\{ e   \right\} $, alors il existe une application bijective 
+	\[ 
+	H \times F \to HF
+	\]
+	
+	Ceci permet de comprendre le sous-groupe engendre par $\eng{H,F}$.
+	En general, l'application n'est pas un homomorphisme.
+\end{propo}
+\begin{lemma}
+\begin{itemize}
+\item $A_g^{H}$ est un automorphisme
+\item $Ad_{F} ^{H}$ est un homomorphisme.
+\end{itemize}
+\end{lemma}
+\begin{proof}
+Il faut montrer que $f, f' \in F$ 
+\[ 
+Ad_{f f'} ^{H} = Ad_{f} ^{H}\circ Ad_{f'} ^{H}
+\]
+Immediat, en developpant.
+\end{proof}
+\begin{defn}
+	Soit $H,F$ deux groupes et $\phi: F \to Aut( H) $ un homomorphisme.
+	On definit le produit semi-direct $H \rtimes_\phi F$ tel que les element sont $H \times F$ mais avec la loi de multiplication 
+	\[ 
+		( h,f) ( h,f') = ( h\phi_f( h') ,f,f') 
+	\]
+	
+\end{defn}
+\begin{thm}
+	$\eng{F,H} \simeq H \rtimes_{Ad_{F} ^{H}} F$
+\end{thm}
+\begin{lemma}
+	$H\rtimes_\phi F$ est un groupe, $( e_H, e_F) $ est l'element neutre et $\left(( \phi_{f^{-1}} ( h) ) , f \right) = ( h,f) ^{-1} $.\\
+
+\end{lemma}
+
+
+
+
+
+
+
+\end{document}	

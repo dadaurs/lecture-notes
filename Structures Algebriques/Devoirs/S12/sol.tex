@@ -1,0 +1,137 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{faktor}
+\newcommand{\zpz}{\faktor{\mathbb{Z}}{p \mathbb{Z}}}
+\begin{document}
+\title{Série 12}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+Ce résultat découle directement du théorème de Lagrange.\\
+En effet, $| \faktor { \mathbb{Z}} { p \mathbb{Z}} \times \zpz | = p^{2}$.\\
+Soit $H$ un sous-groupe propre.\\
+Donc $|H|>1$ et $|H|< p^{2}$.
+Par Lagrange, on sait que $|H| \big\vert p^{2}$, ce qui force $|H|=p$.\\
+On en conclut que $H \simeq \zpz$.\\
+\section*{2}
+Dans ce qui suit, $k$ représente le corps sur lequel $U$ est défini et $p$ sera la characteristique de ce corps.\\
+Soit $F$ un sous-groupe de $U$.\\
+Supposons d'abord que $F \cap Z( U) \neq \left\{ e  \right\} $.\\
+On a montré dans l'exercice 3 que le centre du groupe unipotent est l'ensemble des matrices de la forme
+\[ 
+\begin{pmatrix}
+	1 & 0 & a\\
+	0 & 1 & 0\\
+	0 & 0 & 1
+\end{pmatrix}
+\text{ pour } a \in k
+\]
+Si $F \cap Z( U) \neq \left\{ e  \right\} $, il existe une matrice 
+\[ 
+	M=
+\begin{pmatrix}
+	1 & 0 & a\\
+	0 & 1 & 0\\
+	0 & 0 & 1
+\end{pmatrix}
+\text{ avec } a \in k^{\times}	
+\]
+appartenant à $F$.\\
+Car  $F$ est un sous-groupe, le groupe cyclique engendré par $M$ est contenu dans $F$.\\
+Or $|Z( U) | = p$ et il est clair que $\langle M \rangle = Z( U) $, il suit $Z( U) \subseteq F$.\\
+Supposons maintenant que $F \not \supseteq Z( U) $.\\
+Par l'absurde, supposons que $F \cap Z( U) \neq \left\{ e  \right\} $.\\
+Par le même argument que ci-dessus, ceci force $F \supseteq Z( U) $, ce qui est une contradiction.\\
+
+\section*{3}
+On suppose que $F\cap Z( U) = \left\{ e  \right\} $.\\
+
+Car $|U|= p^{3}$, par Lagrange, il y a 2 possibilités pour $|F|$.\\
+Si $|F|=p$, alors il est évident que $|FZ( U)| = p^{2} $, donc
+\[ 
+	| \faktor { FZ( U)  } { Z( U) } | = p
+\]
+Et on en conclut que
+\[ 
+\faktor { FZ( U)  } { Z( U) }\simeq \zpz
+\]
+Supposons donc $|F|=p^{2}$.
+On en conclut que $FZ( U) >p^{2}$, et donc $FZ( U) = U$.\\
+
+Il est clair que 
+\[ 
+F \simeq \faktor { F}  { \left\{ e  \right\} } 
+\]
+Donc
+\[ 
+	F  \simeq \faktor { F}  { F \cap Z( U)  } \simeq \faktor { F Z( U) } { Z( U) } = \faktor { U} { Z( U) } \simeq k \oplus k \simeq \zpz\times\zpz
+\]
+Ici, le premier isomorphisme est immédiat, le deuxième isomorphisme suit du deuxième théorème d'isomorphisme, le troisième suit de  $FZ( U) = U$ et le quatrième isomorphisme suit de l'exercice 3.3.\\
+
+Soit $a\in k^{\times}$, montrons que le sous-groupe $E$ engendré par la matrice
+\[ 
+\begin{pmatrix}
+	1 & a & 0\\
+	0 & 1 & 0\\
+	0 & 0 &1
+\end{pmatrix}
+\]
+est un sous-groupe dont l'intersection avec $Z( U) $ est l'élément neutre est qui n'est pas normal.\\
+On a dénoté avec $\bullet ^{-1}$ l'inverse multiplicatif dans $k$.\\
+Par l'exercice 3.1, on voit que $E$ forme un sous-groupe d'ordre $p$ dont l'intersection avec $E$ est $ \left\{ e  \right\} $.\\ 
+Pourtant,
+\[ 
+\begin{pmatrix}
+	1 & -a-1 & 0\\
+	0 & 1 & 1\\
+	0 & 0 &1
+\end{pmatrix}
+\begin{pmatrix}
+	1 & a & 0\\
+	0 & 1 & 0\\
+	0 & 0 &1
+\end{pmatrix}
+\begin{pmatrix}
+	1 & a+1 & 0\\
+	0 & 1 & -1\\
+	0 & 0 &1
+\end{pmatrix}
+=
+\begin{pmatrix}
+	1 & a & 1\\
+	0 & 1 & 0\\
+	0 & 0 &1
+\end{pmatrix}
+\notin E
+\]
+\section*{4}
+Si $F\supsetneq Z( U) $ et $F$ est un sous-groupe propre, alors, par Lagrange, $|F| = p^{2}$, et donc
+\[ 
+	| \faktor F { Z(U) } | = \frac{p^{2}}{p}= p
+\]
+Ce qui force
+\[ 
+	\faktor F { Z(U) } \simeq \zpz
+\]
+Par le théorème de correspondance, il suffit de montrer que $\faktor F { Z(U) }$ est normal dans $\faktor U { Z( U) } $.\\
+Pourtant, $\faktor U { Z( U) } \simeq \zpz \times \zpz$.\\
+En restreignant cet isomorphisme à $\faktor F { Z( U) } $, on trouve un sous-groupe d'ordre $p$ dans $\zpz\times \zpz$.\\
+Or $\zpz\times \zpz$ est abélien, et donc n'importe quel sous-groupe est normal.\\
+Il en suit que $\faktor F { Z( U) } \trianglelefteq \faktor U { Z( U) } $, on conclut avec le théorème de correspondance.\\
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,23 +1,25 @@
 \babel@toc {french}{}
-\contentsline {section}{\numberline {1}Introduction}{6}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Buts du Cours}{6}{subsection.1.1}%
-\contentsline {section}{\numberline {2}Definir $\mathbb {R}$}{7}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Exemple d'utilisation}{9}{subsection.2.1}%
-\contentsline {section}{\numberline {3}Suites et limites}{14}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Convergence}{14}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Limsup et liminf}{19}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Suites de Cauchy}{23}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Series}{24}{section.5}%
-\contentsline {subsubsection}{\numberline {5.0.1}Un calcul naif ( avec la série harmonique alternée)}{30}{subsubsection.5.0.1}%
-\contentsline {section}{\numberline {6}Fonctions}{36}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Continuité}{41}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Suites de Fonctions}{48}{section.7}%
-\contentsline {section}{\numberline {8}Dérivation}{53}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Applications de la dérivée}{56}{subsection.8.1}%
-\contentsline {subsubsection}{\numberline {8.1.1}Recherche d'extremums}{56}{subsubsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.2}Principe de Bernoulli-L'Hospital}{61}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Bernoulli-L'hospital pour infini sur infini}{62}{subsection.8.3}%
-\contentsline {section}{\numberline {9}Polynome de Taylor et developpements limites}{63}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Utilisations de la 2eme derivee}{66}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Convexite, Concavite}{66}{subsection.9.2}%
-\contentsline {section}{\numberline {10}Series Entieres}{67}{section.10}%
+\contentsline {section}{\numberline {1}Introduction}{7}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Buts du Cours}{7}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Definir $\mathbb {R}$}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Exemple d'utilisation}{10}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Suites et limites}{15}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Convergence}{15}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Limsup et liminf}{20}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Suites de Cauchy}{24}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Series}{25}{section.5}%
+\contentsline {subsubsection}{\numberline {5.0.1}Un calcul naif ( avec la série harmonique alternée)}{31}{subsubsection.5.0.1}%
+\contentsline {section}{\numberline {6}Fonctions}{37}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Continuité}{42}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Suites de Fonctions}{49}{section.7}%
+\contentsline {section}{\numberline {8}Dérivation}{54}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Applications de la dérivée}{57}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}Recherche d'extremums}{57}{subsubsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.2}Principe de Bernoulli-L'Hospital}{62}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Bernoulli-L'hospital pour infini sur infini}{63}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Polynome de Taylor et developpements limites}{64}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Utilisations de la 2eme derivee}{67}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Convexite, Concavite}{67}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Series Entieres}{68}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Deux P.S sur $\qopname \relax o{exp}$}{74}{subsection.10.1}%
+\contentsline {section}{\numberline {11}Integration}{75}{section.11}%

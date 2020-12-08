@@ -1,0 +1,199 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{24}{Mon 07 Dec}{Determinants}
+\subsection{Formes Symmetriques/Alternees}
+\begin{defn}
+Une forme multilineaire
+\[ 
+\Lambda: V^{n}\mapsto K
+\]
+est dite 
+\begin{itemize}
+\item Symetrique si $\forall i \neq j \leq n$ 
+	\[ 
+		\Lambda( v_1, \ldots, v_i, \ldots v_j) = \Lambda( v_1, \ldots, v_j,\ldots, v_{i} ,\ldots) 
+	\]
+	Autrement dit si sa valeur ne change pas quand on echange deux composantes.
+\item Alternee si $\forall i \neq j \leq n$ 
+	\[ 
+		\Lambda(  v_1, \ldots, v_i, \ldots v_j) = -\Lambda(  v_1, \ldots, v_j, \ldots v_i) 
+	\]
+	Autrement dit si sa valeur est changee en son opposee si on echange deux composantes distinctes.\\
+\end{itemize}
+
+\end{defn}
+\begin{thm}
+	On suppose que $car( K) \neq 2$. Soit $d= \dim V$. On a 
+	\[ 
+		\dim Alt^{n}( V;K) = 
+		\begin{cases}
+		0 \text{ si $n>d$ } \\
+		1 \text{ si $n=d$ } \\
+		 C^{n}_d \text{ si } n \leq d
+		\end{cases}
+	\]
+	
+\end{thm}
+\begin{proof}
+Soit $\Lambda$ qui est alternee, alors $\forall i\neq j$ 
+\[ 
+	\Lambda( v_1, \ldots, v, \ldots, v, \ldots v_n) 
+\]
+Donc
+\[ 
+	2\Lambda( v_1,\ldots, v \ldots, v, \ldots ) = 0
+\]
+Donc
+\[ 
+	\Lambda( v_1, \ldots, v, \ldots, v, \ldots, v_n) = 0
+\]
+Plus generalement, si la famille
+\[ 
+\left\{ v_1, \ldots, v_n \right\} 
+\]
+est liee alors
+\[ 
+	\Lambda( v_1, \ldots, v_n) =0
+\]
+Si la famille est liee, un des vecteurs s'exprime en fonction des autres.\\
+Supposons que c'est $v_n$.\\
+Alors
+\[ 
+v_n = \sum \lambda_i v_i
+\]
+Donc
+\[ 
+	\Lambda( v_1, \ldots, v_n) = \lambda_1 \Lambda( v_1, \ldots, v_1) + \ldots + \lambda_{n-1}  \Lambda( v_1, \ldots, v_{n-1} )= 0
+\]
+Si $n>d$, toute famille $ \left\{ v_1, \ldots, v_n \right\} $de $n$ vecteurs dans un espace de $\dim d< n$ est liee et donc 
+\[ 
+	\Lambda( v_1, \ldots, v_n) =0
+\]
+Cas $d=n$.\\
+On va montrer que $\dim Alt^{( d )}( V,K) \leq 1$.\\
+Comme $\Lambda$ est multilineaire,
+\[ 
+	\Lambda = \sum_{j_1=1} \ldots \sum_{j_d=1} \Lambda( e_{j_1} , \ldots, e_{j_d} ) e_{j_1} ^{*}\otimes \ldots \otimes e_{j_d} ^{*}
+\]
+Si pour  $l, l'\leq d$, on a 
+\[ 
+j_{l} = j_{l'} \Rightarrow e_{j_l} = e_{j_l'} 
+\]
+et comme la forme est alternee
+\[ 
+	\Lambda( \ldots, e_{j_l} , \ldots, e_{j_{ l' }} , \ldots)=0
+\]
+Donc les seuls termes non nuls de la decomposition precedente sont ceux tels que $j_1\neq j_2\neq \ldots$ et donc les coefficients sont des $\lambda( e_1, \ldots, e_d) $ et des permutations de ces vecteurs.\\
+La forme $\Lambda$ est determinee des qu'on connait la valeur de 
+\[ 
+	\Lambda( e_1, \ldots, e_d) \in K
+\]
+Donc 
+\[ 
+	\dim Alt^{( d) }( V,K) \leq 1
+\]
+Pour montrer que $\dim Alt^{d}( V;K) =1$, il suffit de construire une forme alternee en $d$ variables qui est $\neq 0$.\\
+
+\end{proof}
+
+Soit $\sigma$ une permutation, on note alors $\Lambda_{|\sigma} $est la forme lineaire associee a la permutation des index.
+
+\begin{propo}
+	Pour tou $\sigma \in S_{n} $l'application $\bullet_{|\sigma} $ definit un endomorphisme du $K-ev$ $Mult^{n}( V;K) $.\\
+	L'application
+	\[ 
+	\sigma \in S_n \mapsto \bullet_{|\sigma} 
+	\]
+	verifie
+	\[ 
+	\forall \Lambda, \Lambda_{|Id_n} = \Lambda
+	\]
+	$\forall \Lambda, \forall \sigma\tau \in S_n$, on a 
+	\[ 
+		\Lambda_{|\sigma\circ\tau} = ( \Lambda_{|\tau} )_{\sigma} 
+	\]
+	
+\end{propo}
+\begin{proof}
+	\begin{align*}
+	&\Lambda_{|\sigma\circ\tau} ( v_1, \ldots, v_n) \\
+	&=\Lambda( v_{\sigma( \tau( 1) ) }, \ldots ) 
+	\end{align*}
+	De meme
+	\begin{align*}
+	\bullet_{|\sigma} ( \bullet_{|\tau} ( \Lambda) ) ( v_1, \ldots) \\
+	= \Lambda_\sigma ( v_{\tau( 1) } ,\ldots,) \\
+	= \Lambda( v_{\sigma( \tau( 1) ) }, \ldots ) 
+	\end{align*}
+	
+
+\end{proof}
+\begin{thm}
+	Les formes multilineaires alternees $Alt^{n}( V;K) $ sont exactement les formes multilineaires verifiant $\forall \sigma \in S_n \Lambda_{|\sigma} = sgn( \sigma) \Lambda$
+\end{thm}
+\begin{proof}
+	Pour les formes alternees, si $\Lambda$ verifie $\forall \sigma \Lambda_{|\sigma} = sgn( \sigma)\Lambda$, en particulier si $\sigma= \tau_{ij} 	$est la transposition qui permute $i$ et $j$ sa signature vaut $-1$.\\
+Reciproquement si $\forall i \neq j$ 
+\[ 
+\Lambda_{|_{\tau_{ij} } } = - \Lambda
+\]
+Alors $\forall \sigma \in S_n$ 
+\[ 
+\sigma = \tau_1 \circ \ldots \circ \tau_t
+\]
+Alors
+\[ 
+	\Lambda_{|\sigma} = \Lambda_{\tau_{t-1} \ldots|\tau 1} = ( -1) ^{t}\Lambda = sgn( \sigma) ( \Lambda) 
+\]
+
+
+\end{proof}
+\begin{thm}
+	Soit $K$ un corps, $( G,\cdot) $ un groupe fini, $V$ un $K$-ev de dimension finie et 
+	\[ 
+		\iota: G \mapsto GL( V) 
+	\]
+	un morphisme de groupe de $G$ vers le groupe des automorphismes de $V$. Soit
+	\[ 
+		\Xi: G \mapsto ( K^{\times}, \times) 
+	\]
+	un morphisme de $G$ vers le groupe multiplicatif de $K$. Soit $v \in V$, alors le vecteur
+	\[ 
+		v_{\Xi} = \sum_{h \in G} \Xi^{-1}( h) \iota( h) ( v) 
+	\]
+	verifie pour tout $g \in G$ 
+	\[ 
+		\iota( g) ( v_{\Xi} ) = \Xi( g) v_{\Xi} 
+	\]
+	
+\end{thm}
+\begin{proof}
+	Abus de notation: on notera $g \in G, v \in V, \quad g.v \text{ pour } \iota( g) ( v) $.\\
+	\[ 
+		v_{\Xi} = \sum_{h \in G} \Xi( h) ^{-1}. h( v) 
+	\]
+	Soit $g \in G$ 
+	\begin{align*}
+		g( v_{\Xi} ) &= g\left( \sum_{h\in G} \Xi( h) ^{-1}h( v)   \right) \\
+			     &= \sum_{h\in G} \Xi( h) ^{-1}g( h( v) ) \\
+			     &= \sum_{h \in G} \Xi( h) ^{-1}( g.h) ( v) 
+	\end{align*}
+	On pose $h'= g.h$ 
+	\begin{align*}
+		g( v_{\Xi} ) &= \sum_{h'\in G} ( \Xi( g)^{-1}\Xi( h') ) h'( v) \\
+			     &= \Xi( g) \sum_{h'\in G} \Xi( h') ^{-1}h'( v) 
+	\end{align*}
+	Donc
+	\[ 
+		g( v_{\Xi} )= \Xi( g) v_{\Xi} 
+	\]
+	
+	
+\end{proof}
+
+
+	
+
+
+
+\end{document}	

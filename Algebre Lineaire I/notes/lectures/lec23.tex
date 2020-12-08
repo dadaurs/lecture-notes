@@ -1,0 +1,87 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{23}{Tue 01 Dec}{Determinant}
+\section{Determinants}
+\subsection{Formes multilineaires}
+\begin{defn}
+Soit $V$ un $K$-espace vectoriel et $n\geq 1$ un entier. Une forme multilineaire en $n$ variables sur $V$ est une application $\Lambda$ 
+\begin{align*}
+V^{n} \mapsto K\\
+( v_1,\ldots,v_n)  \mapsto \Lambda ( v_1,\ldots,v_n) 
+\end{align*}
+
+telle que pour tout $i=1,\ldots,n$ et tous $v_j\in V$, $j\neq i$, l'application ``restricition a la $i$-ieme composante'' est lineaire.\\
+L'ensemble des formes multilineaires en $n$ variables sur $V$ est note
+\[ 
+	Mult^{( n) }( V,K)  \text{ ou bien } ( V^{*}) ^{\otimes n}
+\]
+
+
+\end{defn}
+\begin{defn}
+Soit $l_1,\ldots, l_n \in V^{*}$, on note
+\[ 
+	l_1 \otimes \ldots \otimes l_n : ( v_1, \ldots, v_n) \to l_1( v_1) \ldots l_n( v_n) 
+\]
+Le produit tensoriel des $n$ formes lineaires.
+\end{defn}
+\begin{propo}
+	L'ensemble $Mult^{( n) }( V,K) $ des formes multilineaires en $n$ variables est un $K$-espace vectoriel quand on le munit de l'addition et de la multiplication par les scaleurs usuelle pour les fonction a valeurs dans $K$.
+\end{propo}
+\begin{proof}
+exercice
+\end{proof}
+\begin{propo}
+	Soit $d=\dim V$ et $B$ une base, $B^{*}$ une base du dual. Alors $V^{*\otimes n}$ est de dimension finie egale a $d^{n}$ ; une base de $V^{*\otimes n}$ est donne par l'ensemble des formes multilineaires de la forme
+	\[ 
+	e_{j_1} ^{*}\otimes \ldots \otimes e^{*}_{j_n} \text{ quand $j_1, \ldots, j_n$ parcourent } \left\{ 1, \ldots d \right\} .
+	\]
+	On note cette base $B^{*\otimes n}$.\\
+	
+\end{propo}
+\begin{proof}
+Soit $V$ un espace vectoriel.\\
+Pour $i$ un indice entre 1 et $n$, $v_i$.\\
+\[ 
+	\Lambda( v_1, \ldots, v_i, \ldots , v_n) 
+\]
+On a 
+\[ 
+	v_i = \sum_{j=1}^{ d}x_{ij} e_j = \sum e_{j} ^{*}( v_i) e_j
+\]
+On a donc
+\begin{align*}
+	\Lambda( v_1, \ldots, v_n) &= \Lambda\left( \sum e_j^{* }( v_1) e_j, \ldots\right) \\
+				   &= \sum_{j_1=1}^{d } \ldots \sum_{j_n=1}^{ d} \Lambda( e_{j_1} , \ldots, e_{j_d} ) \times  e^{*}_{j_1} ( v_1) . \ldots . e_{j_n} ^{*}( v_n) \\
+				   &= \sum_{( j_1, \ldots, j_n) \in \left\{ 1,\ldots, d \right\}  } \Lambda( e_{j_1} , \ldots, e_{j_d} ) e_{j_1} ^{*}\otimes \ldots \otimes e_{j_d} ^{*}( v_1,\ldots, v_n) 
+\end{align*}
+Donc, la famille des formes multilineaires
+\[ 
+	\left\{ e_{j_1} ^{*}\otimes \ldots \otimes e_{j_n} ^{*} ( j_1, \ldots, j_n) \in [ 1,\ldots, d] 	  \right\} 
+\]
+est generatrice de $V^{*\otimes n}$.\\
+Montrons que la famille est libre.\\
+Soient $\lambda_{j_1 \ldots j_n	} \in K	 $ et supposons que 
+\[ 
+\sum_{j_1=1}^{ d}\ldots \sum_{j_n=1}^{ d} \lambda_{j_1\ldots j_n} e_{j_1} ^{*}\otimes \ldots \otimes e_{j_n} ^{*} = 0
+\]
+Prenons 
+\[ 
+	( v, e_1, e_1, \ldots , e_1)
+\]
+Alors
+\[ 
+	\Lambda	( v, e_1, e_1, \ldots , e_1) = \sum_{j_1=1}^{ d}\lambda_{j_1, 1,1 1,1} e_{j_1} ^{*}( v) = 0
+\]
+On a une expression d'une forme lineaire 
+\[ 
+	v \to \sum_{j_1=1}^{d } \lambda_{j_1, 1,\ldots, 1} e_{j_1} ^{*}( v) =0
+\]
+En changeant les vecteurs de toutes les manieres possibles, on deduit que tous les coefficients sont nuls.
+\end{proof}
+
+
+
+
+
+\end{document}	

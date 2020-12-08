@@ -1,0 +1,111 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{22}{Mon 30 Nov}{Integrales}
+\subsection{Deux P.S sur $\exp$}
+But: definir $x^{y}$ $\forall x y \in \mathbb{R} ( x \geq 0) $ \\
+Compatible avec $x^{n}= x x \ldots x$ et compatible avec les regles concernant $x^{n}$ :
+\begin{align*}
+x^{n+m} = x^{n} x^{m}\\
+( x^{n} )^{m} = x^{nm}
+\end{align*}
+\begin{defn}
+Pour $x>0$ et $y \in \mathbb{R}$ quelconque, on pose 
+\[ 
+	x^{y} = \exp ( y \log x ) 
+\]
+
+\end{defn}
+\begin{rmq}
+	\begin{enumerate}
+		\item $\log$ est definit pour $x>0$, car $\exp$ est une bijection de $\mathbb{R} \to \mathbb{R}_+ ^{*}$ 
+		\item Cette definition satisfait nos contraintes.\\
+			P. ex.: $n \in \mathbb{N}$ 
+			\[ 
+				n \in \mathbb{N}, \exp ( n \log x) = \exp ( \log x + \ldots + \log x) = \exp( \log x)\ldots \exp( \log x) = x^{n} 
+			\]
+	
+	\end{enumerate}
+	
+\end{rmq}
+On definit les fonctions trigonometriques hyperboliques par
+\[ 
+	\sinh ( x)  = \frac{e^{x}- e^{-x}}{2}
+\]
+et
+\[ 
+	\cosh ( x) = \frac{e^{x}+ e^{-x}}{2}
+\]
+
+\begin{exo}
+Quelle est la serie entiere qui definit ca?
+\end{exo}
+\begin{propo}
+	Supposons que $f$ ( soit derivable et) satisfasse $f'= f'$.\\
+	Alors $f( x) = c \exp x$ ( avec $c=f( 0) $) .
+\end{propo}
+\begin{proof}
+	Posonns $g( x) = f( x) e^{-x} $\\
+	Alors $g$ est derivable et
+	\[ 
+		g'( x) = f'( x) e^{-x} - f( x) e^{-x} =0
+	\]
+	
+	On sait que $g$ est constantem donc $f( x) = c \exp x$.
+\end{proof}
+
+\section{Integration}
+But: Calculer et definir des aires ( = surfaces) , puis volumes, hypervolumes, etc.\\
+Rapport avec la derivation ( thm. fondamental de l'analyse).
+
+\begin{defn}[Subdivisions]
+	Considerons l'intervalle $[a,b]$, avec $a< b$ et $f: [ a,b]  \to \mathbb{R}$.\\
+	Une subdivision $\sigma$ de $[a,b]$ est une suite finie $x_0, x_1, \ldots, x_n$, tel que
+	\[ 
+	x_0=a < x_1 < x_2 \ldots < x_n = b
+	\]
+	
+\end{defn}
+\begin{defn}[Somme de Darboux inferieure]
+La somme de Darboux inferieure associee a $f$ et $\sigma$ est
+\[ 
+	\underline{S}_{\sigma} ( f)  = \sum_{i=1}^{ n}m_i ( x_i - x_{i-1} ) 
+\]
+avec 
+\[ 
+	m_i = \inf \left\{ f( x)  | x \in [ x_{i-1} ,x_i]  \right\} 
+\]
+Defini pour toute fonction $f$ bornee sur $[ a,b]$.
+\end{defn}
+$\underline{S}_{\sigma} ( f)$	est une tentative ( a priori trop petite) de definir l'aire determinee par $f$ sur $ [ a,b] $.
+
+\begin{defn}[Somme de Darboux superieure]
+La somme de Darboux inferieure associee a $f$ et $\sigma$ est
+\[ 
+	\overline{S}_{\sigma} ( f)  = \sum_{i=1}^{ n}M_i ( x_i - x_{i-1} ) 
+\]
+avec 
+\[ 
+	M_i = \sup \left\{ f( x)  | x \in [ x_{i-1} ,x_i]  \right\} 
+\]
+Defini pour toute fonction $f$ bornee sur $[ a,b]$.
+\end{defn}
+\begin{defn}
+	 \[ 
+		 \underline{S}( f) = sup \left\{ \underline{S}_{\sigma} ( f)  \right\} 
+	\]
+	\[ 
+		 \overline{S}( f) = sup \left\{ \overline{S}_{\sigma} ( f)  \right\} 
+	\]
+	
+	
+\end{defn}
+\begin{defn}
+	La fonction $f$ est dite integrable sur $[a,b]$, si $\underline{S}( f) = \overline{S}( f) $.
+\end{defn}
+L'integrale de $f$ sur $[a,b]$, note $ \int_{ a }^{ b } f$ est alors ce nombre $\underline{S}( f) = \overline{S}( f)$
+
+
+
+
+
+\end{document}	

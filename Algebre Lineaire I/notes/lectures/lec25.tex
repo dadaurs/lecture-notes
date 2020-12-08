@@ -1,0 +1,156 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{25}{Tue 08 Dec}{Determinant d'une matrice}
+\begin{crly}
+Soit $\Lambda$ une forme multilineaire en $n$ variables sur $V$, alors
+\[ 
+	\Lambda_{sgn} = \sum_{\sigma\in S_n} sgn( \sigma) \Lambda_{|\sigma} 
+\]
+est alternee.
+\end{crly}
+\begin{thm}
+	L'espace $Alt^{d}( V;K) $ est de dimension 1 exactement et on a 
+	\[ 
+		Alt^{d}( V;K) = K ( e_1^{*}\otimes \ldots \otimes e_d^{*}) _{sgn} 
+	\]
+	
+\end{thm}
+\begin{proof}
+	Soit 
+	\[ 
+	\Lambda= e_1^{*}\otimes \ldots \otimes e_d^{*}
+	\]
+	et $\Lambda_{|sgn} $ la forme correspondante symmetrisee.\\
+	Montrons qu'elle est non nulle.
+	On montre deux methodes.
+	 Calculons
+		\begin{align*}
+			\Lambda_{|sgn} ( e_1, \ldots, e_d) = \sum_{\sigma\in S_n} sgn( \sigma) e_{\sigma( 1) } ^{*}( e_1) \ldots e_{\sigma( d) } ^{*}( e_d) \\
+			&= sgn( \id)
+		\end{align*}
+		Donc la forme est non-nulle.
+	
+
+\end{proof}
+\begin{defn}
+	La forme alternee $( e_1^{*}\otimes \ldots \otimes e_d^{*}) $ est appellee le determinant de $V$ relatif a la base $B= \left\{ e_1, \ldots, e_d \right\} $ et est notee $\det_B$. C'est l'unique forme lineaire alternee satisfaisant
+	\[ 
+		\Lambda( e_1, \ldots, e_d) = 1
+	\]
+	
+\end{defn}
+\begin{propo}
+On a la formule suivante
+\[ 
+	det_B( v_1, \ldots, v_d) = \sum_{\sigma\in S_d} sgn( \sigma) \prod_{i=1}^{d}x_{i\sigma( 1) } = \sum_{\sigma \in S_d} x_{1\sigma( 1) } \ldots x_{d\sigma( d) } 
+\]
+ 
+\end{propo}
+\begin{proof}
+	 \begin{align*}
+		 det_B( v_1, \ldots, v_d) 
+		 = \sum_{\sigma\in S_d} sgn( \sigma) e_{\sigma( 1) } ^{*}\ldots
+	\end{align*}
+\end{proof}
+Soit $\phi:  V \to V$ et $\phi^{*}( \Lambda) \in Alt^{n}( V;K) $
+tel que
+\[ 
+	\phi^{*}( \Lambda) ( v_1, \ldots, v_n) = \Lambda( \phi( v_1) , \ldots) 
+\]
+\begin{defn}
+Le determinant de $\phi$ est le scalaire verifiant
+\[ 
+	\phi^{*}( det_B) = det( \phi) det_B
+\]
+
+\end{defn}
+\begin{thm}
+	Soit $\phi:V \to V$ un endomorphisme. Pour tout $\Lambda\in Alt^{d}( V,K)$, on a
+	\[ 
+		\phi^{*}( \Lambda) = det( \phi) \Lambda
+	\]
+	En particulier $det( \phi) $ ne depend pas du choix de la base $B$.\\
+	L'application $det$ a les proprietes suivantes
+	\begin{enumerate}
+	\item Homogeneite: soit $\lambda\in K$, alors
+		\[ 
+			det( \lambda\phi) = \lambda^{d}det( \phi) 
+		\]
+		
+	\item Multiplicativite: on a
+		\[ 
+			det( \psi\circ\phi) = det( \phi) det( \psi) 
+		\]
+		
+	\item Critere d'inversibilite: on a
+		\[ 
+			det( \phi) \neq 0 \iff \phi \in GL( V) 	
+		\]
+		
+	\item Morphisme: L'application 
+		\[ 
+			det: GL( V)  \to K^{\times}
+		\]
+		est un morphisme de groupes. En particulier $det( Id_V) =1$.
+	\end{enumerate}
+	
+\end{thm}
+\begin{proof}
+	Soit $\Lambda \in Alt^{d}( V;K) $, alors $\Lambda = \lambda det_B$.\\
+	On a 
+	\[ 
+		\phi^{*}(\Lambda ) = \phi^{*}( \lambda det_B) = \lambda \phi^{*}( det_B) 
+	\]
+	
+De meme
+\begin{align*}
+	\phi^{*}( \lambda det_B) ( v_1, \ldots, v_d ) = \lambda det( \phi( v_1) , \ldots) 
+\end{align*}
+\begin{enumerate}
+\item 
+	\begin{align*}
+		&det( \lambda \phi) \\
+		&= ( \lambda. \phi) ^{*}( \Lambda) ( v_1, \ldots) \\
+		&= \lambda^{d} \phi^{*}( \Lambda) ( v_1, \ldots)\\
+		&= \lambda^{d}det( \phi) \Lambda( v_1, \ldots) 
+	\end{align*}
+
+\item Soit $\Lambda \in Alt^{( d) }( V;K) $.
+	\begin{align*}
+		( \psi \circ \phi) ^{*}( \Lambda) = det( \psi \circ \phi) \Lambda\\
+		= \Lambda( \psi\circ \phi(v_1 ) ,\ldots) \\
+		= \psi^{*}( \Lambda) ( \phi( v_1) ,\ldots) \\
+		= det \psi \Lambda( \phi( v_1) , \ldots) \\
+		= det \psi det \phi \Lambda( v_1, \ldots) 
+	\end{align*}
+	
+\item Si $\phi$ est inversible
+	\[ 
+	\phi \circ \phi^{-1}= \id
+	\]
+	Donc
+	\[ 
+	det \phi \circ \phi^{-1} = 1 
+	\]
+	Donc $det \phi \neq 0$.
+
+\item Si $det \phi \neq 0$.\\
+	On va montrer que si $\phi$ n'est pas inversible $det \phi = 0 $.\\
+	Si  $ \left\{ \phi( e_1) , \ldots \right\} $ est liee, donc 
+	\begin{align*}
+		det_B ( \phi( e_1) , \ldots) = 0
+	\end{align*}
+	
+\item Morphisme resulte du critere d'inversibilite et de multiplicativite.
+	
+\end{enumerate}
+
+\end{proof}
+
+
+
+
+	
+
+
+\end{document}	

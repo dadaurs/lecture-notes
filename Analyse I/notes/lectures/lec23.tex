@@ -1,0 +1,135 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{23}{Wed 02 Dec}{Intuition derriere l'integration}
+\begin{propo}
+Soient $\sigma$ et $\tau$ deux subdivisions avec $\sigma \subseteq \tau$.\\
+Alors
+\[ 
+	\overline{S}_\sigma( f) \geq \overline{S}_\tau( f) 
+\]
+et 
+\[ 
+	\underline{S}_\sigma( f) \leq \underline{S}_\tau( f) 
+\]
+
+\end{propo}
+\begin{proof}
+Par recurrence, il suffit de considerer le cas ou $\tau$ a un point de plus que $\sigma$.\\
+En enumerant $\tau$ $x_0= a< x_1< x_2 < \ldots <x_{n+1} =b$.\\
+Posons que $\sigma$ ne possede pas $x_i$.\\
+Pour calculer $\overline{S}_\tau( f) $, on introduit
+\[ 
+	M_j = \sup \left\{ f( x) : x \in [ x_{j-1} , x_j]  \right\} 
+\]
+Pour la somme superieur de  $\sigma$, on pose
+\[ 
+M'_j = M_j \forall j \leq i-1
+\]
+et
+\[ 
+	M'_i = \sup \left\{ f( x) | x \in [ x_{i-1} , x_{i+1} ]  \right\} = \max ( M_i, M_{i+1}   ) 
+\]
+Donc
+\[ 
+	\overline{S}_\sigma( f)= \sum_{j=1}^{ i-1} M_{j}' ( x_i -x_{i-1} ) + \max ( M+_i , M_{i+1} ) ( x_{i+1} - x_{i-1} ) + sum M_{j} ( x_{j} - x_{j-1} ) 
+\]
+Le terme au milieu est plus grand ou egal au terme correspondant de la somme pour $\tau$.
+
+
+
+\end{proof}
+\begin{crly}
+$\forall \sigma, \tau$, on a
+\[ 
+	\overline{S}_\sigma( f) \geq \underline{S}_\tau( f) 
+\]
+
+\end{crly}
+\begin{proof}
+$\sigma,\tau\subseteq \sigma\cup \tau$.\\
+La proposition implique que
+\[ 
+	\overline{S}_\sigma( f) \geq \overline{S}_{\sigma\cup\tau} ( f) \geq \underline{S}_{\sigma\cup\tau} ( f) \geq \underline{S}_\tau( f) 
+\]
+
+\end{proof}
+En conclusion
+\[ 
+	f \text{ integrable } \iff \forall \epsilon >0 \exists \sigma \overline{S}_\sigma( f) < \underline{S}_\sigma( f) + \epsilon
+\]
+
+\begin{thm}
+Toute fonction continue est integrable sur un intervalle ferme.
+\end{thm}
+\begin{proof}
+Soit $\epsilon>0$. On cherche $n \in \mathbb{N}$ et $x_0= a < x_1< \ldots < x_n=b$ une subdivision $\sigma$ tel que
+\[ 
+	\overline{S}_\sigma( f) <\underline{S}_\sigma( f) + \epsilon
+\]
+On sait que $f$ est uniformement continue et bornee.\\
+Donc $\exists \delta>0 \forall x, y \in [ a,b]: |x-y|< \delta \Rightarrow |f( x) - f( y) |< \frac{\epsilon}{( b-a)}$ .\\
+Choisissons $\sigma$ tel que $\forall i=1,\ldots,n$ $x_i - x_{i-1} <\delta$.\\
+Alors $f$ varie au plus de $\frac{\epsilon}{(  b-a) }$ sur $[x_{i-1} ,x_i]$.\\
+Donc $M_i - m_i \leq \frac{\epsilon}{b-a}\forall i$. Donc
+\[ 
+	\overline{S}_\sigma( f) - \underline{S}_\sigma( f) = \sum_{i=1}^{ n}( M_i-m_i) ( x_i - x_{i-1} ) \leq \epsilon
+\]
+\end{proof}
+
+\begin{thm}
+	Soit $f$ integrable sur $[a,b]$ ( $f$ borne) .\\
+	Si $\tilde f$ coincide avec $f$ sauf en un point $c\in [ a,b] $, alors $\tilde f$ est ausi integrable et $\int \tilde f = \int f$.
+\end{thm}
+\begin{proof}
+Donc il suffit de montrer:
+\[ 
+	\forall \sigma \forall \epsilon>0 \exists \tau\supseteq \sigma: \overline{S}_\tau( \tilde f) < \overline{S}_\tau( f) + \epsilon
+\]
+On ajoute deux points a $\sigma$ pour obtenir $\tau$ tel que $c\in [ x_{i-1} ,x_i] $ avec $x_i - x_{i-1} < \delta$ pour $\delta= \frac{\epsilon}{|f( c) - \tilde f ( c) }$.\\
+Alors
+\[ 
+	|	\overline{S}_\tau( f) - \overline{S}_\tau( \tilde f) | = |M_i - \tilde M _i|( x_i - x_{i-1} ) \leq |\tilde f ( c) - f( c) | \delta < \epsilon
+\]
+
+\end{proof}
+\begin{crly}
+	Si $f$ est continue sauf en un nombre fini de points, $f$ est integrable.
+\end{crly}
+\begin{defn}
+	La finesse ( ou maille) de $\sigma$ est $h( \sigma) = \max \left\{ ( x_i - x_{i-1} ) : i = 1, \ldots, n \right\} $
+\end{defn}
+\begin{defn}
+	Soit $\sigma$ une subdivision de $[a,b]$ et soit $\xi_i \in [ x_{i-1} ,x_i] \forall i$.\\
+	La somme de Riemann associee a ce choix est 
+	\[ 
+		R= \sum_{i=1}^{ n}f( \xi_i) ( x_i- x_{i-1} ) 
+	\]
+	
+\end{defn}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

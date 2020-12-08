@@ -1,0 +1,54 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Tue 01 Dec}{Groupe des Quaternions}
+\begin{lemma}
+	$H \leq G$, et $G$ fini.\\
+	Avec $[G:H]=2$, alors $H\trianglelefteq G$.
+\end{lemma}
+\begin{proof}
+L'hhypothese implique
+\[ 
+|G\setminus H| = |H|
+\]
+Donc
+\[ 
+gH \text{ ou } Hg \subseteq G \setminus H
+\]
+Donc $gH = Hg = G \setminus H$
+\end{proof}
+\begin{rmq}
+$Q_8$ est presque abelien, car il contient un sous-groupe normal abelien.\\
+En effet, $\eng{i}=H$ est un sous-groupe est $[Q_8:H] = 2$.\\
+\[ 
+H \trianglelefteq Q_8 \Rightarrow Q_8 / H \simeq \frac{\mathbb{Z}}{2\mathbb{Z}}
+\]
+	
+\end{rmq}
+\subsection{Sous-groupes de $G=GL( n,k) $}
+\begin{enumerate}
+\item Le centre forme un sous-groupe de $G$, on montre que les matrices sont les matrices diagonales.
+\item Le groupe $PGL( n,K) = GL( n,K) / Z( GL( n,K) ) $ 
+\item $B( n,K) $ sous-groupe standard de Borel $\leq GL( n,K) $, l'ensemble des matrices triangulaire superieures.
+\item $U( n,K) \subseteq B( n,K) $, est le sous-groupe unipotent standard, avec $1$ dans la diagonale.
+\item $N_{GL( 2,K) } T( 2,K) = \left\{ 
+	\begin{pmatrix}
+		a & 0\\
+		0 & b
+	\end{pmatrix}
+	\right\}  $	
+\item $Z( GL( n,K) ) \trianglelefteq GL( n,K) $ et considerons
+	\[ 
+		Z( GL( n,K) ) \cap SL( n,K) \leq SL( n,K) 
+	\]	
+	\begin{lemma}
+	$F,H \leq G$ et $F \trianglelefteq G$, alors
+	\[ 
+	F\cap H \leq G
+	\]
+	
+	\end{lemma}
+	
+\end{enumerate}
+
+
+\end{document}	

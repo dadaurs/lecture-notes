@@ -1,0 +1,33 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <iomanip>
+
+using namespace std;
+
+
+int main(){
+	string nom_fich="data.dat";
+ifstream fich;
+fich.open(nom_fich);
+if(fich.fail()){
+	cout<<"Misere"<<endl;
+	return 0;
+}
+string nom;
+int age;
+int somme_age=0;
+int nbpersonnes=0;
+vector<int> ages;
+
+while(fich>>nom>>age){
+	somme_age+=age;
+	nbpersonnes++;
+
+}
+cout<<somme_age<<endl;
+cout<<nbpersonnes;
+
+fich.close();
+return 0;
+}

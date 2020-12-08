@@ -11,11 +11,13 @@ $\\times$: Produit cartesien	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subs
 1	Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{1}$/;"	s
 1	Algebre Lineaire I/Exos/S5/Ex3.tex	/^\\section*{1}$/;"	s
 1	Structures Algebriques/Devoirs/S10/sol.tex	/^\\section*{1}$/;"	s
+1	Structures Algebriques/Devoirs/S12/sol.tex	/^\\section*{1}$/;"	s
 1	Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{1}$/;"	s
 1	Structures Algebriques/Devoirs/S6/sol.tex	/^\\section*{1}$/;"	s
 1	Structures Algebriques/Devoirs/S7/sol.tex	/^\\section*{1}$/;"	s
 1	Structures Algebriques/Devoirs/S8/sol.tex	/^\\section*{1}$/;"	s
 1	current-course/Devoirs/S10/sol.tex	/^\\section*{1}$/;"	s
+1	current-course/Devoirs/S12/sol.tex	/^\\section*{1}$/;"	s
 1	current-course/Devoirs/S3/sol.tex	/^\\section*{1}$/;"	s
 1	current-course/Devoirs/S6/sol.tex	/^\\section*{1}$/;"	s
 1	current-course/Devoirs/S7/sol.tex	/^\\section*{1}$/;"	s
@@ -28,11 +30,13 @@ $\\times$: Produit cartesien	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subs
 2	Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{2}$/;"	s
 2	Algebre Lineaire I/Exos/S5/Ex3.tex	/^\\section*{2}$/;"	s
 2	Structures Algebriques/Devoirs/S10/sol.tex	/^\\section*{2}$/;"	s
+2	Structures Algebriques/Devoirs/S12/sol.tex	/^\\section*{2}$/;"	s
 2	Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{2}$/;"	s
 2	Structures Algebriques/Devoirs/S6/sol.tex	/^\\section*{2}$/;"	s
 2	Structures Algebriques/Devoirs/S7/sol.tex	/^\\section*{2}$/;"	s
 2	Structures Algebriques/Devoirs/S8/sol.tex	/^\\section*{2}$/;"	s
 2	current-course/Devoirs/S10/sol.tex	/^\\section*{2}$/;"	s
+2	current-course/Devoirs/S12/sol.tex	/^\\section*{2}$/;"	s
 2	current-course/Devoirs/S3/sol.tex	/^\\section*{2}$/;"	s
 2	current-course/Devoirs/S6/sol.tex	/^\\section*{2}$/;"	s
 2	current-course/Devoirs/S7/sol.tex	/^\\section*{2}$/;"	s
@@ -43,19 +47,28 @@ $\\times$: Produit cartesien	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subs
 2.2.2	Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{2.2.2}$/;"	s
 2.2.3	Introduction a la programmation/ARendre/S2/sol.tex	/^\\subsection*{2.2.3}$/;"	u	section:2.2.2
 2.3.1	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{2.3.1}$/;"	s
+2.3.2	Introduction a la programmation/ARendre/S3/sol.tex	/^\\section*{2.3.2}$/;"	s
+2.3.3	Introduction a la programmation/ARendre/S3/sol.tex	/^\\section*{2.3.3}$/;"	s
+2.4.1	Introduction a la programmation/ARendre/S3/sol.tex	/^\\section*{2.4.1}$/;"	s
+2.4.2	Introduction a la programmation/ARendre/S3/sol.tex	/^\\section*{2.4.2}$/;"	s
+2.4.3	Introduction a la programmation/ARendre/S3/sol.tex	/^\\section*{2.4.3}$/;"	s
 2eme loi et theoreme du moment cinétique	Mecanique Generale/notes/lectures/lec9.tex	/^\\subsection{2eme loi et theoreme du moment cinétique}$/;"	u	section:Gravitation, Moment Cinétique
 3	Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{3}$/;"	s
 3	Algebre Lineaire I/Exos/S5/Ex3.tex	/^\\section*{3}$/;"	s
 3	Structures Algebriques/Devoirs/S10/sol.tex	/^\\section*{3}$/;"	s
+3	Structures Algebriques/Devoirs/S12/sol.tex	/^\\section*{3}$/;"	s
 3	Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{3}$/;"	s
 3	Structures Algebriques/Devoirs/S8/sol.tex	/^\\section*{3}$/;"	s
 3	current-course/Devoirs/S10/sol.tex	/^\\section*{3}$/;"	s
+3	current-course/Devoirs/S12/sol.tex	/^\\section*{3}$/;"	s
 3	current-course/Devoirs/S3/sol.tex	/^\\section*{3}$/;"	s
 3	current-course/Devoirs/S8/sol.tex	/^\\section*{3}$/;"	s
 3.1	Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{3.1}$/;"	s
 3.2	Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{3.2}$/;"	s
 4	Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{4}$/;"	s
+4	Structures Algebriques/Devoirs/S12/sol.tex	/^\\section*{4}$/;"	s
 4	Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{4}$/;"	s
+4	current-course/Devoirs/S12/sol.tex	/^\\section*{4}$/;"	s
 4	current-course/Devoirs/S3/sol.tex	/^\\section*{4}$/;"	s
 4.1	Algebre Lineaire I/Exos/S2/Ex4/sol.tex	/^\\section*{4.1}$/;"	s
 4.1	Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{4.1}$/;"	s
@@ -116,6 +129,8 @@ Couleur	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^enum Co
 Definir $\\mathbb{R}$	Analyse I/notes/lectures/lec1.tex	/^\\section{Definir $\\mathbb{R}$}$/;"	s
 Definition formelle des algorithmes	Introduction a la programmation/notes/lectures/lec4.tex	/^\\section{Definition formelle des algorithmes}$/;"	s
 Description des rotations spatiales	Mecanique Generale/notes/lectures/lec5.tex	/^\\section{Description des rotations spatiales}$/;"	s
+Determinants	Algebre Lineaire I/notes/lectures/lec23.tex	/^\\section{Determinants}$/;"	s
+Deux P.S sur $\\exp$	Analyse I/notes/lectures/lec22.tex	/^\\subsection{Deux P.S sur $\\exp$}$/;"	u	section:Series Entieres
 Dichotomie	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Dichotomie}$/;"	u	section:Definition formelle des algorithmes
 Dynamique du point materiel	Mecanique Generale/notes/lectures/lec4.tex	/^\\section{Dynamique du point materiel}$/;"	s
 Déduction de la force de Gravitation en $\\frac{1}{r^{2}}$	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Déduction de la force de Gravitation en $\\frac{1}{r^{2}}$}$/;"	u	section:Gravitation, Moment Cinétique
@@ -124,6 +139,7 @@ Echelonage	Algebre Lineaire I/notes/lectures/lec21.tex	/^\\subsection{Echelonage
 Elément inversible	Algebre Lineaire I/notes/lectures/lec6.tex	/^\\subsection{Elément inversible}$/;"	u	section:Anneaux
 Energie potentielle	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Energie potentielle}$/;"	u	section:Travail, énergie, forces conservatives
 Energie potentielle gravifique	Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Energie potentielle gravifique}$/;"	u	section:Gravitation, Moment Cinétique
+Engendrement du groupe lineaire	Algebre Lineaire I/notes/lectures/lec22.tex	/^\\subsection{Engendrement du groupe lineaire}$/;"	u	section:Operations Elementaires Sur Les Matrices
 Ensembles	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Ensembles}$/;"	u	section:Le language des Ensembles
 Ensembles	Structures Algebriques/notes/lectures/lec1.tex	/^\\subsection{Ensembles}$/;"	u	section:Preuves
 Ensembles	current-course/notes/lectures/lec1.tex	/^\\subsection{Ensembles}$/;"	u	section:Preuves
@@ -133,11 +149,13 @@ Espaces d'applications linéaires	Algebre Lineaire I/notes/lectures/lec13.tex	/^
 Espaces vectoriels de dimension infinie	Algebre Lineaire I/notes/lectures/lec12.tex	/^\\subsection{Espaces vectoriels de dimension infinie}$/;"	u	section:Espaces Vectoriels
 Etude de cas	Introduction a la programmation/notes/lectures/lec3.tex	/^\\section{Etude de cas}$/;"	s
 Examen	Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^typedef vector<qcm> Examen;$/;"	t	typeref:typename:vector<qcm>	file:
+Examen	Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^typedef vector<qcm> Examen;$/;"	t	typeref:typename:vector<qcm>	file:
 Exemple d'utilisation	Analyse I/notes/lectures/lec2.tex	/^\\subsection{Exemple d'utilisation}$/;"	u	section:3
 Exemple de loi physique: l'addition des vitesse	Mecanique Generale/notes/lectures/lec1.tex	/^\\subsection{Exemple de loi physique: l'addition des vitesse}$/;"	u	section:Physique
 Exemples	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{Exemples}$/;"	b	subsection:Le language des Ensembles""Ensembles
 Exercice	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{ Exercice }$/;"	b	subsection:Le language des Ensembles""$\\mathcal{P}(E)$ l'ensemble des sous-ensembles
 Expression	Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{Expression}$/;"	u	section:Etude de cas
+Extraction d'une base	Algebre Lineaire I/notes/lectures/lec22.tex	/^\\subsection{Extraction d'une base}$/;"	u	section:Operations Elementaires Sur Les Matrices
 Famille Libre	Algebre Lineaire I/notes/lectures/lec11.tex	/^\\subsection{Famille Libre}$/;"	u	section:Espaces Vectoriels
 Familles génératrices	Algebre Lineaire I/notes/lectures/lec10.tex	/^\\subsection{Familles génératrices}$/;"	u	section:Espaces Vectoriels
 Fonctions	Analyse I/notes/lectures/lec8.tex	/^\\section{Fonctions}$/;"	s
@@ -147,8 +165,10 @@ Forces conservatives	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{F
 Forces de Frottement	Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Forces de Frottement}$/;"	u	section:Travail, énergie, forces conservatives
 Forces de frottement sec	Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Forces de frottement sec}$/;"	u	section:Travail, énergie, forces conservatives
 Formalisation d'algorithmes	Introduction a la programmation/notes/lectures/lec2.tex	/^\\subsection{Formalisation d'algorithmes}$/;"	u	section:Algorithmes
+Formes Symmetriques/Alternees	Algebre Lineaire I/notes/lectures/lec24.tex	/^\\subsection{Formes Symmetriques\/Alternees}$/;"	u	section:Determinants
 Formes linéaires	Algebre Lineaire I/notes/lectures/lec13.tex	/^\\subsection{Formes linéaires}$/;"	u	section:Espaces Vectoriels
 Formes linéaires et dualité	Algebre Lineaire I/notes/lectures/lec13.tex	/^\\subsection{Formes linéaires et dualité}$/;"	u	section:Espaces Vectoriels
+Formes multilineaires	Algebre Lineaire I/notes/lectures/lec23.tex	/^\\subsection{Formes multilineaires}$/;"	u	section:Determinants
 Graphe	Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{Graphe}$/;"	b	subsection:Le language des Ensembles""Applications entre ensembles
 Gravitation, Moment Cinétique	Mecanique Generale/notes/lectures/lec8.tex	/^\\section{Gravitation, Moment Cinétique}$/;"	s
 Grille	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^typedef  array<array<Couleur,7>,6> Grille;$/;"	t	typeref:typename:array<array<Couleur,7>,6>	file:
@@ -174,6 +194,7 @@ Injection de $\\mathbb{Q} \\to \\mathbb{N}$	current-course/Devoirs/S3/sol.tex	/^
 Injectivité	Structures Algebriques/Devoirs/S3/sol.tex	/^\\subsection*{Injectivité}$/;"	u	section:1
 Injectivité	current-course/Devoirs/S3/sol.tex	/^\\subsection*{Injectivité}$/;"	u	section:1
 Instructions elementaires	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Instructions elementaires}$/;"	u	section:Definition formelle des algorithmes
+Integration	Analyse I/notes/lectures/lec22.tex	/^\\section{Integration}$/;"	s
 Interprétation du vecteur $\\omega$	Mecanique Generale/notes/lectures/lec5.tex	/^\\subsection{Interprétation du vecteur $\\omega$}$/;"	u	section:Description des rotations spatiales
 Introduction	Analyse I/notes/lectures/lec1.tex	/^\\section{Introduction}$/;"	s
 Introduction	Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsection{Introduction}$/;"	u	section:Information, Calcul et Communication
@@ -268,6 +289,7 @@ Relations d'equivalence	current-course/notes/lectures/lec2.tex	/^\\subsection{Re
 Repere direct	Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection{Repere direct}$/;"	u	section:Dynamique du point materiel
 Représentation paramétrique d'unn sev cartesienne	Algebre Lineaire I/notes/lectures/lec13.tex	/^\\subsection{Représentation paramétrique d'unn sev cartesienne}$/;"	u	section:Espaces Vectoriels
 Resolution d'une equation du second degre	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Resolution d'une equation du second degre}$/;"	u	section:Definition formelle des algorithmes
+Resolution de systemes lineaires	Algebre Lineaire I/notes/lectures/lec22.tex	/^\\subsection{Resolution de systemes lineaires}$/;"	u	section:Operations Elementaires Sur Les Matrices
 Rotations Du Solide	Mecanique Generale/notes/lectures/lec11.tex	/^\\section{Rotations Du Solide}$/;"	s
 Sequence	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^typedef  vector<int> Sequence;$/;"	t	typeref:typename:vector<int>	file:
 Series	Analyse I/notes/lectures/lec6.tex	/^\\section{Series}$/;"	s
@@ -278,9 +300,12 @@ Sous-Groupe	Algebre Lineaire I/notes/lectures/lec3.tex	/^\\section{Sous-Groupe}$
 Sous-Module	Algebre Lineaire I/notes/lectures/lec7.tex	/^\\subsection{Sous-Module}$/;"	u	section:Anneaux
 Sous-groupes	Structures Algebriques/notes/lectures/lec6.tex	/^\\subsection{Sous-groupes}$/;"	u	section:Théorie des Groupes
 Sous-groupes	current-course/notes/lectures/lec6.tex	/^\\subsection{Sous-groupes}$/;"	u	section:Théorie des Groupes
+Sous-groupes de $G=GL( n,k) $	Structures Algebriques/notes/lectures/lec12.tex	/^\\subsection{Sous-groupes de $G=GL( n,k) $}$/;"	u	section:Théorie des Groupes
+Sous-groupes de $G=GL( n,k) $	current-course/notes/lectures/lec12.tex	/^\\subsection{Sous-groupes de $G=GL( n,k) $}$/;"	u	section:Théorie des Groupes
 Sous-groupes engendres par plusieurs elements	Structures Algebriques/notes/lectures/lec10.tex	/^\\subsection{Sous-groupes engendres par plusieurs elements}$/;"	u	section:Théorie des Groupes
 Sous-groupes engendres par plusieurs elements	current-course/notes/lectures/lec10.tex	/^\\subsection{Sous-groupes engendres par plusieurs elements}$/;"	u	section:Théorie des Groupes
 SousSequence	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^struct SousSequence{$/;"	s	file:
+Statistique	Introduction a la programmation/Exos/MOOC/S9/Ex3/stats.cc	/^typedef vector<long int> Statistique;$/;"	t	typeref:typename:vector<long int>	file:
 Structures Algebriques des espaces de morphismes	Algebre Lineaire I/notes/lectures/lec8.tex	/^\\subsection{Structures Algebriques des espaces de morphismes}$/;"	u	section:Anneaux
 Structures de controle	Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Structures de controle}$/;"	u	section:Definition formelle des algorithmes
 Suites de Cauchy	Analyse I/notes/lectures/lec5.tex	/^\\subsection{Suites de Cauchy}$/;"	u	section:Limsup et liminf
@@ -319,7 +344,7 @@ Vecteurs	Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Vecteurs}$/;"	s
 Vitesse et acceleration d'un point solide	Mecanique Generale/notes/lectures/lec11.tex	/^\\subsection{Vitesse et acceleration d'un point solide}$/;"	u	section:Rotations Du Solide
 Vitesse et accélération en coordonnées cylindriques	Mecanique Generale/notes/lectures/lec5.tex	/^\\subsection{Vitesse et accélération en coordonnées cylindriques}$/;"	u	section:Description des rotations spatiales
 Voiture en accélération	Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Voiture en accélération}$/;"	u	section:Travail, énergie, forces conservatives
-\\@lecture	fancy-preamble.tex	/^    \\subsection*{\\@lecture}$/;"	u	section:3
+\\@lecture	fancy-preamble.tex	/^    \\subsection*{\\@lecture}$/;"	u	section:4
 \\@lecture	preamble.tex	/^    \\subsection*{\\@lecture}$/;"	u	section:Rotations Du Solide
 \\texttt{auto}	Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{\\texttt{auto}}$/;"	u	section:Etude de cas
 \\texttt{const} et \\texttt{constexpr}	Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{ \\texttt{const} et \\texttt{constexpr} }$/;"	u	section:Etude de cas
@@ -333,6 +358,7 @@ affiche	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^void af
 affiche_arbre	Introduction a la programmation/Exos/MOOC/S8/Ex5/derivation.cc	/^void affiche_arbre(Arbre * arb){$/;"	f	typeref:typename:void
 affiche_date	Introduction a la programmation/Exos/MOOC/S4/Ex7/datedepaques.cc	/^void affiche_date(int annee, int j){$/;"	f	typeref:typename:void
 affiche_matrice	Introduction a la programmation/Exos/MOOC/S5/Ex2/matrices.cc	/^void affiche_matrice(const vector<vector<double>>& M){$/;"	f	typeref:typename:void
+affiche_stats	Introduction a la programmation/Exos/MOOC/S9/Ex3/stats.cc	/^void affiche_stats(Statistique & stat){$/;"	f	typeref:typename:void
 afficher	Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void afficher(int nb, char c)$/;"	f	typeref:typename:void
 afficher_couleurs	Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void afficher_couleurs(char c1, char c2, char c3, char c4)$/;"	f	typeref:typename:void
 afficher_coup	Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void afficher_coup(char c1, char c2, char c3, char c4,$/;"	f	typeref:typename:void
@@ -375,6 +401,10 @@ all	Introduction a la programmation/Exos/MOOC/S8/Ex2/Makefile	/^all:$/;"	t
 all	Introduction a la programmation/Exos/MOOC/S8/Ex3/Makefile	/^all:$/;"	t
 all	Introduction a la programmation/Exos/MOOC/S8/Ex4/Makefile	/^all:$/;"	t
 all	Introduction a la programmation/Exos/MOOC/S8/Ex5/Makefile	/^all:$/;"	t
+all	Introduction a la programmation/Exos/MOOC/S9/Ex1/Makefile	/^all:$/;"	t
+all	Introduction a la programmation/Exos/MOOC/S9/Ex2/Makefile	/^all:$/;"	t
+all	Introduction a la programmation/Exos/MOOC/S9/Ex3/Makefile	/^all:$/;"	t
+all	Introduction a la programmation/Exos/MOOC/S9/Ex4/Makefile	/^all:$/;"	t
 apparier	Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void apparier(char test,char &cand1,char &cand2, char &cand3, int &num)$/;"	f	typeref:typename:void
 auteur	Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^string auteur;$/;"	m	struct:lettre	typeref:typename:string	file:
 axiom:axiome_de_completude	Analyse I/notes/lectures/lec2.tex	/^\\begin{axiom}[Axiome de completude]\\label{axiom:axiome_de_completude}$/;"	l
@@ -468,12 +498,14 @@ cc	current-course/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"
 check_autour	Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^int check_autour(Carte carte, size_t i, size_t j){$/;"	f	typeref:typename:int
 code	Introduction a la programmation/Exos/MOOC/S6/Ex4/cesar.cc	/^char code(char c, int d){$/;"	f	typeref:typename:char
 code	Introduction a la programmation/Exos/MOOC/S6/Ex4/cesar.cc	/^string code(string s,int  d){$/;"	f	typeref:typename:string
+collecte_statistique	Introduction a la programmation/Exos/MOOC/S9/Ex3/stats.cc	/^unsigned long int collecte_statistique(Statistique& stat, ifstream& fich){$/;"	f	typeref:typename:unsigned long int
 complexe	Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^struct complexe{$/;"	s	file:
 compte	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^unsigned int compte(const Grille & g, size_t l, size_t c,int  dl, int dc){$/;"	f	typeref:typename:unsigned int
 construire_nouveau	Introduction a la programmation/Exos/MOOC/S8/Ex5/derivation.cc	/^void construire_nouveau(char valeur, Arbre * arbre1, Arbre * arbre2, Arbre &arbre_final){$/;"	f	typeref:typename:void
 convexite_lignes	Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^bool convexite_lignes(Carte& carte)$/;"	f	typeref:typename:bool
 convexite_lignes	Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^bool convexite_lignes(Carte& carte, vector<int> const& labels_bords)$/;"	f	typeref:typename:bool
 couleur_valide	Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^bool couleur_valide(char c)$/;"	f	typeref:typename:bool
+creer	Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^Examen creer(ifstream& fich){$/;"	f	typeref:typename:Examen
 date_Paques	Introduction a la programmation/Exos/MOOC/S4/Ex7/datedepaques.cc	/^int date_Paques(int an){$/;"	f	typeref:typename:int
 date_jour	Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^int date_jour;$/;"	m	struct:lettre	typeref:typename:int	file:
 date_mois	Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^int date_mois;$/;"	m	struct:lettre	typeref:typename:int	file:
@@ -633,6 +665,8 @@ degres	Structures Algebriques/Devoirs/S1/sol.tex	/^\\begin{lemma}\\label{degres}
 degres	current-course/Devoirs/S1/sol.tex	/^\\begin{lemma}\\label{degres}$/;"	l
 demander_annee	Introduction a la programmation/Exos/MOOC/S4/Ex7/datedepaques.cc	/^int demander_annee(){$/;"	f	typeref:typename:int
 demander_et_jouer	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^void demander_et_jouer(Couleur joueur, Grille &g){$/;"	f	typeref:typename:void
+demander_fichier	Introduction a la programmation/Exos/MOOC/S9/Ex3/stats.cc	/^bool demander_fichier(ifstream& fichier){$/;"	f	typeref:typename:bool
+demander_fichier	Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^bool demander_fichier(ifstream& fichier){$/;"	f	typeref:typename:bool
 demander_nombre	Introduction a la programmation/Exos/MOOC/S4/Ex1/proto.cc	/^int demander_nombre(int inf, int max){$/;"	f	typeref:typename:int
 demander_nombre	Introduction a la programmation/Exos/MOOC/S4/Ex3/cos.cc	/^int demander_nombre(){$/;"	f	typeref:typename:int
 demenage	Introduction a la programmation/Exos/MOOC/S7/Ex2/maison.cc	/^void demenage(Personne &p, Maison n){$/;"	f	typeref:typename:void
@@ -837,6 +871,7 @@ grid815	current-course/notes/figures/test.svg	/^       dotted="false" \/>$/;"	i
 i	Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^	double i;$/;"	m	struct:complexe	typeref:typename:double	file:
 i	Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^	int i;$/;"	m	struct:Position	typeref:typename:int	file:
 initialise	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^void initialise(Grille &g){$/;"	f	typeref:typename:void
+initialise_statistique	Introduction a la programmation/Exos/MOOC/S9/Ex3/stats.cc	/^void initialise_statistique(Statistique& stat){$/;"	f	typeref:typename:void
 inkscape	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inkscape	Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inkscape	Analyse I/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
@@ -978,6 +1013,10 @@ main	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^int main(){$/
 main	Introduction a la programmation/Exos/MOOC/S8/Ex3/trideshell.cc	/^int main(){$/;"	f	typeref:typename:int
 main	Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^int main(){$/;"	f	typeref:typename:int
 main	Introduction a la programmation/Exos/MOOC/S8/Ex5/derivation.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Introduction a la programmation/Exos/MOOC/S9/Ex1/ecriture.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Introduction a la programmation/Exos/MOOC/S9/Ex2/lecture.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Introduction a la programmation/Exos/MOOC/S9/Ex3/stats.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^int main(){$/;"	f	typeref:typename:int
 main	Introduction a la programmation/Exos/MOOCnnt/S1/Ex1/ex1.cpp	/^int main(){$/;"	f	typeref:typename:int
 main	Introduction a la programmation/Exos/MOOCnnt/S1/Ex2/ex2.cpp	/^int main()$/;"	f	typeref:typename:int
 maison	Introduction a la programmation/Exos/MOOC/S7/Ex2/maison.cc	/^	Maison* maison;$/;"	m	struct:Personne	typeref:typename:Maison *	file:
@@ -1522,7 +1561,9 @@ propr:propriete_des_applications	current-course/notes/lectures/lec2.tex	/^\\begi
 pt1	Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^	int pt1;$/;"	m	struct:Match	typeref:typename:int	file:
 pt2	Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^	int pt2;$/;"	m	struct:Match	typeref:typename:int	file:
 qcm	Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^struct qcm{$/;"	s	file:
+qcm	Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^struct qcm{$/;"	s	file:
 question	Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^string question;$/;"	m	struct:qcm	typeref:typename:string	file:
+question	Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^string question;$/;"	m	struct:qcm	typeref:typename:string	file:
 r	Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^	double r;$/;"	m	struct:complexe	typeref:typename:double	file:
 rdf	Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
@@ -1567,6 +1608,7 @@ rdf	current-course/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">$/;"	
 rdf	current-course/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	current-course/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 reponses	Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^vector<string> reponses;$/;"	m	struct:qcm	typeref:typename:vector<string>	file:
+reponses	Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^vector<string> reponses;$/;"	m	struct:qcm	typeref:typename:vector<string>	file:
 rouge	Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^enum Couleur { vide,rouge, jaune};$/;"	e	enum:Couleur	file:
 scalaire	Introduction a la programmation/Exos/MOOC/S5/Ex1/scalaire.cc	/^double scalaire(vector<double> u, vector<double> v){$/;"	f	typeref:typename:double
 separer_chiffre_gauche	Introduction a la programmation/Exos/MOOC/S4/Ex6/lireetdire.cc	/^int separer_chiffre_gauche(int& nombre)$/;"	f	typeref:typename:int
@@ -1614,6 +1656,7 @@ sodipodi	current-course/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">
 sodipodi	current-course/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 sodipodi	current-course/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 solution	Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^int solution;$/;"	m	struct:qcm	typeref:typename:int	file:
+solution	Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^int solution;$/;"	m	struct:qcm	typeref:typename:int	file:
 somme	Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^int somme;$/;"	m	struct:SousSequence	typeref:typename:int	file:
 somme	Structures Algebriques/Devoirs/S1/sol.tex	/^\\begin{lemma}\\label{somme}$/;"	l
 somme	current-course/Devoirs/S1/sol.tex	/^\\begin{lemma}\\label{somme}$/;"	l
