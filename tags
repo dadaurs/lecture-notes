@@ -72,6 +72,7 @@ Applications entre ensembles	BA1/Structures Algebriques/notes/lectures/lec2.tex	
 Arbre	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex5/derivation.cc	/^struct Arbre{$/;"	s	file:
 Arithmétique des corps de caractéristique $p>0$	BA1/Algebre Lineaire I/notes/lectures/lec9.tex	/^\\subsection{Arithmétique des corps de caractéristique $p>0$}$/;"	u	section:Anneaux
 Associativite	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{Associativite}$/;"	b	subsection:Le language des Ensembles""Composition/Associativite
+BA1	README.md	/^## BA1$/;"	s
 Bases	BA1/Algebre Lineaire I/notes/lectures/lec11.tex	/^\\subsection{Bases}$/;"	u	section:Espaces Vectoriels
 Bernoulli-L'hospital pour infini sur infini	BA1/Analyse I/notes/lectures/lec17.tex	/^\\subsection{Bernoulli-L'hospital pour infini sur infini}$/;"	u	section:Dérivation
 Bille en équilibre dans un anneau en rotation	BA1/Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Bille en équilibre dans un anneau en rotation}$/;"	u	section:Description des rotations spatiales
