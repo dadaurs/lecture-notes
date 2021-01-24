@@ -1,0 +1,116 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{14}{Tue 15 Dec}{Fin Produit-Semidirect}
+\begin{thm}
+	Soit $H,F \leq G$, $F \leq N_G(H ) $ et $H \cap F = \left\{ e  \right\} $, dans ce cas, on peut definir $Ad_{F}^{H}$ et alors
+	\[ 
+		\eng{H,F} = HF \simeq H \rtimes_{Ad_{F}^{H} F} 
+	\]
+	De plus, si $H \leq N_G( F) $ 
+	\[ 
+		\eng{H,F} \simeq H \times F
+	\]
+	
+	
+\end{thm}
+\begin{proof}
+
+On a deja demontre la partie 1.\\
+Il faut demontrer que $Ad_{F}^{H}\simeq \id$, ie que $Ad_{f}^{H}( h) = h$.\\
+Donc $\forall f \in F, \forall h \in H$ 
+\[ 
+fhf^{-1} = h
+\]
+Or, $\forall f \in F, h \in H$, $fhf^{-1}h^{-1}=e$ car on a deux conjugaisons differentes.
+\end{proof}
+\begin{rmq}
+$H \rtimes F$ est abelien si et seulement si $H,F$sont abeliens et $\phi$ est trivial.
+\end{rmq}
+\begin{exemple}
+	Soit $S_3 = G$ et 
+	\[ 
+		H = \eng{ ( 123) } \trianglelefteq G \text{ et } F = \eng{ ( 12) }
+	\]
+	On voit clairement que $H \cap F = \left\{ \id \right\} $. \\
+	On trouve donc que $S_3 =H\rtimes F \simeq \mathbb{Z} / 3 \mathbb{Z} \rtimes \mathbb{Z} / 2 \mathbb{Z} $
+
+\end{exemple}
+\begin{exemple}
+Si on considere $G= D_{2n} $, on trouve
+ que 
+ \[ 
+ G \simeq \mathbb{Z} / n \mathbb{Z} \rtimes_\phi \mathbb{Z} / 2 \mathbb{Z}
+ \]
+ 
+\end{exemple}
+\begin{propo}
+Il existe seulement deux groupes d'ordre 4.
+\end{propo}
+\begin{proof}
+Premier cas:\\
+$\exists g \in G: o( g) = 4$. Dans ce cas, on a fini.\\
+Sinon, $\forall g \in G \setminus \left\{ e   \right\}: o( g) =2 $.\\
+Montrons que ceci implique $G$ abelien.
+\[ 
+ab = aababb = ba
+\]
+Donc $G$ abelien.\\
+Soit $a \neq b \in G \setminus \left\{ e \right\} $, donc
+\[ 
+	H = \eng{a} = \left\{ e,a \right\} \text{ et } F = \eng{b} = \left\{ e,b \right\} 
+\]
+On a alors que
+\[ 
+G \simeq H \times F \simeq \mathbb{Z} /2\mathbb{Z} \times \mathbb{Z}/2\mathbb{Z}
+\]
+
+\end{proof}
+\begin{thm}
+Soit $|G|=2p$, $p$ premier.\\
+Alors
+\begin{enumerate}
+	\item $\exists h \in G: o( h) = p$
+	\item $\exists f \in G: o( f) = 2$ 
+	\item $\eng{h} = H, \eng{f} = F \Rightarrow \eng{H,F} = G$ et $G \simeq \mathbb{Z} / p \mathbb{Z} \rtimes \mathbb{Z}/ 2\mathbb{Z}$
+\end{enumerate}
+
+\end{thm}
+\begin{proof}
+si $\exists g \in G$ tel que 
+\[ 
+	o( g) = 2p
+\]
+Alors
+\[ 
+G \simeq \mathbb{Z} / 2p\mathbb{Z}
+\]
+Sinon, $\forall g \in G\setminus \left\{ e  \right\} , o( g) = 2$ ou $p$.\\
+Supposons l'oppose, que $\not\exists h \in G: o( h) =p$, alors
+\[ 
+	\eng{a,b} = \mathbb{Z}/ 2\mathbb{Z}^{2}
+\]
+Or $4 \not| 2p$, on a donc une contradiciton.\\
+Supposons maintenant que $\forall g \in G \setminus \left\{ e   \right\}: o( g) =p $\\
+Prenons $a,b \in G \setminus \left\{ e  \right\} $ tel que $b \notin \eng{a}$
+Posons que $H = \eng{a}, F = \eng{b}$, alors on a
+\[ 
+|H \cap F| \big| |H|, |F|
+\]
+Parce que $b \notin \eng{a}$. On a donc $|H \cap F| = 1$, on a donc que les sous-groupes engendre par les elements de $G \setminus \left\{ e   \right\} $, alors $G_i$ couvre $G$. On trouve donc que $2p = 1 + r( p-1) $, ce qui est une contradiction.\\
+On a un element d'ordre $p$ et un element d'ordre 2 dans le groupe Donc
+$H \trianglelefteq G$ est normal car son index est 2, il suit
+\[ 
+ G \simeq \mathbb{Z} / p \mathbb{Z} \rtimes_\phi \mathbb{Z}/2\mathbb{Z}
+\]
+\end{proof}
+\begin{crly}
+	$ ( \mathbb{Z}/ p\mathbb{Z}) ^{\times}$ cyclique pour $p >2$
+\end{crly}
+
+
+
+
+
+
+
+\end{document}	

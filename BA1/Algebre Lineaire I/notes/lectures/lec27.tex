@@ -1,0 +1,150 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{27}{Tue 15 Dec}{Fin Determinants}
+\begin{rmq}
+Les resultats precedents valent aussi si $M$ est ``triangulaire superieure par bloc''.
+\end{rmq}
+\subsubsection{Operations sur les lignes/Colonnes}
+\begin{lemma}
+Soient $T_{ij} , D_{i,\lambda} , CL_{ij,\mu} $ les matrices des transformations elementaires des lignes d'une matrice, on a
+\begin{align*}
+\det T_{ij} = -1\\
+\det D_{i,\lambda} = \lambda\\
+\det CL_{ij,\mu} = 1
+\end{align*}
+\begin{proof}
+$T_{ij} $ est une matrice de transposition
+\[ 
+	\det T_{ij} = sign( ij) = -1
+\]
+$D_{i,\lambda} $ est une matrice diagonale avec des 1 sur la diagonale sauf a la $i$ eme ligne ou on a $\lambda$.\\
+$CL_{ij,\mu} $ est triangulaire superieure ou inferieure, donc
+\[ 
+\det CL_{ij,\mu} = 1
+\]
+
+
+\end{proof}
+
+\end{lemma}
+\begin{crly}
+Supposons que $N$ soit deduite de $M$ par un des trois types de transformations elementaires sur les lignes de $M$, alors on a
+\begin{itemize}
+\item $\det M = - \det N$ 
+\item $\det M = \lambda^{-1}\det N$ 
+\item $\det M = \det N$
+\end{itemize}
+
+\end{crly}
+\begin{proof}
+immediat par lemme.
+\end{proof}
+\subsubsection{Developpement de Lagrange suivant une colonne /ligne}
+Soit $M$ une matrice, on definit $M( k|l) $ contient tous les indices de $M=( m_{ij} ) $, pour $i\neq k$ ou $i \neq j$
+
+\begin{defn}
+Pour $k,l\leq d$ 
+\begin{itemize}
+	\item Le determinant de $M( k|l) $ est le $( k,l) $ mineur de $M$.
+	\item $( -1)^{k+l}\det( M( k|l) ) $ est le $( k,l) $ cofacteur de $M$.
+\end{itemize}
+
+\end{defn}
+\begin{thm}
+On a pour tout $j\leq d$ 
+\[ 
+	\det M = \sum_{i=1}^{d} m_{ij} ( -1)^{i+j}\det( M( i|j) ) 
+\]
+
+\end{thm}
+\subsection{Le polynome caracteristique}
+\begin{defn}
+Le polynome caracteristique de $M$ est le determinant
+\[ 
+	P_{car,M} ( X) = \det ( X.\id - M)  = \sum_{\sigma} sign( \sigma) \prod_{i=1}^{d} ( X \delta_{i\sigma( i) } - m_{i\sigma( i) } ) \in K[X]
+\]
+
+\end{defn}
+\begin{propo}
+Le polynome caracteristique est un polynome unitaire de degre $d$ et si on ecrit
+\[ 
+	\det( X.\id - M) = X^{d} + a_{d-1} X^{d-1} + \ldots + a_d
+\]
+On a 
+\begin{align*}
+	a_0 = P( 0)  = ( -1)^{d}\det M\\
+	a_{d-1} = -tr( M)  = m_{11} + \ldots 
+\end{align*}
+
+\end{propo}
+\begin{proof}
+\begin{align*}
+	P_{car,M}( X) = \sum_\sigma sign( \sigma) \prod_{i=1}^{d}( X\delta_{i\sigma( i) } - m_{i\sigma( 1) } ) 
+\end{align*}
+On trouve que $P_{car,M} ( X) $ a son terme de plus haut degre provenant de $\sigma=\id$ et donc $P_{car,M} ( X) $ est unitaire de degre $d$.\\
+Si $\sigma\neq \id$, $\exists i$ tel que $\sigma( i) =j \neq i$, mais alors $\sigma( j) \neq j$.\\
+Donc le produit 
+\[ 
+	sign( \sigma) \prod_{i=1}^{d}( X\delta_{i\sigma( i) } -m_{i\sigma( i) } ) 
+\]
+contient au  moins $2$ facteurs de degre $\leq 0$ et le produit est donc de degre $\leq d-2$, et donc 
+\[ 
+	P_{car,M} ( X)  = X^{d} + a_{d-1} X^{d-1} + \ldots + a_0
+\]
+
+\end{proof}
+\begin{propo}
+Le polynome est invariant de la classe de conjugaison de la matrice $M$
+\end{propo}
+\begin{proof}
+	\begin{align*}
+		\det( XP\id P^{-1} - PMP^{-1}) \\
+		=\det( P( X\id - M) P^{-1}) \\
+		- \det( X\id - M) 
+	\end{align*}
+	
+\end{proof}
+\begin{defn}
+	Soit $\phi \in End( V) $ une application lineaire, on definit son polynome caracteristique par
+	\[ 
+		P_{car, \phi} ( X) = P_{car,M} ( X) 
+	\]
+	ou $M= Mat( \phi)$ est la matrice de $\phi$ dans une base quelconque de $V$.
+\end{defn}
+\begin{defn}
+On definit la trace de $\phi$ comme etant la trace de $M$ 
+\[ 
+	tr( \phi) = tr( M) = m_{11} + \ldots
+\]
+et cette definition ne depend pas du choix de la base $B$.
+\end{defn}
+\begin{thm}
+Soit $P_{car,\phi} $ le polynome caracteristique d'une application lineaire $\phi$.\\
+Les enonces suivants sont equivalents
+\begin{enumerate}
+	\item Le scalaire $\lambda\in K$ est racine de $P_{car, \phi} :P_{car,\phi} ( \lambda) = 0$ 
+	\item Il existe $v \in V \setminus \left\{ 0 \right\} $ tel que $\phi( v) = \lambda v$	
+\end{enumerate}
+
+\end{thm}
+\begin{proof}
+	Si $\lambda$ est tel que $P_{car,\phi} ( \lambda) =0$ $\iff$ $\det ( \lambda\id - \phi) = 0$.\\
+		Ceci implique que le ker est non-nul.\\
+		Idem dans l'autre direction.
+\end{proof}
+\begin{defn}
+Soit $\lambda\in K$, le sous-espace 
+\[ 
+	V_{\phi,\lambda} = \ker( \phi -\lambda\id) = \left\{ v \in V, \phi( v) = \lambda v \right\} 
+\]
+est appelle sous-espace propre associe a $\lambda$. Si $V_{\phi,\lambda} \neq \left\{ 0 \right\} $, on dit que $\lambda$ est une valeur propre de $\phi$ et tout vecteur non-nul de $V_{\phi,\lambda} $ est appelle vecteur propre de $\phi$ associe a la valeur propre $\lambda$.\\
+L'ensemble des valeurs propres de $\phi$ est appelle le spectre de $\phi$ ( dans $K$) et est note
+\[ 
+	Spec_{\phi} ( K) 
+\]
+
+\end{defn}
+
+
+
+\end{document}	

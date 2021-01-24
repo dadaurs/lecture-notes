@@ -1,0 +1,87 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{26}{Mon 14 Dec}{Recherche de Primitives}
+\begin{exemple}
+\[ 
+\int_{ a }^{ b } e^{x}  \cos x dx
+\]
+On a 
+\begin{align*}
+	\int_{ a }^{ b } e^{x} \cos x dx &= \cos x e^{x} \big\vert_{a}^{b}+ \int_{ a }^{ b } e^{x} \sin x\\
+	&= \cos x e^{x} \big\vert_{a}^{b} + \sin x e^{x} \big\vert_{a} ^{b} - \int_{ a }^{ b } e^{x} \cos x dx
+\end{align*}
+Donc on trouve
+\[ 
+	\int_{ a }^{ b } e^{x} \cos x dx = \frac{1}{2} \left( e^{x} ( \sin x + \cos x)  \right) 
+\]
+
+\end{exemple}
+\begin{exemple}
+\[ 
+	\int_{ a }^{ b } \frac{dx}{( x^{2}+1) ^{n}}
+\]
+Cas $n=1$ :\\
+On a 
+$\tan = 1 + \tan^{2}$, donc
+\[ 
+	\arctan '( x) = \frac{1}{\tan'( \arctan x) } = \frac{1}{1+x^{2}}
+\]
+Donc
+\[ 
+\int_{ a }^{ b }\frac{dx}{1+x^{2}}= \arctan \big\vert_{a}^{b}
+\]
+A present, on peut calculer par recurrence
+\[ 
+I_n=\int_{ a }^{ b }\frac{dx}{{ 1+x^{2} }^{n}}
+\]
+Par recurrence, trouvons $I_{n+1} $ a partir de $I_n$.
+\begin{align*}
+	I_n &= \int_{ a }^{ b }\frac{dx}{( 1+x^{2}) ^{n}}\\
+	    &= [ x ( 1+x^{2}) ^{-n}] _{a} ^{b} + \int_{ a }^{ b } n \frac{2 x^{2}}{( 1+x^{2})^{n+1}}dx\\
+	    &= [ x ( 1+x^{2}) ^{-n}] _{a} ^{b} + 2n \int_{ a }^{ b } \frac{( x^{2}+1) -1}{( 1+x^{2}) ^{n+1}}dx\\
+	    &= [ x ( 1+x^{2}) ^{-n}] _{a} ^{b} + 2n \int_{ a }^{ b }\frac{dx}{( x^{2}+1 )^{n}} - 2n \int_{ a }^{ b }\frac{dx}{( x^{2}+1 )^{n+1}}
+\end{align*}
+Donc
+\[ 
+	I_{n+1} = [ \frac{x}{2n ( 1+x^{2}) ^{n}}]_{a}^{b}+\frac{( 2n-1)}{2n} I_n 
+\]
+
+
+	
+
+\end{exemple}
+\begin{thm}[Estimation du Reste Dans Taylor]
+	Soit $f \in C^{( n+1) }$, alors
+	\[ 
+		f( x) = \sum \frac{1}{k!}f^{( k) }( a) ( x-a) ^{k} + \frac{1}{n!}\int_{ a }^{ x } f^{( n+1) }( t) ( x-t) ^{n}dt
+	\]
+	
+
+\end{thm}
+\begin{proof}
+Cas $n=0$
+\[ 
+	f( x) = f( a) + \int_{ a }^{ x }f'( t) dt = f( a) + [ f] _{a} ^{x} = f( x) 
+\]
+Supposons vrai pour $n$.\\
+On suppose vrai pour $n$, montrer pour $n+1$.\\
+Hypothese de recurrence:
+\[ 
+	f( x) = \sum_{k=0}^{ n}\frac{1}{k!}f^{(k ) }( a) ( x-a)^{k} + \frac{1}{n!}\int_{ a }^{ x }f^{( n+1) }( t) ( x-t)^{n}dt\\
+\]
+Soit $h( t) = f^{( n+1) }( t) $, donc $h'( t) = f^{( n+2) }( t) $, et $g'( t) = ( x-t) ^{n}$, donc $g( t) = \frac{-1}{n+1}( x-t) ^{n+1}$.\\
+On a
+\begin{align*}
+	\sum \frac{1}{k!} f^{( k) }( a) ( x-a) ^{k} + \frac{1}{n!} \left[ f^{( n+1) }( t) \frac{-1}{n+1}( x-t)^{n+1}\right]_{t=a}^{x} - \frac{1}{n!}\int_{ a }^{ x } f^{( n+2) ( t) \frac{-1}{n+1}( x-t)^{n+1}}dt\\
+\end{align*}
+Ici, le dernier terme est bel et bien le reste integral pour $n+1$.
+
+
+
+\end{proof}
+\subsection{Integration de Fonctions Rationelles}
+
+
+
+
+\end{document}	

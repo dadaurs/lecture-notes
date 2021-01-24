@@ -1,0 +1,121 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{26}{Mon 14 Dec}{Calcul de Determinants}
+\begin{defn}
+Le noyau du morphisme $\det$ est appele groupe speciale lineaire de $V$ et on le note
+\[ 
+	SL( V) = \ker \det
+\]
+C'est un sous-groupe normal.
+\end{defn}
+\begin{rmq}
+	Soit $\phi, \psi \in GL( V) $, alors
+	\[ 
+		\det ( Ad( \psi) ( \phi) )  = \det \phi
+	\]
+	
+\end{rmq}
+\begin{defn}
+	Soit $M \in M_d( K) $ une matrice carree. Le determinant $\det M$ de $M$ est
+	\begin{enumerate}
+	\item Le scalaire
+		\[ 
+		\det M = \det \phi
+		\]
+		ou $\phi$ est est l'application lineaire associe a $M$.
+	\item Le determinant relativement a la base canonique des vecteurs d colonnes de $M$ dans l'espace des vecteurs colonnes.
+	\item Le determinant relativement a la base canonique dans l'espace des vecteurs lligne
+	\item La somme 
+		\[ 
+			\det M = \sum_{\sigma \in S_d} sgn( \sigma) m_{\sigma( 1) 1} \ldots
+		\]
+
+	\item La somme
+		\[ 
+			\det M = \sum_{\sigma \in S_d} sgn( \sigma) m_{ 1\sigma( 1)} \ldots
+		\]
+
+		
+	\end{enumerate}
+	
+\end{defn}
+\begin{proof}
+	2)C'est tautologique, les colonnes de $M$ $C_i$ sont les coordonnees de $\phi( e_i) $ mises en colonnes
+	\[ 
+		\det M = \det \phi = \det ( C_1, \ldots) 	
+	\]
+4)
+
+\[ 
+	v_j = \phi( e_j) 
+\]
+On applique la formule generale a $m_{ij} = x_{ji} $, on a
+\[ 
+	\det_B( v_1, \ldots) = \sum_{\sigma} sign( \sigma) m_{\sigma( 1) 1} \ldots
+\]
+5)
+On fait un changement de variable, on pose $i=1, \ldots, d$, on pose $j = \sigma( i) $, alors $i = \sigma^{-1}( j) $, et quand $i$ parcourt $ \left\{ 1, \ldots, d \right\} $, $j$ parcourt egalement cet ensemble. Donc
+\[ 
+	\det M = \sum_\sigma sgn( \sigma) \prod_{i=1}^{d}m_{\sigma( i) i} = \sum sgn( \sigma) \prod_{j=1}^{d}m_{j\sigma^{-1}( j) } 
+\]
+Cet expression est precisement le determinant dans la base canonique de $K^{d}$
+
+
+\end{proof}
+\begin{crly}
+soit $\phi: V \to V$ et $\phi^{*}: V^{*}\to V^{*}$, alors
+\[ 
+\det \phi^{*} = \det \phi
+\]
+
+\end{crly}
+\begin{proof}
+On a $\det \phi = \det M = \det ^{t}M$
+\end{proof}
+\begin{crly}
+Soit $M$ et $N$ deux matrices semblables, alors
+\[ 
+\det M = \det N
+\]
+
+\end{crly}
+\subsection{Calculs de Determinants}
+\subsubsection{Blocs de Matrices}
+\begin{thm}
+	Supposons que la matrice $M \in M_d( K) $ s'ecrit sous forme triangulaire superieure par blocs
+	\[ 
+	M = 
+	\begin{pmatrix}
+		M_1 & *\\
+		0 & M_2
+	\end{pmatrix}
+	\]
+	
+Alors
+\[ 
+\det M = \det M_1 \det M_2
+\]
+
+\end{thm}
+\begin{proof}
+	Soit $M= ( m_{ij} ) $, alors
+	\[ 
+		\det M = \sum_{\sigma \in S_d} sign( \sigma) m_{\sigma( 1) 1} \ldots 
+	\]
+	Dans la somme ci-dessus, on a alors
+	\[ 
+		j \leq d_1, \sigma( j) > d_1
+	\]
+	La contribution de ces termes sera donc nulle.\\
+	Il ne reste donc dans la somme que les termes correspondant aux permutations $\sigma$ telles que $\forall j \leq d_1, \sigma( j) \leq d_1$.\\
+	Donc $\sigma$ laisse $ \left\{ 1, \ldots, d_1 \right\} $ et definit donc une permutation
+	\[ 
+	\sigma_1: \left\{ 1, \ldots, d_1 \right\} \to \left\{ 1, \ldots , d_1 \right\} 
+	\]
+Comme $\sigma$ est une permutation de $ \left\{ 1, \ldots, d \right\} , $ donc  $\sigma$ laisse stable $ \left\{ d_1, \ldots, d \right\} $, et induit donc une permutation de cet ensemble.
+\end{proof}
+
+
+
+
+\end{document}	

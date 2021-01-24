@@ -1,0 +1,92 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{25}{Wed 09 Dec}{Theoreme Fondamental}
+\begin{thm}
+	Soit $f_n$ une suite de fonctions integrables sur $[a,b]$ qui converge uniformement vers $f$.\\
+	Alors $f$ est integrable et 
+	\[ 
+	\lim_{n \to  + \infty} \int_{ a }^{ b }f_n = \int_{ a }^{ b }f
+	\]
+\end{thm}
+Si la convergence n'est pas uniforme, alors ce theoreme est faux.\\
+
+\begin{proof}
+La convergence uniforme implique
+\[ 
+\forall \epsilon> 0 \exists n_0 \forall n \geq n_0
+\]
+\[ 
+	\forall x \in [ a,b] : | f_n( x) -f( x) | < \epsilon
+\]
+Soit $\sigma$ une subdivision de $[a,b]$, alors
+\[ 
+	|m_i( f_n) - m_i( f) |\leq \epsilon
+\]
+de meme
+\[ 
+	|M_i( f_n) - M_i( f) |\leq \epsilon
+\]
+Donc
+\[ 
+	|\underline{S}_\sigma( f_n)  - \underline{S}_\sigma( f) | \leq \sum \epsilon ( x_i - x_{i-1} ) =\epsilon ( b-a) 
+\]
+Pour montrer que $f$ est integrable.\\
+Soit $\epsilon>0$\\
+On cherche $\sigma$ tel que $\overline{S}_\sigma( f) < \underline{S}_\sigma( f) +\epsilon$.\\
+Appliquer l'enonce precedent a $\frac{\epsilon}{3( b-a )}$.\\
+Donc $\exists n$ tel que 
+\[ 
+	\overline{S}_\sigma( f) \leq \overline{S}_\sigma( f_n) +\epsilon< \overline{S}_\sigma( f_n)  + 2\epsilon \leq \overline{S}_\sigma( f) + 3\epsilon
+\]
+Donc $f$ integrable.\\
+\[ 
+	\int_{ a }^{ b } f = \overline{S}_f = \lim_{n \to \infty }  \inf_\sigma \overline{S}_\sigma( f) 
+\]
+\subsection{Recherche de Primitives}
+\begin{itemize}
+\item Cas simples:
+\begin{itemize}
+\item si $f= \cos$, alors $F= \sin$ est une primitive.
+\item Si $f( x) = x^{n}$, $F( x) = \frac{1}{n+1}x^{n+1}$ est une primitive.
+\end{itemize}
+\end{itemize}
+
+
+
+\end{proof}
+\subsubsection{Changement de Variable}
+Idee: Utiliser $( F \circ \phi )' = F' \circ \phi \cdot \phi'$.
+\begin{propo}
+	Soit $f \in C^{0}( [ a,b] ) $ et $\phi: [ \alpha, \beta] \to [ a,b] $ derivable et $\phi( \alpha) = a$ et $\phi( \beta) = b$.\\
+	Alors
+	\[ 
+		\int_{ a }^{ b }f = \int_{ \alpha }^{ \beta }( f\circ \phi) . \phi'
+	\]
+
+\end{propo}
+\begin{proof}
+Par le theoreme fondamental, $f$ admet une primitive $F$.\\
+Alors
+\[ 
+F \circ \phi
+\]
+est une primitive de $F'\circ \phi \cdot \phi'$.\\
+Donc, le theoreme fondamental pour $F' \circ \phi\cdot \phi'$ donne:
+\[ 
+	\int_{ \alpha }^{ \beta }F'\circ \phi \cdot \phi' = [ F\circ \phi]_{\alpha} ^{\beta} = F( b) - F( a) = \int_{ a }^{ b }f
+\]
+
+\end{proof}
+\subsubsection{Integration Par Parties}
+\begin{propo}
+Soient $f,g$ differentiables, alors
+\[ 
+\int_{ a }^{ b }fg' = [ fg] _{a} ^{b}- \int_{ a }^{ b }f'g
+\]
+
+\end{propo}
+
+
+
+
+\end{document}	

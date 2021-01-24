@@ -1,0 +1,61 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{14}{Wed 09 Dec}{Changements de Referentiel}
+\subsection{Dynamique du solide avec axe fixe}
+Quand un axe de rotation $\Delta$ est fixe, il est utile de projeter le theoreme du moment cinetique sur cet axe.
+\begin{align*}
+	\frac{d \vec{L}_0}{dt} = \vec{M}_0\\
+	\frac{d ( \vec{L}_0 \cdot \hat{u} )}{dt} = \vec{M}_0 \cdot \hat{u}\\
+	I_{\Delta} \omega' = \sum_\alpha( \vec{r}_\alpha \land \vec{F}_\alpha) \cdot \hat{u}	
+\end{align*}
+
+ou $\vec{r}_\alpha$ et $\vec{F}_\alpha$ sont les composantes des forces perpendiculaires $\hat{u}$.
+\section{Changements de Referentiel}
+Point materiel $P$ decrit dans deux referentiels differents
+Soit $e_1, e_2, e_3$, un repere, on a
+\[ 
+\vec{r}_p = \vec{OP}, \vec{v}_p = \frac{d \vec{r}_p}{dt}
+\]
+Danns un autre referentiel, on aurait
+\[ 
+\vec{r}'_p = \vec{O'P}', \vec{v}'_p = \frac{d \vec{r}'_p}{dt'}
+\]
+
+En mecanique classique, on a $t' = t+$ constante.\\
+L'espace est absolu $\vec{PQ}= \vec{r}_Q - \vec{r}_P = \vec{r}'_Q - \vec{r}'_P \forall P, Q$ \\
+Donc $R'$ est un ``solide'' dans $R$.\\
+Donc
+\[ 
+\vec{OP} = \vec{ OO' } + \vec{O'P}
+\]
+et 
+\begin{align*}
+\frac{d \vec{r}_p}{dt} = \frac{d \vec{r}_{O'} }{dt} + \frac{d \vec{r}'_P}{dt}
+\end{align*}
+Donc
+\begin{align*}
+\vec{v}_p = \vec{v}_{O'}  + \frac{d}{dt} \sum x_{i} ' \hat{e}'_i = \vec{v}_{O'}  + \underbrace{\sum x'_{i}  \hat{e}'_i}_{= \vec{v}'_p} + \underbrace{\sum x'_i \vec{\omega}\land \hat{e}'_i}_{= \vec{\omega} \land \vec{O'P}}
+\end{align*}
+Donc
+\[ 
+	\vec{v}_P = \vec{v}'_P + \vec{v}_{O'}  + \vec{\omega} \land \vec{O'P}
+\]
+Les deux derniers termes s'appellent la vitesse d'entrainement et le premier terme s'appelle la vitesse relative.\\
+On peut maintenant calculer les accelerations.\\
+On a
+\begin{align*}
+	\vec{a}_P = \vec{a}_{O'}  + \frac{d}{dt} \left( \sum x'_i \hat{e}'_i \right) + \vec{\omega} \land \frac{d}{dt}\sum \dot{ x }'_i \hat{e}'_i + \vec{\omega}' \land \vec{O'P}\\
+	= \vec{a}_{O'}  + \sum \ddot{x}'_i \hat{e}'_i + \sum \dot{x}'_i ( \vec{\omega} \land \hat{e}'_i) + \vec{\omega} \land \sum( \dot{x}'_i \hat{e}'_i + x'_i \vec{\omega}\land \hat{e}_i)  + \vec{\omega}' \land \vec{O'P}\\
+	= \vec{a}_{O'}  + \vec{a}'_p + 2 \vec{\omega} \land \vec{v}'_p + \vec{\omega} \land ( \omega \land \vec{O'P}) + \vec{\omega}' \land \vec{O'P}
+\end{align*}
+On a donc
+\[ 
+	\vec{a}_p = \vec{a}'_p + 2 \vec{\omega}\land \vec{v}'_p + \vec{a}_{O'}  + \vec{\omega}  \land ( \vec{\omega} \land \vec{O'P}) + \vec{\omega}' \land \vec{O'P}
+\]
+
+
+
+
+
+
+\end{document}	

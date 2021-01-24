@@ -1,0 +1,39 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{27}{Wed 16 Dec}{Decomposition en Elements Simples}
+\begin{rmq}
+	Liste des Simplifications de $ \frac{P( x) }{Q( x) }$ 
+\begin{enumerate}
+\item Reduire la fraction
+\item Quitte a multiplier par une constante, $Q( x) $ est unitaire.
+\item Decomposer $Q( x) $ en facteurs de degre $1$ et $2$
+\item sans perte de géneralité, $\frac{P( x) }{Q( x) }$ satisfait $\deg P < \deg Q$ 
+\item Decomposition en elements simples.
+\end{enumerate}
+\end{rmq}
+Sous ces hypotheses, $\frac{P( x) }{Q( x) }$ est une somme de termes de la forme
+\[ 
+	\frac{\alpha x + \beta}{( x^{2}+ 2cx +d)^{p}}
+\]
+Il faut donc trouver des primitives pour les fractions ci-dessus.\\
+Considerons
+\[ 
+	\frac{\alpha x + \beta}{( x^{2}+1)^{p}}
+\]
+On separe la fraction en deux.\\
+Premiere fraction facile par changement de variable.
+Considerons donc
+\[ 
+\frac{1}{( x^{2}+1 )^{p}}
+\]
+Facile si $p=1$ ( arctangente) , sinon on a
+\[ 
+	\frac{\alpha x + \beta}{( x^{2}+2cx +d)^{p}}
+\]
+L'idee est de pose $x^{2}+ 2cx +d = y^{2}+1$ pour $y$ fonction affine de $x$. On pose
+\[ 
+	x= \sqrt{d-c^{2}} y - c\iff y = \frac{x+c}{\sqrt{d-c^{2}}}
+\]
+
+
+\end{document}	
