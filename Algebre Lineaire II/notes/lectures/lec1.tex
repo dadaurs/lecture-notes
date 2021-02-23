@@ -33,6 +33,88 @@
 	ou $a_i$ est le i-eme coefficient de $p( x)$.\\
 	$ R[x]$ est l'ensemble des polynomes sur $R$.
 \end{defn}
-\del_x{}
+%\[ 
+	%S \supseteq R[x] \supseteq R
+%\]
+\begin{thm}
+	$R[X]$ est un sous-anneau.  $R$ est sans diviseurs de $0$ $\Rightarrow$ $R[X]$ est sans diviseurs de 0.\\
+	De meme, si $R$ est commutatif, $R[x]$ aussi.
+\end{thm}
+\begin{proof}
+	Soit $f( x) = \sum a_i x_i, g( x ) = \sum b_i x^{i} $ de degre $n$ resp. $m$.
+	\[ 
+		f( x) + g( x) = \sum_{i=1}^{ \max( m,n) }( a_i +b_i) x^{i}
+	\]
+De meme, on a
+\[ 
+	f( x) \cdot g( x) = a_0b_0 + \ldots = \sum_{k=0}^{m+n} \left( \sum_{i+j=k} a_i b_j \right) x^{k}
+\]
+Donc $R[X]$ est stable pour $+,\cdot$ et donc immediatement pour $-$, donc $R[X]$ est un sous-anneau de $S$.\\
+Soient $f( x) ,g( x) \neq 0$ et $n=\max \left\{ i:a_i=0 \right\} $, le $m+n$-ieme coefficient de $f( x) g( x) $ est $a_n b_m$ et donc si  $R$ est integre,$R[x]$ l'est aussi.
+\end{proof}
+\begin{defn}[Degre d'un polynome]\label{defn:Degre d'un polynomedegre_d_un_polynome}
+	Soit $f( x) = a_0 + \ldots \in R[X]$, $f( x) \neq 0$. On definit
+\[ 
+	\deg( f) = \max \left\{ i: a_i=0 \right\} 
+\]
+Ce dernier terme s'appelle le coefficient dominant de $f$, de plus on definit
+\[ 
+	f( x) =0: \deg( f) = - \infty 
+\]
+Si $\deg(f) =0$, alors $f$ est une constante.
+\end{defn}
+\begin{thm}
+	Soit $R$ un anneau, $f,g \in R[X] \neq 0$ tel que au moins un de leur coefficients dominants de $f$ ou de $g$ ne sont pas des diviseurs  de 0.Alors $\deg( f\cdot g) = \deg( f) + \deg(  g )$
+\end{thm}
+\begin{proof}
+	Soit $f( x) = a_0 + \ldots, g( x) = b_0 + \ldots$,$\deg f = n, \deg g = m$. Le $n+m$ ieme coefficient de $f\cdot g = a_n \cdot b_m \neq 0$
+\end{proof}
+Soit $p( x) \in R[x]$, ce polynome induit une application $f_p:R \to R$, on ecrit aussi $p( r) $
+\begin{thm}
+Soit $K$ un corps et $r_0,r_1,\ldots,r_n \in K$ des elements distincts et soient $g_0,\ldots,g_n \in K$.\\
+Il existe un seul polynome $f\in K[x]$ tel que
+\begin{enumerate}
+\item $\deg f \leq n$ 
+\item $f( r_i) = g_i$
+\end{enumerate}
+
+\end{thm}
+\begin{proof}
+On cherche $a_0,\ldots a_n$ tel que
+\[ 
+a_0 + a_1r_i + \ldots a_n r_i^{n}=g_i
+\]
+Donc, on cherche
+\begin{align*}
+\begin{pmatrix}
+	1 & r_0 &\ldots & r_0^{n}\\
+	\vdots & \ldots & \ldots & \ldots
+\end{pmatrix}
+\begin{pmatrix}
+a_0\\
+a_1\\
+\ldots
+\end{pmatrix}
+= \begin{pmatrix}
+g_1\\
+\ldots\\
+\ldots
+\end{pmatrix}
+\end{align*}
+Il faut donc montrer que la matrice ci-dessus a un determinant non nul.\\
+On le montre par induction sur $n$.\\
+Dans le cas $n=0$, le determinant vaut trivialement 1.\
+Dans le cas $n>0$, on a
+\begin{align*}
+	\det
+\begin{pmatrix}
+	1 & 0 \ldots\\
+	1(r_1-r_0) & \ldots\\
+	\ldots & \ddots\\
+	1( r_n-r_0) & \ldots
+\end{pmatrix}
+= ( r_1-r_0) ( r_2-r_0)   \ldots \det( V( r_1, \ldots, r_n) ) \neq 0
+\end{align*}
+\end{proof}
 
 \end{document}

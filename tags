@@ -87,6 +87,7 @@ Auteur	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^class Auteur {$/;
 Avion	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		Avion(string m, int d, double pa,string ty, unsigned int n)$/;"	f	class:Avion	file:
 Avion	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^class Avion : public Vehicule {$/;"	c	file:
 BA1	README.md	/^## BA1$/;"	s
+BA2	README.md	/^## BA2$/;"	s
 Bases	BA1/Algebre Lineaire I/notes/lectures/lec11.tex	/^\\subsection{Bases}$/;"	u	section:Espaces Vectoriels
 Bernoulli-L'hospital pour infini sur infini	BA1/Analyse I/notes/lectures/lec17.tex	/^\\subsection{Bernoulli-L'hospital pour infini sur infini}$/;"	u	section:Dérivation
 Bibliotheque	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		Bibliotheque(string n) {$/;"	f	class:Bibliotheque	file:
@@ -742,6 +743,8 @@ defn:Binomial coefficientbinomial_coefficient	Discrete Mathematics/notes/lecture
 defn:Cartesion productcartesion_product	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[Cartesion product]\\label{defn:Cartesion productcartesion_product}$/;"	l
 defn:Centre d'un anneaucentre_d_un_anneau	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\begin{defn}[Centre d'un anneau]\\label{defn:Centre d'un anneaucentre_d_un_anneau}$/;"	l
 defn:Centre d'un anneaucentre_d_un_anneau	current-course/notes/lectures/lec1.tex	/^\\begin{defn}[Centre d'un anneau]\\label{defn:Centre d'un anneaucentre_d_un_anneau}$/;"	l
+defn:Degre d'un polynomedegre_d_un_polynome	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\begin{defn}[Degre d'un polynome]\\label{defn:Degre d'un polynomedegre_d_un_polynome}$/;"	l
+defn:Degre d'un polynomedegre_d_un_polynome	current-course/notes/lectures/lec1.tex	/^\\begin{defn}[Degre d'un polynome]\\label{defn:Degre d'un polynomedegre_d_un_polynome}$/;"	l
 defn:Disjoint uniondisjoint_union	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[Disjoint union]\\label{defn:Disjoint uniondisjoint_union}$/;"	l
 defn:First Numbersfirst_numbers	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[First Numbers]\\label{defn:First Numbersfirst_numbers}$/;"	l
 defn:Polynomepolynome	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\begin{defn}[Polynome]\\label{defn:Polynomepolynome}$/;"	l
