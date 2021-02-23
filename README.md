@@ -6,9 +6,9 @@
 
 [Discrete Mathematics](Discrete&#32;Mathematics/notes/main.pdf)
 
-[POO](BA1/Programmation&#32;Orientee&#32;Objet/notes/main.pdf)
+[POO](Programmation&#32;Orientee&#32;Objet/notes/main.pdf)
 
-[Fluides et Electromagnetisme](BA1/Fluides&#32;et&#32;Electromagnetisme/notes/main.pdf)
+[Fluides et Electromagnetisme](Fluides&#32;et&#32;Electromagnetisme/notes/main.pdf)
 ## BA1
 [Analyse 1](BA1/Analyse&#32;I/notes/main.pdf)
 
