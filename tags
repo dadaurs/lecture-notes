@@ -63,28 +63,61 @@ $\\times$: Produit cartesien	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\
 6.2	BA1/Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{6.2}$/;"	s
 6.3	BA1/Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{6.3}$/;"	s
 A quoi ca sert?	BA1/Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsection{A quoi ca sert?}$/;"	u	section:Information, Calcul et Communication
+ANNEE_COURANTE	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  static constexpr unsigned int ANNEE_COURANTE = 2016;$/;"	m	class:Timbre	typeref:typename:unsigned int	file:
+Achat	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		Achat(Article const& art, int quanti):ach(art){$/;"	f	class:Achat	file:
+Achat	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^class Achat {$/;"	c	file:
 Algorithme d'Euclide	BA1/Structures Algebriques/notes/lectures/lec3.tex	/^\\subsection{Algorithme d'Euclide}$/;"	u	section:Theorie des nombres
 Algorithmes	BA1/Introduction a la programmation/notes/lectures/lec2.tex	/^\\section{Algorithmes}$/;"	s
+Anneau	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^		Anneau(unsigned int a): Groupe(a){}$/;"	f	class:Anneau	file:
+Anneau	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^class Anneau:public Groupe {$/;"	c	file:
 Anneaux	BA1/Algebre Lineaire I/notes/lectures/lec5.tex	/^\\section{Anneaux}$/;"	s
+Apero	Programmation Orientee Objet/Exos/S2/Ex1/apero.cc	/^	Apero() {$/;"	f	class:Apero	file:
+Apero	Programmation Orientee Objet/Exos/S2/Ex1/apero.cc	/^class Apero {$/;"	c	file:
 Applications de la dérivée	BA1/Analyse I/notes/lectures/lec15.tex	/^\\subsection{Applications de la dérivée}$/;"	u	section:Dérivation
 Applications entre ensembles	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Applications entre ensembles}$/;"	u	section:Le language des Ensembles
 Applications entre ensembles	BA1/Structures Algebriques/notes/lectures/lec2.tex	/^\\section{Applications entre ensembles}$/;"	s
 Arbre	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex5/derivation.cc	/^struct Arbre{$/;"	s	file:
 Arithmétique des corps de caractéristique $p>0$	BA1/Algebre Lineaire I/notes/lectures/lec9.tex	/^\\subsection{Arithmétique des corps de caractéristique $p>0$}$/;"	u	section:Anneaux
+Article	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		Article(string n, double p, bool s=false) {$/;"	f	class:Article	file:
+Article	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^class Article {$/;"	c	file:
+Assistant	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^class Assistant{$/;"	c	file:
 Associativite	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{Associativite}$/;"	b	subsection:Le language des Ensembles""Composition/Associativite
+Auteur	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		Auteur(string n, bool p=false) {$/;"	f	class:Auteur	file:
+Auteur	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^class Auteur {$/;"	c	file:
+Avion	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		Avion(string m, int d, double pa,string ty, unsigned int n)$/;"	f	class:Avion	file:
+Avion	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^class Avion : public Vehicule {$/;"	c	file:
 BA1	README.md	/^## BA1$/;"	s
 Bases	BA1/Algebre Lineaire I/notes/lectures/lec11.tex	/^\\subsection{Bases}$/;"	u	section:Espaces Vectoriels
 Bernoulli-L'hospital pour infini sur infini	BA1/Analyse I/notes/lectures/lec17.tex	/^\\subsection{Bernoulli-L'hospital pour infini sur infini}$/;"	u	section:Dérivation
+Bibliotheque	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		Bibliotheque(string n) {$/;"	f	class:Bibliotheque	file:
+Bibliotheque	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^class Bibliotheque {$/;"	c	file:
+Bijections	Discrete Mathematics/notes/lectures/lec1.tex	/^\\subsection{Bijections}$/;"	u	section:Counting
 Bille en équilibre dans un anneau en rotation	BA1/Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Bille en équilibre dans un anneau en rotation}$/;"	u	section:Description des rotations spatiales
 Blocs de Matrices	BA1/Algebre Lineaire I/notes/lectures/lec26.tex	/^\\subsubsection{Blocs de Matrices}$/;"	b	subsection:Determinants""Calculs de Determinants
+Brique	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^  Brique(Forme f, Couleur c):forme(f),couleur(c){}$/;"	f	class:Brique	file:
+Brique	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^class Brique$/;"	c	file:
+Brique	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^  Brique(Forme f, Couleur c):forme(f),couleur(c){}$/;"	f	class:Brique	file:
+Brique	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^class Brique$/;"	c	file:
 Buts du Cours	BA1/Analyse I/notes/lectures/lec1.tex	/^\\subsection{Buts du Cours}$/;"	u	section:Introduction
+Caddie	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^class Caddie {$/;"	c	file:
+Caisse	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^	Caisse() {$/;"	f	class:Caisse	file:
+Caisse	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^class Caisse  {$/;"	c	file:
 Calcul scientifique	BA1/Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsubsection{Calcul scientifique}$/;"	b	subsection:Information, Calcul et Communication""A quoi ca sert?
 Calculs de Determinants	BA1/Algebre Lineaire I/notes/lectures/lec26.tex	/^\\subsection{Calculs de Determinants}$/;"	u	section:Determinants
 Caractéristique des Corps	BA1/Algebre Lineaire I/notes/lectures/lec9.tex	/^\\subsection{Caractéristique des Corps}$/;"	u	section:Anneaux
 Cardinal d'un ensemble	BA1/Structures Algebriques/notes/lectures/lec2.tex	/^\\subsection{Cardinal d'un ensemble}$/;"	u	section:Applications entre ensembles
+Carre	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		Carre(const Carre& C): c(C.c) {}$/;"	f	class:Carre	file:
+Carre	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		Carre(double C=1): c(C) {}$/;"	f	class:Carre	file:
+Carre	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^class Carre: public Figure {$/;"	c	file:
 Carte	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^typedef vector<vector<int>> Carte;$/;"	t	typeref:typename:vector<vector<int>>	file:
 Cas particulier	BA1/Mecanique Generale/notes/lectures/lec5.tex	/^\\subsubsection{Cas particulier}$/;"	b	subsection:Description des rotations spatiales""Interprétation du vecteur $\\omega$
 Centre de masse	BA1/Mecanique Generale/notes/lectures/lec9.tex	/^\\subsection{Centre de masse}$/;"	u	section:Gravitation, Moment Cinétique
+Cercle	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^class Cercle {$/;"	c	file:
+Cercle	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		Cercle(double r): rayon(r) {}$/;"	f	class:Cercle	file:
+Cercle	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^class Cercle: public Forme{$/;"	c	file:
+Cercle	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		Cercle(const Cercle& c):r(c.r){}$/;"	f	class:Cercle	file:
+Cercle	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		Cercle(double R=1):r(R) {}$/;"	f	class:Cercle	file:
+Cercle	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^class Cercle: public Figure {$/;"	c	file:
 Champ de gravitation	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Champ de gravitation}$/;"	u	section:Gravitation, Moment Cinétique
 Changement de Base	BA1/Algebre Lineaire I/notes/lectures/lec16.tex	/^\\subsection{Changement de Base}$/;"	u	section:Matrices
 Changement de Variable	BA1/Analyse I/notes/lectures/lec25.tex	/^\\subsubsection{Changement de Variable}$/;"	b	subsection:Integration""Recherche de Primitives
@@ -92,30 +125,55 @@ Changements de Referentiel	BA1/Mecanique Generale/notes/lectures/lec14.tex	/^\\s
 Choc elastique	BA1/Mecanique Generale/notes/lectures/lec10.tex	/^\\subsection{Choc elastique}$/;"	u	section:Chocs ou collisions entre deux corps
 Chocs entre deux points materiels	BA1/Mecanique Generale/notes/lectures/lec10.tex	/^\\subsection{Chocs entre deux points materiels}$/;"	u	section:Chocs ou collisions entre deux corps
 Chocs ou collisions entre deux corps	BA1/Mecanique Generale/notes/lectures/lec10.tex	/^\\section{Chocs ou collisions entre deux corps}$/;"	s
+Client	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^class Client {$/;"	c	file:
 Coefficients de frottement	BA1/Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Coefficients de frottement}$/;"	u	section:Travail, énergie, forces conservatives
+Commemoratif	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  	Commemoratif(string n, unsigned int a, string p="Suisse", double v=1.0):Timbre(n,a,p,v) {}$/;"	f	class:Commemoratif	file:
+Commemoratif	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^class Commemoratif: public Timbre {$/;"	c	file:
 Comment, a partir d'un probleme concret, trouver une solution?	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Comment, a partir d'un probleme concret, trouver une solution?}$/;"	u	section:Definition formelle des algorithmes
+Complexe	Programmation Orientee Objet/Exos/S3/Ex1/complexe.cc	/^	Complexe(double a=0, double b=0) :x(a),y(b) { }$/;"	f	class:Complexe	file:
+Complexe	Programmation Orientee Objet/Exos/S3/Ex1/complexe.cc	/^class Complexe {$/;"	c	file:
 Complexite: notation $\\Theta$	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Complexite: notation $\\Theta$}$/;"	u	section:Definition formelle des algorithmes
 Composition d'applications linéaires	BA1/Algebre Lineaire I/notes/lectures/lec14.tex	/^\\subsection{Composition d'applications linéaires}$/;"	u	section:Espaces Vectoriels
 Composition/Associativite	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Composition\/Associativite}$/;"	u	section:Le language des Ensembles
 Conclusion	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Conclusion}$/;"	u	section:Definition formelle des algorithmes
 Conjugaison	BA1/Algebre Lineaire I/notes/lectures/lec16.tex	/^\\subsection{Conjugaison}$/;"	u	section:Matrices
 Conservation de l'énergie mécanique	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Conservation de l'énergie mécanique}$/;"	u	section:Travail, énergie, forces conservatives
+Construction	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^		Construction(Brique b):contenu({{{b}}}) {}$/;"	f	class:Construction	file:
+Construction	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^		Construction(const Construction & b):contenu(b.contenu){}$/;"	f	class:Construction	file:
+Construction	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^class Construction$/;"	c	file:
+Construction	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^		Construction(Brique b):contenu({{{b}}}) {}$/;"	f	class:Construction	file:
+Construction	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^		Construction(const Construction & b):contenu(b.contenu){}$/;"	f	class:Construction	file:
+Construction	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^class Construction$/;"	c	file:
 Construction de Groupes avec des quotients	BA1/Structures Algebriques/notes/lectures/lec5.tex	/^\\subsection{Construction de Groupes avec des quotients}$/;"	u	section:Théorie des Groupes
 Continuité	BA1/Analyse I/notes/lectures/lec10.tex	/^\\subsection{Continuité}$/;"	u	section:Series
 Convergence	BA1/Analyse I/notes/lectures/lec3.tex	/^\\subsection{Convergence}$/;"	u	section:Suites et limites
 Convexite, Concavite	BA1/Analyse I/notes/lectures/lec19.tex	/^\\subsection{Convexite, Concavite}$/;"	u	section:Polynome de Taylor et developpements limites
+Coord	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^struct Coord{$/;"	s	file:
 Coordonnées sphériques	BA1/Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Coordonnées sphériques}$/;"	u	section:Description des rotations spatiales
 Corps	BA1/Algebre Lineaire I/notes/lectures/lec8.tex	/^\\section{Corps}$/;"	s
+Corps	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^		Corps(unsigned int a): Anneau(a) {} $/;"	f	class:Corps	file:
+Corps	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^class Corps:public Anneau {$/;"	c	file:
 Corps Solide indeformable	BA1/Mecanique Generale/notes/lectures/lec11.tex	/^\\subsection{Corps Solide indeformable}$/;"	u	section:Rotations Du Solide
 Corps des fractions	BA1/Algebre Lineaire I/notes/lectures/lec8.tex	/^\\subsection{Corps des fractions}$/;"	u	section:Corps
 Couleur	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^enum Couleur { vide,rouge, jaune};$/;"	g	file:
+Couleur	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^typedef string Couleur ;$/;"	t	typeref:typename:string	file:
+Couleur	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^typedef string Couleur ;$/;"	t	typeref:typename:string	file:
+Couleur	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^enum Couleur { rouge, jaune, vide};$/;"	g	file:
+Counting	Discrete Mathematics/notes/lectures/lec1.tex	/^\\section{Counting}$/;"	s
+Creature	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		Creature(string n, int nv, int pts, int f, int pos=0 ):nom_(n),niveau_(nv),points_de_vie_(pts)/;"	f	class:Creature	file:
+Creature	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^class Creature$/;"	c	file:
 Definir $\\mathbb{R}$	BA1/Analyse I/notes/lectures/lec1.tex	/^\\section{Definir $\\mathbb{R}$}$/;"	s
 Definition formelle des algorithmes	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\section{Definition formelle des algorithmes}$/;"	s
+Degre	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^typedef unsigned int Degre;$/;"	t	typeref:typename:unsigned int	file:
+Densite de fluide	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\subsection{Densite de fluide}$/;"	u	section:Fluides au repos
 Description des rotations spatiales	BA1/Mecanique Generale/notes/lectures/lec5.tex	/^\\section{Description des rotations spatiales}$/;"	s
+Dessin	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^class Dessin {$/;"	c	file:
 Determinants	BA1/Algebre Lineaire I/notes/lectures/lec23.tex	/^\\section{Determinants}$/;"	s
 Deux P.S sur $\\exp$	BA1/Analyse I/notes/lectures/lec22.tex	/^\\subsection{Deux P.S sur $\\exp$}$/;"	u	section:Series Entieres
 Developpement de Lagrange suivant une colonne /ligne	BA1/Algebre Lineaire I/notes/lectures/lec27.tex	/^\\subsubsection{Developpement de Lagrange suivant une colonne \/ligne}$/;"	b	subsection:Determinants""Calculs de Determinants
 Dichotomie	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Dichotomie}$/;"	u	section:Definition formelle des algorithmes
+Dragon	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^	Dragon(string n, int nv, int pts, int f, int p, int pos=0):$/;"	f	class:Dragon	file:
+Dragon	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^class Dragon:public Creature {$/;"	c	file:
 Dynamique du point materiel	BA1/Mecanique Generale/notes/lectures/lec4.tex	/^\\section{Dynamique du point materiel}$/;"	s
 Dynamique du solide avec axe fixe	BA1/Mecanique Generale/notes/lectures/lec14.tex	/^\\subsection{Dynamique du solide avec axe fixe}$/;"	u	section:Rotations Du Solide
 Déduction de la force de Gravitation en $\\frac{1}{r^{2}}$	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Déduction de la force de Gravitation en $\\frac{1}{r^{2}}$}$/;"	u	section:Gravitation, Moment Cinétique
@@ -125,6 +183,8 @@ Elément inversible	BA1/Algebre Lineaire I/notes/lectures/lec6.tex	/^\\subsectio
 Energie potentielle	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Energie potentielle}$/;"	u	section:Travail, énergie, forces conservatives
 Energie potentielle gravifique	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Energie potentielle gravifique}$/;"	u	section:Gravitation, Moment Cinétique
 Engendrement du groupe lineaire	BA1/Algebre Lineaire I/notes/lectures/lec22.tex	/^\\subsection{Engendrement du groupe lineaire}$/;"	u	section:Operations Elementaires Sur Les Matrices
+EnsembleFini	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^	EnsembleFini(unsigned int pr) :p(pr) {}$/;"	f	class:EnsembleFini	file:
+EnsembleFini	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^class EnsembleFini {$/;"	c	file:
 Ensembles	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Ensembles}$/;"	u	section:Le language des Ensembles
 Ensembles	BA1/Structures Algebriques/notes/lectures/lec1.tex	/^\\subsection{Ensembles}$/;"	u	section:Preuves
 Equations Differentielles	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^\\subsection{Equations Differentielles}$/;"	u	section:Quelques notions mathematiques
@@ -134,6 +194,9 @@ Espaces vectoriels de dimension infinie	BA1/Algebre Lineaire I/notes/lectures/le
 Etude de cas	BA1/Introduction a la programmation/notes/lectures/lec3.tex	/^\\section{Etude de cas}$/;"	s
 Examen	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^typedef vector<qcm> Examen;$/;"	t	typeref:typename:vector<qcm>	file:
 Examen	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^typedef vector<qcm> Examen;$/;"	t	typeref:typename:vector<qcm>	file:
+Exemplaire	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		Exemplaire(Oeuvre & ov):oe(&ov){$/;"	f	class:Exemplaire	file:
+Exemplaire	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		Exemplaire(const Exemplaire& ov) {$/;"	f	class:Exemplaire	file:
+Exemplaire	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^class Exemplaire {$/;"	c	file:
 Exemple d'utilisation	BA1/Analyse I/notes/lectures/lec2.tex	/^\\subsection{Exemple d'utilisation}$/;"	u	section:Changements de Referentiel
 Exemple de loi physique: l'addition des vitesse	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\subsection{Exemple de loi physique: l'addition des vitesse}$/;"	u	section:Physique
 Exemples	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{Exemples}$/;"	b	subsection:Le language des Ensembles""Ensembles
@@ -142,6 +205,14 @@ Expression	BA1/Introduction a la programmation/notes/lectures/lec3.tex	/^\\subse
 Extraction d'une base	BA1/Algebre Lineaire I/notes/lectures/lec22.tex	/^\\subsection{Extraction d'une base}$/;"	u	section:Operations Elementaires Sur Les Matrices
 Famille Libre	BA1/Algebre Lineaire I/notes/lectures/lec11.tex	/^\\subsection{Famille Libre}$/;"	u	section:Espaces Vectoriels
 Familles génératrices	BA1/Algebre Lineaire I/notes/lectures/lec10.tex	/^\\subsection{Familles génératrices}$/;"	u	section:Espaces Vectoriels
+Figure	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^class Figure {$/;"	c	file:
+Finite sets	Discrete Mathematics/notes/lectures/lec1.tex	/^\\subsection{Finite sets}$/;"	u	section:Counting
+Flacon	Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^  Flacon(string n,double v, double p):nom(n),volume(v),pH(p){}$/;"	f	class:Flacon	file:
+Flacon	Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^class Flacon$/;"	c	file:
+Fleur	Programmation Orientee Objet/Exos/S2/Ex2/poeme.cc	/^	Fleur(Fleur const& fl) {$/;"	f	class:Fleur	file:
+Fleur	Programmation Orientee Objet/Exos/S2/Ex2/poeme.cc	/^	Fleur(string nom, string coul) {$/;"	f	class:Fleur	file:
+Fleur	Programmation Orientee Objet/Exos/S2/Ex2/poeme.cc	/^class Fleur {$/;"	c	file:
+Fluides au repos	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\section{Fluides au repos}$/;"	s
 Fonctions	BA1/Analyse I/notes/lectures/lec8.tex	/^\\section{Fonctions}$/;"	s
 Fonctions	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^\\subsection{Fonctions}$/;"	u	section:Quelques notions mathematiques
 Force de pesanteur et chute des corps	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Force de pesanteur et chute des corps}$/;"	s
@@ -149,18 +220,27 @@ Forces conservatives	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsecti
 Forces de Frottement	BA1/Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Forces de Frottement}$/;"	u	section:Travail, énergie, forces conservatives
 Forces de frottement sec	BA1/Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Forces de frottement sec}$/;"	u	section:Travail, énergie, forces conservatives
 Formalisation d'algorithmes	BA1/Introduction a la programmation/notes/lectures/lec2.tex	/^\\subsection{Formalisation d'algorithmes}$/;"	u	section:Algorithmes
+Forme	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^typedef string Forme   ;$/;"	t	typeref:typename:string	file:
+Forme	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^typedef string Forme   ;$/;"	t	typeref:typename:string	file:
+Forme	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^class Forme {$/;"	c	file:
 Formes Symmetriques/Alternees	BA1/Algebre Lineaire I/notes/lectures/lec24.tex	/^\\subsection{Formes Symmetriques\/Alternees}$/;"	u	section:Determinants
 Formes linéaires	BA1/Algebre Lineaire I/notes/lectures/lec13.tex	/^\\subsection{Formes linéaires}$/;"	u	section:Espaces Vectoriels
 Formes linéaires et dualité	BA1/Algebre Lineaire I/notes/lectures/lec13.tex	/^\\subsection{Formes linéaires et dualité}$/;"	u	section:Espaces Vectoriels
 Formes multilineaires	BA1/Algebre Lineaire I/notes/lectures/lec23.tex	/^\\subsection{Formes multilineaires}$/;"	u	section:Determinants
+Formules d'integration	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\subsection{Formules d'integration}$/;"	u	section:Notations du cours et maths necessaires
 Graphe	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{Graphe}$/;"	b	subsection:Le language des Ensembles""Applications entre ensembles
 Gravitation, Moment Cinétique	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\section{Gravitation, Moment Cinétique}$/;"	s
 Grille	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^typedef  array<array<Couleur,7>,6> Grille;$/;"	t	typeref:typename:array<array<Couleur,7>,6>	file:
+Groupe	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^	Groupe(unsigned int a): EnsembleFini(a) {}$/;"	f	class:Groupe	file:
+Groupe	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^class Groupe: public EnsembleFini {$/;"	c	file:
 Groupe engendre par un ensemble	BA1/Algebre Lineaire I/notes/lectures/lec3.tex	/^\\subsection{Groupe engendre par un ensemble}$/;"	u	section:Sous-Groupe
 Groupe symmétrique de n	BA1/Structures Algebriques/notes/lectures/lec4.tex	/^\\subsection{Groupe symmétrique de n}$/;"	u	section:Théorie des Groupes
 Groupes	BA1/Algebre Lineaire I/notes/lectures/lec2.tex	/^\\section{Groupes}$/;"	s
 Groupes Lineaires	BA1/Structures Algebriques/notes/lectures/lec11.tex	/^\\subsection{Groupes Lineaires}$/;"	u	section:Théorie des Groupes
 Groupes diedraux	BA1/Structures Algebriques/notes/lectures/lec9.tex	/^\\subsection{Groupes diedraux}$/;"	u	section:Théorie des Groupes
+Humain	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^class Humain: public Joueur {$/;"	c	file:
+Hydre	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		Hydre(string n, int nv, int pts, int f, int l, int d, int pos=0)$/;"	f	class:Hydre	file:
+Hydre	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^class Hydre: public Creature {$/;"	c	file:
 Image,Preimage	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Image,Preimage}$/;"	u	section:Le language des Ensembles
 Impulsion et quantité de mouvement	BA1/Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Impulsion et quantité de mouvement}$/;"	u	section:Travail, énergie, forces conservatives
 Information, Calcul et Communication	BA1/Introduction a la programmation/notes/lectures/lec1.tex	/^\\section{Information, Calcul et Communication}$/;"	s
@@ -176,9 +256,15 @@ Integration de Fonctions Rationelles	BA1/Analyse I/notes/lectures/lec26.tex	/^\\
 Interprétation du vecteur $\\omega$	BA1/Mecanique Generale/notes/lectures/lec5.tex	/^\\subsection{Interprétation du vecteur $\\omega$}$/;"	u	section:Description des rotations spatiales
 Introduction	BA1/Analyse I/notes/lectures/lec1.tex	/^\\section{Introduction}$/;"	s
 Introduction	BA1/Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsection{Introduction}$/;"	u	section:Information, Calcul et Communication
+Introduction	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\subsection{Introduction}$/;"	u	section:Fluides au repos
+Intégrales généralisées	Analyse II/notes/lectures/lec1.tex	/^\\section{Intégrales généralisées}$/;"	s
 Intégrales premières d'un mouvement central	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Intégrales premières d'un mouvement central}$/;"	u	section:Gravitation, Moment Cinétique
 Invariance par changement de referentiel	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\subsection{Invariance par changement de referentiel}$/;"	u	section:Physique
+Jeu	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^		Jeu(int taille=8):table(taille,vector<Couleur>(taille)) {}$/;"	f	class:Jeu	file:
+Jeu	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^class Jeu {$/;"	c	file:
+Joueur	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^class Joueur {$/;"	c	file:
 L'homomorphisme $\\sgn$	BA1/Structures Algebriques/notes/lectures/lec7.tex	/^\\subsection{L'homomorphisme $\\sgn$ }$/;"	u	section:Théorie des Groupes
+L'operateur $\\nabla$ ( nabla) et la definition du gradient, de la divergence et du rotationnel	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\subsection{L'operateur $\\nabla$ ( nabla) et la definition du gradient, de la divergence et du/;"	u	section:Notations du cours et maths necessaires
 L'énergie mécanique: intégrale première	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{L'énergie mécanique: intégrale première}$/;"	u	section:Travail, énergie, forces conservatives
 La conduite de processus	BA1/Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsubsection{La conduite de processus}$/;"	b	subsection:Information, Calcul et Communication""A quoi ca sert?
 La gestion d'information	BA1/Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsubsection{La gestion d'information}$/;"	b	subsection:Information, Calcul et Communication""A quoi ca sert?
@@ -195,11 +281,15 @@ Lecture Notes For Math Bachelor	README.md	/^# Lecture Notes For Math Bachelor$/;
 Les matrices carrées	BA1/Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Les matrices carrées}$/;"	u	section:Matrices
 Les tris	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Les tris}$/;"	u	section:Definition formelle des algorithmes
 Limsup et liminf	BA1/Analyse I/notes/lectures/lec4.tex	/^\\section{Limsup et liminf}$/;"	s
+Livre	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^		Livre(string t, string a, int n, bool b): titre(t), auteur(a), nb_pages(n), bestseller(b) {}$/;"	f	class:Livre	file:
+Livre	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^class Livre {$/;"	c	file:
 Loi de gravitation universelle	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Loi de gravitation universelle}$/;"	u	section:Gravitation, Moment Cinétique
 Lois de Kepler	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Lois de Kepler}$/;"	u	section:Gravitation, Moment Cinétique
 Lois de conservation	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\subsection{Lois de conservation}$/;"	u	section:Physique
 Lois de newton	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Lois de newton}$/;"	s
 Lugeur	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Lugeur}$/;"	u	section:Travail, énergie, forces conservatives
+M_PI	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^#define M_PI /;"	d	file:
+Magicien	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^class Magicien{$/;"	c	file:
 Maison	BA1/Introduction a la programmation/Exos/MOOC/S7/Ex2/maison.cc	/^struct Maison {$/;"	s	file:
 Match	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^struct Match{$/;"	s	file:
 Matrices	BA1/Algebre Lineaire I/notes/lectures/lec14.tex	/^\\section{Matrices}$/;"	s
@@ -221,23 +311,44 @@ Mouvement dans un potentiel central	BA1/Mecanique Generale/notes/lectures/lec8.t
 Mouvement plan-sur-plan	BA1/Mecanique Generale/notes/lectures/lec11.tex	/^\\subsection{Mouvement plan-sur-plan}$/;"	u	section:Rotations Du Solide
 Mouvement rectiligne uniformement accelere	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Mouvement rectiligne uniformement accelere}$/;"	s
 Notations	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Notations}$/;"	u	section:Le language des Ensembles
+Notations du cours et maths necessaires	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\section{Notations du cours et maths necessaires}$/;"	s
 Noyau et Image	BA1/Algebre Lineaire I/notes/lectures/lec5.tex	/^\\section{Noyau et Image}$/;"	s
 Noyau/Image	BA1/Algebre Lineaire I/notes/lectures/lec6.tex	/^\\subsection{Noyau\/Image}$/;"	u	section:Anneaux
 Objectifs du cours de mecanique generale	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Objectifs du cours de mecanique generale}$/;"	s
+Oeuvre	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		Oeuvre(string t, Auteur & a, string l) :titre(t),langue(l),aut(a) {$/;"	f	class:Oeuvre	file:
+Oeuvre	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^class Oeuvre {$/;"	c	file:
 Operations Elementaires Sur Les Matrices	BA1/Algebre Lineaire I/notes/lectures/lec20.tex	/^\\section{Operations Elementaires Sur Les Matrices}$/;"	s
 Operations sur les ensembles	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Operations sur les ensembles}$/;"	u	section:Le language des Ensembles
 Operations sur les lignes/Colonnes	BA1/Algebre Lineaire I/notes/lectures/lec27.tex	/^\\subsubsection{Operations sur les lignes\/Colonnes}$/;"	b	subsection:Determinants""Calculs de Determinants
+Operations with finite sets	Discrete Mathematics/notes/lectures/lec1.tex	/^\\subsection{Operations with finite sets}$/;"	u	section:Counting
 Oscillateur force	BA1/Mecanique Generale/notes/lectures/lec3.tex	/^\\subsection{Oscillateur force}$/;"	u	section:Oscillateurs Harmoniques
 Oscillateur harmonique amorti	BA1/Mecanique Generale/notes/lectures/lec3.tex	/^\\subsection{Oscillateur harmonique amorti}$/;"	u	section:Oscillateurs Harmoniques
 Oscillateurs Harmoniques	BA1/Mecanique Generale/notes/lectures/lec3.tex	/^\\section{Oscillateurs Harmoniques}$/;"	s
 Oscillateurs harmoniques a une dimension	BA1/Mecanique Generale/notes/lectures/lec3.tex	/^\\subsection{Oscillateurs harmoniques a une dimension}$/;"	u	section:Oscillateurs Harmoniques
+PI	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^#define PI /;"	d	file:
+PRIX_BASE_PEU_RARE	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  static const int PRIX_BASE_PEU_RARE=50;$/;"	m	class:Timbre	typeref:typename:const int	file:
+PRIX_BASE_RARE	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  static const int PRIX_BASE_RARE=400;$/;"	m	class:Timbre	typeref:typename:const int	file:
+PRIX_BASE_TRES_RARE	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  static const int PRIX_BASE_TRES_RARE=600;$/;"	m	class:Timbre	typeref:typename:const int	file:
+Part 1	Discrete Mathematics/ARendre/S1/Ex.tex	/^\\section*{Part 1}$/;"	s
+Part 2	Discrete Mathematics/ARendre/S1/Ex.tex	/^\\section*{Part 2}$/;"	s
+Patient	Programmation Orientee Objet/Arendre/S1/Ex1/imc.cc	/^class Patient{$/;"	c	file:
 Pendule Mathématique	BA1/Mecanique Generale/notes/lectures/lec5.tex	/^\\subsection{Pendule Mathématique}$/;"	u	section:Description des rotations spatiales
 Personne	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^struct Personne{$/;"	s	file:
 Personne	BA1/Introduction a la programmation/Exos/MOOC/S7/Ex2/maison.cc	/^struct Personne {$/;"	s	file:
 Phenomes de resonnance	BA1/Mecanique Generale/notes/lectures/lec3.tex	/^\\subsection{Phenomes de resonnance}$/;"	u	section:Oscillateurs Harmoniques
 Physique	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Physique}$/;"	s
 Plan du cours	BA1/Introduction a la programmation/notes/lectures/lec1.tex	/^\\section{Plan du cours}$/;"	s
+Point	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^struct Point{$/;"	s	file:
+Point3D	Programmation Orientee Objet/Exos/S1/Ex3/Point3D.cc	/^class Point3D{$/;"	c	file:
+Point3D	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^class Point3D{$/;"	c	file:
+Polynome	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^		Polynome(Polynome const & p): facteurs(p.getFacteurs()){$/;"	f	class:Polynome	file:
+Polynome	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^		Polynome(double a, Degre n) {$/;"	f	class:Polynome	file:
+Polynome	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^		Polynome(double a=0) {$/;"	f	class:Polynome	file:
+Polynome	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^		Polynome(vector<double> v): facteurs(v){}$/;"	f	class:Polynome	file:
+Polynome	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^class Polynome {$/;"	c	file:
 Polynome de Taylor et developpements limites	BA1/Analyse I/notes/lectures/lec17.tex	/^\\section{Polynome de Taylor et developpements limites}$/;"	s
+Polynomes	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\section{Polynomes}$/;"	s
+Polynomes	current-course/notes/lectures/lec1.tex	/^\\section{Polynomes}$/;"	s
 Position	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^struct Position{$/;"	s	file:
 Position	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^typedef size_t Position;$/;"	t	typeref:typename:size_t	file:
 Preuves	BA1/Structures Algebriques/notes/lectures/lec1.tex	/^\\section{Preuves}$/;"	s
@@ -254,6 +365,8 @@ Propriété universelle des Produits	BA1/Structures Algebriques/notes/lectures/l
 Qu'est-ce qu'un algorithme?	BA1/Introduction a la programmation/notes/lectures/lec2.tex	/^\\subsubsection{Qu'est-ce qu'un algorithme?}$/;"	b	subsection:Algorithmes""Formalisation d'algorithmes
 Quelques notions mathematiques	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Quelques notions mathematiques}$/;"	s
 Rang d'une Matrice	BA1/Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Rang d'une Matrice}$/;"	u	section:Matrices
+Rare	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  	Rare(string n, unsigned int a, string p="Suisse", double v=1.0, int nb=100):Timbre(n,a,p,v), /;"	f	class:Rare	file:
+Rare	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^class Rare: public Timbre {$/;"	c	file:
 Recette générale	BA1/Structures Algebriques/notes/lectures/lec5.tex	/^\\subsubsection{Recette générale}$/;"	b	subsection:Théorie des Groupes""Construction de Groupes avec des quotients
 Recherche	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Recherche}$/;"	u	section:Definition formelle des algorithmes
 Recherche d'extremums	BA1/Analyse I/notes/lectures/lec15.tex	/^\\subsubsection{Recherche d'extremums}$/;"	b	subsection:Dérivation""Applications de la dérivée
@@ -265,9 +378,13 @@ Représentation paramétrique d'unn sev cartesienne	BA1/Algebre Lineaire I/notes
 Resolution d'une equation du second degre	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Resolution d'une equation du second degre}$/;"	u	section:Definition formelle des algorithmes
 Resolution de systemes lineaires	BA1/Algebre Lineaire I/notes/lectures/lec22.tex	/^\\subsection{Resolution de systemes lineaires}$/;"	u	section:Operations Elementaires Sur Les Matrices
 Rotations Du Solide	BA1/Mecanique Generale/notes/lectures/lec11.tex	/^\\section{Rotations Du Solide}$/;"	s
+Scalaires et Vecteurs	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\subsection{Scalaires et Vecteurs}$/;"	u	section:Notations du cours et maths necessaires
 Sequence	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^typedef  vector<int> Sequence;$/;"	t	typeref:typename:vector<int>	file:
 Series	BA1/Analyse I/notes/lectures/lec6.tex	/^\\section{Series}$/;"	s
 Series Entieres	BA1/Analyse I/notes/lectures/lec20.tex	/^\\section{Series Entieres}$/;"	s
+Souris	Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^		Souris(const Souris& s)$/;"	f	class:Souris	file:
+Souris	Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^		Souris(double p, string coul,unsigned int a=0,unsigned int esp=36) {$/;"	f	class:Souris	file:
+Souris	Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^class Souris$/;"	c	file:
 Sous-Anneau	BA1/Algebre Lineaire I/notes/lectures/lec6.tex	/^\\subsection{Sous-Anneau}$/;"	u	section:Anneaux
 Sous-Ensembles	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Sous-Ensembles}$/;"	u	section:Le language des Ensembles
 Sous-Groupe	BA1/Algebre Lineaire I/notes/lectures/lec3.tex	/^\\section{Sous-Groupe}$/;"	s
@@ -276,6 +393,7 @@ Sous-groupes	BA1/Structures Algebriques/notes/lectures/lec6.tex	/^\\subsection{S
 Sous-groupes de $G=GL( n,k) $	BA1/Structures Algebriques/notes/lectures/lec12.tex	/^\\subsection{Sous-groupes de $G=GL( n,k) $}$/;"	u	section:Théorie des Groupes
 Sous-groupes engendres par plusieurs elements	BA1/Structures Algebriques/notes/lectures/lec10.tex	/^\\subsection{Sous-groupes engendres par plusieurs elements}$/;"	u	section:Théorie des Groupes
 SousSequence	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^struct SousSequence{$/;"	s	file:
+Spectateur	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^class Spectateur{$/;"	c	file:
 Statistique	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex3/stats.cc	/^typedef vector<long int> Statistique;$/;"	t	typeref:typename:vector<long int>	file:
 Structures Algebriques des espaces de morphismes	BA1/Algebre Lineaire I/notes/lectures/lec8.tex	/^\\subsection{Structures Algebriques des espaces de morphismes}$/;"	u	section:Anneaux
 Structures de controle	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Structures de controle}$/;"	u	section:Definition formelle des algorithmes
@@ -294,6 +412,9 @@ Theorie des nombres	BA1/Structures Algebriques/notes/lectures/lec3.tex	/^\\secti
 Théorie des Groupes	BA1/Structures Algebriques/notes/lectures/lec4.tex	/^\\section{Théorie des Groupes}$/;"	s
 Théorème de l'énergie	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Théorème de l'énergie}$/;"	u	section:Travail, énergie, forces conservatives
 Théorème de l'énergie cinétique	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Théorème de l'énergie cinétique}$/;"	u	section:Travail, énergie, forces conservatives
+Timbre	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  Timbre(string n, unsigned int a, string p="Suisse", double v=1.0):nom(n),annee(a), pays(p), va/;"	f	class:Timbre	file:
+Timbre	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^class Timbre$/;"	c	file:
+Tirelire	Programmation Orientee Objet/Arendre/S1/Ex2/tirelire.cc	/^class Tirelire{$/;"	c	file:
 Transposition	BA1/Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Transposition}$/;"	u	section:Matrices
 Travail d'une force centrale en $\\frac{1}{r^{2}}$	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Travail d'une force centrale en $\\frac{1}{r^{2}}$}$/;"	u	section:Travail, énergie, forces conservatives
 Travail de la force de pesanteur	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Travail de la force de pesanteur}$/;"	u	section:Travail, énergie, forces conservatives
@@ -301,34 +422,89 @@ Travail de la force de rappel d'un ressort	BA1/Mecanique Generale/notes/lectures
 Travail et Puissance d'une force	BA1/Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Travail et Puissance d'une force}$/;"	u	section:Travail, énergie, forces conservatives
 Travail et énérgie cinétique	BA1/Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Travail et énérgie cinétique}$/;"	u	section:Travail, énergie, forces conservatives
 Travail, énergie, forces conservatives	BA1/Mecanique Generale/notes/lectures/lec6.tex	/^\\section{Travail, énergie, forces conservatives}$/;"	s
+Triangle	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^class Triangle{$/;"	c	file:
+Triangle	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		Triangle(double b, double h): base(b), hauteur(h) {}$/;"	f	class:Triangle	file:
+Triangle	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^class Triangle:public Forme {$/;"	c	file:
+Triangle	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		Triangle(const Triangle& t): b(t.b), h(t.h) {}$/;"	f	class:Triangle	file:
+Triangle	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		Triangle(double B=1, double H=1): b(B), h(H) {}$/;"	f	class:Triangle	file:
+Triangle	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^class Triangle: public Figure {$/;"	c	file:
 Trigonometrie	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Trigonometrie}$/;"	s
 Un calcul naif ( avec la série harmonique alternée)	BA1/Analyse I/notes/lectures/lec7.tex	/^\\subsubsection{Un calcul naif ( avec la série harmonique alternée)}$/;"	b	section:Fonctions
 Une base de $Hom_k( V,W) $	BA1/Algebre Lineaire I/notes/lectures/lec13.tex	/^ \\subsection{Une base de $Hom_k( V,W) $}$/;"	u	section:Espaces Vectoriels
 Utilisations de la 2eme derivee	BA1/Analyse I/notes/lectures/lec19.tex	/^\\subsection{Utilisations de la 2eme derivee}$/;"	u	section:Polynome de Taylor et developpements limites
 Valeurs litterales	BA1/Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{Valeurs litterales}$/;"	u	section:Etude de cas
+Vecteur	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^class Vecteur: public Point3D {$/;"	c	file:
 Vecteurs	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Vecteurs}$/;"	s
+Vehicule	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		Vehicule(string m, int d, double pa):marque(m),date(d),prix_achat(pa) {}$/;"	f	class:Vehicule	file:
+Vehicule	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^class Vehicule {$/;"	c	file:
 Vitesse et acceleration d'un point solide	BA1/Mecanique Generale/notes/lectures/lec11.tex	/^\\subsection{Vitesse et acceleration d'un point solide}$/;"	u	section:Rotations Du Solide
 Vitesse et accélération en coordonnées cylindriques	BA1/Mecanique Generale/notes/lectures/lec5.tex	/^\\subsection{Vitesse et accélération en coordonnées cylindriques}$/;"	u	section:Description des rotations spatiales
+Voiture	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		Voiture(string m, int d, double pa,unsigned int c, unsigned int n, double p, unsigned int k)$/;"	f	class:Voiture	file:
+Voiture	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^class Voiture: public Vehicule {$/;"	c	file:
 Voiture en accélération	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Voiture en accélération}$/;"	u	section:Travail, énergie, forces conservatives
 \\@lecture	fancy-preamble.tex	/^    \\subsection*{\\@lecture}$/;"	u
-\\@lecture	preamble.tex	/^    \\subsection*{\\@lecture}$/;"	u
+\\@lecture	preamble.tex	/^    \\subsection*{\\@lecture}$/;"	u	section:Fluides au repos
 \\texttt{auto}	BA1/Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{\\texttt{auto}}$/;"	u	section:Etude de cas
 \\texttt{const} et \\texttt{constexpr}	BA1/Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{ \\texttt{const} et \\texttt{constexpr} }$/;"	u	section:Etude de cas
+_poids	Programmation Orientee Objet/Arendre/S1/Ex1/imc.cc	/^		double _poids;$/;"	m	class:Patient	typeref:typename:double	file:
+_taille	Programmation Orientee Objet/Arendre/S1/Ex1/imc.cc	/^		double _taille;$/;"	m	class:Patient	typeref:typename:double	file:
+ach	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		Article ach;$/;"	m	class:Achat	typeref:typename:Article	file:
 add	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^complexe add(complexe a, complexe b){$/;"	f	typeref:typename:complexe
+add	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		void add(){$/;"	f	class:Magicien	typeref:typename:void	file:
+add	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^		unsigned int add(unsigned int a, unsigned int b) {$/;"	f	class:Groupe	typeref:typename:unsigned int	file:
 addresse	BA1/Introduction a la programmation/Exos/MOOC/S7/Ex2/maison.cc	/^	string addresse;$/;"	m	struct:Maison	typeref:typename:string	file:
+adieux	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		void adieux() {$/;"	f	class:Creature	typeref:typename:void	file:
+affichageDesc	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^void affichageDesc(Forme& f) {$/;"	f	typeref:typename:void
 affiche	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^void affiche(complexe c){$/;"	f	typeref:typename:void
 affiche	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^void affiche(qcm a){$/;"	f	typeref:typename:void
 affiche	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^void affiche(Carte const& carte){$/;"	f	typeref:typename:void
 affiche	BA1/Introduction a la programmation/Exos/MOOC/S7/Ex2/maison.cc	/^void affiche(Personne p){$/;"	f	typeref:typename:void
 affiche	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^void affiche(const Grille& g){$/;"	f	typeref:typename:void
+affiche	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		void affiche() const {$/;"	f	class:Oeuvre	typeref:typename:void	file:
+affiche	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		void affiche() {$/;"	f	class:Exemplaire	typeref:typename:void	file:
+affiche	Programmation Orientee Objet/Exos/S1/Ex3/Point3D.cc	/^		void affiche(){$/;"	f	class:Point3D	typeref:typename:void	file:
+affiche	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		void affiche(ostream & os) const {$/;"	f	class:Vehicule	typeref:typename:void	file:
+affiche	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		void affiche(ostream & os) {$/;"	f	class:Avion	typeref:typename:void	file:
+affiche	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^	void affiche(ostream & os) {$/;"	f	class:Voiture	typeref:typename:void	file:
+affiche	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^		void affiche(){$/;"	f	class:Point3D	typeref:typename:void	file:
+affiche	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		void affiche () const {$/;"	f	class:Carre	typeref:typename:void	file:
+affiche	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		void affiche()  const {$/;"	f	class:Triangle	typeref:typename:void	file:
+affiche	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		void affiche() const {$/;"	f	class:Cercle	typeref:typename:void	file:
+affiche	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^	void affiche() {$/;"	f	class:Dessin	typeref:typename:void	file:
 affiche_arbre	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex5/derivation.cc	/^void affiche_arbre(Arbre * arb){$/;"	f	typeref:typename:void
 affiche_date	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex7/datedepaques.cc	/^void affiche_date(int annee, int j){$/;"	f	typeref:typename:void
 affiche_matrice	BA1/Introduction a la programmation/Exos/MOOC/S5/Ex2/matrices.cc	/^void affiche_matrice(const vector<vector<double>>& M){$/;"	f	typeref:typename:void
 affiche_stats	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex3/stats.cc	/^void affiche_stats(Statistique & stat){$/;"	f	typeref:typename:void
 afficher	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void afficher(int nb, char c)$/;"	f	typeref:typename:void
+afficher	Programmation Orientee Objet/Arendre/S1/Ex1/imc.cc	/^		void afficher(){$/;"	f	class:Patient	typeref:typename:void	file:
+afficher	Programmation Orientee Objet/Arendre/S1/Ex2/tirelire.cc	/^		void afficher() {$/;"	f	class:Tirelire	typeref:typename:void	file:
+afficher	Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^		void afficher() {$/;"	f	class:Souris	typeref:typename:void	file:
+afficher	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^		ostream& afficher(ostream& sortie) const {$/;"	f	class:Construction	typeref:typename:ostream &	file:
+afficher	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^  ostream& afficher(ostream& sortie) const {$/;"	f	class:Brique	typeref:typename:ostream &	file:
+afficher	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^		ostream& afficher(ostream& sortie) const {$/;"	f	class:Construction	typeref:typename:ostream &	file:
+afficher	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^  ostream& afficher(ostream& sortie) const {$/;"	f	class:Brique	typeref:typename:ostream &	file:
+afficher	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  ostream & afficher(ostream & os) {$/;"	f	class:Commemoratif	typeref:typename:ostream &	file:
+afficher	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  ostream & afficher(ostream & os) {$/;"	f	class:Rare	typeref:typename:ostream &	file:
+afficher	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  ostream & afficher(ostream & os) {$/;"	f	class:Timbre	typeref:typename:ostream &	file:
+afficher	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		void afficher() {$/;"	f	class:Creature	typeref:typename:void	file:
+afficher	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		void afficher() {$/;"	f	class:Achat	typeref:typename:void	file:
+afficher	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^	void afficher() {$/;"	f	class:Caisse	typeref:typename:void	file:
+afficher	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^		void afficher() {$/;"	f	class:Livre	typeref:typename:void	file:
+afficherClient	Programmation Orientee Objet/Exos/S2/Ex3/banque1.cc	/^void afficherClient(string nom, string ville,$/;"	f	typeref:typename:void
+afficherClient	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	void afficherClient() {$/;"	f	class:Client	typeref:typename:void	file:
+afficher_auteurs	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		void afficher_auteurs(bool b=false) {$/;"	f	class:Bibliotheque	typeref:typename:void	file:
 afficher_couleurs	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void afficher_couleurs(char c1, char c2, char c3, char c4)$/;"	f	typeref:typename:void
 afficher_coup	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void afficher_coup(char c1, char c2, char c3, char c4,$/;"	f	typeref:typename:void
+afficher_melange	Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^void afficher_melange(Flacon const& f1, Flacon const& f2)$/;"	f	typeref:typename:void
 afficher_reponses	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void afficher_reponses(char c1, char c2, char c3, char c4,$/;"	f	typeref:typename:void
+affichert	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  ostream & affichert(ostream & os) {$/;"	f	class:Timbre	typeref:typename:ostream &	file:
+age	Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^		unsigned int age;$/;"	m	class:Souris	typeref:typename:unsigned int	file:
+age	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  unsigned int age() {$/;"	f	class:Timbre	typeref:typename:unsigned int	file:
+age	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		int age;$/;"	m	class:Assistant	typeref:typename:int	file:
+age	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		int age;$/;"	m	class:Spectateur	typeref:typename:int	file:
+aire	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		double aire() {$/;"	f	class:Cercle	typeref:typename:double	file:
+aire	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		double aire() {$/;"	f	class:Triangle	typeref:typename:double	file:
+ajouteFigure	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^	void ajouteFigure(Figure const& fig) {$/;"	f	class:Dessin	typeref:typename:void	file:
 ajoute_unique	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^void ajoute_unique(vector<int>& ensemble, int valeur)$/;"	f	typeref:typename:void
 ajouter_chiffre_droit	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex6/lireetdire.cc	/^void ajouter_chiffre_droit(int& nombre, int chiffre)$/;"	f	typeref:typename:void
 all	BA1/Introduction a la programmation/Exos/MOOC/S2/Ex1/Makefile	/^all:$/;"	t
@@ -371,11 +547,44 @@ all	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex1/Makefile	/^all:$/;"	t
 all	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex2/Makefile	/^all:$/;"	t
 all	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex3/Makefile	/^all:$/;"	t
 all	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex4/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Arendre/S1/Ex1/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Arendre/S1/Ex2/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Arendre/S2/Ex1/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Arendre/S2/Ex2/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Arendre/S3/Ex1/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Arendre/S3/Ex2/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Arendre/S4/Ex1/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Arendre/S4/Ex2/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S1/Ex1/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S1/Ex2/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S1/Ex3/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S1/Ex4/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S2/Ex1/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S2/Ex2/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S2/Ex3/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S2/Ex4/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S3/Ex1/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S3/Ex2/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S4/Ex1/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S4/Ex2/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S4/Ex3/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S5/Ex1/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S5/Ex2/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S5/Ex3/Makefile	/^all:$/;"	t
+all	Programmation Orientee Objet/Exos/S5/Ex4/Makefile	/^all:$/;"	t
+an	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^const int an=2021;$/;"	v	typeref:typename:const int
+annee	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  unsigned int annee;$/;"	m	class:Timbre	typeref:typename:unsigned int	file:
+annonce	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		void annonce(){$/;"	f	class:Magicien	typeref:typename:void	file:
 apparier	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void apparier(char test,char &cand1,char &cand2, char &cand3, int &num)$/;"	f	typeref:typename:void
+argent	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		int argent;$/;"	m	class:Assistant	typeref:typename:int	file:
+argent	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		int argent;$/;"	m	class:Spectateur	typeref:typename:int	file:
+aut	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		const Auteur & aut;$/;"	m	class:Oeuvre	typeref:typename:const Auteur &	file:
 auteur	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^string auteur;$/;"	m	struct:lettre	typeref:typename:string	file:
+auteur	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^		string auteur;$/;"	m	class:Livre	typeref:typename:string	file:
 axiom:axiome_de_completude	BA1/Analyse I/notes/lectures/lec2.tex	/^\\begin{axiom}[Axiome de completude]\\label{axiom:axiome_de_completude}$/;"	l
 axiom:nombres_reels	BA1/Analyse I/notes/lectures/lec1.tex	/^\\begin{axiom}[Nombres Reels]\\index{Nombres Reels}\\label{axiom:nombres_reels}$/;"	l
 axiom:nombres_reels_ii	BA1/Analyse I/notes/lectures/lec1.tex	/^\\begin{axiom}[Nombres Reels II]\\index{Nombres Reels II}\\label{axiom:nombres_reels_ii}$/;"	l
+b	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		double b;$/;"	m	class:Triangle	typeref:typename:double	file:
 base	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^     inkscape:snap-global="false">$/;"	i
 base	BA1/Analyse I/notes/figures/fonction1.svg	/^     inkscape:document-rotation="0">$/;"	i
 base	BA1/Analyse I/notes/figures/fonction2.svg	/^     inkscape:snap-global="false">$/;"	i
@@ -409,7 +618,21 @@ base	BA1/Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^    
 base	BA1/Structures Algebriques/notes/figures/qq.svg	/^     inkscape:window-maximized="1">$/;"	i
 base	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^     inkscape:document-rotation="0">$/;"	i
 base	BA1/Structures Algebriques/notes/figures/test.svg	/^     inkscape:window-maximized="1">$/;"	i
+base	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		double base;$/;"	m	class:Triangle	typeref:typename:double	file:
+bestseller	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^		bool bestseller;$/;"	m	class:Livre	typeref:typename:bool	file:
 binaire	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^bool binaire(Carte const& carte){$/;"	f	typeref:typename:bool
+bis	Programmation Orientee Objet/Exos/S2/Ex1/apero.cc	/^	void bis() {$/;"	f	class:Apero	typeref:typename:void	file:
+boucler	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	void boucler() {$/;"	f	class:Client	typeref:typename:void	file:
+bouclerCompte	Programmation Orientee Objet/Exos/S2/Ex3/banque1.cc	/^double bouclerCompte(double solde, double taux) {$/;"	f	typeref:typename:double
+bouclerCompte1	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	void bouclerCompte1() {$/;"	f	class:Client	typeref:typename:void	file:
+bouclerCompte2	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	void bouclerCompte2() {$/;"	f	class:Client	typeref:typename:void	file:
+boucler_et_afficher	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	void boucler_et_afficher(vector<Client> v){$/;"	f	typeref:typename:void
+c	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		double c;$/;"	m	class:Carre	typeref:typename:double	file:
+c	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^	Couleur c;$/;"	m	class:Joueur	typeref:typename:Couleur	file:
+calculePrix	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		void calculePrix() {$/;"	f	class:Avion	typeref:typename:void	file:
+calculePrix	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		void calculePrix() {$/;"	f	class:Vehicule	typeref:typename:void	file:
+calculePrix	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^	void calculePrix() {$/;"	f	class:Voiture	typeref:typename:void	file:
+calculer_prix	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^		double calculer_prix() {$/;"	f	class:Livre	typeref:typename:double	file:
 cc	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://creativecommons.org/ns#
 cc	BA1/Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://creativecommons.org/ns#
 cc	BA1/Analyse I/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://creativecommons.org/ns#
@@ -443,17 +666,33 @@ cc	BA1/Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^   sod
 cc	BA1/Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://creativecommons.org/ns#
 cc	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://creativecommons.org/ns#
 cc	BA1/Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://creativecommons.org/ns#
+centre	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^		Coord centre;$/;"	m	class:Cercle	typeref:typename:Coord	file:
 check_autour	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^int check_autour(Carte carte, size_t i, size_t j){$/;"	f	typeref:typename:int
+clonee	Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^		bool clonee=false;$/;"	m	class:Souris	typeref:typename:bool	file:
 code	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex4/cesar.cc	/^char code(char c, int d){$/;"	f	typeref:typename:char
 code	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex4/cesar.cc	/^string code(string s,int  d){$/;"	f	typeref:typename:string
 collecte_statistique	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex3/stats.cc	/^unsigned long int collecte_statistique(Statistique& stat, ifstream& fich){$/;"	f	typeref:typename:unsigned long int
+combat	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^void combat(Dragon & d, Hydre & h) {$/;"	f	typeref:typename:void
+compare	Programmation Orientee Objet/Exos/S1/Ex3/Point3D.cc	/^		bool compare(Point3D p){$/;"	f	class:Point3D	typeref:typename:bool	file:
+compare	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^		bool compare(Point3D p){$/;"	f	class:Point3D	typeref:typename:bool	file:
 complexe	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^struct complexe{$/;"	s	file:
 compte	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^unsigned int compte(const Grille & g, size_t l, size_t c,int  dl, int dc){$/;"	f	typeref:typename:unsigned int
+compter_exemplaires	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		int compter_exemplaires(Oeuvre & o) const {$/;"	f	class:Bibliotheque	typeref:typename:int	file:
 construire_nouveau	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex5/derivation.cc	/^void construire_nouveau(char valeur, Arbre * arbre1, Arbre * arbre2, Arbre &arbre_final){$/;"	f	typeref:typename:void
+contenu	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^		vector<vector<vector<Brique>>> contenu;$/;"	m	class:Construction	typeref:typename:vector<vector<vector<Brique>>>	file:
+contenu	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^		vector<vector<vector<Brique>>> contenu;$/;"	m	class:Construction	typeref:typename:vector<vector<vector<Brique>>>	file:
 convexite_lignes	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^bool convexite_lignes(Carte& carte)$/;"	f	typeref:typename:bool
 convexite_lignes	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^bool convexite_lignes(Carte& carte, vector<int> const& labels_bords)$/;"	f	typeref:typename:bool
+copie	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		Figure*  copie() const {$/;"	f	class:Triangle	typeref:typename:Figure *	file:
+copie	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		Figure* copie() const {$/;"	f	class:Carre	typeref:typename:Figure *	file:
+copie	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		Figure* copie() const {$/;"	f	class:Cercle	typeref:typename:Figure *	file:
+couleur	Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^		string couleur;$/;"	m	class:Souris	typeref:typename:string	file:
+couleur	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^  Couleur couleur ;$/;"	m	class:Brique	typeref:typename:Couleur	file:
+couleur	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^  Couleur couleur ;$/;"	m	class:Brique	typeref:typename:Couleur	file:
 couleur_valide	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^bool couleur_valide(char c)$/;"	f	typeref:typename:bool
 creer	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^Examen creer(ifstream& fich){$/;"	f	typeref:typename:Examen
+cylindree	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		unsigned int cylindree;$/;"	m	class:Voiture	typeref:typename:unsigned int	file:
+date	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		int date;$/;"	m	class:Vehicule	typeref:typename:int	file:
 date_Paques	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex7/datedepaques.cc	/^int date_Paques(int an){$/;"	f	typeref:typename:int
 date_jour	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^int date_jour;$/;"	m	struct:lettre	typeref:typename:int	file:
 date_mois	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^int date_mois;$/;"	m	struct:lettre	typeref:typename:int	file:
@@ -497,6 +736,16 @@ def:divison_dentiers	BA1/Structures Algebriques/notes/lectures/lec1.tex	/^\\begi
 def:notations_bijection	BA1/Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{defn}[Notations Bijection]\\index{notations}\\index{bijectivite}\\label{def:notations_bi/;"	l
 def:notations_injection	BA1/Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{defn}[Notations Injection]\\index{notations}\\index{injectivite}\\label{def:notations_in/;"	l
 def:notations_surjection	BA1/Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{defn}[Notations Surjection]\\index{notations}\\index{surjectivite}\\label{def:notations_/;"	l
+defn:Anneau integreanneau_integre	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\begin{defn}[Anneau integre]\\label{defn:Anneau integreanneau_integre}$/;"	l
+defn:Anneau integreanneau_integre	current-course/notes/lectures/lec1.tex	/^\\begin{defn}[Anneau integre]\\label{defn:Anneau integreanneau_integre}$/;"	l
+defn:Binomial coefficientbinomial_coefficient	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[Binomial coefficient]\\label{defn:Binomial coefficientbinomial_coefficient}$/;"	l
+defn:Cartesion productcartesion_product	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[Cartesion product]\\label{defn:Cartesion productcartesion_product}$/;"	l
+defn:Centre d'un anneaucentre_d_un_anneau	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\begin{defn}[Centre d'un anneau]\\label{defn:Centre d'un anneaucentre_d_un_anneau}$/;"	l
+defn:Centre d'un anneaucentre_d_un_anneau	current-course/notes/lectures/lec1.tex	/^\\begin{defn}[Centre d'un anneau]\\label{defn:Centre d'un anneaucentre_d_un_anneau}$/;"	l
+defn:Disjoint uniondisjoint_union	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[Disjoint union]\\label{defn:Disjoint uniondisjoint_union}$/;"	l
+defn:First Numbersfirst_numbers	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[First Numbers]\\label{defn:First Numbersfirst_numbers}$/;"	l
+defn:Polynomepolynome	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\begin{defn}[Polynome]\\label{defn:Polynomepolynome}$/;"	l
+defn:Polynomepolynome	current-course/notes/lectures/lec1.tex	/^\\begin{defn}[Polynome]\\label{defn:Polynomepolynome}$/;"	l
 defn:_a_algebre	BA1/Algebre Lineaire I/notes/lectures/lec7.tex	/^\\begin{defn}[$A$-Algebre]\\index{$A$-Algebre}\\label{defn:_a_algebre}$/;"	l
 defn:algorithme_d_euclide	BA1/Structures Algebriques/notes/lectures/lec3.tex	/^\\begin{defn}[Algorithme d'Euclide]\\index{Algorithme d'Euclide}\\label{defn:algorithme_d_euclid/;"	l
 defn:anneaux	BA1/Algebre Lineaire I/notes/lectures/lec5.tex	/^\\begin{defn}[Anneaux]\\index{Anneaux}\\label{defn:anneaux}$/;"	l
@@ -582,6 +831,7 @@ defs2	BA1/Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^   
 defs2	BA1/Structures Algebriques/notes/figures/qq.svg	/^     id="defs2" \/>$/;"	i
 defs2	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^     id="defs2">$/;"	i
 defs2	BA1/Structures Algebriques/notes/figures/test.svg	/^     id="defs2" \/>$/;"	i
+degre	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^		Degre degre() const {$/;"	f	class:Polynome	typeref:typename:Degre	file:
 degres	BA1/Structures Algebriques/Devoirs/S1/sol.tex	/^\\begin{lemma}\\label{degres}$/;"	l
 demander_annee	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex7/datedepaques.cc	/^int demander_annee(){$/;"	f	typeref:typename:int
 demander_et_jouer	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^void demander_et_jouer(Couleur joueur, Grille &g){$/;"	f	typeref:typename:void
@@ -590,16 +840,24 @@ demander_fichier	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^b
 demander_nombre	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex1/proto.cc	/^int demander_nombre(int inf, int max){$/;"	f	typeref:typename:int
 demander_nombre	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex3/cos.cc	/^int demander_nombre(){$/;"	f	typeref:typename:int
 demenage	BA1/Introduction a la programmation/Exos/MOOC/S7/Ex2/maison.cc	/^void demenage(Personne &p, Maison n){$/;"	f	typeref:typename:void
+deplacer	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		void deplacer(int a) {$/;"	f	class:Creature	typeref:typename:void	file:
 derivation	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex5/derivation.cc	/^Arbre derivation(Arbre * expr, char d){$/;"	f	typeref:typename:Arbre
+description	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		virtual void description() {$/;"	f	class:Forme	typeref:typename:void	file:
+description	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		void description() {$/;"	f	class:Cercle	typeref:typename:void	file:
 differens types de complexite	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{ differens types de complexite }$/;"	u	section:Definition formelle des algorithmes
 dire_chiffre	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex6/lireetdire.cc	/^void dire_chiffre(int& nombre, int repetitions_chiffre, int chiffre)$/;"	f	typeref:typename:void
+distance	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^int distance(int x, int y)$/;"	f	typeref:typename:int
 distribution	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^std::uniform_int_distribution<int> distribution;$/;"	v	typeref:typename:std::uniform_int_distribution<int>
 div	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^complexe div(complexe a, complexe b){$/;"	f	typeref:typename:complexe
+div	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^		unsigned int div(unsigned int a, unsigned int b) {$/;"	f	class:Corps	typeref:typename:unsigned int	file:
+dose_poison_	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		int dose_poison_;$/;"	m	class:Hydre	typeref:typename:int	file:
 droite	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex5/derivation.cc	/^	Arbre * droite;$/;"	m	struct:Arbre	typeref:typename:Arbre *	file:
 e1	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^	string e1;$/;"	m	struct:Match	typeref:typename:string	file:
 e2	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^	string e2;$/;"	m	struct:Match	typeref:typename:string	file:
 echange	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex2/echange.cc	/^void echange(int &i, int &j){$/;"	f	typeref:typename:void
+eclore	Programmation Orientee Objet/Exos/S2/Ex2/poeme.cc	/^	void eclore() {$/;"	f	class:Fleur	typeref:typename:void	file:
 effacer_etang	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^void effacer_etang(vector<int>& tab){$/;"	f	typeref:typename:void
+el	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		vector<Figure*> el;$/;"	m	class:Dessin	typeref:typename:vector<Figure * >	file:
 ellipse1061	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^       ry="5.7737026" \/>$/;"	i
 ellipse833	BA1/Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^         ry="11.778049" \/>$/;"	i
 ellipse833	BA1/Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^           ry="10.832859" \/>$/;"	i
@@ -624,10 +882,22 @@ ellipse881	BA1/Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^  
 ellipse883	BA1/Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^           ry="10.832859" \/>$/;"	i
 ellipse887	BA1/Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^           ry="10.832859" \/>$/;"	i
 ellipse889	BA1/Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^           ry="10.832859" \/>$/;"	i
+empoisonne	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		void empoisonne(Creature& b) {$/;"	f	class:Hydre	typeref:typename:void	file:
+en_solde	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		bool en_solde;$/;"	m	class:Article	typeref:typename:bool	file:
+eps	Programmation Orientee Objet/Exos/S1/Ex3/Point3D.cc	/^#define eps /;"	d	file:
+eps	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^#define eps /;"	d	file:
+eps	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^#define eps /;"	d	file:
+esperance_vie	Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^		unsigned int esperance_vie;$/;"	m	class:Souris	typeref:typename:unsigned int	file:
+estInterieur	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^		bool estInterieur(double x, double y) const{$/;"	f	class:Cercle	typeref:typename:bool	file:
 est_ce_gagne	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^bool est_ce_gagne(Couleur joueur,const Grille &g){$/;"	f	typeref:typename:bool
+est_isocele	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^		bool est_isocele(){$/;"	f	class:Triangle	typeref:typename:bool	file:
 est_vide	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex5/derivation.cc	/^	bool est_vide;$/;"	m	struct:Arbre	typeref:typename:bool	file:
+etiquette	Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^  ostream& etiquette(ostream& sortie) const {$/;"	f	class:Flacon	typeref:typename:ostream &	file:
+evolue	Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^		void evolue() {$/;"	f	class:Souris	typeref:typename:void	file:
 exemple:cas_de_relation_d_equivalence	BA1/Structures Algebriques/notes/lectures/lec2.tex	/^\\begin{exemple}[Cas de relation d'equivalence]\\index{Cas de relation d'equivalence}\\label{exe/;"	l
+facteurs	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^		vector<double> facteurs;$/;"	m	class:Polynome	typeref:typename:vector<double>	file:
 factorielle	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex3/cos.cc	/^double factorielle(int k){$/;"	f	typeref:typename:double
+faiblir	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		void faiblir(int p) {$/;"	f	class:Creature	typeref:typename:void	file:
 fib	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex4/fibonacci.cc	/^int fib(int n){$/;"	f	typeref:typename:int
 fig:cercletrigo	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^    \\label{fig:cercletrigo}$/;"	l
 fig:curviligne	BA1/Mecanique Generale/notes/lectures/lec4.tex	/^    \\label{fig:curviligne}$/;"	l
@@ -652,6 +922,9 @@ fig:schemacomposition	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^    \\lab
 fig:trajectoire	BA1/Mecanique Generale/notes/lectures/lec4.tex	/^    \\label{fig:trajectoire}$/;"	l
 fig:types-d'ammortissement	BA1/Mecanique Generale/notes/lectures/lec3.tex	/^    \\label{fig:types-d'ammortissement}$/;"	l
 fin	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^size_t fin;$/;"	m	struct:SousSequence	typeref:typename:size_t	file:
+force_	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		int force_;$/;"	m	class:Creature	typeref:typename:int	file:
+forme	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^  Forme   forme   ;$/;"	m	class:Brique	typeref:typename:Forme	file:
+forme	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^  Forme   forme   ;$/;"	m	class:Brique	typeref:typename:Forme	file:
 g1004	BA1/Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^         id="g1004">$/;"	i
 g1015	BA1/Structures Algebriques/Devoirs/S6/figures/diagramme.svg	/^         id="g1015">$/;"	i
 g1017	BA1/Mecanique Generale/notes/figures/curviligne2.svg	/^         id="g1017">$/;"	i
@@ -726,9 +999,50 @@ g980	BA1/Structures Algebriques/notes/figures/diagrammes-produits.svg	/^        
 g987	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^         id="g987">$/;"	i
 g991	BA1/Mecanique Generale/notes/figures/trajectoire.svg	/^         id="g991">$/;"	i
 g993	BA1/Mecanique Generale/notes/figures/curviligne.svg	/^         id="g993">$/;"	i
+gagnant	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^		Couleur gagnant() {$/;"	f	class:Jeu	typeref:typename:Couleur	file:
 gagne	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^bool gagne(char c1, char c2, char c3, char c4,$/;"	f	typeref:typename:bool
+gagne_horiz	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^		bool gagne_horiz(Couleur c) {$/;"	f	class:Jeu	typeref:typename:bool	file:
+gagne_vert	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^		bool gagne_vert(Couleur c) {$/;"	f	class:Jeu	typeref:typename:bool	file:
 gauche	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex5/derivation.cc	/^	Arbre * gauche;$/;"	m	struct:Arbre	typeref:typename:Arbre *	file:
 generelettre	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^void generelettre(lettre test){$/;"	f	typeref:typename:void
+getAuteur	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		const Auteur & getAuteur() const{$/;"	f	class:Oeuvre	typeref:typename:const Auteur &	file:
+getCentre	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^		void getCentre(double& x, double& y) const{$/;"	f	class:Cercle	typeref:typename:void	file:
+getCont	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^		vector<vector<vector<Brique>>> getCont() const {$/;"	f	class:Construction	typeref:typename:vector<vector<vector<Brique>>>	file:
+getCont	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^		vector<vector<vector<Brique>>> getCont() const {$/;"	f	class:Construction	typeref:typename:vector<vector<vector<Brique>>>	file:
+getFacteurs	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^		vector<double> getFacteurs() const{$/;"	f	class:Polynome	typeref:typename:vector<double>	file:
+getHauteur	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^		unsigned int getHauteur() const {$/;"	f	class:Construction	typeref:typename:unsigned int	file:
+getHauteur	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^		unsigned int getHauteur() const {$/;"	f	class:Construction	typeref:typename:unsigned int	file:
+getLangue	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		string getLangue() const {$/;"	f	class:Oeuvre	typeref:typename:string	file:
+getMontant	Programmation Orientee Objet/Arendre/S1/Ex2/tirelire.cc	/^		double getMontant(){$/;"	f	class:Tirelire	typeref:typename:double	file:
+getNom	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		string getNom() const {$/;"	f	class:Auteur	typeref:typename:string	file:
+getNom	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		string getNom() {$/;"	f	class:Bibliotheque	typeref:typename:string	file:
+getNom	Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^  string getNom() {$/;"	f	class:Flacon	typeref:typename:string	file:
+getOeuvre	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		 Oeuvre * getOeuvre() const{$/;"	f	class:Exemplaire	typeref:typename:Oeuvre *	file:
+getPrix	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		bool getPrix() const {$/;"	f	class:Auteur	typeref:typename:bool	file:
+getProf	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^	unsigned int getProf() const {$/;"	f	class:Construction	typeref:typename:unsigned int	file:
+getTitre	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		string getTitre() const{$/;"	f	class:Oeuvre	typeref:typename:string	file:
+getVol	Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^  double getVol() {$/;"	f	class:Flacon	typeref:typename:double	file:
+get_action	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		bool get_action() {$/;"	f	class:Article	typeref:typename:bool	file:
+get_age	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		void get_age(){$/;"	f	class:Spectateur	typeref:typename:void	file:
+get_age	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		void get_age(int a){$/;"	f	class:Assistant	typeref:typename:void	file:
+get_argent	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		void get_argent(){$/;"	f	class:Spectateur	typeref:typename:void	file:
+get_argent	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		void get_argent(int dollar){$/;"	f	class:Assistant	typeref:typename:void	file:
+get_coeff	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^		double get_coeff(Degre d) const {$/;"	f	class:Polynome	typeref:typename:double	file:
+get_el	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^		Brique get_el(unsigned int i, unsigned int j, unsigned int k ) const {$/;"	f	class:Construction	typeref:typename:Brique	file:
+get_el	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^		Brique get_el(unsigned int i, unsigned int j, unsigned int k ) const {$/;"	f	class:Construction	typeref:typename:Brique	file:
+get_nom	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		string get_nom() {$/;"	f	class:Article	typeref:typename:string	file:
+get_prix	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		double get_prix() {$/;"	f	class:Achat	typeref:typename:double	file:
+get_prix	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		double get_prix(){$/;"	f	class:Article	typeref:typename:double	file:
+get_tout	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^	vector<Achat> get_tout(){$/;"	f	class:Caddie	typeref:typename:vector<Achat>	file:
+getpH	Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^  double getpH() {$/;"	f	class:Flacon	typeref:typename:double	file:
+getx	Programmation Orientee Objet/Exos/S1/Ex3/Point3D.cc	/^		double getx(){$/;"	f	class:Point3D	typeref:typename:double	file:
+getx	Programmation Orientee Objet/Exos/S3/Ex1/complexe.cc	/^		double getx() {$/;"	f	class:Complexe	typeref:typename:double	file:
+getx	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^		double getx(){$/;"	f	class:Point3D	typeref:typename:double	file:
+gety	Programmation Orientee Objet/Exos/S1/Ex3/Point3D.cc	/^		double gety(){$/;"	f	class:Point3D	typeref:typename:double	file:
+gety	Programmation Orientee Objet/Exos/S3/Ex1/complexe.cc	/^		double gety() {$/;"	f	class:Complexe	typeref:typename:double	file:
+gety	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^		double gety(){$/;"	f	class:Point3D	typeref:typename:double	file:
+getz	Programmation Orientee Objet/Exos/S1/Ex3/Point3D.cc	/^		double getz(){$/;"	f	class:Point3D	typeref:typename:double	file:
+getz	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^		double getz(){$/;"	f	class:Point3D	typeref:typename:double	file:
 grid815	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^       dotted="false" \/>$/;"	i
 grid815	BA1/Analyse I/notes/figures/fonction1.svg	/^       dotted="false" \/>$/;"	i
 grid815	BA1/Analyse I/notes/figures/fonction2.svg	/^       dotted="false" \/>$/;"	i
@@ -762,8 +1076,18 @@ grid815	BA1/Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^ 
 grid815	BA1/Structures Algebriques/notes/figures/qq.svg	/^       dotted="false" \/>$/;"	i
 grid815	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^       dotted="false" \/>$/;"	i
 grid815	BA1/Structures Algebriques/notes/figures/test.svg	/^       dotted="false" \/>$/;"	i
+h	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		double h;$/;"	m	class:Triangle	typeref:typename:double	file:
+hauteur	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		double hauteur;$/;"	m	class:Triangle	typeref:typename:double	file:
 i	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^	double i;$/;"	m	struct:complexe	typeref:typename:double	file:
 i	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^	int i;$/;"	m	struct:Position	typeref:typename:int	file:
+imc	Programmation Orientee Objet/Arendre/S1/Ex1/imc.cc	/^		double imc(){$/;"	f	class:Patient	typeref:typename:double	file:
+init	Programmation Orientee Objet/Arendre/S1/Ex1/imc.cc	/^		void init(double p, double t){$/;"	f	class:Patient	typeref:typename:void	file:
+init	Programmation Orientee Objet/Exos/S1/Ex3/Point3D.cc	/^		void init(double a, double b, double c){$/;"	f	class:Point3D	typeref:typename:void	file:
+init	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^		void init(Point a, Point b, Point c){$/;"	f	class:Triangle	typeref:typename:void	file:
+init	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^		void init(double a, double b, double c){$/;"	f	class:Point3D	typeref:typename:void	file:
+init1	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^		void init1(double a, double b,double c){$/;"	f	class:Triangle	typeref:typename:void	file:
+init2	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^		void init2(double a, double b,double c){$/;"	f	class:Triangle	typeref:typename:void	file:
+init3	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^		void init3(double a, double b,double c){$/;"	f	class:Triangle	typeref:typename:void	file:
 initialise	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^void initialise(Grille &g){$/;"	f	typeref:typename:void
 initialise_statistique	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex3/stats.cc	/^void initialise_statistique(Statistique& stat){$/;"	f	typeref:typename:void
 inkscape	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
@@ -799,10 +1123,16 @@ inkscape	BA1/Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^
 inkscape	BA1/Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inkscape	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inkscape	BA1/Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
+inv	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^		unsigned int inv(unsigned int a) {$/;"	f	class:Corps	typeref:typename:unsigned int	file:
 j	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^	int j;$/;"	m	struct:Position	typeref:typename:int	file:
 jaune	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^enum Couleur { vide,rouge, jaune};$/;"	e	enum:Couleur	file:
+jaune	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^enum Couleur { rouge, jaune, vide};$/;"	e	enum:Couleur	file:
 joue	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^bool joue(Grille &g, size_t i, Couleur c){$/;"	f	typeref:typename:bool
 jouer	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void jouer(int nbmax=8)$/;"	f	typeref:typename:void
+jouer	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^		bool jouer(int nbcol, Couleur c) {$/;"	f	class:Jeu	typeref:typename:bool	file:
+jouer	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^		void jouer(Jeu& j) {$/;"	f	class:Humain	typeref:typename:void	file:
+kil	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		unsigned int kil;$/;"	m	class:Voiture	typeref:typename:unsigned int	file:
+langue	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		string langue;$/;"	m	class:Oeuvre	typeref:typename:string	file:
 layer1	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^     transform="translate(0,-177)">$/;"	i
 layer1	BA1/Analyse I/notes/figures/fonction1.svg	/^     transform="translate(0,-177)">$/;"	i
 layer1	BA1/Analyse I/notes/figures/fonction2.svg	/^     transform="translate(0,-177)">$/;"	i
@@ -849,7 +1179,9 @@ lignes_max	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex5/tableaux.cc	/^ve
 lire_couleur	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^char lire_couleur()$/;"	f	typeref:typename:char
 lire_et_dire	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex6/lireetdire.cc	/^int lire_et_dire(int nombre)$/;"	f	typeref:typename:int
 lire_matrice	BA1/Introduction a la programmation/Exos/MOOC/S5/Ex2/matrices.cc	/^vector<vector<double>> lire_matrice(){$/;"	f	typeref:typename:vector<vector<double>>
+lister_exemplaires	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		void lister_exemplaires(string langue="") {$/;"	f	class:Bibliotheque	typeref:typename:void	file:
 longueur_cloture	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^double longueur_cloture(Carte const& carte, double echelle= 2.5){$/;"	f	typeref:typename:double
+longueur_cou_	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		int longueur_cou_;$/;"	m	class:Hydre	typeref:typename:int	file:
 main	BA1/Introduction a la programmation/Exos/MOOC/S1/Ex1/age.cc	/^int main(){$/;"	f	typeref:typename:int
 main	BA1/Introduction a la programmation/Exos/MOOC/S1/Ex2/fondue.cpp	/^int main(){$/;"	f	typeref:typename:int
 main	BA1/Introduction a la programmation/Exos/MOOC/S1/Ex3/calcul.cc	/^int main(){$/;"	f	typeref:typename:int
@@ -895,6 +1227,30 @@ main	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex3/stats.cc	/^int main(){
 main	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^int main(){$/;"	f	typeref:typename:int
 main	BA1/Introduction a la programmation/Exos/MOOCnnt/S1/Ex1/ex1.cpp	/^int main(){$/;"	f	typeref:typename:int
 main	BA1/Introduction a la programmation/Exos/MOOCnnt/S1/Ex2/ex2.cpp	/^int main()$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Arendre/S1/Ex1/imc.cc	/^int main()$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^int main()$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^int main()$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^int main()$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^int main()$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^int main()$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^int main()$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^int main()$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S1/Ex3/Point3D.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S2/Ex1/apero.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S2/Ex2/poeme.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S2/Ex3/banque1.cc	/^int main()$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^int main()$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S3/Ex1/complexe.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^int main()$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^int main(){$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^int main() {$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^int main() {$/;"	f	typeref:typename:int
+main	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^int main(){$/;"	f	typeref:typename:int
 maison	BA1/Introduction a la programmation/Exos/MOOC/S7/Ex2/maison.cc	/^	Maison* maison;$/;"	m	struct:Personne	typeref:typename:Maison *	file:
 marker-arrow-0.5308	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^       markerWidth="0.911">$/;"	d
 marker-arrow-0.5308	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^       markerWidth="0.911">$/;"	i
@@ -1006,6 +1362,8 @@ marker-arrow-0.5308-7	BA1/Structures Algebriques/notes/figures/diagrammes-produi
 marker-arrow-0.5308-7	BA1/Structures Algebriques/notes/figures/diagrammes-produits.svg	/^       markerWidth="0.911">$/;"	i
 marker-arrow-0.5308-75	BA1/Mecanique Generale/notes/figures/repere-droit.svg	/^       markerWidth="0.911">$/;"	d
 marker-arrow-0.5308-75	BA1/Mecanique Generale/notes/figures/repere-droit.svg	/^       markerWidth="0.911">$/;"	i
+marque	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		string marque;$/;"	m	class:Vehicule	typeref:typename:string	file:
+masc	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	  bool masc;$/;"	m	class:Client	typeref:typename:bool	file:
 message_gagne	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void message_gagne(int nb_coups)$/;"	f	typeref:typename:void
 message_perdu	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void message_perdu(char c1, char c2, char c3, char c4)$/;"	f	typeref:typename:void
 metadata5	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^     id="metadata5">$/;"	i
@@ -1045,7 +1403,23 @@ min2	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex5/min2.cc	/^double min2(
 min3	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex5/min2.cc	/^double min3(double a, double b, double c){$/;"	f	typeref:typename:double
 mult	BA1/Introduction a la programmation/Exos/MOOC/S5/Ex2/matrices.cc	/^vector<vector<double>> mult(vector<vector<double>> A, vector<vector<double>> B){$/;"	f	typeref:typename:vector<vector<double>>
 mult	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^complexe mult(complexe a, complexe b){$/;"	f	typeref:typename:complexe
+mult	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^		unsigned int mult(unsigned int a, unsigned int b) {$/;"	f	class:Anneau	typeref:typename:unsigned int	file:
+nb_ex	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^		unsigned int nb_ex;$/;"	m	class:Rare	typeref:typename:unsigned int	file:
+nb_exemplaires	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^		unsigned int nb_exemplaires() {$/;"	f	class:Rare	typeref:typename:unsigned int	file:
+nb_heure	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		unsigned int nb_heure;$/;"	m	class:Avion	typeref:typename:unsigned int	file:
+nb_magique	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		int nb_magique;$/;"	m	class:Assistant	typeref:typename:int	file:
+nb_pages	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^		int nb_pages;$/;"	m	class:Livre	typeref:typename:int	file:
+nb_portes	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		unsigned int nb_portes;$/;"	m	class:Voiture	typeref:typename:unsigned int	file:
+niveau_	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		int niveau_;$/;"	m	class:Creature	typeref:typename:int	file:
 nom	BA1/Introduction a la programmation/Exos/MOOC/S7/Ex2/maison.cc	/^	string nom;$/;"	m	struct:Personne	typeref:typename:string	file:
+nom	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		string nom;$/;"	m	class:Auteur	typeref:typename:string	file:
+nom	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		string nom;$/;"	m	class:Bibliotheque	typeref:typename:string	file:
+nom	Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^  string nom;$/;"	m	class:Flacon	typeref:typename:string	file:
+nom	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  string nom;$/;"	m	class:Timbre	typeref:typename:string	file:
+nom	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	  string nom;$/;"	m	class:Client	typeref:typename:string	file:
+nom	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		string nom;$/;"	m	class:Article	typeref:typename:string	file:
+nom	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^	string nom;$/;"	m	class:Joueur	typeref:typename:string	file:
+nom_	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		string nom_;$/;"	m	class:Creature	typeref:typename:string	file:
 nouvmatch	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^void nouvmatch(Match &m, string eq1, string eq2){$/;"	f	typeref:typename:void
 ns01cb0d3f0101	BA1/Mecanique Generale/notes/figures/cercletrigo.svg	/^   sodipodi:docname="cercletrigo.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns05f30d750101	BA1/Mecanique Generale/notes/figures/oscillateur-harmonique-force.svg	/^   sodipodi:docname="oscillateur-harmonique-force.svg">$/;"	n	uri:http://www.w3.org/2000/svg
@@ -1080,6 +1454,54 @@ nsd3988a6b0101	BA1/Structures Algebriques/notes/figures/machineappl.svg	/^   sod
 nsd8daa76d0101	BA1/Mecanique Generale/notes/figures/produit-vectoriel.svg	/^   sodipodi:docname="produit-vectoriel.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 nse3ea7e440101	BA1/Mecanique Generale/notes/figures/produit-scalaire.svg	/^   sodipodi:docname="produit-scalaire.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 nsefae98740101	BA1/Mecanique Generale/notes/figures/mouvement_central.svg	/^   sodipodi:docname="mouvement_central.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+num	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		int num;$/;"	m	class:Caisse	typeref:typename:int	file:
+num_assistant	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		int num_assistant;$/;"	m	class:Magicien	typeref:typename:int	file:
+oe	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^	Oeuvre * oe;$/;"	m	class:Exemplaire	typeref:typename:Oeuvre *	file:
+operator %	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^const Construction operator%(unsigned int n, Construction const& a)$/;"	f	typeref:typename:const Construction
+operator %	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^const Construction operator%(unsigned int n, Construction const& a)$/;"	f	typeref:typename:const Construction
+operator *	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^const Construction operator*(unsigned int n, Construction const& a)$/;"	f	typeref:typename:const Construction
+operator *	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^const Construction operator*(unsigned int n, Construction const& a)$/;"	f	typeref:typename:const Construction
+operator +	Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^Flacon operator+(Flacon f, Flacon m) {$/;"	f	typeref:typename:Flacon
+operator +	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^const Construction operator+(Construction a, const Construction& b) {$/;"	f	typeref:typename:const Construction
+operator +	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^const Construction operator+(Construction a, const Construction& b) {$/;"	f	typeref:typename:const Construction
+operator +	Programmation Orientee Objet/Exos/S3/Ex1/complexe.cc	/^Complexe & operator+(Complexe a, const Complexe & b) {$/;"	f	typeref:typename:Complexe &
+operator +	Programmation Orientee Objet/Exos/S3/Ex1/complexe.cc	/^Complexe & operator+(const Complexe & b,double a) {$/;"	f	typeref:typename:Complexe &
+operator +	Programmation Orientee Objet/Exos/S3/Ex1/complexe.cc	/^Complexe & operator+(double a, const Complexe & b) {$/;"	f	typeref:typename:Complexe &
+operator +	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^Polynome  operator+(Polynome q,Polynome const & p) {$/;"	f	typeref:typename:Polynome
+operator +	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^const Vecteur operator+(Vecteur a, const Vecteur & b) {$/;"	f	typeref:typename:const Vecteur
+operator +=	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^        void operator+=( const Construction& b) {$/;"	f	class:Construction	typeref:typename:void	file:
+operator +=	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^        void operator+=( const Construction& b) {$/;"	f	class:Construction	typeref:typename:void	file:
+operator -	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^const Construction operator-(Construction a, const Construction& b) {$/;"	f	typeref:typename:const Construction
+operator -	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^const Construction operator-(Construction a, const Construction& b) {$/;"	f	typeref:typename:const Construction
+operator -	Programmation Orientee Objet/Exos/S3/Ex1/complexe.cc	/^Complexe & operator-(Complexe a, const Complexe & b) {$/;"	f	typeref:typename:Complexe &
+operator -	Programmation Orientee Objet/Exos/S3/Ex1/complexe.cc	/^Complexe & operator-(double a,const Complexe & b) {$/;"	f	typeref:typename:Complexe &
+operator -	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^Polynome  operator-(Polynome q,Polynome const & p) {$/;"	f	typeref:typename:Polynome
+operator -	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^	const Vecteur operator-() const {$/;"	f	class:Vecteur	typeref:typename:const Vecteur	file:
+operator -	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^const Vecteur operator-(Vecteur a, const Vecteur & b) {$/;"	f	typeref:typename:const Vecteur
+operator -=	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^        void operator-=( const Construction& b) {$/;"	f	class:Construction	typeref:typename:void	file:
+operator -=	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^        void operator-=( const Construction& b) {$/;"	f	class:Construction	typeref:typename:void	file:
+operator /	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^const Construction operator\/(unsigned int n, Construction const& a)$/;"	f	typeref:typename:const Construction
+operator /	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^const Construction operator\/(unsigned int n, Construction const& a)$/;"	f	typeref:typename:const Construction
+operator <<	Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^ostream& operator<<(ostream& os, Flacon f) {$/;"	f	typeref:typename:ostream &
+operator <<	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^ostream& operator<< (ostream& os, Brique b) {$/;"	f	typeref:typename:ostream &
+operator <<	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^ostream& operator<< (ostream& os, Construction b) {$/;"	f	typeref:typename:ostream &
+operator <<	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^ostream& operator<< (ostream& os, Brique b) {$/;"	f	typeref:typename:ostream &
+operator <<	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^ostream& operator<< (ostream& os, Construction b) {$/;"	f	typeref:typename:ostream &
+operator <<	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^ostream & operator<<(ostream & os, Commemoratif t) {$/;"	f	typeref:typename:ostream &
+operator <<	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^ostream & operator<<(ostream & os, Rare t) {$/;"	f	typeref:typename:ostream &
+operator <<	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^ostream & operator<<(ostream & os, Timbre t) {$/;"	f	typeref:typename:ostream &
+operator <<	Programmation Orientee Objet/Exos/S3/Ex1/complexe.cc	/^ostream& operator<<(ostream& os, Complexe c) {$/;"	f	typeref:typename:ostream &
+operator <<	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^ostream& operator<<(ostream & os, Polynome p) {$/;"	f	typeref:typename:ostream &
+operator ==	Programmation Orientee Objet/Exos/S3/Ex1/complexe.cc	/^	bool operator==(Complexe a) {$/;"	f	class:Complexe	typeref:typename:bool	file:
+operator ^	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^const Construction operator^(Construction a, const Construction& b) {$/;"	f	typeref:typename:const Construction
+operator ^	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^const Construction operator^(Construction a, const Construction& b) {$/;"	f	typeref:typename:const Construction
+operator ^=	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cc	/^		void operator^=(const Construction &c) {$/;"	f	class:Construction	typeref:typename:void	file:
+operator ^=	Programmation Orientee Objet/Arendre/S3/Ex2/construction.cpp	/^		void operator^=(const Construction &c) {$/;"	f	class:Construction	typeref:typename:void	file:
+p	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^	unsigned int p;$/;"	m	class:EnsembleFini	typeref:typename:unsigned int	file:
+p1	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^		Point p1;$/;"	m	class:Triangle	typeref:typename:Point	file:
+p2	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^		Point p2;$/;"	m	class:Triangle	typeref:typename:Point	file:
+p3	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^		Point p3;$/;"	m	class:Triangle	typeref:typename:Point	file:
+pH	Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^  double pH;$/;"	m	class:Flacon	typeref:typename:double	file:
 path1000	BA1/Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^       id="path1000" \/>$/;"	i
 path1002	BA1/Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^           id="path1002" \/>$/;"	i
 path1009	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^       id="path1009" \/>$/;"	i
@@ -1303,14 +1725,28 @@ path987	BA1/Mecanique Generale/notes/figures/trajectoire.svg	/^       id="path98
 path989	BA1/Mecanique Generale/notes/figures/trajectoire.svg	/^           id="path989" \/>$/;"	i
 path991	BA1/Mecanique Generale/notes/figures/curviligne.svg	/^           id="path991" \/>$/;"	i
 path994	BA1/Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^       d="m 92.246253,231.95028 c -0.04836,4.82646 1.721523,10.03603 5.871292,12.82782 2.300585,/;"	i
+pays	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  string pays;$/;"	m	class:Timbre	typeref:typename:string	file:
+perimetre	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^		double perimetre(){$/;"	f	class:Triangle	typeref:typename:double	file:
 personne	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^Personne personne;$/;"	m	struct:lettre	typeref:typename:Personne	file:
 plein	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^bool plein(const Grille& g){$/;"	f	typeref:typename:bool
+poids	Programmation Orientee Objet/Arendre/S1/Ex1/imc.cc	/^		double poids(){$/;"	f	class:Patient	typeref:typename:double	file:
+poids	Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^		double poids;$/;"	m	class:Souris	typeref:typename:double	file:
+points_attaque	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		int points_attaque() {$/;"	f	class:Creature	typeref:typename:int	file:
+points_de_vie_	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		int points_de_vie_;$/;"	m	class:Creature	typeref:typename:int	file:
 politesse	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^string politesse;$/;"	m	struct:lettre	typeref:typename:string	file:
+portee_flamme_	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^	int portee_flamme_;$/;"	m	class:Dragon	typeref:typename:int	file:
 poser_question	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^char poser_question()$/;"	f	typeref:typename:char
 poser_question	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^int poser_question(qcm q){$/;"	f	typeref:typename:int
+position	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		int position() {$/;"	f	class:Creature	typeref:typename:int	file:
+position_	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		int position_;$/;"	m	class:Creature	typeref:typename:int	file:
 pow	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex3/cos.cc	/^double pow(double x, int i){$/;"	f	typeref:typename:double
 prenom	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^string prenom;$/;"	m	struct:Personne	typeref:typename:string	file:
+prime	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		bool prime;$/;"	m	class:Auteur	typeref:typename:bool	file:
 printarr	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex5/tableaux.cc	/^void printarr(vector<vector<int>> t){$/;"	f	typeref:typename:void
+prix	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		double prix;$/;"	m	class:Achat	typeref:typename:double	file:
+prix	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		double prix;$/;"	m	class:Article	typeref:typename:double	file:
+prix_achat	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		double prix_achat;$/;"	m	class:Vehicule	typeref:typename:double	file:
+prix_actuel	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		double prix_actuel;$/;"	m	class:Vehicule	typeref:typename:double	file:
 produit	BA1/Structures Algebriques/Devoirs/S1/sol.tex	/^\\begin{lemma}\\label{produit}$/;"	l
 propo:_mathbb_q_est_dense_dans_mathbb_r_	BA1/Analyse I/notes/lectures/lec2.tex	/^\\begin{propo}[$\\mathbb{Q}$ est dense dans $\\mathbb{R}$]\\index{$\\mathbb{Q}$ est dense dans $/;"	l
 propo:annulation_de_l_element_neutre	BA1/Analyse I/notes/lectures/lec1.tex	/^\\begin{propo}[Annulation de l'element neutre]\\index{Annulation de l'element neutre}\\label{pro/;"	l
@@ -1327,11 +1763,17 @@ propr:bijectivite	BA1/Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{propr
 propr:propriete_des_applications	BA1/Structures Algebriques/notes/lectures/lec2.tex	/^\\begin{propr}[Propriete des applications]\\index{Propriete des applications}\\label{propr:propr/;"	l
 pt1	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^	int pt1;$/;"	m	struct:Match	typeref:typename:int	file:
 pt2	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^	int pt2;$/;"	m	struct:Match	typeref:typename:int	file:
+puiser	Programmation Orientee Objet/Arendre/S1/Ex2/tirelire.cc	/^		void puiser(double d) {$/;"	f	typeref:typename:void
+puissance	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		double puissance;$/;"	m	class:Voiture	typeref:typename:double	file:
 qcm	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^struct qcm{$/;"	s	file:
 qcm	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^struct qcm{$/;"	s	file:
+quant	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		int quant;$/;"	m	class:Achat	typeref:typename:int	file:
 question	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^string question;$/;"	m	struct:qcm	typeref:typename:string	file:
 question	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^string question;$/;"	m	struct:qcm	typeref:typename:string	file:
 r	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^	double r;$/;"	m	struct:complexe	typeref:typename:double	file:
+r	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^		double r;$/;"	m	class:Cercle	typeref:typename:double	file:
+r	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		double r;$/;"	m	class:Cercle	typeref:typename:double	file:
+rayon	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		double rayon;$/;"	m	class:Cercle	typeref:typename:double	file:
 rdf	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	BA1/Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	BA1/Analyse I/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
@@ -1365,12 +1807,23 @@ rdf	BA1/Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^   so
 rdf	BA1/Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	BA1/Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
+remplir	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^	void remplir(Article art, int num=1) {$/;"	f	class:Caddie	typeref:typename:void	file:
 reponses	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^vector<string> reponses;$/;"	m	struct:qcm	typeref:typename:vector<string>	file:
 reponses	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^vector<string> reponses;$/;"	m	struct:qcm	typeref:typename:vector<string>	file:
 rouge	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^enum Couleur { vide,rouge, jaune};$/;"	e	enum:Couleur	file:
+rouge	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^enum Couleur { rouge, jaune, vide};$/;"	e	enum:Couleur	file:
+s	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^	bool s;$/;"	m	class:Exemplaire	typeref:typename:bool	file:
 scalaire	BA1/Introduction a la programmation/Exos/MOOC/S5/Ex1/scalaire.cc	/^double scalaire(vector<double> u, vector<double> v){$/;"	f	typeref:typename:double
+scanner	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^	void scanner(Caddie c){$/;"	f	class:Caisse	typeref:typename:void	file:
+secouer	Programmation Orientee Objet/Arendre/S1/Ex2/tirelire.cc	/^		void secouer() {$/;"	f	typeref:class:Tirelire void
 separer_chiffre_gauche	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex6/lireetdire.cc	/^int separer_chiffre_gauche(int& nombre)$/;"	f	typeref:typename:int
+setCentre	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^		void setCentre(double x, double y) {$/;"	f	class:Cercle	typeref:typename:void	file:
+set_age	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		int set_age(){$/;"	f	class:Spectateur	typeref:typename:int	file:
+set_argent	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		int set_argent(){$/;"	f	class:Spectateur	typeref:typename:int	file:
+set_magie	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		int set_magie(){$/;"	f	class:Assistant	typeref:typename:int	file:
+setnum	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		void setnum(int num){$/;"	f	class:Magicien	typeref:typename:void	file:
 sexe	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^char sexe;$/;"	m	struct:Personne	typeref:typename:char	file:
+simplifie	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^		void simplifie() {$/;"	f	class:Polynome	typeref:typename:void	file:
 sodipodi	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 sodipodi	BA1/Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 sodipodi	BA1/Analyse I/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
@@ -1404,14 +1857,20 @@ sodipodi	BA1/Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^
 sodipodi	BA1/Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 sodipodi	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 sodipodi	BA1/Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
+solde	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		double solde;$/;"	m	class:Article	typeref:typename:double	file:
+solde1	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	  double solde1;$/;"	m	class:Client	typeref:typename:double	file:
+solde2	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	  double solde2;$/;"	m	class:Client	typeref:typename:double	file:
 solution	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^int solution;$/;"	m	struct:qcm	typeref:typename:int	file:
 solution	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^int solution;$/;"	m	struct:qcm	typeref:typename:int	file:
 somme	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^int somme;$/;"	m	struct:SousSequence	typeref:typename:int	file:
 somme	BA1/Structures Algebriques/Devoirs/S1/sol.tex	/^\\begin{lemma}\\label{somme}$/;"	l
 somme_consecutifs_max	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex5/tableaux.cc	/^int somme_consecutifs_max(vector<int> tab){$/;"	f	typeref:typename:int
 somme_partielle	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex3/cos.cc	/^double somme_partielle(double x, int N){$/;"	f	typeref:typename:double
+souffle_sur	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^	void souffle_sur(Creature& b) {$/;"	f	class:Dragon	typeref:typename:void	file:
+stocker	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		void stocker(Oeuvre & ex, int nb=1) {$/;"	f	class:Bibliotheque	typeref:typename:void	file:
 sub	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^complexe sub(complexe a, complexe b){$/;"	f	typeref:typename:complexe
 sujet	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^string sujet;$/;"	m	struct:lettre	typeref:typename:string	file:
+surface	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^		double surface () const{$/;"	f	class:Cercle	typeref:typename:double	file:
 svg	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 svg	BA1/Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 svg	BA1/Analyse I/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://www.w3.org/2000/svg
@@ -1479,7 +1938,12 @@ svg8	BA1/Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figu
 svg8	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	i
 svg8	BA1/Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	i
 swap	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex3/trideshell.cc	/^void swap(tab& t, int a, int b){$/;"	f	typeref:typename:void
+t	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		string t;$/;"	m	class:Avion	typeref:typename:string	file:
 tab	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex3/trideshell.cc	/^typedef vector<int> tab;$/;"	t	typeref:typename:vector<int>	file:
+table	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^		vector<vector<Couleur>> table;$/;"	m	class:Jeu	typeref:typename:vector<vector<Couleur>>	file:
+taille	Programmation Orientee Objet/Arendre/S1/Ex1/imc.cc	/^		double taille(){$/;"	f	class:Patient	typeref:typename:double	file:
+taux1	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	  double taux1;$/;"	m	class:Client	typeref:typename:double	file:
+taux2	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	  double taux2;$/;"	m	class:Client	typeref:typename:double	file:
 text1001	BA1/Mecanique Generale/notes/figures/curviligne2.svg	/^       x="34.033768"><tspan$/;"	i
 text1003	BA1/Mecanique Generale/notes/figures/cercletrigo.svg	/^       x="76.058449"><tspan$/;"	i
 text1003	BA1/Mecanique Generale/notes/figures/repere-droit.svg	/^       x="101.83373"><tspan$/;"	i
@@ -1597,6 +2061,9 @@ text975	BA1/Mecanique Generale/notes/figures/trajectoire.svg	/^       x="15.9403
 text979	BA1/Mecanique Generale/notes/figures/curviligne.svg	/^       x="127.05631"><tspan$/;"	i
 text988	BA1/Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^       x="101.14365"><tspan$/;"	i
 text989	BA1/Mecanique Generale/notes/figures/repere-droit.svg	/^       x="39.683296"><tspan$/;"	i
+thm:Theoreme de La divergence( de Gauss) theoreme_de_la_divergence_de_gauss_	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\begin{thm}[Theoreme de La divergence( de Gauss) ]\\label{thm:Theoreme de La divergence( de Gau/;"	l
+thm:Theoreme de Stokestheoreme_de_stokes	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\begin{thm}[Theoreme de Stokes]\\label{thm:Theoreme de Stokestheoreme_de_stokes}$/;"	l
+thm:Theoreme du gradienttheoreme_du_gradient	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\begin{thm}[Theoreme du gradient]\\label{thm:Theoreme du gradienttheoreme_du_gradient}$/;"	l
 thm:bolzano_weierstrass	BA1/Analyse I/notes/lectures/lec5.tex	/^\\begin{thm}[Bolzano-Weierstrass]\\index{Bolzano-Weierstrass}\\label{thm:bolzano_weierstrass}$/;"	l
 thm:composition_de_fonctions	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\begin{thm}[Composition de fonctions]\\index{Composition de fonctions}\\label{thm:composition_d/;"	l
 thm:convergence_des_suites_de_caucjy	BA1/Analyse I/notes/lectures/lec5.tex	/^\\begin{thm}[Convergence des suites de Caucjy]\\index{Convergence des suites de Caucjy}\\label{t/;"	l
@@ -1615,6 +2082,11 @@ thm:theoreme_de_cauchy	BA1/Analyse I/notes/lectures/lec16.tex	/^\\begin{thm}[The
 thm:theoreme_de_rolle	BA1/Analyse I/notes/lectures/lec15.tex	/^\\begin{thm}[theoreme de Rolle]\\index{theoreme de Rolle}\\label{thm:theoreme_de_rolle}$/;"	l
 thm:theoreme_des_accroissements_finis_taf	BA1/Analyse I/notes/lectures/lec15.tex	/^\\begin{thm}[théorème des accroissements finis TAF]\\index{théorème des accroissements finis/;"	l
 tirer_couleur	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^char tirer_couleur()$/;"	f	typeref:typename:char
+titre	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		string titre;$/;"	m	class:Oeuvre	typeref:typename:string	file:
+titre	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^		string titre;$/;"	m	class:Livre	typeref:typename:string	file:
+tot	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		double tot;$/;"	m	class:Caisse	typeref:typename:double	file:
+tout	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		vector<Exemplaire *> tout;$/;"	m	class:Bibliotheque	typeref:typename:vector<Exemplaire * >	file:
+tout	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		vector<Achat> tout;$/;"	m	class:Caddie	typeref:typename:vector<Achat>	file:
 tranchemax1	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^SousSequence tranchemax1(Sequence seq){$/;"	f	typeref:typename:SousSequence
 tranchemax2	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^SousSequence tranchemax2(Sequence seq){$/;"	f	typeref:typename:SousSequence
 tranchemax3	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^SousSequence tranchemax3(Sequence seq){$/;"	f	typeref:typename:SousSequence
@@ -1740,6 +2212,38 @@ tspan986	BA1/Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^         
 tspan987	BA1/Mecanique Generale/notes/figures/repere-droit.svg	/^         style="stroke-width:0.482818">$\\hat{x}_1$<\/tspan><\/text>$/;"	i
 tspan999	BA1/Mecanique Generale/notes/figures/curviligne2.svg	/^         style="stroke-width:0.264583">$\\vec{v}(t)$<\/tspan><\/text>$/;"	i
 val	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex5/derivation.cc	/^	char val;$/;"	m	struct:Arbre	typeref:typename:char	file:
+valeur_faciale	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  double valeur_faciale;$/;"	m	class:Timbre	typeref:typename:double	file:
+vente	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^		double vente() {$/;"	f	class:Rare	typeref:typename:double	file:
+vente	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^	int vente() {$/;"	f	class:Commemoratif	typeref:typename:int	file:
+vente	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  double vente(){$/;"	f	class:Timbre	typeref:typename:double	file:
 verifie_et_modifie	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^bool verifie_et_modifie(Carte& carte){$/;"	f	typeref:typename:bool
 verifier	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^bool verifier(char a, char &b, int &score)$/;"	f	typeref:typename:bool
 vide	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^enum Couleur { vide,rouge, jaune};$/;"	e	enum:Couleur	file:
+vide	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^enum Couleur { rouge, jaune, vide};$/;"	e	enum:Couleur	file:
+vider	Programmation Orientee Objet/Arendre/S1/Ex2/tirelire.cc	/^		void vider(){$/;"	f	typeref:typename:void
+vieillir	Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^		void vieillir(){$/;"	f	class:Souris	typeref:typename:void	file:
+ville	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	  string ville;$/;"	m	class:Client	typeref:typename:string	file:
+vivant	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		bool vivant() {$/;"	f	class:Creature	typeref:typename:bool	file:
+voler	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^	void voler(int p) {$/;"	f	class:Dragon	typeref:typename:void	file:
+volume	Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^  double volume;$/;"	m	class:Flacon	typeref:typename:double	file:
+x	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^	double x;$/;"	m	struct:Coord	typeref:typename:double	file:
+x	Programmation Orientee Objet/Exos/S1/Ex3/Point3D.cc	/^		double x;$/;"	m	class:Point3D	typeref:typename:double	file:
+x	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^	double x;$/;"	m	struct:Point	typeref:typename:double	file:
+x	Programmation Orientee Objet/Exos/S3/Ex1/complexe.cc	/^		double x;$/;"	m	class:Complexe	typeref:typename:double	file:
+x	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^		double x;$/;"	m	class:Point3D	typeref:typename:double	file:
+y	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^	double y;$/;"	m	struct:Coord	typeref:typename:double	file:
+y	Programmation Orientee Objet/Exos/S1/Ex3/Point3D.cc	/^		double y;$/;"	m	class:Point3D	typeref:typename:double	file:
+y	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^	double y;$/;"	m	struct:Point	typeref:typename:double	file:
+y	Programmation Orientee Objet/Exos/S3/Ex1/complexe.cc	/^		double y;$/;"	m	class:Complexe	typeref:typename:double	file:
+y	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^		double y;$/;"	m	class:Point3D	typeref:typename:double	file:
+z	Programmation Orientee Objet/Exos/S1/Ex3/Point3D.cc	/^		double z;$/;"	m	class:Point3D	typeref:typename:double	file:
+z	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^	double z;$/;"	m	struct:Point	typeref:typename:double	file:
+z	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^		double z;$/;"	m	class:Point3D	typeref:typename:double	file:
+~Apero	Programmation Orientee Objet/Exos/S2/Ex1/apero.cc	/^	~Apero() {$/;"	f	class:Apero	file:
+~Bibliotheque	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^	~Bibliotheque() {$/;"	f	class:Bibliotheque	file:
+~Dessin	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		~Dessin() {$/;"	f	class:Dessin	file:
+~Exemplaire	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		~Exemplaire() {$/;"	f	class:Exemplaire	file:
+~Fleur	Programmation Orientee Objet/Exos/S2/Ex2/poeme.cc	/^	~Fleur() {$/;"	f	class:Fleur	file:
+~Livre	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^		virtual ~Livre() {}$/;"	f	class:Livre	file:
+~Oeuvre	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		~Oeuvre() {$/;"	f	class:Oeuvre	file:
+~Souris	Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^		~Souris(){$/;"	f	class:Souris	file:

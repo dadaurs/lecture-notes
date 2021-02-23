@@ -1,0 +1,72 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\date{}
+
+\begin{document}
+\title{Exercises Week 1}
+\author{David Wiedemann}
+\maketitle
+\section*{Part 1}
+
+We describe the process which leads to the construction of such a word.\\
+Since the order of the letters matter, we proceed letter by letter.\\
+The first letter gives $m$ choices.\\
+For the $n-1$ remaining letters, there are $m-1$ choices per letter.
+Thus, the answer is 
+\[ 
+	m \cdot ( m-1)^{n-1}
+\]
+Where we have used the formula for a $n-1$ letter word in an alphabet of $m-1$ letters.
+\section*{Part 2}
+In order to solve the problem, we differentiate between the different amount of \textit{a}'s the word could contain.\\
+Indeed, by differentiating the number of \textit{a}'s we will be able to consider a pair of \textit{a}'s as one letter, hence simplifying the computations.\\
+\begin{itemize}
+	\item If the word contains 0 \textit{a}'s, we simply form a 10 letter word in an alphabet of  size 2:
+		\[ 
+		2^{10}
+		\]
+		
+	\item If the word contains 2 a's, it is as if the word contains 9 letters, one of which is replaced by a ``double a''. Once the spot for the double a is chosen, we build a 8 letter word in a 2 letter alphabet, hence we have
+\[ 
+\binom 9 1 \cdot 2^{8}
+\]
+\item The same reasoning for 4 a's yields
+	\[ 
+	\binom 8 2 \cdot 2^{6}
+	\]
+
+\item For 6 a's we have
+	\[ 
+	\binom 7 3 \cdot 2^{4}
+	\]
+
+\item For 8 a's, the result is
+	\[ 
+	\binom 6 4 \cdot 2^{2}
+	\]
+
+\item And finally, for 10 a's we simply have
+	\[ 
+	1
+	\]
+\end{itemize}
+We can now sum up these possibilities to get the desired result
+\[ 
+2^{10} + 9 \cdot 2^{8} + 28 \cdot 2^{6} + 35 \cdot 2^{4} + 15 \cdot 2^{2} + 1 = 5741
+\]
+
+
+
+
+
+\end{document}

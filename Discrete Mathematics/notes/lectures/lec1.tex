@@ -1,0 +1,162 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Mon 22 Feb}{Introduction}
+\section{Counting}
+\subsection{Finite sets}
+Let $A$ be a finite set. We denote by $|A|$ the cardinality of $A$.
+\begin{defn}[First Numbers]\label{defn:First Numbersfirst_numbers}
+	We denote by $[n]$ the set of $n$ first natural numbers.
+\end{defn}
+\subsection{Bijections}
+\begin{thm}
+	If there exists a bijection between finite sets $A$ and $ B$ then $|A|=|B|$.
+\end{thm}
+\subsection{Operations with finite sets}
+\begin{itemize}
+\item union
+\item intersection
+\item product
+\item exponentiation
+\item quotient
+\end{itemize}
+\begin{defn}[Cartesion product]\label{defn:Cartesion productcartesion_product}
+	 \[ 
+		 A \times B = \left\{ ( a,b) | a \in A, b \in B \right\} 
+	\]
+	
+\end{defn}
+\begin{thm}
+\[ 
+|A\times B| = |A| |B|
+\]
+
+\end{thm}
+\begin{defn}[Disjoint union]\label{defn:Disjoint uniondisjoint_union}
+	Define 
+	\[ 
+	A \sqcup B = A \times \left\{ 0 \right\} \cup B \times \left\{ 1 \right\} 
+	\]
+			
+\end{defn}
+\begin{thm}
+	\begin{align*}
+	|A \sqcup B| = |A| + |B|
+	\end{align*}
+\end{thm}
+\begin{defn}[Exponential object	]
+	 \[ 
+	A ^{B} = \left\{ f| f \text{ is a function from $A$ to $B$ }  \right\} 
+	\]
+\end{defn}
+\begin{thm}
+\[ 
+|A ^{B}| = |A| ^{|B|}
+\]
+
+\end{thm}
+\begin{defn}[Binomial coefficient]\label{defn:Binomial coefficientbinomial_coefficient}
+	A binomial coefficient $\binom n k$ is the number of ways in which one can choose $k$ objects out of $n$ distinct objects assuming order doesn't matter.	
+\end{defn}
+\begin{propo}
+	 \[ 
+		 \binom n k = \frac{n!}{( n-k) ! k!}
+	\]
+	
+\end{propo}
+\begin{propo}
+The following identities hold:
+\begin{enumerate}
+\item 
+	\[ 
+	\binom n k +  \binom n { k+1} = \binom { n+1} { k+1} 
+	\]
+
+\item $\binom n k$ is the $k$-th element in the $n$-th line of Pascal's triangle.
+	
+\end{enumerate}
+\end{propo}
+\begin{proof}
+	Each subset of $[n+1]$ either contains $n+1$ or not.\\
+	Number of $( k+1) $-element subsets containing $n+1$ is  $\binom n k$ \\
+	Number of $( k+1) $-element subsets not containing $n+1$ is $\binom n { k+1} $
+\end{proof}
+\begin{propo}
+The number of subsets of an $n$-element  set is $2^{n}$, since we have
+\[ 
+2^{n} = \sum \binom n i
+\]
+
+\end{propo}
+\begin{propo}
+The number of subsets of even cardinality is the same as even cardinality: $2^{n-1}$
+\end{propo}
+\begin{proof}
+Consider
+\[ 
+	\phi: 2^{[n]}\to 2^{[n]}
+\]
+defined by
+\[ 
+	\phi( A) = A \Delta \left\{ 1 \right\} = 
+	\begin{cases}
+	A \setminus \left\{ 1 \right\} , \text{ if } 1 \in A\\
+	A \cup \left\{ 1 \right\} , \text{ otherwise } 
+	\end{cases}
+\]
+The cardinality of subsets $A$ and $\phi( A)$ always have different parity.\\
+Since $\phi \circ \phi = \id $ we deduce that $\phi$ is a bijection between the set of odd and even subsets is the same.
+
+\end{proof}
+\begin{thm}
+\[ 
+	( 1+x) ^{n} = \sum \binom n i x^{i}
+\]
+
+\end{thm}
+\begin{proof}
+In lecture notes.
+\end{proof}
+\begin{propo}
+Assume we have $k$ identical objects and $n$ different persons. Then ne number of ways in which one can distribute this $k$ objects among the $n$ persons equals
+\[ 
+\binom { n + k-1} { n-1} = \binom { n+k-1} { k } 
+\]
+Equivalently, it is the number of solutions of the equation $ x_1 + ... + x_n = k$
+
+\end{propo}
+\begin{proof}
+Let $ \mathcal{A}$ be the set of all solutions of the equation.
+Let  $\mathcal{B}$ be the set of all subsets of cardinality $n-1$  in $k+n-1$.\\
+we construct a bijection $\psi: \mathcal{A} \to \mathcal{B}$ in the following way
+\[ 
+	A = ( x_1, \ldots, x_n ) \mapsto B = \left\{ x_1 +1, x_1+x_2 +2 \ldots \right\} 
+\]
+It suffices to show that $\psi$ is invertible.
+Let $B \in \mathcal{B}$.
+Suppose that $b_1 \ldots, b_{n-1}$ are the elements of $B$, ordered.
+Then the preimage is an $n$-tuple of integers $( x_1, \ldots) $ defined by
+\begin{align*}
+x_1 = b_1 -1\\
+x_i = b_i - b_{i-1}\\
+x_n = k+n-1 - b_{n-1} 
+\end{align*}
+It is easy to see from these equations that the x_i are non-negative and their sums yield $k$.
+
+
+
+\end{proof}
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+\end{document}	

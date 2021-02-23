@@ -1,0 +1,38 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Tue 23 Feb}{Introduction}
+\section{Polynomes}
+\begin{defn}[Centre d'un anneau]\label{defn:Centre d'un anneaucentre_d_un_anneau}
+	Le centre $Z( R) $ est l'ensemble des elements $x$ satisfaisant
+	\[ 
+	\left\{ x \in R | ra = ar \forall a \in R \right\} 
+	\]
+	
+\end{defn}
+\begin{defn}[Diviseurs de 0]
+	$a$ est un element non nul d'un anneau $R$ satisfaisant qu'il existe $b\in R$ tel que $ab=0$ ou  $ba=0$.
+
+\end{defn}
+\begin{defn}[Anneau integre]\label{defn:Anneau integreanneau_integre}
+	Si un anneau est commutatif et n'a pas de diviseurs de 0, alors l'anneau est integre.
+\end{defn}
+\begin{thm}
+	Soit $R$ un anneau, alors il existe un anneau $S \supseteq R$ ( $R$ est un sous-anneau) et $\exists x \in S \setminus R$ tel que 
+	\begin{itemize}
+		\item $ax=xa$, $\forall a \in R$ 
+		\item Si $a_0 + \ldots + a_n x^{n} =0$ et $a_i \in R \forall i$ alors $a_i=0 \forall i$
+	\end{itemize}
+	Cet $x$ est appele indeterminee ou variable.
+	
+\end{thm}
+\begin{defn}[Polynome]\label{defn:Polynomepolynome}
+	Un polynomer sur $R$ est une expression de la forme
+	\[ 
+		p( x) = a_0 + \ldots + a_n x^{n}
+	\]
+	ou $a_i$ est le i-eme coefficient de $p( x)$.\\
+	$ R[x]$ est l'ensemble des polynomes sur $R$.
+\end{defn}
+\del_x{}
+
+\end{document}
