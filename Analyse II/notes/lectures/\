@@ -1,0 +1,45 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Wed 24 Feb}{Integrales Generalisees}
+\begin{thm}[Critere de Comparaison]\label{thm:Critere de Comparaisoncritere_de_comparaison}
+	Soit $f,g: [ a,b[ \to \mathbb{R} $ c.p.m. et supposons $\exists c \in [ a,b[ $ tel que
+	\[ 
+		0 \leq f( x) \leq g( x) \forall x \in [ c,b[ 
+	\]
+	Si $ \int_{ a }^{ b }g( x) dx$ existe alors $ \int_{ a }^{ b }f( x) dx$ existe aussi\\
+	Si $ \int_{ a }^{ b }f( x) dx$ diverge alors $\int_{ a }^{ b }g( x) dx$ diverge aussi.
+\end{thm}
+\begin{proof}
+	Si $\int_{ a }^{ b }g( x) dx$ existe, alors $\int_{ c }^{ b }g( x) dx$ existe.\\
+	Donc
+	\begin{align*}
+		\int_{ a }^{ b }f( x) dx &= \lim_{x \to b-} \int_{ a }^{ x }f( t) dt\\
+		&= \lim_{x \to b-} ( \int_{ a }^{ c }f( t) dt + \int_{ c }^{ x }f( t) dt)\\
+		&= \int_{ a }^{ c }f( t) dt + \lim_{x \to b-} \int_{ c }^{ x }f( t) dt\\
+		&\leq \int_{ a }^{ c }f( t) dt	+ \lim_{x \to b-} \int_{ c }^{ x }g( t) dt < + \infty 
+	\end{align*}
+	En notant $F( x) = \int_{ a }^{ x }f( t) dt$ , $F$ est non decroissante, et bornee superieurement sur l'intervalle $[a,b[ \Rightarrow $ $\lim_{x \to b-} F( x) $ existe.	
+\end{proof}
+\begin{exemple}
+	$f( x) = \abs{\sin( \frac{1}{x})}$ sur $]0,1]$, on a
+	\[ 
+		0 \leq f( x) \leq 1
+	\]
+	1 est integrable, et donc l'integrale de $f( x) $ existe.
+\end{exemple}
+\subsection{Integrales absoluments convergentes}
+\begin{defn}[Integrale absolument convergente]\label{defn:Integrale absolument convergenteintegrale_absolument_convergente}
+	Soit $I$ un intervalle du type $[a,b[$,$]a,b]$ ou $]a,b[$ et $f:I \to \mathbb{R}$ c.p.m.\\
+	On dit que l'integrale generalisee de $f$ sur $I$ est absolument convergente si
+	\[ 
+		\int_I |f( x) | dx
+	\]
+	existe.
+\end{defn}
+\begin{thm}[absolument convergente implique convergente]\label{thm:absolument convergente implique convergenteabsolument_convergente_implique_convergente}
+	Si l'integrale $\int_{ a }^{ b }f( x) dx$ converge absolument, alors il converge.
+\end{thm}
+
+
+
+\end{document}	

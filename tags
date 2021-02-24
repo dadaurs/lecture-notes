@@ -251,6 +251,8 @@ Injection de $\\mathbb{N} \\to \\mathbb{Q}$	BA1/Structures Algebriques/Devoirs/S
 Injection de $\\mathbb{Q} \\to \\mathbb{N}$	BA1/Structures Algebriques/Devoirs/S3/sol.tex	/^\\subsection*{Injection de $\\mathbb{Q} \\to \\mathbb{N}$}$/;"	u	section:3
 Injectivité	BA1/Structures Algebriques/Devoirs/S3/sol.tex	/^\\subsection*{Injectivité}$/;"	u	section:1
 Instructions elementaires	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Instructions elementaires}$/;"	u	section:Definition formelle des algorithmes
+Integrale generalisee sur un intervalle non borne	Analyse II/notes/lectures/lec2.tex	/^\\subsection{Integrale generalisee sur un intervalle non borne}$/;"	u
+Integrales absoluments convergentes	Analyse II/notes/lectures/lec2.tex	/^\\subsection{Integrales absoluments convergentes}$/;"	u
 Integration	BA1/Analyse I/notes/lectures/lec22.tex	/^\\section{Integration}$/;"	s
 Integration Par Parties	BA1/Analyse I/notes/lectures/lec25.tex	/^\\subsubsection{Integration Par Parties}$/;"	b	subsection:Integration""Recherche de Primitives
 Integration de Fonctions Rationelles	BA1/Analyse I/notes/lectures/lec26.tex	/^\\subsection{Integration de Fonctions Rationelles}$/;"	u	section:Integration
@@ -259,6 +261,7 @@ Introduction	BA1/Analyse I/notes/lectures/lec1.tex	/^\\section{Introduction}$/;"
 Introduction	BA1/Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsection{Introduction}$/;"	u	section:Information, Calcul et Communication
 Introduction	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\subsection{Introduction}$/;"	u	section:Fluides au repos
 Intégrales généralisées	Analyse II/notes/lectures/lec1.tex	/^\\section{Intégrales généralisées}$/;"	s
+Intégrales généralisées	current-course/notes/lectures/lec1.tex	/^\\section{Intégrales généralisées}$/;"	s
 Intégrales premières d'un mouvement central	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Intégrales premières d'un mouvement central}$/;"	u	section:Gravitation, Moment Cinétique
 Invariance par changement de referentiel	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\subsection{Invariance par changement de referentiel}$/;"	u	section:Physique
 Jeu	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^		Jeu(int taille=8):table(taille,vector<Couleur>(taille)) {}$/;"	f	class:Jeu	file:
@@ -349,7 +352,6 @@ Polynome	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^		Polynome(vecto
 Polynome	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^class Polynome {$/;"	c	file:
 Polynome de Taylor et developpements limites	BA1/Analyse I/notes/lectures/lec17.tex	/^\\section{Polynome de Taylor et developpements limites}$/;"	s
 Polynomes	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\section{Polynomes}$/;"	s
-Polynomes	current-course/notes/lectures/lec1.tex	/^\\section{Polynomes}$/;"	s
 Position	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^struct Position{$/;"	s	file:
 Position	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^typedef size_t Position;$/;"	t	typeref:typename:size_t	file:
 Preuves	BA1/Structures Algebriques/notes/lectures/lec1.tex	/^\\section{Preuves}$/;"	s
@@ -738,17 +740,15 @@ def:notations_bijection	BA1/Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin
 def:notations_injection	BA1/Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{defn}[Notations Injection]\\index{notations}\\index{injectivite}\\label{def:notations_in/;"	l
 def:notations_surjection	BA1/Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{defn}[Notations Surjection]\\index{notations}\\index{surjectivite}\\label{def:notations_/;"	l
 defn:Anneau integreanneau_integre	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\begin{defn}[Anneau integre]\\label{defn:Anneau integreanneau_integre}$/;"	l
-defn:Anneau integreanneau_integre	current-course/notes/lectures/lec1.tex	/^\\begin{defn}[Anneau integre]\\label{defn:Anneau integreanneau_integre}$/;"	l
 defn:Binomial coefficientbinomial_coefficient	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[Binomial coefficient]\\label{defn:Binomial coefficientbinomial_coefficient}$/;"	l
 defn:Cartesion productcartesion_product	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[Cartesion product]\\label{defn:Cartesion productcartesion_product}$/;"	l
 defn:Centre d'un anneaucentre_d_un_anneau	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\begin{defn}[Centre d'un anneau]\\label{defn:Centre d'un anneaucentre_d_un_anneau}$/;"	l
-defn:Centre d'un anneaucentre_d_un_anneau	current-course/notes/lectures/lec1.tex	/^\\begin{defn}[Centre d'un anneau]\\label{defn:Centre d'un anneaucentre_d_un_anneau}$/;"	l
 defn:Degre d'un polynomedegre_d_un_polynome	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\begin{defn}[Degre d'un polynome]\\label{defn:Degre d'un polynomedegre_d_un_polynome}$/;"	l
-defn:Degre d'un polynomedegre_d_un_polynome	current-course/notes/lectures/lec1.tex	/^\\begin{defn}[Degre d'un polynome]\\label{defn:Degre d'un polynomedegre_d_un_polynome}$/;"	l
 defn:Disjoint uniondisjoint_union	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[Disjoint union]\\label{defn:Disjoint uniondisjoint_union}$/;"	l
 defn:First Numbersfirst_numbers	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[First Numbers]\\label{defn:First Numbersfirst_numbers}$/;"	l
+defn:Integrale absolument convergenteintegrale_absolument_convergente	Analyse II/notes/lectures/lec2.tex	/^\\begin{defn}[Integrale absolument convergente]\\label{defn:Integrale absolument convergenteinte/;"	l
+defn:Integrale sur un intervalle non borneintegrale_sur_un_intervalle_non_borne	Analyse II/notes/lectures/lec2.tex	/^\\begin{defn}[Integrale sur un intervalle non borne]\\label{defn:Integrale sur un intervalle non/;"	l
 defn:Polynomepolynome	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\begin{defn}[Polynome]\\label{defn:Polynomepolynome}$/;"	l
-defn:Polynomepolynome	current-course/notes/lectures/lec1.tex	/^\\begin{defn}[Polynome]\\label{defn:Polynomepolynome}$/;"	l
 defn:_a_algebre	BA1/Algebre Lineaire I/notes/lectures/lec7.tex	/^\\begin{defn}[$A$-Algebre]\\index{$A$-Algebre}\\label{defn:_a_algebre}$/;"	l
 defn:algorithme_d_euclide	BA1/Structures Algebriques/notes/lectures/lec3.tex	/^\\begin{defn}[Algorithme d'Euclide]\\index{Algorithme d'Euclide}\\label{defn:algorithme_d_euclid/;"	l
 defn:anneaux	BA1/Algebre Lineaire I/notes/lectures/lec5.tex	/^\\begin{defn}[Anneaux]\\index{Anneaux}\\label{defn:anneaux}$/;"	l
@@ -2064,9 +2064,12 @@ text975	BA1/Mecanique Generale/notes/figures/trajectoire.svg	/^       x="15.9403
 text979	BA1/Mecanique Generale/notes/figures/curviligne.svg	/^       x="127.05631"><tspan$/;"	i
 text988	BA1/Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^       x="101.14365"><tspan$/;"	i
 text989	BA1/Mecanique Generale/notes/figures/repere-droit.svg	/^       x="39.683296"><tspan$/;"	i
+thm:Critere de Comparaisoncritere_de_comparaison	Analyse II/notes/lectures/lec2.tex	/^\\begin{thm}[Critere de Comparaison]\\label{thm:Critere de Comparaisoncritere_de_comparaison}$/;"	l
+thm:Critere de comparaison ( II) critere_de_comparaison_ii_	Analyse II/notes/lectures/lec2.tex	/^\\begin{thm}[Critere de comparaison ( II) ]\\label{thm:Critere de comparaison ( II) critere_de_c/;"	l
 thm:Theoreme de La divergence( de Gauss) theoreme_de_la_divergence_de_gauss_	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\begin{thm}[Theoreme de La divergence( de Gauss) ]\\label{thm:Theoreme de La divergence( de Gau/;"	l
 thm:Theoreme de Stokestheoreme_de_stokes	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\begin{thm}[Theoreme de Stokes]\\label{thm:Theoreme de Stokestheoreme_de_stokes}$/;"	l
 thm:Theoreme du gradienttheoreme_du_gradient	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\begin{thm}[Theoreme du gradient]\\label{thm:Theoreme du gradienttheoreme_du_gradient}$/;"	l
+thm:absolument convergente implique convergenteabsolument_convergente_implique_convergente	Analyse II/notes/lectures/lec2.tex	/^\\begin{thm}[absolument convergente implique convergente]\\label{thm:absolument convergente impl/;"	l
 thm:bolzano_weierstrass	BA1/Analyse I/notes/lectures/lec5.tex	/^\\begin{thm}[Bolzano-Weierstrass]\\index{Bolzano-Weierstrass}\\label{thm:bolzano_weierstrass}$/;"	l
 thm:composition_de_fonctions	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\begin{thm}[Composition de fonctions]\\index{Composition de fonctions}\\label{thm:composition_d/;"	l
 thm:convergence_des_suites_de_caucjy	BA1/Analyse I/notes/lectures/lec5.tex	/^\\begin{thm}[Convergence des suites de Caucjy]\\index{Convergence des suites de Caucjy}\\label{t/;"	l
