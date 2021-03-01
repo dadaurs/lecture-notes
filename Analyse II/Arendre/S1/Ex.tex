@@ -1,4 +1,4 @@
-\documentclass[11pt, a4paper, twoside]{article}
+\documentclass[11pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
@@ -29,42 +29,16 @@ On procède par intégration par parties pour trouver le résultat, on a ainsi
 \begin{align*}
 	\int_{ 1 }^{ \infty  } x^{-\alpha}\ln( x) dx &= \left[ \frac{1}{-\alpha+1}x^{-\alpha+1}\ln( x) \right]_{1}^{ \infty } - \int_{ 1 }^{ \infty  } \frac{1}{-\alpha+1}x^{-\alpha+1} \frac{1}{x} dx
 \end{align*}
-Le premier terme vaut 0, on a ainsi que
+Le premier terme vaut 0, il vient
 \begin{align*}
 	\int_{ 1 }^{ \infty  } x^{-\alpha}\ln( x) dx &=  - \int_{ 1 }^{ \infty  } \frac{1}{-\alpha+1}x^{-\alpha}  dx\\
 						     &=  \frac{1}{( \alpha-1) ^{2}} 
 \end{align*}
 \section*{2}
-Considérons la fonction $f:]-1, \infty[ \to \mathbb{R}$ définie par
+Pour la suite posons $f: [ 1, + \infty[ \to \mathbb{R},f(x) = \frac{\ln( x) }{x^{\alpha}}$ et $g:[-1, \infty[ \to \mathbb{R}$ définie par
 \[ 
 	g( x) = k^{-\alpha}\ln( k)  \text{ si } x \in [ k,k+1[ 
 \]
-Notons maintenant que
-\[ 
-	\sum_{k=1}^{ N } k^{-\alpha}\ln( k) = \int_{ 1 }^{ N  } g( x) dx
-\]
-pour $N \in \mathbb{N}\setminus \left\{ 0 \right\} $.\\
-Notons que la fonction $x^{-\alpha}\ln( x) $ satisfait
-\[ 
-	x^{-\alpha}\ln( x) \geq g( x) \forall x \in ]1, \infty[
-\]
-Ainsi, on a, pour tout $X \in ]1, + \infty[$ 
-\[ 
-	\int_{ 1 }^{ X }g( x) dx \leq \int_{ 1 }^{ X }x^{-\alpha}\ln( x) dx 
-\]
-Par le critère de comparaison, on en déduit que
-\[ 
-	\int_{ 1 }^{ \infty  } g( x) dx 
-\]
-
-converge, car majorée par une fonction dont l'intégrale converge et minorée par 0( la fonction est strictement positive sur l'intervalle considéré). \\
-On finit la preuve en notant que
-\[ 
-	\sum_{k=1}^{ + \infty } k^{-\alpha}\ln( k) = \int_{ 1 }^{ \infty  }f( x) dx
-\]
-Et ainsi la série converge.
-\section*{3}
-Pour la suite posons $f: [ 1, + \infty[ \to \mathbb{R},f(x) = \frac{\ln( x) }{x^{\alpha}}$.\\
 On fait d'abord l'observation que 
 \[ 
 	f'( x) = x^{-\alpha-1}\left( 1- \alpha \ln( x) \right) 
@@ -75,31 +49,58 @@ Ainsi on a, par un théorème d'analyse I, que l'extremum local se situe en
 \]
 Ou l'on ne considére pas la solution $x=0$ car elle n'appartient pas à l'ensemble de définition.\\
 De plus, on note que $1-\alpha \ln( x) <0 \quad \forall x> e^{\frac{1}{\alpha}}$ et $1-\alpha \ln( x) >0 \quad \forall x \in [ 1, e^{\frac{1}{\alpha}}[ $ et ainsi $x= e^{\frac{1}{\alpha}}$ est un extremum global\footnote{Ces deux propriétés suivent de $\ln( x) $ étant une fonction strictement croissante}.\\
-Par hypothèse, $\alpha>1$, et ainsi la position de l'extremum global est constamment plus petit que $e^{\frac{1}{1}}=1$.\\
-On peut donc considèrer un encadrement à partir de $x=3$.\\
+
+Par hypothèse, $\alpha>1$, et ainsi la position du maximum est constamment plus petite que $e^{\frac{1}{1}}=e$.\\
+Si $f( x) $ est décroissante sur $[e^{\frac{1}{\alpha}}, + \infty [ $, $f( x-1) $ est décroissante sur $[e^{\frac{1}{\alpha}}+1, + \infty [ $ et donc en particulier sur $[4, + \infty[ $, il en suit que
+\[ 
+	g( x) \leq f( x-1) \quad \forall x > 4 
+\]
+
+
+Notons maintenant que
+\[ 
+	\sum_{k=1}^{ N } k^{-\alpha}\ln( k) = \int_{ 1 }^{ N+1  } g( x) dx
+\]
+pour $N \in \mathbb{N}\setminus \left\{ 0 \right\} $.\\
+Ainsi, pour tout $X \in [4, + \infty[$ 
+\[ 
+0 \leq	\int_{ 4 }^{ X }g( x) dx \leq \int_{ 4 }^{ X }x^{-\alpha}\ln( x) dx 
+\]
+où on a utilisé que $g( x) $ est positive sur l'intervalle.\\
+Par le critère de comparaison, on en déduit que
+\[ 
+	\int_{ 4 }^{ \infty  } g( x) dx 
+\]
+
+converge, car majorée et minorée.\\
+On finit la preuve en notant que
+\[ 
+	\sum_{k=1}^{ + \infty } k^{-\alpha}\ln( k) = 2^{-\alpha}\ln( 2) + 3^{-\alpha}\ln( 3) +\int_{ 4 }^{ \infty  }f( x) dx
+\]
+Et ainsi la série converge.
+\section*{3}
+Etant donne que $f( x-1) $ atteindra son maximum en $e^{\frac{1}{\alpha}}+1$,on peut considèrer un encadrement à partir de $x=4$.\\
 Avant de l'expliciter, on constate que
 \[ 
-	f( x-1) \geq g( x) \geq f(x) 
+	\forall x>4\quad f( x-1) \geq g( x) \geq f(x) 
 \]
-L'inégalité $f( x-1) \geq f( x) $ suit du théorème des accroissements finis, en effet, pour tout $m>3$, on a l'existence d'un $c \in [m,m+1]$ satisfaisant
-\[ 
-	0 > f'( c)  = f( m+1) -f( m) \text{ impliquant } f( m+1) < f( m) 
-\]
-Les égalités $f( x-1) \geq g( x)$ et $g( x) \geq f( x) $ suivent immédiatement de $f$ étant décroissante $\forall x> 3$.\\
+Ces inégalités suivent directement de $f( x)  $ étant décroissante.\\
 
-Etant donné que, par la section 2, $ \int_{ 3 }^{ + \infty  }$ converge, on a, par un théorème du cours
+Etant donné que, par la section 1, $ \int_{ 4 }^{ + \infty  }f( x) dx$ converge, on a, par un théorème du cours
 \[ 
-	\int_{ 3 }^{ + \infty  } f( x-1) dx \geq \int_{ 3 }^{ + \infty  }g( x) dx = \sum_{k=3}^{ \infty } k^{-\alpha} \ln( \alpha) \geq \int_{ 3 }^{ \infty  }f( x) dx
+	\int_{ 4 }^{ + \infty  } f( x-1) dx \geq \int_{ 4 }^{ + \infty  }g( x) dx = \sum_{k=4}^{ \infty } k^{-\alpha} \ln( \alpha) \geq \int_{ 4 }^{ \infty  }f( x) dx
 \]
 En évaluant les integrales, on trouve ainsi que
 \[ 
-	\frac{4^{1-\alpha}( \alpha-1) \log( 4) +1}{( \alpha-1) ^{2}} \geq\sum_{k=3}^{ \infty } k^{-\alpha} \ln( k)\geq \frac{3^{1-\alpha}( \alpha-1) \log( 3) +1}{( \alpha-1) ^{2}} 
+	\frac{3^{1-\alpha}( \alpha-1) \log( 3) +1}{( \alpha-1) ^{2}} \geq\sum_{k=4}^{ \infty } k^{-\alpha} \ln( k)\geq \frac{4^{1-\alpha}( \alpha-1) \log( 4) +1}{( \alpha-1) ^{2}} 
 \]
-Finalement, en ajoutant les deux premiers termes de la somme on trouve
+Finalement, en ajoutant les trois premiers termes de la somme on trouve
 
-\[ 
-	2^{-\alpha}\ln( 2) + \frac{4^{1-\alpha}( \alpha-1) \log( 4) +1}{( \alpha-1) ^{2}} \geq\sum_{k=1}^{ \infty } k^{-\alpha} \ln( k)\geq 2^{-\alpha}\ln( 2) +\frac{3^{1-\alpha}( \alpha-1) \log( 3) +1}{( \alpha-1) ^{2}} 
-\]
+\begin{align*}
+	&2^{-\alpha}\ln( 2) + 3^{-\alpha}\ln( 3)  + \frac{3^{1-\alpha}( \alpha-1) \log( 3) +1}{( \alpha-1) ^{2}}\\
+	&\geq\sum_{k=1}^{ \infty } k^{-\alpha} \ln( k)\\
+	&\geq 2^{-\alpha}\ln( 2)+ 3^{-\alpha}\ln( 3) +\frac{4^{1-\alpha}( \alpha-1) \log( 4) +1}{( \alpha-1) ^{2}} 
+\end{align*}
 
 
 

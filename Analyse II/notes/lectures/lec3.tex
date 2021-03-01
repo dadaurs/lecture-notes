@@ -1,0 +1,111 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Mon 01 Mar}{L'espace $R^n$}
+\section{L'espace $R^{n}$}
+\subsection{Espace vectoriel norme}
+Soit un ensemble $V$ sur lequel on definit deux operations 
+\begin{enumerate}
+\item somme: $+: V \times V \to V$ 
+\item multiplication par un scalaire $ \mathbb{R} \times V \to V$
+\end{enumerate}
+On definit $R^{n}$ par $R^{n}= \mathbb{R} \times \mathbb{R} \ldots \times \mathbb{R}$ 
+\begin{defn}[Norme d'un vecteur]
+	C'est une application $N:V \to \mathbb{R}$, c'est une application qui satisfait
+	\begin{itemize}
+		\item $\forall x \in V: N( x) \geq 0$ et $N( x) =0$ si et seulement si $x=0$.
+		\item $\forall \lambda \in \mathbb{R},x \in V$: $N( \lambda x) = |\lambda | N( x) $ 
+		\item $\forall x, y \in V,  N( x+y) \leq N( x) + N( y) $
+	\end{itemize}
+	On utilise souvent la notation $N( x) = \Norm{x}$
+	
+\end{defn}
+\begin{defn}[Espace vetoriel norme]
+	Un espace vectoriel norme est note $(V, \N{.}) $
+\end{defn}
+\begin{defn}
+	Soit $V$ un espace vectoriel et $N_1, N_2$ deux normes sur $ V$.\\
+	On dit que $N_1$ et $N _2$ sont equivalentes si $\exists c_1,c_2 >0$ tel que
+	\[ 
+		c_1 N_2( x) \leq N_1( x) \leq c_2N_2( x) \forall x \in V
+	\]
+	
+	
+\end{defn}
+\begin{defn}[Distance]
+	Soit $X$ un ensemble.\\
+	Une distance est une application $d: X \times X \to \mathbb{R}_+$ qui satisfait les proprietes suivantes
+	\begin{itemize}
+		\item $\forall x,y \in X, d( x,y) \geq 0$, $d( x,y) =0 \iff x=y$ 
+		\item La distance est symmetrique
+		\item $\forall x,y,z \in V, d(x,y ) \leq d( x,z) + d( z,y) $
+	\end{itemize}
+	Un espace $X$ muni d'une distance est appele un espace metrique et est note $( X,d) $.\\
+
+\end{defn}
+
+On peut toujours definir une distance sur un espace vectoriel norme, defini par
+\[ 
+	d( x,y) = \N{x-y}
+\]
+On appelle cette distance, la distance induite par la norme.\\
+Tout espace vectoriel norme est aussi un espace metrique.
+\begin{defn}[Produit Scalaire]
+	Soit $V$ un espace vectoriel.\\
+	Un produit scalaire est une application $b:V \times V \to \mathbb{R}$ qui satisfait les proprietes suivantes
+	\begin{itemize}
+		\item $\forall x,y \in V, b( x,y) = b( y,x) $ 
+		\item $\forall x,y \in V, \forall \alpha,\beta \in \mathbb{R}, b( \alpha x + \beta y,z) = \alpha b( x,z) + \beta b ( y,z)   $
+		\item $\forall x \in V, b( x,x) \geq 0, b( x,x) =0 \iff x=0$
+	\end{itemize}
+	
+	
+\end{defn}
+\begin{thm}[Inegalite de Cauchy-Schwarz]
+	Soit $V$ un espace vectoriel et $b:V \times V \to \mathbb{R}$ un produit scalaire. Alors
+	\[ 
+		\forall x,y \in V |b(x,y )  \leq \sqrt{b( x,x) b( y,y) } 
+	\]
+	
+\end{thm}
+\begin{proof}
+$\forall x,y \in V, \alpha \in \mathbb{R}$.\\
+\[ 
+0\leq	b( \alpha x+y, \alpha x + y) = \alpha^{2} b( x,x)  + 2\alpha b( x,y)  + b( y ,y) 
+\]
+Donc on a
+\[ 
+	\Delta = b( x,y) ^{2} - b( x,x) b( y,y) 
+\]
+
+
+\end{proof}
+\begin{thm}
+	Soit $b:V \times V \to \mathbb{R}$ un produit scalaire, alors l'application $x \to \sqrt{b( x,x) } = \N{x}_b$ est une norme sur $V$.
+\end{thm}
+Donc, si $V$ est muni d'un produit scalairel, alors $V$ est un espace norme et donc $V$ est un espace metrique pour la distance induite par le produit scalaire.
+\subsection{Normes sur $R^{n}$}
+
+\begin{itemize}
+	\item La norme euclidienne $\N{x} = \sqrt{ \sum_{i=1}^{ n}x_i^{2}} $
+\item Norme "max" $\N x _{ \infty }= \max |x_i| $
+\item Norme $1$ :  $\N x_1 = \sum |x_i|$ 
+\item Normes $p \in [ 1, + \infty [  $ $ \N x _p = ( \sum |x_i|^{p} )^{\frac{1}{p}}$ \\
+	Pour $p$ infinie, on retrouve la norme infinie
+\end{itemize}
+On montre en exercices que toutes les normes $p$ sont equivalentes.\\
+De meme, on montre que toutes les normes sur $R^{n}$ sont equivalentes.
+Par contre, seulement la norme 2 est deduite d'un produit scalaire.\\
+\begin{defn}[Suites convergentes]
+	Soit $ \left\{ x^{( k) } \right\}_{k=0}^{ \infty } \subset \mathbb{R}^{n}$.\\
+	On dit que cette suite converge s'il existe $x \in \mathbb{R}^{n}$ 
+	\[ 
+		\lim_{k \to  + \infty} \N{x^{( k) }-x} =0
+	\]
+	
+
+	
+\end{defn}
+
+
+
+\end{document}
