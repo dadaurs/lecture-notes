@@ -35,7 +35,7 @@ Le premier terme vaut 0, il vient
 						     &=  \frac{1}{( \alpha-1) ^{2}} 
 \end{align*}
 \section*{2}
-Pour la suite posons $f: [ 1, + \infty[ \to \mathbb{R},f(x) = \frac{\ln( x) }{x^{\alpha}}$ et $g:[-1, \infty[ \to \mathbb{R}$ définie par
+Pour la suite posons $f: [ 1, + \infty[ \to \mathbb{R},f(x) = \frac{\ln( x) }{x^{\alpha}}$ et $g:[1, \infty[ \to \mathbb{R}$ définie par
 \[ 
 	g( x) = k^{-\alpha}\ln( k)  \text{ si } x \in [ k,k+1[ 
 \]
@@ -72,14 +72,14 @@ Par le critère de comparaison, on en déduit que
 	\int_{ 4 }^{ \infty  } g( x) dx 
 \]
 
-converge, car majorée et minorée.\\
+converge, car majorée par une intégrale convergente et minoree par 0.\\
 On finit la preuve en notant que
 \[ 
 	\sum_{k=1}^{ + \infty } k^{-\alpha}\ln( k) = 2^{-\alpha}\ln( 2) + 3^{-\alpha}\ln( 3) +\int_{ 4 }^{ \infty  }f( x) dx
 \]
 Et ainsi la série converge.
 \section*{3}
-Etant donne que $f( x-1) $ atteindra son maximum en $e^{\frac{1}{\alpha}}+1$,on peut considèrer un encadrement à partir de $x=4$.\\
+Etant donne que $f( x-1) $ atteindra son maximum en $e^{\frac{1}{\alpha}}+1$ et sera donc décroissante pour toute valeur plus grande, on peut considèrer un encadrement à partir de $x=4$.\\
 Avant de l'expliciter, on constate que
 \[ 
 	\forall x>4\quad f( x-1) \geq g( x) \geq f(x) 
@@ -101,6 +101,7 @@ Finalement, en ajoutant les trois premiers termes de la somme on trouve
 	&\geq\sum_{k=1}^{ \infty } k^{-\alpha} \ln( k)\\
 	&\geq 2^{-\alpha}\ln( 2)+ 3^{-\alpha}\ln( 3) +\frac{4^{1-\alpha}( \alpha-1) \log( 4) +1}{( \alpha-1) ^{2}} 
 \end{align*}
+Et ainsi, on a majoré et minoré la série par des termes dépendant de $\alpha$.
 
 
 
