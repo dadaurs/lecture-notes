@@ -1,0 +1,70 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newcommand{\del}{\partial}
+\begin{document}
+\title{Série 2}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+On montre la double implication.\\
+$ \Rightarrow $ :\\
+Supposons d'abord $E$ ouvert, alors $\forall x \in E \exists \delta >0$ tel que $B( x,\delta) \subset E$, et ainsi $x \in \overset{\circ}{E}$. On en deduit que $E \subset \overset{\circ}{E}$.\\
+Car $\overset{\circ}{E} \subset E$, on en déduit que $\overset{\circ}{E} =E$.\\
+$\Leftarrow $ :\\
+Supposons donc $E= \overset{\circ}{E}$, ainsi $\forall x \in E \exists \delta >0  $ tel que $  B( x, \delta) \subset E $ et donc $E$ est ouvert.
+\section*{2}
+On montre la double inclusion.\\
+$\overset{\circ}{( E^{c} )} \subset ( \overline{E})^{c} $ \\
+Soit $x \in \overset{\circ}{( E^{c} )}$. Supposons, par l'absurde, que $x \in \overline{E}$, alors $x \in E $ ou $x \in \del E$.\\
+Si $x \in \overset{\circ}{( E^{c} )}$, en particulier $x \in E^{c}$ et donc $x \in E$ est absurde.\\
+Si $x \in \del E$, alors $\forall \delta >0,B(x, \delta ) \not\subset E$ et $\forall \delta >0,B(x, \delta ) \not\subset E^{c}$, ainsi $x \notin \overset{\circ}{( E^{c} )}$ et on a une contradiction.\\
+$\overset{\circ}{( E^{c} )} \supset ( \overline{E})^{c} $ \\
+Soit $x \in ( \overline{E} )^{c}$, alors, $x \notin \del E$ et $x \notin E$.\\
+Par définition, $\del E = \del E^{c}$ et donc $x \notin \del E^{c}$, ainsi $\forall x \in ( \overline{E})^{c}$, $\exists  \delta >0 $ tel que $B( x, \delta) \subset E^{c}$, on en deduit que $ x\in \overset{\circ}{E^{c}}$	.
+
+
+\section*{3}
+Comme résultat préliminaire, on montre que $ \overset{\circ}{ E } = E \setminus \del E$.\\
+Pour démontrer ceci, on procède par double inclusion.\\
+Soit $x \in \overset{\circ}{ E } $, alors $\exists \delta>0$ tel que $B( x,\delta)\subset E$, et ainsi $x \notin \del E$, mais $x \in E$, par définition, on en déduit $x \in E \setminus \del E$.\\
+Soit  $x \in E \setminus \del E$, ainsi, par définition du bord et parce que $x \in E$, $\exists \delta>0$ tel que $B( x,\delta) \subset E $, et donc $x \in \overset{\circ}{ E }$.\\
+Avec ce résultat, on démontre maintenant que $\overset{\circ}{ ( E )^{c} } = \overline{E^{c}}	$, on procède à nouveau par double inclusion.\\
+$\subset:$\\
+Soit $x \in\overset{\circ}{ ( E )^{c} }$, car $ \overset{\circ}{ E } = E \setminus \del E$, $x \in \del E \cup E^{c}$.\\
+Or, par définition du bord, $\del E = \del E^{c} $, et donc $x \in \del E^{c}\cup E^{c}$, et par une formule du cours $\del E^{c}\cup E^{c} = \overline{E^{c}}$, on en déduit finalement que $x\in \overline{E^{c}}$.\\
+$\supset:$\\
+Soit $x \in \overline{E^{c}}$, montrons que $x \notin \overset{\circ}{ E }$.\\
+On utilise à nouveau que $\overline{E^{c}} = \del E \cup E^{c}$.\\
+Si $x \in E^{c}$, alors il est clair que $x \notin\overset{\circ}{ E }$.\\
+Si $x \in \del E$, alors $\forall \delta>0, B( x,\delta) \not\subset E$, et donc $x \notin \overset{\circ}{ E }$.\\
+Ainsi, $x \in \overset{\circ}{ ( E )^{c} }$.
+\section*{4}
+On montre la double implication.\\
+$ \Rightarrow :$\\
+Supposons $E$ fermé, ainsi $E^{c}$ est ouvert.\\
+Si $E^{c}$ est ouvert, on a par la partie 1 que $E^{c}= \overset{\circ}{ ( E )^{c} }$.\\
+Ensuite, par la partie 2, on a que $\overset{\circ}{ ( E )^{c} } = ( \overline{E})^{c}$.\\
+Ainsi $E^{c}= ( \overline{E})^{c}$ et on en déduit que $E = \overline{E}$.\\
+$\Leftarrow :$\\
+On suppose maintenant que $E = \overline{E}$, montrons que le complementaire de $E$ est ouvert.\\
+Par la partie 1,  $E^{c}$ est ouvert si et seulement si $E^{c}= \overset{\circ}{ E ^{c} }$, grâce à la partie 2, la partie 1 et l'hypothèse que $E = \overline{E}$, la suite d'égalités suivantes prouve que $E$ est fermé:
+\[ 
+	E^{c}= ( \overline{E}) ^{c} = \overset{\circ}{ E ^{c} }
+\]
+
+
+
+
+
+
+
+
+
+\end{document}

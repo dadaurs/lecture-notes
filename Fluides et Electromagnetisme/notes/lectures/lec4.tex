@@ -1,0 +1,41 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Fri 05 Mar}{Interfaces solide/liquide}
+\subsection{Interface solide/liquide/gaz}
+On considere une goutte sur une surface.\\
+En equilibre la somme des forces sur la ligne tripe est nulle.\\
+Selon l'axe horizontal, on trouve
+\[ 
+\gamma_{sg} = \gamma_{sl} + \cos\theta \gamma_{lg} 
+\]
+Cette propriete s'appelle la loi de Young.
+Si $0<\theta < 90$, on a un bon mouillage.\\
+Si $\gamma_{sg} -\gamma_{sl} >\gamma_{lg}$, on a $\cos \theta >1$, cette situation est non-stationnaire.
+On parle alors de mouillage total.\\
+Si $-\gamma_{lg} < \gamma_{sg} -\gamma_{sl} <0$, alors $-1< \cos\theta <0$ et donc $90<\theta <180$, $\Rightarrow$ mauvais mouillage.\\
+Si $\gamma_{sq} - \gamma_{sl} < -\gamma_{lg} $, alors $\cos \theta <-1$, on parle alors de super-hydrophobie ou effet lotus.
+\subsection{Loi de laplace}
+Notons qu'a l'interieur d'un ballon, il y a une surpression.\\
+Et a l'interieur d'une goutte d'eau, d'une bulle de savon, \ldots ?\\
+On suppose une goutte de liquide spherique en apesanteur.
+Les forces s'appliquant sur la goutte donnent
+\[ 
+\sum F_i^{ext}= 0 = \vec{F}_{p_2} + \underbrace{\vec{F}_{p_1}}_{= \pi R^{2}p_1 \vec{e}_z} + \underbrace{\vec{F}_{\gamma}}_{=-2\pi R \gamma \vec{e}_z} 
+\]
+Pour $\vec{F}_{p_2} $, on a 
+\[
+	\vec{F}_{p_2} = \int \int - p_2 \vec{dS} = \int_{ 0 }^{ 2\pi } \int_{ 0 }^{ \frac{\pi}{2} }- p_2 \vec{e}_r R^{2} \sin\theta d \theta d\phi = \vec{e}_z \int_{ 0 }^{ 2\pi } \int_{ 0 }^{ \frac{\pi}{2} }- p_2 R^{2} \sin \theta \cos \theta d\theta d \phi = - \pi R^{2}p_{2} \vec{e}_z
+\]
+Donc
+\[ 
+	\sum F^{ext}= - 2 \pi R \gamma \vec{e}_z + \pi R^{2}p_1 \vec{e}_z
+\]
+Et donc
+\[ 
+p_1 - p_2 = \frac{2\gamma}{R}
+\]
+
+
+
+
+\end{document}	

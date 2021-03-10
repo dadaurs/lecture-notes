@@ -1,0 +1,20 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Sat 06 Mar}{Inclusion-Exclusion & Induction}
+Let $A,B$ be two sets, we want to compute $|A \cup B| = |A| + |B| - |A \cap B|$.\\
+What happens if we have $n$ sets $A_1, \ldots, A_n$.\\
+\begin{thm}[Inclusion-Exclusion Formula]
+	Let $A_1, \ldots, A_n$ be finite sets, then
+	\[ 
+		| \bigcup A_i| = \sum_{1 \leq i \leq n} |A_i| - \sum_{1 \leq i < j \leq n} |A_i \cap A_j| + \sum_{1 \leq i < j < k \leq n} |A_i \cap A_j \cap A_k| - \ldots
+	\]
+	
+	Let $B_1, \ldots, B_m$ and $w_1 \ldots, w_m$, then
+	\[ 
+		\sum_{i}  w_i |B_i| = \sum_{i} \sum_{b\in B_i} w_i = \sum_{b \in B} \sum_{ \text{ indices } i \text{ such that } b \in B_i} w_i
+	\]
+	where $B= \bigcup B_i$
+	
+\end{thm}
+
+\end{document}
