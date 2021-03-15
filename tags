@@ -20,6 +20,9 @@ $\\times$: Produit cartesien	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\
 1	BA1/Structures Algebriques/Devoirs/S7/sol.tex	/^\\section*{1}$/;"	s
 1	BA1/Structures Algebriques/Devoirs/S8/sol.tex	/^\\section*{1}$/;"	s
 1	Discrete Mathematics/ARendre/S2/Ex.tex	/^\\section*{1}$/;"	s
+1	current-course/Arendre/S1/Ex.tex	/^\\section*{1}$/;"	s
+1	current-course/Arendre/S2/Ex.tex	/^\\section*{1}$/;"	s
+1	current-course/Arendre/S3/Ex.tex	/^\\section*{1}$/;"	s
 1.1	BA1/Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{1.1}$/;"	s
 1.2	BA1/Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{1.2}$/;"	s
 1.3	BA1/Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{1.3}$/;"	s
@@ -37,6 +40,9 @@ $\\times$: Produit cartesien	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\
 2	BA1/Structures Algebriques/Devoirs/S7/sol.tex	/^\\section*{2}$/;"	s
 2	BA1/Structures Algebriques/Devoirs/S8/sol.tex	/^\\section*{2}$/;"	s
 2	Discrete Mathematics/ARendre/S2/Ex.tex	/^\\section*{2}$/;"	s
+2	current-course/Arendre/S1/Ex.tex	/^\\section*{2}$/;"	s
+2	current-course/Arendre/S2/Ex.tex	/^\\section*{2}$/;"	s
+2	current-course/Arendre/S3/Ex.tex	/^\\section*{2}$/;"	s
 2.1.1	BA1/Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{2.1.1}$/;"	s
 2.1.2	BA1/Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{2.1.2}$/;"	s
 2.2.1	BA1/Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{2.2.1}$/;"	s
@@ -58,12 +64,16 @@ $\\times$: Produit cartesien	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\
 3	BA1/Structures Algebriques/Devoirs/S12/sol.tex	/^\\section*{3}$/;"	s
 3	BA1/Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{3}$/;"	s
 3	BA1/Structures Algebriques/Devoirs/S8/sol.tex	/^\\section*{3}$/;"	s
+3	current-course/Arendre/S1/Ex.tex	/^\\section*{3}$/;"	s
+3	current-course/Arendre/S2/Ex.tex	/^\\section*{3}$/;"	s
+3	current-course/Arendre/S3/Ex.tex	/^\\section*{3}$/;"	s
 3.1	BA1/Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{3.1}$/;"	s
 3.2	BA1/Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{3.2}$/;"	s
 4	Analyse II/Arendre/S2/Ex.tex	/^\\section*{4}$/;"	s
 4	BA1/Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{4}$/;"	s
 4	BA1/Structures Algebriques/Devoirs/S12/sol.tex	/^\\section*{4}$/;"	s
 4	BA1/Structures Algebriques/Devoirs/S3/sol.tex	/^\\section*{4}$/;"	s
+4	current-course/Arendre/S2/Ex.tex	/^\\section*{4}$/;"	s
 4.1	BA1/Algebre Lineaire I/Exos/S2/Ex4/sol.tex	/^\\section*{4.1}$/;"	s
 4.1	BA1/Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{4.1}$/;"	s
 4.2	BA1/Algebre Lineaire I/Exos/S2/Ex4/sol.tex	/^\\section*{4.2}$/;"	s
@@ -118,8 +128,11 @@ Caisse	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^class Caisse  {
 Calcul scientifique	BA1/Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsubsection{Calcul scientifique}$/;"	b	subsection:Information, Calcul et Communication""A quoi ca sert?
 Calculs de Determinants	BA1/Algebre Lineaire I/notes/lectures/lec26.tex	/^\\subsection{Calculs de Determinants}$/;"	u	section:Determinants
 Caracterisation de limite par suites	Analyse II/notes/lectures/lec6.tex	/^\\subsection{Caracterisation de limite par suites}$/;"	u	section:Fonctions de plusieurs variables
+Caracterisation de limite par suites	current-course/notes/lectures/lec6.tex	/^\\subsection{Caracterisation de limite par suites}$/;"	u	section:Fonctions de plusieurs variables
 Caracterisation des ensembles fermes	Analyse II/notes/lectures/lec5.tex	/^\\subsection{Caracterisation des ensembles fermes}$/;"	u	section:L'espace $R^{n}$
+Caracterisation des ensembles fermes	current-course/notes/lectures/lec5.tex	/^\\subsection{Caracterisation des ensembles fermes}$/;"	u	section:L'espace $R^{n}$
 Caracterisation des ensembles ouverts	Analyse II/notes/lectures/lec5.tex	/^\\subsection{Caracterisation des ensembles ouverts}$/;"	u	section:L'espace $R^{n}$
+Caracterisation des ensembles ouverts	current-course/notes/lectures/lec5.tex	/^\\subsection{Caracterisation des ensembles ouverts}$/;"	u	section:L'espace $R^{n}$
 Caractéristique des Corps	BA1/Algebre Lineaire I/notes/lectures/lec9.tex	/^\\subsection{Caractéristique des Corps}$/;"	u	section:Anneaux
 Cardinal d'un ensemble	BA1/Structures Algebriques/notes/lectures/lec2.tex	/^\\subsection{Cardinal d'un ensemble}$/;"	u	section:Applications entre ensembles
 Carre	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		Carre(const Carre& C): c(C.c) {}$/;"	f	class:Carre	file:
@@ -142,6 +155,7 @@ Choc elastique	BA1/Mecanique Generale/notes/lectures/lec10.tex	/^\\subsection{Ch
 Chocs entre deux points materiels	BA1/Mecanique Generale/notes/lectures/lec10.tex	/^\\subsection{Chocs entre deux points materiels}$/;"	u	section:Chocs ou collisions entre deux corps
 Chocs ou collisions entre deux corps	BA1/Mecanique Generale/notes/lectures/lec10.tex	/^\\section{Chocs ou collisions entre deux corps}$/;"	s
 Classification des points d'un ensemble $E \\subset \\mathbb{R}^n$	Analyse II/notes/lectures/lec4.tex	/^\\subsection{Classification des points d'un ensemble $E \\subset \\mathbb{R}^n$}$/;"	u	section:L'espace $R^{n}$
+Classification des points d'un ensemble $E \\subset \\mathbb{R}^n$	current-course/notes/lectures/lec4.tex	/^\\subsection{Classification des points d'un ensemble $E \\subset \\mathbb{R}^n$}$/;"	u	section:L'espace $R^{n}$
 Client	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^class Client {$/;"	c	file:
 Coefficients de frottement	BA1/Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Coefficients de frottement}$/;"	u	section:Travail, énergie, forces conservatives
 Commemoratif	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  	Commemoratif(string n, unsigned int a, string p="Suisse", double v=1.0):Timbre(n,a,p,v) {}$/;"	f	class:Commemoratif	file:
@@ -182,13 +196,11 @@ Creature	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^class Creature
 Definir $\\mathbb{R}$	BA1/Analyse I/notes/lectures/lec1.tex	/^\\section{Definir $\\mathbb{R}$}$/;"	s
 Definition formelle des algorithmes	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\section{Definition formelle des algorithmes}$/;"	s
 Definitions Equivalentes	Analyse II/notes/lectures/lec6.tex	/^\\subsubsection{Definitions Equivalentes}$/;"	b	section:Fonctions continues
+Definitions Equivalentes	current-course/notes/lectures/lec6.tex	/^\\subsubsection{Definitions Equivalentes}$/;"	b	section:Fonctions continues
 Degre	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^typedef unsigned int Degre;$/;"	t	typeref:typename:unsigned int	file:
 Densite de fluide	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\subsection{Densite de fluide}$/;"	u	section:Fluides au repos
-Densite de fluide	current-course/notes/lectures/lec1.tex	/^\\subsection{Densite de fluide}$/;"	u	section:Fluides au repos
 Densite de force associee a la pression	Fluides et Electromagnetisme/notes/lectures/lec3.tex	/^\\subsection{Densite de force associee a la pression}$/;"	u	section:Pression dans un fluide
-Densite de force associee a la pression	current-course/notes/lectures/lec3.tex	/^\\subsection{Densite de force associee a la pression}$/;"	u	section:Pression dans un fluide
 Derivee convective	Fluides et Electromagnetisme/notes/lectures/lec5.tex	/^\\subsection{Derivee convective}$/;"	u	section:Dynamique des fluides
-Derivee convective	current-course/notes/lectures/lec5.tex	/^\\subsection{Derivee convective}$/;"	u	section:Dynamique des fluides
 Description des rotations spatiales	BA1/Mecanique Generale/notes/lectures/lec5.tex	/^\\section{Description des rotations spatiales}$/;"	s
 Dessin	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^class Dessin {$/;"	c	file:
 Determinants	BA1/Algebre Lineaire I/notes/lectures/lec23.tex	/^\\section{Determinants}$/;"	s
@@ -200,7 +212,6 @@ Division avec reste	Algebre Lineaire II/notes/lectures/lec2.tex	/^\\subsection{D
 Dragon	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^	Dragon(string n, int nv, int pts, int f, int p, int pos=0):$/;"	f	class:Dragon	file:
 Dragon	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^class Dragon:public Creature {$/;"	c	file:
 Dynamique des fluides	Fluides et Electromagnetisme/notes/lectures/lec5.tex	/^\\section{Dynamique des fluides}$/;"	s
-Dynamique des fluides	current-course/notes/lectures/lec5.tex	/^\\section{Dynamique des fluides}$/;"	s
 Dynamique du point materiel	BA1/Mecanique Generale/notes/lectures/lec4.tex	/^\\section{Dynamique du point materiel}$/;"	s
 Dynamique du solide avec axe fixe	BA1/Mecanique Generale/notes/lectures/lec14.tex	/^\\subsection{Dynamique du solide avec axe fixe}$/;"	u	section:Rotations Du Solide
 Déduction de la force de Gravitation en $\\frac{1}{r^{2}}$	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Déduction de la force de Gravitation en $\\frac{1}{r^{2}}$}$/;"	u	section:Gravitation, Moment Cinétique
@@ -215,14 +226,14 @@ EnsembleFini	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^class Ensembl
 Ensembles	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Ensembles}$/;"	u	section:Le language des Ensembles
 Ensembles	BA1/Structures Algebriques/notes/lectures/lec1.tex	/^\\subsection{Ensembles}$/;"	u	section:Preuves
 Ensembles compacts	Analyse II/notes/lectures/lec5.tex	/^\\subsection{Ensembles compacts}$/;"	u	section:L'espace $R^{n}$
-Equation d'Euler	Fluides et Electromagnetisme/notes/lectures/lec6.tex	/^\\subsection{Equation d'Euler}$/;"	u
-Equation d'etat	Fluides et Electromagnetisme/notes/lectures/lec6.tex	/^\\subsection{Equation d'etat}$/;"	u
+Ensembles compacts	current-course/notes/lectures/lec5.tex	/^\\subsection{Ensembles compacts}$/;"	u	section:L'espace $R^{n}$
+Equation d'Euler	Fluides et Electromagnetisme/notes/lectures/lec6.tex	/^\\subsection{Equation d'Euler}$/;"	u	section:Dynamique des fluides
+Equation d'etat	Fluides et Electromagnetisme/notes/lectures/lec6.tex	/^\\subsection{Equation d'etat}$/;"	u	section:Dynamique des fluides
 Equations Differentielles	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^\\subsection{Equations Differentielles}$/;"	u	section:Quelques notions mathematiques
 Equations de continuite( description Eulerienne)	Fluides et Electromagnetisme/notes/lectures/lec5.tex	/^\\subsubsection{Equations de continuite( description Eulerienne) }$/;"	b	subsection:Dynamique des fluides""Equations fluides
-Equations de continuite( description Eulerienne)	current-course/notes/lectures/lec5.tex	/^\\subsubsection{Equations de continuite( description Eulerienne) }$/;"	b	subsection:Dynamique des fluides""Equations fluides
 Equations fluides	Fluides et Electromagnetisme/notes/lectures/lec5.tex	/^\\subsection{Equations fluides}$/;"	u	section:Dynamique des fluides
-Equations fluides	current-course/notes/lectures/lec5.tex	/^\\subsection{Equations fluides}$/;"	u	section:Dynamique des fluides
 Espace vectoriel norme	Analyse II/notes/lectures/lec3.tex	/^\\subsection{Espace vectoriel norme}$/;"	u	section:L'espace $R^{n}$
+Espace vectoriel norme	current-course/notes/lectures/lec3.tex	/^\\subsection{Espace vectoriel norme}$/;"	u	section:L'espace $R^{n}$
 Espaces Vectoriels	BA1/Algebre Lineaire I/notes/lectures/lec10.tex	/^\\section{Espaces Vectoriels}$/;"	s
 Espaces d'applications linéaires	BA1/Algebre Lineaire I/notes/lectures/lec13.tex	/^\\subsection{Espaces d'applications linéaires}$/;"	u	section:Espaces Vectoriels
 Espaces vectoriels de dimension infinie	BA1/Algebre Lineaire I/notes/lectures/lec12.tex	/^\\subsection{Espaces vectoriels de dimension infinie}$/;"	u	section:Espaces Vectoriels
@@ -251,12 +262,14 @@ Fleur	Programmation Orientee Objet/Exos/S2/Ex2/poeme.cc	/^	Fleur(Fleur const& fl
 Fleur	Programmation Orientee Objet/Exos/S2/Ex2/poeme.cc	/^	Fleur(string nom, string coul) {$/;"	f	class:Fleur	file:
 Fleur	Programmation Orientee Objet/Exos/S2/Ex2/poeme.cc	/^class Fleur {$/;"	c	file:
 Fluides au repos	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\section{Fluides au repos}$/;"	s
-Fluides au repos	current-course/notes/lectures/lec1.tex	/^\\section{Fluides au repos}$/;"	s
 Fonctions	BA1/Analyse I/notes/lectures/lec8.tex	/^\\section{Fonctions}$/;"	s
 Fonctions	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^\\subsection{Fonctions}$/;"	u	section:Quelques notions mathematiques
 Fonctions a valeurs dans $R^{m}$	Analyse II/notes/lectures/lec6.tex	/^\\subsection{Fonctions a valeurs dans $R^{m}$}$/;"	u	section:Fonctions de plusieurs variables
+Fonctions a valeurs dans $R^{m}$	current-course/notes/lectures/lec6.tex	/^\\subsection{Fonctions a valeurs dans $R^{m}$}$/;"	u	section:Fonctions de plusieurs variables
 Fonctions continues	Analyse II/notes/lectures/lec6.tex	/^\\section{Fonctions continues}$/;"	s
+Fonctions continues	current-course/notes/lectures/lec6.tex	/^\\section{Fonctions continues}$/;"	s
 Fonctions de plusieurs variables	Analyse II/notes/lectures/lec5.tex	/^\\section{Fonctions de plusieurs variables}$/;"	s
+Fonctions de plusieurs variables	current-course/notes/lectures/lec5.tex	/^\\section{Fonctions de plusieurs variables}$/;"	s
 Force de pesanteur et chute des corps	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Force de pesanteur et chute des corps}$/;"	s
 Forces conservatives	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Forces conservatives}$/;"	u	section:Travail, énergie, forces conservatives
 Forces de Frottement	BA1/Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Forces de Frottement}$/;"	u	section:Travail, énergie, forces conservatives
@@ -270,7 +283,6 @@ Formes linéaires	BA1/Algebre Lineaire I/notes/lectures/lec13.tex	/^\\subsection
 Formes linéaires et dualité	BA1/Algebre Lineaire I/notes/lectures/lec13.tex	/^\\subsection{Formes linéaires et dualité}$/;"	u	section:Espaces Vectoriels
 Formes multilineaires	BA1/Algebre Lineaire I/notes/lectures/lec23.tex	/^\\subsection{Formes multilineaires}$/;"	u	section:Determinants
 Formules d'integration	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\subsection{Formules d'integration}$/;"	u	section:Notations du cours et maths necessaires
-Formules d'integration	current-course/notes/lectures/lec1.tex	/^\\subsection{Formules d'integration}$/;"	u	section:Notations du cours et maths necessaires
 Graphe	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{Graphe}$/;"	b	subsection:Le language des Ensembles""Applications entre ensembles
 Gravitation, Moment Cinétique	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\section{Gravitation, Moment Cinétique}$/;"	s
 Grille	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^typedef  array<array<Couleur,7>,6> Grille;$/;"	t	typeref:typename:array<array<Couleur,7>,6>	file:
@@ -296,27 +308,28 @@ Injection de $\\mathbb{Q} \\to \\mathbb{N}$	BA1/Structures Algebriques/Devoirs/S
 Injectivité	BA1/Structures Algebriques/Devoirs/S3/sol.tex	/^\\subsection*{Injectivité}$/;"	u	section:1
 Instructions elementaires	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Instructions elementaires}$/;"	u	section:Definition formelle des algorithmes
 Integrale generalisee sur un intervalle non borne	Analyse II/notes/lectures/lec2.tex	/^\\subsection{Integrale generalisee sur un intervalle non borne}$/;"	u	section:Intégrales généralisées
+Integrale generalisee sur un intervalle non borne	current-course/notes/lectures/lec2.tex	/^\\subsection{Integrale generalisee sur un intervalle non borne}$/;"	u	section:Intégrales généralisées
 Integrales absoluments convergentes	Analyse II/notes/lectures/lec2.tex	/^\\subsection{Integrales absoluments convergentes}$/;"	u	section:Intégrales généralisées
+Integrales absoluments convergentes	current-course/notes/lectures/lec2.tex	/^\\subsection{Integrales absoluments convergentes}$/;"	u	section:Intégrales généralisées
 Integration	BA1/Analyse I/notes/lectures/lec22.tex	/^\\section{Integration}$/;"	s
 Integration Par Parties	BA1/Analyse I/notes/lectures/lec25.tex	/^\\subsubsection{Integration Par Parties}$/;"	b	subsection:Integration""Recherche de Primitives
 Integration de Fonctions Rationelles	BA1/Analyse I/notes/lectures/lec26.tex	/^\\subsection{Integration de Fonctions Rationelles}$/;"	u	section:Integration
 Interface solide/liquide/gaz	Fluides et Electromagnetisme/notes/lectures/lec4.tex	/^\\subsection{Interface solide\/liquide\/gaz}$/;"	u	section:Pression dans un fluide
-Interface solide/liquide/gaz	current-course/notes/lectures/lec4.tex	/^\\subsection{Interface solide\/liquide\/gaz}$/;"	u	section:Pression dans un fluide
 Interprétation du vecteur $\\omega$	BA1/Mecanique Generale/notes/lectures/lec5.tex	/^\\subsection{Interprétation du vecteur $\\omega$}$/;"	u	section:Description des rotations spatiales
 Introduction	BA1/Analyse I/notes/lectures/lec1.tex	/^\\section{Introduction}$/;"	s
 Introduction	BA1/Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsection{Introduction}$/;"	u	section:Information, Calcul et Communication
 Introduction	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\subsection{Introduction}$/;"	u	section:Fluides au repos
-Introduction	current-course/notes/lectures/lec1.tex	/^\\subsection{Introduction}$/;"	u	section:Fluides au repos
 Intégrales généralisées	Analyse II/notes/lectures/lec1.tex	/^\\section{Intégrales généralisées}$/;"	s
+Intégrales généralisées	current-course/notes/lectures/lec1.tex	/^\\section{Intégrales généralisées}$/;"	s
 Intégrales premières d'un mouvement central	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Intégrales premières d'un mouvement central}$/;"	u	section:Gravitation, Moment Cinétique
 Invariance par changement de referentiel	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\subsection{Invariance par changement de referentiel}$/;"	u	section:Physique
 Jeu	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^		Jeu(int taille=8):table(taille,vector<Couleur>(taille)) {}$/;"	f	class:Jeu	file:
 Jeu	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^class Jeu {$/;"	c	file:
 Joueur	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^class Joueur {$/;"	c	file:
 L'espace $R^{n}$	Analyse II/notes/lectures/lec3.tex	/^\\section{L'espace $R^{n}$}$/;"	s
+L'espace $R^{n}$	current-course/notes/lectures/lec3.tex	/^\\section{L'espace $R^{n}$}$/;"	s
 L'homomorphisme $\\sgn$	BA1/Structures Algebriques/notes/lectures/lec7.tex	/^\\subsection{L'homomorphisme $\\sgn$ }$/;"	u	section:Théorie des Groupes
 L'operateur $\\nabla$ ( nabla) et la definition du gradient, de la divergence et du rotationnel	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\subsection{L'operateur $\\nabla$ ( nabla) et la definition du gradient, de la divergence et du/;"	u	section:Notations du cours et maths necessaires
-L'operateur $\\nabla$ ( nabla) et la definition du gradient, de la divergence et du rotationnel	current-course/notes/lectures/lec1.tex	/^\\subsection{L'operateur $\\nabla$ ( nabla) et la definition du gradient, de la divergence et du/;"	u	section:Notations du cours et maths necessaires
 L'énergie mécanique: intégrale première	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{L'énergie mécanique: intégrale première}$/;"	u	section:Travail, énergie, forces conservatives
 La conduite de processus	BA1/Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsubsection{La conduite de processus}$/;"	b	subsection:Information, Calcul et Communication""A quoi ca sert?
 La gestion d'information	BA1/Introduction a la programmation/notes/lectures/lec1.tex	/^\\subsubsection{La gestion d'information}$/;"	b	subsection:Information, Calcul et Communication""A quoi ca sert?
@@ -338,7 +351,6 @@ Livre	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^		Livre(string t, 
 Livre	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^class Livre {$/;"	c	file:
 Loi de gravitation universelle	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Loi de gravitation universelle}$/;"	u	section:Gravitation, Moment Cinétique
 Loi de laplace	Fluides et Electromagnetisme/notes/lectures/lec4.tex	/^\\subsection{Loi de laplace}$/;"	u	section:Pression dans un fluide
-Loi de laplace	current-course/notes/lectures/lec4.tex	/^\\subsection{Loi de laplace}$/;"	u	section:Pression dans un fluide
 Lois de Kepler	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Lois de Kepler}$/;"	u	section:Gravitation, Moment Cinétique
 Lois de conservation	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\subsection{Lois de conservation}$/;"	u	section:Physique
 Lois de newton	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Lois de newton}$/;"	s
@@ -366,10 +378,11 @@ Mouvement dans un potentiel central	BA1/Mecanique Generale/notes/lectures/lec8.t
 Mouvement plan-sur-plan	BA1/Mecanique Generale/notes/lectures/lec11.tex	/^\\subsection{Mouvement plan-sur-plan}$/;"	u	section:Rotations Du Solide
 Mouvement rectiligne uniformement accelere	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Mouvement rectiligne uniformement accelere}$/;"	s
 Normes sur $R^{n}$	Analyse II/notes/lectures/lec3.tex	/^\\subsection{Normes sur $R^{n}$}$/;"	u	section:L'espace $R^{n}$
+Normes sur $R^{n}$	current-course/notes/lectures/lec3.tex	/^\\subsection{Normes sur $R^{n}$}$/;"	u	section:L'espace $R^{n}$
 Notations	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Notations}$/;"	u	section:Le language des Ensembles
 Notations du cours et maths necessaires	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\section{Notations du cours et maths necessaires}$/;"	s
-Notations du cours et maths necessaires	current-course/notes/lectures/lec1.tex	/^\\section{Notations du cours et maths necessaires}$/;"	s
 Notion de limite	Analyse II/notes/lectures/lec5.tex	/^\\subsection{Notion de limite}$/;"	u	section:Fonctions de plusieurs variables
+Notion de limite	current-course/notes/lectures/lec5.tex	/^\\subsection{Notion de limite}$/;"	u	section:Fonctions de plusieurs variables
 Noyau et Image	BA1/Algebre Lineaire I/notes/lectures/lec5.tex	/^\\section{Noyau et Image}$/;"	s
 Noyau/Image	BA1/Algebre Lineaire I/notes/lectures/lec6.tex	/^\\subsection{Noyau\/Image}$/;"	u	section:Anneaux
 Objectifs du cours de mecanique generale	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Objectifs du cours de mecanique generale}$/;"	s
@@ -380,7 +393,6 @@ Operations sur les ensembles	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\
 Operations sur les lignes/Colonnes	BA1/Algebre Lineaire I/notes/lectures/lec27.tex	/^\\subsubsection{Operations sur les lignes\/Colonnes}$/;"	b	subsection:Determinants""Calculs de Determinants
 Operations with finite sets	Discrete Mathematics/notes/lectures/lec1.tex	/^\\subsection{Operations with finite sets}$/;"	u	section:Counting
 Origine et definition de la tension superficielle	Fluides et Electromagnetisme/notes/lectures/lec3.tex	/^\\subsubsection{Origine et definition de la tension superficielle}$/;"	b	subsection:Pression dans un fluide""Tension superficielle
-Origine et definition de la tension superficielle	current-course/notes/lectures/lec3.tex	/^\\subsubsection{Origine et definition de la tension superficielle}$/;"	b	subsection:Pression dans un fluide""Tension superficielle
 Oscillateur force	BA1/Mecanique Generale/notes/lectures/lec3.tex	/^\\subsection{Oscillateur force}$/;"	u	section:Oscillateurs Harmoniques
 Oscillateur harmonique amorti	BA1/Mecanique Generale/notes/lectures/lec3.tex	/^\\subsection{Oscillateur harmonique amorti}$/;"	u	section:Oscillateurs Harmoniques
 Oscillateurs Harmoniques	BA1/Mecanique Generale/notes/lectures/lec3.tex	/^\\section{Oscillateurs Harmoniques}$/;"	s
@@ -411,11 +423,8 @@ Polynomes	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\section{Polynomes}$/;"
 Position	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^struct Position{$/;"	s	file:
 Position	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^typedef size_t Position;$/;"	t	typeref:typename:size_t	file:
 Poussee d'Archimede	Fluides et Electromagnetisme/notes/lectures/lec3.tex	/^\\subsection{Poussee d'Archimede}$/;"	u	section:Pression dans un fluide
-Poussee d'Archimede	current-course/notes/lectures/lec3.tex	/^\\subsection{Poussee d'Archimede}$/;"	u	section:Pression dans un fluide
 Pression dans un fluide	Fluides et Electromagnetisme/notes/lectures/lec2.tex	/^\\section{Pression dans un fluide}$/;"	s
-Pression dans un fluide	current-course/notes/lectures/lec2.tex	/^\\section{Pression dans un fluide}$/;"	s
 Pression hydrostatique	Fluides et Electromagnetisme/notes/lectures/lec2.tex	/^\\subsection{Pression hydrostatique}$/;"	u	section:Pression dans un fluide
-Pression hydrostatique	current-course/notes/lectures/lec2.tex	/^\\subsection{Pression hydrostatique}$/;"	u	section:Pression dans un fluide
 Preuves	BA1/Structures Algebriques/notes/lectures/lec1.tex	/^\\section{Preuves}$/;"	s
 Principe de Bernoulli-L'Hospital	BA1/Analyse I/notes/lectures/lec16.tex	/^\\subsection{Principe de Bernoulli-L'Hospital}$/;"	u	section:Dérivation
 Probleme a deux corps	BA1/Mecanique Generale/notes/lectures/lec10.tex	/^\\subsection{Probleme a deux corps}$/;"	u	section:Gravitation, Moment Cinétique
@@ -428,12 +437,14 @@ Produit vectoriel	BA1/Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection{
 ProduitCuisine	Programmation Orientee Objet/Arendre/S6/Ex1/restaurant.cc	/^class ProduitCuisine: public Recette, public Produit {$/;"	c	file:
 Produits de Groupes	BA1/Structures Algebriques/notes/lectures/lec6.tex	/^\\subsection{Produits de Groupes}$/;"	u	section:Théorie des Groupes
 Projections et composantes d'un vecteur	BA1/Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection{Projections et composantes d'un vecteur}$/;"	u	section:Dynamique du point materiel
+Prolongement par continuite	Analyse II/notes/lectures/lec7.tex	/^\\subsection{Prolongement par continuite}$/;"	u
+Prolongement par continuite	current-course/notes/lectures/lec7.tex	/^\\subsection{Prolongement par continuite}$/;"	u	section:Fonctions continues
 Proprietes de l'operation de limite	Analyse II/notes/lectures/lec6.tex	/^\\subsection{Proprietes de l'operation de limite}$/;"	u	section:Fonctions de plusieurs variables
+Proprietes de l'operation de limite	current-course/notes/lectures/lec6.tex	/^\\subsection{Proprietes de l'operation de limite}$/;"	u	section:Fonctions de plusieurs variables
 Proprietes de preuves formelles	BA1/Structures Algebriques/notes/lectures/lec1.tex	/^\\subsubsection{Proprietes de preuves formelles}$/;"	b	section:Preuves
 Propriété universelle des Produits	BA1/Structures Algebriques/notes/lectures/lec6.tex	/^\\subsection{Propriété universelle des Produits}$/;"	u	section:Théorie des Groupes
 Qu'est-ce qu'un algorithme?	BA1/Introduction a la programmation/notes/lectures/lec2.tex	/^\\subsubsection{Qu'est-ce qu'un algorithme?}$/;"	b	subsection:Algorithmes""Formalisation d'algorithmes
 Quelques consequences immediates de la tension superficielle	Fluides et Electromagnetisme/notes/lectures/lec3.tex	/^\\subsubsection{Quelques consequences immediates de la tension superficielle}$/;"	b	subsection:Pression dans un fluide""Tension superficielle
-Quelques consequences immediates de la tension superficielle	current-course/notes/lectures/lec3.tex	/^\\subsubsection{Quelques consequences immediates de la tension superficielle}$/;"	b	subsection:Pression dans un fluide""Tension superficielle
 Quelques notions mathematiques	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Quelques notions mathematiques}$/;"	s
 Rang d'une Matrice	BA1/Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Rang d'une Matrice}$/;"	u	section:Matrices
 Rare	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  	Rare(string n, unsigned int a, string p="Suisse", double v=1.0, int nb=100):Timbre(n,a,p,v), /;"	f	class:Rare	file:
@@ -452,7 +463,6 @@ Resolution d'une equation du second degre	BA1/Introduction a la programmation/no
 Resolution de systemes lineaires	BA1/Algebre Lineaire I/notes/lectures/lec22.tex	/^\\subsection{Resolution de systemes lineaires}$/;"	u	section:Operations Elementaires Sur Les Matrices
 Rotations Du Solide	BA1/Mecanique Generale/notes/lectures/lec11.tex	/^\\section{Rotations Du Solide}$/;"	s
 Scalaires et Vecteurs	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\subsection{Scalaires et Vecteurs}$/;"	u	section:Notations du cours et maths necessaires
-Scalaires et Vecteurs	current-course/notes/lectures/lec1.tex	/^\\subsection{Scalaires et Vecteurs}$/;"	u	section:Notations du cours et maths necessaires
 Sequence	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^typedef  vector<int> Sequence;$/;"	t	typeref:typename:vector<int>	file:
 Series	BA1/Analyse I/notes/lectures/lec6.tex	/^\\section{Series}$/;"	s
 Series Entieres	BA1/Analyse I/notes/lectures/lec20.tex	/^\\section{Series Entieres}$/;"	s
@@ -475,13 +485,13 @@ Suites de Cauchy	BA1/Analyse I/notes/lectures/lec5.tex	/^\\subsection{Suites de 
 Suites de Fonctions	BA1/Analyse I/notes/lectures/lec12.tex	/^\\section{Suites de Fonctions}$/;"	s
 Suites et limites	BA1/Analyse I/notes/lectures/lec3.tex	/^\\section{Suites et limites}$/;"	s
 Suites sur $R^{n}$	Analyse II/notes/lectures/lec4.tex	/^\\subsection{Suites sur $R^{n}$}$/;"	u	section:L'espace $R^{n}$
+Suites sur $R^{n}$	current-course/notes/lectures/lec4.tex	/^\\subsection{Suites sur $R^{n}$}$/;"	u	section:L'espace $R^{n}$
 Surjectivité	BA1/Structures Algebriques/Devoirs/S3/sol.tex	/^\\subsection*{Surjectivité}$/;"	u	section:1
 Systeme de coordonnees	BA1/Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection{Systeme de coordonnees}$/;"	u	section:Dynamique du point materiel
 Systeme de points matériels	BA1/Mecanique Generale/notes/lectures/lec9.tex	/^\\subsection{Systeme de points matériels}$/;"	u	section:Gravitation, Moment Cinétique
 Système à l'équilibre	BA1/Mecanique Generale/notes/lectures/lec9.tex	/^\\subsection{Système à l'équilibre}$/;"	u	section:Gravitation, Moment Cinétique
 Tenseur d'inertie	BA1/Mecanique Generale/notes/lectures/lec12.tex	/^\\subsection{Tenseur d'inertie}$/;"	u	section:Rotations Du Solide
 Tension superficielle	Fluides et Electromagnetisme/notes/lectures/lec3.tex	/^\\subsection{Tension superficielle}$/;"	u	section:Pression dans un fluide
-Tension superficielle	current-course/notes/lectures/lec3.tex	/^\\subsection{Tension superficielle}$/;"	u	section:Pression dans un fluide
 Theoreme de Lagrange	BA1/Structures Algebriques/notes/lectures/lec8.tex	/^\\subsection{Theoreme de Lagrange}$/;"	u	section:Théorie des Groupes
 Theoreme du Moment Cinetique Generalise	BA1/Mecanique Generale/notes/lectures/lec11.tex	/^\\subsection{Theoreme du Moment Cinetique Generalise}$/;"	u	section:Rotations Du Solide
 Theoreme fondamental de l'arithmetique	BA1/Structures Algebriques/notes/lectures/lec3.tex	/^\\subsection{Theoreme fondamental de l'arithmetique}$/;"	u	section:Theorie des nombres
@@ -493,6 +503,7 @@ Timbre	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  Timbre(string 
 Timbre	Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^class Timbre$/;"	c	file:
 Tirelire	Programmation Orientee Objet/Arendre/S1/Ex2/tirelire.cc	/^class Tirelire{$/;"	c	file:
 Topologie de $ \\mathbb{R}^n$	Analyse II/notes/lectures/lec4.tex	/^\\subsection{Topologie de $ \\mathbb{R}^n$}$/;"	u	section:L'espace $R^{n}$
+Topologie de $ \\mathbb{R}^n$	current-course/notes/lectures/lec4.tex	/^\\subsection{Topologie de $ \\mathbb{R}^n$}$/;"	u	section:L'espace $R^{n}$
 Transposition	BA1/Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Transposition}$/;"	u	section:Matrices
 Travail d'une force centrale en $\\frac{1}{r^{2}}$	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Travail d'une force centrale en $\\frac{1}{r^{2}}$}$/;"	u	section:Travail, énergie, forces conservatives
 Travail de la force de pesanteur	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Travail de la force de pesanteur}$/;"	u	section:Travail, énergie, forces conservatives
@@ -508,7 +519,6 @@ Triangle	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		Triangle(double
 Triangle	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^class Triangle: public Figure {$/;"	c	file:
 Trigonometrie	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Trigonometrie}$/;"	s
 Types d'ecoulement	Fluides et Electromagnetisme/notes/lectures/lec5.tex	/^\\subsection{Types d'ecoulement}$/;"	u	section:Dynamique des fluides
-Types d'ecoulement	current-course/notes/lectures/lec5.tex	/^\\subsection{Types d'ecoulement}$/;"	u	section:Dynamique des fluides
 Un calcul naif ( avec la série harmonique alternée)	BA1/Analyse I/notes/lectures/lec7.tex	/^\\subsubsection{Un calcul naif ( avec la série harmonique alternée)}$/;"	b	section:Fonctions
 Une base de $Hom_k( V,W) $	BA1/Algebre Lineaire I/notes/lectures/lec13.tex	/^ \\subsection{Une base de $Hom_k( V,W) $}$/;"	u	section:Espaces Vectoriels
 Utilisations de la 2eme derivee	BA1/Analyse I/notes/lectures/lec19.tex	/^\\subsection{Utilisations de la 2eme derivee}$/;"	u	section:Polynome de Taylor et developpements limites
@@ -705,7 +715,6 @@ base	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	
 base	BA1/Structures Algebriques/notes/figures/test.svg	/^     inkscape:window-maximized="1">$/;"	i
 base	Fluides et Electromagnetisme/notes/figures/goutte_apesanteur.svg	/^     inkscape:window-maximized="1">$/;"	i
 base	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		double base;$/;"	m	class:Triangle	typeref:typename:double	file:
-base	current-course/notes/figures/goutte_apesanteur.svg	/^     inkscape:window-maximized="1">$/;"	i
 bestseller	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^		bool bestseller;$/;"	m	class:Livre	typeref:typename:bool	file:
 binaire	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^bool binaire(Carte const& carte){$/;"	f	typeref:typename:bool
 bis	Programmation Orientee Objet/Exos/S2/Ex1/apero.cc	/^	void bis() {$/;"	f	class:Apero	typeref:typename:void	file:
@@ -755,7 +764,6 @@ cc	BA1/Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure
 cc	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://creativecommons.org/ns#
 cc	BA1/Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://creativecommons.org/ns#
 cc	Fluides et Electromagnetisme/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://creativecommons.org/ns#
-cc	current-course/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://creativecommons.org/ns#
 centre	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^		Coord centre;$/;"	m	class:Cercle	typeref:typename:Coord	file:
 check_autour	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^int check_autour(Carte carte, size_t i, size_t j){$/;"	f	typeref:typename:int
 clonee	Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^		bool clonee=false;$/;"	m	class:Souris	typeref:typename:bool	file:
@@ -820,7 +828,6 @@ dc	BA1/Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure
 dc	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
 dc	BA1/Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
 dc	Fluides et Electromagnetisme/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
-dc	current-course/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
 debut	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^size_t debut;$/;"	m	struct:SousSequence	typeref:typename:size_t	file:
 decale	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex4/cesar.cc	/^char decale(char c, char debut, int dec){$/;"	f	typeref:typename:char
 decode	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex4/cesar.cc	/^string decode(string s,int  d){$/;"	f	typeref:typename:string
@@ -831,15 +838,19 @@ def:notations_surjection	BA1/Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begi
 defn:Anneau integreanneau_integre	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\begin{defn}[Anneau integre]\\label{defn:Anneau integreanneau_integre}$/;"	l
 defn:Binomial coefficientbinomial_coefficient	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[Binomial coefficient]\\label{defn:Binomial coefficientbinomial_coefficient}$/;"	l
 defn:Bouleboule	Analyse II/notes/lectures/lec4.tex	/^\\begin{defn}[Boule]\\label{defn:Bouleboule}$/;"	l
+defn:Bouleboule	current-course/notes/lectures/lec4.tex	/^\\begin{defn}[Boule]\\label{defn:Bouleboule}$/;"	l
 defn:Cartesion productcartesion_product	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[Cartesion product]\\label{defn:Cartesion productcartesion_product}$/;"	l
 defn:Centre d'un anneaucentre_d_un_anneau	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\begin{defn}[Centre d'un anneau]\\label{defn:Centre d'un anneaucentre_d_un_anneau}$/;"	l
 defn:Degre d'un polynomedegre_d_un_polynome	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\begin{defn}[Degre d'un polynome]\\label{defn:Degre d'un polynomedegre_d_un_polynome}$/;"	l
 defn:Disjoint uniondisjoint_union	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[Disjoint union]\\label{defn:Disjoint uniondisjoint_union}$/;"	l
 defn:Diviseur Commundiviseur_commun	Algebre Lineaire II/notes/lectures/lec3.tex	/^\\begin{defn}[Diviseur Commun]\\label{defn:Diviseur Commundiviseur_commun}$/;"	l
 defn:Ensemble compactensemble_compact	Analyse II/notes/lectures/lec5.tex	/^\\begin{defn}[Ensemble compact]\\label{defn:Ensemble compactensemble_compact}$/;"	l
+defn:Ensemble compactensemble_compact	current-course/notes/lectures/lec5.tex	/^\\begin{defn}[Ensemble compact]\\label{defn:Ensemble compactensemble_compact}$/;"	l
 defn:First Numbersfirst_numbers	Discrete Mathematics/notes/lectures/lec1.tex	/^\\begin{defn}[First Numbers]\\label{defn:First Numbersfirst_numbers}$/;"	l
 defn:Integrale absolument convergenteintegrale_absolument_convergente	Analyse II/notes/lectures/lec2.tex	/^\\begin{defn}[Integrale absolument convergente]\\label{defn:Integrale absolument convergenteinte/;"	l
+defn:Integrale absolument convergenteintegrale_absolument_convergente	current-course/notes/lectures/lec2.tex	/^\\begin{defn}[Integrale absolument convergente]\\label{defn:Integrale absolument convergenteinte/;"	l
 defn:Integrale sur un intervalle non borneintegrale_sur_un_intervalle_non_borne	Analyse II/notes/lectures/lec2.tex	/^\\begin{defn}[Integrale sur un intervalle non borne]\\label{defn:Integrale sur un intervalle non/;"	l
+defn:Integrale sur un intervalle non borneintegrale_sur_un_intervalle_non_borne	current-course/notes/lectures/lec2.tex	/^\\begin{defn}[Integrale sur un intervalle non borne]\\label{defn:Integrale sur un intervalle non/;"	l
 defn:Polynomepolynome	Algebre Lineaire II/notes/lectures/lec1.tex	/^\\begin{defn}[Polynome]\\label{defn:Polynomepolynome}$/;"	l
 defn:Racineracine	Algebre Lineaire II/notes/lectures/lec2.tex	/^\\begin{defn}[Racine]\\label{defn:Racineracine}$/;"	l
 defn:Vecteur proprevecteur_propre	Algebre Lineaire II/notes/lectures/lec4.tex	/^\\begin{defn}[Vecteur propre]\\label{defn:Vecteur proprevecteur_propre}$/;"	l
@@ -929,7 +940,6 @@ defs2	BA1/Structures Algebriques/notes/figures/qq.svg	/^     id="defs2" \/>$/;"	
 defs2	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^     id="defs2">$/;"	i
 defs2	BA1/Structures Algebriques/notes/figures/test.svg	/^     id="defs2" \/>$/;"	i
 defs2	Fluides et Electromagnetisme/notes/figures/goutte_apesanteur.svg	/^     id="defs2" \/>$/;"	i
-defs2	current-course/notes/figures/goutte_apesanteur.svg	/^     id="defs2" \/>$/;"	i
 degre	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^		Degre degre() const {$/;"	f	class:Polynome	typeref:typename:Degre	file:
 degres	BA1/Structures Algebriques/Devoirs/S1/sol.tex	/^\\begin{lemma}\\label{degres}$/;"	l
 demander_annee	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex7/datedepaques.cc	/^int demander_annee(){$/;"	f	typeref:typename:int
@@ -1186,7 +1196,6 @@ grid815	BA1/Structures Algebriques/notes/figures/qq.svg	/^       dotted="false" 
 grid815	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^       dotted="false" \/>$/;"	i
 grid815	BA1/Structures Algebriques/notes/figures/test.svg	/^       dotted="false" \/>$/;"	i
 grid815	Fluides et Electromagnetisme/notes/figures/goutte_apesanteur.svg	/^       dotted="false" \/>$/;"	i
-grid815	current-course/notes/figures/goutte_apesanteur.svg	/^       dotted="false" \/>$/;"	i
 h	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		double h;$/;"	m	class:Triangle	typeref:typename:double	file:
 hauteur	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		double hauteur;$/;"	m	class:Triangle	typeref:typename:double	file:
 i	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^	double i;$/;"	m	struct:complexe	typeref:typename:double	file:
@@ -1235,7 +1244,6 @@ inkscape	BA1/Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="
 inkscape	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inkscape	BA1/Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inkscape	Fluides et Electromagnetisme/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
-inkscape	current-course/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inv	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^		unsigned int inv(unsigned int a) {$/;"	f	class:Corps	typeref:typename:unsigned int	file:
 j	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^	int j;$/;"	m	struct:Position	typeref:typename:int	file:
 jaune	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^enum Couleur { vide,rouge, jaune};$/;"	e	enum:Couleur	file:
@@ -1280,7 +1288,6 @@ layer1	BA1/Structures Algebriques/notes/figures/qq.svg	/^     transform="transla
 layer1	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^     transform="translate(0,-177)">$/;"	i
 layer1	BA1/Structures Algebriques/notes/figures/test.svg	/^     transform="translate(0,-177)" \/>$/;"	i
 layer1	Fluides et Electromagnetisme/notes/figures/goutte_apesanteur.svg	/^     transform="translate(0,-177)" \/>$/;"	i
-layer1	current-course/notes/figures/goutte_apesanteur.svg	/^     transform="translate(0,-177)" \/>$/;"	i
 lemma:composition_d_applications_surjectives_et_injectives	BA1/Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{lemma}[Composition d'applications surjectives et injectives]\\index{surjectivite}\\index/;"	l
 lemma:critere_de_l_application_lineaire	BA1/Algebre Lineaire I/notes/lectures/lec8.tex	/^\\begin{lemma}[Critere de l'application lineaire]\\index{Critere de l'application lineaire}\\lab/;"	l
 lemma:critere_de_sous_anneau	BA1/Algebre Lineaire I/notes/lectures/lec6.tex	/^\\begin{lemma}[Critère de sous-anneau]\\index{Critère de sous-anneau}\\label{lemma:critere_de_/;"	l
@@ -1519,7 +1526,6 @@ metadata5	BA1/Structures Algebriques/notes/figures/qq.svg	/^     id="metadata5">
 metadata5	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^     id="metadata5">$/;"	i
 metadata5	BA1/Structures Algebriques/notes/figures/test.svg	/^     id="metadata5">$/;"	i
 metadata5	Fluides et Electromagnetisme/notes/figures/goutte_apesanteur.svg	/^     id="metadata5">$/;"	i
-metadata5	current-course/notes/figures/goutte_apesanteur.svg	/^     id="metadata5">$/;"	i
 min2	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex5/min2.cc	/^double min2(double a, double b){$/;"	f	typeref:typename:double
 min3	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex5/min2.cc	/^double min3(double a, double b, double c){$/;"	f	typeref:typename:double
 mult	BA1/Introduction a la programmation/Exos/MOOC/S5/Ex2/matrices.cc	/^vector<vector<double>> mult(vector<vector<double>> A, vector<vector<double>> B){$/;"	f	typeref:typename:vector<vector<double>>
@@ -1544,7 +1550,6 @@ nom	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		string nom;$/;"	
 nom	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^	string nom;$/;"	m	class:Joueur	typeref:typename:string	file:
 nom_	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		string nom_;$/;"	m	class:Creature	typeref:typename:string	file:
 nouvmatch	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex4/foot.cc	/^void nouvmatch(Match &m, string eq1, string eq2){$/;"	f	typeref:typename:void
-ns01a3793e0101	current-course/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns01cb0d3f0101	BA1/Mecanique Generale/notes/figures/cercletrigo.svg	/^   sodipodi:docname="cercletrigo.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns05f30d750101	BA1/Mecanique Generale/notes/figures/oscillateur-harmonique-force.svg	/^   sodipodi:docname="oscillateur-harmonique-force.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns096c1ccb0101	BA1/Mecanique Generale/notes/figures/systemes-de-coordonnees.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
@@ -1935,7 +1940,6 @@ rdf	BA1/Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figur
 rdf	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	BA1/Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	Fluides et Electromagnetisme/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
-rdf	current-course/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 remplir	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^	void remplir(Article art, int num=1) {$/;"	f	class:Caddie	typeref:typename:void	file:
 reponses	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^vector<string> reponses;$/;"	m	struct:qcm	typeref:typename:vector<string>	file:
 reponses	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^vector<string> reponses;$/;"	m	struct:qcm	typeref:typename:vector<string>	file:
@@ -1987,7 +1991,6 @@ sodipodi	BA1/Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="
 sodipodi	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 sodipodi	BA1/Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 sodipodi	Fluides et Electromagnetisme/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
-sodipodi	current-course/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 solde	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		double solde;$/;"	m	class:Article	typeref:typename:double	file:
 solde1	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	  double solde1;$/;"	m	class:Client	typeref:typename:double	file:
 solde2	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	  double solde2;$/;"	m	class:Client	typeref:typename:double	file:
@@ -2036,7 +2039,6 @@ svg	BA1/Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figur
 svg	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 svg	BA1/Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 svg	Fluides et Electromagnetisme/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
-svg	current-course/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 svg8	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	i
 svg8	BA1/Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	i
 svg8	BA1/Analyse I/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	i
@@ -2071,7 +2073,6 @@ svg8	BA1/Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figu
 svg8	BA1/Structures Algebriques/notes/figures/schema-relation-d-equivalence.svg	/^   sodipodi:docname="schema-relation-d-equivalence.svg">$/;"	i
 svg8	BA1/Structures Algebriques/notes/figures/test.svg	/^   sodipodi:docname="figure.svg">$/;"	i
 svg8	Fluides et Electromagnetisme/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	i
-svg8	current-course/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	i
 swap	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex3/trideshell.cc	/^void swap(tab& t, int a, int b){$/;"	f	typeref:typename:void
 t	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		string t;$/;"	m	class:Avion	typeref:typename:string	file:
 tab	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex3/trideshell.cc	/^typedef vector<int> tab;$/;"	t	typeref:typename:vector<int>	file:
@@ -2197,16 +2198,18 @@ text979	BA1/Mecanique Generale/notes/figures/curviligne.svg	/^       x="127.0563
 text988	BA1/Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^       x="101.14365"><tspan$/;"	i
 text989	BA1/Mecanique Generale/notes/figures/repere-droit.svg	/^       x="39.683296"><tspan$/;"	i
 thm:Critere de Cauchycritere_de_cauchy	Analyse II/notes/lectures/lec6.tex	/^\\begin{thm}[Critere de Cauchy]\\label{thm:Critere de Cauchycritere_de_cauchy}$/;"	l
+thm:Critere de Cauchycritere_de_cauchy	current-course/notes/lectures/lec6.tex	/^\\begin{thm}[Critere de Cauchy]\\label{thm:Critere de Cauchycritere_de_cauchy}$/;"	l
 thm:Critere de Comparaisoncritere_de_comparaison	Analyse II/notes/lectures/lec2.tex	/^\\begin{thm}[Critere de Comparaison]\\label{thm:Critere de Comparaisoncritere_de_comparaison}$/;"	l
+thm:Critere de Comparaisoncritere_de_comparaison	current-course/notes/lectures/lec2.tex	/^\\begin{thm}[Critere de Comparaison]\\label{thm:Critere de Comparaisoncritere_de_comparaison}$/;"	l
 thm:Critere de comparaison ( II) critere_de_comparaison_ii_	Analyse II/notes/lectures/lec2.tex	/^\\begin{thm}[Critere de comparaison ( II) ]\\label{thm:Critere de comparaison ( II) critere_de_c/;"	l
+thm:Critere de comparaison ( II) critere_de_comparaison_ii_	current-course/notes/lectures/lec2.tex	/^\\begin{thm}[Critere de comparaison ( II) ]\\label{thm:Critere de comparaison ( II) critere_de_c/;"	l
 thm:Limites/Suiteslimites_suites	Analyse II/notes/lectures/lec6.tex	/^\\begin{thm}[Limites\/Suites]\\label{thm:Limites\/Suiteslimites_suites}$/;"	l
+thm:Limites/Suiteslimites_suites	current-course/notes/lectures/lec6.tex	/^\\begin{thm}[Limites\/Suites]\\label{thm:Limites\/Suiteslimites_suites}$/;"	l
 thm:Theoreme de La divergence( de Gauss) theoreme_de_la_divergence_de_gauss_	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\begin{thm}[Theoreme de La divergence( de Gauss) ]\\label{thm:Theoreme de La divergence( de Gau/;"	l
-thm:Theoreme de La divergence( de Gauss) theoreme_de_la_divergence_de_gauss_	current-course/notes/lectures/lec1.tex	/^\\begin{thm}[Theoreme de La divergence( de Gauss) ]\\label{thm:Theoreme de La divergence( de Gau/;"	l
 thm:Theoreme de Stokestheoreme_de_stokes	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\begin{thm}[Theoreme de Stokes]\\label{thm:Theoreme de Stokestheoreme_de_stokes}$/;"	l
-thm:Theoreme de Stokestheoreme_de_stokes	current-course/notes/lectures/lec1.tex	/^\\begin{thm}[Theoreme de Stokes]\\label{thm:Theoreme de Stokestheoreme_de_stokes}$/;"	l
 thm:Theoreme du gradienttheoreme_du_gradient	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\begin{thm}[Theoreme du gradient]\\label{thm:Theoreme du gradienttheoreme_du_gradient}$/;"	l
-thm:Theoreme du gradienttheoreme_du_gradient	current-course/notes/lectures/lec1.tex	/^\\begin{thm}[Theoreme du gradient]\\label{thm:Theoreme du gradienttheoreme_du_gradient}$/;"	l
 thm:absolument convergente implique convergenteabsolument_convergente_implique_convergente	Analyse II/notes/lectures/lec2.tex	/^\\begin{thm}[absolument convergente implique convergente]\\label{thm:absolument convergente impl/;"	l
+thm:absolument convergente implique convergenteabsolument_convergente_implique_convergente	current-course/notes/lectures/lec2.tex	/^\\begin{thm}[absolument convergente implique convergente]\\label{thm:absolument convergente impl/;"	l
 thm:bolzano_weierstrass	BA1/Analyse I/notes/lectures/lec5.tex	/^\\begin{thm}[Bolzano-Weierstrass]\\index{Bolzano-Weierstrass}\\label{thm:bolzano_weierstrass}$/;"	l
 thm:composition_de_fonctions	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\begin{thm}[Composition de fonctions]\\index{Composition de fonctions}\\label{thm:composition_d/;"	l
 thm:convergence_des_suites_de_caucjy	BA1/Analyse I/notes/lectures/lec5.tex	/^\\begin{thm}[Convergence des suites de Caucjy]\\index{Convergence des suites de Caucjy}\\label{t/;"	l

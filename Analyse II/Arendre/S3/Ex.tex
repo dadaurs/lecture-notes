@@ -13,7 +13,7 @@
 \author{David Wiedemann}
 \maketitle
 \section*{1}
-On considère une suite $ \left\{ x_i \right\} \subset E$ convergant vers $x$.\\
+On considère une suite $ \left\{ x_i \right\} \subset E$\footnote{On n'exclut pas les suites constantes} convergant vers $x$.\\
 Par un théorème du cours, on sait que $x \in \overline{E}$.\\
 On considère maintenant les deux suites $( f( x_i) )_{i \in \mathbb{N}}  $ et $( g( x_{i} ) )_{i \in \mathbb{N}}$.\\
 Car $f$ et $g$ sont continues, 
@@ -61,7 +61,7 @@ Etant donne que ceci est valable pour toute suite  $ ( x_i)_{i \in \mathbb{N}} \
 \section*{3}
 Montrons d'abord que $ E:= \left\{ x \in \mathbb{R}^n: h( x) >0 \right\} $ est un ensemble ouvert.\\
 Soit $ y= ( y_1, \ldots, y_n)  \in E$.\\
-Par l'absurde, supposons que $E$ est fermé, alors $\forall \delta>0, \exists x \in B( y,\delta) $ satisfaisant $h( x) \leq 0$.\\
+Par l'absurde, supposons que $E$ n'est pas ouvert, alors $\exists y \in E $ tel que $\forall \delta>0 \exists x \in B( y,\delta)$ satisfaisant $h( x) \leq 0$.\\
 Soit $\epsilon= \frac{1}{2}h( y) $, alors, par la continuité de $h$, il existe $\delta>0$, satisfaisant
 \[ 
 	\N{y-x} < \delta \Rightarrow |h( y) -h( x)| < \epsilon
