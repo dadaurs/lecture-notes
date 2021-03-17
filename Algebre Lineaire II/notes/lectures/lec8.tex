@@ -1,0 +1,103 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Wed 17 Mar}{Formes bilineaires}
+\section{Formes Bilineaires}
+\begin{defn}[Forme Bilineaire]
+	\begin{itemize}
+	\item BL1 $\forall u \in V,$ 
+		\begin{align*}
+			f_u: V &\to K\\
+			v &\to \eng{u,v}
+		\end{align*}
+		est lineaire
+	
+	\item BL2 $\forall u \in V,$ 
+		\begin{align*}
+			f_u: V &\to K\\
+			v &\to \eng{v,u}
+		\end{align*}
+		est lineaire
+	
+	\end{itemize}
+	
+	
+\end{defn}
+La forme $\eng .$ est dite symmetrique si pour tout $u,v \in V: \eng{u,v}= \eng{v,u}$.\\
+La forme $\eng .$ est dite non degeneree a gauche ( resp. a droite) si
+$\forall v \in V$ $\eng{v,w}=0 \Rightarrow w=0$.\\
+Soit $V$ un espace vect de dimension $n$ et $ \left\{ v_1, \ldots, v_n \right\} $ une base.\\
+$ x,y \in V$ sont representes comme combinaison lineaire de $ \left\{ v_1, \ldots \right\} $, soit $x = \sum x_i v_i$, et $ y = \sum y_i v_i$, alors
+\begin{align*}
+	\eng { \sum x_i v_i, y} &= \sum \eng { x_i v_i, y} \\
+				&= \sum x_i \eng { v_i, y} \\
+				&= \sum x_i \eng { v_i, \sum y_j v_j}\\
+				&= \sum x_i \sum y_j \eng{v_i, v_j}\\
+				&= ( x_1, \ldots, x_n) 
+				\begin{pmatrix}
+					\eng { v_1, v_1} & \ldots & \eng {v_1, v_n } \\
+\vdots & \ddots & \vdots \\
+\eng { v_n, v_1}  & \ldots & \eng { v_n,v_n} 
+				\end{pmatrix}
+				( y_1, \ldots, y_n)^{T}
+\end{align*}
+\begin{propo}
+	Soit $V$ un espace vectoriel sur $K$ de dimension finie et 
+	$B= \left\{ b_1,\ldots, b_n \right\} $ une base de $V$. \\
+	Soit $f: V \times V \to K$ une forme bilineaire. \\
+	Les conditions suivantes sont equivalentes
+	\begin{itemize}
+		\item $\rg ( A_B ^{f}) = n$ 
+		\item $f$ est non degeneree a gauche
+		\item $f$ est non degeneree a droite
+	\end{itemize}
+	
+\end{propo}
+\begin{proof}
+On demontre que 1 est equivalent a 2.\\
+Il faut montrer que $\exists u \in V $ tel que $f( v,u) \neq 0$, or
+\[ 
+	f( v,u) = [ v] _B ^{T} \cdot A_B^{f} \cdot [ u] _B
+\]
+mais $\rg A_B^{f}=n \Rightarrow  [ v]_B^{T}\cdot A_B^{f}\neq 0^{T}$.\\
+Soit $i \in  \left\{ 1, \ldots, n \right\} $ tel que la $i$-eme composante de $( [v]_B^{T}\cdot A_B^{f} )_i \neq 0$, alors pour $u=b_i$ on a fini.\\
+Supposons maintenant que $\rg A_{B} ^{f}<n$, alors
+$\exists x \in K^{n}\setminus \left\{ 0 \right\} $ tel que $x^{T}\cdot A_B^{f}=0$ \\
+donc les lignes de $A$ sont lineairements independantes.
+\end{proof}
+\subsection{Orthogonalite}
+Soit $\eng .$ une forme bilineaire symetrique.
+\begin{defn}[Orthogonalite]
+	Deux elements $u,v$ sont orthogonaux si
+	\[ 
+	\eng { u,v} =0
+	\]
+	
+	
+\end{defn}
+\begin{defn}[Complement orthogonal]
+	Soit $E \subseteq V$, alors
+	\[ 
+	E^{\perp}= \left\{ u \in V: u \perp e \forall e  \in E \right\} 
+	\]
+	
+	
+\end{defn}
+\begin{propo}
+Soit $E \subseteq V$, alors $E^{\perp}$ est un sous-espace de $V$.
+\end{propo}
+\begin{lemma}
+Soit $K$ un corps de characteristique differente de 2.\\
+Si $ \eng { u,u } =0$ pour tout $u \in V$, alors $\eng { u,v} =0 \forall u,v \in V$
+\end{lemma}
+\begin{proof}
+Soient $u,v \in V$ :
+\[ 
+2 \eng { u,v} = \eng { u+v, u+v} - \eng { u,u} - \eng { v,v} 
+\]
+et donc $\eng { u,v } =0$.
+
+\end{proof}
+
+
+
+\end{document}	
