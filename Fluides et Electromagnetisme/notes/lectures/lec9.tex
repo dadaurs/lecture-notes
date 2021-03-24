@@ -1,0 +1,115 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Tue 23 Mar}{Resolution Ecoulement de Poiseuille}
+Verifions que l'equation de continuite est satisfaite.
+\[ 
+\frac{\del u_x}{\del x} + \frac{\del u_y}{\del y}+\frac{\del u_z}{\del z} = 0
+\]
+Ceci est clair par hypothese.\\
+De manierege generale
+\begin{align*}
+\rho \frac{D \vec{u}}{Dt} = \rho \vec{g} - \nabla p + eta \Delta \vec{u}\\
+\frac{D \vec{u}}{Dt}= \frac{\del }{\del t }+ u_x ( y) \frac{\del }{\del x}  
+\begin{pmatrix}
+	u_x( y) \\ 0 \\ 0\uparrow
+\end{pmatrix}
+= 
+\begin{pmatrix}
+0\\0\\0
+\end{pmatrix}
+\end{align*}
+Donc $0 = -\nabla p + \eta \Delta \vec{u}$, et donc selon $y$.
+\[ 
+	0 = \frac{- \del p}{\del y} \Rightarrow p = f( x,z) 
+\]
+de meme selon $z$, et donc la pression depend seulement de $x$.\\
+Ainsi
+\[ 
+	0 = \underbrace{\frac{- \del p}{\del x}}_{ \text{ depend de $x$ } } + \underbrace{\eta \frac{\del ^{2}}{\del y^{2}} u_{x} ( y)
+}_{ \text{ une fonction de $y$ }}
+\]
+Donc
+$p( x) = f( x) = -c_{1} x + c_2$\\
+Donc
+\[ 
+p = p_{in} - \frac{p_{in} - p_{out} }{l}x = p_in - \frac{\Delta P}{l} x
+\]
+Determinons $u_x( y) $ 
+\[ 
+\eta \frac{\del ^{2}}{\del y^{2}}u_x = \frac{\del p}{\del x }= -c_1
+\]
+Et donc
+\[ 
+ u_x = - \frac{c_1}{2 \eta}y ^{2} + ay + b
+\]
+Les conditions de bord donnent 
+\[ 
+	u( - \frac{h}{2}) = - \frac{c_1}{2 \eta} \frac{h^{2}}{4} - a \frac{h}{2} + b = 0
+\]
+\[ 
+	u( - \frac{h}{2}) = - \frac{c_1}{2 \eta} \frac{h^{2}}{4} + a \frac{h}{2} + b = 0
+\]
+Donc
+\[ 
+	u_x( y ) = \frac{c_1}{2 \eta } ( \frac{h^{2}}{4}-y^{2})  = \frac{\Delta p}{2 \eta l} ( \frac{h^{2}}{4}- y^{2}) 
+\]
+
+Calculons le debit volumique $D$ de l'ecoulement 
+\begin{align*}
+	D &= \int_{ - \frac{h}{2} }^{ \frac{h}{2} } dy \int_{ 0 }^{ s_z }dz u_x ( y) \\
+&= \frac{\Delta p s_z h^{3}}{12 \eta l}
+\end{align*}
+\section{Phenomenes Ondulatoires}
+\subsection{Onde transverse et longitudinale et l'equation d'onde}
+\begin{exemple}[Corde tendue avec extremites fixees]
+\begin{figure}[H]
+    \centering
+    \incfig{corde-suspendue}
+    \caption{corde suspendue}
+    \label{fig:corde-suspendue}
+\end{figure}
+\end{exemple}
+La perturbation se fait presque sans perturbation.\\
+On  definit la perturbation par $y_0( x,t) $.\\
+En $t=0$, on a $y_0( x,0) = f( x) $.\\
+
+Si la propagation se deplace juste, on a
+\[ 
+	y_0( x,t) = f( x-ct) 
+\]
+Si le maximum de $f(x) $ se trouve en $x_0$, le maximum de $f(x-ct) $ se trouve en $x= x_0+ct$.\\
+$c$ s'appelle la vitesse de propagation de l'onde.\\
+Description mathematique pour des petites perturbations:
+On va montrer que
+\[ 
+\frac{\del ^{2} y_0}{\del t^{2}}= \frac{T}{\mu} \frac{\del ^{2} y_0}{\del x^{2}}
+\]
+Etant donne que c'est une equation differentierlle lineaire, si $f$ et $g$ sont une solution, alors $f+g$ le sont aussi.
+\subsection{Ondes sinusoidales}
+Cas particulier des ondes sont les ondes de la forme
+\[ 
+	y_0( x,t) = A \cos ( \omega t -k x + \phi) 
+\]
+\subsection{Ondes stationnaires}
+Notons que
+
+\[ 
+ A \cos ( \omega t -k x + \phi) 
+\]
+ne respecte pas les conditions de bord.\\
+Comme les ondes sont reflechies, on cherche une solution de la forme 
+\[ 
+	y_0( x,t) = \tilde A_1 e^{i ( \omega t - kx )} + \tilde A_{2} e^{i ( \omega t + kx) }
+\]
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

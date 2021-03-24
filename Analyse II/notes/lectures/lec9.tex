@@ -1,0 +1,117 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Wed 24 Mar}{Derivees secondes}
+	Cas scalaire:\\
+	Soit $E \subset \mathbb{R}^n$ ouvert, $x,y \in E$ et $f : E \to \mathbb{R}$ derivable sur $E$.\\
+\begin{figure}[H]
+    \centering
+    \incfig{derivee_taf}
+\end{figure}
+On denote par $[x,y]$ le segment ( ferme)  entre $x$ et $y$ et $]x,y[$ le segment ouvert entre $x$ et $y$.
+\begin{thm}[Theoreme des accroissements finis dans $\mathbb{R}^n$]
+	Soit $x,y\in E\subset \mathbb{R}^n$ et $f: E\to \mathbb{R}$, alors il existe $z \in [ x,y] $ tel que
+	\[ 
+		f( y) -f( x) = \nabla f( z) ^{T} ( y-x)  = Df( z) ( y-x) 
+	\]
+\end{thm}
+\begin{proof}
+	Soit $g( t) = f( x + t ( y-x) ) $ pour $t \in [ 0,1] $.\\
+	On a alors
+	\[ 
+		g'( t) = \frac{d}{dt}g( t) = \frac{d}{dt} f( \phi( t) ) 
+	\]
+	ou $phi( t) = x + t( y-x) $.\\
+	Puisque $f$ et $\phi$ sont derivables, on conclut que $g$ est aussi derivable.\\
+	Donc
+	\begin{align*}
+		g'( t) = Df( \phi( t) ) \cdot D \phi( t)\\
+		= \sum \frac{\del f}{\del x_i}( x + t( y-x) ) ( y_i -x_i)\\
+		=\nabla f( x + t( y-x) )^{T}( y-x)  = Df( x + t( y-x) ) ( y-x) 
+	\end{align*}
+	Le taf applique a $g$ donne $\exists s \in  ] 0,1[ $	tel que
+	\[ 
+		g( 1) - g( 0) = g'( s) 
+	\]
+Donc
+\[ 
+	f( y) - f( x)  = Df ( x + s( y-x) ) ( y-x) 
+\]
+On conclut en posant $z= x+ s( y-x) $.
+
+\end{proof}
+Le cas vectoriel:
+\begin{thm}[Taf dans le cas vectoriel]
+	Soit $f: E \subset \mathbb{R}^n \to \mathbb{R}^m$ \\
+	On essaie de representer $f( y) - f( x) $ a l'aide des derivees de $f$.\\
+	On peut ecrire TAF pour chaque composante, mais les $z_k$ ne sont en general pas les memes.\\
+	Cependant, on peut toujours ecrire pour $f \in C^{1}( E)  $
+	\[ 
+		f( y) - f( x) = \int_{ 0 }^{ 1 } Df( x+ s( y-x) )( y-x) ds
+	\]
+	
+\end{thm}
+\subsection{Derivees d'ordre superieur}
+\begin{defn}[Derivees partielles secondes ( cas scalaire) ]
+	Soit $f: E \to \mathbb{R}$, $E$ ouvert.\\
+	Supposons que pour un indice $i = \left\{ 1, \ldots n \right\} $ fixe, la derivee partielle $\frac{\del f}{\del x_i}( x) $ existe $\forall x \in E$.\\
+	Si $ \frac{\del f}{\del x_i}$ admet la derivee partielle selon $x_j$, alors on dit que $f$ a une derivee partielle seconde en $x$ et on note 
+	\[ 
+		\frac{\del ^{2}f}{\del x_j \del x_i} ( x) = \frac{\del }{\del x_j} ( \frac{\del f}{\del x_i}) ( x) 
+	\]
+	
+\end{defn}
+\begin{defn}[Matrice hessienne]
+	Soit $f: \mathbb{R}^n \to \mathbb{R}$ tel que toutes les derivees partielles existent que toutes les derivees secondes existent
+	
+	\begin{align*}
+		H_f ( y) =
+	\begin{pmatrix}
+		\frac{\del }{\del x_1}( \frac{\del f}{\del x_1})( y)  &\frac{\del }{\del x_1}( \frac{\del f}{\del x_2})( y)  & \ldots\\
+		\frac{\del }{\del x_2}( \frac{\del f}{\del x_1})( y) &\frac{\del }{\del x_2}( \frac{\del f}{\del x_2})( y) & \ldots\\
+		\frac{\del }{\del x_3}( \frac{\del f}{\del x_1})( y) &\frac{\del }{\del x_3}( \frac{\del f}{\del x_2}) ( y)& \ldots\\
+	\end{pmatrix}
+	\end{align*}
+	
+\end{defn}
+\begin{defn}[Espace $C^2( E) $]
+	On dit que $f: E \to \mathbb{R}$ est de classe $C^{2}$ si toutes les derivees partielles secondes sont continues.
+\end{defn}
+\begin{defn}[Derivees directionnelles secondes]
+Soit $v \in \mathbb{R}^n, \N v = 1$. Alors, etant donne $D_v f: E \to \mathbb{R}$, on peut essayer de calculer la derivee directionnelle de $D_v f$ dans la direction $w \in \mathbb{R}^n.$\\
+Si une telle derivee exise, on dit que $f$ admet une derivee directionnelle seconde dans les directions $v$ et $w$ au point $x$ et on note
+\[ 
+	D_{wv} f( x) = D_w ( D_v f) ( x) 
+\]
+
+\end{defn}
+
+\begin{lemma}
+	Soit $f\in C^2( E) $, $E$ ouvert et $v ,w \in \mathbb{R}^n$ tel que $\N v = \N w =1$.\\ Alors $D_{wv} f $ existe en tout $x \in E$ et
+	\begin{align*}
+		D_{wv} f( x)  &= w^{T} H_f( x) v\\
+			      &= \sum_{i=1}^{ n}w_i ( \sum_{j=1}^{ n}H_f( x)_{ij} v_j)\\
+			      &= \sum_{i,j=1}^{ n} \frac{\del ^{2} f}{\del x_i \del x_j} ( x)  w_i v_j
+	\end{align*}
+	
+\end{lemma}
+\begin{proof}
+	Si $f \in C^{2}$ alors $f \in C^{1}$, alors $D_v f( x) = \nabla f ( x) ^{T} v = \sum \frac{\del f}{\del x_i}( x) v_i $.\\
+	Mais puisque $f \in C^{2}$, $\frac{\del f}{\del x_i}\in C^{1}\forall i$, donc
+	\begin{align*}
+	D_w ( D_v f) ( x)  = \nabla ( D_v f) ^{T} w = \sum_{i=1}^{ n} \frac{\del }{\del x_i }( D_v f)  w_i\\
+	= \sum_{i=1}^{ n} \sum_{j=1}^{ n} \frac{\del }{\del x_i} ( \frac{\del f}{\del x_j} ( x) ) v_j w_i
+	\end{align*}
+	Ce qui donne le resultat desire.
+	
+\end{proof}
+\begin{thm}[Theoreme de Schwarz]
+	Soit $f: E \to \mathbb{R}$. Pour $i,j \in \left\{ 1, \ldots, n \right\}  $ fixes.\\
+Supposons que $\frac{\del f}{\del x_i}, \frac{\del f}{\del x_j}, \frac{\del ^{2} f}{\del x_i \del x_j}, \frac{\del ^{2} f}{\del x_j \del x_i}$ existent sur $E$ et sont continues en $x \in E$. Alors
+\[ 
+	\frac{\del ^{2}f}{\del x_i \del x_j }( x)  = \frac{\del ^{2} f}{\del x_j \del x_i}( x) 
+\]
+\end{thm}
+
+
+	
+\end{document}	
