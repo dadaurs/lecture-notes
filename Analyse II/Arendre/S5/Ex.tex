@@ -1,0 +1,123 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newcommand\N[1]{\left\lVert#1\right\rVert}
+\begin{document}
+\title{Série 5}
+\author{David Wiedemann	}
+\maketitle
+\section*{1}
+La commutativité de l'addition, l'associativité de la multiplication par un scalaire, la distributivité de la multiplication par un scalaire et l'existence d'un élément neutre multiplicatif sont immédiats.\\
+Pour montrer que $W$ est un espace vectoriel, on va donc montrer que l'espace est stable par addition, multiplication par un scalaire et qu'il existe un élément neutre additif.\\
+Soit $f,g \in W$, montrons que $f+g$ est également contenu dans $W$.\\
+Soit $x_0 \in U$, par hypothèse, il existe $r_f( x) $ et $r_g( x) $ tel que
+\begin{align*}
+	f( x) &= f( x_0) + Df( x_0) ( x-x_0)  + r_f( x) \\
+	g( x) &= g( x_0)  + Dg( x_0) ( x-x_0)  + r_g( x) 
+\end{align*}
+tel que
+\[ 
+	\lim_{x \to x_0} \frac{r_f( x) }{\N{x-x_0}} = 	\lim_{x \to x_0} \frac{r_g( x) }{\N{x-x_0}} = 0
+\]
+Ainsi, on a
+\begin{align*}
+	f( x) + g( x) &= f( x_0) + g( x_0) + Df( x_0) ( x-x_0) + Dg( x_0) ( x-x_0) + r_f( x)  + r_g( x) \\
+	( f+g) ( x) &= ( f+g) ( x_0)  + ( Df( x_0) + Dg( x_0) ) ( x-x_0)  + ( r_f) ( x) + r_g(x ) 
+\end{align*}
+Où on a utilisé que l'addition de matrices est linéaire.
+Notons que
+\[ 
+	\lim_{x \to x_0} \frac{r_f( x) + r_g( x) }{\N{x-x_0}} = 0
+\]
+et ainsi $f+g$ est différentiable en $x_0$, et on en déduit que $f+g$ est différentiable sur $U$ .\\
+Soit $\lambda \in \mathbb{R}$, alors on a
+\[ 
+	\lambda \cdot f( x) = \lambda f( x_0)  + \lambda \cdot Df( x_0) ( x-x_0)  + \lambda \cdot r_f( x) 
+\]
+et car
+\[ 
+	\lim_{x \to x_0} \frac{\lambda r_f( x) }{\N{x-x_0}} = 0
+\]
+On en déduit que $\lambda \cdot f( x) $ est différentiable en $x_0$ et est donc différentiable sur $U$.\\
+Finalement, il est clair que la fonction constante $e( x) = 0$ est différentiable, en effet toutes ses dérivées partielles sont nulles et donc elle verifie bien
+\[ 
+	e( x) = e( x_0)  + \overline{0}( x-x_0)  + r_e( x) 
+\]
+où $r_e( x) = 0$ et $\overline{0}$ est l'élément nul de $\mathbb{R}^{1\times n}$, en effet il est immédiat que
+\[ 
+	\lim_{x \to x_0} \frac{r_e( x) }{\N { x-x_0} } = \lim_{x \to x_0} \frac{0}{\N { x-x_0} } = 0
+\]
+
+Ainsi $W$ possède également un élément nul et est un espace vectoriel.
+\section*{2}
+Soit $f$ et $g \in W$ comme dans la partie précédente
+\begin{align*}
+	f( x) &= f( x_0)  + Df( x_0)  ( x-x_0)  + r_f( x) \\
+	g( x) &= g( x_0)  + Dg( x_0)  ( x-x_0)  + r_g( x) \\
+\end{align*}
+Ainsi, on a
+\begin{align*}
+	f( x) \cdot g( x) &=  f( x_0) g( x_0) + f( x_0) Dg( x_0)( x-x_0)  + f( x_0) r_g( x)\\
+				  &+ g( x_0) Df( x_0)( x-x_0) + Df( x_0)( x-x_0)  Dg( x_0) ( x-x_0)+ Df(x_0 )  ( x-x_0) r_g( x)  \\
+				  &+ r_f( x) g( x_0) + r_f( x) Dg( x_0) ( x-x_0) + r_f( x) r_g( x) \\
+\end{align*}
+Il faut donc montrer que
+\begin{align*}
+	\lim_{\vec{x} \to x_0} \frac{1}{\N { x-x_0} } &\big( Df( x_0)( x-x_0)  Dg( x_0) ( x-x_0)+ Df(x_0 )  ( x-x_0) r_g( x) + f( x_0) r_g( x) \\
+&+ r_f( x) g( x_0) + r_f( x) Dg( x_0) ( x-x_0) + r_f( x) r_g( x)\big)\\
+\end{align*}
+On procède terme par terme, on a
+\begin{align*}
+\lim_{\vec{x} \to x_0}\quad &\frac{1}{\N { x-x_0} } \vert( Df( x_0)( x-x_0)  Dg( x_0) ( x-x_0) )\vert\\
+&\leq \frac{1}{\N { x-x_0} } ( \N { Df( x_0) } \N { x-x_0} \N { Dg( x_0) } \N { x-x_0}  ) =0
+\end{align*}
+où on a utilisé l'inégalité de Cauchy-Schwarz.\\
+De même
+\begin{align*}
+	\lim_{\vec{x} \to x_0} \frac{r_g( x) }{\N { x-x_0} } ( Df( x_0) ( x-x_0)  + f( x_0)  )  = 0
+\end{align*}
+et
+\begin{align*}
+	\lim_{\vec{x} \to x_0} \frac{r_f( x) }{\N { x-x_0} } ( Dg( x_0) ( x-x_0)  + g( x_0) + r_g( x)   )  = 0
+\end{align*}
+Ainsi, en posant
+\begin{align*}
+	r_h ( x)  &:= Df( x_0)( x-x_0)  Dg( x_0) ( x-x_0)+ Df(x_0 )  ( x-x_0) r_g( x) + f( x_0) r_g( x) \\
+&+ r_f( x) g( x_0) + r_f( x) Dg( x_0) ( x-x_0) + r_f( x) r_g( x)
+\end{align*}
+On obtient que
+\begin{align*}
+	( f\cdot g) ( x) = ( f\cdot g) ( x_0) + f( x_0) Dg( x_0) ( x-x_0)  + g( x_0) Df( x-x_0)  + r_h( x) 
+\end{align*}
+Et car, $r_h( x) $ satisfait
+\[ 
+	\lim_{x \to x_0} \frac{r_h( x) }{\N { x-x_0} } =0
+\]
+On en déduit que $f \cdot g$ est différentiable et que
+\[ 
+	D( f\cdot g)( x_0)  =  g(x_0 ) Df( x_0)   + f( x_0)  Dg( x_0) .
+\]
+Ce qui conclut la démonstration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

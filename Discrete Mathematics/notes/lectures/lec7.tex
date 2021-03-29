@@ -1,0 +1,101 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Sat 27 Mar}{Linear Recurrence Relations}
+\begin{defn}[Linear Recurrence]
+	A sequence of complex numbers satisfy a linear recurrence relation if there existe numbers $c_0, \ldots, c_{k-1} $ such that
+	\[ 
+	a_{n+k} = c_0 a_n + c_1 a_{n+1}  + \ldots +c_{k-1} a_{n+k-1} 
+	\]
+	forall $n \in \mathbb{Z}$
+	
+\end{defn}
+\begin{lemma}
+Let $f= \frac{P}{Q}$ the ratio of two polynomials with $\deg Q > \deg P$.\\
+Suppose that $Q( x) = ( x-\mu_1)^{l_1} \ldots ( x- \mu_t ) ^{l_t}$ for some $\mu_1, \ldots$, then there exist  $A_{j,m} $ such that
+\[ 
+	f( x) = \sum_{j=1}^{ t} \sum_{m=1}^{ l_j}\frac{A_{j,m} }{( x- \mu_j)^{m}}
+\]
+\end{lemma}
+
+\begin{thm}
+	Suppose that a sequence $a_n$ satisfies a linear recurrence relation 
+	\[ 
+	a_{n+k}  = c_0 a_n + c_1 a_{n+1 } + \ldots, + c_{k-1}  a_{n+k-1} 
+	\]
+	 Let $\lambda_1, \ldots, \lambda_s$ be the complex roots of the polynomial
+	 \[ 
+	 x^{k} - c^{k-1}x^{k-1} - \ldots - c_0 = 0
+	 \]
+	 where $\lambda_i$ as multiplicity $k_i$.\\
+	 Then there exist polynomials $P_1, \ldots, P_s$ of degree  $k_i-1$ such that
+	 \[ 
+		 a_n = \sum_{i=1}^{ s}P_i( n) \lambda_i ^{n}, \quad n \in \mathbb{N}
+	 \]
+	 
+	
+\end{thm}
+\begin{proof}
+Suppose that a sequence $a_n$ satisfies a linear recurrence relation as above.\\
+Let $a( x) = \sum a_i x^{i}$, the recurrence relation implies
+\begin{align*}
+	0 &= \sum_{n=0}^{ \infty } \left( a_{n+k} - c_{k-1} a_{n+k-1}  - \ldots -c_0 a_n \right) x^{n}\\
+	  &= \sum_{n=k}^{ \infty }a_n x^{n-k} - c_{k-1}  \sum_{n=k-1}^{ \infty } a_n x^{n-k+1} - \ldots\\
+\end{align*}
+Rewriting this expression yields
+\begin{align*}
+	a( x) ( x^{-k}- c_{k-1} x^{-k+1}- \ldots) = \sum_{n=1}^{k} b_n x^{-n}
+\end{align*}
+where $b_n$ is linearly dependent with the initial terms.
+Dividing, this yields
+\[ 
+	a( x) = \frac{b_1 x^{-1} + \ldots + b_k x^{-k}}{x^{-k} - c^{k-1}x^{-k+1}- \ldots}
+\]
+Therefore $a( x) = x \frac{P( x) }{Q( x) }$.\\
+Suppose $Q( x) = ( x- \mu_1)^{l_1}\ldots$\\
+By the lemma
+\[ 
+	a( x) = x \sum_{j=1}^{ t} \sum_{m=1}^{ l_j} \frac{A_{j,m} }{( x-\mu_j)^{m}}
+\]
+Observe that if $\lambda_j$ is a root of
+\[ 
+x^{k} - c_{k-1} x^{k-1} - \ldots - c_0 
+\]
+then $\mu_j^{-1}= \lambda_j$, also, if $m$ is fixed, $n$ can be considered as a variable and then
+\[ 
+	-n ( n-1) \ldots ( n-m+1)  
+\]
+is a polynomial of degree $m$.
+
+
+
+\end{proof}
+\subsection{Linear recurrences in matrix form}
+Let $a_n$ be a linearly recursive series, for each $n \geq 0$ we consider the vector $a_n = \begin{pmatrix}
+a_n\\a_{n+1} \\ \vdots \\ a_{n+k-1} 
+\end{pmatrix}
+$.\\
+Then the recurrence relation can be written as
+\[ 
+\begin{pmatrix}
+a_{n+1} \\ a_{n+1}  \\ \vdots \\ a_{n+k} 
+\end{pmatrix}
+=
+\begin{pmatrix}
+	0 & 1 & 0 & \ldots & 0 \\
+	0 & 0 & 1 & \ldots & 0 \\
+	\vdots &  &  &  & \vdots \\
+	c_0 & c_1 & c_2 & \ldots & c_{k-1}  \\
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+a_n \\ a_{n+1} \\ \vdots \\ a_{n+k-1} 
+\end{pmatrix}
+\]
+and more generally, we have
+\[ 
+a_n = C^{n} \cdot a_0
+\]
+
+
+
+\end{document}	

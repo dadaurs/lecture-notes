@@ -1,17 +1,21 @@
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/david/Cours/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210110.0/
 $\\mathcal{P}(E)$ l'ensemble des sous-ensembles	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{$\\mathcal{P}(E)$ l'ensemble des sous-ensembles}$/;"	u	section:Le language des Ensembles
 $\\times$: Produit cartesien	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{$\\times$: Produit cartesien}$/;"	u	section:Le language des Ensembles
 1	Analyse II/Arendre/S1/Ex.tex	/^\\section*{1}$/;"	s
 1	Analyse II/Arendre/S2/Ex.tex	/^\\section*{1}$/;"	s
 1	Analyse II/Arendre/S3/Ex.tex	/^\\section*{1}$/;"	s
 1	Analyse II/Arendre/S4/Ex.tex	/^\\section*{1}$/;"	s
+1	Analyse II/Arendre/S5/Ex.tex	/^\\section*{1}$/;"	s
 1	BA1/Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{1}$/;"	s
 1	BA1/Algebre Lineaire I/Exos/S5/Ex3.tex	/^\\section*{1}$/;"	s
 1	BA1/Structures Algebriques/Devoirs/S10/sol.tex	/^\\section*{1}$/;"	s
@@ -27,6 +31,7 @@ $\\times$: Produit cartesien	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\
 1	current-course/Arendre/S2/Ex.tex	/^\\section*{1}$/;"	s
 1	current-course/Arendre/S3/Ex.tex	/^\\section*{1}$/;"	s
 1	current-course/Arendre/S4/Ex.tex	/^\\section*{1}$/;"	s
+1	current-course/Arendre/S5/Ex.tex	/^\\section*{1}$/;"	s
 1.1	BA1/Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{1.1}$/;"	s
 1.2	BA1/Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{1.2}$/;"	s
 1.3	BA1/Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{1.3}$/;"	s
@@ -36,6 +41,7 @@ $\\times$: Produit cartesien	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\
 2	Analyse II/Arendre/S2/Ex.tex	/^\\section*{2}$/;"	s
 2	Analyse II/Arendre/S3/Ex.tex	/^\\section*{2}$/;"	s
 2	Analyse II/Arendre/S4/Ex.tex	/^\\section*{2}$/;"	s
+2	Analyse II/Arendre/S5/Ex.tex	/^\\section*{2}$/;"	s
 2	BA1/Algebre Lineaire I/Exos/S4/Ex4.tex	/^\\section*{2}$/;"	s
 2	BA1/Algebre Lineaire I/Exos/S5/Ex3.tex	/^\\section*{2}$/;"	s
 2	BA1/Structures Algebriques/Devoirs/S10/sol.tex	/^\\section*{2}$/;"	s
@@ -51,6 +57,7 @@ $\\times$: Produit cartesien	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\
 2	current-course/Arendre/S2/Ex.tex	/^\\section*{2}$/;"	s
 2	current-course/Arendre/S3/Ex.tex	/^\\section*{2}$/;"	s
 2	current-course/Arendre/S4/Ex.tex	/^\\section*{2}$/;"	s
+2	current-course/Arendre/S5/Ex.tex	/^\\section*{2}$/;"	s
 2.1.1	BA1/Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{2.1.1}$/;"	s
 2.1.2	BA1/Introduction a la programmation/ARendre/S1/sol.tex	/^\\section*{2.1.2}$/;"	s
 2.2.1	BA1/Introduction a la programmation/ARendre/S2/sol.tex	/^\\section*{2.2.1}$/;"	s
@@ -122,8 +129,8 @@ Auteur	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		Auteur(string n
 Auteur	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^class Auteur {$/;"	c	file:
 Avion	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		Avion(string m, int d, double pa,string ty, unsigned int n)$/;"	f	class:Avion	file:
 Avion	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^class Avion : public Vehicule {$/;"	c	file:
-BA1	README.md	/^## BA1$/;"	s
-BA2	README.md	/^## BA2$/;"	s
+BA1	README.md	/^## BA1$/;"	s	chapter:Lecture Notes For Math Bachelor
+BA2	README.md	/^## BA2$/;"	s	chapter:Lecture Notes For Math Bachelor
 Bases	BA1/Algebre Lineaire I/notes/lectures/lec11.tex	/^\\subsection{Bases}$/;"	u	section:Espaces Vectoriels
 Bernoulli-L'hospital pour infini sur infini	BA1/Analyse I/notes/lectures/lec17.tex	/^\\subsection{Bernoulli-L'hospital pour infini sur infini}$/;"	u	section:Dérivation
 Bibliotheque	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		Bibliotheque(string n) {$/;"	f	class:Bibliotheque	file:
@@ -218,7 +225,9 @@ Densite de force associee a la pression	Fluides et Electromagnetisme/notes/lectu
 Derivee convective	Fluides et Electromagnetisme/notes/lectures/lec5.tex	/^\\subsection{Derivee convective}$/;"	u	section:Dynamique des fluides
 Derivees Directionelles	Analyse II/notes/lectures/lec8.tex	/^\\subsection{Derivees Directionelles}$/;"	u	section:Derivees de fonctions a plusieurs variables
 Derivees Directionelles	current-course/notes/lectures/lec8.tex	/^\\subsection{Derivees Directionelles}$/;"	u	section:Derivees de fonctions a plusieurs variables
-Derivees d'ordre superieur	Analyse II/notes/lectures/lec9.tex	/^\\subsection{Derivees d'ordre superieur}$/;"	u
+Derivees d'ordre superieur	Analyse II/notes/lectures/lec10.tex	/^\\subsection{Derivees d'ordre superieur}$/;"	u
+Derivees d'ordre superieur	Analyse II/notes/lectures/lec9.tex	/^\\subsection{Derivees d'ordre superieur}$/;"	u	section:Derivees de fonctions a plusieurs variables
+Derivees d'ordre superieur	current-course/notes/lectures/lec9.tex	/^\\subsection{Derivees d'ordre superieur}$/;"	u	section:Derivees de fonctions a plusieurs variables
 Derivees de fonctions a plusieurs variables	Analyse II/notes/lectures/lec8.tex	/^\\section{Derivees de fonctions a plusieurs variables}$/;"	s
 Derivees de fonctions a plusieurs variables	current-course/notes/lectures/lec8.tex	/^\\section{Derivees de fonctions a plusieurs variables}$/;"	s
 Description des rotations spatiales	BA1/Mecanique Generale/notes/lectures/lec5.tex	/^\\section{Description des rotations spatiales}$/;"	s
@@ -226,9 +235,10 @@ Dessin	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^class Dessin {$/;"	
 Determinants	BA1/Algebre Lineaire I/notes/lectures/lec23.tex	/^\\section{Determinants}$/;"	s
 Deux P.S sur $\\exp$	BA1/Analyse I/notes/lectures/lec22.tex	/^\\subsection{Deux P.S sur $\\exp$}$/;"	u	section:Series Entieres
 Developpement de Lagrange suivant une colonne /ligne	BA1/Algebre Lineaire I/notes/lectures/lec27.tex	/^\\subsubsection{Developpement de Lagrange suivant une colonne \/ligne}$/;"	b	subsection:Determinants""Calculs de Determinants
+Developpement limite et formule de Taylor	Analyse II/notes/lectures/lec10.tex	/^\\subsection{Developpement limite et formule de Taylor}$/;"	u
 Dichotomie	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Dichotomie}$/;"	u	section:Definition formelle des algorithmes
-Diviseurs Communs le plus grand	Algebre Lineaire II/notes/lectures/lec3.tex	/^\\subsection{Diviseurs Communs le plus grand}$/;"	u	section:4
-Division avec reste	Algebre Lineaire II/notes/lectures/lec2.tex	/^\\subsection{Division avec reste}$/;"	u	section:4
+Diviseurs Communs le plus grand	Algebre Lineaire II/notes/lectures/lec3.tex	/^\\subsection{Diviseurs Communs le plus grand}$/;"	u	section:2
+Division avec reste	Algebre Lineaire II/notes/lectures/lec2.tex	/^\\subsection{Division avec reste}$/;"	u	section:2
 Dragon	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^	Dragon(string n, int nv, int pts, int f, int p, int pos=0):$/;"	f	class:Dragon	file:
 Dragon	Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^class Dragon:public Creature {$/;"	c	file:
 Dynamique des fluides	Fluides et Electromagnetisme/notes/lectures/lec5.tex	/^\\section{Dynamique des fluides}$/;"	s
@@ -270,9 +280,9 @@ Exemples	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{Exempl
 Exercice	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{ Exercice }$/;"	b	subsection:Le language des Ensembles""$\\mathcal{P}(E)$ l'ensemble des sous-ensembles
 Expression	BA1/Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{Expression}$/;"	u	section:Etude de cas
 Extraction d'une base	BA1/Algebre Lineaire I/notes/lectures/lec22.tex	/^\\subsection{Extraction d'une base}$/;"	u	section:Operations Elementaires Sur Les Matrices
-Factorisation des polynomes sur un corps	Algebre Lineaire II/notes/lectures/lec2.tex	/^\\subsection{Factorisation des polynomes sur un corps}$/;"	u	section:4
-Factorisation des polynomes sur un corps	Algebre Lineaire II/notes/lectures/lec3.tex	/^\\subsection{Factorisation des polynomes sur un corps}$/;"	u	section:4
-Factorisation en elements irreductibles	Algebre Lineaire II/notes/lectures/lec4.tex	/^\\subsection{Factorisation en elements irreductibles}$/;"	u	section:4
+Factorisation des polynomes sur un corps	Algebre Lineaire II/notes/lectures/lec2.tex	/^\\subsection{Factorisation des polynomes sur un corps}$/;"	u	section:2
+Factorisation des polynomes sur un corps	Algebre Lineaire II/notes/lectures/lec3.tex	/^\\subsection{Factorisation des polynomes sur un corps}$/;"	u	section:2
+Factorisation en elements irreductibles	Algebre Lineaire II/notes/lectures/lec4.tex	/^\\subsection{Factorisation en elements irreductibles}$/;"	u	section:2
 Famille Libre	BA1/Algebre Lineaire I/notes/lectures/lec11.tex	/^\\subsection{Famille Libre}$/;"	u	section:Espaces Vectoriels
 Familles génératrices	BA1/Algebre Lineaire I/notes/lectures/lec10.tex	/^\\subsection{Familles génératrices}$/;"	u	section:Espaces Vectoriels
 Figure	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^class Figure {$/;"	c	file:
@@ -332,10 +342,10 @@ Injection de $\\mathbb{N} \\to \\mathbb{Q}$	BA1/Structures Algebriques/Devoirs/S
 Injection de $\\mathbb{Q} \\to \\mathbb{N}$	BA1/Structures Algebriques/Devoirs/S3/sol.tex	/^\\subsection*{Injection de $\\mathbb{Q} \\to \\mathbb{N}$}$/;"	u	section:3
 Injectivité	BA1/Structures Algebriques/Devoirs/S3/sol.tex	/^\\subsection*{Injectivité}$/;"	u	section:1
 Instructions elementaires	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Instructions elementaires}$/;"	u	section:Definition formelle des algorithmes
-Integrale generalisee sur un intervalle non borne	Analyse II/notes/lectures/lec2.tex	/^\\subsection{Integrale generalisee sur un intervalle non borne}$/;"	u	section:Intégrales généralisées
-Integrale generalisee sur un intervalle non borne	current-course/notes/lectures/lec2.tex	/^\\subsection{Integrale generalisee sur un intervalle non borne}$/;"	u	section:Intégrales généralisées
-Integrales absoluments convergentes	Analyse II/notes/lectures/lec2.tex	/^\\subsection{Integrales absoluments convergentes}$/;"	u	section:Intégrales généralisées
-Integrales absoluments convergentes	current-course/notes/lectures/lec2.tex	/^\\subsection{Integrales absoluments convergentes}$/;"	u	section:Intégrales généralisées
+Integrale generalisee sur un intervalle non borne	Analyse II/notes/lectures/lec2.tex	/^\\subsection{Integrale generalisee sur un intervalle non borne}$/;"	u	section:2
+Integrale generalisee sur un intervalle non borne	current-course/notes/lectures/lec2.tex	/^\\subsection{Integrale generalisee sur un intervalle non borne}$/;"	u	section:Phenomenes Ondulatoires
+Integrales absoluments convergentes	Analyse II/notes/lectures/lec2.tex	/^\\subsection{Integrales absoluments convergentes}$/;"	u	section:2
+Integrales absoluments convergentes	current-course/notes/lectures/lec2.tex	/^\\subsection{Integrales absoluments convergentes}$/;"	u	section:Phenomenes Ondulatoires
 Integration	BA1/Analyse I/notes/lectures/lec22.tex	/^\\section{Integration}$/;"	s
 Integration Par Parties	BA1/Analyse I/notes/lectures/lec25.tex	/^\\subsubsection{Integration Par Parties}$/;"	b	subsection:Integration""Recherche de Primitives
 Integration de Fonctions Rationelles	BA1/Analyse I/notes/lectures/lec26.tex	/^\\subsection{Integration de Fonctions Rationelles}$/;"	u	section:Integration
@@ -372,6 +382,7 @@ Lecture Notes For Math Bachelor	README.md	/^# Lecture Notes For Math Bachelor$/;
 Les matrices carrées	BA1/Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Les matrices carrées}$/;"	u	section:Matrices
 Les tris	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Les tris}$/;"	u	section:Definition formelle des algorithmes
 Limsup et liminf	BA1/Analyse I/notes/lectures/lec4.tex	/^\\section{Limsup et liminf}$/;"	s
+Linear recurrences in matrix form	Discrete Mathematics/notes/lectures/lec7.tex	/^\\subsection{Linear recurrences in matrix form}$/;"	u	section:Counting
 Livre	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^		Livre(string t, string a, int n, bool b): titre(t), auteur(a), nb_pages(n), bestseller(b) {}$/;"	f	class:Livre	file:
 Livre	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^class Livre {$/;"	c	file:
 Loi de gravitation universelle	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Loi de gravitation universelle}$/;"	u	section:Gravitation, Moment Cinétique
@@ -415,6 +426,7 @@ Objectifs du cours de mecanique generale	BA1/Mecanique Generale/notes/lectures/l
 Oeuvre	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		Oeuvre(string t, Auteur & a, string l) :titre(t),langue(l),aut(a) {$/;"	f	class:Oeuvre	file:
 Oeuvre	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^class Oeuvre {$/;"	c	file:
 Onde transverse et longitudinale et l'equation d'onde	Fluides et Electromagnetisme/notes/lectures/lec9.tex	/^\\subsection{Onde transverse et longitudinale et l'equation d'onde}$/;"	u	section:Phenomenes Ondulatoires
+Ondes en $3D$	Fluides et Electromagnetisme/notes/lectures/lec10.tex	/^\\subsection{Ondes en $3D$}$/;"	u	section:Phenomenes Ondulatoires
 Ondes sinusoidales	Fluides et Electromagnetisme/notes/lectures/lec9.tex	/^\\subsection{Ondes sinusoidales}$/;"	u	section:Phenomenes Ondulatoires
 Ondes stationnaires	Fluides et Electromagnetisme/notes/lectures/lec9.tex	/^\\subsection{Ondes stationnaires}$/;"	u	section:Phenomenes Ondulatoires
 Operations Elementaires Sur Les Matrices	BA1/Algebre Lineaire I/notes/lectures/lec20.tex	/^\\section{Operations Elementaires Sur Les Matrices}$/;"	s
@@ -476,6 +488,7 @@ Proprietes de l'operation de limite	current-course/notes/lectures/lec6.tex	/^\\s
 Proprietes de preuves formelles	BA1/Structures Algebriques/notes/lectures/lec1.tex	/^\\subsubsection{Proprietes de preuves formelles}$/;"	b	section:Preuves
 Propriété universelle des Produits	BA1/Structures Algebriques/notes/lectures/lec6.tex	/^\\subsection{Propriété universelle des Produits}$/;"	u	section:Théorie des Groupes
 Qu'est-ce qu'un algorithme?	BA1/Introduction a la programmation/notes/lectures/lec2.tex	/^\\subsubsection{Qu'est-ce qu'un algorithme?}$/;"	b	subsection:Algorithmes""Formalisation d'algorithmes
+Quelques consequences du principe de superposition	Fluides et Electromagnetisme/notes/lectures/lec10.tex	/^\\subsection{Quelques consequences du principe de superposition}$/;"	u	section:Phenomenes Ondulatoires
 Quelques consequences immediates de la tension superficielle	Fluides et Electromagnetisme/notes/lectures/lec3.tex	/^\\subsubsection{Quelques consequences immediates de la tension superficielle}$/;"	b	subsection:Pression dans un fluide""Tension superficielle
 Quelques notions mathematiques	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Quelques notions mathematiques}$/;"	s
 Rang d'une Matrice	BA1/Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Rang d'une Matrice}$/;"	u	section:Matrices
@@ -529,6 +542,7 @@ Tension superficielle	Fluides et Electromagnetisme/notes/lectures/lec3.tex	/^\\s
 Theoreme de Bernoulli	Fluides et Electromagnetisme/notes/lectures/lec7.tex	/^\\subsection{Theoreme de Bernoulli}$/;"	u	section:Dynamique des fluides
 Theoreme de Cayley-Hamilton	Algebre Lineaire II/notes/lectures/lec7.tex	/^\\subsection{Theoreme de Cayley-Hamilton}$/;"	u	section:Le polynome caracteristique
 Theoreme de Lagrange	BA1/Structures Algebriques/notes/lectures/lec8.tex	/^\\subsection{Theoreme de Lagrange}$/;"	u	section:Théorie des Groupes
+Theoreme de Sylvester	Algebre Lineaire II/notes/lectures/lec10.tex	/^\\subsection{Theoreme de Sylvester}$/;"	u	section:Formes Bilineaires
 Theoreme du Moment Cinetique Generalise	BA1/Mecanique Generale/notes/lectures/lec11.tex	/^\\subsection{Theoreme du Moment Cinetique Generalise}$/;"	u	section:Rotations Du Solide
 Theoreme fondamental de l'arithmetique	BA1/Structures Algebriques/notes/lectures/lec3.tex	/^\\subsection{Theoreme fondamental de l'arithmetique}$/;"	u	section:Theorie des nombres
 Theorie des nombres	BA1/Structures Algebriques/notes/lectures/lec3.tex	/^\\section{Theorie des nombres}$/;"	s
@@ -564,15 +578,32 @@ Vecteur	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^class Vecteur: pub
 Vecteurs	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Vecteurs}$/;"	s
 Vehicule	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		Vehicule(string m, int d, double pa):marque(m),date(d),prix_achat(pa) {}$/;"	f	class:Vehicule	file:
 Vehicule	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^class Vehicule {$/;"	c	file:
+Vitesse de phase et de groupe	Fluides et Electromagnetisme/notes/lectures/lec10.tex	/^\\subsection{Vitesse de phase et de groupe}$/;"	u	section:Phenomenes Ondulatoires
 Vitesse et acceleration d'un point solide	BA1/Mecanique Generale/notes/lectures/lec11.tex	/^\\subsection{Vitesse et acceleration d'un point solide}$/;"	u	section:Rotations Du Solide
 Vitesse et accélération en coordonnées cylindriques	BA1/Mecanique Generale/notes/lectures/lec5.tex	/^\\subsection{Vitesse et accélération en coordonnées cylindriques}$/;"	u	section:Description des rotations spatiales
 Voiture	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		Voiture(string m, int d, double pa,unsigned int c, unsigned int n, double p, unsigned int k)$/;"	f	class:Voiture	file:
 Voiture	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^class Voiture: public Vehicule {$/;"	c	file:
 Voiture en accélération	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Voiture en accélération}$/;"	u	section:Travail, énergie, forces conservatives
-\\@lecture	fancy-preamble.tex	/^    \\subsection*{\\@lecture}$/;"	u
-\\@lecture	preamble.tex	/^    \\subsection*{\\@lecture}$/;"	u	section:Phenomenes Ondulatoires
+\\Bij	BA1/Algebre Lineaire I/Exos/S2/Ex4/sol.tex	/^\\newcommand{\\Bij}{\\mathrm{Bij}}$/;"	C
+\\Id	BA1/Algebre Lineaire I/Exos/S2/Ex4/sol.tex	/^\\newcommand{\\Id}{\\mathrm{Id}}$/;"	C
+\\bbz	BA1/Structures Algebriques/Devoirs/S7/sol.tex	/^\\newcommand{\\bbz}{\\mathbb{Z}}$/;"	C
+\\del	Analyse II/Arendre/S2/Ex.tex	/^\\newcommand{\\del}{\\partial}$/;"	C
+\\del	current-course/Arendre/S2/Ex.tex	/^\\newcommand{\\del}{\\partial}$/;"	C
+\\del	preamble.tex	/^\\newcommand{\\del}{\\partial}$/;"	C
+\\f	BA1/Structures Algebriques/Devoirs/S7/sol.tex	/^\\newcommand{\\f}{\\faktor}$/;"	C
+\\filler	fancy-preamble.tex	/^\\newcommand{\\filler}[1][10]%$/;"	C
+\\filler	preamble-assignment.tex	/^\\newcommand{\\filler}[1][10]%$/;"	C
+\\filler	preamble.tex	/^\\newcommand{\\filler}[1][10]%$/;"	C
+\\incfig	BA1/Structures Algebriques/Devoirs/S6/sol.tex	/^\\newcommand{\\incfig}[2][1]{%$/;"	C
+\\incfig	Discrete Mathematics/ARendre/S5/Ex.tex	/^\\newcommand{\\incfig}[1]{%$/;"	C
+\\incfig	fancy-preamble.tex	/^\\newcommand{\\incfig}[1]{%$/;"	C
+\\incfig	preamble-assignment.tex	/^\\newcommand{\\incfig}[1]{%$/;"	C
+\\incfig	preamble.tex	/^\\newcommand{\\incfig}[1]{%$/;"	C
+\\lecture	fancy-preamble.tex	/^\\newcommand{\\lecture}[3]{$/;"	C
+\\lecture	preamble.tex	/^\\newcommand{\\lecture}[3]{$/;"	C
 \\texttt{auto}	BA1/Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{\\texttt{auto}}$/;"	u	section:Etude de cas
 \\texttt{const} et \\texttt{constexpr}	BA1/Introduction a la programmation/notes/lectures/lec3.tex	/^\\subsection{ \\texttt{const} et \\texttt{constexpr} }$/;"	u	section:Etude de cas
+\\zpz	BA1/Structures Algebriques/Devoirs/S12/sol.tex	/^\\newcommand{\\zpz}{\\faktor{\\mathbb{Z}}{p \\mathbb{Z}}}$/;"	C
 _poids	Programmation Orientee Objet/Arendre/S1/Ex1/imc.cc	/^		double _poids;$/;"	m	class:Patient	typeref:typename:double	file:
 _taille	Programmation Orientee Objet/Arendre/S1/Ex1/imc.cc	/^		double _taille;$/;"	m	class:Patient	typeref:typename:double	file:
 ach	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		Article ach;$/;"	m	class:Achat	typeref:typename:Article	file:
@@ -717,6 +748,8 @@ axiom:nombres_reels	BA1/Analyse I/notes/lectures/lec1.tex	/^\\begin{axiom}[Nombr
 axiom:nombres_reels_ii	BA1/Analyse I/notes/lectures/lec1.tex	/^\\begin{axiom}[Nombres Reels II]\\index{Nombres Reels II}\\label{axiom:nombres_reels_ii}$/;"	l
 b	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		double b;$/;"	m	class:Triangle	typeref:typename:double	file:
 base	Algebre Lineaire II/notes/figures/gramschmidt.svg	/^     inkscape:document-rotation="0">$/;"	i
+base	Analyse II/notes/figures/.svg	/^     inkscape:window-maximized="1">$/;"	i
+base	Analyse II/notes/figures/derivee_taf.svg	/^     inkscape:document-rotation="0">$/;"	i
 base	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^     inkscape:snap-global="false">$/;"	i
 base	BA1/Analyse I/notes/figures/fonction1.svg	/^     inkscape:document-rotation="0">$/;"	i
 base	BA1/Analyse I/notes/figures/fonction2.svg	/^     inkscape:snap-global="false">$/;"	i
@@ -763,6 +796,8 @@ base	Fluides et Electromagnetisme/notes/figures/tube.svg	/^     inkscape:window-
 base	Fluides et Electromagnetisme/notes/figures/viscosimetre.svg	/^     inkscape:document-rotation="0">$/;"	i
 base	Fluides et Electromagnetisme/notes/figures/viscosite-par-volume.svg	/^     inkscape:document-rotation="0">$/;"	i
 base	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		double base;$/;"	m	class:Triangle	typeref:typename:double	file:
+base	current-course/notes/figures/.svg	/^     inkscape:window-maximized="1">$/;"	i
+base	current-course/notes/figures/derivee_taf.svg	/^     inkscape:document-rotation="0">$/;"	i
 bestseller	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^		bool bestseller;$/;"	m	class:Livre	typeref:typename:bool	file:
 binaire	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^bool binaire(Carte const& carte){$/;"	f	typeref:typename:bool
 bis	Programmation Orientee Objet/Exos/S2/Ex1/apero.cc	/^	void bis() {$/;"	f	class:Apero	typeref:typename:void	file:
@@ -779,6 +814,8 @@ calculePrix	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^	void calcule
 calculer_prix	Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^		double calculer_prix() {$/;"	f	class:Livre	typeref:typename:double	file:
 cbfois	Programmation Orientee Objet/Arendre/S6/Ex1/restaurant.cc	/^		double cbfois;$/;"	m	class:Recette	typeref:typename:double	file:
 cc	Algebre Lineaire II/notes/figures/gramschmidt.svg	/^   sodipodi:docname="gramschmidt.svg">$/;"	n	uri:http://creativecommons.org/ns#
+cc	Analyse II/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://creativecommons.org/ns#
+cc	Analyse II/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	n	uri:http://creativecommons.org/ns#
 cc	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://creativecommons.org/ns#
 cc	BA1/Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://creativecommons.org/ns#
 cc	BA1/Analyse I/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://creativecommons.org/ns#
@@ -824,6 +861,8 @@ cc	Fluides et Electromagnetisme/notes/figures/tube-de-pitot.svg	/^   sodipodi:do
 cc	Fluides et Electromagnetisme/notes/figures/tube.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://creativecommons.org/ns#
 cc	Fluides et Electromagnetisme/notes/figures/viscosimetre.svg	/^   sodipodi:docname="viscosimetre.svg">$/;"	n	uri:http://creativecommons.org/ns#
 cc	Fluides et Electromagnetisme/notes/figures/viscosite-par-volume.svg	/^   sodipodi:docname="viscosite-par-volume.svg">$/;"	n	uri:http://creativecommons.org/ns#
+cc	current-course/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://creativecommons.org/ns#
+cc	current-course/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	n	uri:http://creativecommons.org/ns#
 centre	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^		Coord centre;$/;"	m	class:Cercle	typeref:typename:Coord	file:
 check_autour	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^int check_autour(Carte carte, size_t i, size_t j){$/;"	f	typeref:typename:int
 circle841	Discrete Mathematics/ARendre/S5/figures/labelling.svg	/^       r="1.0556695" \/>$/;"	i
@@ -862,6 +901,8 @@ date_Paques	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex7/datedepaques.cc
 date_jour	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^int date_jour;$/;"	m	struct:lettre	typeref:typename:int	file:
 date_mois	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^int date_mois;$/;"	m	struct:lettre	typeref:typename:int	file:
 dc	Algebre Lineaire II/notes/figures/gramschmidt.svg	/^   sodipodi:docname="gramschmidt.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
+dc	Analyse II/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
+dc	Analyse II/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
 dc	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
 dc	BA1/Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
 dc	BA1/Analyse I/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
@@ -907,6 +948,8 @@ dc	Fluides et Electromagnetisme/notes/figures/tube-de-pitot.svg	/^   sodipodi:do
 dc	Fluides et Electromagnetisme/notes/figures/tube.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
 dc	Fluides et Electromagnetisme/notes/figures/viscosimetre.svg	/^   sodipodi:docname="viscosimetre.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
 dc	Fluides et Electromagnetisme/notes/figures/viscosite-par-volume.svg	/^   sodipodi:docname="viscosite-par-volume.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
+dc	current-course/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
+dc	current-course/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	n	uri:http://purl.org/dc/elements/1.1/
 debut	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^size_t debut;$/;"	m	struct:SousSequence	typeref:typename:size_t	file:
 decale	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex4/cesar.cc	/^char decale(char c, char debut, int dec){$/;"	f	typeref:typename:char
 decode	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex4/cesar.cc	/^string decode(string s,int  d){$/;"	f	typeref:typename:string
@@ -986,6 +1029,8 @@ defn:surjectivite	BA1/Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{defn}
 defn:systeme_de_coordonnees	BA1/Mecanique Generale/notes/lectures/lec4.tex	/^\\begin{defn}[Systeme de coordonnees]\\index{Systeme de coordonnees}\\label{defn:systeme_de_coor/;"	l
 defn:valeur_absolue	BA1/Analyse I/notes/lectures/lec2.tex	/^\\begin{defn}[valeur absolue]\\label{defn:valeur_absolue}$/;"	l
 defs2	Algebre Lineaire II/notes/figures/gramschmidt.svg	/^     id="defs2">$/;"	i
+defs2	Analyse II/notes/figures/.svg	/^     id="defs2" \/>$/;"	i
+defs2	Analyse II/notes/figures/derivee_taf.svg	/^     id="defs2" \/>$/;"	i
 defs2	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^     id="defs2">$/;"	i
 defs2	BA1/Analyse I/notes/figures/fonction1.svg	/^     id="defs2">$/;"	i
 defs2	BA1/Analyse I/notes/figures/fonction2.svg	/^     id="defs2" \/>$/;"	i
@@ -1031,6 +1076,8 @@ defs2	Fluides et Electromagnetisme/notes/figures/tube-de-pitot.svg	/^     id="de
 defs2	Fluides et Electromagnetisme/notes/figures/tube.svg	/^     id="defs2" \/>$/;"	i
 defs2	Fluides et Electromagnetisme/notes/figures/viscosimetre.svg	/^     id="defs2">$/;"	i
 defs2	Fluides et Electromagnetisme/notes/figures/viscosite-par-volume.svg	/^     id="defs2">$/;"	i
+defs2	current-course/notes/figures/.svg	/^     id="defs2" \/>$/;"	i
+defs2	current-course/notes/figures/derivee_taf.svg	/^     id="defs2" \/>$/;"	i
 degre	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^		Degre degre() const {$/;"	f	class:Polynome	typeref:typename:Degre	file:
 degres	BA1/Structures Algebriques/Devoirs/S1/sol.tex	/^\\begin{lemma}\\label{degres}$/;"	l
 demander_annee	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex7/datedepaques.cc	/^int demander_annee(){$/;"	f	typeref:typename:int
@@ -1136,6 +1183,7 @@ fig:ressort	BA1/Mecanique Generale/notes/lectures/lec3.tex	/^    \\label{fig:res
 fig:ressort-plan-horizontal	BA1/Mecanique Generale/notes/lectures/lec3.tex	/^    \\label{fig:ressort-plan-horizontal}$/;"	l
 fig:schema-relation-d-equivalence	BA1/Structures Algebriques/notes/lectures/lec2.tex	/^    \\label{fig:schema-relation-d-equivalence}$/;"	l
 fig:schemacomposition	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^    \\label{fig:schemacomposition}$/;"	l
+fig:thmschwarz	Analyse II/notes/lectures/lec10.tex	/^    \\label{fig:thmschwarz}$/;"	l
 fig:trajectoire	BA1/Mecanique Generale/notes/lectures/lec4.tex	/^    \\label{fig:trajectoire}$/;"	l
 fig:tube-de-pitot	Fluides et Electromagnetisme/notes/lectures/lec7.tex	/^    \\label{fig:tube-de-pitot}$/;"	l
 fig:types-d'ammortissement	BA1/Mecanique Generale/notes/lectures/lec3.tex	/^    \\label{fig:types-d'ammortissement}$/;"	l
@@ -1309,6 +1357,8 @@ gety	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^		double gety(){$/;"	
 getz	Programmation Orientee Objet/Exos/S1/Ex3/Point3D.cc	/^		double getz(){$/;"	f	class:Point3D	typeref:typename:double	file:
 getz	Programmation Orientee Objet/Exos/S4/Ex2/Vecteur.cc	/^		double getz(){$/;"	f	class:Point3D	typeref:typename:double	file:
 grid815	Algebre Lineaire II/notes/figures/gramschmidt.svg	/^       dotted="false" \/>$/;"	i
+grid815	Analyse II/notes/figures/.svg	/^       dotted="false" \/>$/;"	i
+grid815	Analyse II/notes/figures/derivee_taf.svg	/^       dotted="false" \/>$/;"	i
 grid815	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^       dotted="false" \/>$/;"	i
 grid815	BA1/Analyse I/notes/figures/fonction1.svg	/^       dotted="false" \/>$/;"	i
 grid815	BA1/Analyse I/notes/figures/fonction2.svg	/^       dotted="false" \/>$/;"	i
@@ -1354,6 +1404,8 @@ grid815	Fluides et Electromagnetisme/notes/figures/tube-de-pitot.svg	/^       do
 grid815	Fluides et Electromagnetisme/notes/figures/tube.svg	/^       dotted="false" \/>$/;"	i
 grid815	Fluides et Electromagnetisme/notes/figures/viscosimetre.svg	/^       dotted="false" \/>$/;"	i
 grid815	Fluides et Electromagnetisme/notes/figures/viscosite-par-volume.svg	/^       dotted="false" \/>$/;"	i
+grid815	current-course/notes/figures/.svg	/^       dotted="false" \/>$/;"	i
+grid815	current-course/notes/figures/derivee_taf.svg	/^       dotted="false" \/>$/;"	i
 h	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		double h;$/;"	m	class:Triangle	typeref:typename:double	file:
 hauteur	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		double hauteur;$/;"	m	class:Triangle	typeref:typename:double	file:
 i	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex2/complexes.cc	/^	double i;$/;"	m	struct:complexe	typeref:typename:double	file:
@@ -1369,6 +1421,8 @@ init3	Programmation Orientee Objet/Exos/S1/Ex4/triangles.cc	/^		void init3(doubl
 initialise	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^void initialise(Grille &g){$/;"	f	typeref:typename:void
 initialise_statistique	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex3/stats.cc	/^void initialise_statistique(Statistique& stat){$/;"	f	typeref:typename:void
 inkscape	Algebre Lineaire II/notes/figures/gramschmidt.svg	/^   sodipodi:docname="gramschmidt.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
+inkscape	Analyse II/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
+inkscape	Analyse II/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inkscape	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inkscape	BA1/Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inkscape	BA1/Analyse I/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
@@ -1414,6 +1468,8 @@ inkscape	Fluides et Electromagnetisme/notes/figures/tube-de-pitot.svg	/^   sodip
 inkscape	Fluides et Electromagnetisme/notes/figures/tube.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inkscape	Fluides et Electromagnetisme/notes/figures/viscosimetre.svg	/^   sodipodi:docname="viscosimetre.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inkscape	Fluides et Electromagnetisme/notes/figures/viscosite-par-volume.svg	/^   sodipodi:docname="viscosite-par-volume.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
+inkscape	current-course/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
+inkscape	current-course/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	n	uri:http://www.inkscape.org/namespaces/inkscape
 inv	Programmation Orientee Objet/Exos/S4/Ex3/algebre.cc	/^		unsigned int inv(unsigned int a) {$/;"	f	class:Corps	typeref:typename:unsigned int	file:
 j	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex6/cloture.cc	/^	int j;$/;"	m	struct:Position	typeref:typename:int	file:
 jaune	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex1/puissance4.cc	/^enum Couleur { vide,rouge, jaune};$/;"	e	enum:Couleur	file:
@@ -1425,6 +1481,8 @@ jouer	Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^		void jouer(Jeu& 
 kil	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		unsigned int kil;$/;"	m	class:Voiture	typeref:typename:unsigned int	file:
 langue	Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		string langue;$/;"	m	class:Oeuvre	typeref:typename:string	file:
 layer1	Algebre Lineaire II/notes/figures/gramschmidt.svg	/^     transform="translate(0,-177)">$/;"	i
+layer1	Analyse II/notes/figures/.svg	/^     transform="translate(0,-177)" \/>$/;"	i
+layer1	Analyse II/notes/figures/derivee_taf.svg	/^     transform="translate(0,-177)">$/;"	i
 layer1	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^     transform="translate(0,-177)">$/;"	i
 layer1	BA1/Analyse I/notes/figures/fonction1.svg	/^     transform="translate(0,-177)">$/;"	i
 layer1	BA1/Analyse I/notes/figures/fonction2.svg	/^     transform="translate(0,-177)">$/;"	i
@@ -1470,6 +1528,8 @@ layer1	Fluides et Electromagnetisme/notes/figures/tube-de-pitot.svg	/^     trans
 layer1	Fluides et Electromagnetisme/notes/figures/tube.svg	/^     transform="translate(0,-177)" \/>$/;"	i
 layer1	Fluides et Electromagnetisme/notes/figures/viscosimetre.svg	/^     transform="translate(0,-177)">$/;"	i
 layer1	Fluides et Electromagnetisme/notes/figures/viscosite-par-volume.svg	/^     transform="translate(0,-177)">$/;"	i
+layer1	current-course/notes/figures/.svg	/^     transform="translate(0,-177)" \/>$/;"	i
+layer1	current-course/notes/figures/derivee_taf.svg	/^     transform="translate(0,-177)">$/;"	i
 lemma:composition_d_applications_surjectives_et_injectives	BA1/Algebre Lineaire I/notes/lectures/lec2.tex	/^\\begin{lemma}[Composition d'applications surjectives et injectives]\\index{surjectivite}\\index/;"	l
 lemma:critere_de_l_application_lineaire	BA1/Algebre Lineaire I/notes/lectures/lec8.tex	/^\\begin{lemma}[Critere de l'application lineaire]\\index{Critere de l'application lineaire}\\lab/;"	l
 lemma:critere_de_sous_anneau	BA1/Algebre Lineaire I/notes/lectures/lec6.tex	/^\\begin{lemma}[Critère de sous-anneau]\\index{Critère de sous-anneau}\\label{lemma:critere_de_/;"	l
@@ -1745,6 +1805,8 @@ masc	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	  bool masc;$/;"	m	c
 message_gagne	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void message_gagne(int nb_coups)$/;"	f	typeref:typename:void
 message_perdu	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex8/mastermind.cc	/^void message_perdu(char c1, char c2, char c3, char c4)$/;"	f	typeref:typename:void
 metadata5	Algebre Lineaire II/notes/figures/gramschmidt.svg	/^     id="metadata5">$/;"	i
+metadata5	Analyse II/notes/figures/.svg	/^     id="metadata5">$/;"	i
+metadata5	Analyse II/notes/figures/derivee_taf.svg	/^     id="metadata5">$/;"	i
 metadata5	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^     id="metadata5">$/;"	i
 metadata5	BA1/Analyse I/notes/figures/fonction1.svg	/^     id="metadata5">$/;"	i
 metadata5	BA1/Analyse I/notes/figures/fonction2.svg	/^     id="metadata5">$/;"	i
@@ -1790,6 +1852,8 @@ metadata5	Fluides et Electromagnetisme/notes/figures/tube-de-pitot.svg	/^     id
 metadata5	Fluides et Electromagnetisme/notes/figures/tube.svg	/^     id="metadata5">$/;"	i
 metadata5	Fluides et Electromagnetisme/notes/figures/viscosimetre.svg	/^     id="metadata5">$/;"	i
 metadata5	Fluides et Electromagnetisme/notes/figures/viscosite-par-volume.svg	/^     id="metadata5">$/;"	i
+metadata5	current-course/notes/figures/.svg	/^     id="metadata5">$/;"	i
+metadata5	current-course/notes/figures/derivee_taf.svg	/^     id="metadata5">$/;"	i
 min2	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex5/min2.cc	/^double min2(double a, double b){$/;"	f	typeref:typename:double
 min3	BA1/Introduction a la programmation/Exos/MOOC/S4/Ex5/min2.cc	/^double min3(double a, double b, double c){$/;"	f	typeref:typename:double
 mult	BA1/Introduction a la programmation/Exos/MOOC/S5/Ex2/matrices.cc	/^vector<vector<double>> mult(vector<vector<double>> A, vector<vector<double>> B){$/;"	f	typeref:typename:vector<vector<double>>
@@ -1818,6 +1882,7 @@ ns01cb0d3f0101	BA1/Mecanique Generale/notes/figures/cercletrigo.svg	/^   sodipod
 ns05f30d750101	BA1/Mecanique Generale/notes/figures/oscillateur-harmonique-force.svg	/^   sodipodi:docname="oscillateur-harmonique-force.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns096c1ccb0101	BA1/Mecanique Generale/notes/figures/systemes-de-coordonnees.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns0b7e097a0101	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+ns1a8972ed0101	current-course/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns1c0e6ccb0101	BA1/Structures Algebriques/notes/figures/qq.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns1f1e2efa0101	Fluides et Electromagnetisme/notes/figures/tube-2.svg	/^   sodipodi:docname="tube-2.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns20989ac40101	BA1/Mecanique Generale/notes/figures/curviligne.svg	/^   sodipodi:docname="curviligne.svg">$/;"	n	uri:http://www.w3.org/2000/svg
@@ -1831,6 +1896,7 @@ ns5a6f973d0101	Fluides et Electromagnetisme/notes/figures/glicerine-dans-un-tube
 ns5accb6a80101	Fluides et Electromagnetisme/notes/figures/viscosimetre.svg	/^   sodipodi:docname="viscosimetre.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns61c81bcc0101	BA1/Mecanique Generale/notes/figures/oscillateur-amorti.svg	/^   sodipodi:docname="oscillateur-amorti.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns64c985b90101	Fluides et Electromagnetisme/notes/figures/viscosite-par-volume.svg	/^   sodipodi:docname="viscosite-par-volume.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+ns6a0044af0101	current-course/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns6a39b9e50101	BA1/Structures Algebriques/notes/figures/mama.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns6a8ab51a0101	Fluides et Electromagnetisme/notes/figures/goutte_apesanteur.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns6f6f8ffe0101	BA1/Mecanique Generale/notes/figures/repere-droit.svg	/^   sodipodi:docname="repere-droit.svg">$/;"	n	uri:http://www.w3.org/2000/svg
@@ -1840,6 +1906,7 @@ ns80189a4a0101	BA1/Structures Algebriques/notes/figures/diagrammes-produits.svg	
 ns839265580101	Fluides et Electromagnetisme/notes/figures/ecoulement-de-couette.svg	/^   sodipodi:docname="ecoulement-de-couette.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns8cde8c2a0101	Discrete Mathematics/ARendre/S5/figures/labelling.svg	/^   sodipodi:docname="labelling.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns8d63db7b0101	BA1/Structures Algebriques/Devoirs/S6/figures/diagramme.svg	/^   sodipodi:docname="diagramme.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+ns8f92fdad0101	Analyse II/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns93b464880101	BA1/Mecanique Generale/notes/figures/trajectoire.svg	/^   sodipodi:docname="trajectoire.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 ns9f5994f90101	BA1/Mecanique Generale/notes/figures/mouvement-approxime-par-cercle.svg	/^   sodipodi:docname="mouvement-approxime-par-cercle.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 nsa189e0cd0101	BA1/Mecanique Generale/notes/figures/ressort-plan-horizontal.svg	/^   sodipodi:docname="ressort-plan-horizontal.svg">$/;"	n	uri:http://www.w3.org/2000/svg
@@ -1855,6 +1922,7 @@ nscebee33a0101	BA1/Analyse I/notes/figures/fonction3.svg	/^   sodipodi:docname="
 nsced0fbbb0101	BA1/Analyse I/notes/figures/fonction4.svg	/^   sodipodi:docname="fonction4.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 nsd3988a6b0101	BA1/Structures Algebriques/notes/figures/machineappl.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 nsd8daa76d0101	BA1/Mecanique Generale/notes/figures/produit-vectoriel.svg	/^   sodipodi:docname="produit-vectoriel.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+nsdd6fd12b0101	Analyse II/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 nse3af464e0101	Fluides et Electromagnetisme/notes/figures/tube-de-pitot.svg	/^   sodipodi:docname="tube-de-pitot.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 nse3ea7e440101	BA1/Mecanique Generale/notes/figures/produit-scalaire.svg	/^   sodipodi:docname="produit-scalaire.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 nsefae98740101	BA1/Mecanique Generale/notes/figures/mouvement_central.svg	/^   sodipodi:docname="mouvement_central.svg">$/;"	n	uri:http://www.w3.org/2000/svg
@@ -1953,6 +2021,7 @@ path1234	Fluides et Electromagnetisme/notes/figures/ecoulement-de-couette.svg	/^
 path1234	Fluides et Electromagnetisme/notes/figures/glicerine-dans-un-tube.svg	/^           id="path1234" \/>$/;"	i
 path1234	Fluides et Electromagnetisme/notes/figures/tube-de-courant.svg	/^           id="path1234" \/>$/;"	i
 path1824	Fluides et Electromagnetisme/notes/figures/tube-de-courant.svg	/^           id="path1824" \/>$/;"	i
+path831	Analyse II/notes/figures/derivee_taf.svg	/^       ry="25.119318" \/>$/;"	i
 path831	BA1/Analyse I/notes/figures/fonction1.svg	/^       id="path831" \/>$/;"	i
 path831	BA1/Analyse I/notes/figures/fonction2.svg	/^       id="path831" \/>$/;"	i
 path831	BA1/Analyse I/notes/figures/fonction3.svg	/^       id="path831" \/>$/;"	i
@@ -1978,7 +2047,9 @@ path831	Fluides et Electromagnetisme/notes/figures/tube-2.svg	/^       sodipodi:
 path831	Fluides et Electromagnetisme/notes/figures/tube-de-courant.svg	/^       sodipodi:nodetypes="cc" \/>$/;"	i
 path831	Fluides et Electromagnetisme/notes/figures/tube-de-pitot.svg	/^       id="path831" \/>$/;"	i
 path831	Fluides et Electromagnetisme/notes/figures/viscosimetre.svg	/^         ry="2.8926492" \/>$/;"	i
+path831	current-course/notes/figures/derivee_taf.svg	/^       ry="25.119318" \/>$/;"	i
 path833	Algebre Lineaire II/notes/figures/gramschmidt.svg	/^           id="path833" \/>$/;"	i
+path833	Analyse II/notes/figures/derivee_taf.svg	/^       id="path833" \/>$/;"	i
 path833	BA1/Analyse I/notes/figures/fonction1.svg	/^       id="path833" \/>$/;"	i
 path833	BA1/Analyse I/notes/figures/fonction2.svg	/^       id="path833" \/>$/;"	i
 path833	BA1/Analyse I/notes/figures/fonction3.svg	/^       id="path833" \/>$/;"	i
@@ -1997,6 +2068,7 @@ path833	Fluides et Electromagnetisme/notes/figures/ecoulement-plaques.svg	/^    
 path833	Fluides et Electromagnetisme/notes/figures/tube-2.svg	/^       sodipodi:nodetypes="cc" \/>$/;"	i
 path833	Fluides et Electromagnetisme/notes/figures/tube-de-courant.svg	/^           id="path833" \/>$/;"	i
 path833	Fluides et Electromagnetisme/notes/figures/tube-de-pitot.svg	/^       id="path833" \/>$/;"	i
+path833	current-course/notes/figures/derivee_taf.svg	/^       id="path833" \/>$/;"	i
 path835	BA1/Analyse I/notes/figures/fonction1.svg	/^       id="path835" \/>$/;"	i
 path835	BA1/Analyse I/notes/figures/fonction2.svg	/^       id="path835" \/>$/;"	i
 path835	BA1/Analyse I/notes/figures/fonction3.svg	/^       id="path835" \/>$/;"	i
@@ -2279,6 +2351,8 @@ r	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^		double r;$/;"	m	class:C
 r	Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^		double r;$/;"	m	class:Cercle	typeref:typename:double	file:
 rayon	Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		double rayon;$/;"	m	class:Cercle	typeref:typename:double	file:
 rdf	Algebre Lineaire II/notes/figures/gramschmidt.svg	/^   sodipodi:docname="gramschmidt.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdf	Analyse II/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdf	Analyse II/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	BA1/Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	BA1/Analyse I/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
@@ -2324,6 +2398,8 @@ rdf	Fluides et Electromagnetisme/notes/figures/tube-de-pitot.svg	/^   sodipodi:d
 rdf	Fluides et Electromagnetisme/notes/figures/tube.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	Fluides et Electromagnetisme/notes/figures/viscosimetre.svg	/^   sodipodi:docname="viscosimetre.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rdf	Fluides et Electromagnetisme/notes/figures/viscosite-par-volume.svg	/^   sodipodi:docname="viscosite-par-volume.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdf	current-course/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdf	current-course/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	n	uri:http://www.w3.org/1999/02/22-rdf-syntax-ns#
 rect833	Fluides et Electromagnetisme/notes/figures/viscosite-par-volume.svg	/^       y="200.46701" \/>$/;"	i
 remplir	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^	void remplir(Article art, int num=1) {$/;"	f	class:Caddie	typeref:typename:void	file:
 reponses	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^vector<string> reponses;$/;"	m	struct:qcm	typeref:typename:vector<string>	file:
@@ -2343,6 +2419,8 @@ setnum	Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^		void setnum(int num
 sexe	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^char sexe;$/;"	m	struct:Personne	typeref:typename:char	file:
 simplifie	Programmation Orientee Objet/Exos/S3/Ex2/polynome.cc	/^		void simplifie() {$/;"	f	class:Polynome	typeref:typename:void	file:
 sodipodi	Algebre Lineaire II/notes/figures/gramschmidt.svg	/^   sodipodi:docname="gramschmidt.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
+sodipodi	Analyse II/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
+sodipodi	Analyse II/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 sodipodi	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 sodipodi	BA1/Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 sodipodi	BA1/Analyse I/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
@@ -2388,6 +2466,8 @@ sodipodi	Fluides et Electromagnetisme/notes/figures/tube-de-pitot.svg	/^   sodip
 sodipodi	Fluides et Electromagnetisme/notes/figures/tube.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 sodipodi	Fluides et Electromagnetisme/notes/figures/viscosimetre.svg	/^   sodipodi:docname="viscosimetre.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 sodipodi	Fluides et Electromagnetisme/notes/figures/viscosite-par-volume.svg	/^   sodipodi:docname="viscosite-par-volume.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
+sodipodi	current-course/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
+sodipodi	current-course/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	n	uri:http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd
 solde	Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		double solde;$/;"	m	class:Article	typeref:typename:double	file:
 solde1	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	  double solde1;$/;"	m	class:Client	typeref:typename:double	file:
 solde2	Programmation Orientee Objet/Exos/S2/Ex3/banque2.cc	/^	  double solde2;$/;"	m	class:Client	typeref:typename:double	file:
@@ -2404,6 +2484,8 @@ sujet	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex1/lettre.cc	/^string su
 surface	Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^		double surface () const{$/;"	f	class:Cercle	typeref:typename:double	file:
 surface1	Fluides et Electromagnetisme/notes/figures/glicerine-dans-un-tube.svg	/^         style="stroke-width:1.1657">$/;"	i
 svg	Algebre Lineaire II/notes/figures/gramschmidt.svg	/^   sodipodi:docname="gramschmidt.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+svg	Analyse II/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+svg	Analyse II/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 svg	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 svg	BA1/Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 svg	BA1/Analyse I/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	n	uri:http://www.w3.org/2000/svg
@@ -2449,7 +2531,11 @@ svg	Fluides et Electromagnetisme/notes/figures/tube-de-pitot.svg	/^   sodipodi:d
 svg	Fluides et Electromagnetisme/notes/figures/tube.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 svg	Fluides et Electromagnetisme/notes/figures/viscosimetre.svg	/^   sodipodi:docname="viscosimetre.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 svg	Fluides et Electromagnetisme/notes/figures/viscosite-par-volume.svg	/^   sodipodi:docname="viscosite-par-volume.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+svg	current-course/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	n	uri:http://www.w3.org/2000/svg
+svg	current-course/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	n	uri:http://www.w3.org/2000/svg
 svg8	Algebre Lineaire II/notes/figures/gramschmidt.svg	/^   sodipodi:docname="gramschmidt.svg">$/;"	i
+svg8	Analyse II/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	i
+svg8	Analyse II/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	i
 svg8	BA1/Algebre Lineaire I/notes/figures/schemacomposition.svg	/^   sodipodi:docname="schemacomposition.svg">$/;"	i
 svg8	BA1/Analyse I/notes/figures/fonction1.svg	/^   sodipodi:docname="fonction1.svg">$/;"	i
 svg8	BA1/Analyse I/notes/figures/fonction2.svg	/^   sodipodi:docname="fonction2.svg">$/;"	i
@@ -2495,6 +2581,8 @@ svg8	Fluides et Electromagnetisme/notes/figures/tube-de-pitot.svg	/^   sodipodi:
 svg8	Fluides et Electromagnetisme/notes/figures/tube.svg	/^   sodipodi:docname="figure.svg">$/;"	i
 svg8	Fluides et Electromagnetisme/notes/figures/viscosimetre.svg	/^   sodipodi:docname="viscosimetre.svg">$/;"	i
 svg8	Fluides et Electromagnetisme/notes/figures/viscosite-par-volume.svg	/^   sodipodi:docname="viscosite-par-volume.svg">$/;"	i
+svg8	current-course/notes/figures/.svg	/^   sodipodi:docname="figure.svg">$/;"	i
+svg8	current-course/notes/figures/derivee_taf.svg	/^   sodipodi:docname="derivee_taf.svg">$/;"	i
 swap	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex3/trideshell.cc	/^void swap(tab& t, int a, int b){$/;"	f	typeref:typename:void
 t	Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		string t;$/;"	m	class:Avion	typeref:typename:string	file:
 tab	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex3/trideshell.cc	/^typedef vector<int> tab;$/;"	t	typeref:typename:vector<int>	file:
@@ -2542,9 +2630,13 @@ text833	BA1/Structures Algebriques/notes/figures/diagrammes-produits.svg	/^     
 text835	Fluides et Electromagnetisme/notes/figures/corde-suspendue.svg	/^       x="26.571066"><tspan$/;"	i
 text837	BA1/Mecanique Generale/notes/figures/produit-vectoriel.svg	/^       x="56.379177"><tspan$/;"	i
 text837	Fluides et Electromagnetisme/notes/figures/ecoulement-plaques.svg	/^       x="108.25417"><tspan$/;"	i
+text839	Analyse II/notes/figures/derivee_taf.svg	/^       x="134.87288"><tspan$/;"	i
 text839	BA1/Analyse I/notes/figures/fonction3.svg	/^       x="31.906904"><tspan$/;"	i
 text839	BA1/Analyse I/notes/figures/fonction4.svg	/^       x="32.421276"><tspan$/;"	i
 text839	BA1/Mecanique Generale/notes/figures/ressort.svg	/^       x="14.345931"><tspan$/;"	i
+text839	current-course/notes/figures/derivee_taf.svg	/^       x="134.87288"><tspan$/;"	i
+text839-3	Analyse II/notes/figures/derivee_taf.svg	/^       x="79.528168"><tspan$/;"	i
+text839-3	current-course/notes/figures/derivee_taf.svg	/^       x="79.528168"><tspan$/;"	i
 text841	BA1/Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^       x="34.549919"><tspan$/;"	i
 text842	Fluides et Electromagnetisme/notes/figures/ecoulement-plaques.svg	/^       x="143.38922"><tspan$/;"	i
 text844	BA1/Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^       x="4.7857294"><tspan$/;"	i
@@ -2743,9 +2835,13 @@ tspan831	BA1/Structures Algebriques/notes/figures/diagrammes-produits.svg	/^    
 tspan833	Fluides et Electromagnetisme/notes/figures/corde-suspendue.svg	/^         style="stroke-width:0.264583">$P_1$<\/tspan><\/text>$/;"	i
 tspan835	BA1/Mecanique Generale/notes/figures/produit-vectoriel.svg	/^         style="stroke-width:0.264583">$\\vec{a}$<\/tspan><\/text>$/;"	i
 tspan835	Fluides et Electromagnetisme/notes/figures/ecoulement-plaques.svg	/^         style="stroke-width:0.264583">$l$<\/tspan><\/text>$/;"	i
+tspan837	Analyse II/notes/figures/derivee_taf.svg	/^         style="stroke-width:0.264583">$\\vec{y}$<\/tspan><\/text>$/;"	i
 tspan837	BA1/Analyse I/notes/figures/fonction3.svg	/^         style="stroke-width:0.264583">$\\frac{1}{n}$<\/tspan><\/text>$/;"	i
 tspan837	BA1/Analyse I/notes/figures/fonction4.svg	/^         style="stroke-width:0.264583">$n$<\/tspan><\/text>$/;"	i
 tspan837	BA1/Mecanique Generale/notes/figures/ressort.svg	/^         style="stroke-width:0.264583">Position a vide<\/tspan><\/text>$/;"	i
+tspan837	current-course/notes/figures/derivee_taf.svg	/^         style="stroke-width:0.264583">$\\vec{y}$<\/tspan><\/text>$/;"	i
+tspan837-6	Analyse II/notes/figures/derivee_taf.svg	/^         style="stroke-width:0.264583">$\\vec{x}$<\/tspan><\/text>$/;"	i
+tspan837-6	current-course/notes/figures/derivee_taf.svg	/^         style="stroke-width:0.264583">$\\vec{x}$<\/tspan><\/text>$/;"	i
 tspan839	BA1/Structures Algebriques/notes/figures/preuve-fonction-bizarre.svg	/^         style="stroke-width:0.264583">$x$<\/tspan><\/text>$/;"	i
 tspan840	Fluides et Electromagnetisme/notes/figures/ecoulement-plaques.svg	/^         style="stroke-width:0.264583">$p_{out} $<\/tspan><\/text>$/;"	i
 tspan842	BA1/Mecanique Generale/notes/figures/types-d'ammortissement.svg	/^         style="stroke-width:0.264583">Ammortissement sous-critique<\/tspan><\/text>$/;"	i

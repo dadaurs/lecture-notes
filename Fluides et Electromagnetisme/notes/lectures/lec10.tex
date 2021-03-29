@@ -1,0 +1,87 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Fri 26 Mar}{Ondes Stationnaires}
+Une onde stationnaire est de la forme
+\[ 
+	y_0( x,t) = d \sin( \frac{\pi n}{l}x) \cos( \frac{\pi c}{n} t + \phi) 
+\]
+la frequence est donnee par 
+\[ 
+\nu = \frac{c}{\lambda}= \frac{cn}{ 2\lambda}
+\]
+Ici, $c$ est la vitesse de l'onde ( $c= \sqrt{ \frac{T}{\mu} }$) 
+Le mouvement arbitraire de la corde est une somme infine des modes normaux
+\subsection{Ondes en $3D$}
+En 3 dimensions, l'equation d'onde devient
+\[ 
+\frac{\del ^{2} y_0}{\del t^{2}} = c^{2} \Delta y_0
+\]
+Les ondes sinusoidales deviennent des ondes sinusoidales planes
+\[ 
+	y_0*( \vec{r},t)  = A e^{i( \omega t - \vec{k} \cdot \vec{r}) } 
+\]
+ou $\vec{k}$ est le vecteur d'ondes.\\
+Une surface equiphase est definie par
+\[ 
+\omega t - \vec{k} \cdot \vec{r} = \text{ const } 
+\]
+
+On peut choisir $e_x || \vec{k}$ et alors
+on a 
+\[ 
+\omega t - 
+\begin{pmatrix}
+k \\ 0 \\0
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+x\\y\\z
+\end{pmatrix}
+= \omega t - kx 
+\]
+Et donc
+\[ 
+x = \frac{\omega }{k} t - \frac{\phi_0}{k}
+\]
+Donc les surfaces equiphases sont des plans et donc l'onde ( et les surfaces equiphases)  se deplacent selon $\vec{k}$, avec la vitesse $\frac{\omega}{k}=c$
+\subsection{Quelques consequences du principe de superposition}
+Superposition de deux ondes de frequence $\omega + \Delta \omega$ et $\omega - \Delta \omega$, de vecteurs d'onde $k+ \Delta k$ et $k - \Delta k$ et de dephasage $\phi_1$ et $\phi_2$, de meme amplitude.\\
+
+\[ 
+	y_0 = A e^{i( \omega + \Delta \omega) t - ( k + \Delta k)x + \phi_1}  + A e^{i( \omega - \Delta \omega) t - ( k - \Delta k)x + \phi_2} 
+\]
+Alors on a
+\[ 
+	A e^{i( \omega t - kx) } (  e^{i ( \phi_1 - \frac{\phi_1+\phi_2}{2 } + \frac{\phi_1+\phi_2}{2 } + \Delta \omega t - \Delta k x) } + e^{i ( \phi_2 - \frac{\phi_1+\phi_2}{2 } + \frac{\phi_1+\phi_2}{2 } - \Delta \omega t + \Delta k x) }  ) 
+\]
+\begin{align*}
+	= 2A e^{i( \omega t - kx + \frac{\phi_1 + \phi_2}{2}) } ( e^{i ( \frac{\phi_1 - \phi_2}{2}+ \Delta \omega t - \Delta k x) } + e^{i ( -\frac{\phi_1 - \phi_2}{2}- \Delta \omega t + \Delta k x) }) \\
+	=2A e^{i( \omega t - kx + \frac{\phi_1 + \phi_2}{2}) } cos( ( \frac{\phi_1 - \phi_2}{2}+ \Delta \omega t - \Delta k x) ) \\
+\end{align*}
+La partie reelle est donc donne par 
+\[ 
+	y_0 = 2 A \cos (  \omega t - kx + \frac{\phi_1 + \phi_2}{2})\cos (  \frac{\phi_1 - \phi_2}{2}+ \Delta \omega t - \Delta k x)  
+\]
+Dans le cas $\Delta \omega =0 \Rightarrow \Delta k = 0$ et donc
+\[ 
+	y_0 = 2A \cos (\frac{\phi_1-\phi_2}{2}\cos( \omega t -kx + \frac{\phi_1 + \phi_2}{2})  ) 
+\]
+\subsection{Vitesse de phase et de groupe}
+$\Delta \omega \neq 0$ mais $\Delta \omega << \omega$.\\
+La vitesse de l'enveloppe $V_G$ est appelee la vitesse de groupe
+\[ 
+v_G = \frac{\Delta \omega }{\Delta k} \simeq \frac{d\omega}{d k}
+\]
+pour $\omega= ck$ on a une onde sans dispersion.\\
+Pour une onde avec dispersion  ( $\frac{\omega}{k} \neq \text{ const. } $) on a la relation de dispersion $\omega = \omega( k) $ on a en general
+\[ 
+v_G = .\frac{d\omega}{dk}
+\]
+
+
+
+
+
+
+
+\end{document}	
