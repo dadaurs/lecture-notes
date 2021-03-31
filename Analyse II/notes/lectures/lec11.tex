@@ -1,0 +1,192 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Wed 31 Mar}{Integrales qui dependent de parametres}
+\section{Integrales qui dependent de parametres}
+
+Soit un intervalle $I\subset \mathbb{R}$ et un sous-ensemble $E\subset \mathbb{R}^n$, soit $f: I\times E \to \mathbb{R}$, $t\in I$ et $x = ( x_1,\ldots) $ tel que $\forall x \in E$ $\int_I f( t,\vec{x}) dt$ existe.\\
+On peut definir la fonction $g:E \to \mathbb{R}$ 
+\[ 
+	\vec{x} \to g( x) = \int_{ I } f( t,\vec{x}) dt
+\]
+\begin{itemize}
+\item Si $f$ est continue sur $I\times E$ est-ce que $g$ est continue?
+Autrement dit, pour $x_0\in E$ 
+\[ 
+	\lim_{x \to x_0} g( x) = \lim_{x \to x_0} \int_I f( t,\vec{x}) dt \underbrace{=}_{?} \int_i \lim_{x \to x_0} f( t,x) dt = g( x_0) 
+\]
+\item Si $\frac{\del f}{\del x_i}$ existe sur $I\times E$ est-ce que $\frac{\del }{\del x_i }g$ existe sur $E$ et 
+	\[ 
+		\frac{\del g}{\del x_i}( x) \underbrace{=}_{?} \int_I \frac{\del }{\del x_i} f( t,x)  dt
+	\]
+\end{itemize}
+\begin{exemple}
+	Soit $f: \mathbb{R}^{2}\to \mathbb{R},  ( t,x) \to x^{2} e^{- x^{2} t} $\\
+	Soit
+	\[ 
+		g( x) = \int_{ 0 }^{ \infty  } x^{2} e^{-x^{2}t} dt
+	\]
+	Pour $x=0$, $f( t,0) =0 \forall t$, $g( 0) =0$, pour $x\neq 0$,
+	\[ 
+		g( x) = ( - e^{-x^{2} t} ) \vert_{t=0}^{ \infty } =1
+	\]
+ainsi, $g$ n'est pas continue.	
+\end{exemple}
+\subsection{Integrales sur un intervalle ferme borne}
+Soit $I=[a,b]$ 
+\begin{thm}
+	Soit $E\in \mathbb{R}^n$ ouvert et 
+	\[ 
+		f:[a,b]\times E \to \mathbb{R}
+	\]
+continue.\\
+Alors la fonction $g:E \to \mathbb{R}$ 
+\[ 
+	g( x) = \int_{ a }^{ b }f( t,x) dt
+\]
+est bien definie $\forall x \in E$ et est continue sur $E.$.\\
+\end{thm}
+\begin{proof}
+	Pour tout $x\in E$, la fonction $t\to f_x( t) $ est continue et donc integrable.\\
+	Montrons que $g$ est continue sur $E$.\\
+	Fixons $x_0\in E$, $\exists \eta >0 \overline{B}( x_0,\eta) \subset E$.\\
+	Alors la restriction de $f$ a $A=[a,b]\times\overline{B}( x_0,\eta) $.\\
+	Donc $A$ est compact, et donc $f\vert_A$ est uniformement continue.
+	\[ 
+		\forall \epsilon >0 \exists \delta \in ]0,\eta]: \forall ( s,y ), ( t,x) \in A, |s-t| \leq \delta, \N { y-x} \leq \delta
+	\]
+On a 
+\[ 
+	|f( s,y) - f( t,x) | \leq \epsilon
+\]
+En particulier, on peut choisir $s=t, y=x_0$, alors
+\begin{align*}
+	| g( x) - g( x_0) | &= | \int_{ a }^{ b }f( t,x) - f( t,x_0) dt|\\
+			    &\leq \int_{ a }^{ b } | f( t,x) - f( t,x_0) | dt\\
+			    &\leq \epsilon( b-a) 
+\end{align*}
+\begin{rmq}
+\begin{itemize}
+	\item Le theoreme est valable aussi si l'ensemble $E$ est ferme, il suffit de considerer $\overline{B}( x,\delta) \cap E$ et meme pour n'importe quel sous-ensemble $E$.
+\end{itemize}
+
+\end{rmq}
+
+	
+\end{proof}
+
+\begin{thm}
+	Soit $a,b$ fini, $E\subset \mathbb{R}^n$ ouvert, et $f: [ a,b] \times E \to \mathbb{R}$ continue tel que, pour $i$ fixe
+	\[ 
+	\frac{\del f}{\del x_i} : [ a,b] \times E \to \mathbb{R}
+	\]
+	existe et est continue.\\
+	Alors $g( x) = \int_{ a }^{ b }f( t,x) dt$ existe pour tout $x$ et
+	$\frac{\del g}{\del x_i}( x) $ existe pour tout $x$ et
+	\[ 
+		\frac{\del g}{\del x_i}( x) = \int_{ a }^{ b }\frac{\del }{\del x_i}f( t,x) dt
+	\]
+\end{thm}
+\begin{proof}
+	Soit $x_0 \in E$ et $\eta >0: \overline{B}( x_0,\eta) \subset E$, on definit
+	\[ 
+		A= [ a,b] \times \overline{B}( x_0,\eta)  \text{ un compact } 
+	\]
+	Donc $ \frac{\del f}{\del x_i}|_A$ est uniformement continue.\\
+	On a donc 
+	\[ 
+		\forall \epsilon>0, \exists \delta\in ]0,\eta ]: \forall t \in [ a,b] , \forall x \in \overline{B}( x_0,\delta) 
+	\]
+	\[ 
+		| \frac{\del f}{\del x_i}( t,x) - \frac{\del f}{\del x_i}( t,x_0) | \leq \frac{\epsilon}{b-a}
+	\]
+	On veut montrer que
+	\[ 
+		\frac{\del g}{\del x_i}( x_0) = \lim_{s \to 0}  \frac{g( x_0 + s e_i)- g( x_0) }{s}	
+	\]
+	existe et est egal a 
+	\[ 
+		\int_{ a }^{ b } \frac{\del f}{\del x_i}( t,x_0) dt
+	\]
+	On a donc
+	\begin{align*}
+	&| \frac{g( x_0+ se_i) - g( x_0) }{s} - \int_{ a }^{ b } \frac{\del f}{\del x_i} ( t,x_0)  dt| \\
+	&= | \frac{1}{s} \int_{ a }^{ b } f( t, x_0+ se_i) - f( t,x_0) dt - \int_{  a }^{ b } \frac{\del f}{\del x_i}( t,x_0) dt|\\
+	&= | \int_{ a }^{ b }\frac{1}{s} \int_{ 0 }^{ s } \frac{\del f}{\del x_i}( t,x-+ \sigma e_i)  d\sigma - \int_{ a }^{ b } \frac{\del f}{\del x_i} ( t,x_0) dt|\\
+	&= | \int_{ a }^{ b } \frac{1}{s} \int_{ 0 }^{ s } \frac{\del f}{\del x_i }( t,x_0+ \sigma e_i) - \frac{\del f}{\del x_i}( t,x_0) d\sigma dt|\\
+	&\leq \int_{ a }^{ b } \frac{1}{|s|} \int_{ 0 }^{ s } | \underbrace{\frac{\del f}{\del x_i}( t,x_0+ \sigma e_i)  - \frac{\del f}{\del x_i}( t,x_0) }_{\leq \frac{\epsilon}{b-a}	}| d\sigma dt \\
+	&= \epsilon	
+	\end{align*}
+	
+	
+	
+	
+\end{proof}
+
+\subsection{Integrales avec des bornes variables}
+Soit
+\[ 
+	g( x) = \int_{ a)( x)  }^{ b( x)  }f( t,x) dt
+\]
+On suppose que 
+\[ 
+	f: ]\alpha,\beta[ \times E \to \mathbb{R}
+\]
+et que
+\[ 
+	a,b: E \to ]\alpha,\beta[ \subset \mathbb{R}
+\]
+\begin{thm}
+	Soit $E$ un ouvert non vide et supposons que tutes les derivees partielles de $x_i$ existent et sont continues pour tout $i$, de plus supposons que $a,b$ sont $C^{1}( E)$, alors $g \in C^{1}( E) $ et
+	\[ 
+		\frac{\del g}{\del x_i} ( x) = \frac{\del b}{\del x_i}( x) f( b( x) ,x) - \frac{\del a}{\del x_i}f( a( x), x )  + \int_{ a( x)  }^{ b( x)  } \frac{\del f}{\del x_i} ( t,x) dt
+	\]
+Sans preuve.\\
+
+\end{thm}
+Idee de la demonstration:
+Reecrire
+\begin{align*}
+	g( x) &= \int_{ a( x)  }^{ c } f( t,x)  dt + \int_{ c }^{ b(x) f( t,x)  }dt\\
+	      &= G( b( x) ,x) - G( a( x) ,x) , \text{ avec } G(s,x ) = \int_{ c }^{ s } f( t,x) dt		
+\end{align*}
+On montre que $G \in C^{1}$, alors $g \in C^{1}$ et donc
+\begin{align*}
+\frac{\del g}{\del x_i}( x) = \frac{\del }{\del x_i} G( b( x) ,x) - \frac{\del }{\del x_i} G( a( x) ,x) 
+\end{align*}
+\subsection{Integrales generalisees}
+Cas $I= [ a,b[ $
+En general, on a pas la continuite de $g( x) $.
+\begin{defn}
+Soit $E \subset \mathbb{R}^n$ non vide et $f:[a,b[\times E \to \mathbb{R}$ continue. On dit que
+$ \int_{ a }^{ b }f( t,x) dt$ converge uniformement sur $E$ si $ \int_{ a }^{ b }f( t,x) dt$ existe $\forall x$ et $\forall \epsilon>0 \exists \overline{c}\in ]a,b[$ ( independant de $x$) tel que
+\[ 
+	\forall c\in [ \overline{c},b[ \text{ et } \forall x \in E, | \int_{ c }^{ b }f( t,x) dt| \leq \epsilon
+\]
+\end{defn}
+\begin{thm}
+	Soit $f: [ a,b] \times E \to \mathbb{R}$ continue et l'integrale $ \int_{ a }^{ b }f( t,x) dt$ converge uniformement sur $E$. Alors la fonction $g( x) = \int_{ a }^{ b }f( t,x) dt$ existe $\forall x \in E$ et est continue sur $E$.\\
+	De plus si $ \frac{\del f}{\del x_i}$ existe, et est continue sur $[a,b[\times E$, et
+	$ \int_{ a }^{ b } \frac{\del f}{\del x_i}( t,x) dt$ converge uniformement, alors
+	$ \frac{\del g}{\del x_i}$ existe et est continue sur $E$.
+\end{thm}
+L'idee de la demonstration est
+\begin{align*}
+	| g( x) - g( x_0) | &= | \int_{ a }^{ b } ( f( t,x) - f( t,x_0) ) dt|\\
+			    &\leq \int_{ a }^{ \overline{c} }| f( t,x) - f( t,x_0) | dt + \int_{ \overline{c} }^{ b } | f( t,x) - f( t,x_0) | dt\\
+			    &\leq \int_{ a }^{ \overline{c} }| f( t,x)  - f( t, x_0) | dt + 2 \epsilon
+\end{align*}
+Et on s'est ramene au cas d'un intervalle ferme.
+\begin{rmq}
+Si il existe $h:[a,b[ \to \mathbb{R}$ integrable et telle que
+\[ 
+	|f( t,\vec{x}) | \leq h( t) 
+\]
+Alors $f$ est uniformement integrable.
+\end{rmq}
+
+
+
+
+
+
+\end{document}	

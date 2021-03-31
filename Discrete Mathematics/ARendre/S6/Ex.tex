@@ -1,0 +1,32 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\begin{document}
+\title{Exercise for Submission 5}
+\author{David Wiedemann}
+\maketitle
+We will show this result by using the binomial theorem.\\
+We will denote by $\floor x$  the biggest integer satisfying $\floor x \leq x$
+\begin{align*}
+	\frac{1}{2} \left( ( 1+ \sqrt{2} )^{n} + ( 1- \sqrt{2} ) ^{n}	  \right) &= \frac{1}{2} \left( \sum_{k=0}^{n } \binom n k \sqrt{2} + \sum_{k=0}^{ n} \binom n k ( - \sqrt{2} )  \right)\\
+		 &= \frac{1}{2} \Bigg( \sum_{k=0}^{ \floor { \frac{n}{2} }} \binom { n} { 2k} \sqrt{2}^{2k} + \sum_{k=0}^{ \floor { \frac{n}{2} }-1} \binom { n} { 2k+1} \sqrt{2}^{2k+1}\\
+		 &+\sum_{k=0}^{ \floor { \frac{n}{2} }} \binom { n} { 2k}( - \sqrt{2} )^{2k} + \sum_{k=0}^{ \floor { \frac{n}{2} }-1} \binom { n} { 2k+1} (- \sqrt{2} )^{2k+1}   \Bigg) 
+\end{align*}
+Notice that all the uneven powers simplify and that $( - \sqrt{2} ^{2k}) = \sqrt{2} ^{2k}$, thus we are left with
+\begin{align*}
+	\frac{1}{2} \left( 2 \cdot\sum_{k=0}^{ \floor { \frac{n}{2} }} \binom { n} { 2k} \sqrt{2}^{2k} \right) &= \sum_{k=0}^{ \floor { \frac{n }{2}} } \binom n { 2k} 2 ^{k}	 \\
+\end{align*}
+Which proves that  $ \frac{1}{2} (  ( 1+ \sqrt{2} )^{n} + ( 1- \sqrt{2} )^{n}) $ always is a whole number.
+
+
+
+\end{document}
