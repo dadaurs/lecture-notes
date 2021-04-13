@@ -3,14 +3,21 @@
 \lecture{3}{Tue 02 Mar}{Hydrostatique}
 \subsection{Densite de force associee a la pression}
 Calculons la force exercee sur un volume de fluide infinitesimal du a la pression.\\
+\begin{figure}[H]
+    \centering
+    \incfig{cube_densite}
+\end{figure}
 On suppose qu'on connait $p( \vec{r}) $.
 \[ 
 	\vec{F}_1=p( \vec{r}( - \frac{dx}{2},0,0) )  dy dz \vec{e}_x
 \]
-Donj
-\[ 
-	\sum_{i=1}^{ 6}\vec{F}_i = ( -p( \frac{dx}{2},0,0) - p( - \frac{dx}{2},0,0) / dx ) dx dy dz = - \frac{\del p}{\del x} dV \vec{e}_x + \ldots = - \nabla p dV
-\]
+Donc
+\begin{align*}
+	\sum_{i=1}^{ 6}\vec{F}_i &= ( -p( \frac{dx}{2},0,0) - p(  \frac{dx}{2},0,0) )  dy dz + \ldots\\
+				 &= - \frac{p( \frac{dx}{2},0,0) - p( - \frac{dx}{2},0,0) }{dx}dx dy dz \vec{e}_x + \ldots \\
+				 &= - \frac{\del p}{\del x} dV \vec{e}_x + \ldots = - \nabla p dV
+\end{align*}
+
 donc la densite de force associee a la pression est $-\nabla p$.
 \subsection{Poussee d'Archimede}
 Tout corps plonge dans un fluide recoit de la part de celui-ci une poussee verticale egale au poids du fluide deplace

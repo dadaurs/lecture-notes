@@ -15,11 +15,11 @@
 \author{David Wiedemann}
 \maketitle
 We will show this result by using the binomial theorem.\\
-We will denote by $\floor x$  the biggest integer satisfying $\floor x \leq x$
+We will denote by $\floor x$  the biggest integer satisfying $\floor x \leq x$, ie. the floor of the real number $x.$
 \begin{align*}
 	\frac{1}{2} \left( ( 1+ \sqrt{2} )^{n} + ( 1- \sqrt{2} ) ^{n}	  \right) &= \frac{1}{2} \left( \sum_{k=0}^{n } \binom n k \sqrt{2} + \sum_{k=0}^{ n} \binom n k ( - \sqrt{2} )  \right)\\
-		 &= \frac{1}{2} \Bigg( \sum_{k=0}^{ \floor { \frac{n}{2} }} \binom { n} { 2k} \sqrt{2}^{2k} + \sum_{k=0}^{ \floor { \frac{n}{2} }-1} \binom { n} { 2k+1} \sqrt{2}^{2k+1}\\
-		 &+\sum_{k=0}^{ \floor { \frac{n}{2} }} \binom { n} { 2k}( - \sqrt{2} )^{2k} + \sum_{k=0}^{ \floor { \frac{n}{2} }-1} \binom { n} { 2k+1} (- \sqrt{2} )^{2k+1}   \Bigg) 
+		 &= \frac{1}{2} \Bigg( \sum_{k=0}^{ \floor { \frac{n}{2} }} \binom { n} { 2k} \sqrt{2}^{2k} + \sum_{k=1}^{ \floor { \frac{n}{2} }} \binom { n} { 2k-1} \sqrt{2}^{2k-1}\\
+		 &+\sum_{k=0}^{ \floor { \frac{n}{2} }} \binom { n} { 2k}( - \sqrt{2} )^{2k} + \sum_{k=1}^{ \floor { \frac{n}{2} }} \binom { n} { 2k-1} (- \sqrt{2} )^{2k-1}   \Bigg) 
 \end{align*}
 Notice that all the uneven powers simplify and that $( - \sqrt{2} ^{2k}) = \sqrt{2} ^{2k}$, thus we are left with
 \begin{align*}

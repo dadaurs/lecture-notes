@@ -33,7 +33,7 @@ On note
 		
 \end{itemize}
 \begin{rmq}
-On peut utiliser $\nabla$ comme un vecteur, mais il faut faire attention a ce que les operations sont pas commutatives.
+On peut utiliser $\nabla$ comme un vecteur, mais il faut faire attention car les operations sont pas commutatives.
 \end{rmq}
 \begin{rmq}
 Souvent, on ecrit $\del_x$ pour $\frac{\del}{\del x}$
@@ -47,7 +47,7 @@ Les expressions du gradient, divergence, rotationel sont independantes du system
 	A chaque element de la surface, on assimile un vecteur orthogonal a la surface en ce point. On le note $d \vec{S}$ et il represente le "petit element" de surface.\\
 	Alors on a
 	\[ 
-	\int \int_S f d \vec{S} = \int \int \int_V \nabla f dV
+	\iint_S f d \vec{S} = \iiint_V \nabla f dV
 	\]
 	
 \end{thm}
@@ -55,11 +55,11 @@ Les expressions du gradient, divergence, rotationel sont independantes du system
 \begin{thm}[Theoreme de La divergence( de Gauss) ]\label{thm:Theoreme de La divergence( de Gauss) theoreme_de_la_divergence_de_gauss_}
 	Le flux d'un champ vectoriel $\vec{A}( \vec{r},t) $ au travers d'une surface $S$ :
 	\[ 
-	\phi = \int \int_S \vec{A} \cdot \vec{dS}
+	\phi = \iint_S \vec{A} \cdot \vec{dS}
 	\]
 	Soit une surface fermee $S= \del V$ et $d \vec{S}$ qui point vers l'exterieur de $V$, alors on a
 	\[ 
-		\int \int _S \vec{A} \cdot d \vec{S} = \int \int \int _V ( \nabla \cdot \vec{A}) dV
+		\iint _S \vec{A} \cdot d \vec{S} = \iiint _V ( \nabla \cdot \vec{A}) dV
 	\]
 	
 	
@@ -71,7 +71,7 @@ Les expressions du gradient, divergence, rotationel sont independantes du system
 \]
 Dans ce cas la, on a
 \[ 
-	\oint_\Gamma \vec{A} \times \vec{dl} = \int \int_S ( \nabla \times \vec{A}) \cdot \vec{dS}
+	\oint_\Gamma \vec{A} \cdot \vec{dl} = \iint_S ( \nabla \times \vec{A}) \cdot \vec{dS}
 \]
 L'orientation relative de $\vec{dl}$ et $\vec{dS}$ est donnee par la regle de la main droite.
 

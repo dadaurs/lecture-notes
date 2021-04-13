@@ -26,15 +26,7 @@ SCHEDULED: <2020-09-17 Thu 15:15 +1w>
 
 
 * Structures Algebriques
-** Cours zoom Structures Algebriques mardi
-SCHEDULED: <2020-09-15 Tue 10:15 +1w>
-https://epfl.zoom.us/j/94435489646
-avec ID: 944 3548 9646
-** Exercices Structures Algebriques vendredi
-SCHEDULED: <2020-09-18 Fri 08:15 +1w>
 
-** TODO Rendre exercices latex 
-SCHEDULED: <2020-09-28 Mon>
 * Analyse avancee
 ** Cours zoom Analyse avancee lundi
 SCHEDULED: <2020-09-14 Mon 10:15 +1w>
@@ -47,9 +39,6 @@ SCHEDULED: <2020-09-16 Wed 13:15 +1w>
 ** Exercices Analyse avancee jeudi
 SCHEDULED: <2020-09-17 Thu 13:15 +1w>
 
-
-** TODO Exercices dans le cours + la serie
-SCHEDULED: <2020-09-15 Tue>
 
 * Physique Mecanique
 ** Cours zoom Physique mercredi
@@ -83,5 +72,3 @@ SCHEDULED: <2020-09-18 Fri 15:15 +1w>
 *** DONE Conceptual Physics / Hewitt
 *** DONE Physics for scientists and engineers / Giancoli
 *** DONE Physique Générale / Alonso
-*** TODO Mooc-Mécanique / Ansermet
-*** TODO La Mécanique / Ansermet
