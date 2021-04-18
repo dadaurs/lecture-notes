@@ -44,31 +44,13 @@
 \definecolor{mymagenta}{HTML}{85678f}
 \definecolor{mycyan}{HTML}{5e8d87}
 \definecolor{mygray}{HTML}{373B41}
-\renewcommand{\vec}[1]{\overrightarrow{#1}}
-\newcommand{\del}{\partial}
-\DeclareMathOperator*{\sgn}{sgn}
-%\DeclareMathOperator*{\om}{Hom}
-%\DeclareMathOperator*{\end}{End}
-\DeclareMathOperator*{\id}{Id}
-%\DeclareMathOperator*{\gcd}{gcd}
-\DeclareMathOperator*{\im}{Im}
-\DeclareMathOperator*{\re}{Re}
-
 \setlength\theorempreskipamount{2ex}
 \setlength\theorempostskipamount{3ex}
 \allowdisplaybreaks
-\usepackage[boldsans]{concmath}
+%\usepackage[boldsans]{concmath}
 
 
 	
-\newcommand\norm[1]{\left\vert#1\right\vert}
-\newcommand\ns[1]{\left\vert\left\vert\left\vert#1\right\vert\right\vert\right\vert}
-\newcommand\Norm[1]{\left\lVert#1\right\rVert}
-\newcommand\N[1]{\left\lVert#1\right\rVert}
-\newcommand\abs[1]{\left\vert#1\right\vert}
-\newcommand\inj{\hookrightarrow}
-\newcommand\surj{\twoheadrightarrow}
-\newcommand\ded[1]{\overset{\circ}{#1}}
 
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{background},   
@@ -91,7 +73,6 @@
 
 \lstset{style=mystyle}
 
-\newcommand\sidenote[1]{\footnote{#1}}
 
 %\renewtheoremstyle{break}%
   %{\item{\theorem@headerfont
@@ -134,7 +115,6 @@
 
 \newtheorem{exo}[thm]{Exercice}
 
-\newcommand\eng[1]{\left\langle#1\right\rangle}
 
 %\hypersetup{
     %unicode=true,          % non-Latin characters in Acrobat’s bookmarks
@@ -149,37 +129,11 @@
 
 
 % horizontal rule
-\newcommand\hr{
-    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
-}
-
-\newcommand{\incfig}[1]{%
-    \def\svgwidth{\columnwidth}
-    \import{./figures}{#1.pdf_tex}
-}
-\newcommand{\filler}[1][10]%
-{   \foreach \x in {1,...,#1}
-    {   test 
-    }
-}
-
 \def\mathnote#1{%
   \tag*{\rlap{\hspace\marginparsep\smash{\parbox[t]{\marginparwidth}{%
   \footnotesize#1}}}}
 }
 \pdfsuppresswarningpagegroup=1
-\newcommand\contra{\scalebox{1.5}{$\lightning$}}
-\makeatother
-\def\@lecture{}%
-\newcommand{\lecture}[3]{
-    \ifthenelse{\isempty{#3}}{%
-        \def\@lecture{Lecture #1}%
-    }{%
-        \def\@lecture{Lecture #1: #3}%
-    }%
-    \subsection*{\@lecture}
-    \marginpar{\small\textsf{\mbox{#2}}}
-}
 \makeatletter
 \renewcommand{\baselinestretch}{1.2}
 \setcounter{secnumdepth}{3}
@@ -187,35 +141,5 @@
 \makeatletter
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 \makeatother
-%\titleformat{\chapter}%
-  %{\huge\rmfamily\itshape\color{mymagenta}}% format applied to label+text
-  %{\llap{\colorbox{mymagenta}{\parbox[c][1cm]{3cm}{\hfill\itshape\Huge\textcolor{background}{\thechapter}}}}}% label
-  %{5pt}% horizontal separation between label and title body
-  %{\faLeaf}% before the title body
-  %[]% after the title body
-
-%\titleformat{\section}%
-  %{\normalfont\Large\rmfamily\itshape\color{myblue}}% format applied to label+text
-  %{\llap{\colorbox{myblue}{\parbox{3cm}{\hfill\itshape\textcolor{background}{\thesection}}}}}% label
-  %{5pt}% horizontal separation between label and title body
-  %{}% before the title body
-  %[]% after the title body
-
-%% subsection format
-%\titleformat{\subsection}%
-  %{\normalfont\large\itshape\color{mygreen}}% format applied to label+text
-  %{\llap{\colorbox{mygreen}{\parbox{3cm}{\hfill\textcolor{background}{\thesubsection}}}}}% label
-  %{1em}% horizontal separation between label and title body
-  %{}% before the title body
-  %[]% after the title body
-
-%% subsubsection format
-%\titleclass{\subsubsection}{straight}
-%\titleformat{\subsubsection}%
-  %{\normalfont\large\itshape\color{myyellow}}% format applied to label+text
-  %{\llap{\colorbox{myyellow}{\parbox{3cm}{\hfill\textcolor{background}{\thesubsubsection}}}}}% label
-  %{1em}% horizontal separation between label and title body
-  %{}% before the title body
-  %[]% after the title body
-
+\include{newcommands.tex}
 \usepackage{subfiles}

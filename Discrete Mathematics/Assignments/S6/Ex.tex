@@ -27,10 +27,10 @@ First, notice that the case $i=0$ is clear, indeed, we have
 Where, in the last step, we have simply multiplied by $q^{n-k}$.\\
 Since this holds for all $n>k$, we have shown that $q^{n}$ is a solution of the linear recurrence.\\
 We will now prove the result for $i<m$ .\\
-Notice that, if $m\geq 1$, the result cited above implies in particular that
+Notice that, if $m> 1$, the result cited above implies in particular that
 \begin{align*}
-	x q^{n-1} - \alpha_1( n-1)  x^{n-2} - \ldots - ( n-k) x^{n-k-1} = 0\\
-	x q^{n} - \alpha_1( n-1)  x^{n-1} - \ldots - ( n-k) x^{n-k} = 0\\
+	n x^{n-1} - \alpha_1( n-1)  x^{n-2} - \ldots - ( n-k) x^{n-k-1} = 0\\
+	nx^{n}- \alpha_1( n-1)  x^{n-1} - \ldots - ( n-k) x^{n-k} = 0\\
 	n q^{n} - \alpha_1 ( n-1) q^{n-1} - \ldots - \alpha_k( n-k) q^{n-k} = 0\\
 \end{align*}
 Thus,  $nq^{n}$ also satisfies the linear recurrence relation.\\
@@ -38,7 +38,8 @@ In general, for $i<m$, repeating this process $i$ times ( ie. differentiating wi
 \[ 
 	n^{i}q^{n} - \alpha_1 ( n-1) ^{i} q^{n-1} - \ldots - \alpha_k ( n-k)^{i}  q^{n-k}=0
 \]
-And thus, $n^{i}q^{n}$ is a solution to the linear recurrence.\\
+And thus, $n^{i}q^{n}$ is a solution to the linear recurrence if $i<m$, since for $i \geq m$, $q$ will no longer be a root of the equation.\\
+
 \section*{2}
 We will suppose that $q\neq 0$, indeed, if $q=0$, the linear sequence would be the trivial sequence $ \left\{ 0 \right\}_{n=1}^{ \infty }$
 Suppose there exist factors $x_0,\ldots,x_{m-1} \in \mathbb{R}$ satisfying
@@ -63,7 +64,7 @@ x_0  + x_1 2  + \ldots+ x_{m-1} 2^{m-1}  = 0\\
 x_0  + x_1 ( m-1) + \ldots +x_{m-1} ( m-1) ^{m-1}  = 0\\
 \end{cases}
 \end{align*}
-Putting the system into matrix form, we get
+Putting the system into matrix form, we get a Vandermonde matrix
 \begin{align*}
 \begin{pmatrix}
 	1 & 1 & \ldots & 1 \\
@@ -81,7 +82,13 @@ x_0 \\ x_1 \\ x_2 \\ \ldots \\ x_{m-1}
 0 \\ 0 \\ 0 \\ \vdots \\ 0
 \end{pmatrix}
 \end{align*}
-We will now show that the determinant of this matrix is not equal to 0, an elementary result from linear algebra will thus show that $x_{i} = 0 \forall 0\leq i \leq m-1$, which implies that the linear sequences are linearly independent.
+As shown in our linear algebra course, the determinant of this matrix is given by the formula
+\[ 
+	\prod_{1\leq i,j \leq m-1, i \neq j} ( i-j) 
+\]
+Which implies that the determinant of the matrix is non-zero.\\
+This implies that $x_i = 0 \quad \forall 0\leq i \leq m-1$ and thus the sequences are linearly independent.
+
 
 
 

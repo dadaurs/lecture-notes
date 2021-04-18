@@ -1,0 +1,136 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{14}{Wed 14 Apr}{Formes quadratiques reelles}
+\section{Formes quadratiques reelles et matrices symmetriques reelles}
+\begin{defn}[Sphere]
+	$S^{n-1}\subseteq \mathbb{R}^n$ est defini comme $S^{n-1}= \left\{ x \in \mathbb{R}^{n}: \N { x} =1 \right\} $
+\end{defn}
+\begin{defn}[Forme Quadratique]
+	Une forme quadratique est une application $f: \mathbb{R}^n\to \mathbb{R}, x \to x^{T}A x$, avec $A$ une matrice symmetrique \footnote { La symmetrie n'est pas necessaire, car $x^{T}Bx = x^{T}( \frac{1}{2}B + \frac{1}{2}B^{T}) x$}
+\end{defn}
+\subsection*{Probleme d'optimisation}
+On veut trouver le maximum
+\[ 
+\max_{x\in S^{n-1}} x^{T}Ax
+\]
+L'existence du maximum est garantie car $S^{n-1}$ est compacte et $x \to x^{T}Ax$ est continue.\\
+Donc il existe $x \in S^{n-1}: x^{T}Ax \geq y^{T}A y\forall y \in S^{n-1}$.\\
+Par symmetrie, il existe au moins deux solutions optimales sur $S^{n-1}$.
+\begin{lemma}
+Soit $A \in \mathbb{R}^{n\times n}$ symmetrique et $v \in S^{n-1}$ une solution optimale. On a
+\[ 
+Av = \lambda v
+\]
+pour $\lambda\in \mathbb{R}$ cad $A$ possede une valeur propre reelle.
+\end{lemma}
+\begin{proof}
+	On suppose que $A\cdot v\neq \lambda v\forall \lambda \in \mathbb{R}$ ( avec $v$ une solution optimale du systeme).\\
+	\begin{align*}
+		A\cdot v &= \alpha v + \beta w ( \alpha,\beta\in \mathbb{R}) 
+	\end{align*}
+Notons que
+\[ 
+	\sqrt{( 1-x^{2}) } v + xw, x\in [ -1,1] \in S^{n-1}
+\]
+Posons 
+\[ 
+	g( x) := ( \sqrt{1- x^{2}} v + xw) ^{T}A ( \sqrt{1-x^{2}} v+ xw) 
+\]
+avec $g( 0) = v^{T}Av$, il reste a montrer que $g'( 0) \neq 0$.\\
+On a
+\begin{align*}
+	g( x) &= ( 1-x^{2}) v^{T}Av + \sqrt{1-x^{2}} x v^{T}A w + x \sqrt{1-x^{2}} w^{T}A v + x^{2} w^{T}A w\\
+	      &= ( 1-x^{2}) v^{T}A v + 2x \sqrt{1-x^{2}} v^{T}Av + x^{2}w^{T}A w
+\end{align*}
+Donc
+\[ 
+	g'( 0) = 2 w^{T}Aw = 2\beta \neq 0
+\]
+
+\end{proof}
+\begin{defn}[Matrice Symmetrique definie positive/negative]
+	Soit $A \in \mathbb{R}^{n\times n}$ symmetrique, $A$ est 
+	\begin{itemize}
+	\item definie positive si $x^{T}Ax >0 \forall x\in \mathbb{R}^{n}\setminus \left\{ 0 \right\} $
+	\item definie negative si $x^{T}Ax <0 \forall x \in \mathbb{R}^{n}\setminus \left\{ 0 \right\} $ 
+	\item semi-definie positive si $x^{T}Ax \geq 0\forall x \in \mathbb{R}^{n}$ 
+	\item semi-definie negative si $x^{T}Ax \leq 0\forall x \in \mathbb{R}^{n}$ 
+	\end{itemize}
+	
+	
+\end{defn}
+\begin{thm}
+	Une matrice symmetrique $A \in \mathbb{R}^{n\times n}$ est
+	\begin{itemize}
+	\item definie positive si et seulement si toutes ses valeurs propres sont $>0$
+	\item definie negative si et seulement si toutes ses valeurs propres sont $<0$
+	\item semi-definie positive si et seulement si toutes ses valeurs propres sont $\geq0$
+	\item semi-definie negative si et seulement si toutes ses valeurs propres sont $\leq0$
+	\end{itemize}
+\end{thm}
+\begin{proof}
+\begin{align*}
+A= P 
+\begin{pmatrix}
+	\lambda_1 & &\\
+		  & \ddots &\\
+		  & & \lambda_n
+\end{pmatrix}
+P^{T}
+\end{align*}
+\begin{itemize}
+\item Si $\lambda_1, \ldots, \lambda_n>0$, alors, en reecrivant $v= \sum \beta_i p^{i}$
+	\[ 
+	v^{T}Av =  \sum_{i=1}^{ n}\beta_i ^{2} \lambda_i >0
+\]
+On en deduit facilement les autres points.
+	
+\end{itemize}
+
+
+\end{proof}
+\begin{defn}[k-mineur principal]
+	Soit $A \in K^{n\times n}$. On considere la matrice formee par les k premieres lignes et colonnes de $A$, notons la $B$, le $k$-mineur principal est le determinant de $B$.
+\end{defn}
+\begin{thm}
+Soit $A \in \mathbb{R}^{n\times n}$ une matrice symmetrique.\\
+$A$ est definie positive si et seulement si tous ses mineurs principaux sont strictement positif.
+\end{thm}
+\begin{proof}
+	Si $A$ est definie positive, alors $C_{k} $ est definie positive ( ie. toutes les sous-matrices). On a
+	\[ 
+	C_k = P_k 
+\begin{pmatrix}
+	\lambda_1 & &\\
+		  & \ddots &\\
+		  & & \lambda_k
+\end{pmatrix}
+P_k^{T}
+	\]
+	Ou on a utilise la decomposition selon le theoreme spectral.\\
+	Par le theoreme ci-dessus $\det C_k >0$ \\
+Montrons l'implication inverse.\\
+Supposons maintenant que le determinant $\det( C_k) >0\forall k \in \left\{ 1,\ldots, n \right\} $.\\
+On veut montrer que $x^{T}Ax>0\forall x\in \mathbb{R}^{n}\setminus \left\{ 0 \right\} $.\\
+On applique l'algorithme d'orthogonalisation sur $A$.\\
+Par recurrence, on a jamais echange de lignes et de colonnes car sinon un determinant serait nul.\\
+L'algorithme produit une matrice triangulaire superieure $R \in \mathbb{R}^{n\times n}$ ( avec une diagonale contenant des $1$) tel que
+\begin{align*}
+R^{T}A R = 
+\begin{pmatrix}
+	c_1 & &\\
+		  & \ddots &\\
+		  & & c_n
+\end{pmatrix}
+\end{align*}
+On observe donc que $\det C_k = c_1\ldots c_k$ et donc tous les $c_i$ sont positifs.
+ 
+	
+\end{proof}
+
+
+
+
+
+
+\end{document}	

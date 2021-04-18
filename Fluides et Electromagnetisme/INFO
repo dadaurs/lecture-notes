@@ -1,0 +1,8 @@
+#!/bin/sh
+NAME="Fluides et Electromagnetisme"
+COURS_ZOOM=false
+COURS="https://moodle.epfl.ch/course/view.php?id=15382"
+EX_ZOOM=false
+EX="https://epfl.zoom.us/s/87880903605"
+ASS="false"
+LANG=FRENCH

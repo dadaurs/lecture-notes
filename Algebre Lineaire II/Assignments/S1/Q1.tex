@@ -13,12 +13,12 @@
 \maketitle
 Supposons par l'absurde que $p( x) $ divise $q( x) $ sur $E$ mais pas sur $F$.\\
 Sans perte de généralité, on peut supposer que $\deg( p) >0$ et que $\deg ( q) >0$, en effet, $F$ étant un  corps, il est trivial qu'un polynôme constant divise tout autre polynôme sur ce corps.\\
-De même, on peut supposer que $p( x) \neq 0 \neq q( x) $.\\
+De même, on peut supposer que $p( x) \neq 0 \neq q( x) $, en effet, le polynome nul ne divise aucun autre polynome.\\
 Par hypothèse, il existe $h( x) \in E[x] $ tel que
 \[ 
 	q( x) = p( x)  \cdot h( x) 
 \]
-En appliquant la division Euclidienne des polynômes sur l'anneau $E[x]$, on trouve
+En appliquant la division Euclidienne des polynômes sur l'anneau $F[x]$, étant donné qu'on a supposé que  $p(x ) $ ne divise pas $q( x) $ sur $F[x]$, on trouve
 \[ 
 	\exists h'( x) , r( x)  \in F[x] \text{ tel que } q( x) = p( x) \cdot h'( x) + r( x) 
 \]
@@ -40,7 +40,8 @@ et donc
 \[ 
 	\deg ( r) \geq \deg ( p( x) ) 
 \]
-Ce qui contredit l'hypothèse
+Ce qui contredit la division Euclidienne.\\
+Ainsi, on a une contradiction, et le résultat est démontré.
 
 
 

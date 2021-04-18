@@ -1,0 +1,42 @@
+\renewcommand{\vec}[1]{\overrightarrow{#1}}
+\newcommand{\del}{\partial}
+\DeclareMathOperator*{\sgn}{sgn}
+\DeclareMathOperator*{\id}{Id}
+\DeclareMathOperator*{\im}{Im}
+\DeclareMathOperator*{\re}{Re}
+\newcommand\norm[1]{\left\vert#1\right\vert}
+\newcommand\ns[1]{\left\vert\left\vert\left\vert#1\right\vert\right\vert\right\vert}
+\newcommand\Norm[1]{\left\lVert#1\right\rVert}
+\newcommand\N[1]{\left\lVert#1\right\rVert}
+\newcommand\abs[1]{\left\vert#1\right\vert}
+\newcommand\inj{\hookrightarrow}
+\newcommand\surj{\twoheadrightarrow}
+\newcommand\ded[1]{\overset{\circ}{#1}}
+\newcommand\sidenote[1]{\footnote{#1}}
+\newcommand\eng[1]{\left\langle#1\right\rangle}
+\newcommand\hr{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures}{#1.pdf_tex}
+}
+\newcommand{\filler}[1][10]%
+{   \foreach \x in {1,...,#1}
+    {   test 
+    }
+}
+
+\newcommand\contra{\scalebox{1.5}{$\lightning$}}
+\makeatother
+\def\@lecture{}%
+\newcommand{\lecture}[3]{
+    \ifthenelse{\isempty{#3}}{%
+        \def\@lecture{Lecture #1}%
+    }{%
+        \def\@lecture{Lecture #1: #3}%
+    }%
+    \subsection*{\@lecture}
+    \marginpar{\small\textsf{\mbox{#2}}}
+}
