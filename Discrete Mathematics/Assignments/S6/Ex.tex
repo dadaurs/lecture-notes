@@ -12,6 +12,7 @@
 \author{David Wiedemann}
 \maketitle
 \section*{1}
+We will suppose that $q\neq 0$, indeed, if the recurrence relation is of depth $k$ and $q=0$, the characteristic polynomial wouldn't have a constant term and thus the recurrence relation wouldn't be of depth $k$.\\
 Let 
 \[ 
 	p( x) = x^{k}- \alpha_1 x^{k-1} - \ldots - \alpha_{k} 
@@ -29,11 +30,14 @@ Since this holds for all $n>k$, we have shown that $q^{n}$ is a solution of the 
 We will now prove the result for $i<m$ .\\
 Notice that, if $m> 1$, the result cited above implies in particular that
 \begin{align*}
-	n x^{n-1} - \alpha_1( n-1)  x^{n-2} - \ldots - ( n-k) x^{n-k-1} = 0\\
-	nx^{n}- \alpha_1( n-1)  x^{n-1} - \ldots - ( n-k) x^{n-k} = 0\\
-	n q^{n} - \alpha_1 ( n-1) q^{n-1} - \ldots - \alpha_k( n-k) q^{n-k} = 0\\
+	x^{n} - \alpha_1 x^{n-1}- \ldots - \alpha_k x^{n-k}&=0\\
+	\intertext{Taking the derivative yields}
+	n x^{n-1} - \alpha_1( n-1)  x^{n-2} - \ldots - ( n-k) x^{n-k-1} &= 0\\
+	nx^{n}- \alpha_1( n-1)  x^{n-1} - \ldots - ( n-k) x^{n-k} &= 0\\
+	n q^{n} - \alpha_1 ( n-1) q^{n-1} - \ldots - \alpha_k( n-k) q^{n-k} &= 0\\
 \end{align*}
 Thus,  $nq^{n}$ also satisfies the linear recurrence relation.\\
+Note that we can substitute $x $ by $q$ since we assumed that $q\neq 0$.\\
 In general, for $i<m$, repeating this process $i$ times ( ie. differentiating with respect to $x$ and then multiplying by $x$) gives the equality
 \[ 
 	n^{i}q^{n} - \alpha_1 ( n-1) ^{i} q^{n-1} - \ldots - \alpha_k ( n-k)^{i}  q^{n-k}=0
@@ -41,7 +45,6 @@ In general, for $i<m$, repeating this process $i$ times ( ie. differentiating wi
 And thus, $n^{i}q^{n}$ is a solution to the linear recurrence if $i<m$, since for $i \geq m$, $q$ will no longer be a root of the equation.\\
 
 \section*{2}
-We will suppose that $q\neq 0$, indeed, if $q=0$, the linear sequence would be the trivial sequence $ \left\{ 0 \right\}_{n=1}^{ \infty }$
 Suppose there exist factors $x_0,\ldots,x_{m-1} \in \mathbb{R}$ satisfying
 \begin{align*}
 x_0 \left\{ q^{n} \right\}_{n=1}^{ \infty }  + \ldots + x_{m-1} \left\{ n^{m-1} q^{n} \right\}_{n=1}^{ \infty } = \left\{ 0 \right\}_{n=1}^{ \infty } \\
@@ -86,8 +89,8 @@ As shown in our linear algebra course, the determinant of this matrix is given b
 \[ 
 	\prod_{1\leq i,j \leq m-1, i \neq j} ( i-j) 
 \]
-Which implies that the determinant of the matrix is non-zero.\\
-This implies that $x_i = 0 \quad \forall 0\leq i \leq m-1$ and thus the sequences are linearly independent.
+Which implies that the determinant of the matrix is non-zero since none of the terms in the product are zero.\\
+Using a fundamental result of linear algebra, this implies that $x_i = 0 \quad \forall 0\leq i \leq m-1$ and thus the sequences are linearly independent.
 
 
 
