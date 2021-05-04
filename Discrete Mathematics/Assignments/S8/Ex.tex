@@ -1,0 +1,39 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\begin{document}
+\title{Exercise 8}
+\author{David Wiedemann}
+\maketitle
+We prove the result by induction on $n$.\\
+The case $n=1$ is clear, indeed, by definition, a vertex of degree $1$ is a leaf, so the whole graph contains at least one leaf.\\
+Let $G= ( V ,E) $ be the tree we consider.\\
+Suppose the result shown for $n > 1$ vertices, we now show it for $n+1$ vertices.\\
+Let $\mathcal{V}$ be the vertex of degree $n+1$.\\
+Let $ \left\{ e_1= \left\{ \mathcal{V},v_1 \right\}  , \ldots,e_{n+1} = \left\{ \mathcal{V}, v_{n+1}  \right\}   \right\} $ be all the edges of $G$ which are connected to $ \mathcal{V}$. \\
+Now consider the set of all paths starting at $v_{n+1} $ and which do not pass through $ \mathcal{V}$, we denote this set by $P$.\\
+We can now consider the set of all edges which are contained in a path of $P$, ie. we consider 
+\[ 
+\mathcal{E} = \left\{ \left\{ a,b \right\} \in E | \exists \left\{ c_1, \ldots, c_{k}  \right\}\in P\quad \exists i : c_{i} =a, c_{i+1} =b   \right\} 
+\]
+and we let
+\[ 
+V' = \left\{ a \in V | \exists e \in \mathcal{E} \text{ such that } a \in e \right\} 
+.\]
+
+We can now consider the graph $G' = (  V\setminus V', E \setminus ( \mathcal{E} \cup \left\{ \mathcal{V}, v_{n+1}  \right\} ) )$.\\
+Note that $\mathcal{V}$ now is of degree $n$, so by induction hypothesis, $G'$ has at least $n$ leaves.\\
+However, we can now consider the path of maximum length in $P$, the last element of this path is a leaf, since if it wasn't a leaf, we could extend the path.\\
+This leaf, however, is not contained in $G'$, which means that $G$ has at least $n+1$ leaves.\
+This concludes the proof by induction.
+
+
+
+
+
+\end{document}

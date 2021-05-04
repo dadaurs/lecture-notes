@@ -1,0 +1,557 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/david/Cours/Algebre Lineaire II/Algebre-Lineaire-2/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210110.0/
+A simple matrix class	Programming/README.md	/^# A simple matrix class$/;"	c
+Algebre-Lineaire-2	README.md	/^# Algebre-Lineaire-2$/;"	c
+Algèbre linéaire sur les entiers	chapter04-entiers.tex	/^\\chapter{Algèbre linéaire sur les entiers}$/;"	c
+Contributions	notes.tex	/^\\section*{Contributions}$/;"	s
+Creating a PDF file	README.md	/^# Creating a PDF file$/;"	c
+DIV_BY_ZERO	Programming/finite_fields.h	/^constexpr int DIV_BY_ZERO(0);$/;"	v	typeref:typename:int
+Divisibilité et racines	chapter-01-polynomes.tex	/^\\section{Divisibilité et racines} $/;"	s	chapter:Polynômes
+ElementaryColOperation	Programming/Matrix.h	/^  void ElementaryColOperation( const unsigned & i, const unsigned & k, const T & factor )$/;"	f	typeref:class:matrix void
+ElementaryRowOperation	Programming/Matrix.h	/^      void ElementaryRowOperation( const unsigned & i, const unsigned & k, const T & factor )$/;"	f	class:matrix	typeref:typename:void
+Encore les systèmes d'équations	chapter02-theoreme-spectral.tex	/^\\section{Encore les systèmes d'équations }$/;"	s	chapter:Le théorème spectral et la décomposition en valeurs singulières
+Espaces hermitiens	chapter01-produits-scalaires.tex	/^\\section{Espaces hermitiens} $/;"	s	chapter:Formes bilinéaires
+Exercices	chapter00-valeurs-propres.tex	/^\\subsection*{Exercices}$/;"	u	section:Valeurs propres""Le polynôme caractéristique
+Exercices	chapter00-valeurs-propres.tex	/^\\subsection*{Exercices}$/;"	u	section:Valeurs propres""Valeurs propres et vecteurs propres
+Exercices	chapter01-produits-scalaires.tex	/^\\subsection*{Exercices} $/;"	u	section:Formes bilinéaires""Espaces hermitiens
+Exercices	chapter01-produits-scalaires.tex	/^\\subsection*{Exercices} $/;"	u	section:Formes bilinéaires""Formes linéaires, bilinéaires et l'espace dual
+Exercices	chapter01-produits-scalaires.tex	/^\\subsection*{Exercices} $/;"	u	section:Formes bilinéaires""Le théorème de Sylvester
+Exercices	chapter01-produits-scalaires.tex	/^\\subsection*{Exercices} $/;"	u	section:Formes bilinéaires""Orthogonalité
+Exercices	chapter01-produits-scalaires.tex	/^\\subsection*{Exercices}$/;"	u	section:Formes bilinéaires""Formes sesquilinéaires et produits hermitiens
+Exercices	chapter01-produits-scalaires.tex	/^\\subsection*{Exercices}$/;"	u	section:Formes bilinéaires""Le cas réel, défini positif
+Exercices	chapter01-produits-scalaires.tex	/^\\subsection*{Exercices}$/;"	u	section:Formes bilinéaires""Matrices congruentes
+Exercices	chapter02-theoreme-spectral.tex	/^\\subsection*{Exercices}$/;"	u	section:Le théorème spectral et la décomposition en valeurs singulières""Formes quadratiques réelles et matrices symétriques réelles
+Exercices	chapter02-theoreme-spectral.tex	/^\\subsection*{Exercices}$/;"	u	section:Le théorème spectral et la décomposition en valeurs singulières""Le meilleur sous-espace approximatif
+Exercices	chapter02-theoreme-spectral.tex	/^\\subsection*{Exercices}$/;"	u	section:Le théorème spectral et la décomposition en valeurs singulières""Les endomorphismes auto-adjoints
+Exercices	chapter03-systemes-differentiels-lineaires.tex	/^\\subsection*{Exercices} $/;"	u	chapter:Systèmes différentiels linéaires
+Exercices	chapter03-systemes-differentiels-lineaires.tex	/^\\subsection*{Exercices} $/;"	u	section:Systèmes différentiels linéaires""La forme normale de Jordan
+Exercices	chapter03-systemes-differentiels-lineaires.tex	/^\\subsection*{Exercices}$/;"	u	section:Systèmes différentiels linéaires""Polynômes
+Exercices	chapter04-entiers.tex	/^\\section*{Exercices}$/;"	s	chapter:Algèbre linéaire sur les entiers
+Factorisation de polynômes sur un corps	chapter-01-polynomes.tex	/^\\section{Factorisation de polynômes sur un corps}$/;"	s	chapter:Polynômes
+Factorisation en irréductibles	chapter-01-polynomes.tex	/^\\subsection{Factorisation en irréductibles}$/;"	u	section:Polynômes""Factorisation de polynômes sur un corps
+Formes bilinéaires	chapter01-produits-scalaires.tex	/^\\chapter{Formes bilinéaires}  $/;"	c
+Formes linéaires, bilinéaires et l'espace dual	chapter01-produits-scalaires.tex	/^\\section{Formes linéaires, bilinéaires et l'espace dual}$/;"	s	chapter:Formes bilinéaires
+Formes quadratiques réelles et matrices symétriques réelles	chapter02-theoreme-spectral.tex	/^\\section{Formes quadratiques réelles et matrices symétriques réelles}$/;"	s	chapter:Le théorème spectral et la décomposition en valeurs singulières
+Formes sesquilinéaires et produits hermitiens	chapter01-produits-scalaires.tex	/^\\section{Formes sesquilinéaires et produits hermitiens}$/;"	s	chapter:Formes bilinéaires
+Frequently asked questions	README.md	/^# Frequently asked questions$/;"	c
+GetCols	Programming/Matrix.h	/^  const unsigned & GetCols() const$/;"	f	class:matrix	typeref:typename:const unsigned &
+GetRows	Programming/Matrix.h	/^       const  unsigned & GetRows() const$/;"	f	class:matrix	typeref:typename:const unsigned &
+Groupes	chapter05-groupes.tex	/^\\chapter{Groupes}$/;"	c
+Groupes abéliens engendrés finis	chapter05-groupes.tex	/^\\section{Groupes abéliens engendrés finis}$/;"	s	chapter:Groupes
+L'algorithme d'Euclide	chapter-01-polynomes.tex	/^\\subsection{L'algorithme d'Euclide}$/;"	u	section:Polynômes""Factorisation de polynômes sur un corps
+L'exponentielle d'une matrice	chapter03-systemes-differentiels-lineaires.tex	/^\\section{L'exponentielle d'une matrice}$/;"	s	chapter:Systèmes différentiels linéaires
+La décomposition en valeurs singulières	chapter02-theoreme-spectral.tex	/^\\section{La décomposition en valeurs singulières}$/;"	s	chapter:Le théorème spectral et la décomposition en valeurs singulières
+La forme normale d'Hermite	chapter04-entiers.tex	/^\\section{La forme normale d'Hermite}$/;"	s	chapter:Algèbre linéaire sur les entiers
+La forme normale de Jordan	chapter03-systemes-differentiels-lineaires.tex	/^\\section{La forme normale de Jordan}$/;"	s	chapter:Systèmes différentiels linéaires
+La forme normale de Smith	chapter04-entiers.tex	/^\\section{La forme normale de Smith}$/;"	s	chapter:Algèbre linéaire sur les entiers
+La méthode des moindres carrées	chapter01-produits-scalaires.tex	/^\\section{La méthode des moindres carrées} $/;"	s	chapter:Formes bilinéaires
+Le cas réel, défini positif	chapter01-produits-scalaires.tex	/^\\section{Le cas réel, défini positif}$/;"	s	chapter:Formes bilinéaires
+Le meilleur sous-espace approximatif	chapter02-theoreme-spectral.tex	/^\\section{Le meilleur sous-espace approximatif} $/;"	s	chapter:Le théorème spectral et la décomposition en valeurs singulières
+Le polynôme caractéristique	chapter00-valeurs-propres.tex	/^\\section{Le polynôme caractéristique}$/;"	s	chapter:Valeurs propres
+Le théorème de Sylvester	chapter01-produits-scalaires.tex	/^\\section{Le théorème de Sylvester}$/;"	s	chapter:Formes bilinéaires
+Le théorème spectral et la décomposition en valeurs singulières	chapter02-theoreme-spectral.tex	/^\\chapter{Le théorème spectral et la décomposition en valeurs singulières}$/;"	c
+Les endomorphismes auto-adjoints	chapter02-theoreme-spectral.tex	/^\\section{Les endomorphismes auto-adjoints} $/;"	s	chapter:Le théorème spectral et la décomposition en valeurs singulières
+Matrices congruentes	chapter01-produits-scalaires.tex	/^\\section{Matrices congruentes} $/;"	s	chapter:Formes bilinéaires
+Matrices semblables	chapter00-valeurs-propres.tex	/^\\section{Matrices semblables}$/;"	s	chapter:Valeurs propres
+Matrix_h	Programming/Matrix.h	/^#define Matrix_h$/;"	d
+NONPRIME_MODULUS	Programming/finite_fields.h	/^constexpr int NONPRIME_MODULUS(1);$/;"	v	typeref:typename:int
+Notions fondamentales	chapter-01-polynomes.tex	/^\\section{Notions fondamentales}$/;"	s	chapter:Polynômes
+Orthogonalité	chapter01-produits-scalaires.tex	/^\\section{Orthogonalité} $/;"	s	chapter:Formes bilinéaires
+Polynômes	chapter-01-polynomes.tex	/^\\chapter{Polynômes}$/;"	c
+Polynômes	chapter03-systemes-differentiels-lineaires.tex	/^\\section{Polynômes}$/;"	s	chapter:Systèmes différentiels linéaires
+Préface	notes.tex	/^\\section*{Préface}$/;"	s
+R1	chapter-01-polynomes.tex	/^\\item $a+ b  = b+a$ pour tout     $a,b ∈ R$. \\label{R1}$/;"	l
+R2	chapter-01-polynomes.tex	/^\\item $a + (b+c) = (a + b) +c$, pour tout $a,b,c ∈ R$. \\label{R2}$/;"	l
+R3	chapter-01-polynomes.tex	/^\\item Il existe un élément $0 ∈R$ tel que $0+a =a$ pour chaque $a ∈R$. \\label{R3}$/;"	l
+R4	chapter-01-polynomes.tex	/^\\item Pour chaque $a ∈R$ il existe un élément $-a ∈R$ tel que $a + (-a) = 0$. \\label{R4}$/;"	l
+R5	chapter-01-polynomes.tex	/^\\item $a(bc) = (ab) c$ , pour tout $a,b,c ∈ R$. \\label{R5}$/;"	l
+R6	chapter-01-polynomes.tex	/^\\item Il existe un élément $1 ∈R$ tel que $a ⋅ 1 = 1 ⋅a = a$ pour chaque $a ∈R$. \\la/;"	l
+R7	chapter-01-polynomes.tex	/^\\item $a (b+c) = ab + ac$ et $(b+c) a =ba +ca$  pour tout $a,b,c ∈R$.\\label{R7} $/;"	l
+R8	chapter-01-polynomes.tex	/^\\item  $a b = ba$ pour tous $a,b ∈R$ \\label{R8}. $/;"	l
+Rational	Programming/rational.h	/^        Rational$/;"	f	class:Rational
+Rational	Programming/rational.h	/^      Rational$/;"	f	class:Rational
+Rational	Programming/rational.h	/^      Rational()$/;"	f	class:Rational
+Rational	Programming/rational.h	/^     Rational$/;"	f	class:Rational
+Rational	Programming/rational.h	/^  class Rational$/;"	c
+Systèmes différentiels linéaires	chapter03-systemes-differentiels-lineaires.tex	/^\\chapter{Systèmes différentiels linéaires}$/;"	c
+Test	Programming/CMakeLists.txt	/^add_executable(Test Test.cpp)$/;"	t
+Test	Slides/body.tex	/^\\begin{frame}{Test} $/;"	f
+Théorème de Hamilton-Cayley	chapter00-valeurs-propres.tex	/^\\section{Théorème de Hamilton-Cayley}$/;"	s	chapter:Valeurs propres
+Valeurs propres	chapter00-valeurs-propres.tex	/^\\chapter{Valeurs propres}$/;"	c
+Valeurs propres et vecteurs propres	chapter00-valeurs-propres.tex	/^\\section{Valeurs propres et vecteurs propres}$/;"	s	chapter:Valeurs propres
+Why Git?	README.md	/^## Why Git? $/;"	s	chapter:Frequently asked questions
+Why LaTeX?	README.md	/^## Why LaTeX? $/;"	s	chapter:Frequently asked questions
+Z	Programming/finite_fields.h	/^template<int p> class Z$/;"	c
+\\B	Slides/Slides.tex	/^\\newcommand{\\B}{\\mathcal{B}}$/;"	C
+\\C	notes.tex	/^\\newcommand{\\C}{\\mathbb{C}}$/;"	C
+\\CC	notes.tex	/^\\newcommand{\\CC}{{\\mathbb C}}$/;"	C
+\\Col	Slides/Slides.tex	/^\\newcommand{\\Col}{\\mathrm{Col}}$/;"	C
+\\E	notes.tex	/^\\newcommand{\\E}{\\mathbb{E}}$/;"	C
+\\EE	notes.tex	/^\\newcommand{\\EE}{{\\mathbb E}}$/;"	C
+\\FF	notes.tex	/^\\newcommand{\\FF}{{\\mathbb F}}$/;"	C
+\\K	notes.tex	/^\\newcommand{\\K}{\\mathbb{K}}$/;"	C
+\\KK	notes.tex	/^\\newcommand{\\KK}{{\\mathbb K}}$/;"	C
+\\N	notes.tex	/^\\newcommand{\\N}{\\mathbb{N}}$/;"	C
+\\NN	notes.tex	/^\\newcommand{\\NN}{{\\mathbb N}}$/;"	C
+\\Platz	Slides/Slides.tex	/^\\newcommand{\\Platz}{\\vspace{1cm}}$/;"	C
+\\Q	notes.tex	/^\\newcommand{\\Q}{\\mathbb{Q}}$/;"	C
+\\QQ	notes.tex	/^\\newcommand{\\QQ}{{\\mathbb Q}}$/;"	C
+\\R	notes.tex	/^\\newcommand{\\R}{\\mathbb{R}}$/;"	C
+\\RR	notes.tex	/^\\newcommand{\\RR}{{\\mathbb R}}$/;"	C
+\\Rang	Slides/Slides.tex	/^\\newcommand{\\Rang}{\\mathrm{Rang}}$/;"	C
+\\Row	Slides/Slides.tex	/^\\newcommand{\\Row}{\\mathrm{Row}}$/;"	C
+\\Span	Slides/Slides.tex	/^\\newcommand{\\Span}{\\mathrm{Span}}$/;"	C
+\\X	notes.tex	/^\\newcommand{\\X}{\\mathscr{X}}$/;"	C
+\\Z	notes.tex	/^\\newcommand{\\Z}{\\mathbb{Z}}$/;"	C
+\\ZZ	notes.tex	/^\\newcommand{\\ZZ}{{\\mathbb Z}}$/;"	C
+\\boldred	Slides/Slides.tex	/^\\newcommand{\\boldred}[1]{{\\bf\\color{red}#1}}$/;"	C
+\\btt	Slides/Slides.tex	/^\\newcommand{\\btt}{\\tt\\color{darkblue}}$/;"	C
+\\cA	notes.tex	/^\\newcommand{\\cA}{\\mathcal{A}}$/;"	C
+\\cD	notes.tex	/^\\newcommand{\\cD}{\\mathcal{D}}$/;"	C
+\\cI	notes.tex	/^\\newcommand{\\cI}{\\mathcal{I}}$/;"	C
+\\cP	notes.tex	/^\\newcommand{\\cP}{\\mathcal{P}}$/;"	C
+\\cV	notes.tex	/^\\newcommand{\\cV}{\\mathcal{V}}$/;"	C
+\\calB	notes.tex	/^\\newcommand{\\calB}{{\\mathcal B}}$/;"	C
+\\car	notes.tex	/^\\newcommand{\\car}{\\mathrm{Char}}$/;"	C
+\\col	Slides/Slides.tex	/^\\newcommand{\\col}{\\mathrm{col}}$/;"	C
+\\diam	Slides/Slides.tex	/^\\newcommand{\\diam}{\\mathrm{diam}}$/;"	C
+\\dist	Slides/Slides.tex	/^\\newcommand{\\dist}{\\mathrm{dist}}$/;"	C
+\\height	Slides/Slides.tex	/^\\newcommand{\\height}{\\mathrm{height}}$/;"	C
+\\iunit	notes.tex	/^\\newcommand{\\iunit}{\\mathrm{i}}$/;"	C
+\\loss	Slides/Slides.tex	/^\\newcommand{\\loss}{\\mathrm{loss}}$/;"	C
+\\mgreen	Slides/Slides.tex	/^\\newcommand{\\mgreen}[1]{\\mathbf{\\color{green}#1}}$/;"	C
+\\mnred	Slides/Slides.tex	/^\\newcommand{\\mnred}[1]{\\mathbf{\\color{red}#1}}$/;"	C
+\\mred	Slides/Slides.tex	/^\\newcommand{\\mred}[1]{\\mathbf{\\color{darkred}#1}}$/;"	C
+\\mybf	Slides/Slides.tex	/^\\newcommand{\\mybf}[1]{ \\textcolor{darkred}{ \\bf #1}}$/;"	C
+\\myblue	Slides/Slides.tex	/^\\newcommand{\\myblue}[1]{{\\color{darkblue}#1}}$/;"	C
+\\mycite	Slides/Slides.tex	/^\\newcommand{\\mycite}[1]{{\\color{NavyBlue}{#1}}}$/;"	C
+\\myemph	Slides/Slides.tex	/^\\newcommand{\\myemph}[1]{\\em \\textcolor{darkred}{#1}}$/;"	C
+\\mygray[1]	Slides/Slides.tex	/^\\newcommand{\\mygray[1]}{\\textcolor{gray}{#1}}$/;"	C
+\\myred	Slides/Slides.tex	/^\\newcommand{\\myred}[1]{\\emph{\\color{darkred}#1}}$/;"	C
+\\platz	Slides/Slides.tex	/^\\newcommand{\\platz}{\\vspace{.5cm}}$/;"	C
+\\pscal	notes.tex	/^\\newcommand{\\pscal}[1]{\\langle {#1} \\rangle}$/;"	C
+\\rang	Slides/Slides.tex	/^\\newcommand{\\rang}{\\mathrm{Rang}}$/;"	C
+\\row	Slides/Slides.tex	/^\\newcommand{\\row}{\\mathrm{row}}$/;"	C
+\\smallplatz	Slides/Slides.tex	/^\\newcommand{\\smallplatz}{\\vspace{.25cm}}$/;"	C
+\\smat	notes.tex	/^\\newcommand{\\smat}[1]{ \\big(\\begin{smallmatrix} #1 \\end{smallmatrix}\\big)}$/;"	C
+\\wt	notes.tex	/^\\newcommand{\\wt}[1]{\\widetilde{#1}}$/;"	C
+\\x	notes.tex	/^\\newcommand{\\x}{\\mathbf{x}}$/;"	C
+\\y	notes.tex	/^\\newcommand{\\y}{\\mathbf{y}}$/;"	C
+_RATIONAL_H_	Programming/rational.h	/^#define _RATIONAL_H_$/;"	d
+alg:1	chapter01-produits-scalaires.tex	/^  \\label{alg:1}$/;"	l
+alg:2	chapter01-produits-scalaires.tex	/^\\label{alg:2}$/;"	l
+ceq:21	chapter-01-polynomes.tex	/^  \\label{ceq:21}$/;"	l
+cha:algebre-lineaire-sur	chapter04-entiers.tex	/^\\label{cha:algebre-lineaire-sur}$/;"	l
+cha:appl-auto-adjo	chapter02-theoreme-spectral.tex	/^\\label{cha:appl-auto-adjo}$/;"	l
+cha:groupes	chapter05-groupes.tex	/^\\label{cha:groupes}$/;"	l
+cha:polynomes	chapter-01-polynomes.tex	/^\\label{cha:polynomes}$/;"	l
+cha:prod-scal-et	chapter01-produits-scalaires.tex	/^\\label{cha:prod-scal-et}$/;"	l
+cha:syst-diff-line	chapter03-systemes-differentiels-lineaires.tex	/^\\label{cha:syst-diff-line}$/;"	l
+cha:valeurs-propres-et	chapter00-valeurs-propres.tex	/^\\label{cha:valeurs-propres-et}$/;"	l
+co:1	chapter01-produits-scalaires.tex	/^  \\label{co:1}$/;"	l
+co:10	chapter00-valeurs-propres.tex	/^  \\label{co:10}$/;"	l
+co:11	chapter-01-polynomes.tex	/^  \\label{co:11}$/;"	l
+co:2	chapter01-produits-scalaires.tex	/^  \\label{co:2}$/;"	l
+co:3	chapter02-theoreme-spectral.tex	/^\\label{co:3}$/;"	l
+co:4	chapter01-produits-scalaires.tex	/^  \\label{co:4}$/;"	l
+co:5	chapter04-entiers.tex	/^  \\label{co:5}$/;"	l
+co:6	chapter01-produits-scalaires.tex	/^  \\label{co:6}$/;"	l
+co:7	chapter02-theoreme-spectral.tex	/^  \\label{co:7}$/;"	l
+co:8	chapter02-theoreme-spectral.tex	/^  \\label{co:8}$/;"	l
+co:9	chapter04-entiers.tex	/^    \\label{co:9}$/;"	l
+cols	Programming/Matrix.h	/^    unsigned cols;  \/\/ number of columns$/;"	m	class:matrix	typeref:typename:unsigned
+def:1	chapter00-valeurs-propres.tex	/^  \\label{def:1}$/;"	l
+def:1	chapter01-produits-scalaires.tex	/^  \\label{def:1}$/;"	l
+def:10	chapter01-produits-scalaires.tex	/^  \\label{def:10}$/;"	l
+def:11	chapter01-produits-scalaires.tex	/^  \\label{def:11}$/;"	l
+def:12	chapter01-produits-scalaires.tex	/^  \\label{def:12}$/;"	l
+def:13	chapter01-produits-scalaires.tex	/^  \\label{def:13}$/;"	l
+def:14	chapter01-produits-scalaires.tex	/^  \\label{def:14}$/;"	l
+def:15	chapter01-produits-scalaires.tex	/^  \\label{def:15}$/;"	l
+def:16	chapter00-valeurs-propres.tex	/^  \\label{def:16}$/;"	l
+def:17	chapter01-produits-scalaires.tex	/^  \\label{def:17}$/;"	l
+def:18	chapter01-produits-scalaires.tex	/^  \\label{def:18}$/;"	l
+def:19	chapter02-theoreme-spectral.tex	/^\\label{def:19}$/;"	l
+def:2	chapter01-produits-scalaires.tex	/^  \\label{def:2}$/;"	l
+def:20	chapter02-theoreme-spectral.tex	/^  \\label{def:20}$/;"	l
+def:21	chapter02-theoreme-spectral.tex	/^  \\label{def:21}$/;"	l
+def:22	chapter02-theoreme-spectral.tex	/^  \\label{def:22}$/;"	l
+def:23	chapter02-theoreme-spectral.tex	/^  \\label{def:23}$/;"	l
+def:24	chapter02-theoreme-spectral.tex	/^  \\label{def:24}$/;"	l
+def:25	chapter02-theoreme-spectral.tex	/^  \\label{def:25}$/;"	l
+def:26	chapter02-theoreme-spectral.tex	/^  \\label{def:26}$/;"	l
+def:27	chapter02-theoreme-spectral.tex	/^  \\label{def:27}$/;"	l
+def:28	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{def:28}$/;"	l
+def:29	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{def:29}$/;"	l
+def:30	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{def:30}$/;"	l
+def:31	chapter-01-polynomes.tex	/^  \\label{def:31}$/;"	l
+def:32	chapter-01-polynomes.tex	/^  \\label{def:32}$/;"	l
+def:33	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{def:33}$/;"	l
+def:34	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{def:34}$/;"	l
+def:35	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{def:35}$/;"	l
+def:36	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{def:36}$/;"	l
+def:37	chapter01-produits-scalaires.tex	/^  \\label{def:37}$/;"	l
+def:38	chapter01-produits-scalaires.tex	/^  \\label{def:38}$/;"	l
+def:39	chapter00-valeurs-propres.tex	/^  \\label{def:39}$/;"	l
+def:4	chapter01-produits-scalaires.tex	/^  \\label{def:4}$/;"	l
+def:40	chapter00-valeurs-propres.tex	/^  \\label{def:40}$/;"	l
+def:41	chapter-01-polynomes.tex	/^  \\label{def:41}$/;"	l
+def:42	chapter00-valeurs-propres.tex	/^  \\label{def:42}$/;"	l
+def:43	chapter00-valeurs-propres.tex	/^  \\label{def:43}$/;"	l
+def:44	chapter00-valeurs-propres.tex	/^  \\label{def:44}$/;"	l
+def:44	chapter04-entiers.tex	/^  \\label{def:44}$/;"	l
+def:45	chapter04-entiers.tex	/^  \\label{def:45}$/;"	l
+def:46	chapter04-entiers.tex	/^    \\label{def:46}$/;"	l
+def:47	chapter04-entiers.tex	/^  \\label{def:47}$/;"	l
+def:48	chapter04-entiers.tex	/^    \\label{def:48}$/;"	l
+def:49	chapter04-entiers.tex	/^   	\\label{def:49}$/;"	l
+def:49	chapter04-entiers.tex	/^    \\label{def:49}$/;"	l
+def:49	chapter04-entiers.tex	/^   \\label{def:49}$/;"	l
+def:49	chapter05-groupes.tex	/^    \\label{def:49}$/;"	l
+def:5	chapter01-produits-scalaires.tex	/^  \\label{def:5}$/;"	l
+def:50	chapter00-valeurs-propres.tex	/^  \\label{def:50}$/;"	l
+def:51	chapter-01-polynomes.tex	/^  \\label{def:51}$/;"	l
+def:52	chapter-01-polynomes.tex	/^  \\label{def:52}$/;"	l
+def:53	chapter-01-polynomes.tex	/^  \\label{def:53}$/;"	l
+def:54	chapter-01-polynomes.tex	/^  \\label{def:54}$/;"	l
+def:55	chapter-01-polynomes.tex	/^  \\label{def:55}$/;"	l
+def:56	chapter-01-polynomes.tex	/^  \\label{def:56}$/;"	l
+def:57	chapter00-valeurs-propres.tex	/^  \\label{def:57}$/;"	l
+def:6	chapter01-produits-scalaires.tex	/^  \\label{def:6}$/;"	l
+def:7	chapter01-produits-scalaires.tex	/^  \\label{def:7}$/;"	l
+def:8	chapter01-produits-scalaires.tex	/^  \\label{def:8}$/;"	l
+def:9	chapter01-produits-scalaires.tex	/^\\label{def:9}$/;"	l
+def:f22	chapter02-theoreme-spectral.tex	/^  \\label{def:f22}$/;"	l
+def:h5	chapter01-produits-scalaires.tex	/^  \\label{def:h5}$/;"	l
+denominator	Programming/rational.h	/^      TYPE denominator;$/;"	m	class:Rational	typeref:typename:TYPE
+diagonal	chapter02-theoreme-spectral.tex	/^    \\label{diagonal}$/;"	l
+eco:1	chapter00-valeurs-propres.tex	/^  \\label{eco:1}$/;"	l
+elem:1	chapter00-valeurs-propres.tex	/^  \\label{elem:1}$/;"	l
+element	Programming/Matrix.h	/^  T& element(unsigned i, unsigned j) {$/;"	f	class:matrix	typeref:typename:T &
+element	Programming/Matrix.h	/^  const T& element(unsigned i, unsigned j) const {$/;"	f	class:matrix	typeref:typename:const T &
+elements	Programming/Matrix.h	/^    std::vector<T> elements; \/\/ array of elements$/;"	m	class:matrix	typeref:typename:std::vector<T>
+eq:1	chapter01-produits-scalaires.tex	/^    \\label{eq:1}$/;"	l
+eq:10	chapter02-theoreme-spectral.tex	/^    \\label{eq:10}    $/;"	l
+eq:11	chapter02-theoreme-spectral.tex	/^    \\label{eq:11}$/;"	l
+eq:12	chapter02-theoreme-spectral.tex	/^  \\label{eq:12} $/;"	l
+eq:13	chapter02-theoreme-spectral.tex	/^  \\label{eq:13}$/;"	l
+eq:14	chapter02-theoreme-spectral.tex	/^  \\label{eq:14}$/;"	l
+eq:15	chapter02-theoreme-spectral.tex	/^\\label{eq:15}$/;"	l
+eq:16	chapter02-theoreme-spectral.tex	/^  \\label{eq:16}$/;"	l
+eq:17	chapter02-theoreme-spectral.tex	/^  \\label{eq:17}$/;"	l
+eq:18	chapter02-theoreme-spectral.tex	/^  \\label{eq:18}$/;"	l
+eq:19	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{eq:19}$/;"	l
+eq:2	chapter01-produits-scalaires.tex	/^  \\label{eq:2}$/;"	l
+eq:21	chapter03-systemes-differentiels-lineaires.tex	/^\\label{eq:21}$/;"	l
+eq:22	chapter03-systemes-differentiels-lineaires.tex	/^\\label{eq:22}$/;"	l
+eq:23	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{eq:23}  $/;"	l
+eq:24	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{eq:24}$/;"	l
+eq:25	chapter03-systemes-differentiels-lineaires.tex	/^    \\label{eq:25}   $/;"	l
+eq:26	chapter03-systemes-differentiels-lineaires.tex	/^    \\label{eq:26}   $/;"	l
+eq:27	chapter03-systemes-differentiels-lineaires.tex	/^    \\label{eq:27}$/;"	l
+eq:28	chapter01-produits-scalaires.tex	/^\\label{eq:28}$/;"	l
+eq:29	chapter01-produits-scalaires.tex	/^  \\label{eq:29}$/;"	l
+eq:3	chapter01-produits-scalaires.tex	/^  \\label{eq:3}$/;"	l
+eq:30	chapter00-valeurs-propres.tex	/^  \\label{eq:30}$/;"	l
+eq:31	chapter00-valeurs-propres.tex	/^  \\label{eq:31}$/;"	l
+eq:32	chapter00-valeurs-propres.tex	/^  \\label{eq:32}$/;"	l
+eq:33	chapter-01-polynomes.tex	/^  \\label{eq:33}$/;"	l
+eq:34	chapter-01-polynomes.tex	/^  \\label{eq:34}$/;"	l
+eq:35	chapter00-valeurs-propres.tex	/^    \\label{eq:35}$/;"	l
+eq:36	chapter00-valeurs-propres.tex	/^  \\label{eq:36}$/;"	l
+eq:37	chapter00-valeurs-propres.tex	/^    \\label{eq:37}$/;"	l
+eq:38	chapter00-valeurs-propres.tex	/^    \\label{eq:38}$/;"	l
+eq:39	chapter02-theoreme-spectral.tex	/^  \\label{eq:39}$/;"	l
+eq:4	chapter01-produits-scalaires.tex	/^    \\label{eq:4}    $/;"	l
+eq:40	chapter04-entiers.tex	/^  \\label{eq:40}$/;"	l
+eq:41	chapter04-entiers.tex	/^    \\label{eq:41}$/;"	l
+eq:42	chapter04-entiers.tex	/^      \\label{eq:42}$/;"	l
+eq:43	chapter04-entiers.tex	/^    \\label{eq:43}$/;"	l
+eq:44	chapter04-entiers.tex	/^  \\label{eq:44}$/;"	l
+eq:45	chapter04-entiers.tex	/^      \\label{eq:45}$/;"	l
+eq:46	chapter04-entiers.tex	/^      \\label{eq:46}$/;"	l
+eq:47	chapter-01-polynomes.tex	/^    \\label{eq:47}$/;"	l
+eq:48	chapter-01-polynomes.tex	/^    \\label{eq:48}$/;"	l
+eq:49	chapter-01-polynomes.tex	/^     \\label{eq:49}$/;"	l
+eq:5	chapter01-produits-scalaires.tex	/^  \\label{eq:5}$/;"	l
+eq:50	chapter-01-polynomes.tex	/^\\label{eq:50}$/;"	l
+eq:51	chapter-01-polynomes.tex	/^    \\label{eq:51}$/;"	l
+eq:6	chapter01-produits-scalaires.tex	/^  \\label{eq:6}$/;"	l
+eq:7	chapter01-produits-scalaires.tex	/^    \\label{eq:7}$/;"	l
+eq:8	chapter-01-polynomes.tex	/^    \\label{eq:8}$/;"	l
+eq:9	chapter01-produits-scalaires.tex	/^  \\label{eq:9}$/;"	l
+ex:1	chapter01-produits-scalaires.tex	/^ \\label{ex:1}$/;"	l
+ex:2	chapter01-produits-scalaires.tex	/^  \\label{ex:2}$/;"	l
+ex:3	chapter01-produits-scalaires.tex	/^  \\label{ex:3}$/;"	l
+exe:1	chapter01-produits-scalaires.tex	/^  \\label{exe:1}$/;"	l
+exe:10	chapter01-produits-scalaires.tex	/^\\label{exe:10}$/;"	l
+exe:11	chapter01-produits-scalaires.tex	/^  \\label{exe:11}$/;"	l
+exe:12	chapter01-produits-scalaires.tex	/^  \\label{exe:12}$/;"	l
+exe:13	chapter01-produits-scalaires.tex	/^  \\label{exe:13}$/;"	l
+exe:15	chapter01-produits-scalaires.tex	/^  \\label{exe:15}$/;"	l
+exe:16	chapter01-produits-scalaires.tex	/^  \\label{exe:16}$/;"	l
+exe:17	chapter02-theoreme-spectral.tex	/^  \\label{exe:17}$/;"	l
+exe:18	chapter02-theoreme-spectral.tex	/^  \\label{exe:18}$/;"	l
+exe:19	chapter02-theoreme-spectral.tex	/^  \\label{exe:19}$/;"	l
+exe:2	chapter01-produits-scalaires.tex	/^  \\label{exe:2}$/;"	l
+exe:20	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{exe:20}$/;"	l
+exe:21	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{exe:21}$/;"	l
+exe:22	chapter01-produits-scalaires.tex	/^  \\label{exe:22}$/;"	l
+exe:23	chapter00-valeurs-propres.tex	/^  \\label{exe:23}$/;"	l
+exe:24	chapter-01-polynomes.tex	/^  \\label{exe:24}$/;"	l
+exe:25	chapter04-entiers.tex	/^  \\label{exe:25}$/;"	l
+exe:25-b	chapter-01-polynomes.tex	/^  \\label{exe:25-b}$/;"	l
+exe:26	chapter-01-polynomes.tex	/^  \\label{exe:26}$/;"	l
+exe:26	chapter04-entiers.tex	/^  \\label{exe:26}$/;"	l
+exe:27	chapter04-entiers.tex	/^  \\label{exe:27}$/;"	l
+exe:28	chapter04-entiers.tex	/^  \\label{exe:28}$/;"	l
+exe:29	chapter04-entiers.tex	/^    \\label{exe:29}$/;"	l
+exe:3	chapter01-produits-scalaires.tex	/^  \\label{exe:3}$/;"	l
+exe:30	chapter00-valeurs-propres.tex	/^  \\label{exe:30}$/;"	l
+exe:30	chapter01-produits-scalaires.tex	/^  \\label{exe:30}$/;"	l
+exe:31	chapter01-produits-scalaires.tex	/^  \\label{exe:31}$/;"	l
+exe:32	chapter-01-polynomes.tex	/^  \\label{exe:32}$/;"	l
+exe:33	chapter-01-polynomes.tex	/^  \\label{exe:33}$/;"	l
+exe:34	chapter-01-polynomes.tex	/^  \\label{exe:34}$/;"	l
+exe:35	chapter-01-polynomes.tex	/^  \\label{exe:35}$/;"	l
+exe:36	chapter-01-polynomes.tex	/^  \\label{exe:36}$/;"	l
+exe:37	chapter-01-polynomes.tex	/^  \\label{exe:37}$/;"	l
+exe:38	chapter-01-polynomes.tex	/^  \\label{exe:38}$/;"	l
+exe:39	chapter-01-polynomes.tex	/^  \\label{exe:39}$/;"	l
+exe:4	chapter01-produits-scalaires.tex	/^\\label{exe:4}$/;"	l
+exe:40	chapter-01-polynomes.tex	/^  \\label{exe:40}$/;"	l
+exe:41	chapter-01-polynomes.tex	/^  \\label{exe:41}$/;"	l
+exe:42	chapter-01-polynomes.tex	/^  \\label{exe:42}$/;"	l
+exe:43	chapter-01-polynomes.tex	/^  \\label{exe:43}$/;"	l
+exe:44	chapter-01-polynomes.tex	/^  \\label{exe:44}$/;"	l
+exe:45	chapter-01-polynomes.tex	/^  \\label{exe:45}$/;"	l
+exe:46	chapter-01-polynomes.tex	/^  \\label{exe:46}$/;"	l
+exe:5	chapter01-produits-scalaires.tex	/^  \\label{exe:5}$/;"	l
+exe:6	chapter01-produits-scalaires.tex	/^  \\label{exe:6}$/;"	l
+exe:7	chapter01-produits-scalaires.tex	/^\\label{exe:7}$/;"	l
+exe:8	chapter01-produits-scalaires.tex	/^  \\label{exe:8}$/;"	l
+exe:9	chapter01-produits-scalaires.tex	/^  \\label{exe:9}$/;"	l
+getAsDouble	Programming/rational.h	/^      FLOAT_TYPE getAsDouble() const$/;"	f	class:Rational	typeref:typename:FLOAT_TYPE
+getDenominator	Programming/rational.h	/^      TYPE const & getDenominator() const$/;"	f	class:Rational	typeref:typename:TYPE const &
+getNumerator	Programming/rational.h	/^      TYPE const & getNumerator() const$/;"	f	class:Rational	typeref:typename:TYPE const &
+inverse	Programming/finite_fields.h	/^		Z<p> inverse(void) const$/;"	f	class:Z	typeref:typename:Z<p>
+is_prime	Programming/finite_fields.h	/^bool is_prime (const unsigned int n)$/;"	f	typeref:typename:bool
+item:1	chapter01-produits-scalaires.tex	/^\\item On considère les vecteurs  \\label{item:1}$/;"	l
+item:10	chapter03-systemes-differentiels-lineaires.tex	/^  \\item $T(V_i) ⊆ V_i$ pour tout $i$ et \\label{item:10}$/;"	l
+item:11	chapter03-systemes-differentiels-lineaires.tex	/^    est de la forme $N_i + λ \\, I$ où $N_i$ est nilpotente. \\label{item:11}$/;"	l
+item:12	chapter01-produits-scalaires.tex	/^  \\item $\\rank(A_B^f) = n$ \\label{item:12}$/;"	l
+item:13	chapter01-produits-scalaires.tex	/^  \\item $f$ est non dégénérée à gauche, i.e. si $v \\in V$, et si $\\pscal{v,w}=0$ pour to/;"	l
+item:14	chapter01-produits-scalaires.tex	/^  \\item $f$ est non dégénérée à droite, i.e. si $v \\in V$, et si $\\pscal{w, v}=0$ pour t/;"	l
+item:15	chapter02-theoreme-spectral.tex	/^\\label{item:15}$/;"	l
+item:16	chapter02-theoreme-spectral.tex	/^\\item \\label{item:16}$/;"	l
+item:17	chapter02-theoreme-spectral.tex	/^\\item Une matrice réelle symétrique, différente de la matrice zéro, dont la diagonale est é/;"	l
+item:18	chapter00-valeurs-propres.tex	/^\\item Une matrice $A ∈ K^{n ×n}$ est appelée \\emph{diagonalisable},  si endomorphisme $φ：/;"	l
+item:19	chapter00-valeurs-propres.tex	/^  \\item le polynôme caractéristique $p_f(x)$ de $f$ décompose en facteurs linéaires, c'est-/;"	l
+item:2	chapter02-theoreme-spectral.tex	/^\\item Est-ce que la décomposition en valeurs singulières est unique? Est-ce que les valeurs s/;"	l
+item:20	chapter00-valeurs-propres.tex	/^    \\item  $\\dim(E_{λ_i}) = g_i$, pour tous $i=1,\\dots,r$. C'est à dire, les multiplicités/;"	l
+item:21	chapter04-entiers.tex	/^    \\item Multiplier une colonne avec $-1$.  \\label{item:21}$/;"	l
+item:22	chapter04-entiers.tex	/^    \\item Échanger deux colonnes de $A$.  \\label{item:22}$/;"	l
+item:23	chapter04-entiers.tex	/^    \\item Additionner un multiple entier d'une colonne de $A$ à une autre colonne de $A$. \\la/;"	l
+item:24	chapter-01-polynomes.tex	/^  \\item $d$ est un diviseur commun de $f$ et $g$. \\label{item:24}$/;"	l
+item:25	chapter-01-polynomes.tex	/^  \\item Chaque diviseur commun de $f$ et $g$ est un diviseur de $d$. \\label{item:25}$/;"	l
+item:26	chapter-01-polynomes.tex	/^  \\item Si $d$ est unitaire, alors $d$ est unique.  \\label{item:26}$/;"	l
+item:3	chapter02-theoreme-spectral.tex	/^et $k=\\dim(G) > \\dim(H)$. Montrer que $G$ possède une base orthonormale $w_1,\\dots,w_k$ tell/;"	l
+item:4	chapter01-produits-scalaires.tex	/^\\item Montrer qu'un espace hermitien de dimension finie possède une base $B$ telle que $\\psca/;"	l
+item:5	chapter03-systemes-differentiels-lineaires.tex	/^\\item Soit $\\{u_1+ i \\cdot w_1,\\dots,u_n + i \\cdot w_n\\}$ une base de $\\C^n$ où $u_i,w_i/;"	l
+item:6	chapter01-produits-scalaires.tex	/^\\item Montrer que $\\cong_\\C$ est une relation d'équivalence. \\label{item:6}$/;"	l
+item:7	chapter01-produits-scalaires.tex	/^\\item Modifier l'algorithme~\\ref{alg:1} afin qu'il calcule une matrice diagonale congruente co/;"	l
+item:8	chapter01-produits-scalaires.tex	/^\\item Pour tout $v \\in V$, $\\|v\\|\\geq 0$ et $\\|v\\| = 0$ si et seulement si $v = 0$. \\lab/;"	l
+item:9	chapter01-produits-scalaires.tex	/^\\item Pour $\\alpha \\in \\C$ et $v \\in V$ on a $\\| \\alpha \\cdot v \\| = |\\alpha| \\cdot \\/;"	l
+lang1976algebre	books.bib	/^@article{lang1976algebre,$/;"	a
+lem:1	chapter01-produits-scalaires.tex	/^  \\label{lem:1}$/;"	l
+lem:10	chapter02-theoreme-spectral.tex	/^  \\label{lem:10}$/;"	l
+lem:11	chapter02-theoreme-spectral.tex	/^  \\label{lem:11}$/;"	l
+lem:12	chapter02-theoreme-spectral.tex	/^  \\label{lem:12}$/;"	l
+lem:13	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{lem:13}$/;"	l
+lem:14	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{lem:14}$/;"	l
+lem:15	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{lem:15}$/;"	l
+lem:16	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{lem:16}$/;"	l
+lem:17	chapter03-systemes-differentiels-lineaires.tex	/^    \\label{lem:17}$/;"	l
+lem:18	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{lem:18}$/;"	l
+lem:19	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{lem:19}$/;"	l
+lem:2	chapter01-produits-scalaires.tex	/^  \\label{lem:2}$/;"	l
+lem:20	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{lem:20}$/;"	l
+lem:21	chapter00-valeurs-propres.tex	/^  \\label{lem:21}$/;"	l
+lem:22	chapter00-valeurs-propres.tex	/^  \\label{lem:22}$/;"	l
+lem:23	chapter04-entiers.tex	/^  \\label{lem:23}$/;"	l
+lem:23	chapter05-groupes.tex	/^    \\label{lem:23}$/;"	l
+lem:24	chapter04-entiers.tex	/^  \\label{lem:24}$/;"	l
+lem:3	chapter01-produits-scalaires.tex	/^  \\label{lem:3} Supposons que $V$ est de dimension finie et $\\{v_1,\\dots,v_n\\}$ est une base/;"	l
+lem:4	chapter00-valeurs-propres.tex	/^  \\label{lem:4}$/;"	l
+lem:5	chapter01-produits-scalaires.tex	/^  \\label{lem:5}$/;"	l
+lem:6	chapter01-produits-scalaires.tex	/^  \\label{lem:6}$/;"	l
+lem:7	chapter02-theoreme-spectral.tex	/^  \\label{lem:7}$/;"	l
+lem:8	chapter02-theoreme-spectral.tex	/^  \\label{lem:8}$/;"	l
+lem:9	chapter02-theoreme-spectral.tex	/^  \\label{lem:9}$/;"	l
+linalg	Programming/CMakeLists.txt	/^project (linalg)$/;"	p
+main	Programming/Test.cpp	/^int main()$/;"	f	typeref:typename:int
+main	Programming/main.cpp	/^int main(int argc, const char * argv[]) {$/;"	f	typeref:typename:int
+matrix	Programming/Matrix.h	/^      matrix( const matrix<T>& cp )$/;"	f	class:matrix
+matrix	Programming/Matrix.h	/^      matrix( const unsigned & m, const unsigned & n)$/;"	f	class:matrix
+matrix	Programming/Matrix.h	/^class matrix {$/;"	c
+numerator	Programming/rational.h	/^      TYPE numerator;$/;"	m	class:Rational	typeref:typename:TYPE
+operator !=	Programming/rational.h	/^      bool operator !=$/;"	f	class:Rational	typeref:typename:bool
+operator ()	Programming/Matrix.h	/^  T& operator()( unsigned i, unsigned j ) {$/;"	f	class:matrix	typeref:typename:T &
+operator ()	Programming/Matrix.h	/^  const T& operator()( unsigned i, unsigned j ) const {$/;"	f	class:matrix	typeref:typename:const T &
+operator *	Programming/Matrix.h	/^  matrix<T> operator*( const matrix<T>& B) const$/;"	f	typeref:typename:matrix<T>
+operator *	Programming/finite_fields.h	/^		Z<p> operator*(const Z<p> x)$/;"	f	class:Z	typeref:typename:Z<p>
+operator *	Programming/rational.h	/^      Rational const operator *$/;"	f	class:Rational	typeref:typename:Rational const
+operator *=	Programming/Matrix.h	/^  matrix<T>& operator*=( const matrix<T>& M ) {$/;"	f	typeref:typename:matrix<T> &
+operator *=	Programming/rational.h	/^      Rational const & operator *=$/;"	f	class:Rational	typeref:typename:Rational const &
+operator +	Programming/finite_fields.h	/^		Z<p> operator+(const Z<p> x)$/;"	f	class:Z	typeref:typename:Z<p>
+operator +	Programming/rational.h	/^      Rational const operator +$/;"	f	class:Rational	typeref:typename:Rational const
+operator +=	Programming/rational.h	/^      Rational const & operator +=$/;"	f	class:Rational	typeref:typename:Rational const &
+operator -	Programming/finite_fields.h	/^		Z<p> operator-(const Z<p> x)$/;"	f	class:Z	typeref:typename:Z<p>
+operator -	Programming/rational.h	/^      Rational const operator -$/;"	f	class:Rational	typeref:typename:Rational const
+operator -	Programming/rational.h	/^  Rational< TYPE, FLOAT_TYPE > operator -$/;"	f	typeref:typename:Rational<TYPE,FLOAT_TYPE>
+operator -=	Programming/rational.h	/^      Rational const & operator -=$/;"	f	class:Rational	typeref:typename:Rational const &
+operator /	Programming/finite_fields.h	/^		Z<p> operator\/(const Z<p> x)$/;"	f	class:Z	typeref:typename:Z<p>
+operator /	Programming/rational.h	/^      Rational const operator \/$/;"	f	class:Rational	typeref:typename:Rational const
+operator /=	Programming/rational.h	/^      Rational const & operator \/=$/;"	f	class:Rational	typeref:typename:Rational const &
+operator <	Programming/rational.h	/^      bool operator <$/;"	f	class:Rational	typeref:typename:bool
+operator <<	Programming/rational.h	/^  std::ostream & operator <<$/;"	f	typeref:typename:std::ostream &
+operator <=	Programming/rational.h	/^      bool operator <=$/;"	f	class:Rational	typeref:typename:bool
+operator =	Programming/rational.h	/^        Rational const & operator =$/;"	f	class:Rational	typeref:typename:Rational const &
+operator =	Programming/rational.h	/^      Rational const & operator =$/;"	f	class:Rational	typeref:typename:Rational const &
+operator ==	Programming/Matrix.h	/^      bool operator==( const matrix<T>& B)$/;"	f	class:matrix	typeref:typename:bool
+operator ==	Programming/rational.h	/^      bool operator ==$/;"	f	class:Rational	typeref:typename:bool
+operator >	Programming/rational.h	/^      bool operator >$/;"	f	class:Rational	typeref:typename:bool
+operator >=	Programming/rational.h	/^      bool operator >=$/;"	f	class:Rational	typeref:typename:bool
+pen1	chapter02-theoreme-spectral.tex	/^  \\item $AXA = A$ \\label{pen1}$/;"	l
+pen2	chapter02-theoreme-spectral.tex	/^  \\item $(AX)^* = AX$ \\label{pen2}$/;"	l
+pen3	chapter02-theoreme-spectral.tex	/^  \\item $XAX = X$ \\label{pen3}$/;"	l
+pen4	chapter02-theoreme-spectral.tex	/^  \\item $(XA)^* = XA$. \\label{pen4}$/;"	l
+ph1	chapter01-produits-scalaires.tex	/^  \\item On a $\\pscal{v,w} = \\overline{\\pscal{w,v}}$ pour tout $v,w \\in V$.  \\label{ph1}$/;"	l
+ph2	chapter01-produits-scalaires.tex	/^  \\item Si $u,v$ et $w$ sont des éléments de $V$,  \\label{ph2}$/;"	l
+ph3	chapter01-produits-scalaires.tex	/^  \\item Si $x \\in \\C$ et $u,v \\in V$,  \\label{ph3}$/;"	l
+posdef:1	chapter02-theoreme-spectral.tex	/^  \\item $A$ \\label{posdef:1}$/;"	l
+posdef:2	chapter02-theoreme-spectral.tex	/^  \\item $A$ \\label{posdef:2}$/;"	l
+print	Programming/finite_fields.h	/^		void print(std::ostream& output = std::cout) const$/;"	f	class:Z	typeref:typename:void
+prop:1	chapter01-produits-scalaires.tex	/^  \\label{prop:1}$/;"	l
+prop:2	chapter01-produits-scalaires.tex	/^  \\label{prop:2}$/;"	l
+prop:3	chapter01-produits-scalaires.tex	/^  \\label{prop:3}$/;"	l
+prop:4	chapter01-produits-scalaires.tex	/^\\label{prop:4}$/;"	l
+prop:6	chapter00-valeurs-propres.tex	/^    \\label{prop:6}$/;"	l
+prop:7	chapter01-produits-scalaires.tex	/^  \\label{prop:7}$/;"	l
+prop:8	chapter-01-polynomes.tex	/^  \\label{prop:8}$/;"	l
+ps:2	chapter01-produits-scalaires.tex	/^  \\item Si $u,v$ et $w$ sont des éléments de $V$, et $α ∈ K$ est un scalaire,  \\label{ps:/;"	l
+ps:3	chapter01-produits-scalaires.tex	/^    Si $u,v$ et $w$ sont des éléments de $V$, et $α ∈ K$ est un scalaire,  \\label{ps:3}$/;"	l
+rational	Programming/Test.cpp	/^typedef Rational<int,float> rational;   $/;"	t	typeref:typename:Rational<int,float>	file:
+reduce	Programming/rational.h	/^      void reduce()$/;"	f	class:Rational	typeref:typename:void
+rem:2	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{rem:2}$/;"	l
+rem:2	chapter05-groupes.tex	/^        \\label{rem:2}$/;"	l
+rem:2	chapter05-groupes.tex	/^    \\label{rem:2}$/;"	l
+rem:3	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{rem:3}$/;"	l
+rem:4	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{rem:4}$/;"	l
+rem:5	chapter04-entiers.tex	/^      \\label{rem:5}$/;"	l
+rem:5	chapter04-entiers.tex	/^    \\label{rem:5}$/;"	l
+rem:6	chapter00-valeurs-propres.tex	/^  \\label{rem:6}$/;"	l
+rem:7	chapter01-produits-scalaires.tex	/^  \\label{rem:7}$/;"	l
+representative	Programming/finite_fields.h	/^		int representative; \/\/ representative of the instance in {0,...,p-1}$/;"	m	class:Z	typeref:typename:int
+rows	Programming/Matrix.h	/^    unsigned rows;  \/\/ number of rows$/;"	m	class:matrix	typeref:typename:unsigned
+sec:class-des-matr	chapter01-produits-scalaires.tex	/^\\label{sec:class-des-matr}$/;"	l
+sec:divisibilite	chapter-01-polynomes.tex	/^\\label{sec:divisibilite}$/;"	l
+sec:encore-les-systemes	chapter02-theoreme-spectral.tex	/^\\label{sec:encore-les-systemes}$/;"	l
+sec:espaces-hermitiens	chapter01-produits-scalaires.tex	/^\\label{sec:espaces-hermitiens}$/;"	l
+sec:exercices	chapter03-systemes-differentiels-lineaires.tex	/^\\label{sec:exercices}$/;"	l
+sec:fact-de-polyn	chapter-01-polynomes.tex	/^\\label{sec:fact-de-polyn}$/;"	l
+sec:fact-en-irred	chapter-01-polynomes.tex	/^\\label{sec:fact-en-irred}$/;"	l
+sec:form-quadr-reell	chapter02-theoreme-spectral.tex	/^\\label{sec:form-quadr-reell}$/;"	l
+sec:form-sesq-et	chapter01-produits-scalaires.tex	/^\\label{sec:form-sesq-et}$/;"	l
+sec:la-decomposition-en	chapter02-theoreme-spectral.tex	/^\\label{sec:la-decomposition-en}$/;"	l
+sec:la-forme-normale	chapter03-systemes-differentiels-lineaires.tex	/^\\label{sec:la-forme-normale}$/;"	l
+sec:la-forme-normale-1	chapter04-entiers.tex	/^\\label{sec:la-forme-normale-1}$/;"	l
+sec:lalg-de-eucl	chapter-01-polynomes.tex	/^\\label{sec:lalg-de-eucl}$/;"	l
+sec:le-case-reel	chapter01-produits-scalaires.tex	/^\\label{sec:le-case-reel}$/;"	l
+sec:le-meilleur-sous	chapter02-theoreme-spectral.tex	/^\\label{sec:le-meilleur-sous}$/;"	l
+sec:le-methode-des	chapter01-produits-scalaires.tex	/^\\label{sec:le-methode-des}$/;"	l
+sec:le-polyn-caract	chapter00-valeurs-propres.tex	/^\\label{sec:le-polyn-caract}$/;"	l
+sec:le-theoreme-de	chapter01-produits-scalaires.tex	/^\\label{sec:le-theoreme-de}$/;"	l
+sec:les-endom-auto	chapter02-theoreme-spectral.tex	/^\\label{sec:les-endom-auto}$/;"	l
+sec:lespace-dual	chapter01-produits-scalaires.tex	/^\\label{sec:lespace-dual}$/;"	l
+sec:lexp-dune-matr	chapter03-systemes-differentiels-lineaires.tex	/^\\label{sec:lexp-dune-matr}$/;"	l
+sec:matrices-semblables	chapter00-valeurs-propres.tex	/^\\label{sec:matrices-semblables}$/;"	l
+sec:noti-fond	chapter-01-polynomes.tex	/^\\label{sec:noti-fond}$/;"	l
+sec:orthogonalite	chapter01-produits-scalaires.tex	/^\\label{sec:orthogonalite}$/;"	l
+sec:polyn-les-lalg	chapter03-systemes-differentiels-lineaires.tex	/^\\label{sec:polyn-les-lalg}$/;"	l
+sec:theoreme-de-hamilton	chapter00-valeurs-propres.tex	/^\\label{sec:theoreme-de-hamilton}$/;"	l
+sec:valeurs-propres-et	chapter00-valeurs-propres.tex	/^\\label{sec:valeurs-propres-et}$/;"	l
+setDenominator	Programming/rational.h	/^      void setDenominator$/;"	f	class:Rational	typeref:typename:void
+setNumerator	Programming/rational.h	/^      void setNumerator$/;"	f	class:Rational	typeref:typename:void
+thr:1	chapter01-produits-scalaires.tex	/^  \\label{thr:1}$/;"	l
+thr:10	chapter01-produits-scalaires.tex	/^\\label{thr:10}$/;"	l
+thr:11	chapter01-produits-scalaires.tex	/^  \\label{thr:11}$/;"	l
+thr:12	chapter01-produits-scalaires.tex	/^\\label{thr:12}$/;"	l
+thr:13	chapter01-produits-scalaires.tex	/^\\label{thr:13}$/;"	l
+thr:14	chapter02-theoreme-spectral.tex	/^  \\label{thr:14}$/;"	l
+thr:15	chapter02-theoreme-spectral.tex	/^  \\label{thr:15}$/;"	l
+thr:16	chapter02-theoreme-spectral.tex	/^\\label{thr:16}$/;"	l
+thr:17	chapter02-theoreme-spectral.tex	/^  \\label{thr:17}$/;"	l
+thr:18	chapter02-theoreme-spectral.tex	/^  \\label{thr:18}$/;"	l
+thr:19	chapter02-theoreme-spectral.tex	/^\\label{thr:19}$/;"	l
+thr:2	chapter01-produits-scalaires.tex	/^  \\label{thr:2}$/;"	l
+thr:20	chapter02-theoreme-spectral.tex	/^\\label{thr:20}$/;"	l
+thr:21	chapter02-theoreme-spectral.tex	/^  \\label{thr:21}$/;"	l
+thr:22	chapter02-theoreme-spectral.tex	/^  \\label{thr:22}$/;"	l
+thr:23	chapter02-theoreme-spectral.tex	/^  \\label{thr:23}$/;"	l
+thr:24	chapter02-theoreme-spectral.tex	/^  \\label{thr:24}$/;"	l
+thr:25	chapter02-theoreme-spectral.tex	/^\\label{thr:25}$/;"	l
+thr:26	chapter02-theoreme-spectral.tex	/^  \\label{thr:26}$/;"	l
+thr:27	chapter02-theoreme-spectral.tex	/^  \\label{thr:27}$/;"	l
+thr:28	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{thr:28}$/;"	l
+thr:28	chapter04-entiers.tex	/^    \\label{thr:28}$/;"	l
+thr:28	chapter04-entiers.tex	/^  \\label{thr:28}$/;"	l
+thr:28	chapter05-groupes.tex	/^    \\label{thr:28}$/;"	l
+thr:29	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{thr:29}$/;"	l
+thr:3	chapter01-produits-scalaires.tex	/^  \\label{thr:3}$/;"	l
+thr:30	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{thr:30}$/;"	l
+thr:31	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{thr:31}$/;"	l
+thr:32	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{thr:32}$/;"	l
+thr:33	chapter-01-polynomes.tex	/^  \\label{thr:33}$/;"	l
+thr:34	chapter-01-polynomes.tex	/^  \\label{thr:34} Soit $R$ un anneau,   $f,g \\in R[x] \\setminus \\{0\\}$ tel que le coefficien/;"	l
+thr:35	chapter-01-polynomes.tex	/^  \\label{thr:35}$/;"	l
+thr:36	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{thr:36}$/;"	l
+thr:37	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{thr:37}$/;"	l
+thr:38	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{thr:38}$/;"	l
+thr:39	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{thr:39}$/;"	l
+thr:4	chapter01-produits-scalaires.tex	/^  \\label{thr:4}$/;"	l
+thr:40	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{thr:40}$/;"	l
+thr:41	chapter03-systemes-differentiels-lineaires.tex	/^  \\label{thr:41}$/;"	l
+thr:42	chapter-01-polynomes.tex	/^  \\label{thr:42}$/;"	l
+thr:44	chapter-01-polynomes.tex	/^  \\label{thr:44}$/;"	l
+thr:45	chapter00-valeurs-propres.tex	/^  \\label{thr:45}$/;"	l
+thr:46	chapter00-valeurs-propres.tex	/^  \\label{thr:46}$/;"	l
+thr:47	chapter00-valeurs-propres.tex	/^  \\label{thr:47}$/;"	l
+thr:48	chapter04-entiers.tex	/^  \\label{thr:48}$/;"	l
+thr:49	chapter04-entiers.tex	/^  \\label{thr:49}$/;"	l
+thr:5	chapter01-produits-scalaires.tex	/^  \\label{thr:5}$/;"	l
+thr:50	chapter-01-polynomes.tex	/^  \\label{thr:50}$/;"	l
+thr:51	chapter-01-polynomes.tex	/^  \\label{thr:51}$/;"	l
+thr:52	chapter-01-polynomes.tex	/^  \\label{thr:52}$/;"	l
+thr:53	chapter-01-polynomes.tex	/^  \\label{thr:53}$/;"	l
+thr:54	chapter-01-polynomes.tex	/^  \\label{thr:54}$/;"	l
+thr:55	chapter-01-polynomes.tex	/^  \\label{thr:55}$/;"	l
+thr:56	chapter-01-polynomes.tex	/^\\label{thr:56}$/;"	l
+thr:57	chapter-01-polynomes.tex	/^  \\label{thr:57}$/;"	l
+thr:6	chapter01-produits-scalaires.tex	/^  \\label{thr:6}$/;"	l
+thr:7	chapter01-produits-scalaires.tex	/^  \\label{thr:7}$/;"	l
+thr:8	chapter01-produits-scalaires.tex	/^  \\label{thr:8}$/;"	l
+thr:9	chapter01-produits-scalaires.tex	/^  \\label{thr:9}$/;"	l
+thr:min-poly	chapter03-systemes-differentiels-lineaires.tex	/^\\label{thr:min-poly}$/;"	l
+tr:2	chapter01-produits-scalaires.tex	/^\\item Pour chaque $u,v \\in V$ $\\|u+v\\| \\leq \\|u\\| + \\|v\\|$. \\label{tr:2}$/;"	l
+typeMax	Programming/rational.h	/^      TYPE typeMax() const$/;"	f	class:Rational	typeref:typename:TYPE
+~matrix	Programming/Matrix.h	/^      ~matrix()$/;"	f	class:matrix

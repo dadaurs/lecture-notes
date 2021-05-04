@@ -1,0 +1,202 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{18}{Mon 03 May}{Extremas sous contraintes multiples}
+\subsection{Extremas sous contraintes multiples}
+Soit $ E \subset \mathbb{R}^n$ ouvert non vide, et 
+\[ 
+f, g_1, \ldots, g_m : E \to \mathbb{R}
+\]
+On impose $m<n$, pour que le probleme ne soit pas surdetermine.\\
+On cherche donc
+\[ 
+	\min_{z\in E} f( z) \text{ sous les contraintes } g_i( z) =0 \forall 1 \leq  i \leq  m
+\]
+Soit $g = (  g_1, \ldots, g_,m) : E \to \mathbb{R}^m$, et on definit l'ensemble faisable
+\[ 
+	\Sigma_g = \left\{ z \in E : g( z) = 0 \right\} 
+\]
+On cherche donc
+\[ 
+	\min_{z \in \Sigma_g} f( z) 
+\]
+\begin{thm}[Conditions necessaires d'optimalite]
+	Soit $E \subset \mathbb{R}^n$ un ouvert non vide, $f,g_1, \ldots,g_m: E \to \mathbb{R}$ de classe $C^{1}$ et $z ^{*} \in \Sigma_g$.\\
+	Si $ Rang( Dg( z^{*}) ) =m $ ( cad. les vecteurs $\nabla g_1 ( z^{*}) , \ldots, \nabla g_m ( z^{*}) $ sont lineairement independants) .\\
+	Alors il existe $\vec{\lambda}^{*} = ( \lambda_1^{*}, \ldots, \lambda_m^{*}) $ tel que
+	\[ 
+		\nabla f( z^{*}) = \sum_i \lambda_i^{*} \nabla g_i ( z^{*}) 
+	\]
+	Donc, $( z^{*}, \lambda^{*}) $ satisfait le systeme
+	\[ 
+	\begin{cases}
+		\frac{\del f}{\del z_1}( z^{*}) = \lambda_1^{*} \frac{\del g_1}{\del z_1} + \lambda_2^{*} \frac{\del g_2}{\del z_1}( z^{*} ) + \ldots\\
+		\frac{\del f}{\del z_2}( z^{*}) = \lambda_1^{*} \frac{\del g_1}{\del z_2} + \lambda_2^{*} \frac{\del g_2}{\del z_2}( z^{*} ) + \ldots\\
+		\vdots\\
+		\frac{\del f}{\del z_n}( z^{*}) = \lambda_1^{*} \frac{\del g_1}{\del z_n} + \lambda_2^{*} \frac{\del g_2}{\del z_n}( z^{*} ) + \ldots\\
+		g_1 ( z^{*}) = 0\\
+		\vdots \\
+		g_m ( z^{*}) =0
+	\end{cases}
+	\]
+	Il y a donc $n+m$ equations avec $n+m$ inconnues.\\
+	On peut definir un probleme equivalent, en passant par la fonction lagrangienne, notamment
+	$ ( z^{*},\lambda^{*}) $ est un point stationnaire de la fonction de Lagrange:
+	\[ 
+	\mathcal{L}: E \times \mathbb{R}^m \to \mathbb{R}
+	\]
+	definie par
+	\[ 
+		\mathcal{L} ( z, \lambda) = f( z) - \sum_{i=1}^{ m} \lambda_i g_i( z) = f( z) - \lambda \cdot g( z) 
+	\]
+\end{thm}
+\subsection{Condition suffisante pour extremas locaux lies}
+\begin{figure}[H]
+    \centering
+    \incfig{extrema-local-lie}
+    \caption{extrema local lie}
+    \label{fig:extrema-local-lie}
+\end{figure}
+Soit $\gamma( t) $ un chemin sur $\Sigma_g, \gamma( 0)=z^{*} $, et
+\[ 
+	\tilde f( t) = f \circ \gamma( t) = f(  \gamma( t) ) 
+\]
+si $\tilde f '' ( 0) >0$ pour tout chemin alors $z^{*}$ est un point de minimum local de $f$ sur $\Sigma_g$.\\
+On considere
+\[ 
+	w^{T} (  H_f ( z^{*}) ) w = D_{ww}  f( z^{*})  \forall w \in T_z( \Sigma_g) = \left\{ v \in \mathbb{R}^n: Dg( z^{*}) \cdot v =0 \right\} 
+\]
+Si on cherche un minimum on s'attend a ce que
+\[ 
+D_{ww}  f( z^{*}) >0
+\]
+Sauf qu'il faut corriger le fait que le chemin puisse etre courbe, donc la condition devient:\\
+Soit $z^{*}\in \Sigma_g$ qui satisfait la condition necessaire, si
+\[ 
+	w^{T} (  H_f ( z^{*}) - \sum_{i=1}^{ m} \lambda_i^{*}H_{g_i} ( z^{*})  ) w >0
+\]
+Alors $z^{*}$ est un point de minimum local de $f$ sur $\Sigma_g$ ( lieu aux contraintes $g_i =0 \forall 1 \leq  i \leq n$).
+\section{Integrales multiples au sens de Riemann}
+But: Etant donne
+\begin{itemize}
+\item Un sousensemble borne $E \subset \mathbb{R}^n$ et
+\item une fonction bornee $f: E \to \mathbb{R}$
+\end{itemize}
+Comme definir
+\[ 
+	\int_E f( x) dx
+\]
+
+On va d'abord definir l'integrale sur un pave de $ \mathbb{R}^n	$, cad un sous-ensemble de $ \mathbb{R}^n$ de la forme
+\[ 
+R = [ a_1,b_1] \times [ a_2,b_2] \times \ldots \times [ a_n,b_n] 
+\]
+ou on suppose $a_i \leq  b_i \quad \forall 1 \leq  i \leq  n$\\
+Le volume de $R$ est defini comme 
+\[ 
+	Vol( R) = \prod_{j=1} ^{n} ( b_j-a_j) 
+\]
+On dit que $R$ est un pave degenere s'il existe $k \in [ n] $ tel que $a_k = b_k$.\\
+Dans ce cas, on aura $Vol( R) =0$.\\
+\begin{defn}[Partition]
+\begin{figure}[H]
+    \centering
+    \incfig{exemple-de-partition}
+    \caption{exemple de partition}
+    \label{fig:exemple-de-partition}
+\end{figure}
+On appelle partition d'un pave $R \subset \mathbb{R}^n$ une collection finie $P$ de paves tel que
+\begin{itemize}
+	\item $\bigcup_{Q \in P} Q= R$ 
+	\item $\forall Q, Q' \in P  Q \neq Q', \ded Q \cap \ded { Q' }= \emptyset$
+\end{itemize}
+
+\end{defn}
+\begin{defn}[Partition tensorielle]
+	Une partition $P$ d'un pave $R$ est dite tensorielle s'il existe pour tout  $ 1 \leq  j \leq  n$.\\
+	\[ 
+		a_j = t_j^{0} \leq t_j^{1} \leq  \ldots, t_j ^{N_j} = b_j
+	\]
+	tel que 
+	\[ 
+	P = \left\{ [ t_1^{\alpha_1}, t_1^{\alpha_1+1}] \times  [ t_1^{\alpha_2}, t_1^{\alpha_2+1}] \times \ldots \times  [ t_1^{\alpha_n}, t_1^{\alpha_n+1}]\right\} \quad 1 \leq  \alpha_i \leq  N_i
+	\]
+	On note alors
+	\[ 
+		P = ( t_1^{0}, \ldots, t_1 ^{N_1}) \otimes ( t_2, \ldots, t_2^{N_2}) \otimes \ldots \otimes ( t_n^{0}, \ldots, t_n^{N_n}) 
+	\]
+	
+\end{defn}
+\begin{defn}[Raffinement d'une partition]
+	Le raffinement d'une partition $P$ d'un pave $R$.
+\begin{figure}[H]
+    \centering
+    \incfig{raffinement-d-une-partition}
+    \caption{raffinement d'une partition}
+    \label{fig:raffinement-d-une-partition}
+\end{figure}
+Soit $P$ et $P'$ deux partitions d'un pave $R$ \\
+On dit que $P'$ est un raffinement de $P$ si pour tout $Q \in P$, la collection 
+\[ 
+P'_Q = \left\{ Q' \in P': Q' \subset Q \right\} 
+\]
+est une partition du pave $Q$.
+
+
+\end{defn}
+\begin{rmq}
+Soit $P'$ un raffinement de $P$.\\
+Si $Q' \in P'$ n'est inclus dans aucun $Q \in P$, alors $vol( R) =0$
+\end{rmq}
+\begin{rmq}
+$P'$ est un raffinement de $P$ si et seulement si
+\[ 
+\forall Q' \in P' \text{ non degenere } \exists Q \in P: Q' \subset Q
+\]
+
+\end{rmq}
+\begin{rmq}
+Si $P'$ est un raffinement tensoriel de $P$, alors pour tout $Q \in P$, la collection 
+\[ 
+P'_Q = \left\{ Q' \in P': Q' \subset Q \right\} 
+\]
+est un raffinement tensoriel de $Q$.
+\end{rmq}
+\begin{lemma}
+Soit $P,P'$ deux partitions d'un pave $R \subset \mathbb{R}^n$, alors il existe toujours un raffinement tensoriel $P''$ de $P$ et $P'$
+\end{lemma}
+\begin{proof}
+Pour $P = \left\{  [ a_1^{i, b_1^{i}}] \times \ldots, i = 1, \ldots, k \right\} $ et 
+\[ 
+P' = \left\{ [ c_1^{j}, d_1^{j}] \times \ldots, j = 1, \ldots, k' \right\}
+\]
+Prenons l'ensemble
+\begin{align*}
+\left\{ a_l^{1}, b_l^{1}, \ldots, a_l^{k}, b_l^{k}, c_l^{1}, d_l^{1}, \ldots c_l^{k'}, d_l^{k'}  \right\} \\
+= \left\{ t_l^{0}, t_l^{1}, \ldots, t_l ^{k+k'} \right\} \text{ tel que } t_l^{0} \leq t_l^{1} \leq  \ldots \leq t_l^{k+k'}
+\end{align*}
+Alors
+\[ 
+	P'' = ( t_1^{0}, \ldots, t_2^{k+k'}) \otimes ( t_2^{0}, \ldots, t_2^{k+k'}) \otimes \ldots
+\]
+est une partition tensorielle qui raffine a la fois $P$ et $P'$
+\end{proof}
+\begin{lemma}
+Soit $P$ une partition d'un pave $R \subset \mathbb{R}^n$.\\
+Alors 
+\[ 
+	vol ( R ) = \sum_{Q \in P}  vol( Q) .
+\]
+
+\end{lemma}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

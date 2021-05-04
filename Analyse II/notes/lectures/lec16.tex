@@ -1,0 +1,117 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{16}{Mon 26 Apr}{Extremas de fonctions}
+\section{Extremas de fonctions}
+
+\begin{defn}[Extremum d'une fonction]
+	Soit $f: E \subset \mathbb{R}^n \to \mathbb{R}$ et $x^{*} \in E$.\\
+	On dit que $f$ admet au point $x^{*}$ un maximum global ( ou absolu) si $\forall x \in E, f( x) \leq f( x^{*}) $ \\
+	On dit que le maximum global est strict si $\forall x \in f( x) < f( x^{*}) \forall x \in E \setminus \left\{ x \right\} $.\\
+	Le maximum est local si $\exists \delta >0 : \forall x \in B( x^{*},\delta) \cap E, f( x) \leq f( x^{*}) $.\\
+	Le maximum local est strict si $\exists \delta >0 \forall x \in B( x^{*},\delta) \cap E \setminus x^{*}, f( x) < f( x^{*}) $.\\
+	Les definitions sont les memes pour un minimum.\\
+	Par extremum local/global on etend un minimum ou un maximum de la fonction.
+\end{defn}
+\subsection{Extremas libres}
+Si l'ensemble $E$ est ouvert
+\begin{figure}[H]
+    \centering
+    \incfig{extremum-libre}
+    \caption{extremum libre et extremum sous contraint}
+    \label{fig:extremum-libre}
+\end{figure}
+Soit $x^{*}$ un point d'extremum pour $f.$ On dit que $x^{*}$ est libre si $x^{*}\in \ded E$ et $ x^{*}$ est sous-contraint si $x^{*}\in \del E$.
+\subsubsection*{Rappel cas $n=1$}
+Soit $f: E \subset \mathbb{R}\to \mathbb{R}$, $I$ ouvert
+\begin{figure}[H]
+    \centering
+    \incfig{fonction-avec-extremas}
+    \caption{fonction avec extremas}
+    \label{fig:fonction-avec-extremas}
+\end{figure}
+\begin{itemize}
+	\item Si $f$ est derivable en $x^{*}$ et $x^{*}$ est un point d'extremum local de $f$, alors $f'( x^{*}) =0$. ( condition necessaire du premier ordre) .
+	\item Si $f$ est deux fois derivable qen $x^{*}$ et $x^{*}$ est  minimum local de $f$, alors $f'( x^{*}) =0, f''( x^{*}) \geq 0$ ( condition necessaire du second ordre) 
+	\item Si $f$ est deux fois differentiable sur $I$, $x^{*} \in I$ tel que $f'( x^{*}) =0$ et $f''( x^{*}) >0$, alors $x^{*}$ est un point minimum local de $f$ ( condition suffisante du second ordre).
+	\item Cas difficile a traiter: $f'( x^{*}) =0, f''( x^{*}) =0$.\\
+		On peut soit regarder les derivees d'ordre superieur ou bien etudier le signe de $g( x) = f( x) - f( x^{*}) $.
+\end{itemize}
+\subsubsection{Cas $n>1$}
+Soit $f= f( x_1, x_2, \ldots, x_n) : E \subset \mathbb{R}^n \to \mathbb{R}$,  $E$ un ouvert non vide.
+\begin{figure}[H]
+    \centering
+    \incfig{fonctions-deux-variables-extremas}
+    \caption{fonctions deux variables extremas}
+    \label{fig:fonctions-deux-variables-extremas}
+\end{figure}
+Soit $v \in \mathbb{R}^{n}, \N { v} =1$. Soit $x^{*}$ un point de maximum local de $f$, i.e.
+\[ 
+	\exists \delta>0 : \forall x \in B( x^{*}, \delta) \cap E, f( x) \leq  f( x^{*}) 
+\]
+On peut considerer 
+\[ 
+	g_v( t) - f( x^{*}+ tv) , \quad t \in ]-\delta, \delta[
+\]
+Si $f$ admet un maximum local en $x^{*}$, alors $g_v( t) $ admet un maximum local en $t=0$.\\
+Si $f$ est differentiable en $x^{*}$, alors $g_v$ est derivable en $t=0$, donc $g'_v( 0) =0$.\\
+Mais $g'_v( 0)= D_v f( x^{*}) = \nabla f( x^{*}) \cdot v =0 \forall v \in \mathbb{R}^{n}, \N { v} =1$.\\
+Donc $\nabla f( x^{*}) =0$ \\
+Donc la condition necessaire du premier ordre est $\nabla f( x^{*}) =0$.\\
+\begin{defn}
+	Soit $f: E \to \mathbb{R}$, $E$ ouvert, differentiable en $x^{*}\in E$. On dit que $x^{*}$ est un point stationnaire si $\nabla f( x^{*}) =0$.
+\end{defn}
+De plus, si $f$ est deux fois differentiable en $x^{*},$ alors $g_v$ est aussi deux fois fois differentiable en $t=0$, donc $g''_v(0) \leq  0$.\\
+Mais $g''_v( 0) = D_{vv} f( x^{*}) = v^{T}H_f( x^{*}) v \leq 0 \forall v \in \mathbb{R}^n, \N { v} =1$
+Donc la condition necessaire du second ordre est donc que $v^{T}H_f( x^{*}) v \leq  0\forall v \in \mathbb{R}^n	$( pour que $f( x^{*}) $ soit un maximum local) .
+\begin{thm}[Condition suffisant du second ordre]
+	Soit $E \subset \mathbb{R}^n$ ouvert non vide, $f: E \to \mathbb{R}$ admettant un extremum local en $x^{*}\in E$.\\
+	Si $f$ est ( une fois) differentiable en $x^{*}$, alors $\nabla f( x^{*}) =0.$ \\
+	Si $f$ est deux fois differentiable en $x^{*}$ et 
+	\begin{itemize}
+		\item $x^{*}$ est un point de maximum local, alors $v^{T}H_f( x^{*}) v \leq 0 \forall v \in \mathbb{R}^n$.
+		\item Si $x^{*}$ est un point de minimum local alors $v^{T}H_f( x^{*}) v \geq 0 \forall v \in \mathbb{R}^n$.
+	\end{itemize}
+		
+\end{thm}
+\begin{defn}[Matrices definies postives]
+	Soit $A \in \mathbb{R}^{n\times n}$, on dit que 
+	\begin{itemize}
+	\item $A$ est definie positive si $x^{T} Ax >0 \forall x \in \mathbb{R}^n\setminus \left\{ 0 \right\} $ 
+	\item $A$ est semi-definie positive si $x^{T}A x \geq 0 \forall x \in \mathbb{R}^n$ 
+	\item memes definitions pour $A $ ( semi-) negative
+	\item $A$ est indefinie si $\exists x,y : x^{T}Ax >0, y^{T}A y \leq 0$	
+	\end{itemize}
+	A toute matrice $A \in \mathbb{R}^{n\times n}$, on peut associer une forme quadratique $Q_A( x) = x^{T}Ax, \quad x \in \mathbb{R}^n$
+			
+\end{defn}
+\begin{lemma}
+Une matrice $A \in \mathbb{R}^{n\times n}$ est definie positive si et seulement si $\exists c >0: x^{T}A x \geq c \N { x} \forall x \in \mathbb{R}^{n}$
+\end{lemma}
+\begin{lemma}
+Soit $A \in \mathbb{R}^{n\times n}$. $A$ est definie positive si et seulement si toutes les valeurs propres sont positives.\\
+De plus $c$ du lemme precedent est la valeur propre minimale.
+\end{lemma}
+\begin{thm}[Condition suffisante d'extremas]
+	Soit $E \subset \mathbb{R}^n$ ouvert non vide, $f: E \to \mathbb{R}$ de classe $C^{2}$ sur $E$, $x^{*}\in E$ un point stationnaire de $f$. ( cad $\nabla f ( x^{*}=0) $). Si $H_f( x^{*}) $ est definie positive, alors $x^{*}$ est un minimum local de $f$.\\
+	Si $H_f( x^{*}) $ est definie negative, alors $f( x^{*}) $ est un maximum local de $f$.
+\end{thm}
+\begin{proof}
+	Puisque $f\in C^{2}( E) $, on peut ecrire un developpement limite de $f$.
+	\[ 
+		f( x) = f( x^{*}) + \nabla f( x^{*}) \cdot ( x-x^{*}) + \frac{1}{2}( x-x^{*}) ^{T}H_f( x^{*}) ( x--x^{*})  + R_f( x)  \forall x \in E.
+	\]
+	Alors, il existe $\delta >0$ tel que $\frac{\N { R_f( x) } }{\N { x-x^{*}} } \leq \frac{c}{4} \forall x \in B( x,\delta) \cap E, x\neq x^{*}.$\\
+	Donc $f( x) \geq  f( x^{*}) + \frac{1}{2}c \N { x-x^{*}}^{2} - \frac{c}{4} \N { x-x^{*}} ^{2} $
+	\[ 
+		= f( x^{*})  + \frac{c}{4} \N { x-x^{*}} 
+	\]
+	Donc $x^{*}$ est un minimum local strict de $f$.
+	
+
+\end{proof}
+
+		
+
+
+	
+\end{document}	

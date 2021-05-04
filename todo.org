@@ -1,0 +1,8 @@
+* DONE s17e3 analyse refaire
+* DONE discrete maths watch lectures
+* DONE reprendre quizz al
+* TODO potentiellement qques idees poster, shs
+* DONE regarde projetprog
+* TODO comprendre pk q/phi_A -phi_B constante en phys
+* TODO Inscription coaching
+* TODO Essayer exo optionnel physique
