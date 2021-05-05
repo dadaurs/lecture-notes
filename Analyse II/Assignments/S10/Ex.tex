@@ -1,0 +1,50 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\begin{document}
+\title{Série 10}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+Montrons d'abord que la fonction $f( x,y) $ est intégrable au sens de Riemann sur $[0,1 ]^{2}$.\\
+Nous allons montrer que pour tout $\epsilon>0$, il existe une partition $P_\epsilon$ de $[0,1]^{2}$ satisfaisant
+\[ 
+	\overline{S}( f,P_\epsilon) -\underline { S} ( f,P_\epsilon) < \epsilon.
+\]
+Faisons d'abord l'observation que $\underline { S} ( f,P) =0$ pour toute partition $P$ de $ [ 0,1] ^{2}$, en effet on peut supposer que tous les éléments $Q \in P$ sont des pavés non dégénérés ( si ils l'étaient, ils ne contribueraient pas à la somme) 	, et alors
+\[ 
+	\underline { S} ( f,P) = \sum_{Q \in P} \inf_{z \in Q} f( z) \vol( Q) 
+\]
+et $\inf_{z \in Q} f( z) = 0 $ pour tout $Q \in P$ car par densité des irrationnels, il existe $ ( a,b)  \in Q$ tel que $a,b \notin \mathbb{Q}$, on en déduit que $\underline { S} ( f,P)$\\
+\hr
+Soit donc $\epsilon>0$, et soit $n \in \mathbb{N}^{*}$ satisfaisant $ \frac{1}{n}< \frac{\epsilon}{2}$.\\
+Soit $k = \frac{\epsilon}{4 ( n-1) } $.\\
+Considérons la partition 
+\[ 
+P_\epsilon = \left\{ [ 0, \frac{1}{n}], [ \frac{1}{n}, \frac{1}{n-1}-k] , [ \frac{1}{n-1}-k, \frac{1}{n-1}+k] , [ \frac{1}{n-1}+k , \frac{1}{n-2}-k] , \ldots ,[ 1-k, 1] 	\right\} \times [ 0,1] 
+\]
+La somme de Darboux supérieure est
+\begin{align*}
+	\overline{S}( f, P_\epsilon) - \underline{S}( f, P_\epsilon) &= \overline{S}( f, P_\epsilon)\\
+								     &= \sum_{Q \in P_\epsilon} \sup_{z \in Q} f( z)  \vol  ( Q) \\
+				     &= \frac{1}{n} + \sum_{i=1}^{ n-1} \sup _{ z \in \left[ \frac{1}{n-i}-k, \frac{1}{n-i}+k\right] \times [ 0,1] } f( z) \vol ( \left[ \frac{1}{n-i}-k, \frac{1}{n-i}+k\right] \times [ 0,1] ) \\
+				     &= \frac{1}{n} + ( n-1) 2k\\
+				     & < \frac{\epsilon}{2} + \frac{\epsilon}{2}  = \epsilon
+\end{align*}
+\section*{2}
+Etant donné que l'intégrale existe, et que pour toute partition $P$ de $[0,1]^{2}$, la somme de Darboux inférieure est nulle, on en déduit que 
+\[ 
+	\int_{[0,1]^{2}} f = 0.
+\]
+
+
+
+
+
+\end{document}
