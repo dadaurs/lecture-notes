@@ -11,7 +11,7 @@
 \title{Question Ouverte 2}
 \author{David Wiedemann}
 \maketitle
-Notons d'abord que, parce que $U^{T}U = \id$, la base  $u_1, \ldots, u_n$ forme une base orthonormale de $ \mathbb{R}^n$.\\
+Notons d'abord que, parce que $U^{T}U = \id$, les vecteurs  $u_1, \ldots, u_n$ forment une base orthonormale de $ \mathbb{R}^n$.\\
 Pour simplifier, on notera
 \[ 
 D = \begin{pmatrix}
@@ -41,10 +41,10 @@ Alors on a
 	
 	\begin{align*}
 	&=  \sum_{i=1}^{ n}\sum_{j=1}^{ n} x_i x_j  \lambda_i  \delta_{i,j} \\
-	&= \sum_{i=1}^{ n}\lambda_i x_{i} \\
-	&= \sum_{i=1}^{ l+1}\lambda_i x_i\\
-	& \geq \sum_{i=1}^{ l+1}\lambda_{l+1} x_i\quad  \text {On utilise que $\lambda_{l+1} \leq  \lambda_i \forall 1 \leq  i \leq l+1 $ } \\
-	& \geq  \lambda_{l+1} \sum_{i=1}^{ l+1}x_i\\
+	&= \sum_{i=1}^{ n}\lambda_i x_{i}^{2} \\
+	&= \sum_{i=1}^{ l+1}\lambda_i x_i^{2}\\
+	& \geq \sum_{i=1}^{ l+1}\lambda_{l+1} x_i^{2}\quad  \text {On utilise que $\lambda_{l+1} \leq  \lambda_i \forall 1 \leq  i \leq l+1 $ } \\
+	& \geq  \lambda_{l+1} \sum_{i=1}^{ l+1}x_i^{2}\\
 	& \geq \lambda_{l+1} .
 \end{align*}
 Ainsi, pour tout élément dans $x \in V^{\perp},$ on a montré que

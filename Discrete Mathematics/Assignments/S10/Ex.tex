@@ -1,0 +1,30 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\begin{document}
+\title{Exercise 10}
+\author{David Wiedemann}
+\maketitle
+First, note that we can suppose that $G$ is not a tree, and thus contains a cycle.\\
+Indeed, if $G$ is a tree, it's spanning tree is $G$, and hence $E( G) \setminus E( T) = \emptyset$.\\
+Thus, suppose that $G$ is a graph with at least one cycle.\\
+We will now show that, if $e \in E( G) \setminus E( T) $, then $e$ is contained in a cycle of $G$.\\
+For the sake of contradiction, suppose that $e= \left\{ a,b \right\} $ \footnote { $a,b \in V$}  is not contained in a cycle.\\
+Then there exists $c \in V$ such that there only is one path $ v_0, \ldots, v_k$ such that $v_0=a, v_k= c$.\\
+Since the spanning tree contains $c$ as a vertice, we deduce that the spanning tree must contain $a$ as a vertex.\\
+\hr
+Hence, choose an edge $e' \in E( T) $ of the form $ \left\{ a,d \right\} $ and which is contained in the same cycle as $e$, hence $e'$ is not a leaf.\\
+Remove $e'$ and add $e$ from $T$, note that the resulting graph is still a tree since we have not added any cycles and that it still contains all the edges of $G$ since $b$ is not a leaf ( it is contained in a cycle).
+
+
+
+	
+
+
+\end{document}

@@ -1,121 +1,148 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\lecture{20}{Wed 05 May}{Exponentielle d'une matrcie}
-\subsection{Exponentielle d'une matrice}
-\begin{defn}[Exponentielle d'une matrice]
-	Pour $ A \in \mathbb{C}^{n\times n}$, on definit
+\lecture{20}{Mon 10 May}{Proprietes de l'integrale de Riemann}
+\subsection{Integrabilite sur un domaine quelconque}
+
+\begin{defn}
+	Soit $E \subset \mathbb{R}^n$ borne et $f: E \to \mathbb{R}$ bornee.\\
+	Soit $ R \subset \mathbb{R}^n$ un pave contenant $E$ et $\tilde f: R \to \mathbb{R}$ le prolongement de $f$ par au dehors de $E$,
 	\[ 
-	e^{A}= \id + A + \frac{1}{2}A^{2} + \ldots
+		\tilde f( x) = f( x) , x \in E, \tilde f( x) =0 si x \in R \setminus E
+	\]
+	
+	On dit que $f$ est integrable au sens de Riemann sur $E$, si $\tilde f \in \mathcal{R}( R) $ ( est Riemann-integrable sur $R$) .\\
+	Dans ce cas, on note
+	\[ 
+		\int_E f( x) dx = \int _R \tilde f ( x) dx
 	\]
 	
 \end{defn}
-\begin{defn}[Norme frobenius pour les matrices complexes]
-	$A \in \mathbb{C}^{n\times m}$,
+\begin{rmq}
+Cette definition de depend pas du choix de $R$.
+\end{rmq}
+\subsection{Proprietes de l'integrale de Riemann}
+\begin{itemize}
+	\item Linearite: $\forall f,g \in \mathcal{R}( E) , \forall \alpha, \beta \in \mathbb{R} $
 	\[ 
-	\N { A} _F = \sqrt{ \sum_{ij} |a_{ij} |^{2}} 
+		\int_E ( \alpha f+ \beta g) = \alpha\int_E f + \beta\int_E g
 	\]
-		
+	Il s'ensuit que $ \mathcal{R}( E) $ est un espace vectoriel
+\item Monotonie: $\forall f, g \in \mathcal{R}( E) $, si $f( x) \leq g( x) \forall x \in E,$ alors
+	\[ 
+		\int_E f( x) dx \leq \int_E g( x) dx
+	\]
+	
+\item Si $f \in \mathcal{R}( E) $, alors $ | f| \in \mathcal{R}( E) , f_+ = \max \left\{ f, 0 \right\} \in \mathcal{R}( E) , f_- = \max \left\{ -f, 0 \right\} \in \mathcal{R}( E) $ 
+		On montre d'abord que $f \in \mathcal{R}( E) \Rightarrow  f_+ \in \mathcal{R}( E) $.\\
+		$f \in \mathcal{R}( E) \Rightarrow \exists R \subset \mathbb{R}^n$ contenant $E$ et $\tilde f \in \mathcal{R}( R) $.\\
+		Donc $\forall \epsilon ,$ il existe une partition $P_\epsilon$ de $R$ tel que
+		\[ 
+			\overline { S} ( \tilde f, P_\epsilon) - \underline { S} ( \tilde f, P_\epsilon) <\epsilon
+		\]
+		\begin{align*}
+			\forall Q \in P_e \text{ on a  } \sup_Q \tilde f_+ - \inf_Q \tilde f_+ \leq  \sup_Q \tilde f - \inf_Q \tilde f	\\
+		\end{align*}
+		Si $\sup \tilde f \geq \inf_Q \tilde f \geq 0$, alors $\tilde f_+ = f $ sur $Q$, et on a egalite.\\
+		Si $\inf_Q \tilde f \leq \sup_Q \tilde f \leq 0$, alors $\tilde f_+ =0$, et on a l'inegalite.\\
+		Si $\sup_Q \tilde f \geq 0 \geq \inf_Q \tilde f$, alors $\sup_Q \tilde f_+ - \underbrace{\inf_Q \tilde f_+}_{=0} = \sup_Q \tilde f \leq  \sup_Q \tilde f - \inf_Q \tilde f$\\
+		Ce qui montre l'inegalite, et ce qui implique que $\tilde f _+$ est integrable.\\
+		Mais alors $f_-$ est integrable et $|f| = f_+ - f_ \in \mathcal{R}( E) $
+	
+	
+	
+\item Si $f \in \mathcal{R}( E)$, alors $| \int_E f( x) dx | \leq  \int_E |f( x) | dx$ 
+	En effet, on a 
+	\begin{align*}
+	f \in \mathcal{R}( E) \Rightarrow |f| \in \mathcal{R}( E) , \text{ de plus } \\
+	f( x) \leq  |f( x) | \Rightarrow  \int_E f( x) dx \leq  \int_E |f( x) | dx	\\
+	- f( x) \leq  |f| \forall x \in E\Rightarrow  -\int_E f( x) dx \leq  \int_E |f( x) | dx
+	\end{align*}
+\item Si $f,g \in \mathcal{R}( E) $, alors $fg \in \mathcal{R}( E) $
+	Si $f,g \in \mathcal{R}( E) , f,g$ sont bornes.\\
+	Soit $M \geq 0: f( x) \leq  M, g( x) \leq  M\forall x \in E$, alors $\forall \epsilon>0$, il existe un pave $R \subset \mathbb{R}^n$ contenant $E$ et une partition $P_\epsilon$ de $R$ tel que
+	\begin{align*}
+		\overline{S}( f,P_\epsilon) - \underline { S} ( f,P_\epsilon) &\leq  \frac{\epsilon}{2M}\\
+	\overline{S}( g,P_\epsilon) - \underline { S} ( g,P_\epsilon) &\leq  \frac{\epsilon}{2M}, 	
+	\end{align*}
+	Maintenant, $\forall Q \in P_\epsilon$, alors
+	\begin{align*}
+		\sup Q fg - \inf_Q fg &\leq  \sup_Q f \sup_Q g - \inf_Q \inf_g\\
+				      & \leq \underbrace{\sup f}_{ \leq M} ( \sup g - \inf g) + \underbrace{\inf g}_{ \leq M} ( \sup f - \inf f) 
+	\end{align*}
+\end{itemize}
+\subsection{Ensembles mesurables au sens de Jordan}
+\begin{defn}[Ensemble mesurable au sens de Jordan]
+	On dit que $E \subset \mathbb{R}^n$ borne est mesurable au sens de Jordan ( ou Jordan-mesurable) si la fonction $ \mathbb{I}_E: E \to \mathbb{R}$, $ \mathbb{I}_E ( x) =1 \forall x \in E$ est integrable sur $E$ au sens de Riemann.\\
+	Dans ce cas, on pose $\vol( E) = \int_E \mathbb{I}_E( x) dx$.\\
+	On dit que $E$ est negligeable si $E$ est Jordan mesurable et $\vol ( E) =0 $.
 \end{defn}
+\subsubsection{Caracterisation des ensembles}
+\subsubsection*{Ensembles mesurables}
+
+$E$ mesurable $\iff $ $\int_E \mathbb{I}_E ( x) dx $ existe $ \mathbb{I}_E \in \mathcal{R}( E) $, donc, $\forall \epsilon>0,$ il existe un pave $R \subset \mathbb{R}^n$ contenant $E$ et une partition $P_\epsilon$ de $R$ tel que
+\begin{align*}
+	\overline{S}( \mathbb{I}_E, P_\epsilon) - \underline { S}  ( \mathbb{I}_E, P_\epsilon) &<\epsilon\\
+\overline{S}( \mathbb{I}_E, P_\epsilon) - \underline { S}  ( \mathbb{I}_E, P_\epsilon) &= \sum_{Q \in P_\epsilon} ( \sup_Q \mathbb{I}_E- \inf_Q \mathbb{I}_E) Vol( Q) \\
+										       &= \sum_{ \substack { Q \in P_\epsilon\\ Q \cap E \neq \emptyset \\ Q \cap R\setminus E \neq \emptyset} } Vol( Q)
+\end{align*}
 \begin{lemma}
-Pour $A \in bbc^{n \times m}$, $B \in \mathbb{C}^{m\times n}$, on a 
+Soit $e \subset \mathbb{R}^n$ borne et $R \subset \mathbb{R}^n$ un pave contenant.\\
+Alors $E$ est mesurable au sens de Jordan si et seulement si $\forall \epsilon>0$, il existe une partition $P_\epsilon$ de  $R$ tel que
 \[ 
-\N { A\cdot B} _F \leq \N { A} _F \cdot \N { B} _F
+	\sum_{ \substack { Q \in P_\epsilon\\ Q \cap E \neq \emptyset \\ Q \cap R\setminus E \neq \emptyset} } Vol( Q) < \epsilon
 \]
-	
+
 \end{lemma}
-\begin{proof}
-On a $ A = \begin{pmatrix}
-a_1^{T}\\\vdots\\a_n^{T}
-\end{pmatrix} $, $B= ( b_1,\ldots, b_n) $, on a
-\begin{align*}
-\N { AB} _F &= \sqrt{\sum_{ij} |AB_{ij} |^{2}} \\
-| ( AB) _{ij} |^{2}&= |a_i^{T} b_j|^{2} \leq  \N { a_i} ^{2} \N { b_j} ^{2}\\
-\N { AB} _F^{2} &= \sum_{ij} | ( AB) _{ij}| ^{2} \leq \sum_{ij} \N { a_i} ^{2} \N { b_j} ^{2}= \sum_{i} \N { a_i} ^{2} \cdot \sum_{j} \N { b_j} ^{2}
-\end{align*}
-
-
-\end{proof}
+\subsubsection*{Ensembles negligeables}
 \begin{lemma}
-La serie $e^{A}$ converge.
+	Soit $E \subset \mathbb{R}^n$ borne, $E$ est negligeable si et seulement si $\forall \epsilon>0$, il existe $K \in \mathbb{N}^{*}$ et une collection de paves tel que $E \subset \bigcup_{i=1} ^{L}Q_i$ et $\sum_{i=1} ^{L}\vol( Q_i) \leq  \epsilon$
 \end{lemma}
 \begin{proof}
-On va considerer les sommes partielles $ e^{A} = \sum_{j=1}^{ \infty } \frac{A^{j}}{j!}, b_n = \sum_{j=1}^{ n}\frac{A^{j}}{j}$\\
-Soient $m,n \in \mathbb{N}$, on considere
+	$E$ mesurable $ \Rightarrow $ $\exists \left\{ Q_1, \ldots, Q_L \right\} : E \subset \bigcup Q_i, \sum \vol ( Q_i) < \epsilon $\\
+	Donc $E$ mesurable $\iff$ $ \mathbb{I}_E \in \mathcal{R}( E) $ et  $\int_E \mathbb{I}_E	dx =0$.\\
+	Soit $R$ un pave contenant $E$, $\forall \epsilon>0, \exists P_\epsilon$ de $R$.\\
+	\begin{align*}
+		\overline{S} (  \mathbb{I}_E, P_\epsilon) - \underline { S} ( \mathbb{I}_E,P_\epsilon)  \leq \epsilon
+	\end{align*}
+	Donc, il faut que $\mathbb{S} ( \mathbb{I}_E, P_\epsilon)< \epsilon $
+	\[ 
+		\mathbb{S}(  \mathbb{I}_E, P_\epsilon) 	= \sum_{ Q \cap E\neq \emptyset}  \vol Q < \epsilon
+	\]
+	Supposons que $\forall \epsilon >0$, il existe une collection $ \left\{ Q_1, \ldots, Q_L \right\} $ telle que $E \subset \bigcup Q_i, \sum_i \vol ( Q_i) < \epsilon$\\
+	Il existe toujours une partition tensorielle $P$ tel que
+	\[ 
+	Q_i = \bigcup _{\substack {  Q \in P\\ Q \in Q_i} } Q
+	\]
+	\begin{align*}
+		\underline { S} ( \mathbb{I}_E, P) \geq 0\\
+		\mathbb{S}(  \mathbb{I}_E, P) = \sum_{\substack{ Q \in P\\Q \cap E \neq \emptyset }} \vol Q = \sum_{i=1}^{ L} \sum _{ \substack { Q \in P_\epsilon\\ Q \subset Q_i} } \vol ( Q) < \epsilon
+	\end{align*}
+Donc
 \begin{align*}
-\N { b_m -b_n} _F &= \N { \sum_{j=n+1}^{ m}\frac{A^{j}}{j!}} _F\\
-\leq \sum_{j=n+1}^{ m} \frac{\N { A} _F^{j}}{j!} \leq  \epsilon
+	\overline{S}( \mathbb{I}_E, P) - \underline { S} ( \mathbb{I}_E, P) < \epsilon\\
+	\overline{S}( \mathbb{I}_E, P)  < \epsilon
+	\Rightarrow 
 \end{align*}
-Donc les sommes partielles sont de Cauchy.
+
+	
 \end{proof}
-On definit $ e^{tA} = \sum_{j=0}^{ \infty } \frac{( tA) ^{j}}{j!} $.\\
-On a 
-\begin{align*}
-\frac{d}{dt} e^{At} = A e^{A t} 
-\end{align*}
 \begin{thm}
-La solution du systeme d'equations 
-\[ 
-	x' = Ax, \quad x( 0) =v
-\]
-est 
-\[ 
-	x( t) = e^{At} \cdot v.
-\]
-
+Un ensemble borne $E \subset \mathbb{R}^n$ est mesurable si et seulement si $\del E$ est negligeable.
 \end{thm}
+\begin{crly}
+Soient $E, F \subset \mathbb{R}^n$ borne et mesurables, alors
+\begin{itemize}
+\item $E \cap F, E \cup F, E \setminus F, \ded E, \overline{E}$ sont mesurables.
+\end{itemize}
+
+\end{crly}
 \begin{proof}
-	soit $x( t) = e^{At} v$, on a clairement que $x( 0) = v$ et
-	\[ 
-		\frac{d}{dt}x( t) = A \cdot e^{At} v = Ax( t) 	
-	\]
-	
+\begin{itemize}
+\item $\mathbb{I}_{E \cap F} = \mathbb{I}_E \mathbb{I}_F$, idem pour le reste.
+\end{itemize}
+
 \end{proof}
-\subsection*{Methode de calcul}
-\begin{defn}[Matrice nilpotente]
-	Une matrice $N$ est nilpotente si il existe $k \in \mathbb{N}$ tel que $N^{k}=0$.\\
-\end{defn}
-\begin{thm}
-Chaque matrice $A \in \mathbb{C}^{n\times n}$ peut etre factorisee comme 
-\[ 
-	A= P ( diag( \lambda_1,\ldots, \lambda_n)+N ) P^{-1}
-\]
-ou $N \in \mathbb{C}^{n\times n}$ est nilpotente, $P \in \mathbb{C}^{n\times n}$ est inversible, $\lambda_1, \ldots,$ sont des valeurs propres de $A$ et
-\[ 
-	diag( \lambda_1,\ldots,\lambda_n)  \text{ et $N$ commutent } .
-\]
 
-
-\end{thm}
-\begin{lemma}
-$A,B \in \mathbb{C}^{n\times n}, $ si $A \cdot B= B \cdot A$, alors on a que 
-\[ 
-e^{A+B} = e^{A} e^{B} .
-\]
-
-\end{lemma}
-
-\begin{align*}
-	e^{tA} &= \sum_{i=0}^{ \infty } \frac{t^{i}A^{i}}{i!}, \quad A = P( D+N) P^{-1}\\
-	       &= \sum_{i=0}^{ \infty } \frac{t^{i}}{i!} ( P ( D+N) P^{-1}) ^{i}\\
-	       &= \sum_{i=0}^{ \infty } \frac{t^{i}}{i!}P ( D+N) ^{i}P^{-1}\\
-	       &= P ( \sum_{i=0}^{ \infty } \frac{t^{i}}{i!} ( D+N) ^{i}) P^{-1}\\
-	       &= P e^{t( D+N) } P^{-1}\\
-	       &= P e^{tD} e^{tN} P^{-1}\\
-	       &= P ( \sum_{i=0}^{ \infty } \frac{t^{i}D^{i}}{i!}) ( \sum_{i=0}^{ \infty } \frac{t^{i}N^{i}}{i!}) P^{-1}\\
-	       &= P ( \sum_{i=0}^{ \infty }\frac{( tD) ^{i}}{i!}) ( \sum_{i=0}^{ k-1} \frac{t^{i}N^{i}}{i!}) P^{-1}	
-\end{align*}
-Donc, si $D = \begin{pmatrix}
-	\lambda_1 & & \\
-		  & \ddots &\\
-		  & & \lambda_n
-\end{pmatrix} $, alors
-\[ 
-e^{tD} = \begin{pmatrix}
-	e^{t\lambda_1}  & &\\
-		       & \ddots &\\
-		       & & e^{t \lambda_n} 
-\end{pmatrix} 
-\]
 
 
 
