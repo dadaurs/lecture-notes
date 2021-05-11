@@ -1,0 +1,97 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{21}{Tue 11 May}{forme normale de Jordan}
+\begin{lemma}
+Pour $A,B \in \mathbb{C}^{n\times n}$, si $AB=BA$, alors 
+\[ 
+e^{A+B}  = e^{A} e^{B} 
+\]
+\end{lemma}
+On va montrer que pour chaque matrice $A \in \mathbb{C}^{n\times n}$ se laisse factoriser comme
+\[ 
+A = P \cdot 
+( \begin{pmatrix}
+	\lambda_1 & & \\
+		  & \ddots & \\
+		  && \lambda_n
+\end{pmatrix} +N  )\cdot P^{-1}
+\]
+Ou $P$ est inversible et $N \in \mathbb{C}^{n\times n}$ est nilpotente.\\
+En effet, avec ce theoreme, on peut voir que
+\[ 
+	e^{tA}  = P e^{t ( D+N) } P^{-1}
+\]
+ou $D$ est la matrice diagonale.\\
+Un theoreme demontre en exercice donne alors
+\begin{align*}
+	e^{tA}  &= P e^{ t( D+N) } P^{-1}\\
+	&= P e^{t D}  e^{tN} P^{-1}\\
+	&= P
+	\begin{pmatrix}
+		e^{t \lambda_1}  & & \\
+				 & \ddots & \\
+				 & & e^{t \lambda_n} 
+	\end{pmatrix} \left[ \sum_{i=0}^{ j} \frac{t^{i}}{i!}N^{i}\right] P^{-1}
+\end{align*}
+\begin{defn}[Bloc de Jordan]
+Un bloc de jorand est done par
+\[ 
+\begin{pmatrix}
+	\lambda_1 & 1 & & \\
+		  & \ddots & 1 & \\
+		  & & & \lambda_n
+\end{pmatrix} 
+\]
+Une matrice $A \in \mathbb{C}^{n\times n}$ est en forme normale de Jordan si 
+\[ 
+A = \begin{pmatrix}
+	B_1 & & \\
+	    & \ddots & \\
+	    & & B_k
+\end{pmatrix} 
+\]
+ou les $B_i$ sont des blocs de Jordan.
+\end{defn}
+\begin{lemma}
+Si $J \in K^{n\times n}$ est en forme noramle de Jordan et $J = D +N$, alors $DN = ND$.
+\end{lemma}
+\begin{thm}
+	Soit $A \in K^{n\times n}$ et $m( x) \in K[x]$ un polynome avec coefficient dominant egal a 1.\\
+	De plus soit $m( A) =0$.\\
+	Soit $\deg m $ minimal parmis tous les polynomes qui satisfont cette condition, alors $m( x) $ est unique et est appele polynome minimal de $A$.
+\end{thm}
+\begin{proof}
+	Soit $m'( x) \in K[x]$ aussi un tel polynome, cad $m'( A) =0$, $\deg m' = \deg m$ et de coefficient dominant $1$.\\
+	On va montrer que $m'|m$.\\
+	Par division euclidienne, on a 
+	\[ 
+		m( x) = q( x)  m'( x)  + r( x) 
+	\]
+Or 
+\[ 
+	m( A) =0 = q( A) m'( A)  + r( A)  \Rightarrow  r( A) =0 \Rightarrow r =0
+\]
+Et donc $m = m' q \Rightarrow \deg q =0$
+\end{proof}
+\begin{defn}
+	Soit $A \in K^{n\times n}$ une matrice.\\
+	Soit $W \subset K^{n}$, $W$ est invariant sur $A$, si $\forall w \in W, A \cdot w \in W$
+\end{defn}
+\begin{lemma}
+	Soit $f( x) \in K[x]$ et $A \in K^{n\times n}$, soit $v \in \ker f( A) $, alors $Av \in \ker f( A)  $.\\
+	cad que $\ker f( A) $ est invariant sur $A$.
+\end{lemma}
+\begin{proof}
+	A montrer: pour $v \in K^{n},$ si $f( A) v =0 $, alors
+	\[ 
+		f( A) A v =0
+	\]
+	Mais $f( A) A v = A f( A) v =0$	
+\end{proof}
+ 
+	
+
+	
+
+
+\end{document}	

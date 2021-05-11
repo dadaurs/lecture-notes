@@ -5,6 +5,12 @@
 - la 5g permet un acces plus unifie et fiable aux medecins ainsi qu'aux patients.
 
 
+*  pour rapport final
+** Resume des defis
+La plupart des pays en voie de developpement n'ont pas encore les capacites energetiques pour maintenir un reseau 5G, de plus, en particulier en Afrique, les temperatures elevees rendent le maintien des servers lies a la 5G particulierement difficile.
+** Contexte
+La mondialisation a montre l'importance de la communication par internet, mais est-ce que les pays en voie de developpement ont reellement besoin de ces nouvelles technologies?
+
 
 ** Sources
 https://www.digi.com/blog/post/5g-and-the-future-of-telemedicine-remote-surgery
