@@ -1,0 +1,118 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{20}{Tue 11 May}{circuits electriques}
+\subsubsection*{Exemples de conducteur}
+
+\begin{itemize}
+\item Metaux: $e^{-}$ ``libres'': $n^{-}\neq 0, n^{+}=0$ 
+\item electrolytes: presence des ions positifs et negatifs qui permet un courant
+\item plasmas: $e^{-}$ et ions mobiles : $n^{+}\neq 0, n^{-}=0$
+\end{itemize}
+Par simplicite, on supposera qu'un seul type de porteur mobile de charges, qui est positif.\\
+\subsection{ La densite de courant }
+La densite de courant $\vec{j}$ est donnee par 
+\[ 
+	\vec{j}( \vec{r},t ) = \rho_{el} ( \vec{r},t)  \cdot \vec{u}( \vec{r},t) = q n ( \vec{r},t) \cdot \vec{u}( \vec{r},t) 
+\]
+Le courant a travers une surface $S$, on a 
+\[ 
+	I( t) = \iint_S \vec{j} \cdot \vec{dS}
+\]
+\subsection{La resistance $R$, la loi d'Ohm et l'effet Joule}
+\subsubsection{La resistance}
+
+\begin{figure}[ht]
+    \centering
+    \incfig{circuit-avec-resistance}
+    \caption{circuit avec resistance}
+    \label{fig:circuit-avec-resistance}
+\end{figure}
+Une resistence $R( U) = \frac{ \text{ voltage applique } }{ \text{ courant } }= \frac{U}{I} $, $ [ R] = \frac{V}{A}= \text{ Ohm } = \Omega$	
+\begin{exemple}[Diode a vide]
+\begin{figure}[ht]
+    \centering
+    \incfig{diode-a-vide}
+    \caption{diode a vide}
+    \label{fig:diode-a-vide}
+\end{figure}
+La cathode est un filament chauffe $\to$ emission d'electrons.\\
+\begin{itemize}
+\item $U_A > U_C$ \\
+	Alors les electrons sont accelere vers l'anode, et il y a donc un courant qui circule de l'anode vers la cathode.
+\item Si $U_A < U_C$ \\
+	On trouve que les electrons restent autour de la cathode, et il n'y a donc pas de courant.
+\end{itemize}
+\end{exemple}
+Dans certains cas ( par exemple les metaux et les electrolytes a $T=$ const), $I \propto U$. \\
+Donc, $R$ est independant de $U$, et on parle alors de loi d'Ohm.
+\[ 
+R= \frac{U}{I}= \text{ const. } 
+\]
+De maniere plus generale, on ecrity la loi d'Ohm de la maniere
+\[ 
+\vec{j} = \sigma_c \vec{E} = \frac{1}{\rho_c} \vec{E}
+\]
+A partir de $\vec{j}= \sigma_c E$, on peut deriver
+\[ 
+U=RI
+\]
+On considere un conducteur cylindrique et deux plaques chargees avec un potentiel $\phi_A$ resp. $\phi_B$, on a
+\[ 
+U = \phi_A - \phi_B = El = \frac{j }{\sigma_c} l = \frac{j S}{\sigma_c S}l = \frac{I}{\sigma_c S} l = RI
+\]
+Donc $U = RI$ avec  $ R = \frac{l}{\sigma_c S} = \frac{\rho_c l}{S}= \text{ const. } $.\\
+La resistance depend donc de la geometrie $( S,l) $ et du type de conducteur $ (  \sigma_c, \rho_c) $.\\
+\subsubsection{L'effet joule}
+Si une charge $q$ se deplace de $A$ a $B$, le travail exerce par le champ $E$ sur la charge est $( \phi_A- \phi_B)q $ ( propriete 6 ) du potentiel.\\
+Dans une resistance, cette energie est transformee en chaleur $\to $ effet Joule.\\
+On aimerait calculer la puissance de production de chaleur, elle est donnee par
+\[ 
+	P = \frac{ dq  ( \phi_A - \phi_B) }{dt} = \frac{dq}{dt} U = IU = \frac{U ^{2}}{R}
+\]
+Cette puissance est fourne piar l'appareil a fem.
+\subsection{Conservation de charge, equations de continuite}
+La charge est toujours conservee, donc on peut considerer un volume fixe de surface $S$, donc on a
+\begin{align*}
+	\frac{d}{dt} \iiint_V \rho_{el}  ( \vec{r},t) dV &= - \iint_S \vec{j}( \vec{r},t) \\
+	\iiint_V \frac{\del \rho_{el} }{\del t} ( \vec{r},t) dV = - \iiint_V \nabla \cdot \vec{j}( \vec{r},t) dV
+\end{align*}
+Valable $\forall V$, et on en deduit que
+\[ 
+\frac{\del \rho_{el}}{\del t} + \nabla \cdot \vec{j} =0
+\]
+\subsection{Circuits electriques et lois de Kirchhoff}
+On considere ici les elements suivants:
+\begin{itemize}
+	\item Une source de tension continue ( appareil a fem.) 
+	\item resistence
+	\item capacite 
+		\begin{itemize}
+		\item cas 1: Le condensateur se charge, donc $U= \frac{q}{c}; I = \frac{dq }{dt}$
+		\item cas 2: Le condensateur se decharge, donc $U= \frac{q}{c}; I =- \frac{dq }{dt}$
+		\end{itemize}
+
+	\item fil: element de resistance negligeable
+		
+\end{itemize}
+\subsection{Lois de Kirchhoff}
+\begin{itemize}
+\item K1, loi des noeuds\\
+	La somme de tous les courants qui arrivent a un noeud d'un circuit est egale a la somme de tous les courants qui le quittent \\
+	$\to $ dans les noeuds, il n'y a pas d'accumulation de charge
+\item K2, Loi des mailles \\
+	La somme algebrique des variations  de potentiel le long de toutes les mailles fermees d'un circuit est nul.\\
+	Ceci vient du fait que
+	\[ 
+\oint _\gamma \vec{E} \vec{dl} =0	
+	\]
+Cette loi est valable en electrostatique, magnetostatique ou si les variations temporelles ne sont pas trop importantes.	
+\end{itemize}
+
+
+
+
+
+
+
+
+\end{document}	
