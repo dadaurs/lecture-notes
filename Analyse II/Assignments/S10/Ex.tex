@@ -21,22 +21,29 @@ Faisons d'abord l'observation que $\underline { S} ( f,P) =0$ pour toute partiti
 \[ 
 	\underline { S} ( f,P) = \sum_{Q \in P} \inf_{z \in Q} f( z) \vol( Q) 
 \]
-et $\inf_{z \in Q} f( z) = 0 $ pour tout $Q \in P$ car par densité des irrationnels, il existe $ ( a,b)  \in Q$ tel que $a,b \notin \mathbb{Q}$, on en déduit que $\underline { S} ( f,P)$\\
+et $\inf_{z \in Q} f( z) = 0 $ pour tout $Q \in P$ car par densité des irrationnels, il existe $ ( a,b)  \in Q$ tel que $a,b \notin \mathbb{Q}$; on en déduit que $\underline { S} ( f,P)=0$\\
 \hr
-Soit donc $\epsilon>0$, et soit $n \in \mathbb{N}^{*}$ satisfaisant $ \frac{1}{n}< \frac{\epsilon}{2}$.\\
-Soit $k = \frac{\epsilon}{4 ( n-1) } $.\\
+Soit donc $\epsilon>0$, et soit $n \in \mathbb{N}^{*}$ le plus petit nombre naturel satisfaisant $ \frac{1}{n}< \frac{\epsilon}{2}$.\\
+Soit $k = \frac{\epsilon}{4 n} $.\\
+On definit $A_i = \left[ \frac{1}{i}-k, \frac{1}{i}+k\right] \times [ 0,1] $ si $i>1$ et par $A_1=\left[1-k, 1\right] \times [ 0,1]$. \\
+Definissons de plus $B_i = \left[ \frac{1}{i}+k, \frac{1}{i-1} -k \right]\times [ 0,1]  $.\\
+
 Considérons la partition 
-\[ 
-P_\epsilon = \left\{ [ 0, \frac{1}{n}], [ \frac{1}{n}, \frac{1}{n-1}-k] , [ \frac{1}{n-1}-k, \frac{1}{n-1}+k] , [ \frac{1}{n-1}+k , \frac{1}{n-2}-k] , \ldots ,[ 1-k, 1] 	\right\} \times [ 0,1] 
-\]
-La somme de Darboux supérieure est
+\begin{align*}
+	P_\epsilon = \left\{ [ 0, \frac{1}{n}-k] \times [ 0,1] ,A_n ,B_n, A_{n-1} ,B_{n-1} , \ldots, B_1, A_1  \right\} 
+\end{align*}
+Il est clair que $P_\epsilon$ est une partition de $ [ 0,1] ^{2}$ car $ \frac{1}{2} ( \frac{1}{i-1} - \frac{1}{i} ) > ( \frac{1}{n-1} - \frac{1}{n}  )= \frac{1}{2n^{2}} > \frac{\epsilon}{4n} =k $.\\
+On peut maintenat calculer la différence des sommes de Darboux.
 \begin{align*}
 	\overline{S}( f, P_\epsilon) - \underline{S}( f, P_\epsilon) &= \overline{S}( f, P_\epsilon)\\
 								     &= \sum_{Q \in P_\epsilon} \sup_{z \in Q} f( z)  \vol  ( Q) \\
-				     &= \frac{1}{n} + \sum_{i=1}^{ n-1} \sup _{ z \in \left[ \frac{1}{n-i}-k, \frac{1}{n-i}+k\right] \times [ 0,1] } f( z) \vol ( \left[ \frac{1}{n-i}-k, \frac{1}{n-i}+k\right] \times [ 0,1] ) \\
-				     &= \frac{1}{n} + ( n-1) 2k\\
+								     &= \frac{1}{n} + k + \sum_{i=1}^{ n} \sup_{z \in A_i}  f( z) + \sum_{i=1}^{ n}\sup_{z \in B_i} f( z)  \\
+								     \intertext{On utilise maintenant que dans l'intervalle $B_i$, il n'y a pas de nombres de la forme $ \frac{1}{k}, k \in \mathbb{N}^{*}$}
+								     &= \frac{1}{n}+ \sum_{i=1}^{ n} \sup_{z \in A_i}  f( z) \\
+				     & <  \frac{\epsilon}{2} +  2n k\\
 				     & < \frac{\epsilon}{2} + \frac{\epsilon}{2}  = \epsilon
 \end{align*}
+Ce qui montre le fait que l'intégrale existe.
 \section*{2}
 Etant donné que l'intégrale existe, et que pour toute partition $P$ de $[0,1]^{2}$, la somme de Darboux inférieure est nulle, on en déduit que 
 \[ 
