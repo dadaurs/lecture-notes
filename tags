@@ -194,7 +194,7 @@ Caracterisation des ensembles fermes	Analyse II/notes/lectures/lec5.tex	/^\\subs
 Caracterisation des ensembles fermes	current-course/notes/lectures/lec5.tex	/^\\subsection{Caracterisation des ensembles fermes}$/;"	u	section:#1""L'espace $R^{n}$
 Caracterisation des ensembles ouverts	Analyse II/notes/lectures/lec5.tex	/^\\subsection{Caracterisation des ensembles ouverts}$/;"	u	section:L'espace $R^{n}$
 Caracterisation des ensembles ouverts	current-course/notes/lectures/lec5.tex	/^\\subsection{Caracterisation des ensembles ouverts}$/;"	u	section:#1""L'espace $R^{n}$
-Caracterisation des fonctions integrables	Analyse II/notes/lectures/lec21.tex	/^\\subsection{Caracterisation des fonctions integrables}$/;"	u
+Caracterisation des fonctions integrables	Analyse II/notes/lectures/lec21.tex	/^\\subsection{Caracterisation des fonctions integrables}$/;"	u	section:Integrales multiples au sens de Riemann
 Caracterisation des fonctions integrables	current-course/notes/lectures/lec21.tex	/^\\subsection{Caracterisation des fonctions integrables}$/;"	u	section:#1""Integrales multiples au sens de Riemann
 Caracterisation equivalente de fonctions integrables	Analyse II/notes/lectures/lec19.tex	/^\\subsection{Caracterisation equivalente de fonctions integrables}$/;"	u	section:Integrales multiples au sens de Riemann
 Caracterisation equivalente de fonctions integrables	current-course/notes/lectures/lec19.tex	/^\\subsection{Caracterisation equivalente de fonctions integrables}$/;"	u	section:#1""Integrales multiples au sens de Riemann
@@ -463,7 +463,8 @@ Formulation du probleme	Analyse II/notes/lectures/lec17.tex	/^\\subsection*{Form
 Formulation du probleme	current-course/notes/lectures/lec17.tex	/^\\subsection*{Formulation du probleme}$/;"	u	section:#1""Extremas de fonctions
 Formule d'integrales iterees	Analyse II/notes/lectures/lec19.tex	/^\\subsection{Formule d'integrales iterees}$/;"	u	section:Integrales multiples au sens de Riemann
 Formule d'integrales iterees	current-course/notes/lectures/lec19.tex	/^\\subsection{Formule d'integrales iterees}$/;"	u	section:#1""Integrales multiples au sens de Riemann
-Formule des integrales iterees	Analyse II/notes/lectures/lec21.tex	/^\\subsection{Formule des integrales iterees}$/;"	u
+Formule des integrales iterees	Analyse II/notes/lectures/lec21.tex	/^\\subsection{Formule des integrales iterees}$/;"	u	section:Integrales multiples au sens de Riemann
+Formule des integrales iterees	current-course/notes/lectures/lec21.tex	/^\\subsection{Formule des integrales iterees}$/;"	u	section:#1""Integrales multiples au sens de Riemann
 Formules d'integration	Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\subsection{Formules d'integration}$/;"	u	section:Groupes""Notations du cours et maths necessaires
 Frequently asked questions	Algebre Lineaire II/Algebre-Lineaire-2/README.md	/^# Frequently asked questions$/;"	c
 GetCols	Algebre Lineaire II/Algebre-Lineaire-2/Programming/Matrix.h	/^  const unsigned & GetCols() const$/;"	f	class:matrix	typeref:typename:const unsigned &
@@ -710,8 +711,9 @@ Prolongement par continuite	Analyse II/notes/lectures/lec7.tex	/^\\subsection{Pr
 Prolongement par continuite	current-course/notes/lectures/lec7.tex	/^\\subsection{Prolongement par continuite}$/;"	u	section:#1""Derivees de fonctions a plusieurs variables
 Proprietes de base	Fluides et Electromagnetisme/notes/lectures/lec15.tex	/^\\subsubsection{Proprietes de base}$/;"	b	subsection:Groupes""L'electromagnetisme""Le role des conducteurs en electrostatique
 Proprietes de l'integrale de Riemann	Analyse II/notes/lectures/lec20.tex	/^\\subsection{Proprietes de l'integrale de Riemann}$/;"	u	section:Integrales multiples au sens de Riemann
-Proprietes de l'integrale de Riemann	Analyse II/notes/lectures/lec21.tex	/^\\subsection{Proprietes de l'integrale de Riemann}$/;"	u
+Proprietes de l'integrale de Riemann	Analyse II/notes/lectures/lec21.tex	/^\\subsection{Proprietes de l'integrale de Riemann}$/;"	u	section:Integrales multiples au sens de Riemann
 Proprietes de l'integrale de Riemann	current-course/notes/lectures/lec20.tex	/^\\subsection{Proprietes de l'integrale de Riemann}$/;"	u	section:#1""Integrales multiples au sens de Riemann
+Proprietes de l'integrale de Riemann	current-course/notes/lectures/lec21.tex	/^\\subsection{Proprietes de l'integrale de Riemann}$/;"	u	section:#1""Integrales multiples au sens de Riemann
 Proprietes de l'operation de limite	Analyse II/notes/lectures/lec6.tex	/^\\subsection{Proprietes de l'operation de limite}$/;"	u	section:Fonctions de plusieurs variables
 Proprietes de l'operation de limite	current-course/notes/lectures/lec6.tex	/^\\subsection{Proprietes de l'operation de limite}$/;"	u	section:#1""Fonctions de plusieurs variables
 Proprietes de preuves formelles	BA1/Structures Algebriques/notes/lectures/lec1.tex	/^\\subsubsection{Proprietes de preuves formelles}$/;"	b	section:Preuves
