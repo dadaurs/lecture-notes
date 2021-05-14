@@ -11,57 +11,43 @@
 \title{Exercise 10}
 \author{David Wiedemann}
 \maketitle
+As a preliminary result, we will show that, given a graph $G$ and a walk $( u_1, \ldots, u_k) $ of $G$, there exists $I \subset [ n] $, such that $ ( v_1, \ldots, v_j)  $, $ \left\{ v_i, 0< i \leq j \right\} \subset \left\{ u_i, 0 <i \leq k \right\} $ is a path, and such that $v_1= u_1, v_j = u_k$ .\\
+Indeed, consider the walk $( u_1, \ldots, u_k) $ of $G$, if $\forall i,j \in [ n] , i\neq j: u_i \neq u_j$, then $u_1, \ldots, u_k$ already is a walk and we are finished.\\
+Set $I= [ n] $
+Hence, suppose that there exists $i,j \in [ n] , i\neq j$ such that $u_i = u_j$, without loss of generality we can suppose that $i<j$.\\
+Then, we can redefine  $I = I\setminus \left\{ i+1, \ldots, j \right\} $.\\
+We now obtain a new walk given by $ ( v_1, \ldots, v_j) = \left\{ u_i \right\}_{i=1, i \in I} ^{n}$.\\
+We now repeat this algorithm until we are left with a path.\\
+Since a walk is always of finite length and the size of $I$ decreases by at least 1 at each step, we are guaranteed that the algorithm finishes.\\
+Also notice that $v_1$ and $v_j$ always stay the same at each step of the algorithm, which proves that $v_1= u_1, v_j = u_k$.\\
+\hr
 We will write $V $ for the set of vertices of  $G$.\\
 Let $e \in E( G) \setminus E( T) $, we can write $e$ as $e= \left\{ a,b \right\} , a,b \in V$.\\
 Since $E( T)$ is connected, there exists a path in $T$ of the form $(a, v_1, \ldots, v_n,b), v_i \in G $.\\
 We define $ K = T + e - \left\{ v_n,b \right\} $.\\
 Clearly, $K$ is still spanning since it still contains $v_n, a $ and $b$ \footnote { $v_n$ is still contained in $K$ because $ \left\{ v_{n-1} , v_n \right\} $ is contained in $K$} .\\
 We now show that $K$ is a tree.\\
+
 First, we show that $K$ still is connected.\\
 Indeed, consider two vertices $x,y \in V$.\\
 Consider the path of $T$ which would connect $x$ to $y$: $x, u_0,\ldots, u_n, y$.\\
-If there exists $0 \leq i \leq n$ such that $ \left\{ u_i, u_{i+1}  \right\} =e$, replace $ u_i, u_{i+1} $ in the path with the path connecting $a$ and $b$, we are left with a path contained in $K$.\\
-Hence, $K$ is connected.\\
+If $\forall i \in [ n] $, $ \left\{ u_1, u_{i+1}  \right\} \neq \left\{ v_n,b \right\} $, 
+If there exists $0 \leq i \leq n$ such that $ \left\{ u_i, u_{i+1}  \right\} = \left\{ v_n,b \right\}  $, replace $ u_i, u_{i+1} $ in the path with the path $v_n, v_{n-1} ,\ldots, a, b$, we are left with a walk contained in $K$.\\
+Using the lemma proven, we extract a path from this walk.\\
+This walk being contained in $K$, we deduce that $K$ is connected.\\
+
 We now show that $K$ contains no cycle.\\
 For the sake of contradiction, suppose $K$ contains a cycle of the form $c_0, \ldots, c_k, c_0$.\\
 If $\forall 0 \leq j \leq k, \left\{ c_j, c_{j+1}  \right\} \neq e$, then the cycle is contained in $T$ which is a contradiction since $T$ is a tree.\\
 Hence, suppose there exists a $j$ such that $ \left\{ c_j, c_{j+1}  \right\} = e$, without loss of generality, suppose that $c_j =a$ and $c_{j+1} =b$	.\\
-If that were the case, we could again create a new cycle of the form $ c_0, \ldots, c_{j-1} , a,v_1 , \ldots, v_n, b , c_{j+2} ,\ldots, c_n, c_0 $.\\
-This cycle is clearly contained in $T$.\\
-Hence, the existence of a cycle in $K$ implies the existence of a cycle in $T$, which is impossible since $T$
+If that were the case, we could again create a new walk of the form $ c_0, \ldots, c_{j-1} ,$ $ a,v_1 ,  \ldots, v_n, b , c_{j+2} ,\ldots, c_n, c_0 $, which by definition is contained in $T$ and in $K$.\\
+We now extract a path from this walk, clearly this path is a cycle contained in $T$.\\
+Hence, the existence of a cycle in $K$ implies the existence of a cycle in $T$, which is impossible since $T$ is a tree.\\
+\hr
+We deduce that $K$ also is a spanning tree of $T$, and the result follows.
 
 
 
-
-
-%Since $e$ is not in a spanning tree, we know that $a$ and $b$ are not leafs.\\
-%Indeed, if they were leafs, they wouldn't be contained in the edges of $T$.\\
-%Note that there exists at least one edge, connected to $e$ which is contained in $E( T) $, without loss of generality we can suppose it to be of the form $e'= \left\{ b,c \right\} \in E( T)  $.\\
-
-%We now consider the graph given by $K=T - e' + e $.\\
-%We first prove that it is a tree, we will then show that it is spanning.\\
-%First, notice that $K$ does not contain any cycles.\\
-%For the sake of contradiction, suppose it contains a cycle of the form $ l_0, \ldots, l_n, l_0$, $l_i \in V( T) \forall 0 \leq i \leq  n $.\\
-%If $l_i \neq a,b$, then the cycle is contained in $T$, which contradicts the fact that $T$ is a tree.\\
-%Hence, suppose that $\exists k$ such that $l_k =a, $
-
-
-
-
-%First, note that we can suppose that $G$ is not a tree, and thus contains a cycle.\\
-%Indeed, if $G$ is a tree, it's spanning tree is $G$, and hence $E( G) \setminus E( T) = \emptyset$.\\
-%Thus, suppose that $G$ is a graph with at least one cycle.\\
-%We will now show that, if $e \in E( G) \setminus E( T) $, then $e$ is contained in a cycle of $G$.\\
-%For the sake of contradiction, suppose that $e= \left\{ a,b \right\} ,\quad a,b \in V$  is not contained in a cycle.\\
-%Then there exists $c \in V$ such that there only is one path $ v_0, \ldots, v_k$ such that $v_0=a, v_k= c$.\\
-%Since the spanning tree contains $c$ as a vertice, we deduce that the spanning tree must contain $a$ as a vertex.\\
-%\hr
-%Hence, choose an edge $e' \in E( T) $ of the form $ \left\{ a,d \right\} $ and which is contained in the same cycle as $e$, hence $e'$ is not a leaf.\\
-%Remove $e'$ and add $e$ from $T$, note that the resulting graph is still a tree since we have not added any cycles and that it still contains all the edges of $G$ since $b$ is not a leaf ( it is contained in a cycle).
-
-
-
-	
 
 
 \end{document}
