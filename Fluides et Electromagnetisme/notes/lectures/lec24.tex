@@ -1,0 +1,121 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{24}{Tue 25 May}{Lois d'induction}
+\begin{rmq}
+\begin{itemize}
+\item Orientation relative de $d \vec{l}$ et $\vec{dS}$ est selon la regle de la main droite
+\item Faraday est aussi valable si l'orientation et/ou la forme du fil ( et donc aussi de la surface $S$ ) varie au cours du temps.
+\item comment faire si le fil a plusieurs boucles?
+	On somme simplement sur les boucles, notamment
+	\begin{align*}
+		\epsilon_{ind} &= - \frac{d}{dt} \Phi_1 - \frac{d}{dt}\Phi_2 = - \frac{d}{dt}\Phi_{tot} 
+	\end{align*}
+	
+\end{itemize}
+
+\end{rmq}
+\subsection{Loi de Faraday differentielle}
+$\to$  Prenons un chemin $\gamma$ fixe dans le temps; le champ $\vec{E}$ est induit meme s'il n'y a pas de fil conducteur.
+Calculons
+\begin{align*}
+\oint_\gamma \vec{E} \cdot \vec{dl} &= - \frac{d}{dt}\iint_{S \text{ avec bord $\gamma$  } } \vec{B} \cdot \vec{dS}
+\end{align*}
+$\gamma$ est un chemin ferme, fixe mais sinon arbitraire. On peut donc egalement choisir $S$ fixe.\\
+Dans ce cas, on a
+\begin{align*}
+- \frac{d}{dt}\iint_{S} \vec{B}\cdot \vec{dS} &= - \iint_S \frac{\del \vec{B}}{\del t} \vec{dS}
+\intertext{En plus, le theoreme de Stokes nous donne }
+\oint_\gamma \vec{E}\cdot \vec{dl} &= \iint_S \nabla \times \vec{E} \cdot \vec{dS}
+\intertext{Et donc}
+\iint_S ( \nabla \times \vec{E} + \frac{\del \vec{B}}{\del t}) \cdot \vec{dS} = 0 \forall S \text{ fixe } \\
+\intertext{On conclut que}
+\nabla \times \vec{E} = - \frac{\del \vec{B}}{\del t}
+\end{align*}
+Ce qui est la loi de faraday differentielle.
+\subsection{La regle de Lenz}
+Quelle est la direction du courant  ( et aussi du champ $\vec{E}$ ) induit?\\
+$\to $ Regle de Lenz:
+\textit { ``Le courant induit $I$ dans la boucle est oriente tel que le champ $\vec{B}$ qu'il cree lui-meme s'oppose au changement du flux magnetique'' } 
+\begin{exemple}
+\begin{figure}[H]
+    \centering
+    \incfig{cannette-experience}
+    \caption{cannette experience}
+    \label{fig:cannette-experience}
+\end{figure}
+Si on applique soudainement une grande intensite, la cannette est dechiree en deux.\\
+Par Lenz: le courant induit dans la canette tente de contreagir le changement du flux, donc il y a une force de Lorentz
+\[ 
+I_{ind} \vec{dl} \times \vec{B}_b
+\]
+\end{exemple}
+\subsection{Circuits electriques en presence de phenomenes d'induction}
+\subsubsection{Self-Inductance}
+Cas d'une bobine ( = solenoide).
+Le champ magnetique genere par le solenoide genere un flux $\Phi$ a travers la bobine elle-meme.
+Pour chaque boucle, on a 
+\[ 
+\Phi = BS = \mu_0 I n S
+\]
+La bobine de longueur $l$  a $nl$ boucles, donc
+\[ 
+\Phi_{tot} = \Phi n l = \mu_0 n^{2} l sI \coloneqq LI
+\]
+Avec $L = \mu_0 n^{2} lS$ est l'auto-inductance ou ``self'' de la bobine. 
+\[ 
+[ L] = \frac{Tm^{2}}{A}= \text{ Henry } = H
+\]
+Si $\frac{dI}{dt}\neq 0 \Rightarrow  \frac{d \Phi_{tot}}{ dt} \neq 0$, donc la bobine induit une tension dans elle-meme!
+\[ 
+\epsilon_{ind} = - \frac{d \Phi_{tot} }{dt}= - L \frac{dI}{dt}
+\]
+\subsubsection{Circuit electrique avec une self}
+Si on ferme $S,$ $I$ commence a circuler $\Rightarrow$ 
+\begin{itemize}
+\item chute du potentiel a travers $R: -RI$ 
+\item chute du potentiel a travers $L: U_{ind} = - L \frac{dI }{dt}$ 
+\end{itemize}
+En appliquant la loi des mailles, on trouve
+\[ 
+\epsilon - RI - L \frac{dI}{dt}=0 \iff L \frac{dI}{dt}+ RI = \epsilon
+\]
+\subsubsection{Energie magnetique}
+Multiplions la loi des mailles pour le circuit $RL$ par $I \Rightarrow $ equation de la conservation d'energie du circuit.\\
+On obtine donc
+\[ 
+\underbrace{\epsilon I}_{ \text{ puissance fournie par la fem } } = \underbrace{RI^{2}}_{ \text{ energie dans la resistance } } + \underbrace{IL \frac{dI}{dt}}_{ \text{ energie stockee dans la bobine. } }
+\]
+Le dernier terme est donc la puissance necessaire pour que les charges puissent surmonter la tension induite $\epsilon_{ind} = - L \frac{dI}{dt}$.\\
+La puissance $IL \frac{dI}{dt}$ est stockee dans le champ $B$ de la bobine en forme d'energie magnetique.\\
+En passant de $I=0$ a $I= I_0$ dans un lapse de temps $[0, t_0]$, l'energie stockee est
+\begin{align*}
+	W_{self } &= \int_{ 0 }^{ t_0 }P dt \\
+		  &= \int_{ 0 }^{ t_0 }I L \frac{dI}{dt}dt\\
+		  &= \int_{ 0 }^{ t_0 }\frac{d}{dt}( \frac{1}{2}L I^{2}) dt\\
+		  &= \frac{1}{2} L ( I^{2}( t_0) - I( 0)^{2} )  = \frac{1}{2}L I_0^{2}
+\end{align*}
+Pour une bobine ideale ( longue par rapport au diametre, etc), on peut exprimer
+\[ 
+L= \mu_0 n^{2} l S; I = \frac{B}{\mu_0 n}
+\]
+Ainsi,
+\begin{align*}
+
+W_{self}  = \frac{1}{2}L I^{2} = \frac{1}{2}\mu_0 n^{2}l S \frac{B^{2}}{\mu_0^{2}n^{2}} = \frac{B^{2}}{ 2 \mu_0} l S\\
+= \iiint_{ \text{ interieur de la bobine } } B^{2} \frac{1}{2\mu_0}dV \approx \iiint_{ \text{ tout l'espace } } \frac{B^{2}}{2\mu_0}dV
+\end{align*}
+On generalise donc
+\[ 
+e_B = \frac{1}{2}\frac{B^{2}}{\mu_0}
+\]
+En rajoutant la d'ensite d'energie electrique, on trouve
+\[ 
+e_{EB} = \frac{\epsilon_0 E^{2}}{2} + \frac{B^{2}}{2 \mu_0}
+\]
+	
+
+
+
+
+
+\end{document}	
