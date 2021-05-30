@@ -9,3 +9,5 @@
 *.synctex.gz
 *.thm
 *.toc
+tags
+current-course/
