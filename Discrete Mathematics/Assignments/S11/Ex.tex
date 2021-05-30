@@ -37,6 +37,14 @@ L &= \begin{pmatrix}
 	\vdots & \vdots & \vdots  & \ddots & \vdots\\
 	-1 & -1 &-1 &  \ldots  & n-1\\
 \end{vmatrix} 
+\intertext{We can now add the first line to every other line, yielding the following matrix}
+\det L_0 &= \begin{vmatrix}
+	0 & 1 & 1 & \ldots  & 1\\
+	-1 &n & 0 & \ldots & 0\\
+	-1 & 0 &n &  \ldots &0\\
+	\vdots & \vdots & \vdots  & \ddots & \vdots\\
+	-1 & 0 &0 &  \ldots  & n\\
+\end{vmatrix} 
 \intertext{Then we exchange the first and last row, as well as the first and last collumn, this, again, does not change the value of the determinant.}
 \det L_0 &= \begin{vmatrix}
 	n &0 & 0 & \ldots & -1\\
@@ -56,11 +64,9 @@ L &= \begin{pmatrix}
 \end{align*}
 We can now use Kirchhof's theorem to see that
 \[ 
-	\# \textbf{ number of spanning trees of $G$ } = n^{n-3} ( n-2) 
+	\# \textbf{ number of spanning trees of $G$ } = n^{n-3} ( n-2) .
 \]
-Note that if $n \leq 3$, then removing an edge yields a disconnected graph, which does not contain a spanning tree.\\
-
-Alternatively, one could notice that the number of spanning trees of $G$ is the number of spanning trees of $K_n$ minus the number of spanning trees which do not contain $ \left\{ 1 \right\} $ minus the number of spanning trees which do not contain $ \left\{ n \right\}$, but why do that when you can have fun with row operations.
+Note that if $n=1$ , removing an edge yields an empty tree, which clearly doesn't contain a spanning tree.
 
 
 

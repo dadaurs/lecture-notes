@@ -1,0 +1,69 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{14}{Sat 29 May}{Finite probability spaces}
+\section{Finite probability spaces and probabilistic methods}
+
+\begin{defn}[Finite probability space]
+	A finite probabilite space is a pair $( \Omega, P) $ , where $\Omega$ is a finite set and $P : 2^{\Omega}\to [ 0,1] $ such that
+	\begin{enumerate}
+		\item $P( \emptyset) =0$ 
+		\item $P( \Omega) =1$ 
+		\item $P( A\cup B) = P( A) + P( B) $ for any two disjoint sets $A,B \subset \Omega$ 
+	\end{enumerate}
+\end{defn}
+The set $\Omega$ can be thought as the set of all possible outcomes of some random experiment.
+The elements of $\Omega$ are called elementary events. Subsets of $\Omega$ are called events.\\
+Let $w\in \Omega	, A,B \subset \Omega$ 
+\begin{itemize}
+\item $w \in A \leftrightarrow$ event $A$ occured
+\item $w \in A\cap B \leftrightarrow$ both events occured
+\item $A\cap B = \emptyset \leftrightarrow$ events $A$  and $B$ are incompatible
+\item $P( A) \leftrightarrow$ the probability of event $A$ 
+\end{itemize}
+\subsection{A random graph}
+We define 
+\[ 
+\Omega= \mathcal{G}_n \coloneqq \text{ set of all possible labelled graphs on vertex set  } V = \left\{ 1, \ldots, n \right\} 
+\]
+for $A \subset \mathcal{G}_n$ .\\
+We define the probability function to be
+\[ 
+	P( A)  \coloneqq \frac{|A|}{|\Omega|}= |A| 2^{- \binom n 2}
+\]
+\begin{propo}
+A random graph is almost never a tree, i.e.
+\[ 
+	\lim_{n \to  + \infty} P( `` \text{ A graph in $\mathcal{G}_n$ is a tree } '' ) =0
+\]
+
+\end{propo}
+\begin{proof}
+\[ 
+	P( T_n) = \frac{|T_n|}{| \mathcal{G}_n|}
+\]
+By caley's theorem $|T_n| = n^{n-2}$ , hence
+\[ 
+	\lim_{n \to  + \infty} \frac{n^{n-2}}{2^{ \frac{n ( n-1) }{2}}}= \lim_{n \to  + \infty} e^{- \ln( 2) \frac{n( n-1) }{2}+ ( n-2) \ln ( n) } =0
+\]
+
+\end{proof}
+\begin{defn}[independent events]
+	Two events $A,B$ in a  probability space $(  \Omega, P) $ are called independent if
+	\[ 
+		P( A \cap B) = P( A) \cdot P( B) 
+	\]
+	
+\end{defn}
+One can easily generate this definition
+\begin{defn}
+	Events $A_1, \ldots, A_n \subset \Omega	$ are independent if for each set of indices $I \subset [ n] $ 
+	\[ 
+		P( \bigcap_{i \in I} A_i) = \prod_{i\in I} P( A_i) 		
+	\]
+	
+	
+\end{defn}
+
+
+
+\end{document}	

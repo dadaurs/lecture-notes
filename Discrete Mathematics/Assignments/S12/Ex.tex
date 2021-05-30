@@ -1,0 +1,47 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\begin{document}
+\title{Exercise 12}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+We prove the double implication.\\
+$ \Rightarrow $ \\
+Let us denote by $A$ the adjacency matrix.\\
+First suppose that $G$ contains a cycle of length three, without loss of generality, we can suppose that the three vertices of the cycle are numbered by $1,2$ and $3.$ \\
+Hence, $ ( 1,2) \in E( G) $ , and we deduce that the $( 1,2) $ entry of the adjacency matrix is different from 0.\\
+Now consider the $( 1,2) $ entry of $A^{2}$, applying the formula for matrix multiplication yields
+\[ 
+\left( A^{2} \right)_{1,2} = \sum_{i=1}^{ n} A_{1,i} A_{i,2} 
+\]
+Note that if $i=3$ , by defintion $A_{1,3} A_{3,1} =1$, and, since all other terms of the sum are nonnegative, $ ( A^{2}) _{1,2} \geq 1$.\\
+$\Leftarrow$ \\
+Now suppose that $G$ is a graph such that $A_{i,j} \neq 0$ and $( A^{2}) _{i,j} \neq 0 $.\\
+This implies that the vertices $i $ and $j$ are adjacent.\\
+Furthermore, this implies that
+\[ 
+\sum_{k=1}^{ n}A_{i,k} A_{k,j} \neq 0
+\]
+This implies that there exists $l \in [ n] $ such that $A_{i,l} = A_{l,j} = 1$, and hence $ ( i,j) , ( i,l) , ( l,j) \in E( G) $, which means $G$ contains a triangle.
+\section*{2}
+We will proceed by induction on the number $n$  of vertices of $T$ which are not leafs.\\
+If $n=1$, let $v$ be the vertice of degree different to 1 and $l_1, \ldots, l_k$ the set of all leafs.\\
+Since $ f( l_i) = g( l_i) \forall i \in [ k]  $ and since $f$ and $G$ are bijections on the set of vertices, we immediatly deduce that $f( v) = g( v) $ .\\
+Suppose the result shown for all natural numbers smaller than $n$, we will now show it for $n+1$.\\
+Let $l_1, \ldots, l_k$ again be the set of all the leafs.\\
+We first prove that all vertices $v$  which are adjacent to a leaf satisfy $f( v) = g( v) $ .\\
+Indeed, let $l$ be a leaf adjacent to $v$ , then $( v,l) \in E( T) $ implies that $f(v) , f( l) $ are adjacent and that $g( v) , g( l) $ are adjacent.\\
+However, since by hypothesis $g( l) = f( l) $, and since a graph isomorphism preserves the degrees of all vertices, we deduce that $f( v) = g( v) $ .\\
+We now consider a new tree $T' = T - \left\{ l_1, \ldots, l_k \right\} $.\\
+Note that all leafs of $l \in T'$ satisfy that $ f( l) = g( l) $.\\
+Also note that, since a tree always contains a leaf, the number of vertices which are not leafs of $T'$ is smaller than the number of vertices which are not leafs of $T$.\\
+Thus, we can apply our induction hypothesis to see that $\forall v \in V(  T')$ , $g( v) = f( v) $ and this concludes the proof.
+
+\end{document}

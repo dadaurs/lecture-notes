@@ -1,0 +1,57 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\begin{document}
+\title{Série 13}
+\author{David Wiedemann}
+\maketitle
+Soit $V( t) $ une primitive de $v( t) $ , on peut réecrire l'équation différentielle par le théorème fondamental de l'analyse par:
+\begin{align*}
+	\int_{ 1 }^{ x } v( s)ds &= \frac{v( x) ^{2}}{x}\\
+	V( x) - V( 1	) &= \frac{ v( x) ^{2}}{x}
+	\intertext{ En dérivant par rapport à $x$, on trouve l'équation différentielle }
+	v( x) &= \frac{2 v( x) v'( x) x - v( x) ^{2}}{x^{2}}\\
+	v( x)  &= 2 v'( x) x - v\\
+	v'( x)  &= \frac{v( x) }{2x}+ \frac{1}{2}x
+\end{align*}
+On voit facilement qu'une solution à l'équation différentielle homogène associée est de la forme
+\begin{align*}
+	y( t) = C  \sqrt { t} 
+\end{align*}
+On peut chercher une solution particulière à l'équation différentielle en considérant un polynôme quelconque de degré 2.\\
+Soit $ w( t) = a t^{2} + bt + c$, en substituant dans l'équation différentielle, on trouve
+\begin{align*}
+	2at + b &= \frac{at^{2}+ bt + c}{2t} + \frac{1}{2}t\\
+	2at + b &= \frac{1}{2}at +\frac{1}{2}b + \frac{1}{2}t + \frac{c}{2t}
+\end{align*}
+Ainsi, en comparant les exposants, on obtient la condition
+\[ 
+2a = \frac{1}{2}a + \frac{1}{2} \Rightarrow  a = \frac{1}{3}
+\]
+De plus, il est clair que $c=b=0$ .\\
+Ainsi, on trouve que $\frac{ t^{2}}{3}$ est une solution particulière de l'équation différentielle.\\
+On en déduit que la forme de la solution générale est 
+\[ 
+	v( t) = \frac{t^{2}}{3}+ C e^{\frac{1}{4}t^{2}} 
+\]
+On utilisant la condition initiale que $v( 1) = 0$ , on déduit que
+\[ 
+\frac{1}{3}+ C \sqrt { 1}  = 0 \Rightarrow  C = -\frac{1}{3}
+\]
+Ainsi la solution à l'équation différentielle est 
+\[ 
+	v( t) = \frac{t^{2} - \sqrt { t} }{3} 
+\]
+
+
+
+
+
+
+\end{document}
