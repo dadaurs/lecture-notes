@@ -22,62 +22,54 @@ Car la norme de $ e^{i n \theta} $ est égale à 1 pour tout valeur de $n$  et d
 \]
 De même, si $ \lim_{n \to  + \infty} \lambda^{n}= 0$ , alors il faut que $ \lim_{n \to  + \infty} |\lambda|^{n}=0$ et un résultat d'analyse I implique alors que $ |\lambda| <1$.\\
 
+On dénotera par $ \underline 0$ la matrice nulle.\\
 On montre maintenant la double implication.\\
 $ \Rightarrow $ \\
-Etant donné que $A$ est diagonalisable, il existe deux matrices $D, U \in \mathbb{C}^{n\times n}$ tel que $D$ est diagonale, $U$ inversible et telle que l'égalité suivante soit satisfaite
+Montrons que si $ \lim_{j \to  + \infty} A^{j}= \underline 0,$ alors $|\lambda_i|<1, \forall i \in \left\{ 1, \ldots, n \right\} $.\\
+$A$ etant diagonalisable, on va considérer une base de vecteurs propres $v_1, \ldots, v_n$.\\
+Notons que, car $ \lim_{j \to  + \infty} A^{j} = \underline{0}$, en particulier, on a que $ \lim_{j \to  + \infty} A^{j} v = 0$.\\
+Ainsi, on a que 
 \[ 
-A = U D U^{-1}.
+\lim_{j \to  + \infty} A^{j} v_i = \lim_{j \to  + \infty} \lambda_i^{j} v_i = 0
 \]
-Ecrivons 
+Car $v_i $ est non nul, on en déduit que $|\lambda_i|< 1$.\\
+Ainsi, pour tout $i \in \left\{ 1, \ldots, n \right\} $ , on a $ |\lambda_i| < 1$.\\
+$ \Leftarrow$ \\
+Supposons que $ \forall i \in \left\{ 1, \ldots, n \right\} $ on a $ |\lambda_i|< 1$ , on va montrer que $ \lim_{j \to  + \infty} A^{j}= \underline 0$ .\\
+Soit $V$ une matrice inversible telle que
 \[ 
-D = 
-\begin{pmatrix}
-	\lambda_1 & &\\
+A= V DV^{-1}, \quad D = \begin{pmatrix}
+	\lambda_1 &  &\\
 		  & \ddots &\\
 		  & & \lambda_n
-\end{pmatrix} 
-.\]
-On obtient alors
+\end{pmatrix} 	
+\]
+Soit à nouveau $ v_1, \ldots, v_n $ une base diagonalisant $A$, on a que
+\[ 
+\lim_{j \to  + \infty} A^{j} v_i = \lim_{j  \to  + \infty} \lambda_i^{j} v_i =0
+\]
+Ainsi, soit $w \in \mathbb{C}^{n}$, on sait qu'on peut exprimer $w$ comme combinaison linéaire des $v_i$:
+\[ 
+w = \sum_{i=1}^{ n} \alpha_i v_i
+\]
+Ainsi, on a 
 \begin{align*}
-\lim_{k \to  + \infty} A^{k} &= \lim_{k \to  + \infty} U D^{k} U^{-1}\\
-			     &=U (  \lim_{k \to  + \infty}D^{k} ) U^{-1}\\
-			     &= U ( \lim_{k \to  + \infty} 
-			     \begin{pmatrix}
-				     \lambda_1 ^{k} &  & \\
-						    & \ddots &\\
-						    &  & \lambda_n^{k}
-			     \end{pmatrix} 
-			     ) U^{-1} = 0_n
-			     \intertext{En multipliant par $U^{-1}$ à gauche et par $U$ à droite, on trouve}
-			     \lim_{k \to  + \infty} 
-			     \begin{pmatrix}
-				     \lambda_1^{k} & & \\
-						   & \ddots &\\
-						   & & \lambda_n^{k}
-			     \end{pmatrix} &= 0
+\lim_{j \to  + \infty} A^{j} w &= \lim_{j \to  + \infty} A^{j} ( \sum_{i=1}^{ n}\alpha_i v_i) \\
+&= \lim_{j \to  + \infty} \sum_{i=1}^{ n} \alpha_i \lambda_i^{j} v_i
+\intertext{car chaque terme de la somme converge, on a }
+&= \sum_{i=1}^{ n}\alpha_i \lim_{j \to  + \infty} \lambda_i^{j}v_i \\
+&= \sum_{i=1}^{ n} 0 = 0
 \end{align*}
-Et on en déduit que pour tout $i = 1, \ldots, n$, on a $|\lambda_i|< 1	.$ \\
-$\Leftarrow$ \\
-Si $|\lambda_i| < 1$ pour tout $i = 1, \ldots, n$ , on a
-\begin{align*}
-	\lim_{k \to  + \infty} A ^{k} &= U ( \lim_{k \to  + \infty} D^{k}) U^{-1}\\
-				      &= U (  \lim_{k \to  + \infty} 
-				      \begin{pmatrix}
-					      \lambda_1^{k} & & \\
-							& \ddots & \\
-							& & \lambda_n^{k}
-				      \end{pmatrix} 
-				      ) U^{-1}
-				      \intertext{Etant donné que pour $i = 1, \ldots, n$ , on a $ | \lambda_i | < 1$, en passant à la limite, on trouve}
-				      &= U ( 
-				      \begin{pmatrix}
-					      0 & & \\
-						& \ddots & \\
-						& & 0
-				      \end{pmatrix} ) U^{-1}\\
-				      &= 0_n
-\end{align*}
-Ce qui prouve l'assertion.
+Car pour tout $w \in \mathbb{C}^{n}, \quad \lim_{j \to  + \infty} A^{j} w = 0 $, ceci implique que
+\[ 
+\lim_{j \to  + \infty} A^{j} =0.
+\]
+
+
+
+	
+
+	
 
 
 
