@@ -27,13 +27,13 @@ Now suppose that $G$ is a graph such that $A_{i,j} \neq 0$ and $( A^{2}) _{i,j} 
 This implies that the vertices $i $ and $j$ are adjacent.\\
 Furthermore, this implies that
 \[ 
-\sum_{k=1}^{ n}A_{i,k} A_{k,j} \neq 0
+\sum_{k=1}^{ n}A_{i,k} A_{k,j} \neq 0.
 \]
 This implies that there exists $l \in [ n] $ such that $A_{i,l} = A_{l,j} = 1$, and hence $ ( i,j) , ( i,l) , ( l,j) \in E( G) $, which means $G$ contains a triangle.
 \section*{2}
 We will proceed by induction on the number $n$  of vertices of $T$ which are not leafs.\\
 If $n=1$, let $v$ be the vertice of degree different to 1 and $l_1, \ldots, l_k$ the set of all leafs.\\
-Since $ f( l_i) = g( l_i) \forall i \in [ k]  $ and since $f$ and $G$ are bijections on the set of vertices, we immediatly deduce that $f( v) = g( v) $ .\\
+Since $ f( l_i) = g( l_i) \forall i \in [ k]  $ and since $f$ and $g$ are bijections on the set of vertices, we immediatly deduce that $f( v) = g( v) $ .\\
 Suppose the result shown for all natural numbers smaller than $n$, we will now show it for $n+1$.\\
 Let $l_1, \ldots, l_k$ again be the set of all the leafs.\\
 We first prove that all vertices $v$  which are adjacent to a leaf satisfy $f( v) = g( v) $ .\\

@@ -1,0 +1,100 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{25}{Mon 31 May}{theoremes d'existence et edo du second ordre}
+Soit $I \subset \mathbb{R}$ un intervalle ouvert, $E \subset \mathbb{R}^n$ ouvert, $\vec{f}: I \times E \to \mathbb{R}^{n}$. On considere le probleme de Cauchy:\\
+Trouver $\vec{u} : I \to \mathbb{R}^{n}$ de classe $C^{1}$ tel que
+\[ 
+	\begin{cases}
+	\vec{u}'( t) = \vec{f}( t,u( t) ) \forall t \in I\\
+	u( t_0) = u_0
+	\end{cases}
+\]
+\begin{thm}[Cauchy-Peano]
+	Si $\vec{f}$ est continue, alors $\forall ( t_0, \vec{u}_0) \in I \times E$ , il existe au moins une solution locale $( J,u) $ du probleme de Cauchy avec $J \subset I$.
+\end{thm}
+\begin{thm}[Cauchy-Lipschitz/version locale]
+	Si $\vec{f}$ est continue et localement lipschitzienne par rapport au deuxieme argument, alors pour tout $ ( t_0, u_0) \in I \times E$, il existe une unique solution locale $ ( J,u) $ du probleme de Cauchy avec $J \subset I$.	
+\end{thm}
+\begin{defn}
+Soit $I \subset \mathbb{R}$ ouvert et $\vec{f} : I \times \mathbb{R}^{n}\to \mathbb{R}^n$.\\\
+On dit que $\vec{f}$ est globalement Lipschitzienne par rapport au deuxieme argument s'il existe une fonction continue non negative $l : I \to \mathbb{R}_+$ telle que
+\[ 
+	\N { f( t,\vec{u}) - f( t,v) } \leq  l( t) \N { u -v}  \forall u,v \in \mathbb{R}^n
+\]
+\end{defn}
+\begin{thm}[Cauchy-Lipschitz/ version globale]
+	Si $\vec{f}$ est globalement lipschitzienne par rapport au deuxieme argument alors $\forall ( t_0, \vec{u_0}) \in I \times \mathbb{R}^n$ il existe une unique solution globale $u \in C^{1}( I, \mathbb{R}^n) $ du probleme de Cauchy.
+\end{thm}
+\subsection{EDO du second ordre}
+On cherche des solutions a des expressions du type
+\[ 
+	u''( t) = f( t,u( t) , u'( t) ) 
+\]
+\begin{itemize}
+\item $I \subset \mathbb{R}$ ouvert
+\item $E \subset \mathbb{R}^{2}$ ouvert
+\item $f: I \times E \to \mathbb{R}$ continue
+\end{itemize}
+On cherche $u: I \to \mathbb{R}$ de classe $C^{2}$.
+On peut reecrire ce systeme comme systeme d'EDO du premier ordre.
+\begin{align*}
+	u_1( t) = u( t) \\
+	u_2(t ) = u'(t ) \\
+	\begin{cases}
+		u_1'( t) = u_2( t) \\
+		u_2'( t) = f( t,u( t) ,u_2( t) ) 
+	\end{cases}
+\end{align*}
+Ainsi, si on considere le probleme de Cauchy
+\begin{align*}
+	u'( t) = f( t,u( t) ) \\
+	u( t_0 ) = u_0 = \begin{pmatrix}
+	x_0\\y_0
+	\end{pmatrix} 
+\end{align*}
+\subsubsection{EDO lineaires du second ordre}
+\[ 
+	u'' ( t) = g( t) - a( t) u'( t) - b( t) u( t) , \quad t \in I \subset \mathbb{R}
+\]
+avec $g,a,b\in C^{0}( I) $ .\\
+On peut prendre le probleme de Cauchy 
+\[ 
+\begin{cases}
+	u''( t) + a( t) u'( t) + b( t) u( t) = g( t) \\
+	u( t_0) = u_0, u'( t_0) =v_0
+\end{cases}
+\]
+Pour trouver la solution on peut d'abord prendre le probleme homogene associe, 
+\[ 
+	u''( t) + a( t) u'( t) + b( t) u( t) =0
+\]
+\begin{defn}
+On dit que deux solutions $z_1, z_2: I\to \mathbb{R}$ de classe $C^{2}$ de l'equation homogene
+\[ 
+	u''( t) + a( t) u'( t) + b( t) u( t) =0
+\]
+Sont lineairement independantes si $\forall \alpha, \beta\in \mathbb{R}$ 
+\[ 
+	\alpha z_1( t) + \beta z_2( t) = 0 \forall t \in I \Rightarrow \alpha = \beta =0
+\]
+Inversement  $z_1, z_2$ sont lineairements independants si il existe deux constantes $\alpha, \beta$ non simultanement nulles telles que
+\[ 
+\alpha z_1 + \beta z_2 = 0
+\]
+\end{defn}
+Soit $S = \left\{ z \in C^{2}( I) : z'' + az' + bz = 0 \right\} $ l'ensemble des solutions de l'equation homogene.
+\begin{itemize}
+\item $S$ est un espace vectoriel
+\item $S$ est un espace vectoriel de dimension 2 et
+	\[ 
+	S = \left\{ C_1 z_1 + C_2 z_2: C_1, C_2 \in \mathbb{R} \right\} 
+	\]
+	
+\end{itemize}	
+
+
+
+
+
+
+\end{document}	

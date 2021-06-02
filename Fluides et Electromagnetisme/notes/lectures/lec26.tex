@@ -1,0 +1,121 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{26}{Tue 01 Jun}{consequences des equations de maxwell}
+\subsection{Ondes electromagnetiques dans le vide}
+Dans le vide, $\rho_{el} = 0, \vec{j} = 0$, alors on peut reecrire les equations de maxwell comme
+\begin{enumerate}
+\item $\nabla \cdot \vec{E} = 0$ 
+\item $\nabla \times \vec{E} = - \frac{\del \vec{B}}{\del t}$ 
+\item $\nabla\cdot \vec{B} = 0$ 
+\item $\nabla \times \vec{B} = \epsilon \mu_0 \frac{\del \vec{E}}{\del t}$ 
+\end{enumerate}
+\subsubsection*{Identite utile}
+
+Soit $\vec{A}$ un champ vectoriel, alors
+\[ 
+	\nabla \times ( \nabla \times \vec{A}) = \nabla ( \nabla \cdot A) - \Delta \vec{A}
+\]
+Prenons le rotationnel de $ ( 2) $, on obtient
+\begin{align*}
+	\nabla \times ( \nabla \times \vec{E}) &= - \nabla \times ( \frac{\del \vec{B}}{\del t}) \\
+					       &=  - \frac{\del}{\del t}(  \epsilon_0 \mu_0 \frac{\del \vec{E}}{\del t}) \\
+					       &= \nabla ( \underbrace{\nabla \cdot \vec{E}}_{ = 0}) - \Delta \vec{E}\\
+					       \intertext{Finalement, }
+					       \frac{\del ^{2} E}{\del t ^{2}}= \frac{1}{\epsilon_0 \mu_0 }\Delta \vec{E}
+\end{align*}
+$\vec{E}$ satisfait une equation d'onde!\\
+$\vec{B}$ aussi: rot de $( 4) + ( 2) $ 
+Ainsi, on trouve 
+\[ 
+\Rightarrow \frac{\del ^{2}B}{\del t^{2}}= \frac{1}{\epsilon_0 \mu_0} \Delta \vec{B}
+\]
+En observant que $c= \frac{1}{ \sqrt{\epsilon_0 \mu_0} }$ , Maxwell a conclut correctement que la lumiere est une onde electromagnetique.\\
+C'est vrai pour d'autres types de radiation.
+\subsection{Ondes planes dans le vide }
+On cherche des solutions du type ondes sinusoidales planes, avec la notation complexe.
+\begin{align*}
+\tilde { \vec{E}} ( \vec{r},t) =\tilde {  \vec{E_0}  } e^{i ( \omega t - \vec{k} \cdot \vec{r}) } \\
+\tilde { \vec{B}} ( \vec{r},t) =\tilde {  \vec{B_0}   }e^{i ( \omega' t - \vec{k'} \cdot \vec{r}) } 
+\end{align*}
+$\tilde { \vec{E_0} }$ et $\tilde { \vec{B_0} }$ sont des vecteurs .\\
+Pour satisfaire l'equation d'onde, il faut que
+\[ 
+	- \omega^{2} = \frac{1}{\epsilon_0 \mu_0} (  - \vec{k}^{2}) \Rightarrow 
+\]
+En appliquant le fait que $\nabla \cdot \vec{E} =0$ 
+\begin{align*}
+\begin{pmatrix}
+\del x\\ \del y \\ \del z
+\end{pmatrix} \cdot 
+\begin{pmatrix}
+	E_{0x} e^{i ( \omega t - kz) } \\
+	E_{0y} e^{i ( \omega t - kz) } \\
+	E_{0z} e^{i ( \omega t - kz) } \\
+\end{pmatrix} = 0
+\end{align*}
+Et on conclut que $E_{0z} = 0 \Rightarrow  \vec{E_0} \perp \vec{k}$, donc l'onde est transversale.
+On prend le cas ( particulier ) $E_{0} || e_x $, alors on a
+\[ 
+	\vec{E}( \vec{r},t) = E_{ox} e^{i ( \omega t - kz) } e_x
+\]
+On a, par la loi de Faraday,
+\[ 
+\nabla \times \vec{E} = - \frac{\del \vec{B}}{\del t}
+\]
+\begin{align*}
+\begin{pmatrix}
+\del x\\ \del y \\ \del z
+\end{pmatrix} \times
+\begin{pmatrix}
+	E_{0x}  e^{i ( \omega t - k z) } \\ 0 \\0
+\end{pmatrix} =
+\begin{pmatrix}
+	0 \\ E_{0x} e^{i ( \omega t - kz) } ( - ik) \\ 0
+\end{pmatrix} \\
+= - \frac{\del \vec{B}}{\del t} = 
+- \begin{pmatrix}
+	B_{0x} i \omega' e^{i ( \omega' t - k' \vec{r}) } \\
+	B_{0y} i \omega' e^{i ( \omega' t - k' \vec{r}) } \\
+	B_{0z} i \omega' e^{i ( \omega' t - k' \vec{r}) } 
+\end{pmatrix} 
+\intertext{Ainsi}
+B_{0x} = B_{0z} = 0\\
+\intertext{Il nous reste}
+- ik E_{0x} e^{i ( \omega t - kz) }  = - i \omega' B_{0y}  e^{i ( \omega' t - k_x' x - k_y' y - k_z' z) } 
+\end{align*}
+Valable $\forall t $ et $\vec{r}$, donc on trouve que $\omega' = \omega $ et $k = k_z' $, $k_x' = k_y' = 0$ .
+On trouve donc que
+\[ 
+B_{0z} = \frac{k}{\omega}E_{0x}  = \frac{1}{c} E_{0x} 
+\]
+Ecrivons 
+\[ 
+E_{ox}  = E e^{i \phi} 
+\]
+Ainsi, $B_{0y}  = \frac{1}{c }E_{0x} = \frac{1}{c }E e^{i \phi} = B_{0y} e^{i \phi} $\\
+Finalement
+\begin{align*}
+\vec{E}( \vec{r},t) = E e^{i ( \omega t - kz + \phi) } e_x\\
+\vec{B}( \vec{r},t) = B_{0y}  e^{i ( \omega t - k z + \phi ) } e_y 
+\end{align*}
+On peut verifier facilement que $\nabla \cdot \vec{B} = 0$ et $\nabla \times \vec{B} = \frac{1}{c^{2}} \frac{\del \vec{E}}{\del t}$ sont satisfaites.\\
+La partie physique ``est '' la partie reelle.
+\begin{rmq}[additionelles]
+\begin{itemize}
+\item On a discute des ondes electromagnetiques dans le vide, cependant, dans un medium, la vitesse de phase des ondes electromagnetiqes peut etre different: $c \to \frac{c}{n} $, alors on a
+	\[ 
+	\omega = \frac{c}{n} |\vec{k}|
+	\]
+	$n$ est l'index de refraction.
+\end{itemize}
+\end{rmq}
+
+
+
+
+
+	
+
+
+
+\end{document}	

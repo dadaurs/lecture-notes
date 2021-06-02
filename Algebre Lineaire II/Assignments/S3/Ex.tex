@@ -1,0 +1,86 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\begin{document}
+\title{Mini-Examen 3}
+\author{David Wiedemann}
+\maketitle
+On notera d'abord que pour $\lambda \in \mathbb{C}$,$ \lim_{n \to  + \infty} \lambda^{n} = 0$ si et seulement si $|\lambda|< 1$ .\\
+En effet, écrivons $\lambda= |\lambda| e^{i \theta},  $ avec $\theta \in [ 0, 2\pi[ $, alors on a
+\[ 
+\lim_{n \to  + \infty} \lambda^{n} = \lim_{n \to  + \infty} |\lambda|^{n} e^{in \theta} 
+\]
+Car la norme de $ e^{i n \theta} $ est égale à 1 pour tout valeur de $n$  et de $\theta$, il est immédiat que si $|\lambda| < 1$, alors
+\[ 
+\lim_{n \to  + \infty} \lambda^{n}= 0
+\]
+De même, si $ \lim_{n \to  + \infty} \lambda^{n}= 0$ , alors il faut que $ \lim_{n \to  + \infty} |\lambda|^{n}=0$ et un résultat d'analyse I implique alors que $ |\lambda| <1$.\\
+
+On montre maintenant la double implication.\\
+$ \Rightarrow $ \\
+Etant donné que $A$ est diagonalisable, il existe deux matrices $D, U \in \mathbb{C}^{n\times n}$ tel que $D$ est diagonale, $U$ inversible et telle que l'égalité suivante soit satisfaite
+\[ 
+A = U D U^{-1}.
+\]
+Ecrivons 
+\[ 
+D = 
+\begin{pmatrix}
+	\lambda_1 & &\\
+		  & \ddots &\\
+		  & & \lambda_n
+\end{pmatrix} 
+.\]
+On obtient alors
+\begin{align*}
+\lim_{k \to  + \infty} A^{k} &= \lim_{k \to  + \infty} U D^{k} U^{-1}\\
+			     &=U (  \lim_{k \to  + \infty}D^{k} ) U^{-1}\\
+			     &= U ( \lim_{k \to  + \infty} 
+			     \begin{pmatrix}
+				     \lambda_1 ^{k} &  & \\
+						    & \ddots &\\
+						    &  & \lambda_n^{k}
+			     \end{pmatrix} 
+			     ) U^{-1} = 0_n
+			     \intertext{En multipliant par $U^{-1}$ à gauche et par $U$ à droite, on trouve}
+			     \lim_{k \to  + \infty} 
+			     \begin{pmatrix}
+				     \lambda_1^{k} & & \\
+						   & \ddots &\\
+						   & & \lambda_n^{k}
+			     \end{pmatrix} &= 0
+\end{align*}
+Et on en déduit que pour tout $i = 1, \ldots, n$, on a $|\lambda_i|< 1	.$ \\
+$\Leftarrow$ \\
+Si $|\lambda_i| < 1$ pour tout $i = 1, \ldots, n$ , on a
+\begin{align*}
+	\lim_{k \to  + \infty} A ^{k} &= U ( \lim_{k \to  + \infty} D^{k}) U^{-1}\\
+				      &= U (  \lim_{k \to  + \infty} 
+				      \begin{pmatrix}
+					      \lambda_1^{k} & & \\
+							& \ddots & \\
+							& & \lambda_n^{k}
+				      \end{pmatrix} 
+				      ) U^{-1}
+				      \intertext{Etant donné que pour $i = 1, \ldots, n$ , on a $ | \lambda_i | < 1$, en passant à la limite, on trouve}
+				      &= U ( 
+				      \begin{pmatrix}
+					      0 & & \\
+						& \ddots & \\
+						& & 0
+				      \end{pmatrix} ) U^{-1}\\
+				      &= 0_n
+\end{align*}
+Ce qui prouve l'assertion.
+
+
+
+
+
+\end{document}

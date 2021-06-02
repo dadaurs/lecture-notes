@@ -63,7 +63,146 @@ One can easily generate this definition
 	
 	
 \end{defn}
+\begin{defn}
+	Let $( \Omega, P) $ be a finite probability space. A random variable on $\Omega$ is any map $f: \Omega \to \mathbb{R}$.
+\end{defn}
+\begin{defn}
+	Let $( \Omega, P) $ be a finite probability space, and let $f$ be a random variable on it.\\
+	The expectation of $f$ is a real number $ \mathbb{E}( f) $ defined by the formula
+	\[ 
+		\mathbb{E}( f)  \coloneqq \sum_{w \in \Omega}^{ }P(  \left\{ w \right\} ) \cdot f( w) 
+	\]
+	
+\end{defn}
+Is there an easy way to compute $ \mathbb{E}( f) $ ?
+\begin{defn}[Indicator]
+	Let $A \subset \Omega$ be an event in a probability space $( \Omega, P) $ . The indicator of the event $A$ is the random variable $I_A : \Omega \to \left\{ 0,1 \right\} $ defined as
+	\[ 
+		I_A( w) \coloneqq  
+		\begin{cases}
+		1 \text{ fo } w \in A\\
+		0 \text{ for } w \notin A
+		\end{cases}
+	\]
+	
+\end{defn}
+\begin{lemma}
+	For any event $A$ , we have $\mathbb{E}( I_A) = P( A) $ 
+\end{lemma}
+\begin{proof}
+\[ 
+	\mathbb{E}( I_A) = \sum_{w \in \Omega}^{ }I_A( w) P( \left\{ w \right\} ) = \sum_{w \in A}^{ }P( \left\{ w \right\} ) = P( A) 
+\]
+
+\end{proof}
+\begin{thm}[linearity of expectation]
+	Let $f,g$ be arbitrary random variables on a finite probability space $ ( \Omega, P) $ and let $\alpha \in \mathbb{R}$ . Then
+	\[ 
+		\mathbb{E}( \alpha f) = \alpha \mathbb{E}( f) \text{ and } \mathbb{E}( f+g)= \mathbb{E}( f) + \mathbb{E}( g) 
+	\]
+\end{thm}
+\subsection{Probabilistic method}
+\begin{thm}
+	Let $(  \Omega, P) $ be a finite probability space and let $f: \Omega \to \mathbb{R}$ be a random variable.\\
+	If $\mathbb{E}( f) = m$, then there exists a t least one elementary event $w_1$ such that $f( w_1) \geq m$ .\\
+	Analogously, there exists at least one elementary event $w_2$ such that $f( w_2) \leq m$ 
+\end{thm}
+We consider two applications of this theorem.
+\begin{thm}
+Let $G$ be a graph with an even number $2n$ of vertices and with $m>0$ edges.\\
+Then the set $V= V( G) $ can be divided into two disjoint $n-$element subsets $A$ and $B$ in such a way that more than $\frac{m}{2}$ edges go between $A$ and $B$ .
+\end{thm}
+\begin{proof}
+	Consider the probability space $( \Omega, P) $ where $\Omega = \binom V n$  with the probability measyre
+	\[ 
+		P( S) \coloneqq  \frac{|S|}{| \Omega|} \text{ for } S \subset \Omega
+	\]
+	Let $A \in \Omega$ be a random $n$ -element subset of $V( G)$ .\\
+	Define $B \coloneqq V( G) \setminus A$ its complement.\\
+	Consider the following random variable:
+	\[ 
+		X( A) \coloneqq | \text{ edges between $A$ and $B$  } | = | \left\{ \left\{ a,b \right\} | a \in A, b \in B, \left\{ a,b \right\} \in E( G)  \right\} .	
+	\]
+	Let's compute $ \mathbb{E}(X)$.\\
+	For $e = \left\{ u,v \right\}  \in E( G) $ we define the event
+	\[ 
+	C_e \coloneqq \left\{ A \in \Omega | |A\cap e| =1 \right\} 		
+	\]
+	We have 
+	\[ 
+		X = \sum_{e \in E( G) }^{ }I_{C_e} 
+	\]
+	and therefore
+	\[ 
+		\mathbb{E}( X) = \sum_{e \in E( G) }^{ } \mathbb{E}( I_{C_e} ) = \sum_{e \in E( G) }^{ }P( C_e) 
+	\]
+	We compute $P( C_{e} ) = \frac{2 \binom { 2n-2} { n-1} }{ \binom { 2n} n}> \frac{1}{2}$.\\
+	Thus 
+	\[ 
+		\mathbb{E}( X) = \sum_{e \in E( G) }^{ }P( C_e) > \frac{m}{2}
+	\]
+	By theorem, $X( A) > \frac{m}{2}$ for some $A \in \Omega$ .
+	
+\end{proof}
+\begin{defn}	
+	Let $G$ be a graph. A set $S \subset V( G) $ 	is an independent set if no two vertices of $S$ are connected by an edge.\\
+	We define $\alpha( G) $ to be the size of the largest independent set of vertices in the graph $G$.
+\end{defn}
+\begin{thm}[Turan's theorem]
+For every graph $G$ we have
+\[ 
+	\alpha( G)  \geq \frac{|V( G) |^{2}}{2 |E( G) | + |V( G)| }
+\]
+
+\end{thm}
+\begin{lemma}
+For any graph $G$ we have
+\[ 
+	\alpha( G)  \geq \sum_{v\in V( G) }^{ }\frac{1}{\deg v + 1}
+\]
+
+\end{lemma}
+\begin{proof}
+Suppose that the vertices of $G$ are numberd $1 , \ldots, n$ .\\
+Pick a random permutation $\pi$ of the vertices.\\
+Define the set $M( \pi) \subset V( G) $ by
+\[ 
+	M( \pi) \coloneqq  \left\{ v \in V | \text{ all neighbours $u$ of $v$ satisfy $\pi( u) >\pi ( v) $  }  \right\} 
+\]
+$M( \pi) $ is an independent set of $G$ .\\
+Therefore $|M( \pi) | \leq  \alpha ( G) $ for any permutation $\pi$ , hence
+\[ 
+	\mathbb{E}( |M( \pi) |) \leq  \alpha( G) 
+\]
+Now we calculate the expected size of $M$ .\\
+Let $v \in V$ , $A_V \coloneqq $ the event `` $v \in M( \pi) $ '' 
+Then
+\[ 
+	P( A_v) = \frac{1}{\deg v + 1}
+\]
+The lemma follows.
 
 
+
+
+\end{proof}
+\begin{proof}[of Turan's theorem]
+	Let $|V( G) | = n$ and $d_1, \ldots, d_n$ be the degrees of the vertices of $G$ .\\
+	Then
+	\[ 
+		\sum_{i=1}^{ n}d_i = 2 |E( G) |	
+	\]
+	\begin{align*}
+	\sum_{i=1}^{ n}\frac{1}{d_i+1} \geq \frac{n^{2}}{d_1 + \ldots + d_n + n}= \frac{n^{2}}{2 |E| + n}
+	\end{align*}
+	Which proves Turan's theorem.
+	
+
+\end{proof}
+
+	
+
+
+ 
 
 \end{document}	

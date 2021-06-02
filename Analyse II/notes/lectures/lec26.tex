@@ -1,0 +1,187 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{26}{Wed 02 Jun}{solution generale pour les edo du second ordre}
+On souhaite construire la solution generale de
+\[ 
+	u''( t) + a( t) u'( t) + b( t) u( t) = g( t) 
+\]
+On peut ecrire la solution comme la solution generale du probleme homogene + la solution particuliere du probleme non homogene.\\
+On commence par l'etude du probleme homogene
+\[ 
+	\begin{cases}
+	u''( t) + a( t) u'( t) + b( t) u( t) =0\quad \forall t \in I\\
+	u( t_0) =u_0 , u'( t_0) = v_0
+	\end{cases}
+\]
+\begin{defn}
+Soit $z_1, z_2: I\to \mathbb{R}$ deux solutions de l'equation homogene.\\
+On appelle le Wronksien de $z_1, z_2$ note $W [ z_1,z_2] $ , la fonction
+\[ 
+	W[z_1,z_2] : I\to \mathbb{R}
+\]
+Donne par
+\[ 
+	W[z_1,z_2]( t) = \det \begin{pmatrix}
+		z_1( t) & z_2( t) \\
+		z_1'( t) & z_2'( t) 
+	\end{pmatrix}  = z_1( t) z_2'( t) - z_2( t) z_1'( t) , \forall t \in I
+\]
+
+
+\end{defn}
+\begin{thm}
+Deux solutions $z_1,z_2$ de l'equation homogene sont lineairement independantes si et seulement si 
+\[ 
+	W[z_1,z_2] ( t) \neq 0 \forall t \in I
+\]
+ou de facon equivalente, si et seulement si pour tout $t\in I$ , les deux vecteurs $ \begin{pmatrix}
+z_1\\z_1'
+\end{pmatrix} $ et $ \begin{pmatrix}
+z_2\\z_2'
+\end{pmatrix} $ sont lineairement independants.
+\end{thm}
+\begin{proof}
+$ \Rightarrow $ \\
+$z_1, z_2$ lineairement independants $\Rightarrow$ $\forall t  \vec{z_1}( t) , \vec{z_2}( t) $ lineairement independants.\\
+Par l'absurde, il existe $t_0$ tel que $\vec{z_1}( t_0) $ et $\vec{z_2}( t_0) $ sont lineairement dependants.\\
+Donc, il existe $\alpha, \beta \in \mathbb{R}$ tel que
+\[ 
+	\alpha \vec{z_1}( t_0) + \beta \vec{z_2}( t_0) = \begin{pmatrix}
+	0\\0
+	\end{pmatrix} 
+\]
+Soit $v( t) = \alpha z_1( t) + \beta z_2( t) $, elle satisfait 
+\[ 
+	v''( t) + a( t) v'( t) + b( t) v( t) = 0
+\]
+Et
+\[ 
+	v( t_0) = 0, v'( t_0) =0
+\]
+Par unicite de la solution globale, on a que 
+\[ 
+	v( t) =0 \forall t \in I
+\]
+On a donc trouve $\alpha,\beta \neq 0$ tel que $\alpha z_1( t) + \beta z_2( t) =0$.\\
+$\Leftarrow$ \\
+si $\forall t \vec{z_1}( t) , \vec{z_2}( t) $ sont lineairement independants, alors $z_1, z_2$ sont lineairements independants.\\
+Par l'absurde, si $z_1, z_2$ sont lineairement dependants, alor sil exists $\alpha, \beta \in \mathbb{R}$ non simultanement nuls tel que 
+\[ 
+	\alpha z_1( t) + \beta z_2( t) =0 \forall t \in I
+\]
+Mais alors, 
+\[ 
+	\alpha z_1'( t) + \beta z_2'( t) = 0 \forall t \in I
+\]
+Ainsi, 
+\[ 
+\alpha \begin{pmatrix}
+	z_1( t) \\ z_1'( t) 
+\end{pmatrix} + \beta \begin{pmatrix}
+z_2( t) \\
+z_2'( t) 
+\end{pmatrix} = 
+\begin{pmatrix}
+0 \\0
+\end{pmatrix} 
+\]
+Ce qui est une contradiction au fait que les vecteurs sont lineairements independants.	
+\end{proof}
+\begin{crly}
+Soit $S$ l'ensemble des solutions du systeme homogene.\\
+Considerons l'application lineaire $\phi: S \to \mathbb{R}^{2}$ 
+\[ 
+	\phi( z) = \begin{pmatrix}
+		z( t_0) \\ z'( t_0) 
+	\end{pmatrix}  \text{ pour  } t_0 \in I \text{ fixe } .
+\]
+Cette application est trivialement lineaire.\\
+$\phi$ est bijective, en effet $\forall \begin{pmatrix}
+u_0\\v_0
+\end{pmatrix} \in \mathbb{R}^{2}$ , soit $z$ la solution du probleme de Cauchy
+\[ 
+	z''( t) + a( t) z'( t) + b( t) z( t) =0
+\]
+Avec les conditions initiales.\\
+Par unicite des solutions, on obtient la bijectivite.\\
+Donc $\dim S = 2$ et on peut construire toute solution de $S$ avec les elements lineairement independants.
+\[ 
+S= \left\{ C_1 z_1 + C_2 z_2, C_1, C_2 \in \mathbb{R} \right\} .
+\]
+
+
+\end{crly}
+\begin{exemple}
+Soit
+\[ 
+	u''( t)  + au'( t) + bu( t) = 0
+\]
+On essaie avec $z( t) = e^{\lambda t} $, on trouve
+\begin{align*}
+	\lambda^{2} + a \lambda + b &=0 \text{ Ce polynome est appele polynome caracteristique } 
+\end{align*}
+Donc $ e^{\lambda t} $  est solution du probleme homogene si et seulement si $\lambda$ est solution du polynome caracteristique.\\
+Si $\Delta \coloneqq a^{2}-4b>0$ \\
+$p( \lambda) $ a deux racines reelles, on peut donc construire deux solutions 
+\[ 
+	z_1( t) = e^{\lambda_1 t} , z_2( t) = e^{\lambda_2 t} 
+\]
+Qui sont bien lineairement independantes.
+
+Si $Delta = a^{2} - 4b <0$ \\
+deux racines distinctes complexes conjuguees 
+On peut construire deux solutions
+\begin{align*}
+\tilde z_1( t) = e^{\lambda_1 t} = e^{- \frac{a}{2}t} e^{i \sqrt{b - \frac{a^{2}}{4}} t} \\
+\tilde z_2( t) = e^{\lambda_2 t} = e^{- \frac{a}{2}t} e^{-i \sqrt{b - \frac{a^{2}}{4}} t} \\
+\end{align*}
+Si on accepte de travailler sur des complexes, ces fonctions sont effectivement des solutions.\\
+On choisit alors
+\[ 
+	z_1( t) =  \frac{ \tilde z_1 ( t) + \tilde z_2 ( t) }{2} = e^{- \frac{a}{2}t } \frac{ e^{i \sqrt{- Delta} t} + e^{ -i \sqrt{-Delta } t} }{2}= e^{- \frac{a}{2}t} \cos ( \sqrt{- \Delta } t) 
+\]
+Et on obtient une autre solution de la forme
+\[ 
+	e^{- \frac{a}{2}t} \sin ( \sqrt{- \Delta} t) 
+\]
+Si $\Delta \coloneqq a^{2}-4b =0$ \\
+Les deux racines coincident $\lambda_1 = \lambda_2 = - \frac{a}{2}$.\\
+On a une solution $z_{1}( t) = e^{- \frac{a}{2}t} $.\\
+Pour construire une deuxieme solution, on peut utiliser la methode de ``variation de constantes''.\\
+Idee: on cherche une deuxieme solution de l'equation homogene sous la forme
+\[ 
+	z_2( t) = C( t)  z_1( t) 
+\]
+
+avec $c( t) \in c^{2}( I) $.\\
+On a donc
+\begin{align*}
+0 = z_2'' + a z_2' + bz_2\\
+z_2' = c' z_1 + C z_1'\\
+z_2'' = C'' z_1 + 2 C' z_1' + C z_1''\\
+0 = C'' z_1 + 2 C' z_1' + C z_1'' + a C' z_1 + a C z_1' + bC z_1\\
+0 = C'' z_1 + 2 C' z_1' + a C' z_1
+\end{align*}
+On definit $K = C'$ , on obtient donc
+\begin{align*}
+	k' z_1 = - ( 2 z_1' + a z_1) K
+	\intertext{Equation lineaire du premier ordre}\\
+	k( t) = \exp (  \int_{ t_2 }^{ t } - \frac{2 z_1' + az_1}{z_1}ds) \\
+	C( t) = \int_{ t_0 }^{ t }K( s) ds
+\end{align*}
+
+Dans ce cas, on trouve
+\[ 
+	k( t) = 1 \Rightarrow C( t) = t
+\]
+
+
+
+
+
+\end{exemple}
+
+
+
+
+\end{document}	
