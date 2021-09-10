@@ -1,0 +1,33 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\begin{document}
+\title{Série 9}
+\author{David Wiedemann}
+\maketitle
+On va d'abord montrer l'existence du minimum, on montrera ensuite qu'il est unique.\\
+\hr
+Soit $x \in E$, par hypothèse, il existe un $M \in [ 0, \infty [  $, tel que $\forall y \in E: \N { y} \geq M \Rightarrow f( y) \geq f( x) $.\\
+Donc en particulier, pour $\N { y} > M$, on a $f( y) \geq f( x) $.\\
+Considérons donc l'ensemble des points $ \overline{B}(0,M ) \cap E $.\\
+Cet ensemble est trivialement  compact, car l'intersection de deux ensembles fermés est fermée et car tous les éléments de l'ensemble $\overline{B}( 0,M) $ ont une norme finie .\\
+On sait qu'une fonction continue atteint son minimum sur un ensemble compact, donc il existe $x_m \in \overline{B}(0,M ) \cap E $ tel que, $f( x_m) \leq  f( x) \forall x  \in \overline{B}(0,M ) \cap E$.\\
+Or, par définition, $\forall y \in E \setminus \overline{B}( 0,M) $, on a $ f( y) \geq f( x) $, et donc $x_m$ est un minimum global.\\
+\hr
+Montrons maintenant l'unicité du minimum.\\
+Par l'absurde, supposons qu'il y ait deux minimums globaux $a$ et $b \in E$, alors, par convexité de l'ensemble $E$, le segment $[a,b]= \left\{ \lambda a + ( 1-\lambda) b | \lambda \in [ 0,1]  \right\} $	est contenu dans $E$, et donc en particulier le point $\frac{1}{2}a + \frac{1}{2}b$.\\
+Par stricte convexité, et car $f( a) =f( b) $, on a 
+\[ 
+	\frac{1}{2}f( a) + \frac{1}{2}f( b) = f( a) > f( \frac{1}{2}a + \frac{1}{2}b) 
+\]
+Ce qui contredit la minimalité du point $a$ et du point $b$.\\
+Ainsi, le minimum est unique.
+
+
+\end{document}

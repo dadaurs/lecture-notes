@@ -1,0 +1,50 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\begin{document}
+\title{Series 3}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+We simply apply the expansion for the square of the geometric series, this result has been proven during the lectures:
+\[ 
+	\frac{1}{( 1-2x)^{2} } = \sum_{i=0}^{ \infty  } ( i+1) ( 2x) ^{i} =\sum_{i=0}^{ \infty  } ( i+1) 2^{i} x ^{i} 
+\]
+Hence the coefficient for the 5th power is given by
+\[ 
+6 \cdot 2^5 = 192
+\]
+\section*{2}
+First notice that we can factorize a $x^8$ in the expression:
+\[ 
+	\left( \sum_{i=2}^{ \infty } x^{i} \right)^{4} = x^8 \left( \sum_{i=}^{ \infty } x^{i}\right)^{4}
+\]
+Thus, we only have to find the coefficient of $x^7$ in the formal series expansion of
+\[ 
+ \left( \sum_{i=0}^{ \infty } x^{i} \right)^{4}	
+\]
+This counting problem is equivalent to distributing 7 identical objects between 4 persons, thus, by a theorem proven in the first lecture, the result is
+\[ 
+\binom { 4+7-1} { 4-1} = \binom { 10 } 3 = 120.
+\]
+
+
+
+
+
+
+
+
+
+
+%[La résolution des exercices ici...] %commentaire
+
+
+
+\end{document}

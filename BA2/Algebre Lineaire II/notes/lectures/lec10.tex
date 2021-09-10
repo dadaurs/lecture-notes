@@ -1,0 +1,54 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Wed 24 Mar}{Produits Scalaires}
+\subsection{Theoreme de Sylvester}
+Soit $V$ un espace vectoriel de dimension finie sur $\mathbb{R}$ et $\eng , $ une forme bilineaire symmetrique.\\
+Alors, il existe une base orthogonale $B$ qui diagonalise $A^{\eng ,}$.\\
+Pour tout $i$, si $\eng { v_i,v_i} >0$, alors $v_i := \frac{v_i}{\sqrt{\eng{v_i,v_i}} }$.\\
+	Si $\eng{v_i,v_i} <0$, si $v_i:= \frac{v_i}{|\sqrt{\eng { v_i,v_i} }| }$
+	Une telle base est appelee une base de Sylvester.
+\begin{propo}
+	Soit $V$ un espace vectoriel sur $\mathbb{R}$ de dimension finie et soit $\eng ,$ une forme bilineaire symmetrique, alorts il existe une base de Sylvester de $V$.
+\end{propo}
+\begin{thm}[Theoreme de Sylvestre]
+	Soient $ B=\left\{ v_1, \ldots, v_n \right\} $ et $B'= \left\{ w_1, \ldots, w_n \right\} $ deux bases de Sylvester tel que $\eng { v_i,v_i}=1 $ $\forall i\leq r$ et $\eng { v_i,v_i} \leq 0 \forall i>r$ et  $\eng { w_i,w_i}=1 $ $\forall i\leq r'$ et $\eng { w_i,w_i} \leq 0 \forall i>r'$, alors $r=r'$
+\end{thm}
+\begin{proof}
+	On montre que $v_1, \ldots, v_r, w_{r'+1} , w_n$ est un ensemble libre.\\
+Supposons que la famille n'est pas libre, alors il existe $\alpha_1, \ldots, \alpha_r, \beta_{r'+1} , \ldots \beta_n$ pas tous nuls tel que
+\[ 
+\alpha_1 v_1 + \ldots = \beta_{r'+1} w_{r'+1} + \ldots
+\]
+Alors on a
+\[ 
+	\eng { \sum_{i}\alpha_i v_i, \sum_{i}\alpha_i v_i} = \eng { \sum_{i=r'+1} \beta_i w_i } 
+\]
+Ainsi
+\[ 
+\alpha_1^{2} \eng { v_1, v_1}  + \ldots = \beta_{r'+1}^{2} \eng { w_{r'+1},w_{r'+1}  }  + \ldots
+\]
+
+
+
+
+\end{proof}
+\begin{defn}[Espace de Nullite]
+	Soit $V$ un espace vectoriel sur $K$ et $\eng .$ une forme bilineaire symmetrique, alors
+	\[ 
+	V^{0}= \left\{ v: \eng { v,x} =0 \forall x \in V \right\} 
+	\]
+	est appele l'espace de nullite
+\end{defn}
+\begin{lemma}
+	Soit $B = \left\{ v_1, \ldots, v_n \right\} $ une base orthogonale de $V$. Alors $V^{0}$ est engendre par $v_i$ tel que $\eng{ v_i, v_i } = 0$
+\end{lemma}
+\begin{proof}
+On ecrit $B= \left\{ v_1, \ldots, v_n \right\} $ ou $\eng { v_i,v_i} \neq0 \forall i<l$ et  egal a $0$ sinon.\\
+Soit $v \in V$ tel que $v= \sum \alpha_i v_i$ tel que $\alpha_j \neq 0 $ pour $j<l$.\\
+On choisit $x= v_j$ et on voit que $\eng { x,v_j }\neq 0$
+\end{proof}
+On voit donc que le nombre de $v_i$ dans une base de Sylvester tel que $\eng { v_i,v_i} =0$ est toujours egal a $\dim V^{0}$ et est donc invariant.
+
+
+
+\end{document}	

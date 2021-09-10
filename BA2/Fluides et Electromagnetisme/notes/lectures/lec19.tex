@@ -1,0 +1,50 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{19}{Fri 07 May}{capacite avec un dielectrique}
+Dans un dielectrique, les electrons ne peuvent pas bouger librement.\\
+Mais un champ electrique $E$ a tout de meme des effets:
+\begin{enumerate}
+\item Tres faible deplacement des $e^{-}$ par rapport au noyau des molecules du dielectrique $\to$ moment dipolaire induit
+\item En presence des moments dipolaires permanents, on trouve un phenome d'orientation selon $E$.
+\end{enumerate}
+Considerons un dielectrique avec $\vec{p}=0$ et $\vec{E}=0$, on trouve un effet de polarisation de la matiere a la surface du dielectrique.\\
+Si le dielectrique est homogene, l'effet macroscopique est l'occurence d'une densite de charge de surface $\sigma_p$.\\
+Meme effet net si $\vec{p}_{perm} \neq 0$.\\
+L'orientation du dielectrique dependra alors du moment de force  (  $\vec{p} \times \vec{E}$) et de l'agitation thermique.\\
+Si le dielectrique est homogene et isotrope et $\vec{E}$ pas trop important, alors on trouve
+\begin{align*}
+	\sigma_{p} &\propto E\\
+		   &= \xi \epsilon_0 E
+\end{align*}
+Revenons au condensateur plan avec un dielectrique a l'interieur.\\
+On va utiliser la loi de Gauss pour trouver la capacite du systeme.\\
+\begin{align*}
+	E \cdot S_c &= \frac{q -S_c \sigma_p}{ \epsilon_0}\\
+	&= \frac{q- S_c \xi \epsilon_0 E}{\epsilon_0}\\
+	\Rightarrow E ( \epsilon_0S_c + \epsilon_0 \xi S_c) &=q\\
+	\Rightarrow E &= \frac{q}{S_c \epsilon_0 ( 1+ \xi) }
+\end{align*}
+Donc $E$ diminue a cause du dielectrique.\\
+Donc
+\[ 
+	U = E d = \frac{qd}{S_c \epsilon_0 ( 1+ \xi) }
+\]
+et
+\[ 
+	C = \frac{q}{U} = \frac{\epsilon_0 ( 1+ \xi ) S_c}{d} = \frac{\epsilon_0 \epsilon_r S_c}{d}
+\]
+$\epsilon_r = 1+ \xi$ s'appelle la permitivite relative.\\
+En general, la capacite d'un condo dependra donc de la geometrie et du dielectrique.\\
+Donc, en presence d'un dielectrique, $C \to \epsilon_r C$.\\
+\section{Circuits electriques }
+En electrostatique, il n'y a en general pas de courant, donc $\vec{E}=0$ a l'interieur des conducteurs.\\
+Un appareil a fem ( appareil a qui fournit une tension ou une force electromotrice entre deux bornes) . 
+Par exemple, une pile,  peut maintenir un champ $E$ dans un conducteur $ \to$ mouvement des porteurs mobiles de charge dans le conducteur.
+\subsection{Definition du courant}
+\[ 
+I = \text{ flux de charge par unite de temps a travers une surface  } S
+\]
+$I = \frac{dq}{dt}$, et donc $ [ I] = \frac{C}{s}= \text{ ampere } = A$.\\
+
+
+\end{document}	

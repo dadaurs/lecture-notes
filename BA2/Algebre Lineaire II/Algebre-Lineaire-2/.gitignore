@@ -1,0 +1,223 @@
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+
+## emacs
+*.el
+auto/*
+*~
+
+
+## Intermediate documents:
+*.dvi
+*-converted-to.*
+# these rules might exclude image files for figures etc.
+# *.ps
+# *.eps
+ *.pdf
+
+## Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.brf
+*.run.xml
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+## Auxiliary and intermediate files from other packages:
+# algorithms
+*.alg
+*.loa
+
+# achemso
+acs-*.bib
+
+# amsthm
+*.thm
+
+# beamer
+*.nav
+*.snm
+*.vrb
+
+# cprotect
+*.cpt
+
+# fixme
+*.lox
+
+#(r)(e)ledmac/(r)(e)ledpar
+*.end
+*.?end
+*.[1-9]
+*.[1-9][0-9]
+*.[1-9][0-9][0-9]
+*.[1-9]R
+*.[1-9][0-9]R
+*.[1-9][0-9][0-9]R
+*.eledsec[1-9]
+*.eledsec[1-9]R
+*.eledsec[1-9][0-9]
+*.eledsec[1-9][0-9]R
+*.eledsec[1-9][0-9][0-9]
+*.eledsec[1-9][0-9][0-9]R
+
+# glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+
+# gnuplottex
+*-gnuplottex-*
+
+# hyperref
+*.brf
+
+# knitr
+*-concordance.tex
+# TODO Comment the next line if you want to keep your tikz graphics files
+*.tikz
+*-tikzDictionary
+
+# listings
+*.lol
+
+# makeidx
+*.idx
+*.ilg
+*.ind
+*.ist
+
+# minitoc
+*.maf
+*.mlf
+*.mlt
+*.mtc
+*.mtc[0-9]
+*.mtc[1-9][0-9]
+
+# minted
+_minted*
+*.pyg
+
+# morewrites
+*.mw
+
+# mylatexformat
+*.fmt
+
+# nomencl
+*.nlo
+
+# sagetex
+*.sagetex.sage
+*.sagetex.py
+*.sagetex.scmd
+
+# sympy
+*.sout
+*.sympy
+sympy-plots-for-*.tex/
+
+# pdfcomment
+*.upa
+*.upb
+
+# pythontex
+*.pytxcode
+pythontex-files-*/
+
+# thmtools
+*.loe
+
+# TikZ & PGF
+*.dpth
+*.md5
+*.auxlock
+
+# todonotes
+*.tdo
+
+# xindy
+*.xdy
+
+# xypic precompiled matrices
+*.xyc
+
+# endfloat
+*.ttt
+*.fff
+
+# Latexian
+TSWLatexianTemp*
+
+## Editors:
+# WinEdt
+*.bak
+*.sav
+
+# Texpad
+.texpadtmp
+
+# Kile
+*.backup
+
+# KBibTeX
+*~[0-9]*
+*.pdf
+Programming/cmake_install.cmake
+Programming/CMakeCache.txt
+
+Programming/CMakeFiles/cmake.check_cache
+Programming/CMakeFiles/CMakeDirectoryInformation.cmake
+Programming/CMakeFiles/feature_tests.bin
+
+Programming/CMakeFiles/feature_tests.c
+Programming/CMakeFiles/feature_tests.cxx
+Programming/CMakeFiles/Makefile.cmake
+Programming/CMakeFiles/Makefile2
+Programming/CMakeFiles/progress.marks
+Programming/CMakeFiles/TargetDirectories.txt
+Programming/CMakeFiles/Test.dir/cmake_clean.cmake
+Programming/CMakeFiles/Test.dir/CXX.includecache
+Programming/CMakeFiles/Test.dir/depend.internal
+Programming/CMakeFiles/Test.dir/DependInfo.cmake
+Programming/CMakeFiles/Test.dir/link.txt
+Programming/CMakeFiles/Test.dir/Test.cpp.o
+Programming/CMakeFiles/Test.o.dir/cmake_clean.cmake
+Programming/CMakeFiles/Test.o.dir/DependInfo.cmake
+Programming/CMakeFiles/Test.o.dir/link.txt
+Programming/Makefile
+Programming/Test
+Programming/Test.o
+Programming/CMakeFiles/Test.dir/build.make
+Programming/CMakeFiles/Test.dir/depend.make
+Programming/CMakeFiles/Test.dir/flags.make
+Programming/CMakeFiles/Test.dir/progress.make
+Programming/CMakeFiles/Test.o.dir/build.make
+Programming/CMakeFiles/Test.o.dir/depend.make
+Programming/CMakeFiles/Test.o.dir/flags.make
+Programming/CMakeFiles/Test.o.dir/progress.make
+Programming/compile_commands.json
+*.tex#
+.#chapter04-entiers.tex

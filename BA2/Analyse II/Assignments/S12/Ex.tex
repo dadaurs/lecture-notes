@@ -1,0 +1,61 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\begin{document}
+\title{Série 12}
+\author{David Wiedemann}
+\maketitle
+Il est clair que $u \in C^{1}( ] t_0, + \infty[  ) $ car $u'( t) = f( t, u( t) ) $ et donc, car $f$ est continue sur $I \times \mathbb{R}$, et donc $u$ est continument différentiable sur $]t_0, + \infty [  $.\\
+Il nous faut donc uniquement montrer que $ u'( t_0) = \lim_{t \to t_0 +} u'( t) $, ie. que $u'$ est continue à droite en $t_0$.\\
+Définissons 
+\[ 
+	F( t) = \int_{ t_0 }^{ t }u'( s) ds
+\]
+Le théorème fondamental de l'analyse donne que
+\[ 
+	F( t) = u( t) - u( t_0) .
+\]
+Ainsi, on sait que $ \int_{ t_0 }^{ t }u'( s) ds$ existe bien pour tout $t$.\\
+Or, car pour $c \in  I$ de $u'$ sur $[t_0, c] $ est égal à l'intégrale de $u'$ sur $]t_0,c]$, on a
+\[ 
+	F( t) = \int_{ t_0 }^{ t }f( s,u( s) ) ds.
+\]
+Ainsi, par le théorème fondamental de l'analyse, on déduit également que
+\[ 
+	F'( t) = f( t,u( t) ) \forall t \in I
+\]
+Ecrivons maintenant le développement de Taylor de $F( t) $ au point $t_0$.\\
+Soit $x \in I \setminus \left\{ t_0 \right\} $.
+\begin{align*}
+	F(x)= u( x) - u( t_0) &= F( t_0) + f( t, u( t) )  ( x- t_0 ) + r( x) \\
+\intertext{où  $ \lim_{x \to t_0} \frac{r( x) }{x-t_0}= 0$.
+	 Notons qu'on a  $F( t_0) = 0$.}
+	\Rightarrow \frac{u( x) - u( t_0)}{x-t_0} &= f( t_0,u( t_0) ) + \frac{r( x) }{x-t_0}
+\end{align*}
+On peut maintenant prendre la limite à droite $x \to t_0$ des deux côtés de l'égalité.\\
+L'égalité de droite devient.
+\[ 
+	\lim_{x \to t_0+ }  f( t_0, u( t_0) )  + \frac{r( x) }{x-t_0} = f( t_0, u( t_0) ) 
+\]
+Tandis qu'à gauche, on a 
+\[ 
+	\lim_{x \to t_0 +}  \frac{u( x) - u( t_0) }{ x-t_0} = u'_+( t_0).
+\]
+Et on en déduit l'égalité
+\[ 
+	u'_+ ( t_0) = u'( t_0) = f( t_0,u( t_0) ) 
+\]
+Ainsi, $u'$ est continue sur $I$, et donc $u \in C^{1}( I) $.
+
+
+
+
+
+
+\end{document}

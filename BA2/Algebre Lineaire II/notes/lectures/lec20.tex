@@ -1,0 +1,126 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{20}{Wed 05 May}{Exponentielle d'une matrcie}
+\subsection{Exponentielle d'une matrice}
+\begin{defn}[Exponentielle d'une matrice]
+	Pour $ A \in \mathbb{C}^{n\times n}$, on definit
+	\[ 
+	e^{A}= \id + A + \frac{1}{2}A^{2} + \ldots
+	\]
+	
+\end{defn}
+\begin{defn}[Norme frobenius pour les matrices complexes]
+	$A \in \mathbb{C}^{n\times m}$,
+	\[ 
+	\N { A} _F = \sqrt{ \sum_{ij} |a_{ij} |^{2}} 
+	\]
+		
+\end{defn}
+\begin{lemma}
+Pour $A \in bbc^{n \times m}$, $B \in \mathbb{C}^{m\times n}$, on a 
+\[ 
+\N { A\cdot B} _F \leq \N { A} _F \cdot \N { B} _F
+\]
+	
+\end{lemma}
+\begin{proof}
+On a $ A = \begin{pmatrix}
+a_1^{T}\\\vdots\\a_n^{T}
+\end{pmatrix} $, $B= ( b_1,\ldots, b_n) $, on a
+\begin{align*}
+\N { AB} _F &= \sqrt{\sum_{ij} |AB_{ij} |^{2}} \\
+| ( AB) _{ij} |^{2}&= |a_i^{T} b_j|^{2} \leq  \N { a_i} ^{2} \N { b_j} ^{2}\\
+\N { AB} _F^{2} &= \sum_{ij} | ( AB) _{ij}| ^{2} \leq \sum_{ij} \N { a_i} ^{2} \N { b_j} ^{2}= \sum_{i} \N { a_i} ^{2} \cdot \sum_{j} \N { b_j} ^{2}
+\end{align*}
+
+
+\end{proof}
+\begin{lemma}
+La serie $e^{A}$ converge.
+\end{lemma}
+\begin{proof}
+On va considerer les sommes partielles $ e^{A} = \sum_{j=1}^{ \infty } \frac{A^{j}}{j!}, b_n = \sum_{j=1}^{ n}\frac{A^{j}}{j}$\\
+Soient $m,n \in \mathbb{N}$, on considere
+\begin{align*}
+\N { b_m -b_n} _F &= \N { \sum_{j=n+1}^{ m}\frac{A^{j}}{j!}} _F\\
+\leq \sum_{j=n+1}^{ m} \frac{\N { A} _F^{j}}{j!} \leq  \epsilon
+\end{align*}
+Donc les sommes partielles sont de Cauchy.
+\end{proof}
+On definit $ e^{tA} = \sum_{j=0}^{ \infty } \frac{( tA) ^{j}}{j!} $.\\
+On a 
+\begin{align*}
+\frac{d}{dt} e^{At} = A e^{A t} 
+\end{align*}
+\begin{thm}
+La solution du systeme d'equations 
+\[ 
+	x' = Ax, \quad x( 0) =v
+\]
+est 
+\[ 
+	x( t) = e^{At} \cdot v.
+\]
+
+\end{thm}
+\begin{proof}
+	soit $x( t) = e^{At} v$, on a clairement que $x( 0) = v$ et
+	\[ 
+		\frac{d}{dt}x( t) = A \cdot e^{At} v = Ax( t) 	
+	\]
+	
+\end{proof}
+\subsection*{Methode de calcul}
+\begin{defn}[Matrice nilpotente]
+	Une matrice $N$ est nilpotente si il existe $k \in \mathbb{N}$ tel que $N^{k}=0$.\\
+\end{defn}
+\begin{thm}
+Chaque matrice $A \in \mathbb{C}^{n\times n}$ peut etre factorisee comme 
+\[ 
+	A= P ( diag( \lambda_1,\ldots, \lambda_n)+N ) P^{-1}
+\]
+ou $N \in \mathbb{C}^{n\times n}$ est nilpotente, $P \in \mathbb{C}^{n\times n}$ est inversible, $\lambda_1, \ldots,$ sont des valeurs propres de $A$ et
+\[ 
+	diag( \lambda_1,\ldots,\lambda_n)  \text{ et $N$ commutent } .
+\]
+
+
+\end{thm}
+\begin{lemma}
+$A,B \in \mathbb{C}^{n\times n}, $ si $A \cdot B= B \cdot A$, alors on a que 
+\[ 
+e^{A+B} = e^{A} e^{B} .
+\]
+
+\end{lemma}
+
+\begin{align*}
+	e^{tA} &= \sum_{i=0}^{ \infty } \frac{t^{i}A^{i}}{i!}, \quad A = P( D+N) P^{-1}\\
+	       &= \sum_{i=0}^{ \infty } \frac{t^{i}}{i!} ( P ( D+N) P^{-1}) ^{i}\\
+	       &= \sum_{i=0}^{ \infty } \frac{t^{i}}{i!}P ( D+N) ^{i}P^{-1}\\
+	       &= P ( \sum_{i=0}^{ \infty } \frac{t^{i}}{i!} ( D+N) ^{i}) P^{-1}\\
+	       &= P e^{t( D+N) } P^{-1}\\
+	       &= P e^{tD} e^{tN} P^{-1}\\
+	       &= P ( \sum_{i=0}^{ \infty } \frac{t^{i}D^{i}}{i!}) ( \sum_{i=0}^{ \infty } \frac{t^{i}N^{i}}{i!}) P^{-1}\\
+	       &= P ( \sum_{i=0}^{ \infty }\frac{( tD) ^{i}}{i!}) ( \sum_{i=0}^{ k-1} \frac{t^{i}N^{i}}{i!}) P^{-1}	
+\end{align*}
+Donc, si $D = \begin{pmatrix}
+	\lambda_1 & & \\
+		  & \ddots &\\
+		  & & \lambda_n
+\end{pmatrix} $, alors
+\[ 
+e^{tD} = \begin{pmatrix}
+	e^{t\lambda_1}  & &\\
+		       & \ddots &\\
+		       & & e^{t \lambda_n} 
+\end{pmatrix} 
+\]
+
+
+
+
+
+
+
+\end{document}	

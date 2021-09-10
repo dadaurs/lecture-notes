@@ -1,0 +1,49 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\begin{document}
+\title{Question Ouverte Mini-Examen 1}
+\author{David Wiedemann}
+\maketitle
+Supposons par l'absurde que $p( x) $ divise $q( x) $ sur $E$ mais pas sur $F$.\\
+Sans perte de généralité, on peut supposer que $\deg( p) >0$ et que $\deg ( q) >0$, en effet, $F$ étant un  corps, il est trivial qu'un polynôme constant divise tout autre polynôme sur ce corps.\\
+De même, on peut supposer que $p( x) \neq 0 \neq q( x) $, en effet, le polynome nul ne divise aucun autre polynome.\\
+Par hypothèse, il existe $h( x) \in E[x] $ tel que
+\[ 
+	q( x) = p( x)  \cdot h( x) 
+\]
+En appliquant la division Euclidienne des polynômes sur l'anneau $F[x]$, étant donné qu'on a supposé que  $p(x ) $ ne divise pas $q( x) $ sur $F[x]$, on trouve
+\[ 
+	\exists h'( x) , r( x)  \in F[x] \text{ tel que } q( x) = p( x) \cdot h'( x) + r( x) 
+\]
+où $\deg ( r( x) ) < \deg ( p( x) ) $.\\
+$h'( x) $ et $r( x)$ étant des polynômes sur $F[x]$, ce sont en particulier des polynômes sur $E[x]$ et ainsi on a
+\[ 
+	q( x) = p( x) \cdot h( x) = p( x) \cdot h'( x) + r( x) 
+\]
+Ou encore ( car l'ensemble des polynômes est un anneau et qu'on peut donc appliquer la distributivité) 
+\[ 
+	p( x)  \cdot ( h( x) - h'( x) ) = r( x) 
+\]
+Or, par hypothèse, $h( x) \neq h'( x) $ (car sinon $h( x) \in F[x] $), et donc $\deg( h( x) - h'( x) ) \geq 0 $,  on en déduit que
+\begin{align*}
+	\deg \left( p( x) \cdot ( h( x) - h'( x)  \right) &= \deg ( r) \\
+	\deg ( p( x)) +\deg   \left( h( x) - h'( x) \right)  &= \deg ( r) 
+\end{align*}
+et donc
+\[ 
+	\deg ( r) \geq \deg ( p( x) ) 
+\]
+Ce qui contredit la division Euclidienne.\\
+Ainsi, on a une contradiction, et le résultat est démontré.
+
+
+
+
+\end{document}

@@ -1,0 +1,6 @@
+* Exos a faire
+** TODO Exo 6 Serie 14 2014
+[[./Screen_Exos/exo6_serie14_2014.png]]
+
+** TODO Exo2 Serie 16 2014
+[[./Screen_Exos/exo2_serie16_2014.png]]

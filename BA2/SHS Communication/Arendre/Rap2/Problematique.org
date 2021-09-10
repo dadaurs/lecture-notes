@@ -1,0 +1,4 @@
+* Description de la problématique
+Nous voulons présenter des manières d'implémenter la 5G qui minimisent ses effets négatifs.
+Nous pensons que cette problématique est d'une importance capitale car la 5G permettrait de réduire considérablement les inégalités entre les pays développés et ceux en voie de développement.
+Pour citer quelques exemples, la 5G permettrait l'implémentation d'une éducation digitale, un système de santé et d'aide humanitaire plus développé et une meilleure liberté d'expression.

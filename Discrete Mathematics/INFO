@@ -1,8 +1,0 @@
-#!/bin/sh
-NAME="Discrete Mathematics"
-COURS_ZOOM=true
-COURS="https://epfl.zoom.us/j/83998104177?pwd=eFI0TTFzRDhobTN4R0xoVHBBSWQxZz09"
-EX_ZOOM=true
-EX="https://epfl.zoom.us/j/83998104177?pwd=eFI0TTFzRDhobTN4R0xoVHBBSWQxZz09"
-ASS=true
-LANG=ENGLISH

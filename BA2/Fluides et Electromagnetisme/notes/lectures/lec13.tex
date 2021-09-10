@@ -1,0 +1,124 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{13}{Fri 16 Apr}{Champs Electriques}
+\subsection{Champs Electriques}
+Soit une charge ponctuelle au point $r_1$ 
+\begin{figure}[H]
+    \centering
+    \incfig{charge-ponctuelle}
+    \caption{charge ponctuelle}
+    \label{fig:charge-ponctuelle}
+\end{figure}
+La charge $q$ va ressentir une force donne par
+\[ 
+\vec{F}_{1\to q} = \frac{1}{4 \pi \epsilon_0} \frac{q_1}{| \vec{r}-\vec{r_1}|^{2}} \frac{\vec{r}-\vec{r_1}}{| \vec{r}- \vec{r_1}|}
+\]
+On appelle le champ electrique $\vec{E}$ genere par $q_1$.\\
+A cause du principe de superposition, il suit que le champ electrique $\vec{E}$ genere par $n$ charges $q_i$ aux positions $\vec{r}_i$, peut s'ecrire par
+\[ 
+	\vec{E}( \vec{r}) = \sum_{i=1}^{ n} \frac{1}{4 \pi \epsilon_0} \frac{q_i}{| \vec{r}- \vec{r_i}|^{2}} \frac{\vec{r}- \vec{r_i}}{|\vec{r}-\vec{r_i}|}
+\]
+$\vec{E}$ pointe dans la direction de la force ressentie par une charge positive
+\subsubsection{Champ electrique du a une distribution des charges quelconque}
+\subsubsection*{Densite de charge $\rho_{ el }$}
+On definit
+\[ 
+\rho_{el} = \lim_{\Delta V \to dV}  \frac{\Delta q}{\Delta V}
+\]
+\begin{figure}[H]
+    \centering
+    \incfig{densite-de-charge}
+    \caption{densite de charge}
+    \label{fig:densite-de-charge}
+\end{figure}
+Alors le champ vectoriel devient
+\begin{align*}
+	\vec{E}( \vec{r}) = \frac{1}{4 \pi \epsilon_0} \iiint \frac{\rho_{\vec{e}_l( \vec{r}') ( \vec{r}-\vec{r}') } }{| \vec{r}-\vec{r}'| ^{3}}\vec{dV}
+\end{align*}
+
+\subsubsection{Densite de charge de surface}
+On definit
+\[ 
+\sigma_{el } = \lim_{\Delta s \to 0} \frac{\Delta q}{\Delta s}
+\]
+\begin{figure}[H]
+    \centering
+    \incfig{charge-de-surface}
+    \caption{charge de surface}
+    \label{fig:charge-de-surface}
+\end{figure}
+Et on obtient
+\[ 
+	\vec{E}( \vec{r}) = \frac{1}{4 \pi \epsilon_0} \iint_S \frac{\sigma_{el } ( \vec{r}') ( \vec{r}- \vec{r}') }{| \vec{r}- \vec{r}'| ^{3}} dS'
+\]
+\begin{exemple}
+Disque de rayon $R$ uniformement charge avec $\sigma_{el } = \text{ const. } $ 
+\begin{figure}[H]
+    \centering
+    \incfig{disque-charge}
+    \caption{disque charge}
+    \label{fig:disque-charge}
+\end{figure}
+Calculons $\vec{E}$ le long de l'axe $z$ , on a donc
+\[ 
+	\vec{E}( z) = \frac{1}{4 \pi \epsilon_0} \iint_{ \text{ disque } }  \frac{\sigma_{el} ( \vec{r}- \vec{r}')  }{| \vec{r}- \vec{r}'|^{3}} dS'
+\]
+Par symmetrie, on a toujours que $ \vec{E}( x=0,y=0,z)  || \vec{e_z}$, on a donc
+\[ 
+	\vec{E}( z)  = \frac{1 }{4 \pi \epsilon_0} \iint \frac{\sigma_{el } ( z-z') }{\N { \begin{pmatrix}
+	0\\0\\z
+	\end{pmatrix}
+	- \begin{pmatrix}
+	x'\\y'\\z'
+	\end{pmatrix}
+	}^{3}}d S'
+\]
+Or comme $z'=0$ sur $S$, on a
+\[ 
+	= \frac{1}{4 \pi \epsilon_0} \iint \frac{\sigma_{el} z }{ ( x'^{2}+ y'^{2}+ z^{2})^{\frac{3}{2}}}dS'
+\]
+Pour integrer sur le disque $S$, on utilise les coordonnees polaires 
+ \[ 
+dS' = r' d\theta ' dr'
+\]
+et on a que $x'^{2}+ y'^{2}= r'^{2}$, on a donc
+\begin{align*}
+&= \frac{1}{4 \pi \epsilon_0} \int_{ 0 }^{ R } \int_{ 0  }^{ 2 \pi } \frac{\sigma_{el } z}{ ( r'^{2}+ z^{2}) ^{\frac{3}{2}}} r' d\theta' dr'\\
+&= \frac{\sigma_{el } z}{4 \pi \epsilon_0}2 \pi  \int_{ 0 }^{ R } \frac{r'}{( r'^{2}+z^{2}) ^{\frac{3}{2}} } dr'\\
+	\ldots &= \frac{\sigma_{el } }{2 \epsilon_0} \left(  \frac{z}{|z|} - \frac{z}{ \sqrt{z^{2} + R^{2}} }\right) 
+\end{align*}
+En particulier, on voit que 
+ \[ 
+E_z \to \frac{\sigma_{el } }{2 \epsilon_0} \frac{z}{|z|} \text{ quand } R\to \infty 
+\]
+
+\end{exemple}
+\subsubsection{Lignes de champ electrique}
+Les lignes qui sont tangentielles a $\vec{E}$ en tout point (en analogie avec les lignes de courant )\\
+Ces lignes sont orientees dans la direction de $E$.\\
+\begin{exemple}
+Pour une charge ponctuelle positive
+\begin{figure}[H]
+    \centering
+    \incfig{champ-electrique-d'une-charge-positive}
+    \caption{champ electrique d'une charge positive}
+    \label{fig:champ-electrique-d'une-charge-positive}
+\end{figure}
+\end{exemple}
+\begin{exemple}
+Pour deux charges positives
+\begin{figure}[H]
+    \centering
+    \incfig{champ-deux-charges}
+    \caption{champ deux charges}
+    \label{fig:champ-deux-charges}
+\end{figure}
+\end{exemple}
+
+
+
+
+
+
+	
+\end{document}	

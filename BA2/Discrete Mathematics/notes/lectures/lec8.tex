@@ -1,0 +1,403 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Sat 17 Apr}{Moebios inversion formula}
+\section{Moebius inversion formulas}
+\subsection{Moebf}
+
+
+Let $f: \mathbb{Z}_{\geq 1}  \to \mathbb{C}$ be a function, we define a new function $F: \mathbb{Z}_{\geq 1} \to \mathbb{C}$ by
+\[ 
+	F( n) \coloneqq \sum_{d|n} f( d) , n  \in   \mathbb{Z}_{\geq 1} 
+\]
+\begin{exemple}
+	Let $f( n) =1$ for all $n \in \mathbb{Z}_{\geq 1} $, then $F( n) = \sum_{d|n} 1$ which is the number of divisors of $n$.
+\end{exemple}
+\subsection*{Question}
+Suppose that we know $F$. How do we recover $f$?
+\begin{defn}[Moebius function]
+	\[ 
+	\mu: \mathbb{Z}_{\geq 1} \to \mathbb{Z}
+	\]
+	is defined as follows.\\
+	Suppose that $n \in \mathbb{Z}_{\geq 1} $ has the prime factorization
+	\[ 
+	n = p_1 ^{e_1}\cdot \ldots \cdot p_r ^{e_r}
+	\]
+	then 
+	\begin{align*}
+		\mu( n) \coloneqq 
+		\begin{cases}
+		1 \text{ for } n=1\\
+		0 \text{ if some } e_i >1\\
+		( -1) ^{r} \text{ if }  e_1 = e_2= \ldots = 1
+		\end{cases}
+	\end{align*}
+	
+\end{defn}
+\begin{lemma}
+For $n \in \mathbb{Z}_{\geq 1} $ we have
+\[ 
+	\sum_{d|n} \mu ( d)  = 
+	\begin{cases}
+	1, \text{ if }  n=1\\
+	0 , \text{ if }  n >1
+	\end{cases}
+\]
+
+\end{lemma}
+\begin{proof}
+By induction, we check that 
+\[ 
+	\sum_{d|1} \mu( d )  = \mu ( 1) =1
+\]
+Now suppose that $n \in \mathbb{Z}_{\geq 1} $ has the prime factorization
+\[ 
+n= p_1^{e_1 }\cdot \ldots \cdot p_r^{e_r}
+\]
+Set $n^{*} \coloneqq  \prod p_i$, the square free part of $n$.\\
+If $d| n$ and $d\not| n*$, then $d$ has a prime divisor of multiplicity $>1$, then $\mu( d) = 0$. Hence
+\[ 
+	\sum_{d|n}  \mu( d) = \sum_{d| n^*} \mu( d)
+\]
+Now can easily compute
+\begin{align*}
+\sum_{d| n^{*}} \mu( d)  &= \sum_{d| p_1\ldots p_r} \mu ( d)
+&= \sum_{I \subset \left\{ 1, \ldots, r \right\} } \mu ( \prod_{i \in I} p_i) \\
+&= \sum_{I \subset \left\{ 1,\ldots,r \right\} } ( -1) ^{|I|}\\
+&= \sum_{k=0}^{ r} ( -1) ^{k} \binom r k = ( 1-1) ^{r}= 0	
+\end{align*}
+
+\end{proof}
+\begin{thm}[Moebius inversion formula]
+	Let $f,F: \mathbb{Z}_{\geq 1} \to \mathbb{C}$ be such that
+	\begin{align}
+		F( n) = \sum_{d|n} f( d) , \quad n \in \mathbb{Z}_{\geq 1} 
+	\end{align}
+	Then
+	\begin{align}
+		f( n) = \sum_{d|n} \mu( d) F( \frac{n}{d}) 
+	\end{align}
+	Moreover, $( 2) $ implies $( 1) $
+\end{thm}
+\begin{proof}
+Let $d $ and $n$ be positive integers such that $d|n $.\\
+Then $F( \frac{n}{d}) = \sum_{d'| \frac{n}{d}} f( d') $, therefore
+\[ 
+	\sum_{d|n} \mu( d) F( \frac{n}{d})  = \sum_{d|n} \mu( d)  \sum_{d'| \frac{n}{d}} f( d') 
+\]
+Consider the set $S_n$ of all pairs $( d,d') \in \mathbb{Z}_{\geq 1} $ such that 
+\[ 
+d|n \text{ and } d' | \frac{n}{d}
+\]
+If $n$ and its divisor $d'$ are fixe, then $d$ runs over all divisors of $\frac{n}{d'}$.\\
+Hence, we can change the order of summation
+\begin{align*}
+	\sum_{d|n} \sum_{d' | \frac{n}{d}} \mu( d)  f( d') &= \sum_{( d,d') \in S_n} \mu( d) f( d')\\
+	&= \sum_{d'|n} \sum_{d| \frac{n}{d'}} f( d' )  \mu( d)
+\end{align*}
+Using the lemma above, we get
+\begin{align*}
+	\sum_{d'|n} \sum_{d| \frac{n}{d'}} f( d' )  \mu( d) &= \sum_{d'|n} f( d') \sum_{d| \frac{n}{d'}} \mu( d) \\
+	&=f( n) 
+\end{align*}
+We now show the other implication, namely\\
+Let $F: \mathbb{Z}_{\geq 0} \to \mathbb{C} $ be any function.\\
+Set $f( n) \coloneqq \sum_{d|n} \mu(d) F( \frac{n}{d}) $, then for $n \in \mathbb{Z}_{\geq 1} $ 
+\begin{align*}
+	\sum_{d|n} f( d) = \sum_{d|n} \sum_{d'|d} \mu( d') F( \frac{d}{d'}) 
+\end{align*}
+we make the change of variables
+\[ 
+	\left\{ ( d,d') | d|n, d'|d \right\} \to \left\{ ( d'',d') | d'' |n, d' |\frac{n}{d''} \right\} 
+\]
+Then
+\[ 
+	= \sum_{d''|n} \sum_{d'| \frac{n}{d''}} \mu( d') F( d'') = \sum_{d''|n}^{ } F( d'') \sum_{d'| \frac{n}{d''}}^{ }\mu( d') = F( n) 
+\]
+\end{proof}
+\subsection{Computing the number of cyclic sequences}
+\begin{defn}[Linear sequence]
+	Let $A$ be a set. A linear sequence of length $n$ in the alphabet $A$ is an element of $A^{n}$ :
+	\[ 
+		a= ( a_1, \ldots, a_n) , a_k \in A  \text{ for }  k=1, \ldots,n
+	\]
+The number of linear sequences of length $n $ in an alphabet of size $r$ is $r^{n}$.\\
+Consider the following equivalence relation on the set of linear sequences
+\[ 
+	( a_1, \ldots, a_n) \sim ( a_2, \ldots, a_n, a_1) 
+\]
+Two linear sequences are equivalent if one of them can be obtained from another by a cyclic shift.
+\end{defn}
+\begin{exemple}
+\begin{figure}[H]
+    \centering
+    \incfig{linear-sequence}
+    \caption{Linear sequence}
+    \label{fig:linear-sequence}
+\end{figure}
+\end{exemple}
+\begin{defn}[Cyclic sequence]
+	A cyclic sequence of length $n$ in an alphabet $A$ is an equivalence class of linear sequences with respect to the relation $\sim$.		
+\end{defn}
+\begin{propo}
+	The number of  $T( n, r) $ of cyclic sequences of length $n$ on an alphabet of size $r$ is
+	\[ 
+		T( n,r)  = \frac{1}{n} \sum_{d|n}^{ } \phi( \frac{n}{d}) r^{d}
+	\]
+	Here, $\phi( \cdot) $ is the Eulers totient function.
+\end{propo}
+\begin{defn}[Period of cyclic sequence]
+	A period of a cyclic sequence $( a_1, \ldots, a_n) $ is a minimal number $k \in \left\{ 1, 2, \ldots, n \right\}  $ such that 
+	\[ 
+		( a_1, a_2, \ldots, a_n)  = ( a_{1+k} , a_{2+k} , \ldots, a_1, \ldots, a_k) 
+	\]
+	are equal as linear sequences.
+
+\end{defn}
+\subsection*{Exercise}
+
+Show that a $k$ is always a divisor of $n$.
+
+Let $M( d,r) $ be the number of cyclic sequences of length $d$ and of period $r$.\\
+We notice that
+\[ 
+	r^{n} = \sum_{d|n}^{ } d \cdot M( d,r) 
+\]
+Indeed, notice that there exists $\pi$ a projection from the linear sequences of length $n$ into the cyclic sequences.\\
+The number of preimages of a cyclic sequence under the map $\pi$ is $d$, the period of the sequence, therefore, if we denote by $ \mathcal{L} ( n,r)   $ the set of linear sequences, we get
+\[ 
+	r^{n}=| \mathcal{L} ( n,r) | = \sum_{d|n}^{ } d \cdot | M( d,r) |
+\]
+Applying the Moebius inversion formula, we obtain
+\[ 
+	n \cdot M( n,r)  = \sum_{d|n}^{ } \mu ( \frac{n}{d}) r^{d}
+\]
+Each cyclic sequence has a well defined period $d$ and it corresponds to the unique cyclic sequence of length $d$ and period $d$.
+Thus
+\[ 
+	T( n,r)  = \sum_{d|n}^{ } M( d,r) 
+\]
+Combining both formulas above, we get
+\begin{align*}
+	T( n,r) &= \sum_{d|n}^{ } M( d,r) \\
+		&= \sum_{d|n}^{ } \frac{1}{d} \sum_{d'|d}^{ } \mu( \frac{d}{d'}) r^{d'}\\
+		&= \sum_{d'|n}^{ } \sum_{d''| \frac{n}{d'}}^{ } \frac{1}{d'\cdot d''} \mu( d'') r^{d'}
+\end{align*}
+Now we have to compute the sum 
+\[ 
+	\sum_{d''| \frac{n}{d'}}^{ } \frac{1}{d''} \mu( d'') 
+\]
+As an exercise, show that for $n \in \mathbb{Z}_{ \geq 1}, \sum_{d|n}^{ } \frac{1}{d} \mu( d)  = \frac{\phi( n) }{n} $.\\
+Using this, we finally obtain that
+\[ 
+	T( n,r) = \sum_{d'|n}^{ } \frac{\phi( \frac{n}{d'}) }{n} r^{d'}
+\]
+\subsection{Moebius inversion for posets}
+\begin{defn}[Binary relation ]
+	A binary relation on a set $A$ is a subset $R \subseteq A \times A$.\\
+	A relation is antisymmetric provided $(a,b) \in R$ and $( b,a) \in R$ imply $a=b$.\\
+	A relation is transitive if $( a,b) \in R$ and $( b,c) \in R$ imply $( a,c) \in R$ \\
+	A relation is reflexive if $( a,a) \in R$ for all $a\in R$.
+\end{defn}
+\begin{exemple}
+\begin{enumerate}
+\item The relation $ \leq $ on $\mathbb{Z}$ is antisymmetric, transitive, and reflexive
+\item The relation $<$ on  $\mathbb{Z}$ is antisymmetric, transitive and not reflexive
+\item The relation \textit { coprime}  is not antysimmetric, not transitive and not reflexive
+\end{enumerate}
+		
+\end{exemple}
+\begin{defn}[Partial Order]
+	A partial order on a set $A$ is an antisymmetricm reflexive and transitive relation $R \subseteq A \times A$.\\
+	A partially ordered set ( or poset)  is a set together with a partial order	
+\end{defn}
+\begin{exemple}
+Let $A$ be  a set. The set $2^{A}$ of subsets of $A$ is a partially ordered set by inclusion
+\begin{itemize}
+\item Reflexivity: $X \subseteq X$ 
+\item Transitivity : if $X  \subseteq y$ and $Y \subseteq Z$ then $X \subseteq Z$ 
+\item Antisymnmetric: if $X  \subseteq Y $ and $Y \subseteq X$ then $X=Y$
+\end{itemize}
+
+\end{exemple}
+\begin{exemple}
+The set $\mathbb{Z}_{ \geq 1} $ is partially ordere by the relation $d$ divides $n$.\\
+\begin{itemize}
+\item Reflexivity: $n$ divides $n$ 
+\item Transitivity: if $d|n$ and $ d'| d$ then $d'|n$ 
+\item Antisymnmetric: if $n|m$ and $m|n$ then $m=n$.
+\end{itemize}
+
+\end{exemple}
+We can represent such relations with Hasse diagrams in the following way
+\begin{figure}[H]
+    \centering
+    \incfig{hasse-diagram-12}
+    \caption{Hasse diagram 12}
+    \label{fig:hasse-diagram-12}
+\end{figure}
+\begin{defn}[Locally finite poset]
+	A partially ordered set $( X, \geq ) $ is locally  finite if for all $x,y\in X$ the interval
+	\[ 
+	[ x,y] \coloneqq \left\{ z \in X| y \leq z \leq x \right\} 
+	\]
+	is finite.\\
+We say that $0\in X$ is a zero element if $0\leq x$ for all $x \in X$
+\end{defn}
+Let $ ( X, \leq ) $ be a partiallly ordered locally finite set with $0$.\\
+Suppose that $f: X \to \mathbb{C}$ is a function.\\
+We define a new function $F: X \to \mathbb{C}$ by
+\[ 
+	F( x) \coloneqq  \sum_{y \leq x}^{ } f( y) 
+\]
+How do we recover $f$ from $F$?
+\begin{thm}[Moebius inversion for posets]
+	Given a partially ordered set $X$, there is a two varaiable function $M:X \times X\to \mathbb{R}$ such that 
+	\[ 
+		F( x) = \sum_{y \leq  x}^{ } f( y)  \iff f( x) = \sum_{y \leq x}^{ } F( y)  M( x,y) 
+	\]
+	$M$ is called the Moebius function of the poset.
+\end{thm}
+\begin{defn}[Incidence algebra $A( X) $]
+	Given a partially ordered set $X$, the incidence algebra $A( X) $ is the set of complex valued functions $f: X^{2} \to \mathbb{C}$ satisfying $f( x,y) =0$ unless $x \leq y$.\\
+	$A( X) $ is a vector space over $\mathbb{C}$ with respect to pointwise addition and multiplication by scalars.\\
+To make it into an algebra we need one more operation
+	
+\end{defn}
+\begin{defn}[Convolution]
+	Given $f, g \in A( X) $, their convolution $f \ast g$ is defined by
+	\[ 
+		f \ast g ( x,y)  = \sum_{x \leq z \leq y}^{ } f( x,z) g( z,y) 
+	\]
+	
+\end{defn}
+\begin{defn}
+	The delta function $\delta $ is the element of $A( X) $ 
+	\[ 
+		\delta ( x,y)  = 
+		\begin{cases}
+		1 \text{ if }  x=y\\
+		0 \text{ otherwise } 
+		\end{cases}
+	\]
+	
+
+\end{defn}
+\begin{rmq}
+Convolution is not always commutative.
+\end{rmq}
+\begin{lemma}
+	A function $f\in A( X) $ has a left and right inverse with respect to the convolution if and only if $f( x,x) \neq 0$ for all $x\in X$
+\end{lemma}
+\begin{proof}
+	Given $f\in A( X) $ we find $g \in A( X) $ such that
+	\[ 
+		f \ast g ( x,y) = \sum_{x \leq z \leq y }^{ } f( x,z) g( z,y)  = \delta ( x,y) 
+	\]
+	For all $x \in X$ 
+	\[ 
+		f \ast g( x,x)  = f( x,x)  g( x,x)  = \delta ( x,x)  = 1
+	\]
+	Therefore, the condition $f( x,x) \neq 0 $ is necessary for the existence of the inverse.\\
+	We define $g( x,x) \coloneqq f( x,x) ^{-1}$.\\
+	To define $g( x,y) $ for $x <y$, we assume by induction, that we have already found all $g( z,y) $ for all $z$, satisfying $x<z \leq y$.\\
+	Then
+	\begin{align*}
+	\delta( x,y) = 0 = \sum_{x \leq z \leq y}^{ } f( x,z)  g( z,y) \\
+	- f( x,x) g( x,y) = \sum_{x \leq z \leq y}^{ } f( x,z)  g( z, y) 
+	\end{align*}
+	We can now solve for $g( x,y) $.\\
+	Finally, if $f\ast g_1 =\delta$ and $g_2 \ast f = \delta$, then
+	\[ 
+	g_2 = g_2 \ast \delta = g_2 \ast f \ast g_1 = \delta \ast g_1 = g_1
+	\]
+	Therefore, the left and the right inverses of $f$ coincide.
+\end{proof}
+\begin{defn}[Zeta function]
+	The Zeta function $Z( x,y) $ of the poset $( X, \leq ) $ is the function
+	\[ 
+		Z( x,y)  =
+		\begin{cases}
+		1 \text{ if }  x \leq y\\
+		0 \text{ otherwise } 
+		\end{cases}
+	\]
+	
+\end{defn}
+\begin{defn}[Moebius function]
+	The Moebius function $M( x,y) $ is the inverse of the zeta function $Z$ with respect to convolution.
+\end{defn}
+We can now prove the Moebius inversion for posets
+
+\begin{proof}
+	Let $f:X \to \mathbb{C}$ be a function and $F:X \to \mathbb{C}$ be defined by
+	\[ 
+		F( x) = \sum_{y \leq x }^{ } f( y) 
+	\]
+Then, for a fixed $x \in X$ :
+\begin{align*}
+	\sum_{y \leq x}^{ } F(y) M( y,x)  &= \sum_{y \leq x}^{ } M( y,x) \sum_{z \leq y}^{ } f( z) \\
+					  &= \sum_{z \leq  y \leq x}^{ } f( z) M( y,x) \\
+					  &= \sum_{z \leq x}^{ } f( z)  \sum_{z \leq  y \leq x}^{ } M( y,x) \\
+					  &= \sum_{z \leq  x}^{ } f( z)  \left( \sum_{z \leq  y \leq x}^{ } Z( z,y) M( y,x) \right) \\
+					  &= \sum_{z \leq  y}^{ } f( z)  ( Z \ast M) ( z,x) \\
+					  &= \sum_{z \leq  y}^{ } f( z)  \delta( z,x) 
+					  &= f( x) 	
+\end{align*}
+Now we show that the inverse is also true.\\
+Let $F: X \to \mathbb{C}$ be a function and we define $f: X \to \mathbb{C}$ by
+\[ 
+	f( x) = \sum_{y \leq x}^{ } F( y) M( y,x) , x \in X
+\]
+Then,
+\begin{align*}
+	\sum_{y \leq x}^{ } f( y) &= \sum_{y \leq x}^{ } \sum_{z \leq  y}^{ } F( z) M( z,y) \\
+				  &= \sum_{z \leq  y \leq x}^{ } F( z)  M( z,y) \\
+				  &= \sum_{z \leq  y \leq x}^{ } F( z) M( z,y) Z( z,y) \\
+				  &= \sum_{z \leq  x}^{ } F( z)  \left( \sum_{z \leq y \leq x}^{ } M( z,y) Z( y,x)  \right) \\
+				  &= \sum_{z \leq  x}^{ } F( z)  \left( \sum_{z \leq  y \leq x}^{ } M( z,y) Z( y,x)  \right) \\
+				  &= \sum_{z \leq  x}^{ } F( z)  \delta( z,x) = F( x) 
+\end{align*}
+\end{proof}
+\begin{lemma}
+	Let $2^{A}$ be the set of subsets of a finite set $A$.\\
+	$2^{A}$ is partially ordered by inclusion.\\
+	The Moebius function of $2^{A}$ is given by
+	\[ 
+		M( x,y) = ( -1) ^{|x| - |y|}
+	\]
+	Where $x \subseteq y \subseteq A$
+\end{lemma}
+\begin{proof}
+We have to show that $M \ast Z = \delta$. Let $x,y$ be two subsets of $A$ such that $x \subseteq y$.\\
+We compute
+\begin{align*}
+	M \ast Z ( x,y)  &= \sum_{x \subseteq z \subseteq y}^{ } M( x,z) Z( z,y) \\
+			 &= \sum_{x \subseteq z \subseteq  y}^{ } ( -1) ^{|x| - |z| }\\
+			 &= \sum_{w \subseteq y \setminus x }^{ } ( -1)^{|w|}
+			 &=
+			 \begin{cases}
+			 0 \text{ if }  |y \setminus x| \geq 1\\
+			 1, |y\setminus x| = \emptyset
+			 \end{cases}
+			 = \delta( x,y) 
+\end{align*}
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+\end{document}	

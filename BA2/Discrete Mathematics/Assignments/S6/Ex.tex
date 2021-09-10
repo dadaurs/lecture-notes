@@ -1,0 +1,111 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\begin{document}
+\title{Exercise 6}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+We will suppose that $q\neq 0$, indeed, if the recurrence relation is of depth $k$ and $q=0$, the characteristic polynomial wouldn't have a constant term and thus the recurrence relation wouldn't be of depth $k$.\\
+Let 
+\[ 
+	p( x) = x^{k}- \alpha_1 x^{k-1} - \ldots - \alpha_{k} 
+\]
+be the characteristic polynomial of the linear recurrence.\\
+By hypothesis $q$ is a root with multiplicity $m$, we will use without proof that, for $0\leq i<m$,  $q$ will be a root of $ \frac{d^{i}}{dx^{i}}p( x) $.\\
+First, notice that the case $i=0$ is clear, indeed, we have
+\begin{align*}
+	 0 &=q^{k} - \alpha_1 q^{k-1} - \ldots - \alpha_k \\
+	q^{k}&= \alpha_1 q^{k-1} + \ldots + \alpha_k\\
+	q^{n} &= \alpha_1 q^{n-1} + \ldots + \alpha_k q^{n-k}
+\end{align*}
+Where, in the last step, we have simply multiplied by $q^{n-k}$.\\
+Since this holds for all $n>k$, we have shown that $q^{n}$ is a solution of the linear recurrence.\\
+We will now prove the result for $i<m$ .\\
+Notice that, if $m> 1$, the result cited above implies in particular that
+\begin{align*}
+	x^{n} - \alpha_1 x^{n-1}- \ldots - \alpha_k x^{n-k}&=0\\
+	\intertext{Taking the derivative yields}
+	n x^{n-1} - \alpha_1( n-1)  x^{n-2} - \ldots - ( n-k) x^{n-k-1} &= 0\\
+	nx^{n}- \alpha_1( n-1)  x^{n-1} - \ldots - ( n-k) x^{n-k} &= 0\\
+	n q^{n} - \alpha_1 ( n-1) q^{n-1} - \ldots - \alpha_k( n-k) q^{n-k} &= 0\\
+\end{align*}
+Thus,  $nq^{n}$ also satisfies the linear recurrence relation.\\
+Note that we can substitute $x $ by $q$ since we assumed that $q\neq 0$.\\
+In general, for $i<m$, repeating this process $i$ times ( ie. differentiating with respect to $x$ and then multiplying by $x$) gives the equality
+\[ 
+	n^{i}q^{n} - \alpha_1 ( n-1) ^{i} q^{n-1} - \ldots - \alpha_k ( n-k)^{i}  q^{n-k}=0
+\]
+And thus, $n^{i}q^{n}$ is a solution to the linear recurrence if $i<m$, since for $i \geq m$, $q$ will no longer be a root of the equation.\\
+
+\section*{2}
+Suppose there exist factors $x_0,\ldots,x_{m-1} \in \mathbb{R}$ satisfying
+\begin{align*}
+x_0 \left\{ q^{n} \right\}_{n=1}^{ \infty }  + \ldots + x_{m-1} \left\{ n^{m-1} q^{n} \right\}_{n=1}^{ \infty } = \left\{ 0 \right\}_{n=1}^{ \infty } \\
+\end{align*}
+Then, taking the $m-1$ first terms of each sequence, we get the linear system
+\begin{align*}
+\begin{cases}
+x_0 q + x_1 q + \ldots x_{m-1} q = 0\\
+x_0 q^{2} + x_1 2 q^{2} + \ldots +x_{m-1} 2^{m-1} q^{2} = 0\\
+\vdots\\
+x_0 q^{m-1} + x_1 ( m-1) q^{m-1} + \ldots +x_{m-1} ( m-1) ^{m-1} q^{m-1} = 0\\
+\end{cases}
+\end{align*}
+Which simplifies to
+\begin{align*}
+\begin{cases}
+x_0  + x_1  + \ldots x_{m-1}  = 0\\
+x_0  + x_1 2  + \ldots+ x_{m-1} 2^{m-1}  = 0\\
+\vdots\\
+x_0  + x_1 ( m-1) + \ldots +x_{m-1} ( m-1) ^{m-1}  = 0\\
+\end{cases}
+\end{align*}
+Putting the system into matrix form, we get a Vandermonde matrix
+\begin{align*}
+\begin{pmatrix}
+	1 & 1 & \ldots & 1 \\
+	1 &2 & \ldots & 2^{m-1}\\
+	1 &3 & \ldots & 3^{m-1}\\
+	\vdots & & \ddots & \vdots \\
+	1 & ( m-1)  & \ldots & ( m-1) ^{m-1}\\
+\end{pmatrix}
+\cdot 
+\begin{pmatrix}
+x_0 \\ x_1 \\ x_2 \\ \ldots \\ x_{m-1} 
+\end{pmatrix}
+= 
+\begin{pmatrix}
+0 \\ 0 \\ 0 \\ \vdots \\ 0
+\end{pmatrix}
+\end{align*}
+As shown in our linear algebra course, the determinant of this matrix is given by the formula
+\[ 
+	\prod_{1\leq i,j \leq m-1, i \neq j} ( i-j) 
+\]
+Which implies that the determinant of the matrix is non-zero since none of the terms in the product are zero.\\
+Using a fundamental result of linear algebra, this implies that $x_i = 0 \quad \forall 0\leq i \leq m-1$ and thus the sequences are linearly independent.
+
+
+
+
+
+
+
+
+
+
+
+
+
+%[La résolution des exercices ici...] %commentaire
+
+
+
+\end{document}

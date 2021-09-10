@@ -1,0 +1,78 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Sun 09 May}{Subgraphs vs induced subgraphs}
+\subsection{Subgraphs vs induced subgraphs}
+
+\begin{defn}[Subgraph]
+	A subgraph of a graph $G= ( V,E) $ is a graph $G' = ( V', E') $ such that $V' \subset V $ and $E' \subset E$.
+\end{defn}
+\begin{defn}[Induced subgraph]
+	The graph $G' = ( V', E') $ is an induced subgraph of $G= ( V,E) $ if $V' \subset V$ and $E' = E \cap \binom { V'} 2$.
+\end{defn}
+\begin{defn}[Spanning tree]
+	Let $G= ( V,E) $ be a graph.\\
+	An arbitrary tree of the form $( V, E') $ where $E' \subseteq E$ is called a spanning tree of the graph $G$.
+\end{defn}
+\begin{lemma}
+Every connected graph contains a spanning tree.
+\end{lemma}
+\begin{proof}
+	Let $G= ( V,E) $ be a connected graph.\\
+	We construct a spanning tree of $G$ by the following algorithm.
+	\begin{enumerate}
+	\item Start with an empty sungraph $ T = \emptyset$ 
+	\item Pick an edge $e \in E$ such that $e \notin E( T) $ 
+	\item Consider the new subgraph $T' $ obtained from $T$ by adding $e$, i.e.
+		\[ 
+			V( T') = V( T) \cup \left\{ v_1,v_2 \right\} , E( T') = E( T) \cap \left\{ e  \right\} 
+		\]
+	
+	\item If $T'$ does not contain cycles set $T \coloneqq  T'$ 
+	\item If there is no edge $e \in E$ such that 2 and $3$ hold, then stop.
+	\end{enumerate}
+	Note that
+	\begin{itemize}
+	\item $T$ contains all vertices of $G$ 
+	\item $T$ is connected
+	\item $T$ contains no cycles
+	\end{itemize}
+	Hence, $T$ is a spanning tree.
+\end{proof}
+\subsection{Minimal spanning trees}
+\begin{defn}[Weighted graph]
+	A weighted graph is a graph in which each edge is assigned a numerical weight.\\
+	We define the weight of a graph as the sum of weights of all its edges.
+\end{defn}
+\subsubsection*{Problem}
+Find a minimum weight spanning tree $T$ for a given weighted connected graph $G$.
+\subsubsection{Greedy algorithm ( or Kruskal's algorithm) }
+\begin{itemize}
+\item Input : Connected weighted graph
+\item Step 1: Start with an empty graph
+\item Step 2: Take all the edges that have not been selected and that would not creat a cycle with the already selected edges. Add the one with the smallest weight
+\item Step 3: Repeat until the graph is connected and contains all vertices.
+\end{itemize}
+Let us show that the algorithm yields the desired result.\\
+\begin{proof}
+Let $T$ be the graph obtained as the output of Kruskal's algorithm to a weighted connected graph $G$, we observe
+\begin{itemize}
+\item $T$ contains all vertices of $G$ 
+\item $T$ is connected 
+\item $T$ contains no cycles
+\end{itemize}
+So $T$ contains no cycles.
+\end{proof}
+Now we show that $T$ has minimal weight.\\
+Let $F$ be another spanning tree of $G$, we want to show that $wt( F) \geq wt( T) $.\\
+We number the edges of $T$ according to the order we have added them while running Kruskal's algorithm.\\
+Let $e$ be the edge with the smallest number such that $e \in E( T) $ and $e \notin E( F) .$ \\
+Add $e$ to $F$, the ne new graph will contain a cycle $C$.\\
+$C$ is not fully contained in $T$, so $C$ has and edge $f$ that is not an edge of $T$.\\
+If we add the edge $e$ to $F$ and delete $f$, we get a third tree $H$.\\
+Suppose $wt( f) < wt( e ) $.\\
+If whe chose $e$ and not $f$ in the algorithm, it means that $f$ would forme a cycle with the already selected edges of $T$.\\
+All previously selected edges of $T$ are edges of $F$, $f$ is an edge of $F$ implies $F$ contains a cycle, which is impossible since $F$ is a tree.\\
+Hence,  $wt( F)> wt( H)  $
+
+
+\end{document}	

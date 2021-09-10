@@ -1,0 +1,72 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{6}{Wed 10 Mar}{Fonctions continues}
+\subsection{Caracterisation de limite par suites}
+\begin{thm}[Limites/Suites]\label{thm:Limites/Suiteslimites_suites}
+	Soit $f:E \subset \mathbb{R}^n \to \mathbb{R}$ et $x_0 \in \mathbb{R}^n$ un point d'accumulation de $E$. La limite $\lim_{x \to x_0} f( x) =l$ si et seulement si pour toute suite suite $ \left\{ x^{( k) }\right\} \subset E $ qui converge vers $x_0$, on a $\lim_{k \to  + \infty} f(x^{( k) }) = l$.
+\end{thm}
+\begin{proof}
+	Soit $ \left\{ x^{( k) }: \lim_{k \to  + \infty} x^{( k) }= x_0 \right\} $, on sait que $ \lim_{x \to x_0} f( x) =l$ donc
+	\[ 
+		\forall \epsilon>0, \exists \delta>0 \forall x \in E, \N{x-x_0} < \delta, |f( x) -l| < \epsilon
+	\]
+il existe $N$ tq $\forall k>n$ tq $\N{x^{( k) }-x_0}<\delta$\\
+Si la limite $ \lim_{k \to  + \infty} f( x^{( k) }) = l$ pour toute suite $x^{( k) }$.\\
+Par l'absurde, supposons que $ \lim_{x \to x_0} f( x) $ n'existe pas.\\
+\[ 
+	\exists \epsilon>0 \forall \delta>0 \exists x \in E, x\neq x_0: \N{x-x_0} < \delta 
+\]
+et
+\[ 
+	|f( x) -l| \geq \epsilon
+\]
+Si on prend $\delta=\frac{1}{k}$, alors $\exists x^{( k) }\neq x_0$: $\N{x^{( k) }-x_{0}}< \frac{1}{k} $ tel que $|f( x^{( k) }) -l| \geq \epsilon$.\\
+Or cette suite $x^{( k) }$ converge vers $ x_0$, $\contra$
+	
+\end{proof}
+\subsection{Proprietes de l'operation de limite}
+Soit $f,g: E \subset \mathbb{R}^n \to \mathbb{R}$, $x_{0} \in \mathbb{R}^n$ un point d'accumulation de $E$ et $\lim_{x \to x_0} f( x) =l_1$, $\lim_{x \to x_0} g(x) =l_2$, alors
+l'operation de limite est lineaire, respecte les regles de multiplication.
+\begin{thm}[Critere de Cauchy]\label{thm:Critere de Cauchycritere_de_cauchy}
+	Idem qu'en analyse I.
+\end{thm}
+\subsection{Fonctions a valeurs dans $R^{m}$}
+Soit $f: \mathbb{R}^n \to \mathbb{R}^m$.\\
+\begin{defn}[Limite]
+	On dit que $\lim_{x \to x_0} f( x) = \vec{l} \in \mathbb{R}^m$ existe si
+\[ 
+	\forall \epsilon>0, \exists \delta >0: \forall x \in E \setminus \left\{ x_0 \right\} , 0 < \N{x-x_0} < \delta
+\]
+on a
+\[ 
+	\N{f( x) -l} < \epsilon
+\]
+De plus, chaque composante de $f$ converge vers la composante correspondante de la limite.
+
+	
+\end{defn}
+\section{Fonctions continues}
+\begin{defn}[Continuite en un point]
+	Soit $E \subset \mathbb{R}^n$ non vide, $f: E \to \mathbb{R}^{m}$, et $x_0 \in E$.\\
+	Si $x_0$ est un point d'accumulation de $E$, on dit que $f$ est continue en $x_0$ si $\lim_{x \to x_0} f( x) = f( x_0) $.\\
+	Si $x_0$ est un point isole, on admet que $f$ est continue en $x_{0}$
+	
+\end{defn}
+\subsubsection{Definitions Equivalentes}
+
+\begin{itemize}
+	\item  $\forall \epsilon>0, \exists \delta: \forall x \in E, \N{x-x_0}, \N{f( x) -f( x_0) }<\epsilon$
+	\item pour toute suite $x^{( k) }\subset E$ qui converge vers $x_{0}$ on a que $\lim_{k \to  + \infty} f( x^{( k) }) =f( x_{0}) $
+\end{itemize}
+\begin{defn}[Continuite sur $E$]
+	On dit que $f:E \to \mathbb{R}^m$ est continue sur $E$ si elle est continue en tout point $x\in E$.\\
+	Dans ce cas, on note $f \in C^{0}( E) $
+	
+\end{defn}
+\begin{defn}[continuite uniforme sur $E$]
+	On dit que $f$ est uniformement continue sur $E$ si $\forall \epsilon$, $\exists \delta$ tel que $\forall x \in E, \forall y \in E \N{y-x} <\delta,$ on a $\N{f( y) -f( x) }<\epsilon$
+
+\end{defn}
+Evidemment, la continuite uniforme implique la continuite.
+
+\end{document}	

@@ -1,0 +1,60 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{thmtools}
+\usepackage{amssymb}
+\usepackage{aligned-overset}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures}{#1.pdf_tex}
+}
+
+\begin{document}
+\title{Exercise for Week 4}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+Let us first count the case $n=3$.\\
+We denote each point by it's index, here are all the possibilities to pair two indices together:
+\begin{align*}
+	\left\{ ( 1,2), ( 3,4), ( 5,6)  \right\} \\
+	\left\{ ( 1,2), ( 3,6), ( 4,5)  \right\} \\
+	\left\{ ( 1,4) , ( 2,3) , ( 5,6)  \right\} \\
+	\left\{ ( 1,6) , ( 2,3) , ( 4,5)  \right\} \\
+	\left\{ ( 1,6) , ( 2,5) , ( 3,4)  \right\} \\
+\end{align*}
+Hence, there are 5 possibilities for the case $n=3$.
+
+
+\section*{2}
+Let us search a recursive formula.\\
+We will denote by $a( n) $ the number of ways to do this for a circle with $2n$ labelled points.\\
+We define $a( 0) =1 $.\\
+
+We first index all of the $2n$ points from 1 to $2n$.\\
+
+First we choose what point to connect with point 1, there are exactly $n$ points to choose, since choosing a point with an uneven index will force 2 lines to intersect.\\
+Hence, the coordinates of the chosen point have to be even, suppose we choose the point with coordinates $2k$.\\
+Now we are left with two subsets of points, one contains $2n -2k$ points, the other one contains $2k-2$ points.
+Hence, the formula of arrangements for a fixed $k $ is given by
+\[ 
+	a( n-k) \cdot a( k-1) 
+\]
+Summing over all possibilities for $k$ yields
+\[ 
+	a(n) =\sum_{k=1}^{n} a( n-k) \cdot a(k-1) 
+\]
+This however, simply is the definition of the Catalan Numbers and we conclude that there are $b_n$ ways to choose $n$ pairs of points on a circle such that their segments do not intersect.
+
+\end{document}

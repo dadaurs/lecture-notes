@@ -1,0 +1,82 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Mon 08 Mar}{Ensembles compacts/connexes par arcs}
+\subsection{Caracterisation des ensembles ouverts}
+\begin{itemize}
+	\item $\ded E$ est toujours ouvert.
+	\item $E$ est ouvert si et seulement si $E = \ded E$
+	\item L'union ( meme infinie) d'ensembles ouverts est ouverte.\\
+	Soit $E = \bigcup_{\alpha\in A} K_\alpha$ et $K_\alpha$ sont ouverts.\\
+	Alors $\forall x \in E$, $x \in K_\alpha$ et donc il existe une boule ouverte centree en  $x$ et contenue dans $K_\alpha$.
+\item L'intersection finie d'ensembles ouverts est ouverte.\\
+	Soit $E= \bigcap K_i$, alors $\forall x \in E, x \in K_i \forall i$, mais chaque $K_i$ est ouvert, donc en prendant $\delta = \min \left\{ \delta_1,\ldots \right\} $, $B( x,\delta) \in E$ et donc $E$ est ouvert.
+\end{itemize}
+\subsection{Caracterisation des ensembles fermes}
+\begin{itemize}
+\item $ \mathbb{R}^n\setminus \overline{E} = \ded E, \overline{E^{c}}= \mathbb{R}^n\setminus \ded E$ 
+\item $\overline{E}$ est toujours ferme.
+\item L'intersection ( meme infinie) d'ensembles fermes est fermee.
+\item L'union finie d'ensembles fermes est fermee.
+\item $E$ est ferme si et seulement si toute suite $ \left\{ x^{( k) } \right\} $ convergente, converge vers un element $x \in E.$
+\begin{proof}
+	Soit $E$ ferme et $ \left\{ x^{( k) } \right\} $ une suite convergente vers $x \in \mathbb{R}^n$, $\forall \epsilon>0 \exists N_\epsilon: \forall k >N_\epsilon, \N{x-x^{( k) }} \leq \epsilon$.\\
+	Donc $\forall \epsilon B( x,\epsilon) \cap E \neq \emptyset $, donc $x \in \overline{E}=E$.\\
+	Supposons que $E$ n'est pas ferme, donc $E^{c}$ n'est pas ouvert.
+	Donc $\exists x \in E^{c} : \forall \delta>0, B( x,\delta) \cap E \neq \emptyset $.\\
+	Si on prend $\delta= \frac{1}{k}, k\in \mathbb{N} \exists x^{( k) }\in B( x,\delta) \cap E$ et $ \left\{ x^{( k) } \right\} $ converge vers $x$, donc $x \in E$ $\contra$
+\end{proof}
+
+\end{itemize}
+\subsection{Ensembles compacts}
+\begin{defn}[Ensemble compact]\label{defn:Ensemble compactensemble_compact}
+	On dit que $E$ est compact si $E$ est a la fois ferme et borne.
+\end{defn}
+\begin{thm}[Caracterisation par sous-suites convergentes]
+	Un ensemble non vide $E \subset \mathbb{R}^n$ est compact si et seulement si de toute suite $ \left\{ x^{( k) } \right\} \subset E$ on peut extraire une sous-suite convergente vers un element $x \in E$
+\end{thm}
+\begin{thm}[Caracterisation par recouvrements finis]
+	Un ensemble non vide $E\subset \mathbb{R}^n$ est compact si et seulement si de toute famille $ \left\{ K_\alpha, \alpha\in A \right\} $ d'ouverts tel que $E \subset  K_\alpha $, on peut extraire une sous-famille finie qui est encore un recouvrement de $E$. 
+\end{thm}
+\begin{defn}[Chemin dans $E$]
+	Soit $E \subset \mathbb{R}^n$ non vide. On appelle chemin de $E$ une application $\gamma:[0,1] \to E$, $\gamma( t) = ( \gamma_1, \ldots) $, tel que $\gamma_i$ est continu pour tout $i$.
+	
+E\end{defn}
+\begin{defn}[Ensembles connexes par arcs]
+	Un ensemble $E \subset \mathbb{R}^n$ est connexe par arcs si $\forall x,y \in E$, il existe un chemin $\gamma$ tel que $\gamma( 0) =x, \gamma( 1 ) =y$.
+\end{defn}
+
+\section{Fonctions de plusieurs variables}
+Soit $E\subset \mathbb{R}^n$ non vide. On appelle fonction sur $E$ a valeurs reelles une application $f: E \to \mathbb{R}$ 
+\[ 
+	\forall x \in E, x \to f( x) \subset \mathbb{R}^n
+\]
+On note $D( f) $ le domaine de $f$, $\im f$ l'image, $g( f)$ le graphe .
+\subsection{Notion de limite}
+\begin{defn}[Limite]
+	Soit $f: E \to \mathbb{R}$ et $x_0 \in \mathbb{R}^n$ un point d'accumulation de $E$. On dit que 
+	 \[ 
+		 \lim_{x \to x_0} f( x) = l \in \mathbb{R}
+	\]
+	si
+	\[ 
+		\forall \epsilon>0, \exists \delta>0: \N{x-x_0} < \delta
+	\]
+	Alors
+\[ 
+	\N{f( x) -l} < \epsilon
+\]
+\end{defn}
+\begin{thm}[Des deux gendarmes]
+	Soit $f,g,h:E \to \mathbb{R}^n $ et $x_0 \in \mathbb{R}^{n}$ un point d'accumulation de $E$.\\
+	Si $ \lim_{x \to x_0} g( x) = \lim_{x \to x_0} h( x) = l$ et $\exists \alpha>0$
+	\[ 
+		h( x) \leq f( x) \leq g( x)  0< \N{x-x_0} \leq \alpha
+	\]
+	Alors $ \lim_{x \to x_{0}  } f( x)$ existe et est egale a $l$.
+	
+\end{thm}
+
+
+			
+
+\end{document}	

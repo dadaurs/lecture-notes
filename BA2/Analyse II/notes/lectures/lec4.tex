@@ -1,0 +1,88 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Wed 03 Mar}{Boules sur $R^n$}
+\subsection{Suites sur $R^{n}$}
+\begin{rmq}
+	Supposons que $ \left\{ x^{( k) } \right\}  \to \vec{x}$ par rapport a la norme euclidienne. Et oit $||| \cdot |||$ une autre norme sur $ \mathbb{R}^n$. Puisque toutes les normes sont equivalentes sur $\mathbb{R}^{n}$ $|||\vec{x}||| \leq c ||\vec{x}||_2$ Donc toutes les suites converge peu importe la norme.
+\end{rmq}
+En particulier, on peut choisir la norme infinie.
+\begin{lemma}
+	Une suite $ \left\{ x^{( k) } \right\} $ converge si et seulement si toutes les composantes convergent.
+\end{lemma}
+\begin{defn}[Suites de Cauchy]
+	On dit qu'une suite $ \left\{ x^{( k) } \right\} $ est de Cauchy si
+	\[ 
+		\forall \epsilon>0 \exists N>0: \forall k,l \geq N \N{x^{( k) } - x^{( l) }} \leq \epsilon
+	\]
+	
+	
+\end{defn}
+\begin{thm}
+	Une suite converge si et seulement si elle est de Cauchy.
+\end{thm}
+\begin{proof}
+	Si la suite $x^{( k )}$ converge $\iff \left\{ x^{( k) }_i \right\} $ converge pour tout $i=1,\ldots,n$ donc toutes ces suites sont de Cauchy et donc $x^{( k) }$ converge.
+\end{proof}
+\begin{thm}[Bolzano-Weierstrass]
+	Soit $ \left\{ x^{( k) } \right\} $ une suite bornee.\\
+	Alors il existe une sous-suite $ \left\{ x^{( k_j) } \right\} $ qui converge
+\end{thm}
+\begin{proof}
+	Si $ \left\{ x^{( k) } \right\} $ est bornee, en particulier chaque suite $x^{( k)_i}$ sera bornee.\\
+	En $i=1$, la suite $x^{( k) }$ est bornee, donc il existe une sous-suite convergente vers une valeur $x_1$.\\
+	On considere les index de cette sous-suite et on reapplique l'argument ci-dessus en $i=2$, etc.
+\end{proof}
+
+\subsection{Topologie de $ \mathbb{R}^n$}
+\begin{defn}[Boule]\label{defn:Bouleboule}
+	Pour tout $x \in \mathbb{R}^n$ et $\delta>0$, la boule ouverte centree en $x$ et de rayon $\delta$ 
+	\[ 
+		B( x,\delta) = \left\{  y \in \mathbb{R}^n : \N{y-x} < \delta \right\} 
+	\]
+	La boule fermee 
+	\[ 
+		\overline{B}( x,\delta) = \left\{  y \in \mathbb{R}^n : \N{y-x} \leq \delta \right\} 
+	\]
+	La sphere centree en $x$ et de rayon  $\delta$
+	\[ 
+		S( x,\delta) = \left\{  y \in \mathbb{R}^n : \N{y-x} = \delta \right\} 
+	\]
+\end{defn}
+\subsection{Classification des points d'un ensemble $E \subset \mathbb{R}^n$}
+Le complementaire de $E$ est
+\[ 
+E^{c}= \left\{ y \in \mathbb{R}^n , y \notin E \right\} 
+\]
+On dit que $x$ est un point interieur de $E$ si $\exists \delta: B( x,\delta) \subset E$,
+on dit que $x$ est un point frontiere de $E$ si $\forall \delta B( x,\delta) \cap E\neq \emptyset  $ et $B( x,\delta) \cap E^{c} \neq \emptyset $
+On dit que $E^{o}$ est l'ensemble des points interieurs de $E$, $E^{o}$ est appele l'interieur de $E$.
+
+On note $\del E $ l'ensemble des points frontieres, appele la frontiere ou le bord de $E$.\\
+On dit que $x$ est un point adherent de $E$ si $\forall \delta >0 ,B( x,\delta) \cap E \neq \emptyset $
+On note $ \bar E$ l'ensemble des points adherents de $E$, appele l'adherence de $E$.\\
+On a $\bar E = E \cup \del E$ \\
+On dit que $x$ est un point isole si 
+\[ 
+	\exists \delta>0 B( x,\delta) \cap E = \left\{ x \right\} 
+\]
+On dit que $x$ est un point d'accumulation de $E$, si  $\forall \delta>0$ 
+\[ 
+	B( x,\delta) \cap ( E\setminus \left\{ x \right\} ) \neq \emptyset 
+\]
+Donc, en particulier, si on prend $ \delta = \frac{1}{k},k \in \mathbb{N}$
+\[ 
+	\exists x^{( k) } \in E, \text{ tel que } \N{x^{( k) }-x} \leq \frac{1}{k}
+\]
+La suite $x^{( k) }$ converge vers $x$.
+\begin{defn}
+	Soit $E$ un ensemble de $ \mathbb{R}^n$, on dit que $E$ est ouvert si tous ses points sont interieurs
+	
+\end{defn}
+\begin{defn}
+	$E$ est ferme si $E^{c}$ est ouvert.
+	
+\end{defn}
+
+
+
+\end{document}	

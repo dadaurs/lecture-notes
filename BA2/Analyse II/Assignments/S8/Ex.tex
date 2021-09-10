@@ -1,0 +1,89 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{mathtools}
+
+
+\input{../../../newcommands.tex}
+\begin{document}
+\title{Série 8}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+Il suffit de montrer que 
+\[ 
+	\nabla f( a)  \cdot ( \gamma'( 0) ) = 0
+\]
+En effet, car l'image de $\gamma$ est un sous-ensemble de  $\Sigma$, on a
+\[ 
+	f(\gamma( x)  )  =0
+\]
+En dérivant par rapport à $x$, on trouve
+\begin{align*}
+	f'( \gamma( x) ) \cdot \gamma'( x) &=0\\
+	\intertext{En substituant $x=0$, on trouve }
+	\nabla f( a)  \cdot \gamma'( 0) &= 0
+\end{align*}
+Ce qui montre l'égalité.
+\section*{2}
+On montre la double inclusion des ensembles.\\
+\hr
+\textbf{ $ T_a( \Sigma) \subset \Pi_a( \Sigma) - a$ }\\
+Cette inclusion est immédiate par la partie 1, en effet, soit $z \in \mathbb{R}^n$ tel qu'il existe un chemin $\gamma:]-1,1[ \to \Sigma$ satisfaisant $\gamma( 0) = a$ et $\gamma'( 0) = z$.\\
+Alors la partie 1 implique immédiatement que $\gamma'( 0) \in \Pi_a( \Sigma) -a$ et donc que $z \in \Pi_a( \Sigma) -a$.\\
+Ainsi, l'inclusion est démontrée.\\
+\hr
+\textbf{ $ T_a( \Sigma) \supset \Pi_a( \Sigma) - a$ }\\
+Pour alléger la notation, dans ce qui suit on utilisera la notation $ \del_i f( c) \coloneqq \frac{\del f}{\del x_i}( c) $.\\
+Soit $z= ( z_1,\ldots,z_n) \in \Pi_a( \Sigma) -a$.\\
+Sans perte de généralité, on va supposer que $\del_n f ( a) \neq 0$, dans le cas contraire, il suffirait d'échanger les indexes.\\
+Ainsi, par le théorème de la fonction implicite, il existe une fonction implicite $\phi : U \subseteq \mathbb{R}^{n-1}\to \mathbb{R}$ qui satisfait les hypothèses du théorème de la fonction implicite, notamment qu'il existe un voisinage de $a : U\subset \mathbb{R}^{n-1}$ tel que, $\forall x \in U, ( x,\phi( x) ) \in \Sigma$.\\
+Soit $b \in U$ tel que $( b, \phi( b) ) = a$.
+Définissons maintenant
+\[ 
+	z^{*} \coloneqq ( z_1, \ldots, z_{n-1} )  \in \mathbb{R}^{n-1}.
+\]
+Calculons la dérivée directionelle selon $z^{*}$ de $\phi $:
+\begin{align*}
+	D_{z^{*}} \phi( b) &= \nabla \phi( b) \cdot z^{*}\\
+			   &= \sum_{i=1} ^{n-1} - \frac{1}{\del_n f( a) } \del_i f( a) z_i \\
+			   \intertext{En utilisant que }
+			   \nabla f ( a) \cdot z &= 0\\
+			   \sum_{i=1}^{ n-1}  \del_i f( a) z_i &= - \del_n f( a) z_n\\
+			   \intertext{On trouve que }
+			   D_{z^{*}} \phi( b)  &= z_n
+\end{align*}
+Considérons donc maintenant un chemin $\beta :]c,d[\to \mathbb{R}^{n}$ défini par
+\[ 
+	\beta( \lambda) = \left( \lambda z^{*}+ b, \phi( \lambda z^{*}+ b) \right) 
+\]
+ou $c<0< d, \quad d,c \in [-1,1]$ sont tels que $\lambda z^{*}+b \in U \forall \lambda \in ]c,d[$, l'existence de $c$ et $d$ est donnée par le fait que $U$ est ouvert et contient $b$.
+Notons que
+\[ 
+	\beta'( 0) = \left( z^{*}, D_{z^{*}}\phi( b)  \right) = z \text{ et } \beta( 0) = \left( b,\phi( b) 	 \right) = a
+\]
+Ainsi, n'importe quel chemin $\gamma \in C^{1}( ]-1,1[ , \Sigma) $  qui satisfait que $\gamma( \lambda) = \beta( \lambda) \forall \lambda \in ]c,d[$ satisfait les conditions de l'ensemble $T_a( \Sigma) $.\\
+On en déduit que $z \in T_a( \Sigma) $ et ainsi
+\[ 
+	T_a( \Sigma) = \Pi_a( \Sigma) -a.
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

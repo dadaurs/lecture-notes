@@ -1,0 +1,44 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\begin{document}
+\title{Série 11}
+\author{David Wiedemann}
+\maketitle
+Pour simplifier la notation, pour $f: \mathbb{R}\to \mathbb{R}$ et $a,b \in \mathbb{R}$, on définit
+\[ 
+	\mathcal{G}( f, [ a,b] ) = \left\{ ( x, f( x) ) : a \leq x \leq b  \right\} 
+\]
+\hr
+Soit $\epsilon>0$ .\\
+On va montrer que le bord de l'ensemble $A$ est négligeable.\\
+Pour montrer celà, on va montrer qu'il existe une collection finie de pavés de $R_1, \ldots, R_k$, tel que
+\[ 
+\del A \subset \bigcup_{i=1}^{k} R_k \text{ et que } \vol (  \bigcup_{i=1} ^{k}R_k ) < \epsilon.
+\]
+Posons d'abord $R_1 = [ 0, \frac{\epsilon}{12}] \times [ 0,3] $.\\
+Car $2 + \sin ( \frac{1}{x} )$ est continue sur $[\frac{\epsilon}{12}, 1]$, par un exercice ( Série 21, exercice 1) , on sait qu'il existe un ensemble de pavés $A_1, \ldots , A_j$, tel que $\vol \left(   \bigcup_{i=1} ^{j}A_i \right) < \frac{\epsilon}{4}$ et $ \mathcal{G}\left( 2 + \sin ( \frac{1}{x}) , [ \frac{\epsilon}{2}, 1] \right) \subset \bigcup_{i=1} ^{j}A_i $.\\
+On définit alors pour  $1< i \leq j+1$, $R_i = A_{i-1} $.\\
+De plus, on définit encore
+\begin{align*}
+	R_{j+2} &= \left[ 1- \frac{\epsilon}{8( 2 + \sin ( 1) )}, 1+ \frac{\epsilon}{8 ( 2 + \sin ( 1) ) }\right] \times [ 0, 2 + \sin ( 1) ] \\
+	R_{j+3} &= [ 0, 1] \times [ - \frac{\epsilon}{8}, \frac{\epsilon}{8}]\\
+\end{align*}
+Faisons d'abord l'observation que $\del A \subset \bigcup_{i=1} ^{j+3}R_i$.\\
+De plus, 
+\[ 
+	\vol ( \bigcup_{i=1} ^{j+3} R_i) \leq \vol ( R_1) + \vol ( \bigcup_{i=1} ^{j}A_i) + \vol ( R_{j+2} ) + \vol ( R_{j+3} ) < \frac{\epsilon}{4} +  \frac{\epsilon}{4} +  \frac{\epsilon}{4} +  \frac{\epsilon}{4} =\epsilon.
+\]
+Et ainsi, le bord de $A$ est négligeable, ce qui implique que $A$ est mesurable au sens de Jordan.
+	
+
+
+
+
+\end{document}

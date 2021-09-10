@@ -1,0 +1,60 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Tue 02 Mar}{Hydrostatique}
+\subsection{Densite de force associee a la pression}
+Calculons la force exercee sur un volume de fluide infinitesimal du a la pression.\\
+\begin{figure}[H]
+    \centering
+    \incfig{cube_densite}
+\end{figure}
+On suppose qu'on connait $p( \vec{r}) $.
+\[ 
+	\vec{F}_1=p( \vec{r}( - \frac{dx}{2},0,0) )  dy dz \vec{e}_x
+\]
+Donc
+\begin{align*}
+	\sum_{i=1}^{ 6}\vec{F}_i &= ( -p( \frac{dx}{2},0,0) - p(  \frac{dx}{2},0,0) )  dy dz + \ldots\\
+				 &= - \frac{p( \frac{dx}{2},0,0) - p( - \frac{dx}{2},0,0) }{dx}dx dy dz \vec{e}_x + \ldots \\
+				 &= - \frac{\del p}{\del x} dV \vec{e}_x + \ldots = - \nabla p dV
+\end{align*}
+
+donc la densite de force associee a la pression est $-\nabla p$.
+\subsection{Poussee d'Archimede}
+Tout corps plonge dans un fluide recoit de la part de celui-ci une poussee verticale egale au poids du fluide deplace
+\subsection{Tension superficielle}
+Experience:\\
+On a des tubes de largeurs differentes, ouverts en haut et plonge dans l'eau.\\
+On note que le niveau d'eau monte a un niveau de $h \alpha \frac{1}{r}$ \\
+Semble etre une contradiction de la pression hydrostatique.\\
+On verra que ce phenomene est du a la tension superficielle.
+La loi $p( h) = p_0 + \rho g h$ reste valable dans le fluide, mais pas necessairement a la surface.
+\subsubsection{Origine et definition de la tension superficielle}
+On considere a nouveau un fluide, il est constitue de particules ayant des interactions entre elles ( inter moleculaires, etc) \\
+Il y a moins de telles liaisons pour une molecule a la surface du fluide. Pour amener cette molecule la-bas et pour augmenter la surface, il faut faire un travail.\\
+Experience:\\
+Soit un film de liquide ( eau savonneuse) tendu dans un cadre ABCD.\\
+Si on tend le cadre, il ya une force qui s'y oppose.\\
+Le travail est donc proportionel au changement de surface
+\[ 
+\Delta W = \gamma \Delta S = \gamma BC \Delta k \cdot 2
+\]
+Le 2 apparait parce que il y a 2 surfaces ( liquide/gaz)\\
+Donc on a
+\[ 
+F= 2 F_\gamma = 2 BC \gamma
+\]
+L'interface liquide/gaz est un peu comme une membrane elastique, mais la force est independante de la deformation.\\
+Experience\\
+Mesure de $\gamma$ 
+On plonge un cylindre attache a un newton metre dans le liquide.\\
+On mesure la force necessaire pour faire apparaitre un film lie au cylindre et on prend la difference entre cette force et la force $F_G$.\\
+
+\subsubsection{Quelques consequences immediates de la tension superficielle}
+Les bulles de savon minimisent leur surface et c'est pour cela qu'elles sont spheriques.\\
+Meme chose pour les bulles d'eau en apesanteur.\\
+Meme chose pour les cheveux mouilles qui collent.\\
+Certains objets ( trombone, punaises) ou des insectes qui flottent ( qui marchent sur la surface) 
+
+
+
+\end{document}	

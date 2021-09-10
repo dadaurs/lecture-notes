@@ -1,0 +1,78 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\begin{document}
+\title{Mini-Examen 3}
+\author{David Wiedemann}
+\maketitle
+On notera d'abord que pour $\lambda \in \mathbb{C}$,$ \lim_{n \to  + \infty} \lambda^{n} = 0$ si et seulement si $|\lambda|< 1$ .\\
+En effet, écrivons $\lambda= |\lambda| e^{i \theta},  $ avec $\theta \in [ 0, 2\pi[ $, alors on a
+\[ 
+\lim_{n \to  + \infty} \lambda^{n} = \lim_{n \to  + \infty} |\lambda|^{n} e^{in \theta} 
+\]
+Car la norme de $ e^{i n \theta} $ est égale à 1 pour tout valeur de $n$  et de $\theta$, il est immédiat que si $|\lambda| < 1$, alors
+\[ 
+\lim_{n \to  + \infty} \lambda^{n}= 0
+\]
+De même, si $ \lim_{n \to  + \infty} \lambda^{n}= 0$ , alors il faut que $ \lim_{n \to  + \infty} |\lambda|^{n}=0$ et un résultat d'analyse I implique alors que $ |\lambda| <1$.\\
+
+On dénotera par $ \underline 0$ la matrice nulle.\\
+On montre maintenant la double implication de l'assertion.\\
+$ \Rightarrow $ \\
+Montrons que si $ \lim_{j \to  + \infty} A^{j}= \underline 0,$ alors $|\lambda_i|<1, \forall i \in \left\{ 1, \ldots, n \right\} $.\\
+$A$ étant diagonalisable, on va considérer une base de vecteurs propres $v_1, \ldots, v_n$.\\
+Notons que, car $ \lim_{j \to  + \infty} A^{j} = \underline{0}$, en particulier, on a que $ \lim_{j \to  + \infty} A^{j} v = 0$.\\
+Ainsi, on a que 
+\[ 
+\lim_{j \to  + \infty} A^{j} v_i = \lim_{j \to  + \infty} \lambda_i^{j} v_i = 0
+\]
+Car $v_i $ est non nul, on en déduit que $|\lambda_i|< 1$.\\
+Ainsi, pour tout $i \in \left\{ 1, \ldots, n \right\} $ , on a $ |\lambda_i| < 1$.\\
+$ \Leftarrow$ \\
+Supposons que $ \forall i \in \left\{ 1, \ldots, n \right\} $ on a $ |\lambda_i|< 1$ , on va montrer que $ \lim_{j \to  + \infty} A^{j}= \underline 0$ .\\
+Soit $V$ une matrice inversible telle que
+\[ 
+A= V DV^{-1}, \quad D = \begin{pmatrix}
+	\lambda_1 &  &\\
+		  & \ddots &\\
+		  & & \lambda_n
+\end{pmatrix} 	
+\]
+Soit à nouveau $ v_1, \ldots, v_n $ une base de vecteurs propres de $A$, on a que
+\[ 
+\lim_{j \to  + \infty} A^{j} v_i = \lim_{j  \to  + \infty} \lambda_i^{j} v_i =0
+\]
+Ainsi, soit $w \in \mathbb{C}^{n}$, on sait qu'on peut exprimer $w$ comme combinaison linéaire des $v_i$:
+\[ 
+w = \sum_{i=1}^{ n} \alpha_i v_i
+\]
+Ainsi, on a 
+\begin{align*}
+\lim_{j \to  + \infty} A^{j} w &= \lim_{j \to  + \infty} A^{j} ( \sum_{i=1}^{ n}\alpha_i v_i) \\
+&= \lim_{j \to  + \infty} \sum_{i=1}^{ n} \alpha_i \lambda_i^{j} v_i
+\intertext{car chaque terme de la somme converge, on a }
+&= \sum_{i=1}^{ n}\alpha_i \lim_{j \to  + \infty} \lambda_i^{j}v_i \\
+&= \sum_{i=1}^{ n} 0 = 0
+\end{align*}
+Car pour tout $w \in \mathbb{C}^{n},  \lim_{j \to  + \infty} A^{j} w = 0 $, ceci implique que
+\[ 
+\lim_{j \to  + \infty} A^{j} =0.
+\]
+
+
+
+	
+
+	
+
+
+
+
+
+\end{document}

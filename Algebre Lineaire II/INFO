@@ -1,8 +1,0 @@
-#!/bin/sh
-NAME="Algebre Lineaire Avancee II"
-COURS_ZOOM=true
-COURS="https://epfl.zoom.us/j/84827915798?pwd=214306"
-EX_ZOOM=true
-EX="https://epfl.zoom.us/j/81777135688"
-ASS="true"
-LANG=French

@@ -1,0 +1,173 @@
+
+\documentclass[a4paper,11pt,french]{scrbook} 
+ 
+
+
+
+\usepackage[utf8]{inputenc} 
+\usepackage{utf8math}
+
+%\usepackage[euler-digits,euler-hat-accent]{eulervm}
+\usepackage[boldsans]{concmath}
+
+\usepackage{mathrsfs}
+\usepackage[french]{babel}
+\usepackage{mathtools} % includes amsmath
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{todonotes}
+
+%\usepackage{multirow}
+\usepackage{enumerate}
+
+%\usepackage{tikz}
+\usepackage{framed}
+\usepackage{hyperref}
+\usepackage{imakeidx}
+\makeindex
+%\usepackage{showlabels}  
+
+
+\newcommand{\smat}[1]{ \big(\begin{smallmatrix} #1 \end{smallmatrix}\big)}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\X}{\mathscr{X}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\pscal}[1]{\langle {#1} \rangle}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\car}{\mathrm{Char}}
+
+\providecommand{\one}{\mathbf{1}}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\rank}{rang}
+\DeclareMathOperator{\noy}{noyau}
+\DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\tcone}{tcone}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\spec}{spec}
+\DeclareMathOperator{\cof}{cof}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\sign}{sgn}
+\DeclareMathOperator{\poly}{poly}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\relint}{relint}
+\DeclareMathOperator{\spa}{span}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\diag}{diag}
+\DeclarePairedDelimiter\mnorm{\lvert\lvert\lvert}{\rvert\rvert\rvert} % matrix norm
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Théorème}[chapter]
+\newtheorem{lemma}[theorem]{Lemme}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{corollary}[theorem]{Corollaire}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Définition}[chapter]
+\newtheorem*{notation}{Notation}
+\newtheorem{example}{Exemple}[chapter]
+\newtheorem{remark}[theorem]{Remarque}
+\newtheorem{problem}{Problème}[chapter]
+\newtheorem{exercise}{Exercice}[chapter]
+\newtheorem{algorithm}{Algorithme}[chapter]
+
+
+
+\newcommand{\iunit}{\mathrm{i}}
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\EE}{{\mathbb E}}
+\newcommand{\FF}{{\mathbb F}}
+\newcommand{\KK}{{\mathbb K}}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\ZZ}{{\mathbb Z}}
+
+\newcommand{\calB}{{\mathcal B}}
+
+
+%opening
+
+\title{Algèbre linéaire avancée II}
+\author{Friedrich Eisenbrand}
+
+%\includeonly{chapter02-theoreme-spectral}
+
+\begin{document}
+
+\maketitle
+  
+\section*{Préface}
+\noindent Ceci sont mes notes du cours \emph{Algèbre Linéaire Avancée II}.
+La qualité de ce texte dépend fortement de la participation  des étudiants. 
+Ces  sources sont gérées sur \emph{GitHub}, une plateforme importante de collaboration. Si vous trouvez des fautes, des erreurs typographiques, ou même des démonstrations plus élégantes, ou des exemples qui vous aident à comprendre la matière, je vous invite à créer une \emph{branch} des fichiers en question, où dedans vous éditez le texte. Après, vous publiez (\emph{publish}) cette \emph{branch} et vos collègues peuvent discuter vos modifications. Si vous êtes satisfait avec vos modifications, vous me demandez, avec un \emph{Pull Request}, d'accepter vos modifications et finalement, le document peut être changé. Je me réjouis en avance de votre participation. 
+
+  
+\section*{Contributions}
+
+Des corrections et modifications ont été implémentées par: 
+\begin{itemize}
+\item Orane Jecker 
+\item Natalia Karaskova
+\item Dylan Samuelian
+\item Aziz Benmosbah
+\item Djian Post
+\item Robin Mamie
+\item Alfonso Cevallos
+\item Kévin Jorand
+\item Charles Dufour 
+\item Christoph Hunkenschröder
+\item Adam Cierniak
+\item Mann-Tchi Dang
+\item Yasmine Bennis
+\item Corentin 
+\item Lucas Gehrt
+\item Jooyoung Kim 
+\item Léo Navarro
+\item Arthur Serres
+\item Matthieu Haeberle
+\item Chady Bensaid
+\end{itemize}
+
+Le deuxième   chapitre est basé, en partie, sur les notes du cours de Daniel Kressner.  
+
+\tableofcontents
+
+\include{chapter-01-polynomes}
+\include{chapter00-valeurs-propres} 
+\include{chapter01-produits-scalaires}
+\include{chapter02-theoreme-spectral}
+\include{chapter03-systemes-differentiels-lineaires}
+\include{chapter04-entiers}
+\include{chapter05-groupes}
+
+\bibliographystyle{alpha}
+\bibliography{books}
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
+

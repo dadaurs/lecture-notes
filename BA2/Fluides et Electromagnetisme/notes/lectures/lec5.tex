@@ -1,0 +1,82 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Tue 09 Mar}{Hydrostatique continuation}
+\begin{exemple}[Bulle de Savon-deux interfaces]
+	On note $p_1$ la pression interne, $p_2$ la pression externe et $p_0$ la pression dans l'interface, on a donc
+	\[ 
+	p_0 = p_2 + \frac{2\gamma}{R_e} \text{ et } p_1 = p_0 + \frac{2\gamma}{R_i}
+	\]
+	
+	\[ 
+		p_1 = p_2 + \frac{2 \gamma}{ R_i } + \frac{2\gamma}{R_e}
+	\]
+	comme $R_i= R_e = R$, $p_1 = p_2 + \frac{4\gamma}{R}$
+
+
+\end{exemple}
+\begin{exemple}[Capilarite]
+	On considere $h >> l$ et que l'interface liquide/gaz est quasiment spherique.\\
+	On a $p_1 = p_2 + 2 \frac{\gamma}{R}$ et $p_3 = p_2 + \rho gh$.\\
+	\begin{align*}
+p_1 = p_3 = p_{atm} 	
+	\end{align*}
+	On trouve que $\frac{2\gamma}{R}= \rho gh$ et donc
+	\[ 
+	h= \frac{2\gamma}{\rho g R}= \frac{2\gamma\cos \theta}{\rho gr} = \alpha \frac{1}{r}
+	\]
+	
+
+\end{exemple}
+\section{Dynamique des fluides}
+On considere des fluides decris par
+\[ 
+	\rho( \vec{r},t) , p( \vec{r},t) , \vec{u}( \vec{r},t) 
+\]
+Vitesse d'un element fluide infinitesimal( vitesse moyenne de toutes les particules dans cet element) .\\
+\subsection{Types d'ecoulement}
+\begin{itemize}
+	\item $\vec{u}( \vec{r},t) =0$, ecoulement statique
+	\item $ \del_t \vec{u}= 0, \del_t \rho=0, \del_t p =0$, ecoulement stationnaire
+	\item Ecoulement laminaire "couches successive de fluide se deplacent doucement et regulierement l'un a cote de l'autre. ( a basse vitesse) 
+	\item Ecoulement turbulent s i non-laminaire.\\
+		Mouvement irregulier et chaotique. ( typiquement a haute vitesse d'ecoulement) 
+\end{itemize}
+\subsection{Derivee convective}
+Attention
+\[ 
+	\del_t \vec{u} = \text{ variation de $\vec{u}$ par unite de temps a un endroit fixe } \neq \text{ acceleration de l'element fluide a $(\vec{r},t )$ } 
+\]
+On considere la trajectoire d'un element fluide au cours du temps.\\
+On veut connaitre la variation temporelle de $p$ au long de la trajectoire.
+\begin{align*}
+	&\text{ au temps } t: , p( \vec{r},t) \\
+	&\text{ au temps  } t+ dt: \text{ position } \vec{r}+ \vec{u}( \vec{r},t) dt, \text{ pression } p( \vec{r}+ \vec{u}( \vec{r},t) dt, t+dt) \\
+\end{align*}
+\begin{align*}
+	&=p( x+u_xdt, y+u_ydt,z+u_z dt, t+dt)\\
+	&= p( x,y,z,t) + \del_x p u_x dt + \del_y p u_y dt + \del_z p u_z dt + \del_t p dt\\
+	&= p( \vec{r},t) + ( \vec{u}\cdot \nabla)p dt + \del_t p dt
+\end{align*}
+On appelle $(  \frac{\del}{\del t}+ \vec{u}\cdot \nabla )p := \frac{D}{Dt}p$\\
+De meme, la variation temporelle de $\vec{u}$ le long de la trajectoire ( = l'acceleration) 
+\[ 
+\vec{a}= \frac{D \vec{u}}{Dt}
+\]
+\subsection{Equations fluides}
+Pour determiner l'evolution des cinq fonctions $\rho, p, \vec{u}$ il faut $5$ equations.
+\subsubsection{Equations de continuite( description Eulerienne) }
+Principe de conservation de masse en absence de sources/pertes.
+On considere un volume $V$ fixe dans notre liquide, il definit une surface $S$ fermee.
+\[ 
+\text{ variation de masse dans } V = \text{ Flux de masse a travers  } S
+\]
+On a
+\[ 
+	\frac{d}{dt} \int \int \int _V \rho( \vec{r},t) dV = -\int \int_S \rho( \vec{r},t) \vec{u}( \vec{r},t) d \vec{S}
+\]
+
+
+
+
+
+\end{document}	

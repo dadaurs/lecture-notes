@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="240mm"
+   height="120mm"
+   viewBox="0 0 240 120"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="courbe-implicite.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.9887477"
+     inkscape:cx="313.27965"
+     inkscape:cy="132.22892"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="true"
+     width="200mm"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1918"
+     inkscape:window-height="1078"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid815"
+       units="mm"
+       spacingx="10"
+       spacingy="10"
+       empspacing="4"
+       dotted="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-177)">
+    <path
+       id="path24"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.44423;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m 182.29307,234.75805 c 1.49375,15.27564 -11.10138,26.87488 -22.61937,34.72079 -17.65852,12.43698 -38.37402,22.40145 -60.335465,22.61951 -15.58825,-2.26008 -19.397503,-21.8141 -34.227327,-25.55082 -9.091894,-1.87618 -21.622443,-4.28446 -23.344684,-15.31311 -2.523132,-10.92947 6.576632,-19.67184 15.370929,-24.33325 9.618834,-5.96606 18.375427,-13.41617 29.082062,-17.52112 18.455585,-7.75076 38.955155,-11.51733 58.917735,-9.35468 16.47835,2.3074 32.42391,13.57056 36.20392,30.42755 0.39724,1.41574 0.72178,2.85259 0.9522,4.30513 z" />
+    <text
+       style="font-size:4.4016px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.44016"
+       xml:space="preserve"
+       id="text839"
+       y="288.34381"
+       x="183.85524"><tspan
+         sodipodi:role="line"
+         id="tspan837"
+         x="183.85524"
+         y="288.34381"
+         style="stroke-width:0.44016">$f( x,y) =0$</tspan></text>
+    <text
+       style="font-size:4.4016px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.44016"
+       xml:space="preserve"
+       id="text853"
+       y="220.6057"
+       x="188.99472"><tspan
+         sodipodi:role="line"
+         id="tspan851"
+         x="188.99472"
+         y="220.6057"
+         style="stroke-width:0.44016">$\Sigma$</tspan></text>
+    <text
+       style="font-size:2.34157px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.234157"
+       xml:space="preserve"
+       id="text889"
+       y="247.95535"
+       x="61.999084"><tspan
+         sodipodi:role="line"
+         id="tspan887"
+         x="61.999084"
+         y="247.95535"
+         style="stroke-width:0.234157">$ \frac{\del f}{\del y}= 0$</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#de0000;stroke-width:0.404;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:none;marker-end:none;stop-color:#000000;stop-opacity:1"
+       d="m 41.344652,231.28637 v 32.13796"
+       id="path901" />
+    <text
+       style="font-size:1.70288px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.170288"
+       xml:space="preserve"
+       id="text929"
+       y="180.7027"
+       x="99.454956"><tspan
+         sodipodi:role="line"
+         id="tspan927"
+         x="99.454956"
+         y="180.7027"
+         style="stroke-width:0.170288">$ \frac{\del f}{\del y}\neq 0$</tspan></text>
+    <path
+       style="fill:none;stroke:#00ee00;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 80.92603,209.49792 45.68264,-12.95567"
+       id="path941" />
+    <circle
+       style="fill:#000600;fill-opacity:1;stroke:#000d00;stroke-width:0.145754;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-end:none"
+       id="path943-3"
+       cx="103.71857"
+       cy="203.41216"
+       r="0.44675061"
+       inkscape:transform-center-y="0.38488479"
+       inkscape:transform-center-x="-2.1832344e-06" />
+    <circle
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#140000;fill-opacity:1;stroke:#000000;stroke-width:0.233638;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:none;marker-end:none;stop-color:#000000;stop-opacity:1"
+       id="path943"
+       cx="41.292706"
+       cy="247.90785"
+       r="0.48439908" />
+  </g>
+</svg>

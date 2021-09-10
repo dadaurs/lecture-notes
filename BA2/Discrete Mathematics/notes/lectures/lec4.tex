@@ -1,0 +1,78 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Sun 14 Mar}{Combinatorial applications of polynomials and generating series}
+We note that arithmetic operations with finite sets have similarities.
+\[ 
+	( a+b) \cdot c = a\cdot c + b \cdot c
+\]
+\[ 
+	( A \cup B ) \cap C = A \cap C \cup B \cap C
+\]
+\begin{exemple}
+Prove the identity
+\[ 
+	\sum \binom n i ^{2} = \binom 2n n
+\]
+Consider
+\[ 
+	( 1+x) ^{n} \cdot ( 1+x) ^{n}= ( 1+x) ^{2n}
+\]
+By computing the coefficients of $x^{n}$, we find the desired equality.
+
+\end{exemple}
+\begin{thm}[Multinomial theorem]
+	\[ 
+		( x_1 + \ldots + x_n) ^{k} = \sum_{i_1, \ldots, \geq 0, i_1 + i_2 + \ldots =k} \frac{k!}{i_1! \ldots i_n!}x_1^{i_1}x_2 ^{i_2} \ldots x_n^{i_n}
+	\]
+	
+	
+\end{thm}
+\begin{proof}
+Note that
+\[ 
+\frac{k!}{i_1! \ldots i_n!}
+\]
+is the number of sequences of length $k$ from the letters "$x_1, x_2,\ldots$ " such that $x_j$ is used $i_j$ times.
+\end{proof}
+\begin{defn}[Generating series]
+	Let $a_n$ be a sequence of complex numbers, then the generating series of this sequence is
+	\[ 
+		a( x) = \sum_{n=0}^{ \infty }a_n x^{n}
+	\]
+\end{defn}
+\begin{defn}[Formal power series]
+	A formal power series is an infinite sum
+	\[ 
+		a( x) = \sum a_n x^{n}
+	\]
+	where $a_n$ is a sequence of complex numbers and $x$ is a formal variable.
+	
+\end{defn}
+\begin{propo}
+	Let $a( x) = \sum a_n x^{n} $ be a formal power series. Suppose that there exists a positive real number $K$ such that $|a_n| < K^{n}$ for all $n$. Then the series converges absolutely for all $x \in ]-\frac{1}{k}, \frac{1}{k}[$.\\
+	Moreover, the function $a( x) $ as derivatives of all orders at $0$.
+\end{propo}
+We can add and multiply formal power series.\\
+However, in general, substitution is not well defined
+\[ 
+	a( b( x) ) = \sum_{n=0}^{ \infty }a_n b( x)^{n} = \sum_{n=0}^{ \infty }a_n ( \sum_{m=0}^{ \infty }b_m x^{m}) ^{n}
+\]
+It is only well defined if $b_0=0$.\\
+We can also differentiate, resp. integrate formal power series.
+\begin{thm}[Generalized binomial theorem]
+	For every $r \in \mathbb{R}$, we have
+	\[ 
+		( 1+x)^{r}= \binom r 0  + \binom r 1 x \ldots
+	\]
+	where 
+	\[ 
+		\binom r k = \frac{r ( r-1) \ldots ( r-k+1)  }{k!}
+	\]
+	
+	
+\end{thm}
+
+
+
+
+\end{document}	

@@ -1,0 +1,115 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{16}{Tue 27 Apr}{Conducteurs en electrostatique}
+\begin{exemple}
+Charge $Q>0$ placee sur une sphere conductrice
+\begin{figure}[H]
+    \centering
+    \incfig{sphere-conductrice}
+    \caption{sphere conductrice}
+    \label{fig:sphere-conductrice}
+\end{figure}
+\end{exemple}
+On veut calculer le champ electrique que la sphere genere.\\
+Par symmetrie, $\sigma_{el} = \text{ const } $ sur la surface de la sphere, donnee par $4 \pi R^{2} \sigma_{el} = Q$, donc
+\[ 
+\sigma_{el} = \frac{Q}{4 \pi R^{2}}
+\]
+On sait que $E=0$ pour $r<R$, mais $E = ?$ pour $r>R$.\\
+On sait que $\vec{E} = E( R +\Delta R) $ ( ne depend pas de l'angle) 
+On a
+ \begin{align*}
+	 \iint_{S_1}  \vec{E} \cdot \vec{dS} &=  \iint_{S_1}  E( R+ \Delta R) \cdot e_r \cdot e_r dS\\
+					     &= E( R+ \Delta R ) \cdot 4 \pi ( R + \Delta R) ^{2}
+\end{align*}
+Par la loi de Gauss, on a que le tout $= \frac{Q}{\epsilon_0}= \frac{4 \pi R^{2}\sigma_{el} }{\epsilon_0}$.\\
+On voit que si on laisse tendre $\Delta R \to 0$, on a que $E( R) =\frac{  \sigma_{el} }{\epsilon_0}$.\\
+En general, $\vec{E}$ est perpendiculaire a la surface du conducteur.\\
+Dans le vide, ce champ vaudra toujours $\frac{\sigma_{el} }{\epsilon_0}$ 
+\subsection{Densite de charge de surface par influence ( influence electrostatique) }
+\begin{exemple}
+\begin{figure}[H]
+    \centering
+    \incfig{sphere-chargee-2}
+    \caption{sphere chargee avec une charge positive $Q>0$}
+    \label{fig:sphere-chargee-2}
+\end{figure}
+Car la sphere est chargee, il y a un champ electrique.\\
+On observe que, apres avoir separe les deux plaques metalliques, elles sont chargees.\\
+De plus, la plaque $1$ porte une charge $-Q'$ et la plaque $2$ porte une charge $+ Q'$.\\
+On considere $\vec{E}$ uniforme ( genere par exemple par un plan infini charge) 
+\begin{figure}[H]
+    \centering
+    \incfig{plaque-chargee}
+    \caption{plaque chargee}
+    \label{fig:plaque-chargee}
+\end{figure}
+On a que $E = E_z e_z$.\\
+On applique la loi de Gauss sur $S_1$ (  un cylindre) .
+\begin{align*}
+- E_1 A &= \frac{\sigma_{el,1} }{\epsilon_0} A \Rightarrow  \sigma_{el,1}  = - \epsilon_0 E_1 <0
+\end{align*}
+
+On a que  $\sigma_{el,2} = - \sigma_{el,1} $.\\
+$\sigma_{el,1} $ et $\sigma_{el,2} $ sont generes par influence pour assurer que $E=0$ dans le conducteur.\\
+Variation de $\vec{E}$ et $\phi$ le long de $z$.\\
+En  appliquant Gauss sur $S_2 \Rightarrow $ 
+\[ 
+	A E_2 - A E_1 = \frac{( \sigma_{el,1} + \sigma_{el,2} A) }{\epsilon_0}=0
+\]
+Et donc $E_1=  E_2 = E_0$.\\
+Pour determiner $\phi$, on considere
+\[ 
+	\phi(B) - \phi( A)  = - \int_{ A }^{ B } \vec{E} \cdot \vec{dl}
+\]
+Comme $\vec{E} || e_z$, $\phi( x,y,z) = \phi( z) $.\\
+Choisissons $B$ a la hauteur $z$ et $A$ a la hauteur $0$, on a donc $\vec{dl} = e_z dz$
+\begin{align*}
+	\phi( z) - \underbrace{\phi( 0)}_{=0 \text{ choix de la constante } } &= \phi( z) \\
+	&= -\int_{ 0  }^{ z } \vec{E} \cdot \vec{dl} = - \int_{ 0 }^{ z } \vec{E} \cdot e_z dz'\\
+	&= - \int_{ 0 }^{ z } E_z( z') dz'\\
+	z<0 \Rightarrow \phi( z) &= - \int_{ 0 }^{ z } E_z (z') dz'\\
+				 &= \int_{ z }^{ 0 }E_z( z') dz'\\
+				 &= E_0 \int_{ z }^{ 0 } dz'\\
+				 &= -z E_0
+\end{align*}
+Pour $0<z<d $, on a
+\[ 
+	\phi( z) = - \int_{ 0 }^{ z } 0 dz' = 0
+\]
+Si $z>d$, on a
+\begin{align*}
+	\phi( z) = - \int_{ d }^{ z } E_z( z')  dz' = - ( z-d) E_0
+\end{align*}
+\end{exemple}
+\subsection{Effets de Pointe}
+Autour des pointes d'un conducteur, le champ $E$ peut etre tres eleve $\to $ \textbf { Effet de pointe}	\\
+\subsection{Traitement general, equation de Laplace et de Poisson}
+En principe, la loi de Gauss, $\nabla \cdot E = \frac{\rho_{el} }{\epsilon_0}$ permet de calculer le champ electrique $E( r) $ a partir de $\rho_{el} $.\\
+Malheureusement, souvent, $\rho_{el} $ n'est pas connue.\\
+On connait le potentiel a la surface de chaque conducteur, mais pas $\sigma_{el} $ 
+\begin{itemize}
+\item Si $\rho_{el} $ dans l'espace a l'exterieur des conducteurs, alors $\nabla \cdot \vec{E}=0$, avec $E = - \nabla \phi$, on trouve
+	\[ 
+		\nabla \cdot ( \nabla \phi) = \begin{pmatrix}
+		\del x\\ \del y \\ \del z
+		\end{pmatrix} 	\cdot
+ \begin{pmatrix}
+		\del x\phi\\ \del y\phi \\ \del z\phi
+		\end{pmatrix} 	
+		= \Delta \phi \to  \text{ equation de Laplace. } 
+	\]
+	Si $\rho_{el} \neq 0$ entre conducteurs ( p. ex $q_1, q_2$) , on a
+	\[ 
+	\Delta  \phi = - \frac{\rho_{el} }{\epsilon_0} \to \text{ equation de Poisson } 
+	\]
+	Pour les conditions aux limites $\phi= \phi_i$ sur la surface du conducteur $i( i= 1,2 \ldots) $ et $\phi \to 0$ quand $|r| \to \infty $, la solution de l'equation de poisson ( resp. laplace ) est unique.
+	
+\end{itemize}
+
+
+
+		
+
+
+\end{document}	

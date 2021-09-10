@@ -1,0 +1,37 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Sat 27 Feb}{factorials and birthday paradox}
+\begin{thm}[Stirling's formula]
+	\[ 
+	n! ~ \sqrt{2 \pi n} n^{n}e^{-n}	
+	\]
+	meaning the ration goes to 1.
+	
+	
+\end{thm}
+\begin{proof}
+Euler's integral for $n!$ gives
+\[ 
+n! = \int_{ 0 }^{ \infty  }x^{n}e^{-x}dx
+\]
+This is proven by induction on $n$.\\
+The base case $n=0$ simply gives 1.\\
+For the integration step, we integrate by parts, giving
+\[ 
+\int_{ 0 }^{ \infty  }x^{n}e^{-x} = \int_{ 0 }^{ \infty  }e^{-x} \frac{d}{dx}x^{n} dx
+\]
+
+To prove Stirlings formula, we take
+\[ 
+	xt^{n}e^{-x}= \exp( n \log x -x ) 
+\]
+We now taylor expand around the maximum, this yields
+\[ 
+	n \log x - x = n \log n - n - \frac{1}{2n}( x-n)^{2} + \ldots
+\]
+integrating this gives the desired formula.
+
+
+\end{proof}
+
+\end{document}		

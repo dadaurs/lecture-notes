@@ -1,0 +1,36 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Fri 26 Feb}{Pression dans un fluide}
+\section{Pression dans un fluide}
+La pression dans un fluide est definie par la force par unite de surface exercee par le fluide sur une paroi ou sur une autre partie du fluide. Cette force sera perpendiculaire a la surface. On note
+\[ 
+\vec{dF} \left[ \frac{N}{m^{2}} = \text{ Pascal } = \text{ Pa } \right]  = p \vec{dS}
+\]
+La pression est donnee par un champ scalaire.\\
+L'isotropie de la pression suit naturellement dans le cas ou il n'y a pas de forces de cisaillement( = forces tangentielles a la surface) 
+
+\subsection{Pression hydrostatique}
+On veut determiner $p( \vec{r}) $ pour un fluide au repos.\\
+On supposera un fluide incompressible ( la densite est constante).\\
+On considere un recipient contenant un fluide et un pave droit de dimension $dy,dx$ et $z_2-z_1$.\\
+On utilise
+\[ 
+	\sum_{i} \vec{F}_i = 0
+\]
+selon $z$.\\
+On a donc une force $F_ 1$ s'appliquant en haut et $F_2$ s'appliquant en bas et finalement $F_g$, on a donc
+\begin{align*}
+F_1 + F_g - F_2 = 0\\
+p( z_1) dx dy + \rho dx dy ( z_2-z_1) g - p( z_2) dx dy = 0\\
+p( z_2) = p( z_1 ) + \rho g ( z_2 -z_1)
+\end{align*}
+pour $z_1=0$ et $z_2 = h$, on trouve
+\[ 
+	p( h) = p( 0) + \rho g h = p_{0} + \rho g h
+\]
+
+Ainsi, la variation d'un fluide au repos ne depend que de la profondeur, mais est independante de la forme du fluide et ne varie pas perpendiculairement a la pesanteur.
+
+
+
+\end{document}	

@@ -1,0 +1,177 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Sun 16 May}{Graphs and matrices}
+\subsection{Graphs and matrices}
+Let $G$ be a graph. Suppose $|V( G) | = n, |E( G)| =m$.\\
+\begin{defn}[Adjacency matrix]
+	The adjacency matrix of $G$ is the $n \times n $ matrix $A( G) $ given by
+	\[ 
+	A_{ij } = 
+	\begin{cases}
+	1 \text{ if }  \left\{ v_i, v_j \right\} \in E\\
+	0 \text{ otherwise } 
+	\end{cases}
+	\]
+	
+\end{defn}	
+\begin{defn}[Degree matrix]
+	The degree matrix of $G$ is the diagonal $n\times n$ matrix $D( G) $ given by
+	\[ 
+	D_{ij} =
+	\begin{cases}
+	\deg v_i \text{ if  } i=j\\
+	0 \text{ otherwise } 
+	\end{cases}
+	\]
+	
+\end{defn}
+\begin{defn}[Laplace matrix]
+	The Laplace matrix of $G$ is defined as
+	\[ 
+		L( G) \coloneqq D( G) -A( G) 
+	\]
+\end{defn}
+\begin{lemma}
+	Let $G$ be agraph and $A=A( G) $ be its adjacency matrix. The entries of the matrix $B \coloneqq  A^{n}$ have the following combinatorial interpretaion:
+	\textit { $B_{ij} $ is the number of walks of length $n$ starting at $v_i$ and ends at $v_j$} 
+\end{lemma}
+\begin{proof}
+\[ 
+	B_{ij} = \sum_{k_1=1}^{ |V( G) |} \sum_{k_2}^{ |V( G) |}\ldots \sum_{k_{n-1} =1}^{ |V( G)| } A_{i,k} A_{k_1,k_2} \ldots A_{k_{n-1} ,j} 
+\]
+And we have that
+\[ 
+A_{i,k} A_{k_1,k_2} \ldots A_{k_{n-1} ,j}  =
+\begin{cases}
+1 \text{ if } \left\{ i, k_1, \ldots k_{n-1} ,j \right\} \text{ is a walk } \\
+0 \text{ otherwise } 
+\end{cases}
+\]
+
+
+\end{proof}
+Let $G$ be a graph. Suppose $|V( G) | = n, |E( G) | = m$
+\begin{defn}[orientation]
+	We say that a graph $G$ has and orientation $ \mathcal{O}$ if for every edge $ \left\{ v_1,v_2 \right\} $of $G$, we say that $v_1$ is the intial vertex and $v_2$ is the finite vertex.
+\end{defn}
+\begin{defn}[Incidence matrix]
+	The incidence amtrix $M( G, \mathcal{O}) $ is the $n\times m$ matrix given by
+	\[ 
+	M_{ij} =
+	\begin{cases}
+	1 \text{ if the edge $e_j$ has initial vertex $v_i$ } \\
+	-1 \text{ if the edge $e_j$ has final vertex $v_i$ } \\
+	0 \text{ otherwise } 	
+	\end{cases}
+	\]
+	
+\end{defn}
+\begin{lemma}
+We have that 
+\[ 
+	M( G, \mathcal{O}) M( G, \mathcal{O}) ^{T}= L( G) 
+\]
+
+\end{lemma}
+\begin{proof}
+	$M( G, \mathcal{O}) M( G, \mathcal{O}) ^{T}$ is an $n\times n$ matrix.\\
+	The $( i,j) $-th entry of $M( G, \mathcal{O}) M( G, \mathcal{O}) ^{T}$ is
+	\begin{align*}
+		\sum_{k=1}^{ m} M_{i,k} \cdot M_{j,k} &= \sum_{ \substack{k: \\ e_k \text{ is adjoint to }v_i \text{ and  } v_j }} M_{i,k } M_{k,k} 
+	\end{align*}
+	If $i\neq j$, then 
+	\[
+	\sum_{k=1}^{ m}M_{i,k} M_{j,k} = 
+	\begin{cases}
+	0 \text{ if }  \left\{ v_1,v_j \right\} \notin E\\
+	-1 \text{ if  } \left\{ v_i, v_j \right\} \in E
+	\end{cases}
+\]
+	If $i=j$, then $ \sum_{k=1}^{ m}M_{i,k} \cdot M_{i,k} = \deg v_i$
+\end{proof}
+\subsection{Kirchhof theorem}
+
+\begin{thm}[Kirchhoff]
+	Let $G$ be a connecte graph on $n$ vertices. Then the rank of the Laplace matrix $L( G) $ is $n-1$.\\
+	Let $0, \lambda_1, \ldots, \lambda_{n-1} $ bet the eigenvalues of $L( G) $, then the number of spanning trees of $G$ is
+	\[ 
+	\frac{1}{n} \lambda_1 \lambda_2 \ldots \lambda_{n-1} 
+	\]
+	
+\end{thm}
+\begin{thm}[Binet-Cauchy]
+	Let $A$ be a rectangular matrix of size $m\times n$.\\
+	Suppose $m \leq n$ and $S$ is an $m$-element subset of $[n]$.\\
+	The we denote by $A[S]$ the matrix $( A_{i,j} ) _{i=1,\ldots, m, j \in S}$consisting of columns of $A$ indexed by elements of $S$.
+	For $A,B \in \mathbb{C}^{m\times n}$, we have
+	\[ 
+		\det ( AB^{T}) = \sum_{S}^{ }( \det A[S]) ( \det B[S]) 
+	\]
+	where $S$ runs over all $m$-element subsets of $ [ n]  $.
+\end{thm}
+
+
+\begin{lemma}
+Let $S$ be a set of $n-1$ edges of $G$.\\
+If $S$ does not form the set of edges of a spanning tree, then $\det M_0( S) $ =0.\\
+If $S$ is the set of edges of a spanning tree of $G$, then $\det M_0( S) = \pm 1$.
+\end{lemma}
+\begin{proof}
+First, suppose that $S$ is not the set of edges of a spanning tree. Then some subset $R$ of $S$ forms the edges of a cycle $C$ in $G$.\\
+Suppose that the cycle $C$ has edges $f_1, \ldots, f_s$ in this order.\\
+Let $w_1, \ldots, w_s$ be the corresponding column vectors of $M_0( S) $.\\
+Define 
+\[ 
+k_i \coloneqq  
+\begin{cases}
+	+1 \text{ if orientation of $f_i$ coincides with orientation of $C$ }\\
+	-1 \text{ if not } 
+\end{cases}
+\]
+We have
+\[ 
+\sum_{i=1}^{ s}k_i w_i =0
+\]
+Therefore, $rg( M_0( S) ) < n-1 \Rightarrow \det M_0( S)=0. $
+Now suppose that $S$ is the set of edges of a spanning tree $T$.\\
+Recall: $v_n$ is the last vertex of $G$ which corresponds to the row removed from $M$ to obtain $M_0$.\\
+Let $e$ be an edge of $T$ which is connected to $v_n$. The column of $M_0( S)$	indexed by $e$ contains exactly one non-zero entry ( which is $\pm 1$).\\
+Remove from $M_0( S) $ the row containing this non-zero entry ( the row corresponding to $v_i$) and the column corresponding to $e$.\\
+We obtain a $( n-2) \times ( n-2) $ matrix $M_0'$.\\
+We have $\det M_0( S) = \pm \det ( M_0') $.\\
+Let $T'$ be the tree obtaine from $T$ by contracting the edge $e$ to a single vertex $u$.\\
+Then $M_0'$ is the matrix obtaine from the incidence matrix of $T'$ by removing the row indexed by $u$.\\
+By induction on the number $n$ of vertices we have $\det M_0'= \pm 1$ (  the case $n=2$ is trivial).
+
+	
+\end{proof}
+\begin{proof}
+	Let $M=M( G) $ be an incidence matrix of $G$.\\
+	Let $M_0( G) $ be be the matrix obtaine from $M( G) $ by removing the last row.\\
+	Let $S \subset E$ be a subset of edges such that 
+	\[ 
+		|s| = |V( G) | -1
+	\]
+	The $M_0( S) \coloneqq $ submatrix of $M_0( G) $ formed by columns of $M_0$ indexed by edges of $S$.\\
+	Let $L_0( G)$ be the matrix obtained from $L( G) $ by removing the last row and the last column.\\
+	By definition of the laplace matrixe, we have
+	\[ 
+	L_{in} = - \sum_{j=1}^{ n-1} L_{ij} , i = 1, \ldots, n
+	\]
+			Finally, by Binet-Cauchy theorem
+			 \begin{align*}
+				 \det L_0 &= \sum_{S \subset E, |S| = n-1}^{ }( \det M_0[S]) ( \det M_0^{T}[S]) \\
+				 &= \sum_{S \subset E, |S| = n-1}^{ } (\det M_0[S]) ^{2}\\
+				 &= \sum_{S}^{ }( \pm 1) ^{2} + \sum_{S}^{ }0 ^{2}
+			\end{align*}
+			
+			Where $S$ is the set of edges of a spanning tree.
+
+\end{proof}
+
+
+
+
+	
+
+\end{document}	

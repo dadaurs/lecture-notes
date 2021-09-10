@@ -1,0 +1,86 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{26}{Wed 26 May}{Existence de la forme normale de Smith}
+\begin{thm}
+Soit $A \in \mathbb{Z}^{m \times n}$, il existe
+\begin{itemize}
+\item $U\in \mathbb{Z}^{m\times m}, V \in \mathbb{Z}^{n\times n}$ unimodulaires
+\item $k\in \mathbb{N}_0$ 
+\item $ d_1, \ldots, d_k \in \mathbb{N}_{ \geq 1} : d_1 |d_2, \ldots, d_{k-1} | d_k$ .
+\end{itemize}
+tel que
+\[ 
+UAV = D
+\]
+avec $D$ diagonale et $D_{ii} = d_i$.
+\end{thm}
+\begin{proof}
+Recurrence sur $m$ .\\
+Si $m=1 \Rightarrow A = ( a_1,\ldots, a_n) $ , alors $\exists U \in \mathbb{Z}^{n\times n}$ unimodulaire tel que $AU = (d, 0, \ldots )$ .\\
+Si $m>1$ et $n=1$  , alors $A = ( a_1, \ldots) ^{T}$ . $A^{T}U = ( d,0 , \ldots) $.\\
+Sinon:\\
+Si $A=0$ on a fini, donc $A \neq 0$ .
+On montre $ \exists U,V: UAV =
+\begin{pmatrix}
+	d & 0\\
+	0 & A'
+\end{pmatrix} $ ou $d| a_{ij} ' \forall ij$.\\
+Apres multiplication a droite par une matrice elementaire, l'element $AU_{ij} = \sum_{}^{ }a_{ik} u_{kj} $ est encore divisible par $d$.\\
+\end{proof}
+\section{Groupes abeliens engendres finis}
+Soit 
+\[ 
+G = \left\{ z_1 g_1 + \ldots + z_n g_n \right\} 
+\]
+
+Alors
+\begin{thm}[Structure des groupes abeiliens engendres finis]
+	Soit $G$ un groupe abelien engendre fini.\\
+	Alors il existe $ d_1, \ldots, d_k \in \mathbb{N}_{ \geq 1} , n \in \mathbb{N}_0 $ tel que
+	\begin{itemize}
+	\item $d_i|d_{i+1} $ 
+	\item $G \simeq \mathbb{Z}_{d_1 } \times \ldots \times \mathbb{Z}_{d_k} \times \mathbb{Z}^{n}$
+	\end{itemize}
+\end{thm}
+\begin{propo}
+Soit $G$ un groupe abelien et $H \leq G.$ \\
+De plus soit $\phi: G \to G$ un isomorphisme, alors
+\[ 
+G / \phi H \simeq G /H.
+\]
+
+\end{propo}
+\begin{propo}
+Soit $H \leq \mathbb{Z}^{n}$ , alors il existe $A \in \mathbb{Z}^{n\times k}$ tel que $H = \left\{ Ay: y \in \mathbb{Z}^{k} \right\} $ .
+\end{propo}
+\begin{proof}
+Soit $G = \left\{ z_1 g_1 + \ldots + z_n g_n : z_i \in \mathbb{Z}, i = 1, \ldots,n \right\} $ .\\
+On definit
+\[ 
+\phi: \mathbb{Z}^{n}\to G
+\]
+avec
+\[ 
+	\phi ( z_1, \ldots, z_n) = z_1 g_1 + \ldots + z_n g_n
+\]
+On a que
+\[ 
+G \simeq \mathbb{Z}^{n}/ \ker \phi
+\]
+Or, il existe $U \in \mathbb{Z}^{n\times n}, V \in \mathbb{Z}^{k\times k} $ tel que $A = U [ \frac{D}{0}] V$.\\
+Ainsi,
+\begin{align*}
+\ker  \phi = \left\{ U [  \frac{D}{0}] V x: x \in \mathbb{Z}^{k} \right\} = \left\{ [ \frac{D}{0}] : x \in \mathbb{Z}^{k} \right\} 
+\end{align*}
+Ainsi,
+\[ 
+G \simeq \frac{\mathbb{Z}^{n}}{\ker \phi}\simeq \mathbb{Z}_{d_1} \times \ldots \times \mathbb{Z}_{d_k} \times bbz^{n-k }
+\]
+
+
+
+\end{proof}
+
+
+
+\end{document}	

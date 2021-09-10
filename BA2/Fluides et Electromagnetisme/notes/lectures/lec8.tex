@@ -1,0 +1,98 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Fri 19 Mar}{Ecoulement d'un fluide visqueux}
+\subsection{Ecoulement d'un fluide visqueux}
+On se restreins au cas des fluides incompressibles.\\
+\subsubsection{Definition de la viscosite}
+\begin{exemple}[Viscosimetre de Couette]
+\begin{figure}[ht]
+    \centering
+    \incfig{viscosimetre}
+    \caption{viscosimetre}
+    \label{fig:viscosimetre}
+\end{figure}
+Observation:\\
+Pour la meme frequence angulaire, le moment de force necessaire pour faire tourne le cylindre depend du type de fluide.
+
+\end{exemple}
+Imaginons l'experience suivante ( "Ecoulement de Couette"), on a
+
+\begin{figure}[H]
+    \centering
+    \incfig{ecoulement-de-couette}
+    \caption{ecoulement de couette}
+    \label{fig:ecoulement-de-couette}
+\end{figure}
+Il nous faut une force externe ( force de cisaillement ), on remarque que
+\[ 
+	F_{ext} \propto  S \frac{u_0}{h}
+\]
+On definit $\eta$ par
+\[ 
+	F_{ext} = \eta S \frac{u_0}{h}
+\]
+$\eta$ s'appelle le coefficient de viscosite dynamique (  $[\eta] = \frac{N}{m^{2}}s= Pa \cdot s$).\\
+On a
+\[ 
+	F_{ext} = \eta S \frac{u_0}{h} = \eta S \frac{\del u}{\del y}	
+\]
+Les fluides qui obeissent cette loi s'appellent les fluides Newtoniens.
+\subsubsection{Force de viscosite par unite de volume et equation de Navier-Stokes incompressible}
+Supposons $\vec{u}( \vec{r},t) = u_x( y) \vec{e}_x$
+\begin{figure}[H]
+    \centering
+    \incfig{viscosite-par-volume}
+    \caption{viscosite par volume}
+    \label{fig:viscosite-par-volume}
+\end{figure}
+La force de viscosite sur un elelement
+\begin{align*}
+	F_{visc} &= - \eta S \frac{\del u_x}{\del y}( y) e_x + \eta S \frac{\del u_x}{\del y}( y+ dy) e_x\\
+		 &= \eta S dy \frac{ \frac{\del u_x}{\del y}( y+dy) - \frac{\del u_x}{\del y}}{dy} e_x\\
+		 &= dV \eta \frac{\del ^{2} u_x}{\del y^{2}}e_x
+\end{align*}
+Et donc le terme
+\[ 
+\eta \frac{\del ^{2} u_x}{\del y^{2}}
+\]
+est la force par unite de volume.\\
+Dans le cas general, pour un fluide incompressible ( sans preuve) est donne par
+\[ 
+	\eta ( \frac{del^{2}}{\del x^{2}}+\frac{del^{2}}{\del y^{2}}+\frac{del^{2}}{\del z^{2}}) \vec{u} = \eta \Delta \vec{u}
+\]
+Les equations pour un fluide incompressible et visqueux sont donc:
+\begin{align*}
+\rho = \text{ const } \\
+\nabla \cdot \vec{u} = 0\\
+\rho \frac{D \vec{u}}{Dt} = \rho \vec{g} - \nabla p + \eta \Delta \vec{u}\rightarrow \text{ Navier-Stokes incompressible } 
+\end{align*}
+Les conditions de bords sont donnees par
+\[ 
+\vec{u}=0
+\]
+a l'interface avec des parois immobile.
+\subsubsection{Resolution Navier-Stokes avec l'ecoulement de Poiseuille}
+Ecoulement laminaire dans un tube
+\begin{figure}[H]
+    \centering
+    \incfig{glicerine-dans-un-tube}
+    \caption{glicerine dans un tube}
+    \label{fig:glicerine-dans-un-tube}
+\end{figure}
+
+Dans un cas plus simple
+\begin{figure}[H]
+    \centering
+    \incfig{ecoulement-plaques}
+    \caption{ecoulement plaques}
+    \label{fig:ecoulement-plaques}
+\end{figure}
+On suppose $\rho$ constant, on neglige la pesanteur et on pose
+\[ 
+	\vec{u}( \vec{r},t) = \vec{u}_x( y) \vec{e}_x
+\]
+
+
+
+
+\end{document}	

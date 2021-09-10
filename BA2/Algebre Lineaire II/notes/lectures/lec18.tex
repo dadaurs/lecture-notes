@@ -1,0 +1,124 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{18}{Wed 28 Apr}{Minimisation de la norme de Frobenius}
+Etant donne $A \in \mathbb{R}^{m\times n}, k \in \mathbb{N}$, on veuut trouver $B\in \mathbb{R}^{m\times n}$ tel que $rang( B) \leq k$ et
+\[ 
+min_{C\in \mathbb{R}^{m\times n}, rang C \leq k} \N { A-C} _F
+\]
+est atteint a $B$.\\
+\begin{defn}[Norme de Frobenius]
+	Soit $A \in \mathbb{R}^{m\times n}$,
+	\[ 
+		\N { A} _F =\sqrt{  \sum_{i,j} a_{i,j} ^{2} }
+	\]
+		
+\end{defn}
+\begin{defn}[Trace]
+	$A \in K^{n\times n}$, la trace de $A$ est definie par
+	\[ 
+		Tr( A) = \sum_{i=1}^{ n}a_{ii} 
+	\]
+	
+\end{defn}
+
+\begin{lemma}
+On a 
+\[ 
+	Tr( A\cdot B) = Tr( B\cdot A) 
+\]
+pour toute matrices dans $K^{n\times n}$
+\end{lemma}
+\begin{proof}
+	\begin{align*}
+		( AB) _{ii} &= \sum_{k=1}^{ n}a_{ik} b_{ki} \\
+		Tr( AB) &= \sum_{i=1}^{ n} \sum_{k=1}^{ n}a_{ik} b_{ki} \\
+		&= \sum_{k=1}^{ n} \sum_{i=1}^{ n} b_{ki} a_{ik} =Tr ( BA) 
+	\end{align*}
+	
+
+\end{proof}
+\begin{lemma}
+Soit $A \in \mathbb{R}^{m\times n}$, alors
+\[ 
+\N { A} _F ^{2} = \sum_{i=1}^{ r} \sigma_i ^{2}
+\]
+ou $\sigma_i$ sont les valeurs singulieres.
+\end{lemma}
+\begin{proof}
+\begin{align*}
+	\N { A} _F^{2} = Tr( A^{T}A) \\
+	= Tr ( Q^{T} D^{T}P^{T}P D Q) \\
+	= Tr( Q^{T}D^{2}Q) \\
+	= Tr ( D^{2}) = \sum \sigma_i^{2}
+\end{align*}
+
+\end{proof}
+On veut donc trouver $B\in \mathbb{R}^{m\times n}$ tel que 
+\begin{itemize}
+\item $rang B \leq k$ 
+\item $\sum \N { a_i -b_i}^{2} $ est minimale
+\end{itemize}
+Pour $A \in \mathbb{R}^{m\times n}$, $A= PDQ$, avec $P= ( v_1,\ldots,v_m) $ et $Q = \begin{pmatrix}
+u_1^{T}\\ \vdots\\ u_m^{T}
+\end{pmatrix} $.\\
+Rappel: le span $ \left\{ u_1,\ldots,u_k \right\} $ minimise
+\[ 
+	\sum_{i=1}^{ m}d( \alpha_i,H) ^{2}
+\]
+\begin{defn}
+	On definit
+	\[ 
+	A_k = \sum_{i=1}^{ k}v_i \sigma_i u_{i} ^{T}
+	\]
+\end{defn}
+Clairement $rang ( A_k ) \leq k$.
+\begin{lemma}
+	Les lignes de $A_k$ sont les projections des lignes correspondantes de $A$ dans le $ span \left\{ u_1,\ldots,u_k \right\} $.\\
+\end{lemma}
+\begin{proof}
+Soit $a^{T}$ une ligne de $A$.\\
+La projection 
+\[ 
+\tilde A^{T} = \sum_{i=1}^{ k}( a^{T}u_i ) u_i^{T}
+\]
+Alors les projections de toutes les lignes de  $A$ sont
+\[ 
+\sum_{i=1}^{ k}Au_i u_i^{T} = \sum_{i=1}^{ k}\sigma_i v_i u_i ^{T}= A_k		
+\]
+\begin{thm}
+Soit $ B\in \mathbb{R}^{m\times n}, rang B  \leq k$ alors
+\[ 
+\N { A- A_k} _F^{2} \leq  \N { A-B} _F^{2}
+\]
+
+\end{thm}
+\begin{proof}
+Soit $A = \begin{pmatrix}
+a_1^{T}\\\vdots\\a_m^{T}
+\end{pmatrix} $, $B\begin{pmatrix}
+b_1^{T}\\\vdots\\b_m^{T}
+\end{pmatrix}$ et $A_k = \begin{pmatrix}
+\tilde a_1^{T}\\\vdots\ \tilde a_m^{T}
+\end{pmatrix} $.\\
+Soit $H = span \left\{ b_1,\ldots,b_k' \right\} $ sont une base de l'espace engendre par les lignes de $B$, alors
+\[ 
+	\N { A-B} _F^{2} = \sum_{i=1}^{ m}\N { a_i-b_i} ^{2} \geq \sum_{i=1}^{ m}d( a_i,H) ^{2}
+\]
+Soit $\tilde H = span \left\{ u_1,\ldots,u_k \right\} $, alors
+\[ 
+	\sum_{i=1}^{ m}d( a_i,H) ^{2} \geq \sum_{i=1}^{ m}d( a_i, \tilde H) ^{2}= \sum_{i=1}^{ m}\N { a_i - \tilde a_i}_F ^{2 }
+\]
+
+
+\end{proof}
+
+
+
+\end{proof}
+
+	
+
+	
+
+
+\end{document}	

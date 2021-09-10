@@ -1,0 +1,52 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{23}{Fri 21 May}{dependances temporelles}
+\section{Pheneomenes d'inductions magnetique}
+\subsection{Loi d'induction de Faraday}
+\begin{figure}[H]
+    \centering
+    \incfig{experience-d'induction}
+    \caption{experience d'induction}
+    \label{fig:experience-d'induction}
+\end{figure}
+Si $\vec{v}>0$, la lampe 1 s'allume, donc il ya un courant $I$ induit dans le sens positif.\\
+Si $\vec{v}<0$,la lampe 2 s'allume,donc il y a unc ourant dans le sens negatif.\\
+Si l'orientatiion de l'aimant a change, on observe le meme phenomene mais inverse.
+\subsubsection*{Interpretation avec un champ electrique induit}
+\begin{align*}
+\text{ Ohm } \vec{j} &= \sigma_c \vec{E}\\
+\vec{j} &= \frac{I}{S} \frac{\vec{dl}}{dl}
+\end{align*}
+Donc
+\[ 
+\Rightarrow \vec{E} = \frac{I}{S \sigma_c}\frac{\vec{dl}}{dl}
+\]
+Donc,
+\[ 
+	\oint_{ \text{ fil } } \vec{E} \cdot \vec{dl}  = \frac{I}{S \sigma_c} \oint_{ \text{ fil } } \frac{\vec{dl}}{dl}\vec{dl}= \frac{Il}{S \sigma_c} = IR \neq 0
+\]
+On ne peut donc plus ecrire que $\vec{E}= - \nabla \phi$.\\
+On appelle $\epsilon_{ind} $ la tension induite ou force electromotrice.
+Cette tension est induite dans le fil par le mouvement de l'aimant.\\
+$\epsilon_{ind} $ augmente avec la vitesse de l'aimant.
+Rien se passe si $v=0$.\\
+On observe le meme phenomene si
+\begin{itemize}
+\item On prend un champ $\vec{B}$ genere par une bobine au lieu d'un aimant.
+\item On garde l'aimant ffixe et on bouge le fil.
+\item On varie $\vec{B}$ au cours du temps sans bouger quelquechose.
+\end{itemize}
+Donc $\epsilon_{ind} $ induit par la variation temporelle de $\vec{B}$ ( plus precisement, par la variation du flux de $\vec{B}$).\\
+L'experience  quantitative montre que 
+\[ 
+	\epsilon_{ind} = \oint_{ \text{ fil } } \vec{E}\cdot \vec{dl} = - \frac{d}{dt} \iint_{ S \text{ avec bord= fil } } \vec{B}\cdot \vec{dS} = - \frac{d}{dt}\Phi
+\]
+Ou on a definit
+\[ 
+\Phi = \iint_S \vec{B}\cdot \vec{dS}
+\]
+
+
+		
+
+\end{document}	

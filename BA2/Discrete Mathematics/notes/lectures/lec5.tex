@@ -1,0 +1,64 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Sat 20 Mar}{Binary trees}
+\begin{defn}[Binary Tree]
+	A binary tree is either empty, or consists of one distinguished vertex called the root, plus an ordered pair of binary trees calle de left subtree and the right subtree.
+\end{defn}
+We denote by $b_n$ the number of binary trees with $n$ vertices. We want to fin a closed formula for $b_n$
+The inductive definition yields
+\[ 
+b_n = b_0 \cdot b_{n-1}  + b_1 \cdot b_{n-2}  + \ldots + b_{n-1}  \cdot b_0
+\]
+Consider
+\[ 
+	b( x)  = \sum b_n x^{n}
+\]
+And we use
+\[ 
+ b_n = \sum b_k \cdot b_{n-k-1} 
+\]
+Now we use
+\begin{align*}
+b( x) \cdot b( x)  = \sum_{k=0}^{ \infty } \left( \sum_{m=0}^{ \infty }b_m b_{k-m}  \right) x^{k}\\
+= \frac{1}{x} \left( \sum_{k=1}^{ \infty } b_k x^{k}\right)  = \frac{1}{x}(  b( x) -b_0) 
+\end{align*}
+Hence, $b( x) $ satisfies
+\[ 
+	x b^{2}( x) -b( x) +1=0
+\]
+Hence
+\[ 
+	b( x)  = \frac{1+ \sqrt{1-4x} }{2x} \text{ and } b( x) = \frac{1- \sqrt{1-4x} }{2x}
+\]
+are solutions.\\
+Note that the first solution is not bounded around 0.\\
+However, the second solution is smooth around 0 because
+\[ 
+\tilde b ( x) := \frac{1- \sqrt{1-4x} }{2x} = \frac{2}{1+ \sqrt{1-4x} }
+\]
+Hence, $\tilde b ( x) $has derivatives of all orders.\\
+We want to establish the connection between $\tilde b $ and $b$.\\
+Consider the taylor expansion of $\tilde b $
+\[ 
+	\tilde b ( x) = \sum_{n=0}^{ \infty }\tilde b_n \cdot x^{n}
+\]
+Still, $\tilde b$ satisfies the quadratic equation, we want to show 
+\[ 
+ \tilde b _n = \sum \tilde b_k \cdot \tilde b_{n-k-1} 
+\]
+By taylors theorem
+\[ 
+	\tilde b ( x) = \tilde b_0 + \tilde b_1 x + \ldots + O( x^{n+1}) 
+\]
+We substitute this into the quadratic equation, which yields
+\[ 
+	x (  \tilde b_0 + \ldots \tilde b_n x^{n}+ O( x^{n+1}) )^{2} - (  \tilde b_0 + \ldots + \tilde b_n x^{n} + O( x^{n+1}) ) +1 = 0
+\]
+Solving for $\tilde b_n$ yields the desired equation.\\
+Applying the generalized binomial theorem gives a closed form for $b_n$
+\[ 
+	b_n = - \frac{1}{2} ( -4)^{n+1}  \binom {  \frac{1}{2}} {  n+1} 
+\]
+We define the $b_n$ 's as Catalans number.
+
+\end{document}	

@@ -1,0 +1,164 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{14}{Mon 19 Apr}{Fonctions Implicites}
+\begin{defn}[Fonction Implicite]
+	Soit $f: E \subseteq \mathbb{R}^{n+1} \to \mathbb{R}$, avec $E$ un ouvert non vide.\\
+	On definit $\Sigma = \left\{ z \in \mathbb{R}^{n+1}, f( z) =0 \right\} $, et soit $z_0= ( z_{0,1},\ldots, z_{0,n+1} ) \in \Sigma$.\\
+	On dit que $f$ definit implicitement une fonction autour de $z_0$ si il existe un ouvert $V \subset E$ contenant $z_0$, un ouvert $U \subset \mathbb{R}^n$ et un indice $i \in \left\{ 1,\ldots,n+ \right\} $ et une fonction $\phi: U \to \mathbb{R}$ tel que
+	\begin{itemize}
+	\item 
+	\[ 
+		z_{0,i} = \phi( z_{0,1} ,\ldots, z_{0,i-1} , z_{0,i+1} , \ldots, z_{0,n+1} ) 
+	\]
+
+\item $ \forall x \in \Sigma \cap V, x_i = \phi( x_{ni} ) $ \footnote { Avec la notation $z_{ni}= (  z_{0,1} ,\ldots, z_{0,i-1} , z_{0,i+1} , \ldots, z_{0,n+1}) $ } 
+	\end{itemize}
+	Alors le graphe $G( \phi) = \left\{ x \in \mathbb{R}^{n+1}: x_{i} = \phi( x_{ni} )  \right\} = \Sigma\cap V$
+	
+\end{defn}
+\subsection*{Questions}
+\begin{enumerate}
+	\item Quand est-ce que $f( x) = 0$ definit une fonction implicite?
+	\item Si $f$ definit une fonction implicite, que peut-on dire sur $\phi$?
+\end{enumerate}
+Commencons par le deuxieme point.\\
+Supposons que $f$ definit une fonction implicite $\phi: U \to \mathbb{R}$. Supposons aussi que $f,\phi \in C^{k}$.\\
+\subsubsection{Cas $n=2$}
+Soit $f= f( x,y) $ et soit
+\[ 
+	\Sigma = \left\{ ( x,y) \in \mathbb{R}^{2}: f( x,y) = 0 \right\} 
+\]
+et $( x_0,y_0) \in \Sigma$ 
+\begin{figure}[H]
+    \centering
+    \incfig{voisinage}
+    \caption{voisinage}
+    \label{fig:voisinage}
+\end{figure}
+Supposons qu'il existe $\phi: ]x_0-\delta, x_0+ \delta[ = U \to \mathbb{R}$ tel que
+\begin{align*}
+	G( \phi) &= \Sigma \cap V\\
+	\forall x \in U&: f( x,\phi( x) ) =0\\
+	y&= \phi( x) 
+\end{align*}
+On note $\tilde f ( x) = f( x,\phi( x) ) = 0\forall x \in U$, donc
+\begin{align*}
+	0 = \tilde f ' &= \frac{d}{dx} ( f( x,\phi( x) ) ) \\
+		       &= \frac{d f}{\del x} ( x,\phi( x) ) + \frac{d f}{\del y}( x,\phi( x) ) \cdot \phi'( x) 
+\end{align*}
+En particulier, en $( x_0,y_0= \phi( x_0) ) $, on peut ecrire que
+\[ 
+	\frac{d f}{\del y} ( x_0,y_0)  \phi'( x_0)  = - \frac{d f}{\del x}( x_0,y_0) 
+\]
+Donc, si $ \frac{d f}{\del y}( x_0,y_0) \neq 0$, alors
+\[ 
+	\phi'( x_0) \coloneqq - \frac{ \frac{\del f}{\del x} ( x_0,y_0) }{\frac{\del f}{\del y}( x_0,y_0) }
+\]
+De plus, pour tout $x$ suffisamment proche de $x_0$ 
+\[ 
+	\phi'( x) \coloneqq - \frac{ \frac{\del f}{\del x} ( x,\phi( x) ) }{\frac{\del f}{\del y}(x, \phi( x) ) }
+\]
+par le theoreme de la valeur intermediaire ( la derivee partielle selon y ) ne s'annulera pas.\\
+On peut iterer l'argument, et donc, si $f,\phi$ sont de classe $C^{2}$, on peut ecrire
+\[ 
+	0 = \tilde f ''( x) = \frac{d}{dx}( \tilde f'( x) ) 
+\]
+Apres developpement, on remarque que, si $ \frac{\del f}{\del y} ( x_0,y_0) \neq 0$, on peut encore calculer la derivee seconde de $f$:
+\[ 
+	\phi''( x) = - \frac{1}{ \frac{\del f}{\del y}( x,\phi( x) ) } \left( \frac{\del ^{2}f}{\del x^{2}}( x,\phi( x) ) + 2 \frac{\del ^{2}f}{ \del x \del y} ( x,\phi( x) ) \phi'( x) + \frac{\del^{2} f}{\del y^{2}} ( x,\phi( x) ) ( \phi'( x) )^{2} \right) 
+\]
+Donc, meme sans connaitre $\phi$ explicitement, on peut construire un developpement limite de $\phi$.\\
+Graphiquement
+\begin{figure}[H]
+    \centering
+    \incfig{courbe-implicite}
+    \caption{courbe implicite}
+    \label{fig:courbe-implicite}
+\end{figure}
+\begin{thm}[Fonction implicite en dimension 2]
+	Soit $f: E \subset \mathbb{R}^{2} \to \mathbb{R}$, $E$ ouvert non vide, de classe\\
+	$C^{1}$, $\Sigma = \left\{ ( x,y) \in E: f( x,y) = 0 \right\} $ et $( x_0,y_0) \in Sigma$ tel que $ \frac{\del f}{\del y}( x_0,y_0) \neq 0$.\\
+	Alors il existe un $\delta >0$, un ouvert $V \subset E$ contenant $( x_0,y_0) $ et une unique fonction $\phi: U = ]x_0- \delta,x-+ \delta[\to \mathbb{R}$ tel que
+	\begin{itemize}
+		\item $y_0 = \phi( x_0) $ 
+		\item $f( x,\phi( x) ) = 0 \forall x \in U$
+		\item $G( \phi) = \Sigma \cap V$
+	\end{itemize}
+	
+\end{thm}
+On peut facilement generaliser ce theoreme,
+\subsubsection{Cas $n>1$}
+soit $f: E \subset R^{n+1}\to \mathbb{R}$ de classe $C^{1}$ et $\phi: U \subset \mathbb{R}^n\to \mathbb{R}$ la fonction implicite definie par $f$ ( aussi de classe $C^{1}$) autour du point $z_0 = ( x,y) , x \in \mathbb{R}^n, y \in \mathbb{R}$, cad $f= f( x,y) $ 
+\[ 
+	f( x, \phi( x) ) = 0 \forall x \in U
+\]
+Soit $f( x) = f( x,\phi( x) ) = 0 \forall x \in 0$, on a alors
+\begin{align*}
+	0 = \frac{\del \tilde f}{\del x_i}( x) = \frac{\del f}{\del x_i }( x,\phi( x) ) + \frac{\del f}{\del y}( x,\phi( x) ) \frac{\del \phi}{\del x_i}( x)  
+\end{align*}
+Donc, si $ \frac{\del f}{\del y}( z_0) \neq 0$, alors pour $x$ suffisamment proche de $x_0$, on peut ecrire
+\[ 
+	\frac{\del \phi}{\del x_i}( x) =   - \frac{ \frac{\del f}{\del x_i}( x,\phi( x) ) }{\frac{\del f}{\del y}( x,\phi( x) ) }
+\]
+\begin{thm}
+	Soit $E \subset \mathbb{R}^{n+1}$ ouvert non vide,\\ $f: E \to \mathbb{R}$ de classe $C^{1}$, $\Sigma = \left\{ z \in E, f(  z) =0 \right\} $ et $z = ( x_0,y_0) $ tel que $ \frac{\del f}{\del y}( x_0,y_0) \neq 0$, Alors il existe $\delta >0$, un ouvert $V \subset E$ contenant $z_0$ et une unique fonction $\phi: U = B( x_0,\delta) \to \mathbb{R} \in C^{1}$ tel que
+	\begin{itemize}
+		\item $y_0= \phi( x_0) $ 
+		\item $\forall x \in U, f( x,\phi( x) ) =0$ 
+		\item $G( \phi) = \Sigma \cap V$
+	\end{itemize}
+	De plus, si $f$ est de classe $C^{k}$, alors $\phi$ est de classe $C^{k}$
+\end{thm}
+			
+\begin{exemple}
+	Soit $f( x,y) = x^{2}-y, \Sigma = \left\{ ( x,y) : x^{2}-y= 0 \right\} $, alors
+\[ 
+	y= x^{2}= \phi( x) 
+\]
+$f$ definit une fonction implicite $y=x^{2}\forall x \in \mathbb{R}$.\\
+On peut essayer d'ecrire $x= \phi( y) $ 
+\[ 
+	x^{2}= y \implies x= \pm \sqrt{y} 
+\]
+Notons que, dans un voisinage de $0$, on ne peut pas decrire $\Sigma$ comme une fonction de $y$.\\
+\end{exemple}
+\begin{exemple}
+	Posons maintenant $f( x,y) =x e^{y} + y e^{x} $ et $\Sigma= \left\{ ( x,y) : f( x,y) =0 \right\} $.\\
+	Notons que $( x,y) = ( 0,0) $, et que
+	\[ 
+		\frac{\del f}{\del x}( 0,0) = 1 \text{ et } \frac{\del f}{\del y}( 0,0) =1
+	\]
+	On peut donc expliciter $y$ en fonction de $x$, $y= \phi( x) $ m et on a que
+\[ 
+	\phi'( 0) = - \frac{ \frac{\del f}{\del x}( 0,0) }{ \frac{\del f}{\del y}( 0,0) }=-1
+\]
+
+\end{exemple}
+Soit $f: E \subset \mathbb{R}^{n+1} \to \mathbb{R}$, $\Sigma = \left\{ z \in E, f( z) = 0 \right\} $, $z_0 \in \Sigma$ tel que $ \frac{\del f}{\del y}( z_0) \neq 0$.\\
+Alors on sait qu'il existe une fonction implicite $\phi: U \subset \mathbb{R}^n\to \mathbb{R}: \quad G( \phi) = \Sigma \cap V$
+
+\begin{figure}[H]
+    \centering
+    \incfig{voisinage-de-z0}
+    \caption{voisinage de $z_0$}
+    \label{fig:voisinage-de-z0}
+\end{figure}
+Alors, on peut construire l'hyperplan tangent au graphe $G( \phi) $ en $z_0$ qui est aussi l'hyperplan tangent a $\Sigma$ en $z_0$.
+\begin{align*}
+	\Pi_{\phi,z_0} &= \left\{ ( x,y) \in \mathbb{R}^{n+1}: y = \phi( x_0) + D\phi( x_0) ( x-x_0)  \right\} \\
+		       &= \left\{ ( x,y) \in \mathbb{R}^{n+1}: y = y_0 + \sum_{i=1}^{ n} \frac{\del \phi}{\del x_i}( x_0) ( x_i - x_{0i} )  \right\} \\
+		       &= \left\{ ( x,y) \in \mathbb{R}^{n+1}: y = y_0 + \sum_{i=1}^{ n} - \frac{ \frac{\del f}{\del x_i}( x_0,y_0) }{\frac{ \del f}{\del y}( x_0,y_0) }( x_i - x_{0i} )  \right\} \\
+		       &= \left\{  ( x,y ) \in \mathbb{R}^{n+1}: \frac{\del f}{\del y}( x_0,y_0) ( y-y_0) + \sum_{i=1 }^{ n} \frac{\del f}{\del x_i}( x_0,y_0) ( x_i - x_{0i} = 0)  \right\} \\
+		       &= \left\{ z \in \mathbb{R}^{n+1}: \frac{\del f}{\del z_{i} } ( z_0) ( z_i - z_{0i}  = 0)  \right\} \\
+		       &= \left\{ z \in \mathbb{R}^{n+1}: \nabla f( z_0)\cdot (z-z_0) = 0  \right\} 
+\end{align*}
+Donc l'hyperplan tangent a $\Sigma$ en $z_0$ est l'ensemble des point $z \in \mathbb{R}^{n+1}: \quad z-z_0 \perp \nabla f$.\\
+Si $\nabla f$ est nul, on ne peut pas definir l'hyperplan tangent, et donc on appelle ces points les points critiques de $f$.
+
+
+
+					
+
+		
+
+\end{document}	
