@@ -1,0 +1,86 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Fri 10 Sep}{Introduction}
+\section{Une Introduction à la Théorie des Catégories}
+\subsection*{Notion Fondamentale: la composition}
+\begin{itemize}
+\item Composition d'applications
+\item l'exemple fondamental d'un groupe est donné par $\aut ( X) $, où la multiplication du groupe est donnée par la composition d'automorphismes.
+\end{itemize}
+\subsection{Catégories}
+\begin{defn}[Graphe dirigé]
+	Un graphe dirigé $G$  consiste en un couple de classes $G_0$ et $G_1$, muni de deux applications
+	\[ 
+	\dom : G_1 \to G_0 \text{ et } \cod : G_1 \to G_0
+	\]
+	appelées domaine et codomaine.
+	On pense à $G_0$ comme l'ensemble des sommests et $G_1$ l'ensemble des arêtes de $G$.
+\end{defn}
+Par exemple, si $x,y \in G_0, f \in G_1$ , alors 
+\begin{align*}
+	\dom ( f) =x,\quad \cod ( f) =y
+\end{align*}
+\[\begin{tikzcd}
+	X && Y
+	\arrow["f", from=1-1, to=1-3]
+\end{tikzcd}\]
+On introduit la notation
+\[ 
+	G( x,y) = \left\{ f \in G_1 | \dom ( f) = x , \cod ( f) =y \right\} 
+\]
+\begin{exemple}
+	Soit $X$ un ensemble, et soit $R \subset X \times X$ une relation sur $X$. Alors $G_r=( X,R) $ est un graphe dirigé, où
+	\[ 
+		\dom: R \to X : ( x_1, x_2) \to x_1 \text{ et } \cod: R \to X: ( x_1, x_2) \to x_2
+	\]
+Observer que $\forall x_1, x_2 \in X$ 
+\[ 
+	G_R ( x_1, x_2) =
+	\begin{cases}
+		\left\{  ( x_1,x_2)  \right\}: ( x_1,x_2) \in R  \\
+		\emptyset \text{ sinon } 
+	\end{cases}
+\]
+\end{exemple}
+\begin{defn}[Catégories]
+	Une catégorie $C$ est un graphe dirigé $( C_0, C_1) $ muni d'applications de composition
+	\[ 
+		\gamma_{a,b,c} : C( a,b) \times C( b,c) \to C( a,c) : ( f,g) \to g\circ f
+	\]
+\begin{tikzcd}
+A \arrow[r, "f"] \arrow[rr, "f\circ g", bend right=49] & B \arrow[r, "g"] & C
+\end{tikzcd}
+\begin{itemize}
+	\item ( Existence d'identités ) Il existe une application $\id: C_0 \to C_1: c \to \id_c$ tel que
+		\[ 
+			f\circ \id_a = f = \id_b \circ f \forall f \in C_1( a,b) , \forall a,b \in C_0
+		\]
+	
+	\item ( Associativité) Quelque soient $a,b,c,d \in C_0$ et $f \in C( a,b) , g \in C( b,c) $ et $h \in C( c,d) $ 
+		\[ 
+			( h \circ g) \circ f = h \circ ( g \circ f)  \in C( a,d) 
+		\]
+
+\end{itemize}
+\end{defn}
+\subsection*{Notation}
+On note
+\begin{align*}
+C_0 = \ob C - \text{ les objets de $C$  } \\
+C_1 = \mor C - \text{ les morphismes } 
+\end{align*}
+\begin{itemize}
+\item Si $\Ob C, \mor C	$  sont des ensembles, alors $C$ est petite.
+\item Si $C( a,b) $ est un ensemble $\forall a, b \in \ob C$ , alors $C$ est localement petite.	
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\end{document}	

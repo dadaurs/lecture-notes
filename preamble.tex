@@ -14,6 +14,7 @@
 \usepackage{varioref}
 \usepackage{theoremref}
 \usepackage{tikz}
+\usepackage{tikz-cd}
 \usepackage{listings}
 \usepackage{faktor}
 \usepackage{python}
@@ -141,5 +142,16 @@
 \makeatletter
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 \makeatother
+\def\@lecture{}%
+\newcommand{\lecture}[3]{
+    \ifthenelse{\isempty{#3}}{%
+        \def\@lecture{Lecture #1}%
+    }{%
+        \def\@lecture{Lecture #1: #3}%
+    }%
+    \subsection*{\@lecture}
+    \marginpar{\small\textsf{\mbox{#2}}}
+}
+\makeatletter
 \include{newcommands.tex}
 \usepackage{subfiles}
