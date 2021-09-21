@@ -1,0 +1,84 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Mon 20 Sep}{Exemples de Categories}
+\subsection{Exemples de Catégories}
+
+\begin{exemple}
+\begin{itemize}
+\item Des catégories concrètes
+\item des catégories non concrètes
+\end{itemize}
+
+\end{exemple}
+\subsubsection{Catégories concrètes}
+Les objets sont des ensembles munis de structures supplémentaire:
+
+\begin{enumerate}
+\item $ \mathrm { Ens} $ dont les objets sont les ensembles et les moprphismes sont les applications ensemblistes.
+	\begin{align*}
+		\ob \mathrm { Ens} &= \text{ la classe de tous les ensembles } \\
+		\mor \mathrm { Ens} &= \text{ applications ensemblistes } 
+	\end{align*}
+
+\item La catégorie $ \mathrm { Gr} $ , dont les objerts sont les groupes et les morphismes sont les homomorphismes de groupe.
+	\begin{align*}
+\ob \mathrm { Gr} = \text{ la classe de tous les groupes }\\
+\mor \mathrm { Gr} = \text{ la classe de tous les homomorphismes de groupe } 
+	\end{align*}
+La composition est encore donnée par celle des applications ensemblistes et les identites sont celles des groupes vus comme ensembles.
+\item La catégorie $\mathrm Ab$, dont les objets sont les groupes abeliens et les morphismes sont les homomorphismes de groupe.
+	\begin{align*}
+	\ob \mathrm Ab = \left\{ A \in \ob \mathrm Gr | A \text{ abelien }  \right\} \\
+	\mor \mathrm Ab = \left\{ \phi \in \mor \mathrm Gr | \dom \phi , \cod  \phi \in \ob \mathrm Ab \right\} 
+	\end{align*}
+
+\item La categorie $ \mathrm { Vect _{ \mathbb{K}} } $, dont les objets sont les espaces vectoriels sur le corps $ \mathbb{K}$ et les morphismes sont les applications lineaires.
+	\begin{align*}
+	\ob \mathrm { Vect_{\mathbb{K}}  }= \text{ la classe de tous les $\mathbb{K}$-espaces vectoriels }  \\
+	\mor \mathrm { Vect _{\mathbb{K}} } = \text{ la classe de toutes les applications $ \mathbb{K}$-lineaires  }	  
+	\end{align*}
+	Dans tous ces cas, la composition est bien définie car elle preserve toujours la structure supplementaire ( ie. le groupe ou l'espace vectoriel)
+	
+
+\end{enumerate}
+\subsubsection{Categories pas forcement concretes}
+\begin{enumerate}
+\item Soit $X $ un ensemble, $R \subset X \times X$ une relation sur $X$. Alors le graphe dirigé $G_R$ admet des applications de composition naturelle, qui verifient l'associativité.\\
+	Soit $x,y,z \in X $ tel que $( x,y) , ( y,z)  \in R \exists ? ( y,z ) \circ ( x,y) ?$ 
+	Existe-il une arete de $x$ vers $z$ $\iff ( x,z) \in R$ \\
+	Donc on veut que $R$ soit transitive.
+	L'existence de l'identité dans une catégorie implique que $( x,x) \in R \forall x \in X$ ce qui implique que $R$ est reflexive.
+\item Pour tout groupe $G$ , il y a une catégorie $BG$, spécifié par $\ob BG = \star$ et $BG( \star,\star) =G$, où la composition est donnée par la multiplication de $G$ 
+	\begin{align*}
+	\ob BG = \left\{ \star \right\} \\
+	\mor G   = \left\{  g\in G \right\} 
+	\end{align*}
+	On définit la composition
+	\[ 
+		\gamma: BG ( \star, \star) \times BG ( \star, \star) \to BG( \star,\star) \times BG( \star,\star)
+	\]
+	et on sait que $\gamma$ ( ie. la composition ) est associative car la multiplication dans $G$ est associative.
+\item Soient $C$ et $D$ des catégories. Leur produit est la catégorie notée $C\times D$ spécifié par
+	\[ 
+		\ob ( C\times D) = \ob C\times \ob D
+	\]
+	et
+	\[ 
+		( C\times D) ( ( c,d) , ( c',d') ) = C( c,c') \times D( d,d') \forall c, c' \in \ob C, d,d' \in \ob D
+	\]
+	où la composition est donnée par celle de $C$dans la premiere composante et par celle de $D$ dans la deuxieme, et $\id_{(c,d) } = ( \id_c, \id_d) $.\\
+	$( f,g) : ( c,d) \times ( c',d') \in\mor ( C\times D) $.\\
+	Etant donné $( f,g) :( c,d) \to ( c',d'), ( f',g') : ( c',d') \to ( c'', d'' ) $, on definit 
+	\[ 
+		( f',g') \circ ( f,g) = ( f'\circ f, g' \circ g) 
+	\]
+	L'associativité suit de la composition associative dans $C$ et $D$ 
+ 	
+\end{enumerate}
+\begin{defn}[Isomorphisme]
+	Soit $C$ une catégorie. Un morphisme $f: a\to b$ dans $C$ est un isomorphisme s'il admet un inverse, i.e., il existe un morphisme $g: b\to a$ tel que $g\circ f = \id_a	$ et $f\circ g= \id_b$ . On dit alors que les objets $a$ et $b$ sont isomorphes.\\
+	Un isomorphisme dont le domaine est egal au codomaine est un automorphisme. Une catégorie dont tous les morphismes sont des isomorphiemes est un groupoide.
+\end{defn}
+
+
+\end{document}	
