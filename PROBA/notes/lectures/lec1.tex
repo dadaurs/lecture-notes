@@ -1,0 +1,148 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Wed 22 Sep}{Introduction}
+\section{Some historical models}	
+\subsection{Laplace Model}
+\begin{defn}[Laplace Model]
+	$\Omega $ finite set, $|\Omega| =n$ is the set of outcomes.\\
+	We can observe whether $E \subset \Omega$ happens, and we define it's probability
+	\[ 
+		\mathbb{P}( E) = \frac{|E|}{|\Omega|}
+	\]
+	
+\end{defn}
+\subsection*{Question}
+Why should this have any meaning/content?
+\begin{propo}
+Consider laplace model for $n$ coint tosses $\Rightarrow$ every sequence has probability $2^{-n}$\\
+Denote by $H_n$ the number of heads in $n$ tosses
+\[ 
+	\mathbb{P}( |\frac{H_n}{n}-\frac{1}{2}|> \epsilon) \to 0
+\]
+
+\end{propo}
+More generally
+\begin{propo}
+If you have a laplace modelfor some event $E$, and look at $n$ repetitions, then
+\[ 
+	\forall \epsilon >0 \mathbb{P}( |\frac{E_n}{n}-\mathbb{P}( E) |>\epsilon) \to 0
+\]
+
+\end{propo}
+\subsection*{Limitations of Laplace Model}
+\begin{itemize}
+\item All outcomes have equal probability?
+\item Need $|\Omega|< \infty $, so what about infinite sets?
+\end{itemize}
+What next?
+\begin{defn}[Intermediate model]
+	Let $\Omega$ to be any set and $P:\Omega \to [ 0,1] , $ s.t. $\sum_{\omega\in \Omega} p( \omega)=1 $ 
+\end{defn}
+Event: $E \subset \Omega$ and
+\[ 
+	\mathbb{P}( E) \coloneqq \sum_{\omega\in E}^{ }p( \omega) 
+\]
+\begin{itemize}
+\item More freedom
+\item If you take $\Omega$ finite, $p( \omega) = \frac{1}{|\Omega|}$ $\Rightarrow$ Laplace model
+\item Price? How to choose $p: \Omega \to [ 0,1] $ $\to$ collect data, do statistics
+\item keeps many nice properties
+\item For contable sets, this is equivalent to the standard model.
+\item For uncountable $\Omega$ ?
+\item Problem 1:
+	There is no function s.t.
+	\[ 
+		p( \omega) >0 \forall \omega \in \Omega \text{ and } \sum p( \omega) =1
+	\]
+This intermediate model is in essence only for countable sets.	
+\end{itemize}
+\subsection*{What about uncountable sets?}
+\begin{itemize}
+\item What about a random point int $ [ 0,1] $ or $ [ 0,1] ^{n}$ ?
+\end{itemize}
+Intuitively, consider $[0,1]$, then we can set
+\[ 
+	\mathbb{P}( A) = \mathrm { length} ( A) 
+\]
+\begin{defn}[Geometric probability]
+	Take $f: \mathbb{R}\to ( 0, \infty ) $ to be a riemann-integrable function with total mass 1.\\
+	For any $A \subset \mathbb{R}$ ,s.t. $1_A$ riemann-integrable, we set $ \mathbb{P}( A) = \int_A f( x) dx$ 
+\end{defn}
+\begin{itemize}
+	\item In general quite \underline{ok}\\
+		BUT\\
+
+	\item You would expect there is one framework for uncountable and countable sets.
+	\item What about more complicated spaces ( eg. space of continuous functions) 
+	\item $ \mathbb{P}( \mathbb{Q}) $ is undefined
+\end{itemize}
+\section{Basic Formalism}
+\subsection{Measure spaces: A notion of area}
+\begin{itemize}
+\item Set + structure
+\item General setting to talk about area
+\end{itemize}
+\begin{defn}[Measure space]
+	$ ( \Omega, \mathcal{F}, \mu) $ is called a measure space if:
+	\begin{itemize}
+	\item $\Omega$ is some set
+	\item $ \mathcal{F} \subset P( \Omega) $ called a $\sigma$-algebra
+		\begin{itemize}
+		\item $\emtpyset \in \mathcal{F}$ 
+		\item $F \in \mathcal{F} \Rightarrow F^{c}\in \mathcal{F}$ 
+		\item $F_1,F_2, \ldots, \in \mathcal{F}$ , then $\bicup_{i \geq 1} F_i \in \mathcal{F}$ each $F$ is called a measurable set.	
+		\end{itemize}
+	
+	\item $\mu: \mathcal{F}\to [ 0, \infty ) $ called the measure
+		\begin{itemize}
+			\item $\mu( \emtpyset) =0$ 
+			\item If $F_1, \ldots, $ are disjoints sets of the $\sigma$-algebra, then
+				\[ 
+					\mu( \bigcup_{i\geq 1} F_i) = \sum_{i \geq 1} \mu( F_i) 
+				\]
+				
+		\end{itemize}
+
+	\item Defined by Borel 1898 and Lebesgue 1901-1903
+			
+	\end{itemize}
+
+	
+\end{defn}
+\subsection{Probability spaces}
+Given by Kolmogorov in 1933
+\begin{defn}[Probability space]
+	A triple $( \Omega, \mathcal{F}, \mathbb{P}) $ is called a probability space if it is a measure space and $\mathbb{P}( \Omega) =1$ 
+\end{defn}
+\subsection*{Interpretation}
+\begin{itemize}
+\item $\Omega$ state space/universe
+\item $\mathcal{F}$ is the set of events you can observe/have access to
+\item $ \mathbb{P}( E) $ is the probability of $E$ 
+\end{itemize}
+\begin{lemma}
+	Let $ ( \Omega, \mathcal{F}, \mu) $ be a measure space
+	\begin{itemize}
+	\item $\Omega \in \mathcal{F}$ 
+	\item $F_1,F_2 \in \mathcal{F} \Rightarrow F_1\setminus F_2 \in \mathcal{F}$ 
+	\item $F_1, \ldots \in \mathcal{F} \Rightarrow \bigcap F_i \in \mathcal{F}$ 
+	\item  $F_1, F_2, \ldots \in \mathcal{F} \Rightarrow \bigcap_{i \geq 1} F_i$ 
+	\end{itemize}
+	
+\end{lemma}
+Let us compare this definition with the prior ones
+\begin{itemize}
+	\item $\Omega$ finite set, $ \mathcal{F}= \mathcal{P}( \Omega) , \mathbb{P}( F) = \frac{|F|}{|\Omega|}$ this is a probability space and a laplace model.
+	\item For $\Omega$ countable, $ \mathcal{F} = \mathcal{P}( \Omega) , \mathbb{P}( E) = \sum_{\omega \in E}^{ }\mathbb{P}( \omega) $ 
+	\item The really new part is $ \mathcal{F}$ which restricts the sets we can measure
+\end{itemize}
+	
+		
+
+
+
+
+
+
+
+\end{document}	

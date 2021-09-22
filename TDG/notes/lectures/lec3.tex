@@ -1,0 +1,50 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Tue 21 Sep}{Comment comparer 2 categories}
+\subsection{Foncteurs}
+On souhaite une application entre categories qui preserve la structure de la composition.
+\begin{defn}[Foncteur]
+	Soient $C$ et $D$ des categories. Un foncteur $F$ de $C$ vers $D$ , note $F:C \to D$ consiste en un couple d'applications
+	\[ 
+	F_{Ob} :\ob C \to \ob D
+	\]
+	\[ 
+	F_{Mor} : \mor C\to \mor D
+	\]
+	tel que pour tout morphisme $f:a\to b$ dans $C$ 
+	\begin{align*}
+		F_{\mor} ( f) : F_{\ob} ( A) \to F_{\ob} ( b) \\
+	F_{ \mor } ( \id_c) = \id_{F_{ \ob( c) }  } 	
+	\end{align*}
+pour tout $c \in \ob C,$ et 
+\[ 
+	F_{\mor} ( g\circ f) = F_{\mor( g) } \circ F_{\mor} ( f) 
+\]
+quel que soient $f\in C( a,b) , g \in C( b,c),$ et $a,b,c \in \ob C$ 
+	
+\end{defn}
+\begin{lemma}
+Soient $F:C \to D$ et $F': D \to E$ des foncteurs. Alors le couple d'applications
+\[ 
+F'_{\ob} \circ F_{\ob} : \ob C \to \ob E
+\]
+et 
+\[ 
+	F'_{\mor} \circ F_{\mor} : \mor C \to \mor E
+\]
+definit un foncteur de $C$ vers $E$ , que nous notons $F'\circ F : C \to E$ . 
+\end{lemma}
+\begin{itemize}
+	\item ( Les foncteurs identites) Pour toute categorie $C$ , il y a un foncteur $\id_C: C \to C$ dont les composantes sont les identites.
+	\item ( Les foncteurs oubli) On travaille souvent ( et parfois de maniere implicite ) avec des foncteurs en general notes $U$ , qui oublient de la structure sur les objets et morphismes. Par exemple,
+		$U : \mathrm Gr \to \mathrm Ens$. \\
+		Si $G$ est un groupe, $U( G) $ oublie sa mulitplication et ses inverses. \\
+		Si $\phi: G \to H $ est un homomorphisme de groupe, alors $U( \phi) : U( G) \to U( H) $ est simplement l'application sous-jacente.\\
+		$U$ preserve la composition et l'identite, cat elles sont definies exactement de la meme maniere dans les deux categories.
+	\item $U: \vect_{ \mathbb{K} }\to \mathrm Ab$\\
+		Pour $V \in \ob \vect_{\mathbb{K}} \Rightarrow U( V)  $ oublie la multiplication par scalaire et ne retient que son groupe abelien sous-jacent. 
+Puisque les compositions et les identites sont les memes dans les deux categories, $U$ est bien un foncteur. 
+\item Puisque tout groupe abelien est un groupe, on a un foncteur $\ab \to \gr$ , etant donne un tel foncteur d'inclusion ( qu'on appelle generalement $\iota$) on dit que $\ab $ est une sous-categorie de $\gr$ 
+\end{itemize}
+
+\end{document}	
