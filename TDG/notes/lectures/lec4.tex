@@ -1,0 +1,116 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Sun 26 Sep}{Transformations naturelles}
+\subsection{Transformations naturelles}
+Comment comparer deux foncteurs ayant le meme domaine et codomaine?
+\begin{defn}[Transformations naturelles]
+	Soient $F,F': C\to D$ des foncteurs. Une transformation naturelle $\tau$ de $F$ vers $F'$ est une application
+	\[ 
+	\tau: \ob C \to \mor D
+	\]
+	tel que pour tout $f: b\to c$ et et $\tau_c \in D( F( c) ,F'( c) ) $, on a
+	\[ 
+		F'( f) \circ \tau_b = \tau_c \circ F( f) 
+	\]
+	Si $\tau_c$ est un isomorphisme pour tout $c$ , alors $\tau$ est un isomorphisme naturel.	
+	
+	
+\end{defn}
+Soient $F,F', F": C \to D$ des foncteurs et soient $\sigma: F \to F'$ et $\tau: F' \to F"$ des transformations naturelles. Alors l'application
+\[ 
+\ob C \to \mor D: c \to \tau_c \circ \sigma_c
+\]
+On définit alors $\tau\circ \sigma: F \to F"$ par
+\[ 
+\tau \circ \sigma: \ob C \to \mor D
+\]
+On veut montrer que $\forall f: b\to c$ dans $C$, on a
+\[ 
+	\tau_c \circ \sigma_c \circ F( f)  = \sigma_b \circ \tau_b \circ F"( f) 
+\]
+ce qui suit immédiatement.
+On construit facilement une transformation naturelle identité. Pour un foncteur $F: C \to D$, il y a une identité donné par
+\[ 
+	\ob C \to \mor D: c \to \id_{F( c) } 
+\]
+Il est facile de voir que pour tout autre transformation naturelle $\tau: F \to G$.\\
+Notons que ainsi, pour toute catégories $C$ et $D$ , $C$ petit, il y a une catégorie $\fun( C,D) $, dont les objets sont les foncteurs de $C$ vers $D$ et les morphismes sont les transformations naturelles.
+\begin{exemple}
+Soit $U: \vect_{\mathbb{K}}\to \ens $  le foncteur qui oublie tout la structure algebrique et soit $L: \ens \to \vect_{\mathbb{K}} $ le foncteur qui envoie un ensemble sur l'ensemble de ses combinaisons linéaires.\\
+Il y a une transformation naturelle $\eta: \id_{\ens} \to U \circ L$.\\
+Pour definir $\eta: \id_{\ens} \to U\circ L$ , il nous faut une application $\eta: \ob \ens\to  \mor \ens$ tel que
+\begin{align*}
+	\forall X \in \ob \ens, \eta_X : X \to U( L( X) ) 
+\end{align*}
+donc $\forall x \in X, \eta_X( x) : X \to \mathbb{K}$.\\
+On décide de poser
+\begin{align*}
+\eta_X( x) ( x') = 
+\begin{cases}
+1 : x'=x\\
+0: x' \neq x
+\end{cases}
+\end{align*}
+Est-ce que ce diagramme commute?
+\[ 
+\begin{tikzcd}
+X \arrow[d, "f", shift right] \arrow[r, "\eta_X"] & U(L(X)) \arrow[d, "U(L(f))"] \\
+Y \arrow[r, "\eta_Y"]                             & U(L(Y))                     
+\end{tikzcd}
+\]
+On a 
+\begin{align*}
+	\eta_Y \circ f( x) = \eta_Y ( f( x) ) : Y &\to \mathbb{K}\\
+	y &\to
+	\begin{cases}
+		1: y =f( x) \\
+		0: y \neq f( x) 
+	\end{cases}
+\end{align*}
+On a aussi
+\begin{align*}
+	U( L( f) ) \circ \eta_X( x) : Y &\to \mathbb{K}\\
+	y &\mapsto \sum_{x' \in f^{-1}( y) }  \eta_X( x) ( x') =
+	\begin{cases}
+		1 : y = f( x) \\
+		0: \text{ sinon } 
+	\end{cases}
+\end{align*}
+On a donc bien une transformation naturelle.
+De plus, on a une transformation naturelle $\epsilon: L \circ U \to \id_{\vect_{\mathbb{K}} } $ 
+Pour $V \in \ob \vect_{\mathbb{K}} $
+\[ 
+	L\circ U( V) = \left\{ \omega: U( V) \to \mathbb{K} | | \left\{ v | \omega( v) \neq 0 \right\} | < \infty  \right\} 
+\]
+Enfait, $\omega$ est un élément du dual de $V$.\\
+Définir $\epsilon_V: L\circ U( V) \to V$ par
+\[ 
+	\epsilon_v( \omega) = \sum_{v \in V}^{ }\omega( v) \cdot v
+\]
+Cette somme est finie et donc bien définie.\\
+On vérifie facilement que $\epsilon_V$ est linéaire.\\
+Soit $g: V \to V'$ une application linéaire, est-ce que le diagramme suivant commute
+\[ 
+\begin{tikzcd}
+L\circ U(V) \arrow[d, "L\circ U(g)"] \arrow[r, "\epsilon_V"] & V \arrow[d, "g"] \\
+L\circ U(V') \arrow[r, "\epsilon_{V'}"]                      & V'              
+\end{tikzcd}
+\]
+On a 
+\begin{align*}
+	g\circ \epsilon_V( \omega) = \sum_{v \in V} \omega( v) \cdot g( v) 
+	\intertext{Dans l'autre sens}
+	\epsilon_{V'} \circ ( L\circ U( g) ) ( \omega) &= \sum_{v' \in V'} L\circ U( g) ( \omega) ( v') \cdot v'\\
+						       &= \sum_{v' \in V'}^{ } \left(\sum_{v \in g^{-1}( v') } \omega( v)  \right) \cdot v'	
+\end{align*}.
+
+
+
+
+
+
+\end{exemple}
+
+	
+
+\end{document}	

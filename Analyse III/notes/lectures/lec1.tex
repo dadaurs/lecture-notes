@@ -1,0 +1,28 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Thu 23 Sep}{Introduction}
+\section{Rappels}
+\begin{thm}[de la fonction inverse]
+	Soit $f:U \to \mathbb{R}^n$, $U \subset \mathbb{R}^n$ de classe $C^1$ tel que $Df|_x$ est inversible.
+	Alors il existe un voisinage $V $ de $x$, un voisinage $W$ de $f( x) $ tel que $f$ est une bijection de $V$ a $W$ et dont l'inverse est aussi derivable.
+	De plus $Df^{-1}|_{f( x) } = ( Df|_x)^{-1} $ 
+\end{thm}
+\begin{thm}[de la fonction implicite]
+	Soit $U \subset \mathbb{R}^n, W \subset \mathbb{R}^p$ et $f:U \times W\to \mathbb{R}^n$ une fonction $C^1$ et $( x,z) \in U\times W$ tel que
+	\[ 
+		Df|_{( x,z) } = \left[ Dxf|_{( x,z) } | D_z f_{( x,z) }  \right] 
+	\]
+	est telle que $D_xf|_{( x,z) } $ est inversible.\\
+	Alors si $f( x,z) =0$, il existe un voisinage $Z$ de $z$ et une fonction $g:Z \to V$ tel que $f( g( \tilde z, \tilde z) ) =0$ et
+	\[ 
+		Dg|_{z} = - ( D_xf|_{( x,z) } ) ^{-1}D_{z} f|_{( x,z) } 
+	\]
+	
+
+	
+\end{thm}
+\section{Nombres Complexes}
+De meme que $\mathbb{R}$ est obtenu a partir de $\mathbb{Q}$ en faisant une operation de completion ( topologique).\\
+$\mathbb{C}$ est obtenu a partir de $\mathbb{R}$ en faisant une operation de completion algebrique; on requiert simplement qu'il existe une solution a $x^{2}+1=0.$ 
+
+\end{document}	

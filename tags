@@ -136,6 +136,8 @@ Article	BA2/Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^		Article(
 Article	BA2/Programmation Orientee Objet/Exos/S2/Ex4/supermarche.cc	/^class Article {$/;"	c	file:
 Assistant	BA2/Programmation Orientee Objet/Exos/S1/Ex2/Magie.cc	/^class Assistant{$/;"	c	file:
 Associativite	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{Associativite}$/;"	b	subsection:Le language des Ensembles""Composition/Associativite
+Associativité	TDG/Assignments/S1/Ex.tex	/^\\subsection*{Associativité}$/;"	u	section:Groupes""I
+Associativité	current-course/Assignments/S1/Ex.tex	/^\\subsection*{Associativité}$/;"	u	section:Groupes""I
 Associativité de l'Addition	BA2/Analyse II/Assignments/S5/Ex.tex	/^\\subsection*{Associativité de l'Addition }$/;"	u	section:#1""1
 Associativité de la Multiplication par un Scalaire	BA2/Analyse II/Assignments/S5/Ex.tex	/^\\subsection*{Associativité de la Multiplication par un Scalaire}$/;"	u	section:#1""1
 Auteur	BA2/Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		Auteur(string n, bool p=false) {$/;"	f	class:Auteur	file:
@@ -146,6 +148,7 @@ BA1	README.md	/^## BA1$/;"	s	chapter:Lecture Notes For Math Bachelor
 BA2	README.md	/^## BA2$/;"	s	chapter:Lecture Notes For Math Bachelor
 Bases	BA1/Algebre Lineaire I/notes/lectures/lec11.tex	/^\\subsection{Bases}$/;"	u	section:Espaces Vectoriels
 Basic Definitions	BA2/Discrete Mathematics/notes/lectures/lec9.tex	/^\\subsection{Basic Definitions}$/;"	u	section:#1""Graph Theory
+Basic Formalism	PROBA/notes/lectures/lec1.tex	/^\\section{Basic Formalism}$/;"	s	chapter:Groupes
 Bernoulli-L'hospital pour infini sur infini	BA1/Analyse I/notes/lectures/lec17.tex	/^\\subsection{Bernoulli-L'hospital pour infini sur infini}$/;"	u	section:Dérivation
 Bibliotheque	BA2/Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^		Bibliotheque(string n) {$/;"	f	class:Bibliotheque	file:
 Bibliotheque	BA2/Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^class Bibliotheque {$/;"	c	file:
@@ -184,6 +187,12 @@ Cas Vectoriel	BA2/Analyse II/notes/lectures/lec15.tex	/^\\subsection{Cas Vectori
 Cas particulier	BA1/Mecanique Generale/notes/lectures/lec5.tex	/^\\subsubsection{Cas particulier}$/;"	b	subsection:Description des rotations spatiales""Interprétation du vecteur $\\omega$
 Cas scalaire	BA2/Analyse II/notes/lectures/lec23.tex	/^\\subsection*{Cas scalaire}$/;"	u	section:#1""Equations differentielles ordinaires
 Cas vectoriel	BA2/Analyse II/notes/lectures/lec23.tex	/^\\subsection*{Cas vectoriel}$/;"	u	section:#1""Equations differentielles ordinaires
+Categories pas forcement concretes	TDG/notes/lectures/lec2.tex	/^\\subsubsection{Categories pas forcement concretes}$/;"	b	subsection:Groupes""Une Introduction à la Théorie des Catégories""Exemples de Catégories
+Categories pas forcement concretes	current-course/notes/lectures/lec2.tex	/^\\subsubsection{Categories pas forcement concretes}$/;"	b	subsection:Groupes""Une Introduction à la Théorie des Catégories""Exemples de Catégories
+Catégories	TDG/notes/lectures/lec1.tex	/^\\subsection{Catégories}$/;"	u	section:Groupes""Une Introduction à la Théorie des Catégories
+Catégories	current-course/notes/lectures/lec1.tex	/^\\subsection{Catégories}$/;"	u	section:Groupes""Une Introduction à la Théorie des Catégories
+Catégories concrètes	TDG/notes/lectures/lec2.tex	/^\\subsubsection{Catégories concrètes}$/;"	b	subsection:Groupes""Une Introduction à la Théorie des Catégories""Exemples de Catégories
+Catégories concrètes	current-course/notes/lectures/lec2.tex	/^\\subsubsection{Catégories concrètes}$/;"	b	subsection:Groupes""Une Introduction à la Théorie des Catégories""Exemples de Catégories
 Centre de masse	BA1/Mecanique Generale/notes/lectures/lec9.tex	/^\\subsection{Centre de masse}$/;"	u	section:Gravitation, Moment Cinétique
 Cercle	BA2/Programmation Orientee Objet/Exos/S1/Ex1/Cercle.cc	/^class Cercle {$/;"	c	file:
 Cercle	BA2/Programmation Orientee Objet/Exos/S5/Ex1/formes.cc	/^		Cercle(double r): rayon(r) {}$/;"	f	class:Cercle	file:
@@ -340,6 +349,8 @@ Espaces d'applications linéaires	BA1/Algebre Lineaire I/notes/lectures/lec13.te
 Espaces hermitiens	BA2/Algebre Lineaire II/Algebre-Lineaire-2/chapter01-produits-scalaires.tex	/^\\section{Espaces hermitiens} $/;"	s	chapter:Formes bilinéaires
 Espaces vectoriels de dimension infinie	BA1/Algebre Lineaire I/notes/lectures/lec12.tex	/^\\subsection{Espaces vectoriels de dimension infinie}$/;"	u	section:Espaces Vectoriels
 Estimating the number of unlabelled trees	BA2/Discrete Mathematics/notes/lectures/lec10.tex	/^\\subsubsection{Estimating the number of unlabelled trees}$/;"	b	subsection:#1""Graph Theory""Trees
+Etude de $O_2$	GEOM DIFF/notes/lectures/lec1.tex	/^\\subsection{Etude de $O_2$ }$/;"	u	section:Groupes""Isometries et Similitudes
+Etude de $O_3$	GEOM DIFF/notes/lectures/lec1.tex	/^\\subsection{Etude de $O_3$ }$/;"	u	section:Groupes""Isometries et Similitudes
 Etude de cas	BA1/Introduction a la programmation/notes/lectures/lec3.tex	/^\\section{Etude de cas}$/;"	s
 Examen	BA1/Introduction a la programmation/Exos/MOOC/S6/Ex3/qcm.cc	/^typedef vector<qcm> Examen;$/;"	t	typeref:typename:vector<qcm>	file:
 Examen	BA1/Introduction a la programmation/Exos/MOOC/S9/Ex4/qcm.cc	/^typedef vector<qcm> Examen;$/;"	t	typeref:typename:vector<qcm>	file:
@@ -349,6 +360,8 @@ Exemplaire	BA2/Programmation Orientee Objet/Arendre/S2/Ex2/biblio.cc	/^class Exe
 Exemple d'utilisation	BA1/Analyse I/notes/lectures/lec2.tex	/^\\subsection{Exemple d'utilisation}$/;"	u	section:Changements de Referentiel
 Exemple de loi physique: l'addition des vitesse	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\subsection{Exemple de loi physique: l'addition des vitesse}$/;"	u	section:Physique
 Exemples	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{Exemples}$/;"	b	subsection:Le language des Ensembles""Ensembles
+Exemples de Catégories	TDG/notes/lectures/lec2.tex	/^\\subsection{Exemples de Catégories}$/;"	u	section:Groupes""Une Introduction à la Théorie des Catégories
+Exemples de Catégories	current-course/notes/lectures/lec2.tex	/^\\subsection{Exemples de Catégories}$/;"	u	section:Groupes""Une Introduction à la Théorie des Catégories
 Exemples de conducteur	BA2/Fluides et Electromagnetisme/notes/lectures/lec20.tex	/^\\subsubsection*{Exemples de conducteur}$/;"	b	subsection:#1""Circuits electriques""Definition du courant
 Exercice	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsubsection{ Exercice }$/;"	b	subsection:Le language des Ensembles""$\\mathcal{P}(E)$ l'ensemble des sous-ensembles
 Exercices	BA2/Algebre Lineaire II/Algebre-Lineaire-2/chapter00-valeurs-propres.tex	/^\\subsection*{Exercices}$/;"	u	section:Valeurs propres""Le polynôme caractéristique
@@ -387,12 +400,15 @@ Familles génératrices	BA1/Algebre Lineaire I/notes/lectures/lec10.tex	/^\\subs
 Figure	BA2/Programmation Orientee Objet/Exos/S5/Ex2/figures.cc	/^class Figure {$/;"	c	file:
 Finite probability spaces and probabilistic methods	BA2/Discrete Mathematics/notes/lectures/lec14.tex	/^\\section{Finite probability spaces and probabilistic methods}$/;"	s	chapter:#1
 Finite sets	BA2/Discrete Mathematics/notes/lectures/lec1.tex	/^\\subsection{Finite sets}$/;"	u	section:#1""Counting
+Finite sets	METTOP/notes/lectures/lec1.tex	/^\\subsection{Finite sets}$/;"	u	section:Groupes""Sets
 Flacon	BA2/Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^  Flacon(string n,double v, double p):nom(n),volume(v),pH(p){}$/;"	f	class:Flacon	file:
 Flacon	BA2/Programmation Orientee Objet/Arendre/S3/Ex1/chimie.cc	/^class Flacon$/;"	c	file:
 Fleur	BA2/Programmation Orientee Objet/Exos/S2/Ex2/poeme.cc	/^	Fleur(Fleur const& fl) {$/;"	f	class:Fleur	file:
 Fleur	BA2/Programmation Orientee Objet/Exos/S2/Ex2/poeme.cc	/^	Fleur(string nom, string coul) {$/;"	f	class:Fleur	file:
 Fleur	BA2/Programmation Orientee Objet/Exos/S2/Ex2/poeme.cc	/^class Fleur {$/;"	c	file:
 Fluides au repos	BA2/Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\section{Fluides au repos}$/;"	s	chapter:#1
+Foncteurs	TDG/notes/lectures/lec3.tex	/^\\subsection{Foncteurs}$/;"	u	section:Groupes""Une Introduction à la Théorie des Catégories
+Foncteurs	current-course/notes/lectures/lec3.tex	/^\\subsection{Foncteurs}$/;"	u	section:Groupes""Une Introduction à la Théorie des Catégories
 Fonctions	BA1/Analyse I/notes/lectures/lec8.tex	/^\\section{Fonctions}$/;"	s
 Fonctions	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^\\subsection{Fonctions}$/;"	u	section:Quelques notions mathematiques
 Fonctions Bijectives	BA2/Analyse II/notes/lectures/lec12.tex	/^\\section{Fonctions Bijectives}$/;"	s	chapter:#1
@@ -452,10 +468,15 @@ Groupes diedraux	BA1/Structures Algebriques/notes/lectures/lec9.tex	/^\\subsecti
 Humain	BA2/Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^class Humain: public Joueur {$/;"	c	file:
 Hydre	BA2/Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^		Hydre(string n, int nv, int pts, int f, int l, int d, int pos=0)$/;"	f	class:Hydre	file:
 Hydre	BA2/Programmation Orientee Objet/Arendre/S4/Ex2/dragons.cc	/^class Hydre: public Creature {$/;"	c	file:
+I	TDG/Assignments/S1/Ex.tex	/^\\section*{I}$/;"	s	chapter:Groupes
+I	current-course/Assignments/S1/Ex.tex	/^\\section*{I}$/;"	s	chapter:Groupes
 Identite utile	BA2/Fluides et Electromagnetisme/notes/lectures/lec26.tex	/^\\subsubsection*{Identite utile}$/;"	b	subsection:#1""Equations de Maxwell""Ondes electromagnetiques dans le vide
+Identité	TDG/Assignments/S1/Ex.tex	/^\\subsection*{Identité}$/;"	u	section:Groupes""I
+Identité	current-course/Assignments/S1/Ex.tex	/^\\subsection*{Identité}$/;"	u	section:Groupes""I
 Image,Preimage	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Image,Preimage}$/;"	u	section:Le language des Ensembles
 Important graphs	BA2/Discrete Mathematics/notes/lectures/lec9.tex	/^\\subsection{Important graphs}$/;"	u	section:#1""Graph Theory
 Impulsion et quantité de mouvement	BA1/Mecanique Generale/notes/lectures/lec6.tex	/^\\subsection{Impulsion et quantité de mouvement}$/;"	u	section:Travail, énergie, forces conservatives
+Infinite sets	METTOP/notes/lectures/lec1.tex	/^\\subsection{Infinite sets}$/;"	u	section:Groupes""Sets
 Information, Calcul et Communication	BA1/Introduction a la programmation/notes/lectures/lec1.tex	/^\\section{Information, Calcul et Communication}$/;"	s
 Ingredient	BA2/Programmation Orientee Objet/Arendre/S6/Ex1/restaurant.cc	/^		Ingredient(Produit const & p, double q):prod(p),quant(q) {}$/;"	f	class:Ingredient	file:
 Ingredient	BA2/Programmation Orientee Objet/Arendre/S6/Ex1/restaurant.cc	/^class Ingredient {$/;"	c	file:
@@ -478,6 +499,7 @@ Integration	BA1/Analyse I/notes/lectures/lec22.tex	/^\\section{Integration}$/;"	
 Integration Par Parties	BA1/Analyse I/notes/lectures/lec25.tex	/^\\subsubsection{Integration Par Parties}$/;"	b	subsection:Integration""Recherche de Primitives
 Integration de Fonctions Rationelles	BA1/Analyse I/notes/lectures/lec26.tex	/^\\subsection{Integration de Fonctions Rationelles}$/;"	u	section:Integration
 Interface solide/liquide/gaz	BA2/Fluides et Electromagnetisme/notes/lectures/lec4.tex	/^\\subsection{Interface solide\/liquide\/gaz}$/;"	u	section:#1""Pression dans un fluide
+Interpretation	PROBA/notes/lectures/lec1.tex	/^\\subsection*{Interpretation}$/;"	u	section:Groupes""Basic Formalism
 Interpretation avec un champ electrique induit	BA2/Fluides et Electromagnetisme/notes/lectures/lec23.tex	/^\\subsubsection*{Interpretation avec un champ electrique induit}$/;"	b	subsection:#1""Pheneomenes d'inductions magnetique""Loi d'induction de Faraday
 Interprétation du vecteur $\\omega$	BA1/Mecanique Generale/notes/lectures/lec5.tex	/^\\subsection{Interprétation du vecteur $\\omega$}$/;"	u	section:Description des rotations spatiales
 Introduction	BA1/Analyse I/notes/lectures/lec1.tex	/^\\section{Introduction}$/;"	s
@@ -486,6 +508,7 @@ Introduction	BA2/Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\subsec
 Intégrales généralisées	BA2/Analyse II/notes/lectures/lec1.tex	/^\\section{Intégrales généralisées}$/;"	s	chapter:#1
 Intégrales premières d'un mouvement central	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Intégrales premières d'un mouvement central}$/;"	u	section:Gravitation, Moment Cinétique
 Invariance par changement de referentiel	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\subsection{Invariance par changement de referentiel}$/;"	u	section:Physique
+Isometries et Similitudes	GEOM DIFF/notes/lectures/lec1.tex	/^\\section{Isometries et Similitudes}$/;"	s	chapter:Groupes
 Jeu	BA2/Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^		Jeu(int taille=8):table(taille,vector<Couleur>(taille)) {}$/;"	f	class:Jeu	file:
 Jeu	BA2/Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^class Jeu {$/;"	c	file:
 Joueur	BA2/Programmation Orientee Objet/Exos/S5/Ex3/puissance.cc	/^class Joueur {$/;"	c	file:
@@ -515,6 +538,7 @@ La méthode des moindres carrées	BA2/Algebre Lineaire II/Algebre-Lineaire-2/cha
 La regle de Lenz	BA2/Fluides et Electromagnetisme/notes/lectures/lec24.tex	/^\\subsection{La regle de Lenz}$/;"	u	section:#1""Equations de Maxwell
 La resistance	BA2/Fluides et Electromagnetisme/notes/lectures/lec20.tex	/^\\subsubsection{La resistance}$/;"	b	subsection:#1""Circuits electriques""La resistance $R$, la loi d'Ohm et l'effet Joule
 La resistance $R$, la loi d'Ohm et l'effet Joule	BA2/Fluides et Electromagnetisme/notes/lectures/lec20.tex	/^\\subsection{La resistance $R$, la loi d'Ohm et l'effet Joule}$/;"	u	section:#1""Circuits electriques
+Laplace Model	PROBA/notes/lectures/lec1.tex	/^\\subsection{Laplace Model}$/;"	u	section:Groupes""Some historical models
 Le Corps des Nombres Complexes	BA1/Algebre Lineaire I/notes/lectures/lec18.tex	/^\\section{Le Corps des Nombres Complexes}$/;"	s
 Le cas réel, défini positif	BA2/Algebre Lineaire II/Algebre-Lineaire-2/chapter01-produits-scalaires.tex	/^\\section{Le cas réel, défini positif}$/;"	s	chapter:Formes bilinéaires
 Le développement de la dynamique	BA1/Mecanique Generale/notes/lectures/lec8.tex	/^\\subsection{Le développement de la dynamique}$/;"	u	section:Gravitation, Moment Cinétique
@@ -539,6 +563,7 @@ Les equations de Maxwell	BA2/Fluides et Electromagnetisme/notes/lectures/lec25.t
 Les matrices carrées	BA1/Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Les matrices carrées}$/;"	u	section:Matrices
 Les tris	BA1/Introduction a la programmation/notes/lectures/lec4.tex	/^\\subsection{Les tris}$/;"	u	section:Definition formelle des algorithmes
 Lignes de champ electrique	BA2/Fluides et Electromagnetisme/notes/lectures/lec13.tex	/^\\subsubsection{Lignes de champ electrique}$/;"	b	subsection:#1""L'electromagnetisme""Champs Electriques
+Limitations of Laplace Model	PROBA/notes/lectures/lec1.tex	/^\\subsection*{Limitations of Laplace Model}$/;"	u	section:Groupes""Some historical models
 Limsup et liminf	BA1/Analyse I/notes/lectures/lec4.tex	/^\\section{Limsup et liminf}$/;"	s
 Linear recurrences in matrix form	BA2/Discrete Mathematics/notes/lectures/lec7.tex	/^\\subsection{Linear recurrences in matrix form}$/;"	u	section:#1""Equations de Maxwell
 Livre	BA2/Programmation Orientee Objet/Exos/S5/Ex4/librairie.cc	/^		Livre(string t, string a, int n, bool b): titre(t), auteur(a), nb_pages(n), bestseller(b) {}$/;"	f	class:Livre	file:
@@ -569,6 +594,7 @@ Matrices congruentes	BA2/Algebre Lineaire II/Algebre-Lineaire-2/chapter01-produi
 Matrices congruentes	BA2/Algebre Lineaire II/notes/lectures/lec9.tex	/^\\subsection{Matrices congruentes}$/;"	u	section:#1""Formes Bilineaires
 Matrices semblables	BA2/Algebre Lineaire II/Algebre-Lineaire-2/chapter00-valeurs-propres.tex	/^\\section{Matrices semblables}$/;"	s	chapter:Valeurs propres
 Matrix_h	BA2/Algebre Lineaire II/Algebre-Lineaire-2/Programming/Matrix.h	/^#define Matrix_h$/;"	d
+Measure spaces: A notion of area	PROBA/notes/lectures/lec1.tex	/^\\subsection{Measure spaces: A notion of area}$/;"	u	section:Groupes""Basic Formalism
 Methode ``informelle''	BA2/Analyse II/notes/lectures/lec23.tex	/^\\subsection*{Methode ``informelle'' }$/;"	u	section:#1""Equations differentielles ordinaires
 Methode de calcul	BA2/Algebre Lineaire II/notes/lectures/lec20.tex	/^\\subsection*{Methode de calcul}$/;"	u	section:#1""Systemes differentiels lineaires
 Methode de separation de variables	BA2/Analyse II/notes/lectures/lec23.tex	/^\\subsection{Methode de separation de variables}$/;"	u	section:#1""Equations differentielles ordinaires
@@ -595,10 +621,15 @@ Mouvement plan-sur-plan	BA1/Mecanique Generale/notes/lectures/lec11.tex	/^\\subs
 Mouvement rectiligne uniformement accelere	BA1/Mecanique Generale/notes/lectures/lec1.tex	/^\\section{Mouvement rectiligne uniformement accelere}$/;"	s
 Multiplication par un Scalaire	BA2/Analyse II/Assignments/S5/Ex.tex	/^\\subsection*{Multiplication par un Scalaire}$/;"	u	section:#1""1
 NONPRIME_MODULUS	BA2/Algebre Lineaire II/Algebre-Lineaire-2/Programming/finite_fields.h	/^constexpr int NONPRIME_MODULUS(1);$/;"	v	typeref:typename:int
+Nombres Complexes	Analyse III/notes/lectures/lec1.tex	/^\\section{Nombres Complexes}$/;"	s	chapter:Groupes
 Non-examples	BA2/Discrete Mathematics/notes/lectures/lec9.tex	/^\\subsection*{Non-examples}$/;"	u	section:#1""Graph Theory
 Normes sur $R^{n}$	BA2/Analyse II/notes/lectures/lec3.tex	/^\\subsection{Normes sur $R^{n}$}$/;"	u	section:#1""L'espace $R^{n}$
+Notation	TDG/notes/lectures/lec1.tex	/^\\subsection*{Notation}$/;"	u	section:Groupes""Une Introduction à la Théorie des Catégories
+Notation	current-course/notes/lectures/lec1.tex	/^\\subsection*{Notation}$/;"	u	section:Groupes""Une Introduction à la Théorie des Catégories
 Notations	BA1/Algebre Lineaire I/notes/lectures/lec1.tex	/^\\subsection{Notations}$/;"	u	section:Le language des Ensembles
 Notations du cours et maths necessaires	BA2/Fluides et Electromagnetisme/notes/lectures/lec1.tex	/^\\section{Notations du cours et maths necessaires}$/;"	s	chapter:#1
+Notion Fondamentale: la composition	TDG/notes/lectures/lec1.tex	/^\\subsection*{Notion Fondamentale: la composition}$/;"	u	section:Groupes""Une Introduction à la Théorie des Catégories
+Notion Fondamentale: la composition	current-course/notes/lectures/lec1.tex	/^\\subsection*{Notion Fondamentale: la composition}$/;"	u	section:Groupes""Une Introduction à la Théorie des Catégories
 Notion de limite	BA2/Analyse II/notes/lectures/lec5.tex	/^\\subsection{Notion de limite}$/;"	u	section:#1""Fonctions de plusieurs variables
 Notions fondamentales	BA2/Algebre Lineaire II/Algebre-Lineaire-2/chapter-01-polynomes.tex	/^\\section{Notions fondamentales}$/;"	s	chapter:Polynômes
 Noyau et Image	BA1/Algebre Lineaire I/notes/lectures/lec5.tex	/^\\section{Noyau et Image}$/;"	s
@@ -668,6 +699,7 @@ Preuves	BA1/Structures Algebriques/notes/lectures/lec1.tex	/^\\section{Preuves}$
 Principe de Bernoulli-L'Hospital	BA1/Analyse I/notes/lectures/lec16.tex	/^\\subsection{Principe de Bernoulli-L'Hospital}$/;"	u	section:Dérivation
 Principe de superposition	BA2/Fluides et Electromagnetisme/notes/lectures/lec12.tex	/^\\subsubsection{Principe de superposition}$/;"	b	subsection:#1""L'electromagnetisme""Loi de Coulomb
 Probabilistic method	BA2/Discrete Mathematics/notes/lectures/lec14.tex	/^\\subsection{Probabilistic method}$/;"	u	section:#1""Finite probability spaces and probabilistic methods
+Probability spaces	PROBA/notes/lectures/lec1.tex	/^\\subsection{Probability spaces}$/;"	u	section:Groupes""Basic Formalism
 Problem	BA2/Discrete Mathematics/notes/lectures/lec11.tex	/^\\subsubsection*{Problem}$/;"	b	subsection:#1""Graph Theory""Minimal spanning trees
 Probleme a deux corps	BA1/Mecanique Generale/notes/lectures/lec10.tex	/^\\subsection{Probleme a deux corps}$/;"	u	section:Gravitation, Moment Cinétique
 Probleme d'optimisation	BA2/Algebre Lineaire II/notes/lectures/lec14.tex	/^\\subsection*{Probleme d'optimisation}$/;"	u	section:#1""Formes quadratiques reelles et matrices symmetriques reelles
@@ -683,9 +715,11 @@ Produits de Groupes	BA1/Structures Algebriques/notes/lectures/lec6.tex	/^\\subse
 Projections et composantes d'un vecteur	BA1/Mecanique Generale/notes/lectures/lec4.tex	/^\\subsection{Projections et composantes d'un vecteur}$/;"	u	section:Dynamique du point materiel
 Prolongement par continuite	BA2/Analyse II/notes/lectures/lec7.tex	/^\\subsection{Prolongement par continuite}$/;"	u	section:#1""Derivees de fonctions a plusieurs variables
 Proprietes de base	BA2/Fluides et Electromagnetisme/notes/lectures/lec15.tex	/^\\subsubsection{Proprietes de base}$/;"	b	subsection:#1""L'electromagnetisme""Le role des conducteurs en electrostatique
+Proprietes de base des matrices orthogonales $O_n$	GEOM DIFF/notes/lectures/lec1.tex	/^\\subsection{Proprietes de base des matrices orthogonales $O_n$ }$/;"	u	section:Groupes""Isometries et Similitudes
 Proprietes de l'integrale de Riemann	BA2/Analyse II/notes/lectures/lec20.tex	/^\\subsection{Proprietes de l'integrale de Riemann}$/;"	u	section:#1""Integrales multiples au sens de Riemann
 Proprietes de l'integrale de Riemann	BA2/Analyse II/notes/lectures/lec21.tex	/^\\subsection{Proprietes de l'integrale de Riemann}$/;"	u	section:#1""Integrales multiples au sens de Riemann
 Proprietes de l'operation de limite	BA2/Analyse II/notes/lectures/lec6.tex	/^\\subsection{Proprietes de l'operation de limite}$/;"	u	section:#1""Fonctions de plusieurs variables
+Proprietes de la norme	GEOM DIFF/notes/lectures/lec1.tex	/^\\subsection{Proprietes de la norme}$/;"	u	section:Groupes""Rappels de geometrie euclidienne
 Proprietes de preuves formelles	BA1/Structures Algebriques/notes/lectures/lec1.tex	/^\\subsubsection{Proprietes de preuves formelles}$/;"	b	section:Preuves
 Propriété universelle des Produits	BA1/Structures Algebriques/notes/lectures/lec6.tex	/^\\subsection{Propriété universelle des Produits}$/;"	u	section:Théorie des Groupes
 Préface	BA2/Algebre Lineaire II/Algebre-Lineaire-2/notes.tex	/^\\section*{Préface}$/;"	s	chapter:Groupes
@@ -699,6 +733,7 @@ Quelques notions mathematiques	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^
 Quelques proprietes de $\\phi$ ( et de $E$) en electrostatique	BA2/Fluides et Electromagnetisme/notes/lectures/lec14.tex	/^\\subsubsection{Quelques proprietes de $\\phi$ ( et de $E$) en electrostatique}$/;"	b	subsection:#1""L'electromagnetisme""Le potentiel electrostatique
 Question	BA2/Analyse II/notes/lectures/lec12.tex	/^\\subsubsection*{Question}$/;"	b	subsection:#1""Fonctions Bijectives""Pourquoi etudier les bijections?
 Question	BA2/Discrete Mathematics/notes/lectures/lec8.tex	/^\\subsection*{Question}$/;"	u	section:#1""Moebius inversion formulas
+Question	PROBA/notes/lectures/lec1.tex	/^\\subsection*{Question}$/;"	u	section:Groupes""Some historical models
 Questions	BA2/Analyse II/notes/lectures/lec14.tex	/^\\subsection*{Questions}$/;"	u	section:#1""Intégrales généralisées
 R1	BA2/Algebre Lineaire II/Algebre-Lineaire-2/chapter-01-polynomes.tex	/^\\item $a+ b  = b+a$ pour tout     $a,b ∈ R$. \\label{R1}$/;"	l
 R2	BA2/Algebre Lineaire II/Algebre-Lineaire-2/chapter-01-polynomes.tex	/^\\item $a + (b+c) = (a + b) +c$, pour tout $a,b,c ∈ R$. \\label{R2}$/;"	l
@@ -710,6 +745,8 @@ R7	BA2/Algebre Lineaire II/Algebre-Lineaire-2/chapter-01-polynomes.tex	/^\\item 
 R8	BA2/Algebre Lineaire II/Algebre-Lineaire-2/chapter-01-polynomes.tex	/^\\item  $a b = ba$ pour tous $a,b ∈R$ \\label{R8}. $/;"	l
 Rang d'une Matrice	BA1/Algebre Lineaire I/notes/lectures/lec15.tex	/^\\subsection{Rang d'une Matrice}$/;"	u	section:Matrices
 Rappel cas $n=1$	BA2/Analyse II/notes/lectures/lec16.tex	/^\\subsubsection*{Rappel cas $n=1$}$/;"	b	subsection:#1""Extremas de fonctions""Extremas libres
+Rappels	Analyse III/notes/lectures/lec1.tex	/^\\section{Rappels}$/;"	s	chapter:Groupes
+Rappels de geometrie euclidienne	GEOM DIFF/notes/lectures/lec1.tex	/^\\section{Rappels de geometrie euclidienne}$/;"	s	chapter:Groupes
 Rare	BA2/Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^  	Rare(string n, unsigned int a, string p="Suisse", double v=1.0, int nb=100):Timbre(n,a,p,v), /;"	f	class:Rare	file:
 Rare	BA2/Programmation Orientee Objet/Arendre/S4/Ex1/timbres.cc	/^class Rare: public Timbre {$/;"	c	file:
 Rational	BA2/Algebre Lineaire II/Algebre-Lineaire-2/Programming/rational.h	/^        Rational$/;"	f	class:Rational
@@ -736,6 +773,8 @@ Self-Inductance	BA2/Fluides et Electromagnetisme/notes/lectures/lec24.tex	/^\\su
 Sequence	BA1/Introduction a la programmation/Exos/MOOC/S8/Ex2/tranche.cc	/^typedef  vector<int> Sequence;$/;"	t	typeref:typename:vector<int>	file:
 Series	BA1/Analyse I/notes/lectures/lec6.tex	/^\\section{Series}$/;"	s
 Series Entieres	BA1/Analyse I/notes/lectures/lec20.tex	/^\\section{Series Entieres}$/;"	s
+Sets	METTOP/notes/lectures/lec1.tex	/^\\section{Sets}$/;"	s	chapter:Groupes
+Some historical models	PROBA/notes/lectures/lec1.tex	/^\\section{Some historical models}	$/;"	s	chapter:Groupes
 Sources	BA2/SHS Communication/Arendre/Nudges/nudge.tex	/^ \\subsection*{Sources}$/;"	u	section:#1""2
 Souris	BA2/Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^		Souris(const Souris& s)$/;"	f	class:Souris	file:
 Souris	BA2/Programmation Orientee Objet/Arendre/S2/Ex1/labo.cc	/^		Souris(double p, string coul,unsigned int a=0,unsigned int esp=36) {$/;"	f	class:Souris	file:
@@ -803,6 +842,8 @@ Trigonometrie	BA1/Mecanique Generale/notes/lectures/lec2.tex	/^\\section{Trigono
 Tuyaux d'orgues	BA2/Fluides et Electromagnetisme/notes/lectures/lec11.tex	/^\\subsection{Tuyaux d'orgues}$/;"	u	section:#1""Ondes dans les milieux fluides
 Types d'ecoulement	BA2/Fluides et Electromagnetisme/notes/lectures/lec5.tex	/^\\subsection{Types d'ecoulement}$/;"	u	section:#1""Dynamique des fluides
 Un calcul naif ( avec la série harmonique alternée)	BA1/Analyse I/notes/lectures/lec7.tex	/^\\subsubsection{Un calcul naif ( avec la série harmonique alternée)}$/;"	b	section:Fonctions
+Une Introduction à la Théorie des Catégories	TDG/notes/lectures/lec1.tex	/^\\section{Une Introduction à la Théorie des Catégories}$/;"	s	chapter:Groupes
+Une Introduction à la Théorie des Catégories	current-course/notes/lectures/lec1.tex	/^\\section{Une Introduction à la Théorie des Catégories}$/;"	s	chapter:Groupes
 Une base de $Hom_k( V,W) $	BA1/Algebre Lineaire I/notes/lectures/lec13.tex	/^ \\subsection{Une base de $Hom_k( V,W) $}$/;"	u	section:Espaces Vectoriels
 Utilisations de la 2eme derivee	BA1/Analyse I/notes/lectures/lec19.tex	/^\\subsection{Utilisations de la 2eme derivee}$/;"	u	section:Polynome de Taylor et developpements limites
 Valeurs et Vecteurs Propres	BA2/Algebre Lineaire II/notes/lectures/lec4.tex	/^\\section{Valeurs et Vecteurs Propres}$/;"	s	chapter:#1
@@ -821,6 +862,7 @@ Voiture	BA2/Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^		Voiture(str
 Voiture	BA2/Programmation Orientee Objet/Exos/S4/Ex1/Vehicule.cc	/^class Voiture: public Vehicule {$/;"	c	file:
 Voiture en accélération	BA1/Mecanique Generale/notes/lectures/lec7.tex	/^\\subsection{Voiture en accélération}$/;"	u	section:Travail, énergie, forces conservatives
 Wals and paths	BA2/Discrete Mathematics/notes/lectures/lec9.tex	/^\\subsection{Wals and paths}$/;"	u	section:#1""Graph Theory
+What about uncountable sets?	PROBA/notes/lectures/lec1.tex	/^\\subsection*{What about uncountable sets?}$/;"	u	section:Groupes""Some historical models
 Why Git?	BA2/Algebre Lineaire II/Algebre-Lineaire-2/README.md	/^## Why Git? $/;"	s	chapter:Frequently asked questions
 Why LaTeX?	BA2/Algebre Lineaire II/Algebre-Lineaire-2/README.md	/^## Why LaTeX? $/;"	s	chapter:Frequently asked questions
 Z	BA2/Algebre Lineaire II/Algebre-Lineaire-2/Programming/finite_fields.h	/^template<int p> class Z$/;"	c
@@ -878,7 +920,7 @@ Z	BA2/Algebre Lineaire II/Algebre-Lineaire-2/Programming/finite_fields.h	/^templ
 \\incfig	preamble-assignment.tex	/^\\newcommand{\\incfig}[1]{%$/;"	C
 \\iunit	BA2/Algebre Lineaire II/Algebre-Lineaire-2/notes.tex	/^\\newcommand{\\iunit}{\\mathrm{i}}$/;"	C
 \\lecture	fancy-preamble.tex	/^\\newcommand{\\lecture}[3]{$/;"	C
-\\lecture	newcommands.tex	/^\\newcommand{\\lecture}[3]{$/;"	C
+\\lecture	preamble.tex	/^\\newcommand{\\lecture}[3]{$/;"	C
 \\loss	BA2/Algebre Lineaire II/Algebre-Lineaire-2/Slides/Slides.tex	/^\\newcommand{\\loss}{\\mathrm{loss}}$/;"	C
 \\mgreen	BA2/Algebre Lineaire II/Algebre-Lineaire-2/Slides/Slides.tex	/^\\newcommand{\\mgreen}[1]{\\mathbf{\\color{green}#1}}$/;"	C
 \\mnred	BA2/Algebre Lineaire II/Algebre-Lineaire-2/Slides/Slides.tex	/^\\newcommand{\\mnred}[1]{\\mathbf{\\color{red}#1}}$/;"	C

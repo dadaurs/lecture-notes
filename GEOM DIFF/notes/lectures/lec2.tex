@@ -1,0 +1,172 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Wed 29 Sep}{Courbes}
+\section{Geometrie des courbes}
+Une courbe peut etre concue comme:
+\begin{itemize}
+\item Le lieu des points geometriques qui satisfont a une certaine contrainte/condition
+\item La trajectoire d'un point qui se deplace dans le plan ou l'espace.
+\item Une courbe peut etre engendree par un mechanisme
+\item Une courbe peut correspondre a un phenome optique.
+\end{itemize}
+Le premier point de vue va conduire a une description implicite de la courbe par une equation dans $\mathbb{R}^{2}$ ou deux equations dans l'espace.
+\begin{defn}
+	Une courbe algebrique dans le plan est un ensemble du type $ \Gamma: \left\{ ( x,y) \in \mathbb{R}^{2}| f( x,y) =0 \right\} $.\\
+	La courbe est algebrique si $f\in \mathbb{R}[x,y]$ 
+	
+\end{defn}
+\begin{defn}[Courbe parametrique]
+	Une courbe parametrique dans $ \mathbb{R}^n$ est une application continue:
+	\[ 
+	\gamma: I \to \mathbb{R}^{n}
+	\]
+	avec $I \subset \mathbb{R}$ est un intervalle, $u\in I$ est le parametre.\\
+\end{defn}	
+	L'image de $\gamma$ est la trace de $\gamma$ 
+\begin{defn}
+	\begin{itemize}
+		\item La courbe $\alpha$ est de classe $C^{k} ( k \geq 0) $ si $\alpha: I \to \mathbb{R}^n$ est de classe $C^{k}$ par $\alpha( u) = ( \alpha_1( u) , \ldots, \alpha_n( u) ) $ et $\alpha_j:I\to \mathbb{R}$ est de classe $C^{k}$ .
+		\item Si $\alpha$ est $C^{1}$ et $u_0\in I$ , le vecteur vitesse est 
+			\[ 
+				\dot { \alpha} ( u_0) = \frac{d \alpha}{du}( u_0) 
+			\]
+			L'acceleration sera $\ddot { \alpha} ( u_0) = \frac{d^{2}\alpha}{d u}$ 	
+
+		\item La droite tangente a $\gamma$ en $u_0$ est la droite par $\alpha( u_0) $ et de direction $\dot{ \alpha }( u_0) $ 
+			\[ 
+				T_{\alpha,u_0} : \lambda \mapsto \alpha( u_0) + \lambda \dot{\alpha} ( u_0) 
+			\]
+		
+		\item La vitesse de $\alpha$ en $u_0$ est $V_\alpha( u_0) $ ( en supposant $\alpha$ differentiable en $u_0$ ) 
+		\item Le point $\alpha( u_0) $ est regulier si $\dot{\alpha}( u_0) $ et singulier si $\dot{\alpha}( u_0) $ 
+		\item Le point $\alpha( u_2) $  est biregulier si $\alpha\in C^{2}$ et $\dot{\alpha}( u_0), \ddot { \alpha} ( u_0) $	sont lineairement independants .
+		\item Si $\alpha$ est bireguliere en $u_0$ , le plan par $\alpha( u_0) $ en direction $\dot { \alpha} ( u_0) , \ddot { \alpha} ( u_0) $ est le plan osculateur de $\alpha$ en $u_0$.
+	\end{itemize}
+	
+\end{defn}
+\subsection{Exemples de courbes parametrees}
+\begin{itemize}
+\item La cubique 
+	\[ 
+		\alpha( u) = ( au,b u^{2}, c u^{3}) 
+	\]
+
+\item 
+	\[ 
+		\beta( u) = ( u^{2}, \ldots, u^{n+1}) 
+	\]
+	
+\item La droite en parametrage affine, par $p$ et $q$ est
+	\[ 
+		\gamma( t) = p + t( q-p) 
+	\]
+	
+\item Le cercle $C$ de centre $p \in \mathbb{R}^n$ dans un plan ( affine) $\Pi \subset \mathbb{R}^n$ de rayon $r$  se parametrise
+	\[ 
+		C( t) = p + r \left( \cos( \omega t)b_1 + \sin ( \omega t) b_2\right) 
+	\]
+	ou $ \left\{ p,b_1,b_2 \right\} $ est une repere affine orthonorme de $\Pi$.
+\item L'helice circulaire droite est 
+	\[ 
+		\gamma( u) = ( a \cos( u) , a \sin( u) , bu) 
+	\]
+	
+\end{itemize}
+\begin{defn}[Longueur d'une courbe]
+La longueur d'une courbe $\gamma: [ a,b] \to \mathbb{R}^n$ de classe $C^{1}$ est
+\[ 
+	l( \gamma) = \int_{ a }^{ b } V_\gamma( u) du	
+\]
+ 							
+\end{defn}
+\begin{propo}
+La longueur verifie les proprietes suivantes:
+\begin{itemize}
+	\item Additivite: Si $\gamma: [ a,b] \to \mathbb{R}^n$ est une courbe $C^{1}$, alors $ l( \gamma|_{[a,c]}  l( \gamma|_{[ c,b]} ) l( \gamma_{ [ a,b] } )   $ 
+\item La longueur est invariante par isometrie.\\
+
+\item Pour $f$ une similitude de rapport $\lambda >0$, alors
+	\[ 
+		l( f\circ \gamma) = \lambda l( \gamma) 
+	\]
+
+\item 
+	\[ 
+		l( \gamma_{[a,b]} ) \geq d( \gamma( a) , \gamma( b) ) 	
+	\]
+	avec egalite si et seulement si $\gamma $est le segment $ [ \gamma( a) ,\gamma( b) ] $.
+\end{itemize}
+
+\end{propo}
+\begin{proof}
+\begin{itemize}
+\item Suit de 
+	\[ 
+		l( \gamma_{[a,b]} ) = \int_{ a }^{ b } V_\gamma( u) du = \int_{ a }^{ c }V_\gamma( u) du + \int_{ c }^{ b } V_\gamma( u)  du
+	\]
+
+\item On sait que $f( x) = \lambda Ax +b$ , $A$ orthogonal, donc pour $\tilde { \gamma} ( u) = f( \gamma( u) ) $ 
+	\begin{align*}
+		\tilde { \gamma'} = \lambda A \gamma' ( u) \\
+		l( \tilde { \gamma} ) = \int_{ a }^{ b }V_{\tilde { \gamma} } ( u) du = \lambda l( \gamma) 
+	\end{align*}
+
+\item Soit $p= \gamma( a) , q = \gamma( b) $.\\
+	On note $w = \frac{q-p}{\N { q-p} }$ et on definit
+	\[ 
+		g: [ a,b] \to \mathbb{R}\quad g( u) = \eng { \gamma( u) - p, w} 
+	\]
+Alors
+\[ 
+	\frac{dg}{du} = \eng { \dot { \gamma} ( u) , w} \leq \N { \dot { \gamma} ( u) } \N { w} = V_{\gamma} ( u) 
+\]
+Ainsi,
+\[ 
+	\int_{ a }^{ b } \frac{dg}{du} du = g( b) - g( a) = \eng { q-p,w} = q-p
+\]
+
+\end{itemize}
+\end{proof}
+\subsection{Champs de vecteurs le long d'une courbe}
+\begin{defn}[Champ vectoriel]
+	Un champ de vecteurs le long d'une courbe $\gamma: I \to \mathbb{R}^{n}$ est la donnee $\forall u \in I$ d'un vecteur $W( u) =\sum_j  w_j( u) e_j $ .\\
+	Ce champ est de classe $C^{k}$ si $w_j: I \to \mathbb{R}$ est de classe $C^{k}$.
+\end{defn}
+\begin{defn}[Le vecteur tangent]
+	Si $\gamma$ est reguliere on definit
+	\[ 
+		T_\gamma ( u) = \frac{\dot { \alpha} ( u) }{V_{\gamma} ( u) }
+	\]
+Si $\gamma$ est bireguliere, alors le champ normal principal est donne par
+\[ 
+N_{\gamma} ( u) = \frac{\ddot { \alpha} ( u) - \eng { \ddot { \alpha} ( u) , t} t}{\N { \ddot { \alpha} ( u) - \eng { \ddot { \alpha} ( u) , t} t}}
+\]
+		
+\end{defn}
+\begin{propo}[Regle de Leibniz]
+\begin{itemize}
+\item 
+	\[ 
+		\frac{d}{du}\eng { Z( u) , W( u) } = \eng { \dot { Z} ( u) ,   W ( u) }  + \eng { Z( u) , \dot { W} ( u) } 
+	\]
+	
+\end{itemize}
+
+\end{propo}
+\begin{crly}
+\begin{itemize}
+	\item Si $\eng { Z( u) , W( u) } = c$ , alors
+\[ 
+	\eng { \dot { W} ,Z } = - \eng { W, \dot{Z}} 
+\]
+\item Si $\N { w} =c$ $\Rightarrow$ $\eng { \dot w, w} =0$ 
+
+\end{itemize}
+
+\end{crly}
+	
+		
+		
+	
+			
+\end{document}	

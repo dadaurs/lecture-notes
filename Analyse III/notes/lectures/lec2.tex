@@ -1,0 +1,72 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Mon 27 Sep}{Intro Complexes}
+\section{Nombres Complexes}
+Si on veut etendre $\mathbb{R}$ en un corps qui contienne $i,$ on obtient $\mathbb{C}$.\\
+On perd la relation d'ordre sur les complexes.\\
+Geometriquement, on represente les nombres complexes dans le plan.
+\begin{rmq}
+L'argument d'un nombre complexe n'est defini que modulo $2\pi$.\\
+La representation polaire est particulierement pertinente pour la multiplication
+\[ 
+	|zw| = |z||w| \text{ et } arg( zw) =arg( z) +arg( w) 
+\]
+\end{rmq}
+Ce sera prouve de maniere elegante plus tard, mais on pourrait le verifier avec les formules trigonometriques.\\
+C'est consistant avec la notation $z= r e^{i\theta} $. Un choix frequent pour $\theta$ est de definir $arg$ sur $\mathbb{C}\setminus \mathbb{R}^{-}$ en le prenant dans $( -\pi,\pi) $ .
+\subsection*{Solutions de $z^{n}= w$ }
+pour $n \in \mathbb{N}^{*}, w \in \mathbb{C}^{*}$, il existe $n$ solutions
+\[ 
+	\left\{ |\omega|^{\frac{1}{n}} e^{i (  arg( w) + 2 k \pi) / n} | k \in \mathbb{Z}  \right\} 
+\]
+\subsection{Topologie sur $\mathbb{C}$ }
+Comme en analyse reelle, l'outil principal est $|\cdot |$ complexe.\\
+Les objets de choix pour parler de convergence sont $( x-r,x+r) $ et $[ x-r,x+r]$ sur $\mathbb{R}$ et sur $\mathbb{C}$ leurs analogues sont $D( z,r) = \left\{ \omega \in \mathbb{C} | |z-w|<r \right\} $ .\\
+On a $\del D( z,r) = \overline{D}( z,r) \setminus D( z,r) $ est le cercle de rayon $r$ centre en $z$.\\
+Un ensemble $U \subset \mathbb{C}$ est dit ouvert si $\forall z \in U \exists \delta >0$ tel que $D( z,\delta) \subset U$.\\
+Un domaine est un ouvert connexe.
+\subsection{Echange de sommes}
+\begin{itemize}
+\item Sur $\mathbb{R}$, si $a_{n,m} \geq 0$ on peut toujours dire
+	\[ 
+		\sum_n \sum_m a_{n,m} = \sum_{m} \sum_n a_{n,m} 
+	\]
+
+\item Idem si la somme converge absolument.
+	
+\end{itemize}
+\begin{thm}[fondamental de l'algebre]
+	Si $P$ est un polynome de degre $ \geq 1$, alors $\exists z \in \mathbb{C} $ tel que $P( z) =0$
+\end{thm}
+\begin{crly}
+Tous les polynomes peuvent etre factorise.
+\end{crly}
+\section{Analyse Complexe}
+\subsection{Fonctions analytiques complexes}
+But: aller plus loin que les polynomes.\\
+On considere des series entieres
+\[ 
+	\sum_{n=0}^{ \infty }a_n( z-z_\ast) ^{n}
+\]
+Les fonctions analytiques sont les fonctions definies par des series entieres convergentes.
+\begin{defn}[Serie entiere]
+	$ \sum_{n=0}^{ \infty }a_n ( z-z_{\ast} ^{n}) $ une serie entiere centree en $z_{\ast}$ 
+\end{defn}
+\begin{defn}[Convergence de series entieres]
+	$ \sum_{n=0}^{ \infty }a_n ( z-z_{\ast} ) ^{n}$ si $\lim_{n \to  + \infty} \sum_{k=0}^{ n}a_k ( z-z_{\ast}) ^{k}$ existe.
+\end{defn}
+\begin{defn}[Convergence uniforme]
+	$ \sum_{n=0}^{ \infty }a_n ( z-z_{\ast} ) ^{n}$ converge uniformement sur $K \subset \mathbb{C}$ si elle converge sur $K$ et si
+	\[ 
+		\lim_{n \to  + \infty} \N { \sum_{k=0}^{ n} a_k ( z-z_{\ast} ) ^{k}-\sum_{k=0}^{ \infty } a_k ( z-z_{\ast} ) ^{k}} _{ \infty ,K}=0 	
+	\]
+					
+\end{defn}
+\begin{defn}[Convergence d'une suite de fonctions]
+	Si $f_k: K \to \mathbb{C} $ est une suite de fonctions tel que $ \sum_{k=0}^{ \infty }\N { f_k}_{ \infty ,K} < + \infty $, on dit que $\sum f_k$ converge normalement.
+\end{defn}
+\begin{lemma}
+La convergence normale implique la convergence uniforme.
+\end{lemma}
+
+\end{document}	

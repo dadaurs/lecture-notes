@@ -1,0 +1,84 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Wed 29 Sep}{...}
+\subsection{Basic properties}
+\begin{itemize}
+\item $F_1,F_2, \ldots, \in \mathcal{F}$ disjoint
+	\[ 
+		\mu( \bigcup F_i) = \sum \mu( F_i) 
+	\]
+	
+\item $F_1 \subset F_2 \in \mathcal{F}$ $\mu( F_1) \leq \mu( F_2) $ 
+\item $F_1 \subset F_2 \ldots \in \mathcal{F}$ 
+	\[ 
+		\mu( F_n) \to \mu( \bigcup F_i) 
+	\]
+
+\item $F_1, F_2, \ldots, \mathcal{F}$
+	\[ 
+		\mu ( \bigcup F_i) \leq \sum \mu( F_i) 
+	\]
+In addition, in probability spaces
+\item $\mathcal{P}( F^{c}) = 1- \mathcal{P}( F) $ 
+\item $F_1 \supset F_2 \supset \ldots \Rightarrow \mathcal{P}( F_n) \to \mathcal{P}( \bigcap F_i) $ 
+
+
+\end{itemize}
+\subsection{Measurable and measure preserving maps}
+\begin{defn}
+	Let $( \Omega_1, \mathcal{F}_1, \mu_1) , ( \Omega_2, \mathcal{F}_2, \mu_2) $ two measure spaces.\\
+	$f: \Omega_1 \to \Omega_2$ is called measurable if for every $F \in \mathcal{F}_2$, $f^{-1}( F) \in \mathcal{F}_1$ \\
+	A measurable function $f: ( \Omega_1, \mathcal{F}_1) \to ( \Omega_2, \mathcal{F}_2) $ is called measure preserving if $\forall F \in \mathcal{F}_2$ $\mu_1 ( f^{-1}( F) ) = \mu_2( F) $.
+\end{defn}
+\begin{lemma}[Push-Forward measure]
+	Let $( \Omega_1, \mathcal{F}_1, \mathbb{P}_1), ( \Omega_2, \mathcal{F}_2)  $ be two measure spaces, and $f$ measurable, then $\mathbb{P}_2( F) = \mathbb{P}_1( f^{-1}( F) ) $ is a probability measure.
+
+\end{lemma}
+\section{Probability spaces}
+\begin{itemize}
+\item Discrete probability spaces : $\Omega$ countable
+\item Continuous probability spaces: $\Omega$ uncountable.
+\end{itemize}
+\subsection{Discrete probability spaces}
+Does introducing a $\sigma$-algebra $\mathcal{F}$ enlargen the generality?
+\begin{propo}
+	If $( \Omega, \mathcal{F}, \mathbb{P}) $ is a discret probability space, $\exists \Omega_2$ countable, $\mathbb{P}_2: \mathcal{P}( \Omega_2) \to [ 0,1] $ s.t. $( \Omega_2, P( \Omega_2) , \mathbb{P}_2) $ is a probability space and $\exists f: ( \Omega_1, \mathcal{F}_1) \to ( \Omega_2, \mathcal{F}_2) $ is measure preserving
+\end{propo}
+Still $\mathcal{F}$ is useful:
+\begin{itemize}
+\item can sequentially study a model/situation by taking $ \mathcal{F}_1 \subset \mathcal{F}_2 \ldots$ 
+\end{itemize}
+\begin{lemma}
+	There is no shift-invariant probability measure on $ ( \mathbb{Z},P( \mathbb{Z}) ) $ 
+\end{lemma}
+\begin{proof}
+\begin{align*}
+	\mathbb{P}( \mathbb{Z}) = \mathbb{P}( \bigcup_n \left\{ n \right\} ) = \sum \mathbb{P}( \left\{ n \right\} )  = \infty 	
+\end{align*}
+$\Rightarrow$ cannot treat everyone on an equal ground !
+\end{proof}
+\subsubsection{Symmetric simple random walk}
+A simple walk of length $n$ s.t. $|s_n-s_{n-1} | = 1 $ .\\
+Let $\Omega$ be the set of all walks of length $n$, and consider $( \Omega, P( \Omega) , \mathbb{P}) $.\\
+What is the probability that $S$ hits $0$ ?\\
+What does it look like, what is it's max?
+\subsection{Continuous probability spaces}
+Can we define a probability measure on $S^{1}$ s.t. $( S^{1}, P( S^{1}) ) $ that is rotation invariant?\\
+Similarly to the countable case, but not the same as $\Omega$ is uncountable and setting $P( \left\{ \omega \right\} ) =0$ gives no contradiction.
+\begin{propo}
+You can not.
+\end{propo}
+\begin{proof}
+Idea: decompose $S^{1}$ into countable many sets $A_n$ st $\bigcup A_n = S^{1}$, they are disjoint and rotations of each other.\\
+$\forall x \in S^{1}$, define $S_x$ as $ \left\{ \ldots, T^{-2}x, T^{-1}x, x, Tx, \ldots  \right\} $ .\\
+Note that either $S_x= S_y$ or $S_x \bigcap S_y = \emptyset$ .\\
+\end{proof}
+
+
+
+
+	
+
+
+
+\end{document}	

@@ -1,0 +1,59 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\begin{document}
+\title{Exercice 1.2}
+\author{David Wiedemann}
+\maketitle
+\section*{I}
+Pour montrer que $BG$ est une catégorie, il nous suffit de montrer que la composition est associative et que $BG$ admet une application identité.
+\subsection*{Identité}
+On a que $e \in G$ satisfait $ \forall a  \in G : a \cdot e = e \cdot a = a$ et ainsi $e$ satisfait les conditions pour être une identité en tant qu'élément de $\mor BG$ .\\
+\subsection*{Associativité}
+Soit $a,b,c\in G$, l'associativité dans $G$ donne que $( a\cdot b) \cdot c= a \cdot ( b \cdot c).$\\
+Ainsi, l'associativité tient également quand on considère $a,b,c \in \mor BG$ et on en déduit que $BG$ est bien une catégorie.
+\section*{II}
+On explicite une bijection entre les 2 classes d'objets.\\
+Soit 
+\begin{align*}
+	\phi: \gr( G,H) &\to \cat( BG,BH) \\
+	f &\to ( \phi( f)_{\ob}, \phi( f) _{\mor} ) 
+\end{align*}
+
+défini par
+$\phi ( f)_{\ob} ( \star_G) = \star_{H} $ et $\phi( f) _{\ob} ( a) = f( a) \forall a \in G $.\\
+Montrons la bijectivité.\\
+
+Pour l'injectivité, soit $\phi( f) ,\phi( g) \in \cat ( BG,BH) $ tel que $\phi( f) =\phi( g) $, ainsi $\forall a \in G, \phi( f) ( a) = \phi( f) ( a) \Rightarrow  f( a) =g( a) \Rightarrow f=g  $.\\
+De plus, pour la surjectivité, soit $F \in \cat ( BG,BH) $, alors $\forall a,b \in \mor BG = G:  F( a\cdot b) = F( a) \cdot F( b) $ et $F( e_G )= e_H$, ainsi, en considérant $F$ comme une application ensembliste entre groupes ( en considérant seulement $F_{\mor} $ ), on obtient un morphisme de groupe et $\phi( F_{\mor} ) = F$.
+\section*{III}
+On considère $\Phi = ( \Phi_{\ob} , \Phi_{\mor} ) : \gr \to \cat $, on définit
+\[ 
+	\Phi_{\ob} ( G) = BG \text{ et } \Phi_{\mor} ( f) = \phi( f) 
+\]
+ou $\phi$ est défini comme dans la section II.\\
+Il nous suffit donc de vérifier que $\Phi $ définit bien un foncteur.
+
+On a 
+\[ 
+	\phi( f) _{\mor} ( e_{G}  ) = f( e_{G} ) = e_{H} 
+\]
+de plus
+\[ 
+	\forall a,b \in G= \mor BG\quad \phi( f) _{\mor} ( a \cdot b) = f( a\cdot b ) = f( a) \cdot f( b) =\phi( f) _{\mor} ( a) \cdot \phi ( f) _{\mor} ( b) 
+\]
+
+
+
+
+
+
+
+
+\end{document}

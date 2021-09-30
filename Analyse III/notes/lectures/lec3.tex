@@ -1,0 +1,108 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Thu 30 Sep}{fonctions complexes}
+\subsection{Rayon de Convergence}
+\begin{defn}[Rayon de convergence]
+	Le rayon de convergence de $ \sum_{n}^{ }a_n ( z-z_{\ast} ) ^{n}$ est 
+	\[ 
+		\rho = \sup \left\{ r \geq 0: \sum a_n ( z-z_{\ast} ) ^{n} \text{ converge sur } D( z^{*},r)  \right\} 
+	\]
+	On a $\rho \in [ 0, \infty ] $.\\
+	Ou de maniere equivalent
+	\[ 
+	\sup \left\{ r \geq 0 : \sum |a_n||r|^{n} \text{ converge }  \right\}
+	\]
+	
+\end{defn}
+\begin{lemma}
+	Si $\sum a_n z^{n}$ a rayon de convergence $\rho$, alors la serie converge normalement sur $D( 0,\rho) $ 
+\end{lemma}
+\begin{lemma}
+Si $ \limsup  |a_k|\rho^{k}< \infty $, alors le rayon de convergence est $ \geq \rho$.
+\end{lemma}
+\begin{lemma}
+Si
+\[ 
+| \frac{a_{k+1} }{a_k}|
+\]
+converge quand $k\to \infty $ alors $|\frac{a_{K+1} }{a_k}\to \rho^{-1}$ \\
+\[ 
+	\rho^{-1} = \limsup ( |a_n|) ^{\frac{1}{n}}
+\]
+
+\end{lemma}
+\begin{lemma}
+$\sum a_kz^{k}, \sum b_n z^{n}$ convergent, alors
+\[ 
+	\sum ( a_k+b_k) z^{k}
+\]
+converge et vaut $\sum a_k z^{k}+ \sum b_k z^{k}$.\\
+Et si on pose $c_n = \sum_{i+j=n} a_i b_j$, alors
+\[ 
+\sum_{n=0}^{ \infty }c_n z^{n}
+\]
+converge et vaut le produit.
+
+\end{lemma}
+\subsection{Analyticite et recentrage}
+\begin{defn}
+	Si $f$ est donnee par une serie entiere $ \sum a_nz^{n}$.\\
+	On definit les series entieres "derivees" par
+	\[ 
+		f'( z) = \sum_{n=1}^{ \infty } n a_n z^{n-1}
+	\]
+	ou les series derivees ont le meme rayon de convergence que la serie de base car
+	\[ 
+		\limsup |a_n|^{\frac{1}{n}}= \limsup ( n^{k}|a_n|)^{\frac{1}{n}}
+	\]
+		
+\end{defn}
+\begin{lemma}[Lemme de recentrage]
+	Soit $f: D( 0,r) \to \mathbb{C}$ donnee par $\sum a_n z^{n}$ avec rauon de convergence $r$.\\
+	Soit $z_{\ast} \in D( 0,r) $. On a que la serie
+	\[ 
+		\sum \frac{1}{n!}f^{( n) }( z_\ast) ( z-z_{\ast} ) ^{n}	
+	\]
+	converge avec rayon de convergence $ \geq r- |z_{\ast} | $ ou $f^{n}$ est la derivee formelle de $f$ definie ci-dessus.
+\end{lemma}
+\begin{proof}
+	\begin{align*}
+		f( z) &= \sum a_n z^{n}\\
+		      &= \sum a_n ( z-z_\ast + z_\ast) ^{n}\\
+		      &= \sum_{n=0}^{ \infty }\sum_{k=0} ^{n}\binom n k ( z-z_\ast) ^{k}z_\ast^{n-k}\\
+		      &= \sum_{k=0}^{ \infty } \sum_{n=k}^{ \infty }\binom n k z_{\ast} ^{n-k}( z-z_\ast) ^{k}\\
+		      &= \sum_{k=0}^{ \infty } \sum_{n=k}^{ \infty } \frac{1}{k!} n ( n-1) \ldots ( n-k+1) z_{\ast} ^{n-k} ( z-z_{\ast} ) k\\
+		      &= \sum_{k=0}^{ \infty } \frac{f^{( k) }( z_{\ast} ) }{k!}( z-z_{\ast} ) ^{k}
+	\end{align*}
+Si on a
+\begin{align*}
+\sum_{n=0}^{ \infty } \sum_{k=0}^{ \infty } 1_{k \leq n} |a_n| \binom n k |z_{\ast} ^{n-k}||z-z_{\ast} |^{k} < \infty 	
+\end{align*}
+or ceci converge car $z_{\ast} \in D( 0,r) $ en effet $\exosts \epsilon>0$ tel que $|z_{\ast} |+\epsilon<r$ 
+
+\end{proof}
+\subsection{Zeros isoles}
+\begin{propo}
+Soit $f:U \to \mathbb{C}$ analytique, non nulle, alors l'ensemble
+\[ 
+	\left\{ z\in U: f( z) =0 \right\} 
+\]
+ne contient pas de points d'accumulation dans $U$.
+\end{propo}
+\begin{proof}
+Supposons $z_{\ast} \in U$ un point d'accumulation.\\
+Par le lemme de recentrage $\exists \epsilon>0$ tel que $f( z) = \sum a_n ( z-z_{\ast} ) ^{n}$.\\
+Par hypothese $\exists m$ tel que $a_m\neq 0$.\\
+Soit $n$ le plus petit tel entier
+\[ 
+	f( z) = ( z-z^{*}) ^{m} \sum_{n=0} ^{ \infty } a_{m+n} ( z-z_{\ast} ) ^{n}		
+\]
+Donc il existe un voisinage de $z^{*}$ ou $f$ est continue ( parce que la serie converge uniformement sur les compacts).
+
+\end{proof}
+
+		
+
+				
+	
+\end{document}	

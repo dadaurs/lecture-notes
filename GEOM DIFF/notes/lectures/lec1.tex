@@ -1,0 +1,180 @@
+\documentclass[../main.tex]{subfiles}
+
+
+\begin{document}
+\lecture{1}{Wed 22 Sep}{Intro}
+\section{Rappels de geometrie euclidienne}
+\begin{defn}[Espace Euclidien]
+	Un espace vectoriel euclidien est un espace vectoriel $ \mathbb{E}^{n}$ sur $\mathbb{R}$ muni d'un produit scalaire $\eng{ \cdot} : \mathbb{E}^{n}\times \mathbb{E}^{n}\to \mathbb{R}$ symmetrique, defini positif.
+\end{defn}
+Le produit scalaire standard sur $\mathbb{R}^{n}$ est $\eng { x,y} = \sum_i x_i y_i ( \eng { e_i,e_j} = \delta_{ij} ) $ .
+\begin{propo} [ Cauchy-Schwartz] 
+$\forall x,y \in \mathbb{E}^{n}, \eng { x,y}  \leq \N x \N y$.
+\end{propo}
+\begin{rmq}
+La norme determine le produit scalaire via les formules de polarisation
+\[ 
+	\eng { x,y} = \frac{1}{4} \left( \N { x+y} ^{2} - \N { x-y} ^{2} \right) = \frac{1}{2} \left( \N { x+y} ^{2}- \N { x} ^{2} - \N { y} ^{2}\right) 
+\]
+
+\end{rmq}
+\subsection{Proprietes de la norme}
+\begin{itemize}
+\item $ \N { x} \geq 0 \forall x \in \mathbb{E}^{n}$ 
+\item $\N { x} =0 \iff x=0$ 
+\item $ \N { \lambda x} = |\lambda| \N{x}$ 
+\item $\N { x\pm y} \leq \N x + \N y$ 
+\end{itemize}
+\begin{defn}
+	\begin{itemize}
+		\item Si $x,y \in \mathbb{E}^{n}\setminus \left\{ 0 \right\} , $ on definit l'angle $\theta \in [ 0,\pi] $ par $\cos \theta = \frac{\eng { x,y} }{\N x \N y}\in [ -1,1] $ ( par Cauchy-Schwarz) .
+		\item On a $\eng { x,y} = \N x \N y \cos \theta$ 
+	\end{itemize}
+	
+\end{defn}
+La distance entre $x,y \in \mathbb{E}^{n}$ est $d( x,y) = \N { y-x} $
+$ ( \mathbb{E}^{n},d) $ est un espace metrique.
+Les proprietes suivantes sont equivalentes
+\begin{itemize}
+\item $x\perp y$ 
+\item $\theta = \frac{\pi}{2}$ 
+\item $\N { x-y} = \N { x+y} $ 
+\item $\N { x} ^{2} + \N { y} ^{2} = \N { x+y} ^{2} $ 
+\end{itemize}
+\section{Isometries et Similitudes}
+\begin{defn}[similitude]
+Une application $f: \mathbb{E}^{n}\to \mathbb{E}^{n}$ est une similitude de rapport $\lambda>0$ si $f$ est bijective et
+\[ 
+	d( f( x) ,f( y) ) = \lambda d( x,y) 
+\]
+
+\end{defn}
+Si $\lambda=1$ , on dit que $f$ est une isometrie.
+\begin{thm}
+	Si $f: \mathbb{E}^{n}\to \mathbb{E}^{n}$ est une similitude, alors il existe $b \in \mathbb{E}^{n}$ et $g: \mathbb{E}^{n}\to \mathbb{E}^{n}$ lineaire tel que
+	\[ 
+		f( x) = g( x) +b
+	\]
+	
+\end{thm}
+\begin{rmq}
+	$b= f( 0) $ et $f$ lineaire $\iff$ $f( 0)=0 $ 
+\end{rmq}
+\begin{proof}
+On utilisera le theoreme fondamental de la geometrie affine:\\
+Soit $V$ un espace vectoriel de dimension finie sur $\mathbb{R}$ et $f:V \to V$ une application bijective.\\
+Alors $f$ est affine si et seulement si $f$ preserve les droites.\\
+On ne donne pas la preuve mais une intuition: on pose $g( x) = f( x) -b ( b= f( 0) ) $ , donc $g( 0) =0$ et $g$ preserve les droites.\\
+Soit $f: \mathbb{E}^{n}\to \mathbb{E}^{n}$ une similitude de $ \mathbb{E}^{n}$. On affirme que $f$ preserve les droites
+\[ 
+	x,y,z \in \mathbb{E}^{n} \Rightarrow f( x) , f( y) ,f( z) 
+\]
+quitte a renommer les points $x,y,z$, on a 
+\[ 
+	x,y,z \text{ alignes } \iff d( x,z) = d( x,y) + d( y,z) \iff d( f( x), f( z) ) = d( f( x), f( y) ) + d( f( y) ,f( z) ) 
+\]
+Donc $f$ affine implique $f( x) =g( x) +b$ ( $b=f( 0) ,g $ lineaire).\\
+Il reste a voir que $g$ est une $\lambda$-similitude $\Rightarrow$ immediat a verifier. 	
+\end{proof}
+\begin{crly}
+	$f: \mathbb{R}^n \to \mathbb{R}^n$ est une similitude de rapport $\lambda>0$ si et seulement si il existe $b \in \mathbb{R}^n$ et $A \in M_n( \mathbb{R}) , A^{T}\cdot A = I $ tel que
+	\[ 
+		f( x) =\lambda Ax +b	
+	\]
+\end{crly}
+\begin{proof}
+	\begin{align*}
+	\eng { g( e_i) , g( e_j) } = \frac{1}{4}\N { g( e_i) + g( e_j) } ^{2} - \N { g( e_i) - g( e_j) } ^{2}\\
+	= \frac{1}{4} ( \N { g( e_i + e_j) } ^{2} - \N { g( e_i-e_j) } ^{2}) \\
+	= \lambda^{2} \eng { e_i, e_j} = \lambda^{2} \delta_{i j} \\
+	\end{align*}
+	Soit $A$ la matrice de $g$, alors $g( x) =Ax$ , on a
+	\begin{align*}
+	\lambda^{2}\delta_{ij} = \eng { Ae_i, Ae_j} \\
+	= \eng { \sum_i a_{ij} e_i, \sum_i a_{ij} e_i} \\
+	= \sum_i \sum_j a_{ir} a_{js} \delta_{rs} = \sum_r a_{ir} a_{jr} 
+	\end{align*}
+	
+
+\end{proof}
+\subsection{Proprietes de base des matrices orthogonales $O_n$ }
+Pour une matrice $A \in M_n( \mathbb{R}) $ les proprietes suivantes sont equivalentes
+\begin{itemize}
+\item $A \in O_n$ 
+\item $A$ inversible avec $A^{-1}= A^{T}$ 
+\item Les collonnes/lignes de $A$ forment une base orthonormee.
+\item $ \eng { Ax, Ay} = \eng { x,y} $ 
+\item $\N { Ax} = \N x$ 
+\item $f( x) =Ax +b$ est une isometrie pour l'espace euclidien pour tout $b$ 
+\end{itemize}
+\begin{rmq}
+Si $A \in O_n \Rightarrow \det A = \pm 1$ et $\det: O_n \to \left\{ \pm 1 \right\} $ 
+
+\end{rmq}
+\begin{defn}[Groupe special orthogonal]
+	On definit
+	\[ 
+		SO( n) = O_n \cap SL_n( \mathbb{R}) 
+	\]
+\end{defn}
+\begin{defn}
+	Une transformation affine $f: V \to V $ , $V$ un $\mathbb{R}$ -ev est directe ( ou qu'elle preserve l'orientation) si son determinant est positif ( ou le determinant de la partie lineaire de $f$ .) 
+	Une isometrie directe s'appelle un deplacement de $\mathbb{E}^{n}$ si $f( x) = Ax+b, A \in SO( n) $
+\end{defn}
+\begin{rmq}
+\[ 
+	SE( n) = SO( n) \rtimes \mathbb{R}^n
+\]
+
+\end{rmq}
+\subsection{Etude de $O_2$ }
+\begin{propo}
+Une matrice $A \in O_2$ s'ecrit 
+\[ 
+A =
+\begin{pmatrix}
+	\cos \theta & - \sin \theta\\
+	\sin \theta & \cos \theta
+\end{pmatrix} 
+\]
+si $\det A = 1$, ou
+\[ 
+S_{\phi} = 
+\begin{pmatrix}
+	\cos 2 \phi & \sin 2 \phi
+	\sin 2\phi & - \cos 2 \phi
+\end{pmatrix} 
+\]
+
+
+\end{propo}
+\begin{proof}
+	$A \in O_2$ si et seulement siles colonnes de $A $ forment une base orthonormee. Donc il existe $\theta$ tel que la 1ere colonne est de la forme $\begin{pmatrix}
+	\cos\theta\\\sin\theta
+	\end{pmatrix} $ et la forme de la 2eme colonne en suit.
+\end{proof}
+\subsection{Etude de $O_3$ }
+\begin{thm}[Theoreme d'Euler]
+	Tout deplacement ( isometrie qui preserve l'orientation) qui fixe un point, fixe un axe et c'est une rotation autour de cet axe.
+\end{thm}
+\begin{proof}
+	On identifie l'espace euclidien a $\mathbb{R}^{3}$. Soit $f: \mathbb{R}^{3}\to \mathbb{R}^{3}$, qui fixe un point on suppose que $f( 0) =0$.\\
+	On a $f( x) =Ax$ .\\
+	On affirme qu'il existe $U \in \mathbb{R}^{3}, U \neq 0$ tel que $Au =u$.\\
+	En effet 1 est valeur propre de $A$ car $\det ( A-\id) =0$ parce que
+	\[ 
+		\det ( A-\id) = \det( A^{T}) \det( A-\id) = \det ( \id - A^{T})  = \det ( \id - A) = ( -1) ^{3}\det ( A-\id) 
+	\]
+	
+\end{proof}
+
+					
+
+				
+
+
+
+
+		
+	
+\end{document}	
