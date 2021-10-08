@@ -1,0 +1,143 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Thu 07 Oct}{...}
+\subsection{Logarithme}
+Moralement, on aimerait definir le logarithme comme "l'inverse" de l'exponentielle.\\
+Dans les reel, c'est ainsi qu'on avait procede, mais la difference, c'etait que la fonction exponentielle etait bijective.\\
+Ici, on a que la fonction exponentielle $ \mathbb{C}\to \mathbb{C}^{*}$ est surjective.\\
+Du coup on aurait envie de definir le $\log$ sur $\mathbb{C}^{*}$, mais la fonction exponentielle n'est pas injective.\\
+En fait, cela fait qu'on ne peut pas definir une fonction $\log$ qui soit continue sur $\mathbb{C}^{*}$. Si on essaie de poser
+\begin{align*}
+	\log \exp ( a+ib) &= a+ib\\
+	\log e^{a}  e^{ib} = \log |w| + i \arg w
+\end{align*}
+Comment choisir $\arg w$.\\
+\begin{defn}
+Une determination du logarithme est une fonction
+\[ 
+L:U \to \mathbb{C}
+\]
+ou $U$ est un ouvert de $\mathbb{C}$ tel que $ e^{L( z) } =z$ 
+\end{defn}
+\begin{rmq}
+	Sur $ \mathbb{C}\setminus \mathbb{R}_-$, on a une determination de l'argument et du log: $\forall z \in \mathbb{C}\setminus \mathbb{R}_-$, on prend $arg w$ dans $ ( -\pi, \pi) $.
+\end{rmq}
+			
+\begin{propo}
+Il n'existe pas de determination continue du logarithme sur $ \mathbb{C}^{*}$ 
+\end{propo}
+\begin{proof}
+Tous les problemes viennent du fait qu'on fait un tour autour de l'origine.\\
+Montrons qu'il n'en existe pas sur $ \mathbb{S}^{1}$.\\
+Supposons qu'on ait une telle determination du log.\\
+Posons $u : \mathbb{R}\to \mathbb{C}$ definie par $u^{\theta}= f( e^{i\theta} ) $. On a $u ( \theta) -\theta = 2\pi in \theta$ puisque $ e^{u( \theta) } - \theta$ \\
+Donc
+\[ 
+	\im u ( \theta) = \arg ( e^{i\theta}) + 2 \pi \mathbb{Z}
+\]
+Cependant
+\[ 
+	u( \theta + 2 \pi ) = \theta + 2 \pi + n  =u( \theta) 
+\]
+	
+
+\end{proof}
+\section{Fonctions holomorphes}
+On souhaite generaliser la notion de derivee aux fonctions complexes.\\
+Une possibilite est de voir le plan $ \mathbb{R}^{2}$ et en utilisant les notions de calcul differentiel sur $ \mathbb{R}^{2}$ \\
+La notion d'holomorphie, c'est celle d'etre derivable au sens d'une variable complexe, et on verra que c'est une notion beaucoup plus forte que celle d'etre differentiable au sens de $ \mathbb{R}^{2}$, mais suffisamment naturelle pour etre verifiee dans beaucoup de cas
+\begin{defn}[Fonction Holomorphe]
+	Soit $f: U \to \mathbb{C}$ ou $U$ est un domaine de $ \mathbb{C}$. On dit que $f$ est holomorphe en $z \in U$ s'il existe une limite notee $ f'( z) \in \mathbb{C}$ si la limite suivante existe
+	\[ 
+		\lim_{h \to 0} \frac{f( z+h) - f( z) }{h}
+	\]
+	ou la limite est prise au sens  complexe.\\
+	Formellement, cela veut dire $ \forall \epsilon >0 \exists \delta>0$ tel que si $ h \in D( 0, \delta) \setminus \left\{ 0 \right\} $ on a 
+	\[ 
+		| \frac{f( z+h) -f( z) }{h}- f'( z) 	| \leq \epsilon
+	\]
+Une autre maniere d'ecrire cela 
+\[ 
+	f( z+h)  = f( z) + f'( z) h + o( h) 
+\]
+ou $ o( h) $ est telle que $|o( h) /h| \to 0$.\\
+\end{defn}
+Comment comprendre ca en termes de derivees partielles en faisant l'identification $ \mathbb{R}^{2}\simeq \mathbb{C}$?\\
+Dire que la fonction a un developpment de Taylor au 1er ordre pour une fonction $ \mathbb{R}^{2}\to \mathbb{R}^{2}$ 
+\begin{align*}
+\begin{pmatrix}
+	f_1 ( x_1 + h_1, x_2+h_2) \\ f_2( x_1+h_1, x_2+h_2) 
+\end{pmatrix} =
+\begin{pmatrix}
+	\del_1 f_1( x_1,x_2) & \del_2 f_1( x_1,x_2) \\
+	\del_1f_2( x_1,x_2) & \del_2 f_2( x_1,x_2) 
+\end{pmatrix} 
+\begin{pmatrix}
+h_1\\h_2
+\end{pmatrix} + o ( h_1,h_2) 
+\end{align*}
+Donc la matrice $ Df_{x_1,x_2} $ doit etre la matrice de la composition d'une rotation et d'une homothetie.
+Donc la contrainte d'etre differentiable au sens complexe est equivalence a celle de demander d'etre differentiable au sens de deux variables relles et d'avoir que la jacobienne soit de la forme
+\[ 
+\begin{pmatrix}
+	A & B \\
+	-B & A
+\end{pmatrix} 
+\]
+donc
+\begin{align*}
+\del_1 \re f = \del 2 \im f \text{ et } \del_1\im f = - \del 2 \re f
+\end{align*}
+\begin{defn}
+On dit que $f$ satisfait les equations de Cauchy-Riemann si 
+\begin{align*}
+\del_1 \re f = \del 2 \im f \text{ et } \del_1\im f = - \del 2 \re f
+\end{align*}
+\end{defn}
+\begin{propo}
+$f$ est holomorphe en $z= x_1 + i x_2$ $\iff$ $f$ est derivable au sens de $ \mathbb{R}^{2}$ et satisfait les equations de Cauchy-Riemann.
+\end{propo}
+\begin{defn}
+	On dit que $f$ est holomorphe sur un ouvert $ U \subset \mathbb{C}$ si elle est $C^{1}$ ( au sens de $ \mathbb{R}^{2}$ ) et qu'elle est holomorphe en tout point de $ U$ 	
+\end{defn}
+\subsection{Analytique $\Rightarrow$ Holomorphe}
+\begin{propo}
+	Si
+	\begin{align*}
+		f( z) = \sum a_k ( z-z_*) ^{k}
+	\end{align*}
+	a comme rayon de convergence $ \rho$ , alors $f$ est holomorphe sur $D( z_*, \rho) $ et $f'$ est donee par la serie entiere
+	\[ 
+		f'( z) = \sum k a_k ( z-z_*) ^{k-1}
+	\]
+	qui a aussi comme rayon de convergence $\rho$.
+\end{propo}
+\begin{proof}
+La serie qui donne la derivee converge avec rayon de convergence $\rho$. Maintenat, ce qu'il nous faut, c'est de montrer que
+\[ 
+	\lim_{h \to 0} \frac{f( z+h) - f( z) - hf'( z) }{h}=0
+\]
+Supposons $z_*=0$.
+\begin{align*}
+	\sum_{k=0}^{ \infty } \frac{a_k ( z+h) ^{k}- a_k z^{k}}{h}-h k z^{k-1}\to 0\\
+&	\sum_{k=1}^{ \infty } \frac{a_k [ ( z+h) ^{k}- z^{k}- kh z^{k-1}] }{h}\\
+&= \sum_{k=1}^{ \infty }\frac{a_k [ h [ ( z+h^{k-1})+ ( z+h) ^{k-2}+ \ldots + z^{k-1} ] ] - kh z^{k-1}}{h}
+\end{align*}
+On va montrer que $\forall \epsilon>0$, on peut rendre la queue de la serie plus petite que $\frac{\epsilon}{2}$ en allant assez loin dans la serie et qu'ensuite, pour le $N$ fixe qui sortira, on pourra prendre $h$ assez petit pour que les $N$ premieres termes soient plus petits que $ \frac{\epsilon}{2}$.\\
+Notons que pour $mh$ suffisamment petit ( il existe $\delta_1>0$ tel que si $h \in D( 0, \delta_1), z +h \in D( 0, \rho) $ ) et du coup on aura la convergence de
+\[ 
+\sum_{k=1}^{ \infty }a_k [ [ |z+h|^{k-1}+ \ldots + |z^{k-1}|]+ k |z|^{k-1} ] 
+\]
+vu que
+\[ 
+	[ |z+h|^{k-1}+ \ldots] \leq  k ( |z|+|h|) ^{k}
+\]
+
+
+
+
+\end{proof}
+
+		
+
+\end{document}	

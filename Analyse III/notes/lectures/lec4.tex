@@ -1,0 +1,106 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Mon 04 Oct}{Series entieres suite}
+\begin{crly}
+Une fonction analytique $f: U\to \mathbb{C}$ a un unique developpement en serie entiere au voisinage de chaque $z_{\ast} \in U$.
+\end{crly}
+\begin{proof}
+Sans perte de géneralité $z_{\ast} =0$.\\
+Si on a deux developpements en serie $\sum a_n z^{n}$ et $\sum \tilde a_n z^{n}$ qui definissent la meme fonction, donc
+\[ 
+	\sum ( a_n- \tilde a_n) z^{n}
+\]
+s'annule au voisinage de $0$, donc $a_n = \tilde a_n$. 
+\end{proof}
+\begin{crly}
+Soient $f,g: U \to \mathbb{C}$ analytiques.\\
+Si $f$ et $g$ coincident sur un ensemble avec un point d'accumulation dans $\Sigma$, alors $f( z) =g( z) \forall z \in \Sigma$.
+\end{crly}
+\begin{proof}
+	Montrons d'abord que si $z_{\ast} $ est un point d'accumulation de $\Sigma$, alors $z_{\ast} \in \Sigma$ et $\exists r>0$ tel que $\Sigma\ni D( z_{\ast} ,r) $ .\\
+	On developpe $f-g$ en serie au voisinage de $z^{\ast}$ et on obtient une serie nulle au voisinage de $z_{\ast} $ .\\
+	Pour conclure que $\Sigma=U$, on utilise un argument de connexite.\\
+	Soit $z'\in U$, comme $U$ est un domaine, $\exists \gamma: [ 0,1] \to U$ allant de $z_\ast\in\Sigma  $ a $z'$.\\
+	Soit $s \geq 0$ defini par $s=\sup \left\{ S \geq 0 | f( \gamma( t)  )= g( \gamma( t) ) \forall t \in [ 0,S]  \right\} $.\\
+	Si on a que $s=1$, on a fini.\\
+	Si on avait $s<1$, on sait que $s>0$ car $z_{\ast} $ est un point d'accumulation.
+	$\gamma( s) $ est donc un point d'accumulation de $\Sigma$, donc
+	\[ 
+	\exists r>0 \text{ tel que }  f-g
+	\]
+	s'annule sur $D( \gamma( s) ,r) $ mais du coup on a que $f( \gamma( t) ) =g( \gamma( t) ) $ pour $t\in [ 0,s] $.
+\end{proof}
+\section{Fonctions $\exp,\log,\sin,\cos,\sinh,\cosh$ }
+\subsection{$\exp$}
+\begin{defn}[Exponentielle]
+	$\exp ( z) $ aussi note $ e^{z} $ est la fonction analytique definie par
+	\[ 
+	\sum \frac{z^{n}}{n!}
+	\]
+	
+\end{defn}
+La propriete fondamentale est qu'elle transforme l'addition en multiplication
+\[ 
+	\exp( z+w) = \exp ( z) \exp( w) 
+\]
+En effet
+\begin{align*}
+	\exp( z+w) &= \sum_n \sum_{k=0}^{ n} \frac{z^{k} w^{n-k}}{n!} \binom n k\\
+		   &= \sum_{n=0}^{ \infty } \sum_{k=0}^{ n} \frac{z^{k}}{k!} \frac{w^{n-k}}{( n-k)!}\\
+		   &= \sum_{n}^{ } \sum_{k}^{ } 1_{k \leq n} \frac{z^{k}}{k!} \frac{w^{n}}{n!}\\
+		   &= \sum_{k}^{ } \sum_{n=k}^{ \infty } \frac{w^{n-k}}{( n-k) !} \frac{z^{k}}{k!}\\
+		   &= \exp( w) \exp ( z) 	
+\end{align*}
+L'echange est justifie car la serie converge absolument.\\
+Car $\exp>0$, et $\exp'>0$, $\exp$ est strictement croissante sur $ [ 0, \infty ) $ et de meme ( car $\exp( -x) = \frac{1}{\exp ( x) }$ ) , elle envoie $( - \infty , 0] $ sur $( 0,1] $ bijectivement.\\
+Pour $t \in \mathbb{R}$ , on definit $\cos ( t) = \re( \exp( it) ) $ et $\sin ( t) =\im( \exp( it) ) $.\\
+Sur $i \mathbb{R}$, on a $ \bar{ e^{it}  }= e^{-it} $ ( on regarde le developpement en serie), on en deduit
+\[ 
+|e^{it}| = \sqrt { e^{it} \bar {  e^{it} } } = \sqrt{ 1} 	
+\]
+Et donc
+\[ 
+\cos t = \frac{ e^{it} + e^{-it} }{2} \text{ et } \sin t= \frac{ e^{it} - e^{-it} }{2i}
+\]
+On peut maintenant etendre ces definitions a tout $z \in \mathbb{C}$, en posant
+\[ 
+\cos z = \frac{ e^{iz} + e^{-iz} }{ 2	} \text{ et } \sin z =\frac{ e^{iz} - e^{-iz} }{2i}
+\]
+De meme, on pose
+\[ 
+	\cosh ( z) = \frac{ e^{z}+ e^{-z} }{2} \text{ et } \sinh z = \frac{ e^{z}- e^{-z}}{2}	
+\]
+\textbf { $\exp$ sur $i \mathbb{R}$ } \\
+\[ 
+\mathbb{R}\to S^{1} \quad t \mapsto e^{it} \coloneqq \cos t + i \sin t		
+\]
+Comme on a le developpement en serie de $\sin$ et $\cos$, on a 
+\[ 
+	\sin' t = \cos t \text{ et } \cos'( t) = -\sin ( t) 
+\]
+On sait donc qu'il existe un point $t^{*}$ tel que $\cos ( t^{*}) =0$( sinon $\cos$ serait borne inferieurement, et $\sin$ grandirait a l'infini).\\
+$\exp$ est periodique dans la direction imaginaire, montrons que $2\pi$ est la plus petite periode possible, cad que $\forall t \in ( 0, 2\pi) $.\\
+Pour cela, notons que sur $ ( 0,\frac{\pi}{2}) $ $\cos$ et $\sin$ sont strictements positifs.\\
+Posons $t= 4s, s \in ( 0, \frac{\pi}{2}) $ \\
+\[ 
+	e^{it} = ( e^{is} ) ^{4} = ( u+iv) ^{4}, u,v >0 
+\]
+Donc
+\begin{align*}
+	e^{it} = ( u+iv)^{4} = u^{4}+ v^{4} - 6 u^{2}v^{2} + 4 i ( u^{2}-v^{2}) 
+\end{align*}
+Si on veut $ e^{it}=0 $, alors $u^{2}-v^{2} =0 \Rightarrow u^{2}=v^{2}$ donc $ u^{2}= v^{2}=1$ , mais alors 
+\[ 
+u^{4}+v^{4}- 6 u^{2}v^{2}\neq 0
+\]
+Contradicition
+
+
+
+
+
+
+
+
+
+\end{document}	

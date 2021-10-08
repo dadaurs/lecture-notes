@@ -1,0 +1,197 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Wed 06 Oct}{Reparametrage}
+\subsection{Reparametrage d'une courbe}
+On veut formaliser la notion que deux courbes $ \alpha, \beta$ de $ \mathbb{R}^{n}$ representent la "meme" courbe geometrique.\\
+On veut $ \alpha( u) = \beta( t) $ avec $u = h( t)  ( =u(t) ) $.\\
+Plus precisement, si $\alpha: I \to \mathbb{R}^n$ et $ \beta : J \to \mathbb{R}^n$ ( $u \in I$ , $t \in J$ ), alors $\alpha$ est un reparametrage si il existe un diffeomorphisme $ h : J \to I$ , $t \mapsto u = u( t) =h( t) $, tel que $\alpha= \beta \circ h$ .\\
+\begin{rmq}
+La condition que deux courbes sont un reparametrage l'une de l'autre est une relation d'equivalence et une classe d'equivalence est une courbe geometrique
+\end{rmq}
+\begin{defn}[Quantite]
+	Une quantite ou une propriete d'une courbe est geometrique si elle est invariante par reparametrage.\\
+	Sinon la quantite est dite cinematique.
+\end{defn}
+\begin{exemple}
+\begin{enumerate}
+\item La trace d'une courbe est une propriete geometrique
+\item La notion de regularite, biregularite sont geometriques
+\item Le plan osculateur est une notion geometrique.
+\item La longueur d'une courbe est geometrique.
+\end{enumerate}
+\end{exemple}
+\begin{proof}
+	On suppose $\alpha: I \to \mathbb{R}^n, \beta: J \to \mathbb{R}^n$, $\alpha( u) = \beta( t) , t=h( u) $ .\\
+	On a 
+	\[ 
+		l_\alpha = \int_I V_\alpha ( u)  du, l_{\beta} = \int_J V_{\beta} ( t) dt
+	\]
+	avec $ V_{\alpha} = \N { \frac{d\alpha}{du}} , V_{\beta} = \N { \frac{d \beta}{du} \frac{du}{dt}} = | \frac{du}{dt}| V_{\alpha} ( u)  $.\\
+	Donc $V_{\beta} ( t) dt = \pm V_{\alpha} ( u) du$ et donc $l_{\beta} = l_{\alpha} $ .
+\end{proof}
+En general, si $S_{\beta} ( t) $ est une quantite geometrique, alors $ \frac{d}{dt} S_{\beta} $ n'est en general pas geometriuqe, mais $ \frac{1}{V_{\beta} ( t) } \frac{d}{dt}S_{\beta} $ 
+\begin{proof}
+	On a $S_{\beta} ( t) = S_{\alpha} ( u) $ et $ \frac{1}{V_{\beta} ( t) } \frac{d}{dt}= \frac{1}{V_{\alpha} ( u) } \frac{d}{du}$ 
+\end{proof}
+\begin{exemple}
+	Le vecteur unitaire tangent $ \vec{T}_{\beta} ( t) $ est une quantite geometrique.	
+\end{exemple}
+\begin{proof}
+	On a $T_{\beta} ( t) = \frac{ \dot { \beta} ( t) }{\N { \dot{ \beta }( t) } } =\frac{1}{V_{\beta} ( t) } \frac{d\beta}{dt}$ .\\
+	Ainsi, $T_{\alpha} ( u) = \frac{1}{V_{\alpha} ( u) } \frac{d \alpha}{du}$ 
+\end{proof}
+\begin{defn}[Derivation naturelle]
+	On definit 
+	\[ 
+		\frac{1}{V_{\beta} ( t) } \frac{d}{dt}
+	\]
+	comme etant la derivation naturelle le long de la courbe.
+\end{defn}
+\subsection*{Contreexemples}
+La vitesse, le vecteur vitesse et l'acceleration sont des quantites cinematiques.
+\begin{defn}
+	On dit que $ V_{\alpha} ( u) du$ est la differentielle naturelle le long de la courbe
+\end{defn}
+\begin{exemple}
+\begin{enumerate}
+\item Masse d'un fil metalique inhomogene.\\
+	La quantite utile est la densite lineaire de masse $\rho : I \to \mathbb{R}_+ $.\\
+	La masse sera alors $M = \int_I \rho( u) V_{\alpha} ( u) du$ 
+\item Centre de gravite\\
+	\[ 
+		G=  \frac{1}{M}\int_I \alpha( u) \rho( u)  V_{\alpha} ( u) du
+	\]
+	
+\end{enumerate}
+
+\end{exemple}
+\begin{defn}[Abscisse Curviligne]
+	Soit $\alpha: I \to \mathbb{R}^n$ une courbe reguliere et $u_0 \in I$.\\
+	L'abscisse curviligne ou parametre naturel de $\alpha$ par rapport au point initial $\alpha( u_0) $ est la fonction
+	\[ 
+	S = S_{\alpha} : I \to \mathbb{R} 	
+	\]
+	definie par 
+	\[ 
+		S= \int_{ u_0 }^{ u } V_{\alpha} ( \zeta) d\zeta
+	\]
+	
+\end{defn}
+On dit que $\alpha$ est parametree naturellement si $S_{\alpha} ( u) =u \iff V_{\alpha} ( u) = 1$ 
+
+\begin{propo}
+Toute courbe $C^{1}$ reguliere peut se reparmetriser natruellement.
+\end{propo}
+\begin{proof}
+Soit $\alpha: I \to \mathbb{R}^n$, $C^{1}$ reguliere et $u_0 \in I$.\\
+On pose
+\[ 
+	s= s( u) = \int_{ u_0 }^{ u } V_{\alpha} ( u) du
+\]
+Alors la fonction $s$ definit un diffeomorphisme
+\[ 
+s: I \to J
+\]
+
+
+\end{proof}
+\section{Courbure d'une courbe}
+Soit $\gamma: I \to \mathbb{R}^n$ une courbe parametree reguliere de classe $C^{2}$.\\
+Le vecteur de courbure est le champ le long de $\gamma$ 
+\[ 
+	\vec{K}_{\gamma} ( u)  = \frac{1}{V_{\gamma} ( u) } \dot{ \vec{T} }_{\gamma} ( u) 
+\]
+La courbure de $\gamma$ est alors la fonction
+\[ 
+	k_{\gamma} = \N {  \vec{K}_{\gamma} ( u) } 
+\]
+\begin{rmq}
+Si $\gamma$ est parametree naturellement, alors
+\[ 
+	k_\gamma( u) = \N { \frac{d^{2}\gamma}{du^{2}}} 
+\]
+
+\end{rmq}
+\begin{rmq}
+Le vecteur de courbure et la courbure sont des quantites geometriques.
+\end{rmq}
+\begin{propo} [ Formule de l'acceleration] 
+Soit $\gamma: I \to \mathbb{R}^n$ une courbe de classe $C^{2}$, alors son acceleration est
+\[ 
+	\ddot { \gamma} = \dot { V} _\gamma( t) + V^{2}_\gamma( t) \vec{K}_{\gamma} ( t) 
+\]
+
+\end{propo}
+\begin{proof}
+On a 
+\[ 
+	\dot { \gamma} ( t) = V_{\gamma} ( t) \vec{T}_\gamma( t) 
+\]
+Donc
+\[ 
+	\ddot { \gamma} = \dot { V_{\gamma} } ( t) \vec{T}_\gamma( t) + V_\gamma( t) \dot { \vec{T}} ( t) = V' K + V^{2}K
+\]
+
+
+\end{proof}
+\begin{rmq}
+On a toujours $\vec{k}\perp \vec{T}$ 
+\end{rmq}
+\begin{defn}
+	Soit $\gamma: I \to \mathbb{R}^3$ bireguliere de classe $C^{3}$.\\
+	On definit le repere mobile de Frenet de $\gamma$ est le repere  $ \left\{ \gamma( t) , T, N_\gamma( t) , B_{\gamma} ( t)  \right\} $ ou 
+	\[ 
+		T_\gamma( t) = \frac{\dot \gamma}{V_{\gamma} ( t) }, \quad N_\gamma( t) = \frac{\ddot { \gamma} - \eng { \dot \gamma, T} T}{ \N { \ddot { \gamma} - \eng { \dot \gamma, T} T} }\quad B = T\times N
+	\]
+		
+\end{defn}
+\begin{defn}[Torsion]
+	La torsion de $\gamma$ est
+	\[ 
+		\tau_{\gamma} ( t) = \frac{1}{V_{\gamma} ( t) }\eng { \dot{B}, N} 
+	\]
+	
+\end{defn}
+\begin{thm}[Formules de Serret-Frenet]
+	\begin{align*}
+		\begin{cases}
+		\frac{1}{V_\gamma} \dot{ T }_\gamma = \kappa_\gamma N \\
+			 \frac{1}{V_{\gamma} }\dot N = - \kappa_\gamma T_\gamma + \tau_\gamma B_\gamma\\
+			 \frac{1}{V_\gamma} \dot{B} = -\tau_\gamma N_\gamma
+		\end{cases}
+	\end{align*}
+	
+\end{thm}
+\begin{proof}
+\begin{enumerate}
+\item Par definition, du vecteur de courbure.
+\item 
+\begin{align*}
+	\frac{1}{V} N' = \frac{1}{V} \left(  \eng { N',T} T + \eng { N', B} B \right) 
+	\intertext{or}
+	\eng { N', T} = - \eng { N, T'} \\
+	\eng { N', B} =0\\
+	\eng { N',B} = V_\gamma
+	\intertext{ De meme}
+	B' = \eng { B', T} T + \eng { B',N} N + \eng { B',B} B
+\end{align*}
+
+
+\end{enumerate}
+
+\end{proof}
+
+		
+
+
+
+	
+
+	
+
+
+
+
+
+
+\end{document}	

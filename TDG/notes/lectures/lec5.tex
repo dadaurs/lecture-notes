@@ -1,0 +1,153 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Sat 02 Oct}{Adjonctions}
+\subsection{Equivalence de categories}
+\begin{defn}[Equivalence de categories]
+	Un foncteur $F:C \to D$ est une Equivalence de categories s'il existe un foncteur $F': C\to D$ tel que
+	\[ 
+	\sigma: \id_C \overset{ \simeq }{\to} F'\circ F \text{ et } \tau: \id_D \overset{ \simeq}{\to} F\circ F'
+	\] 
+	
+\end{defn}
+\begin{rmq}
+Si $F$ est un isomorphisme de categories, c'est aussi une equivalence de categories.
+\end{rmq}
+\begin{exemple}
+Soit $\un$ la categorie avec un seul objet $\ast$ et un seul morphisme $\id$. Soit $C$ la categorie $\ob C= \left\{ a,b \right\} $ et deux morphismes non-identite $f:a\to b$ et $g:b\to a$ qui sont des isomorphismes. Alors les categories $\un$ et $C$ sont equivalentes.\\
+On definit $F :\un \to C$  par $F( \ast) = a, F( \id) = \id_a$.\\
+On definit $F': C \to \un$ par $F'( a) = F'( b) = \ast$.\\
+On a que $F'\circ F = \id_{\un} $ donc la transformation naturelle $\sigma= \id_{\id_{ \un }} $ est triviale.\\
+Dans l'autre sens, $F\circ F'\neq \id_{C} $ , cependant $\exists \tau:\id_C\to F\circ F'$ defini par
+\[ 
+\tau: \ob C\to \mor C
+\]
+donne par
+\begin{align*}
+	\tau( a) = \id_a, \tau( b) =g
+\end{align*}
+Verifions la naturalite:\\
+Commencons par $f:a\to b$, on a
+\[ 
+\id_a \circ \id_a = g \circ f 
+\]
+ce qui est vrai par definition de $C$.\\
+De meme
+\[ 
+	\id_a\circ g = \id_a \circ g
+\]
+
+\end{exemple}
+\subsection{Adjonctions}
+On veut generaliser la notion d'equivalence de categories, dont il y a beaucoup d'exemples interessants ( surtout en theorie des groupes) 
+\begin{defn}[Adjonctions]
+	Un couple de foncteurs $L:C\to D$ et $R:D\to C$ forme une adjonction s'il existe des transformations naturelles
+\[ 
+\eta: \id_C\to R\circ L \text{ et } \epsilon:L\circ R \to \id_D
+\]
+tel que les diagrammes suivants commutent
+\[ 
+	\begin{tikzcd}
+L(c) \arrow[rr, "L(\eta_c)"] \arrow[rrd, "Id_{L(c)}"] &  & L\circ R\circ L(c) \arrow[d, "\epsilon_{L(c)}"] \\
+                                                      &  & L(c)                                           
+\end{tikzcd}
+\]
+\[
+\begin{tikzcd}
+R(d) \arrow[rr, "\eta_{R(d)}"] \arrow[rrd, "\id_{R(d)}"] &  & R\circ L\circ R(d) \arrow[d, "R(\epsilon_d"] \\
+                                                        &  & R(d)                                         
+\end{tikzcd}
+\]
+pour tout $c\in \ob C, d \in \ob D$ .\\
+\end{defn}
+Analysons ces identites triangulaires.\\
+La premiere identite veut dire $\forall c \in \ob C, \eta_c : c \to RL( c) $, on peut lui appliquer $L$ et on trouve
+\[ 
+	L( c) \overset { L( \eta_c) } { \longmapsto} LRL( c) 
+\]
+On peut maintenant considerer $\epsilon_{L( c) } : LRL( c) \to L( c) $ pour revenir a $L( c) $ 
+\[ 
+	L( c) \overset { L( \eta_c) } { \longmapsto} LRL( c) \overset { \epsilon_{L( c) }  } { \longmapsto} L( c) 
+\]
+et on veut que cette suite de composition soit egale a $\id_{L( c) } $ .\\
+Pour la deuxieme identite, soit $d \in \ob D$, on a alors
+\[ 
+	R( d) \overset { \eta_{R( d) }  } { \longmapsto} RLR( d) \overset { R( \epsilon_d)   } { \longmapsto} R( d) 
+\]
+Si $L : C \leftrightarrow D : R$ est une adjonction avec transformations naturelles associees $\eta: \id_C \to RL$ et $\epsilon : LR \to \id_D$, alors on dit que $L$ est un adjoint a gauche de $R$ et $R$ est un adjoint a droite de $L$.\\
+On notera alors $L \dashv R$.\\
+\subsection{Caracterisation des Adjonctions}
+\subsubsection{Preparation}
+Soit $L:C \leftrightarrow D:R$ un couple de foncteurs entre deux categories petites. On peut y associer deux autres foncteurs interessants
+\begin{itemize}
+	\item $D( L( -) ,-) : C^{op}\times D \to \ens$ 
+	\item $C( -, R( -) ): C^{op}\times D  \to \ens$ 
+\end{itemize}
+qui sont definis comme suit
+\begin{itemize}
+\item Sur les objets, 
+	\[ 
+		\forall ( c,d)  \in \ob C^{op}\times \ob d \quad D( L( -) ,-) ( c,d) = D( L( c) , d) 
+	\]
+
+\item Sur les morphismes
+	Soient $( f^{op}, g) \in \mor ( C^{op}( c,c') \times D( d,d') ) $.\\
+	Donc $\exists f \in C( c',c)  $, on veut definir une application ensembliste
+	\begin{align*}
+	D( L( f^{op}) ,g) : D( L( c) ,d) \to D( L( c') ,d') 	
+	\end{align*}
+
+	
+	
+\end{itemize}
+On peut resumer ceci dans le diagramme
+\[ 
+	L( c') \overset { L( f) } { \longmapsto} L( c) \overset { h} { \longmapsto} d \overset { g} { \longmapsto} d'
+\]
+Ainsi, $D( L( f^{op},g) ) \coloneqq g\circ h \circ L( f) : L( c') \to d'$ .\\
+\textbf{ Est-ce que ce choix definit bien un foncteur?} \\
+\begin{itemize}
+	\item Identites: Pour $h:L( f) \to d\in C( L( f) ,d) $ Si $( \id_c^{op},\id_d) \in \mor ( C^{op}\times D) $ alors $D( L( \id_c^{op}) ,\id_d) ( h ) = \id_d\circ h\circ \id_{L_c}=h $.\\
+		Donc
+		\[ 
+			D( L( \id_c^{op},\id_d) ) =\id_{D( L( c) ,d) } 
+		\]
+	
+	\item Considerons 
+		\[ 
+			( c,d) \overset { ( f^{op},g) } { \longrightarrow} ( c',d') \overset { ( f'^{op},g') } { \longrightarrow} ( c",d") 
+		\]
+		et etudions
+		\[ 
+			D( L( c ),d) \overset {   D(L( f^{op}),g) } { \longrightarrow} D( L( c' ),d') \overset { D( L( f'^{op} ),g') } { \longrightarrow} D(L(  c" ),d") 
+		\]
+		On a donc, pour $h \in D( L( c) ,d) $ 
+		\begin{align*}
+			D( L( f^{op}) ,g)\circ D( L( f'^{op},g') ) ( h) = g'\circ g\circ h \circ L( f)\circ L( f')   \circ g = D( L( f'^{op}\circ f^{op}), g'\circ g) ( h) 
+		\end{align*}
+
+		
+		
+\end{itemize}
+
+De maniere semblable, $\exists$ foncteur
+\[ 
+	C( -, R( -) ) : C^{op}\times D \to \ens
+\]
+defini sur les objets par
+\[ 
+	\forall ( c,d) \in \ob ( C^{op}\times D) \quad C( -, R( -) ) ( c,d) = C( c,R( d) ) 
+\]
+et $\forall ( f^{op},g) :( c,d) \to ( c',d')  $ , alors
+\begin{align*}
+	C( f^{op},R( g) ) : C( c,R( d) ) &\to C( c', R( d') ) \\
+	( h: c\to R( d) ) &\to ( R( g) \circ h \circ f ) 
+\end{align*}
+
+
+
+			
+
+
+
+			
+\end{document}	
