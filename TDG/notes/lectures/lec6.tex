@@ -1,0 +1,217 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{6}{Sun 10 Oct}{Caracterisation des Adjonctions}
+\subsection{Exemple concret d'adjonction}
+On considere $L: \ens \to \vect_\mathbb{K}$ et $ U : \vect_{\mathbb{K}}\to \ens $.\\
+Ces adjonctions verifient les identites triangulaires et on a une adjonction $ L \dashv U$.\\
+Verifions les identites triangulaires.\\
+Soit $ V\in \ob \vect_\mathbb{K}$ Considerer
+\[ 
+	U( V) \oar{\eta_{U( V) } } UL( UV) 
+\]
+et
+\[ 
+	U( LU( V) ) \oar { U( \epsilon( V) ) } U( V) 
+\]
+On veut voir que $U( \epsilon_V) \circ \eta_{U( V) }= \id_{U( V) }  $ .\\
+Par definition de $\eta$ ,
+\begin{align*}
+	\eta_{U( V) } &\to UL( U( V) ) \\
+	v &\mapsto ( \eta_{U( V) }( v) : U( V) \to \mathbb{K} ) 
+\end{align*}
+ou 
+\[ 
+	\eta_{U( V) } ( v) : V \to \mathbb{K}: v' \mapsto \delta_{v,v'} 
+\]
+Par ailleurs
+\begin{align*}
+	U( \epsilon_V ) : U( LU( V)) &\to U( V) \\
+	\omega &\mapsto \sum_{v\in V} \omega( v) \cdot v
+\end{align*}
+Donc, $\forall v \in U( V) $,
+\begin{align*}
+	U( \epsilon_V) \circ \eta_{U( V) } ( v) &= U( \epsilon_V) ( \eta_{U( V) } ( v) ) \\
+						&= \sum_{v'\in V} \eta_{U( V) } ( v) ( v') \cdot v'\\
+						&= v
+\end{align*}
+Donc $U( \epsilon_V) \circ \eta_{U( V) } = \id_{U( V) } $.\\
+\hr
+Montrons l'autre egalite triangulaire.\\
+Soit $X \in \ob \ens$. Considerons
+\begin{align*}
+	L( \eta_X) : L( X) &\to L( UL( X) )  \\
+	\omega &\mapsto L( \eta_X) : UL( X) \to \mathbb{K}\\
+	L( \eta_X) :\psi &\mapsto \sum_{x \in \eta_X^{-1}( \psi) } 
+\end{align*}
+Pour $\psi\in UL( X) $ ( donc $\psi:X \to \mathbb{K}$ ),
+\[ 
+	\eta_X^{-1}( \psi) =
+	\begin{cases}
+		\left\{ x' \right\} : \text{ si }  \psi= \eta_X( x') \\
+		\emptyset \text{ sinon } 	
+	\end{cases}
+\]
+donc $L( \eta_X)( \omega) : UL( X) \to \mathbb{K} $ 
+\[ 
+	\psi \mapsto \sum_{x \in \eta_X^{-1}( \psi) } = 
+	\begin{cases}
+		\omega( x') : \psi = \eta_X( x') \\
+		0 : \psi \neq \eta_X( x') \forall x' \in X
+	\end{cases}
+\]
+De plus
+\begin{align*}
+	\epsilon_{L( X) } : LU( L( X) ) &\to L( X) \\
+	UL( X) \oar( \xi) \mathbb{K} &\mapsto \sum_{\psi \in UL( X) } \xi( \psi) \cdot \psi
+\end{align*}
+Faisons donc le calcul.\\
+Soit $\omega\in L( X) $ 
+\begin{align*}
+	\epsilon_{L( X) } \circ L( \eta_X) ( \omega) &= \epsilon_{L( X) } ( L( \eta_X) ( \omega) ) \\
+						     &= \sum_{\psi\in UL( X) } L( \eta_X) ( \omega) ( \psi) \cdot \psi\\
+						     &= \sum_{x \in  X} \omega( x) \cdot \eta_X( x) \\
+\end{align*}
+Donc $\forall x' \in X$ 
+\begin{align*}
+	\epsilon_{L( X) } \circ L( \eta_X) ( \omega) ( x') &= \left( \sum_{x \in X}^{ }\omega( x) \eta_X( x)  \right)( x') \\
+							   &= \sum_{x\in X} \omega( x) ( \eta_X( x) ( x') ) = \omega( x') 
+\end{align*}
+\subsection{Caracterisation des adjonctions}
+\begin{propo}
+Un couple de foncteurs $L:C\to D$ et $R : D \to C$ entre categories localement petites est une adjonction si et seulement si il existe un isomorphisme naturel entre les foncteurs
+\[ 
+	D( L( -) ,-) : C^{op}\times D	\to \ens : ( c,d) \to D( L( c) ,d) 		
+\]
+et
+\[ 
+	C( -,R( -) ) :C^{op}\times D\to \ens: ( c,d) \to C( c,R( d) ) 	
+\]
+
+\end{propo}
+Nous demontrerons qu'il existe des transformations naturelles $\alpha: D( L( -) ,-) \to C( -,R( -) ) $ et $\beta:C(-,R( -)   ) \to D( L( -) ,-) $ qui sont mutuellement inverses.\\
+On a donc besoin de deux applications 
+\[ 
+	\alpha: \ob ( C^{op}\times D) \to \mor \ens
+\]
+et 
+\[ 
+	\beta: \ob ( C^{op}\times D) \to \mor \ens
+\]
+tel que $\forall ( c,d) \in \ob ( C^{op}\times D) $ 
+\[ 
+	\alpha_{( c,d) } : D( L( c) ,d) \to C( c,R( d) ) 
+\]
+et 
+\[ 
+	\beta_{( c,d) } : C( c,R( d) ) \to D( L( c) ,d) 
+\]
+De plus, on veut que
+\[ 
+	\forall ( f^{op},g) \in C^{op}\times D ( ( c,d) ,( c',d') ) 
+\]
+\begin{align*}
+	&D( L( c) ,d) \oar { \alpha_{c,d} } C( c,R( d) ) \oar { C( f^{op},R( g) ) } C( c',R( d') )  \\
+	=& D( L( c) ,d) \oar { D( L( f^{op}) ,g) } D( L( c') ,d') \oar { \alpha_{( c',d') } } C( c',R( d') ) 
+\end{align*}
+et de meme pour l'application naturelle inverse
+
+\begin{align*}
+	&C(  c ,R( d )) \oar { \beta{c,d} } D( L( c) ,d)  \oar { D( L( f^{op} ), g ) 	 } D( L( c') ,d')   \\
+	=& C( c,R( d) )	\oar { C( f^{op},R( g) )  } C( c',R( d') )  \oar { \beta_{( c',d') } } D( L( c') ,d') 
+\end{align*}
+Finalement, on soujaite egalement que $\alpha_{( c,d) } $ et $\beta_{ ( c,d) } $ sont des applications ensemblistes mutuellement inverses.\\
+On va construire $\alpha$ et $\beta$ a partir des transformations naturelles $ \eta: \id_C \to RL$ et $\epsilon: LR\to \id_D$.\\
+\begin{proof}
+Supposer que $C\dashv D$ soit une adjonction avec transformation naturelle associees $\eta,\epsilon$.
+\subsection*{Premier pas: Construction de $\alpha$ et $\beta$ }
+Soit $( c,d) \in \ob ( C^{op}\times D) $ 
+\[ 
+	\alpha_{( c,d) } : D( L( c) ,d) \to C( c,R( d) ) 
+\]
+Soit $h: L( c) \to d \in D( L( c) ,d) $, notons qu'on a
+\[ 
+	c \oar { \eta_C} RL( c) \oar { R( h) } R( d) 
+\]
+Definissons donc $\alpha_{( c,d) } ( h) = R( h) \circ \eta_C$ \\
+\hr
+Soit $( c,d) \in \ob ( C^{op}\times D) $, on a alors $\forall k :c \to R( d) \in C( c,R( d) ) $ 
+\[ 
+	L( c) \oar { L( k) } LR( d) \oar { \epsilon_d} 
+\]
+Posons donc
+\[ 
+	\beta_{c,d} ( k) = \epsilon_d \circ L( k) 
+\]
+
+\subsection*{Naturalite}
+Soit $( f^{op},g) : ( c,d) \to ( c',d') \in C^{op}\times D$.\\
+Soit $h \in D( L( c) ,d) $, on a alors
+\begin{align*}
+	C( f^{op},R( g) ) \circ \alpha_{ ( c,d) } ( h) &= C( f^{op},R( g) ) ( R( h) \circ \eta_c) \\
+						       &= R( g) \circ  ( R( h) \circ \eta_c) \circ f\\
+						       &= R( g\circ h ) \circ \eta_c \circ f
+\end{align*}
+Dans l'autre sens, on a
+\begin{align*}
+	\alpha_{ ( c',d') } \circ D( Lf^{op},g) ( h) &= \alpha_{c',d'} ( g\circ h \circ L( f) ) \\
+						     &= R( g \circ h \circ L( f) ) \circ \eta_c\\
+						     &= R( g\circ h) \circ RL( f) \circ \eta_{c'} 
+\end{align*}
+Il faut donc montrer que $\eta_c\circ f = RL( f) \circ \eta_{c'} $ \\
+Or $f:c'\to c$ donne 
+\[ 
+	RL( f) \circ \eta_{c'} = \eta_c \circ f
+\]
+commute car $\eta$ est une transformation naturelle.
+De meme, le fait que $\epsilon$ soit une transformation naturelle implique que $\beta$ en est aussi une.
+\subsection*{$\alpha$ et $\beta$ sont mutuellement inverses}
+Considerer pour $ ( c,d) \in \ob ( C^{op}\times D) $.\\
+On a 
+\begin{align*}
+	\beta_{( c,d) } \cdot \alpha_{ ( c,d) } ( h) &= \beta_{ ( c,d) } ( R( h) \circ \eta_c)  \\
+						     &= \epsilon_d\circ L( R( h) \circ \eta_c) \\
+						     &= \epsilon_d\circ LR( h) \circ L( \eta_c )
+\end{align*}
+On est en train de calculer
+\begin{align*}
+L( c) \oar { L( \eta_c) } LRL( c) \oar { LR( h) } LR( d) \oar { \epsilon_d} R\\
+= L( c) \oar { L( \eta_c) } LRL( c) \oar { \epsilon_{L( c) }  } LR( d) \oar {h} R( d) \\
+= L( c) \oar { \id_{L( c) } } \oar { h} R( d) =h
+\end{align*}
+Donc $h= \epsilon_d\circ LR( h) \circ L( \eta_c) $.\\
+De meme l'autre identite triangulaire implique que $\alpha_{ ( c,d) } \circ \beta_{( c,d) } = \id_{C( c,L( d) ) } $.\\
+Ainsi $\alpha$ et $\beta$ sont bien des isomorphismes naturels, mutuellements inverses.\\
+\hr
+Pour completer la caracterisation, il faudrait aussi montrer l'implication inverse.\\
+Pour definir $\eta,\epsilon$ a partir de $\alpha,\beta$ 
+\begin{itemize}
+\item $\eta$ : Considere $\forall c \in \ob C$ ,
+	\begin{align*}
+	\alpha_{ ( c,L( c) )  } : D( L( c) ,L( c) ) \to C( c,RL( c) ) \\
+	\id_{L( c) } \mapsto \alpha_{( c,L( c) ) } ( \id_{L( c) } ) 
+	\end{align*}
+	Et on definit alors $\eta_c: c \to RL( c) $ par $\eta_c = \alpha_{ ( c,L( c) ) } ( \id_{L( c) } ) $ 				
+	
+\item $\epsilon$ :Considerer $\forall d \in \ob D$ ,
+	\begin{align*}
+		\beta_{ R( d) ,d} : C( R( d) ,R( d) ) \to D( LR( d) ,d) \\
+		\id_{R( d) } \mapsto \beta( R( d) ,d) ( \id_{R( d) } ) 	
+	\end{align*}
+		
+\end{itemize}
+			
+
+
+
+				
+\end{proof}
+
+			
+
+
+
+			
+
+
+
+\end{document}	

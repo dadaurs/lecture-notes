@@ -1,0 +1,94 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{6}{Mon 11 Oct}{...}
+\begin{crly}
+Si $f$ est analytique, $f$ est infiniment derivable au sens complexe.
+\end{crly}
+\begin{proof}
+$f'$ est analytique, donc holomorphe, avec derivee $f''$, elle meme aussi analytique
+\end{proof}
+\begin{defn}[Operateurs de Wirtinger]
+	Pour $f: U \to \mathbb{C}$ , $C^{1}$ vue comme $f: S \subset \mathbb{R}^{2}\to \mathbb{C}$.\\
+	On note
+	\[ 
+		\del_z f  = \del f = \frac{1}{2} \left( \del_x - i \del_y\right) 
+	\]
+	et
+	\[ 
+		\del_{ \overline{z}} f= \frac{1}{2} \left(\del_x + i \del_y \right) 
+	\]
+	
+\end{defn}
+\section{Integration Complexe}
+But: Trouver l'operation "inverse" de la derivation complexe.\\
+\begin{defn}[Chemin]
+	Un chemin de $a$ a $b$ dans $U \subset \mathbb{C}$ est une fonction continue $\gamma: [ 0,1] \to U$ $C^{1}$ par morceaux, avec derivee bornee, avec $\gamma( 0) =a, \gamma ( 1) =b$ 
+\end{defn}
+\begin{defn}
+	Soit $f: U \to \mathbb{C}$ continue et $\gamma: [ 0,1] \to U$ un chemin.\\
+	On definit
+	\[ 
+		\int_{\gamma} f( z) dz = \int_{ 0 }^{ 1 } f( \gamma( t) ) \gamma'( t) dt
+	\]
+	
+\end{defn}
+\begin{rmq}
+	L'integrale complexe $\int_{\gamma} f( z) dz$ depend en general du chemin de $\gamma$ mais pas de sa parametrisation.\\
+	Si $\phi : [ 0,1] \to [ 0,1] $ est bijective, croissante, derivable sur $ ( 0,1) $ et $\tilde { \gamma} = \gamma \circ \phi$ alors
+	\[ 
+		\int_{ \gamma }^{  } f( z) dz = \int_{ \tilde { \gamma}  }^{  } f( z) dz
+	\]
+	
+\end{rmq}
+\begin{proof}
+Formule de changement de variable.\\
+En supposant $\gamma $ $C^{1}$  ( pas par morceaux) 
+\begin{align*}
+	\int_{ 0 }^{ 1 } f( \gamma( t) ) \gamma'( t) dt &= \int_{ 0 }^{ 1 }f ( \gamma( \phi( s) ) ) \gamma'( \phi( s) ) \phi'( s) ds\\
+							&= \int_{ 0 }^{ 1 }f( \tilde\gamma ) \tilde { \gamma } '( s) 
+\end{align*}
+
+\end{proof}
+\begin{defn}[Longueur]
+	Pour $\gamma$ un chemin, sa longueur est donnee par
+	\[ 
+		l( \gamma) = \int_{ 0 }^{ 1 }| \gamma'( t) | dt
+	\]
+		
+\end{defn}
+\begin{defn}[Lacet]
+	Si $\gamma( 0) =\gamma( 1) $ , $\gamma$ est un lacet.
+\end{defn}
+\subsection*{Propriete de l'integration complexe}
+\begin{itemize}
+	\item Si $\gamma: [ 0,1] \to U$ et $\ominus \gamma: [ 0,1] \to U$ est defini par $\ominus \gamma( s) = \gamma( 1-s) $ 
+		\[ 
+			\int_{ \ominus \gamma }^{  }f( z) dz = - \int_{ \gamma }^{  }f( z) dz
+		\]
+		
+	\item Si $\gamma,\tilde\gamma: [ 0,1] \to U$ avec $\gamma( 1) =\tilde\gamma( 0) $, alors
+		\[ 
+		\gamma\oplus\tilde\gamma: [ 0,1] \to U
+		\]
+		est defini par
+		\begin{align*}
+			\gamma\oplus\tilde\gamma( s) = 
+			\begin{cases}
+				\gamma( 2s) \text{ si } s \leq \frac{1}{2}\\
+				\tilde\gamma( 2s-1) \text{ si } s \geq \frac{1}{2}
+			\end{cases}
+		\end{align*}
+		et on a
+		\[ 
+			\int_{ \gamma\oplus\tilde\gamma }^{  } f( z) dz = \int_{ \gamma }^{  }f( z) dz + \int_{ \tilde\gamma }^{  }f( z) dz
+		\]
+	
+	\item Si $f:U \to \mathbb{C}$ est holomorphe
+		\[ 
+			\int_{ \gamma }^{  } f'( \zeta) d\zeta = f( \gamma( 1) ) - f( \gamma( 0) ) 
+		\]
+		
+		
+\end{itemize}
+
+\end{document}	

@@ -1,0 +1,65 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Sat 16 Oct}{Produits et Coproduits}
+\subsection{Produits et Coproduits}
+Dans $\ens$, on a les constructions suivantes:\\
+$\forall f: X \to Y, g: X \to Z\in \mor \ens$ 
+\[ 
+\exists ! h : X \to Y\times Z
+\]
+tel que $\pr_Y\circ h =f, \pr_z\circ h =g$.\\
+De meme
+$\forall f: X \to Y, g: X \to Z\in \mor \ens$ 
+\[ 
+\exists! h: X\cop Y \to Z 
+\]
+tel que
+\[ 
+h\circ i_x = f, h \circ i_y = g
+\]
+\hr\\
+Formellement, dans une categorie quelconque
+\begin{defn}
+Soit $C$ une categorie, et soient $b,c \in \ob C$. Un produit de $b$ et $c$ consiste en un objet $a$ de $C$ et de deux morphismes $p: a\to b$ et $q: a\to c$ tel que pour tout couple de morphisme $f: d\to b$ et $g: d\to c$ il existe un unique morphisme $h: d\to a$ tel que $p\circ h = f$ et $q\circ h =g$.	
+\end{defn}
+\begin{rmq}
+En general, le produit de deux objets n'existe pas, mais s'il existe, il est unique a isomorphisme pres.
+\end{rmq}
+\begin{lemma}
+Soit $C$ une categorie, et soient $b,c \in \ob C$ . Si $ b \oal { p} a \oar q c$ et $b \oal p' a \oar q' c$ sont des produits de $b$ et $c$, alors il existe un isomorphisme $h: a\to a'$ qui respecte les morphismes de projection.
+\end{lemma}
+\begin{proof}
+Puisque $b \oal p a \oar q c$ est un produit de $b$ et $c$, la propriete universelle du produit nous dit qu'il existe un unique morphisme $h : a' \to a $.\\
+Puisque $b \oal p' a' \oar q' c$ est un produit de $b$ et $c$, $\exists ! k : a\to a'$ tel que
+\[ 
+p = p' \circ k \text{ et } q= q'\circ k
+\]
+Montrons que $h$ et $k$ sont des isomorphismes mutuellement inverses.\\
+On a que
+\[ 
+p \circ h \circ k = p' \circ k = p
+\]
+de meme, on a
+\[ 
+q\circ h \circ k = q
+\]
+L'unicite de la propriete universelle implique que $h\circ k = \id_A$ et $k\circ h = \id_{a'} $
+\end{proof}
+On introduit la notation pour ``le'' produit de $b,c \in \ob C$ ( s'il existe) est note
+\[ 
+b \oal p_1 b\times c \oar p_2 c
+\]
+ou parfois simplement $b \times c$.
+\begin{defn}[Coproduit]
+	Soit $C$ une categorie. Un coproduit de $b$ et $c$ est un objet $a$ et deux morphismes $i: b \to a$ et $j: c\to a$ tel que pour tout couple de morphismes $f: b \to d$ et $g:c \to d$ il existe un unqiue morphisme $h: a \to d$ tel que $h \circ i = f$ et $h \circ j = g$ ce que nous resumons par le diagramme suivant.
+\end{defn}
+\begin{lemma}
+Soit $c$ une categorie, et soient $b,c \in \ob C$ Si $a$ et $a'$ sont des coproduits de $b$ et $c$, alors il existe un isomorphismes $h : a \to a'$ tel que $h \circ j = j', h\circ i = i'$ 
+\end{lemma}
+\begin{rmq}
+	Soit $C$ une categorie, et soient $b,c \in \ob C$. Si $a$ est un produit de $b$ et $c$ dans $C$, alors $a$ est un coproduit dans $C^{op}$.
+\end{rmq}
+
+			
+
+\end{document}	

@@ -1,0 +1,98 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Thu 14 Oct}{Integration Complexe}
+\begin{proof}
+Considerons la fonction
+\[ 
+	t \mapsto f'( \gamma( t) ) \gamma'( t) 
+\]
+est la derivee ( au sens reel) de
+\[ 
+	t \mapsto f( \gamma( t) ) 
+\]
+et on peut donc y appliquer le theoreme fondamental du CDI.
+\end{proof}
+\begin{propo}[Integration par parties]
+Soient $f,g: U \to \mathbb{C}$ holomorphes et $\gamma: [ 0,1] \to \mathbb{C}$ un chemin, alors
+\begin{align*}
+	\int_{ \gamma }^{  }f' g = f( \gamma( x) )g( \gamma( x) ) \big\vert_{0} ^{1} - \int_{ \gamma }^{  }fg'
+\end{align*}
+
+\end{propo}
+\begin{proof}
+\begin{align*}
+	( fg) '= f'g + fg'
+\end{align*}
+et on integre.
+\end{proof}
+\begin{propo}
+Si $f: U \to \mathbb{C}$ continue, $\gamma: [ 0,1] \to U$, alors
+\[ 
+	\n { \int_{\gamma }^{  } f( z) dz} \leq l( \gamma) \max_\gamma |f( z)|
+\]
+
+\end{propo}
+\begin{proof}
+Suit de
+\begin{align*}
+	\int_{ 0 }^{ 1 }g( t) dt \leq  \max g
+\end{align*}
+pour les integrales reels.
+\end{proof}
+\section{Holomorphie et deformation de Contours}
+But: Savoir dans quelle mesure 
+\[ 
+	\int_{\gamma} f( z) dz
+\]
+depend de $\gamma$. L'astuce est de deformer progressivement le chemin.\\
+Si $\gamma,\tilde\gamma: [ 0,1] \to U$ avec $\gamma( 1) = \tilde\gamma( 1) $ et $\gamma( 0) =\tilde\gamma ( 0) $, on a que $\gamma\ominus \tilde\gamma$ est un lacet.
+\subsection{Integration sur un petit carre}
+Si $f: U \to \mathbb{C}$ est $C^{1}$, avec $\del Q( z,\epsilon) \subset  U$.\\
+Calculons
+\begin{align*}
+	\oint_{\del Q( z,\epsilon) } f( z) dz = ( \int_b + \int_d + \int_g + \int_h ) ( f( z) dz) 
+\end{align*}
+On va supposer $z=0$ 
+\begin{align*}
+b( t) = -\frac{\epsilon}{2}+ ( t-\frac{1}{2}) \epsilon\\
+d( t) = \frac{\epsilon}{2}+ i ( t-\frac{1}{2}) \epsilon\\
+h( t) = \frac{i\epsilon}{2}+ ( t-\frac{1}{2}) \epsilon\\
+g( t) = \frac{\epsilon}{2} + ( t-\frac{1}{2}) \epsilon
+\end{align*}
+Donc
+\begin{align*}
+	\int_b f( z) dz= \int_{ 0 }^{ 1 }f( \frac{\epsilon i }{2} + ( t-\frac{1}{2}\epsilon))\epsilon dt
+\end{align*}
+et
+\begin{align*}
+	\int_{ d }^{  }f( z) = \int_{ 0 }^{ 1 }f ( \frac{\epsilon}{2}+ i ( t-\frac{1}{2}) \epsilon) \epsilon dt
+\end{align*}
+Comme $f$ est $C^{1}$ 
+\[ 
+	f( - \frac{i\epsilon}{2}+ ( t-\frac{1}{2}) \epsilon) = f( 0) - \frac{\epsilon}{2}\del_xf( 0) + ( t-\frac{1}{2}) \epsilon \del_y f( 0) + o ( \epsilon) 
+\]
+Si on somme les 4 termes multiplie par leur facteur, on obtient $\epsilon^{2}  ( i \del_1 f( 0) - \del_2f( 0) )+ o( \epsilon^{2}) $.\\
+Si on integre sur un carre de cote 1, le nombre de carres est d'ordre $\frac{1}{\epsilon^{2}}$, si $f$ est holomorphe, la somme sur ces contributions tend vers 0.
+\subsection{Deformations}
+On a envie de montrer que pour une deformation locale d'un contour qui ne change pas les extremites, l'integrale de contour de $f$ holomorphe ne change pas.
+\begin{defn}[Homotopie]
+	Un lacet $\gamma$ est dit homotope a un autre lacet $\tilde \gamma$ s'il existe une fonction
+	\[ 
+	F: [ 0,1] \times [ 0,1] \to U
+	\]
+	tel que $f( \cdot,0) =\gamma, F( \cdot, 1) =\tilde\gamma$ 
+\end{defn}
+et $\forall s \in [ 0,1] , F( \cdot, s) $ est un lacet.
+\begin{defn}[Contractable]
+	Un lacet est contractible s'il est homotope au lacet trivial.
+\end{defn}
+\begin{defn}
+	Un ouvert est dit simplement connexe si tout lacet dans $U$ est contractible, et il est dit etoile par rapport a $z^{*}\in U$ si $\forall w \in U$ le segment $[z^{*},w] \in U$ 	
+\end{defn}
+
+	
+
+
+
+
+\end{document}	

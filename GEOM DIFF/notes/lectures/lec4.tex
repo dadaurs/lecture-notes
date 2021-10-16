@@ -1,0 +1,203 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Wed 13 Oct}{...}
+\begin{thm}
+La courbure de $\gamma$ est la variation naturelle de la direction de $\gamma$ 
+\end{thm}
+\begin{proof}
+Soit $\gamma: I \to \mathbb{R}^n$ une courbe $C^{2}$ que l'on suppose parametree naturellement.\\
+On fixe $p= \gamma( s_0) $ et on note 
+\[ 
+	\phi( s) = \phi_{s_0} ( s) = \ang ( T_{\gamma} ( s) ,T_{\gamma} ( s_0) ) 
+\]
+On a par trigonometrie elementaire que
+\[ 
+	\N { T( s) -T( s_0) } = 2 \sin ( \frac{\phi(s ) }{2}) 
+\]
+Donc
+\begin{align*}
+	\lim_{s \to s_0+} \frac{\phi( s) -\phi( s_0) }{s-s_0}&= \lim_{s \to s_0} \frac{\phi( s) }{2 \sin ( \phi( s) /2) } \frac{2 \sin( \frac{\phi( s) }{2}) }{s-s_0}\\
+							     &= \lim_{s \to s_0} \frac{\phi( s) }{2 \sin( \frac{\phi( s) }{2}) } \frac{\N { T( s) -T( s_0) } }{s-s_0}\\
+							     &= \lim_{s \to s_0 +} \N { \frac{T( s) -T( s_0) }{s-s_0}} 	= \kappa( s_0) 
+\end{align*}
+Donc on prouve que $\frac{d}{ds}\vert_{s_0+} \phi( s) =\kappa( s_0) $
+\subsection{Contact entre deux courbes}
+\begin{defn}[Contact de courbes]
+	Soit $\alpha,\beta: I \to \mathbb{R}^n$ deux courbes $C^{k}$.\\
+	Ces deux courbes ont un contact d'ordre $k$ en $t_0\in I$ si
+	\[ 
+		\alpha( t_0) =\beta( t_0) \text{ et } \frac{d^{n}}{dt^{n}} \alpha( t) = \frac{d^{n}}{dt^{n}\beta( t) }
+	\]
+	
+\end{defn}
+\begin{thm}
+$\alpha$ et $\beta$ ont un contact d'ordre 2 en $t_0$ $\iff$ 
+\[ 
+	\alpha( t_0) = \beta( t_0), T_{\alpha} ( t) = T_{\beta} ( t) , V_\alpha( t_0) = V_{\beta } ( t_0) 
+\]
+et
+\[ 
+	\kappa_{\alpha} ( t_0) = \kappa_\beta( t_0) 
+\]
+\end{thm}
+\begin{defn}[Cercle osculateur]
+	Soit $\gamma:I\to \mathbb{R}^n$ bireguliere et $u_0\in I$.\\
+	On appelle cercle osculateur de $\gamma$ en $u_0$ le cercle contenu dans le plan osculateur de $\gamma$ et de centre et rayon
+	\[ 
+		p= \gamma( u_0) + \rho( u_0) \mathcal{N}_\gamma( u_0) 
+	\]
+	et rayon $\rho( u_0) = \frac{1}{\kappa_{\gamma} ( u_0) }$ 
+	
+\end{defn}
+\begin{propo}
+Le cercle osculateur est l'unique cercle qui a un contact d'ordre 2.
+\end{propo}
+\section{Repere de Frenet}
+\begin{defn}[Reguliere au sens de Frenet]
+	La courbe $\gamma$ est reguliere au sens de Frenet si $\gamma \in C^{2}$ et $\gamma$ est bireguliere et $u \to N_{\gamma} ( u) $ est $C^{1}$.
+\end{defn}
+\begin{rmq}
+	\begin{itemize}
+	\item Si $\gamma$ est bireguliere et $C^{3}$, alors $\gamma$ est Frenet-reguliere.
+
+	\item Si $\gamma$ est frenet reguliere, alors $T_{\gamma} $ et $B_\gamma$ sont de classe $C^{1}$ .		
+	\end{itemize}
+	
+\end{rmq}
+Si $\gamma$ est Frenet-reguliere, alors la torsion $\tau_{\gamma} : I \to \mathbb{R}$ est
+\[ 
+	\tau_{\gamma} = \frac{1}{V_{\gamma} ( u) }\eng { \dot N, B_{\gamma} } 
+\]
+\begin{propo}
+$\gamma$ est une courbe plane $\iff$ $\tau_{\gamma} =0$ 
+\end{propo}
+\begin{proof}
+Si $\gamma$ est plane, alors le plan osculateur est constant $\iff$  $B_{\gamma} $ est constant $\Rightarrow$ $\dot { B_{\gamma} } =0 \Rightarrow \tau_{\gamma} =0$ .\\
+Supposons que $\tau_{\gamma} =0$.\\
+Soit $p=\gamma( u_0) \in \mathbb{R}^{3}$.\\
+On definit
+\[ 
+	h( u) = \eng { \gamma( u) -p, B_{\gamma} } 
+\]
+Notons que $\dot { B_{\gamma} }= - \tau_{\gamma} N =0 $ est constant.\\
+Donc
+\[ 
+	\frac{dh}{du}= \eng {\dot { \gamma} ( u) , B} = V_{\gamma} \eng { T_{\gamma} , B} =0
+\]
+Donc $h$ est constant et donc $\eng { \gamma( u) , B} = \eng { p,B} \forall u \in I$ qui est l'equation d'un plan.	
+\end{proof}
+\begin{propo}
+La torsion mesure la variation angulaire du plan osculateur, c'est a dire que si 
+\[ 
+	\theta( s) =\ang ( B_{\gamma} ( s) ,B_{\gamma } ( s_0) ) 
+\]
+
+\end{propo}
+\begin{proof}
+Alors
+\[ 
+	\frac{d}{ds}\vert_{s_0} \theta( s) = | \tau_{\gamma} ( s_0) |
+\]
+On applique la meme preuve que Serret-Frenet.
+
+\end{proof}
+\begin{defn}[Courbe a pente constante]
+	Une courbe $\gamma:I\to \mathbb{R}^{3}$ de classe $C^{1}$ est dite de pente constante si $\dot{\gamma}( u) $ fait un angle constant avec une direction fixe.
+\end{defn}
+\begin{propo}
+Soit $\gamma:I\to \mathbb{R}^{3}$ Frenet reguliere, alors $\gamma$ est de pente constante $\iff$ 
+\[ 
+\frac{\tau}{\kappa}= \text{ cste. } 
+\]
+
+\end{propo}
+\begin{proof}
+	On suppose que $\gamma$ est parametree naturellement et $\eng { T_{\gamma} ( s) , A} =a = \text{ constante } $.\\
+	\[ 
+0 = \frac{d}{ds} \eng { T,A} = \eng { \dot T, A} = \kappa \eng { N,A} 	
+	\]
+	or $\kappa\neq 0$ donc $\eng { N,A} = 0$ ce qui implique que $b= \eng { B,A} $.\\
+	On a donc
+	\begin{align*}
+	0 = \frac{d}{ds} \eng { N,A} = \eng { \kappa T- \tau B, A} \\
+	\iff \kappa \eng { T,A} = \tau \eng { B,A} \\
+	\iff \frac{\tau}{\kappa}= \text{ constante } 	
+	\end{align*}
+Supposons donc que $\frac{\tau}{\kappa}= \text{ constante } $.\\
+On pose $\lambda = \frac{\tau}{\kappa}$ et $A= \lambdaT + B$, alors
+
+\begin{align*}
+	\eng { T,A} = \lambda \eng { T,T} + \eng { B,T} = \lambda = \text{ constant } 
+\end{align*}
+Verifions que $A$ est constant, car
+\[ 
+\frac{dA}{ds}= \lambda \dot T + \dot B = \lambda \kappaN - \tau N = 0
+\]
+\end{proof}
+\subsection{Theoreme fondamental des courbes de $ \mathbb{R}^{3}$ }
+Etant donne deux fonctions continues sur l'intervalle $I$ $\kappa,\tau: I \to \mathbb{R}$ avec $\kappa( s) >0$.\\
+Alors il existe une courbe $\gamma: I \to \mathbb{R}^{3}$ Frenet reguliere telle que sa courbure et sa torsion sont donnees par $\kappa$ et $\tau$ ie. $\kappa( s) = \kappa_\gamma( s) , \tau( s) = \tau_\gamma( s) \forall s \in I$.\\
+Cette courbe est unique a un deplacement pres.		
+\begin{proof}
+On prouve d'abord l'unicite.\\
+On suppose que $\gamma_1,\gamma_{2}: I \to \mathbb{R}^{3}$ 
+sont deux courbes Frenet regulieres, de vitesse $1$ tel que $\delta_{\gamma_1} = \delta_{\gamma_2} =\delta$ et $\kappa_{\gamma_1} =\kappa_{\gamma_2} = \kappa$.\\
+\hr
+Quitte a appliquer une translation et une rotation a $\gamma_2$, on peut supposer que $\gamma_1( 0) =\gamma_2( 0) $.\\
+\[ 
+	T_1( 0) =T_2( 0) , N_1( 0) = N_2( 0) , B_1( 0) =B_2( 0) 
+\]
+On note $F_i( s) \in SO( 3) $ la matrice dont les colonnes sont $T_i, N_i, B_i$.\\
+Alors on calcule
+\[ 
+	\frac{dF_i}{ds}=F_i( s) \Omega( s) 
+\]
+avec
+\[ 
+	\Omega( s) = 
+	\begin{pmatrix}
+		0 & - \kappa & 0\\
+		\kappa & 0 & -\tau\\
+		0 & \tau & 0
+	\end{pmatrix} 
+\]
+Cette equation matricielle est equivalente aux equations de Serret-Frenet.\\
+On calcule
+\begin{align*}
+	\frac{d}{ds}( F_i( s) F_2( s)^{-1}) &= \frac{d}{ds}( F_1 F_2^{T}) \\
+					    &= \dot F_1 F_2^{T} +F_1\dot F_2^{T}\\
+					    &= ( F_1\Omega) F_2^{T}+ F_1 ( F_2\Omega) ^{T}\\
+					    &= F_1 \Omega F_2^{T}+ F_1 \Omega^{T}F_2\\
+					    &= 0
+\end{align*}
+Or $F_1( 0) \cdot F_2( 0) ^{-1}=\id$ et donc $F_1( s) = F_2( s) \forall s \in I$.\\
+Donc $T_1( s) = T_2( s) \forall s \in I$.
+Donc $\gamma_1'= \gamma_2'$ et donc $\gamma_1=\gamma_2$.
+\subsubsection*{Existence}
+Sont donnes $\kappa, \tau: I \to \mathbb{R}$, on veut construire $\gamma$.\\
+Le theoreme de Cauchy-Lipschitz sur les edo donne l'existence d'une solution au probleme de Cauchy
+\[ 
+	\frac{dF}{ds}= F( s) \Omega( s) , F( 0) =\id
+\]
+On affirme que $F( s) \in SO( 3) \forall s$.\\
+En effet, on a $F( 0) F( 0) ^{T}= \id$.\\
+\begin{align*}
+	\frac{d}{ds}F( s) F( s) ^{T}&= \dot F F^{T}+ F \dot F^{T}\\
+				    &= F\Omega F^{T}- F\Omega^{T}F^{T}=0
+
+\end{align*}
+
+Et donc $F( s)\in O( 3)  $ et $F( s)\in SO( 3)  $ car l'application $\det$ est continue.\\
+On pose donc $\gamma( s) = \int_{ 0 }^{ s }T( u) du$ 
+
+
+\end{proof}
+
+	
+	
+
+
+
+
+\end{proof}
+\end{document}	
