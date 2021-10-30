@@ -1,0 +1,109 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{6}{Wed 27 Oct}{varietes}
+\subsection{Sous-Varietes de $ \mathbb{R}^n$ }
+Rappels:
+\begin{defn}
+	Si $U \subset \mathbb{R}^n$, on note $C^{k}( U, \mathbb{R}^n) $ l'ensemble des fonctions $f: U \to \mathbb{R}^n$ qui sont continues et tel que $\forall j = 1,2,\ldots, n$ les derivees partielles
+	\[ 
+	\frac{\del^{k}}{\del x^{i_1}\ldots, \del x^{i_k}}
+	\]
+	existent et sont continues.
+\end{defn}
+\begin{defn}
+Un diffeomorphisme de classe $C^{k}$ entre deux ouverts $U,V \subset \mathbb{R}^n$ est une application $f:U\to V$ tel que
+\begin{enumerate}
+\item $f$ est bijective
+\item $f$ et $f^{-1}$ sont de classe $C^{k}$ 
+\end{enumerate}
+\end{defn}
+\begin{defn}[Systeme de coordonnees]
+	On appelle systeme de coordonnees ( generalisees ou curviligne) sur un ouvert $U$ la donnee de $n$ fonctions
+	\[ 
+	y_i : U \subset \mathbb{R}^n\to \mathbb{R}
+	\]
+	qui verifient que la fonction $f= ( y_1,\ldots, y_n) $ est un diffeomorphisme de classe $C^{k}$.	
+	
+\end{defn}
+\begin{defn}[Sous-Variete]
+	Un sous-ensemble $M \subset \mathbb{R}^n$ est une sous-variete differentiable de classe $C^{k}$ si $\forall p \in M$, il existe un ouvert $U \subset \mathbb{R}^n$ tel que $p\in U$ et un diffeomorphisme
+	$f:U\to V \subset \mathbb{R}^n$ tel que $f( M\cap U) = V\cap \mathbb{R}^{m}$ ou $ \mathbb{R}^m$ est plonge dans $ \mathbb{R}^n$.\\
+	Autre point de vue:\\
+	$M$ est une sous-variete de classe $C^{k}$ si $\forall p \in M$ il existe un systeme de coordonnees curvilignes de classe $C^{k}$ $y_1,\ldots, y_n$ definie sur un voisinage $U$ de $p$ tel que $q\in U\cap M$ $\iff$ $ y_{m+1} ( q) = \ldots = y_n( q) =0$.\\
+	On regarde $y_j( x) =0 ( j= m+1,\ldots, n) $ comme un systeme d'equations locales qui definissent la sous-variete.
+	
+\end{defn}
+\begin{defn}[Dimension d'une sous variete]
+	$m$ tel que defini ci-dessus est la dimension de $M$ et $n-m$ est la codimension de $ M \subset \mathbb{R}^n$.
+\end{defn}
+\subsubsection{Rappel de calcul differentiel}
+\begin{defn}
+	Une application $f: U \to \mathbb{R}^n$ definie sur un ouvert $U \subset \mathbb{R}^m$ est differentiable ( au sens de Frechet) en $p \in U$ s'il existe une application lineaire $l : R^{m}\to \mathbb{R}^n$ tel que
+	\[ 
+		\lim \frac{f( p+h) - f( p) - l( h) }{ |h|}=0
+	\]
+	
+\end{defn}
+\subsection{Le theoreme du rang constant}
+Si $A \in M_{n\times m} ( K)$ est de rang $r$ alors il existe des matrices inversibles $P\in GL_n( K) , Q\in GL_m( K) $ tel que
+\[ 
+PAQ^{-1} = \begin{pmatrix}
+	I_r & 0\\
+	0 & 0
+\end{pmatrix} 
+\]
+\begin{thm}[Theoreme du rang constant]
+	La meme chose se produit localement pour une application differentiable, ie. il existe une reparametrisation tel que tout fonction $f$ s'ecrit comme 
+	\[ 
+		f( x_1,\ldots, x_m) = ( x_1,\ldots, x_r, \ldots) 
+	\]
+	
+\end{thm}
+\begin{defn}
+On note 
+\[ 
+	\rg( f,p) = \rg_f( p) = \rg ( df_p) 
+\]
+
+\end{defn}
+\begin{defn}[Rang maximal]
+	\begin{enumerate}
+	\item 
+	$f$ est de rang maximal en $p$ si
+	\[ 
+		\rg_f( p) = \min \left\{ n,m \right\} 
+	\]
+\item $f$ est une submersion si $\rg_f( p) =n \forall p \in U\forall p \in U$ $\iff df_p $ est surjective $\forall p$ 
+\item $f$ est une immersion $\iff \rg_f( p) =m \iff df_p$ est injectif $\forall p \in U$ 
+	\end{enumerate}
+	
+\end{defn}
+\begin{lemma}
+	Si $f\in C^{1}( U, \mathbb{R}^n) $ alors la fonction $U\to \mathbb{N}, p\mapsto \rg_f( p) $ est semi-continue inferieurement.
+\end{lemma}
+\begin{proof}
+	Si $\rg_f( p) >\alpha$, alirs il existe une sous matrice $S_p$ de la matrice jacobienne de taille $r\times r$ tel que $\det ( S_p) \neq 0$ par continuite des $ \frac{\del f_i}{\del x_i}$ on a $\det S_q \neq 0$ pour $q$ assez proche de $p \Rightarrow \rg_f( p) \geq r > \alpha$ 
+\end{proof}
+\begin{thm}[Theoreme du rang constant]
+	Soit $f\in C^{k}( U, \mathbb{R}^{n}) , ( U \subset \mathbb{R}^m) $ avec $k \geq 1$. Supposons que $\rg_f( p) $ est constant.\\
+	Alors pour tout point $p\in U$ il existe des voisinages $V \subset U$ de $p$ et $W$ de $q= f( p) $ est des diffeomorphismes $C^{k}, \phi: U \to U', \psi: W \to W'$ tel que
+	\[ 
+	\tilde f = \psi \circ f \circ \phi^{-1}
+	\]
+	satisfait
+	\[ 
+		\tilde f( x_1,\ldots, x_m) = ( x_1, \ldots, x_r, 0, \ldots) 
+	\]
+	
+\end{thm}
+\begin{crly}[Theoreme d'inversion locale]
+	Si $f\in C^{k}( U, \mathbb{R}^n) k \geq 1, U \subset \mathbb{R}^n$ 
+	verifie que $df_p: \mathbb{R}^n\to \mathbb{R}^n$ est un isomorphisme, alors il existe des voisinages $U$ de $p$ et $V$ de $q= f( p) $ tel que $df^{-1}_q= ( df_q)^{-1}$.
+\end{crly}
+
+
+
+	
+
+
+\end{document}	

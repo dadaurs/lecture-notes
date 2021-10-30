@@ -1,0 +1,158 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Sat 30 Oct}{Theoremes d'isomorphisme}
+\begin{thm}[Premier theoreme d'isomorphisme]
+	Si $\phi: G \to H$ est un homomorphisme de groupe, alors
+	\[ 
+	G / \ker\phi \simeq \im\phi
+	\]
+		
+\end{thm}
+\begin{proof}
+	Par corestriction de l'homomorphisme $\phi: G\to H$, on obtient un homomorphisme surjectif
+	\[ 
+	\phi: G \to \im\phi
+	\]
+	Par la propriete universelle du quotient, il existe un unique $\hat{\phi}: \faktor G { \ker\phi} \to \im\phi $ 	tel que $ \hat{\phi}\circ q_{\ker\phi} = \phi$.\\
+	Puisque $\phi$ est surjectif, $ \hat{\phi}$ l'est aussi, car $\phi( a) = \hat{\phi}( \overline{a}) $.\\
+	Pour montrer que $ \hat{\phi}$ est injectif, on calcule
+	\[ 
+		\ker \hat{\phi} = \left\{ \overline{a} \in \faktor { G} {\ker\phi} | \hat{\phi}( \overline{a}) =e  \right\} = \left\{ \overline{e} \right\} 	 
+	\]
+	
+\end{proof}
+\begin{thm}[Le deuxieme theoreme d'isomorphisme]
+	Pour tout $H< G$ et tout $N \nal G$ 
+	\begin{enumerate}
+	\item $ HN = \left\{ ab| a \in H, b \in N \right\} < G$ 
+	\item $H \cap N \nal H$ ; et
+	\item $  \faktor {H} {H\cap N} \simeq \faktor {HN} {N} $ 
+	\end{enumerate}
+	
+\end{thm}
+\begin{proof}
+\begin{enumerate}
+\item Pour montrer que $HN$ est un sous-groupe de $G$, il faut montrer que $\forall ab, a'b' \in HN$,
+	\[ 
+		( ab)^{-1}( a'b') \in HN
+	\]
+	Or $( ab) ^{-1}a'b' = b^{-1}a^{-1}a'b'$; $\exists b"\in N$ tel que $b^{-1} a^{-1}= a^{-1}b"$, donc
+	\begin{align*}
+	= a^{-1}b"a'b' = a^{-1}a' b"'b'
+	\end{align*}
+
+\item Soit $a\in H, b \in H\cap N$, on veut montrer que $aba^{-1}\in H\cap N$.\\
+	Or $ b\in H\cap N \Rightarrow aba^{-1}\in H$, de meme $b\in H\cap \Rightarrow aba^{-1}\in N$.\\
+	Donc $b \in H\cap N$.
+\item $N\nal G \Rightarrow N \nal HN$, donc $\exists$ un groupe $ \faktor {HN} {N} $.\\
+	Considerons la composition
+	\[ 
+	H \oar \iota HN \oar q \faktor {HN} {N} 
+	\]
+	Montrons que $q\circ \iota$ surjectif, en effet $\forall ab \in HN$ $ \overline{ab}= abN = aN = \overline{a}$.\\
+	Montrons que $\ker q\circ \iota = H\cap N$.\\
+	\begin{align*}
+		\ker ( q\circ \iota) &= \left\{ a\in H | \overline{a}= \overline{e} \right\} \\
+		&= \left\{ a\in H | aN = N \right\} \\
+		&= \left\{ a\in H | a \in N \right\} \\
+		&= H\cap N
+	\end{align*}
+	On conclut par le premier theoreme d'isomoprhisme.
+	
+\end{enumerate}
+
+\end{proof}
+\subsection*{Notation}
+Pour $G$ un groupe,
+\begin{itemize}
+	\item $ \mathcal{S}( G) = \left\{ H \leq G \right\} $ 
+	\item $ \mathcal{N}( G) = \left\{ H \nal N \right\} $ 
+\end{itemize}
+\begin{thm}[Troisieme theoreme d'isomorphisme]
+	Soient $G$ un gorupe et $ N \nal G$. Alors
+	\begin{enumerate}
+		\item $ \mathcal{S}( \faktor {G} {N} ) = \left\{ \faktor {H} { N} | H \in \mathcal{S}( G), N<H \right\}  $ 
+		\item $ \mathcal{N}( \faktor {G} {N} ) = \left\{ \faktor {K} {N} | K \in \mathcal{N}( G), N <K  \right\} $ 
+		\item Si $K \in  \mathcal{N}( G) $ et $N <K$, alors $ \faktor {G} {K} \simeq \faktor { \faktor {G} {N} } { \faktor {K} {N}} $
+	\end{enumerate}
+			
+\end{thm}
+\begin{proof}
+\begin{enumerate}
+\item Si $ N < H <G$, alors $ \faktor {H} {N} < \faktor {G} {N} $.\\
+	Donc $ \left\{ \faktor {H} {  N} | H \in \mathcal{S}( G), N <H \right\} $.\\
+	Soit $ \hat{H}< \faktor{G}{N}$.\\
+	Alors $ q^{-1}( \hat{H}) < G$ est un ss-groupe.\\
+	\begin{align*}
+		q^{-1}( \hat{H}) = \left\{ a\in G | \overline{a} \in \hat{H} \right\} 
+	\end{align*}
+	En particulier $ N< q^{-1}( \hat{H}) $ puisque $\forall a \in N, \overline{a}= \overline{e}\in \hat{H}$.\\
+	De plus $ \faktor{q^{-1}(   \hat{H}) }{N}= \left\{ \overline{a}| a \in q^{-1}( \hat{H})  \right\} =\hat{H}	 $ 
+
+\item On sait que $ \mathcal{N}( \faktor{G}{N}) = \left\{ \faktor{H}{N}| H \in \mathcal{S}( G) , N < H, \faktor{H}{N}\nal \faktor{G}{N} \right\}$.\\
+	Or $ \faktor{H}{N}\nal \faktor{G}{N}\iff \forall \overline{a}\in \faktor{G}{N}, \overline{b}\in \faktor{H}{N}, \overline{a}\overline{b}\overline{a}^{-1}$.\\
+$\iff \forall \overline{a}\overline{b}, \overline{aba^{-1}}\in \faktor{H}{N} \iff aba^{-1}\in H$
+\item Soit $ N\nal G, K \nal G$ tel que $ N\nal K$.\\
+	Considerer $ \faktor{G}{N} \oal q_N G \oar q_K \faktor{G}{K}$.\\
+	Puisque $ N <K= \ker q_K$, par la propriete universelle du quotient $\exists! \hat{q} $ tel que $\hat{q} \circ q_N = q_K$\\
+	Observons que $ \hat{q}$ est surjectif.\\
+	Ensuite calculons $\ker \hat{q}$
+	\begin{align*}
+		\ker \hat{q} = \left\{ aN | \hat{q}( aN) = eK \right\}\\
+		&= \left\{ aN | aK = eK \right\}\\
+		&= \faktor{K}{N}
+	\end{align*}
+	On conclut par le premiet theoreme d'isomorphisme
+	
+\end{enumerate}
+
+\end{proof}
+\section{Groupes Resolubles}
+\begin{defn}[Groupe resoluble]
+	Un groupe $G$ est resoluble s'il existe une suite finie de sous-groupes 
+	\[ 
+	\left\{ e   \right\} = G_r < G_{r-1} < \ldots < G_0= G
+	\]
+	tel que
+	\begin{itemize}
+	\item $G_k\nal G_{k-1} $ 
+	\item $ \faktor{G_{k-1} }{G_k}$ est abelien 
+	\end{itemize}
+	pour tout $k$.
+\end{defn}
+\begin{rmq}
+Si $G$ est abelien, alors $G$ est resoluble, car on peut prendre $ \left\{ e   \right\} < G$ 
+\end{rmq}
+\begin{rmq}
+La decomposition n'est pas unique.
+\end{rmq}
+\begin{lemma}
+Soient $G$ un groupe et $ N \nal G$. Alors
+\[ 
+\faktor{G}{N} \text{ abelien } \iff \left\{ aba^{-1}b^{-1}| a,b \in G \right\} \subset N
+\]
+
+\end{lemma}
+\begin{proof}
+En exercice.
+\end{proof}
+\begin{propo}
+Soient $G$ un groupe et $N \nal G$. Si $ N$ et $ \faktor{G}{N}$ sont resolubles, alors $G$ l'est egalement. 
+\end{propo}
+\begin{proof}
+Si $N, \faktor{G}{N}$ sont resolubles, alors $\exists $ suites de sous-groupes.\\
+Soit $N_i$ la suite resolvant $N$ et $ K_i$ la suite resolvant $ \faktor{G}{N}$.\\
+$\exists H_i< G $ tel que $q( H_i) = K_i$.\\
+De plus, puisque $K_i \nal K_{i-1} $, on sait egalement que $H_i \nal H_{i-1}$, par le troisieme theoreme d'isomorphisme.\\
+Donc on a suite de sous-groupes de $G$ 
+\[ 
+	q^{-1}( K_s) = H_s \nal H_{s-1} \nal \ldots \nal H_1 \nal G_0=G
+\]
+
+\end{proof}
+
+
+
+
+
+\end{document}	

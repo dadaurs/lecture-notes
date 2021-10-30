@@ -1,0 +1,70 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Sat 23 Oct}{Groupes Quotients}
+\section{Groupes Quotients}
+\subsection{Quelques rappels de premiere annee}
+Soit $G$ un groupe.\\
+\begin{itemize}
+\item Un sous groupe $N$ de $G$ est normal si $aba^{-1}\in N \forall a \in G, b \in N$, on notera ceci $N \nal G$.
+\item Si $\phi: G \to H$ est un homomorphisme, alors le noyau de $\phi$ est un sous-groupe normal de $G$.\\
+$\phi$ est injectif si et seulement si $\ker\phi= \left\{ e  \right\} $
+\item Si $H < G$, on pose $ G /H= \left\{ aH | a \in H \right\} $. De plus on a 
+	\[ 
+	aH \cap bH\neq \emptyset \Rightarrow aH=bH
+	\]
+On a une application $q_H: G \to G /H: a \mapsto \overline{a}$ 
+\item Si $N \nal G$, alors $G/N$ admet une structure de groupe tel que l'application $q_N: G \to G /N$ soit un homomorphisme de groupe
+\item Soit $ N \nal G$ et soit $\phi: G \to H$. Si $N < \ker\phi$, il existe un unique homomorphisme $ \hat{\phi}: G /N\to H$ tel que $\hat{\phi}\circ q_N= \phi$
+\end{itemize}
+\subsection{Sens categorique des quotients de groupe}
+Soient deux homomorphismes de groupe de meme domaine $G_1 \oal \phi_1 G_0 \oar \phi_2 G_2$.\\
+Existe-t'il un groupe $G$ et des homomorphismes $G_1 \oar \psi_1 G \oal \psi_2 G_2$ tel que $\psi_2\phi_2= \psi_1\phi_1$ et tel que, pour tout couple d'homomorphismes $ G_1 \oar \omega_1 H \oal \omega_2 G_2$ tel que $\omega_2\phi_2=\omega_1\phi_1$, il existe un unique homomorphisme $\omega: G \to H$ tel que
+$\omega\psi_1=\omega_1$ et $\omega\psi_2= \omega_2$.\\
+\begin{rmq}
+Lorsqu'il existe $ G_1 \oar \psi_1 G \oal \psi_2 G_2$ qui repondent aux criteres de la question, on dit que c'est un pushout de $\phi_1$ et $\phi_2$. 
+\end{rmq}
+Un pushout de $ \left\{ e   \right\} \oar G_0 \oal \phi_1 G_1$ consiste en 
+\begin{enumerate}
+\item un homomorphisme $\psi_1: G_1\to G$ tel que $\im \phi_1 \subset \ker\psi_1$, tel que
+\item $\forall$ homomorphisme $\omega_1: G_1\to H$ tel que $\im \phi_1 \subset \ker \omega_1, \exists! \omega: G\to H$ tel que $\omega_1=\omega\circ \psi_1$ 
+\end{enumerate}
+\begin{propo}
+Soit $\phi: H \to G$ un homomorphisme de groupe. Soit $N \nal G$ le plus petit sous-groupe normal de $G$ qui contient $\im \phi$. Alors
+\[ 
+\left\{ e   \right\} \oar i G/N \oal q_{N_\phi} G
+\]
+ou $i$ est l'unique homomorphisme du groupe trivial vers $ G /N$, est le pushout de
+\[ 
+\left\{ e   \right\} \oal \pi H \oar \phi G
+\]
+ou $\pi$ est l'unique homomorphisme de $H$ vers le groupe trivial.
+\end{propo}
+\begin{proof}
+Il faut montrer que
+\[ 
+\im\phi \subset \ker q_{N} 
+\]
+et
+\[ 
+\forall \psi: G\to G'
+\]
+tel que $\im\phi \subset \ker\psi$ $\exists! \hat{\psi}: G /N_\phi\to G'$ tel que
+\[ 
+\hat{\psi}\circ q_N = \psi
+\]
+\hr\\
+On a 
+\[ 
+\ker q_N = N_\phi \supset \im\phi
+\]
+\hr\\
+Soit $\psi: G \to G'$ tel que $\im\phi \subset \ker\psi$.\\
+On veut trouver un homomorphisme $ \hat{\psi}: G /N \to G'$ tel que $ \hat{\psi}\circ q_N=\psi$.\\
+Or $N_\phi = \bigcap N$ et $\im \phi \subset \ker\psi \nal G$ d'ou $N \subset \ker\psi$.\\
+Par la propriete universelle du quotient, $\exists! \hat{\psi}$ 
+\end{proof}
+
+
+
+	
+\end{document}	

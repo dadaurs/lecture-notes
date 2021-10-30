@@ -1,0 +1,121 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Mon 18 Oct}{Integration complexe suite}
+\begin{propo}
+$U$ etoile $\Rightarrow$ $U$ simplement connexe
+\end{propo}
+\begin{proof}
+	On prend l'homotopie de retraction $\Gamma( s,t)= s z_* + ( 1-s) \gamma( t) \in U $ 
+\end{proof}
+\begin{propo}
+	Soit $f: U \to \mathbb{C}$ holomorphe et $\gamma$ un contour contractible tel que $\Gamma( s,t) = s z_* + ( 1-s)\gamma( t) \in U $.\\
+	Alors $\int_{ \gamma }^{  }f( z) dz=0$ 		
+\end{propo}
+\begin{proof}
+	Posons $I( s) = \int_{ \gamma_s }^{  } f( z) dz$.\\
+	On a 
+	\[ 
+		I( 0) = \int_{ \gamma }^{  }f( z) dz\quad I( 1) =0
+	\]
+	Calculons $\frac{\del}{\del s}I( s) = \int_{ 0 }^{ 1 }f( ( 1-s) \gamma( t) + s z_*) ( 1-s) \gamma'( t) $.\\
+	En permutant, on trouve
+	\begin{align*}
+	&= - \int_{ 0 }^{ 1 }f(  ( 1-s) \gamma( t) +sz_*) \gamma'( t) dt\\
+	& + ( 1-s) \int_{ 0 }^{ 1 }f'( ( 1-s) \gamma( t) + sz_*) ( -\gamma( t) +z_*) \gamma'( t) dt\\
+	&=- \int_{ \gamma }^{  }g_s( z) dz + \int_{ \gamma }^{  }g'_s( z)( z_*-z) dz \\
+	&= - \int_{ \gamma }^{  }g_s( z) dz- \int_{ \gamma }^{  }g_s( z) dz =0	
+	\intertext{Avec }
+	g_s( z) = f( ( 1-s) z+ sz_*) 
+	\intertext{et}
+	g'_s( z) = f'( ( 1-s) z+sz_*) ( 1-s) 
+	\end{align*}
+	
+\end{proof}
+\begin{thm}
+	Soit $f$ une courbe holomorphe et $\gamma: [ 0,1] \to U$ un contour contractible dans $U$ alors
+	\[ 
+		\int_\gamma f( z) dz=0
+	\]
+		
+\end{thm}
+\begin{proof}
+	On peut ecrire $\int_{\gamma} f( z) dz$ comme
+	\[ 
+		\sum_i \int_{ \gamma_i }^{  } f( z) dz
+	\]
+	ou les $\gamma_i$ sont retractables.
+\end{proof}
+\begin{crly}
+Soit $f: U \to \mathbb{C}$ une fonction holomorphe et $\gamma,\tilde \gamma$ deux contours avec memes extremites homotopes.\\
+\end{crly}
+\begin{proof}
+$\gamma\ominus \tilde\gamma$ est contractible.
+\end{proof}
+\subsection{Existence de primitives holomorphes}
+On a deja vu que $ \int_{ \gamma }^{  }f'( z) dz= f( \gamma( 1) ) - f( \gamma( 0) ) $ et donc pour un lacet $ \int_{ \gamma }^{  }f'( z) dz=0$.\\
+Est-ce que si $ \int_{ \gamma }^{  }f'( z) dz=0$ pour tout $\gamma$, alors $f= F'$ pour $F$ holomorphe.
+\begin{defn}
+	Soit $f:U \to \mathbb{C}$ une fonction continue. On dit que $f$ a une primitive holomorphe $F$ si $F'=f$.
+\end{defn}
+Comment construire $F$, si elle existe?\\
+On aimerait prendre $z_* \in U$ et poser $F( z) = \int_{ z_* }^{ z }f( \zeta) d\zeta$, mais poour que ca soit bien defini, il faut que l'integrale ne depende pas du choix du chemin de $z_*$ a $z$.\\
+Cela motive la definition suivante: On dit que $f: U \to \mathbb{C}$ continue satisfait la condition de Morera si pour tout lacet $\gamma: \int_{ \gamma }^{  }f( z) dz=0$.\\
+\begin{defn}
+	Si $f$ satisfait la condition de Morera, on definit
+	\[ 
+		\int_{ z_* }^{ z } f( \zeta) d\zeta
+	\]
+	comme la valeur commune de $ \int_{ \gamma }^{  }f( \zeta) d\zeta$.
+\end{defn}
+\begin{thm}
+	Soit $f:U\to \mathbb{C}$ continue. Alors $f$ a une primitive holomorphe si et seulement si $f$ satisfait la condition de Morera.
+\end{thm}
+\begin{proof}
+	Si $f$ a une primitive holomorphe, alors $\int_\gamma F' = F( \gamma( 1) ) -F( \gamma( 0) ) =0$ pour tout lacet $\gamma$.\\
+	Posons $z_*\in U$ et $F( z) = \int_{ z_* }^{ z } f( \zeta) d\zeta$, montrons que 
+	\[ 
+		\frac{F( z+h) -F( z) }{h}\to f( z) 
+	\]
+	On a 
+	\[ 
+		F( z+h) - F(z) = \int_{ z }^{ z+h }f( \zeta) d\zeta
+	\]
+	On a 
+	\begin{align*}
+		\frac{F( z+h)-F( z) - h f( z)  }{h} &= \frac{1}{h } \int_{ z }^{ z+h } ( f( \zeta) -f( z) ) d\zeta	
+		\intertext{ En choisissant $\gamma( t) = z+ th$, on a }
+	    & \leq |\frac{F( z+h) -F( z) -h f( z) }{h}\leq \frac{1}{|h|}l( \gamma) \max_{\zeta\in [ z,z+h] ( f( \zeta) -f( z) ) } \to 0	
+	\end{align*}	
+	
+\end{proof}
+\begin{crly}
+Soit $f: U \to \mathbb{C}$ holomorphe avec $U$ simplement connexe.\\
+Alors $f$ a une primitive holomorphe.
+\end{crly}
+\begin{proof}
+	Comme tout lacet $\gamma$ est contractible, $ \int_{ \gamma }^{  }f( z) dz=0$ 
+\end{proof}
+\begin{rmq}
+On aimerait definir $\log$ comme $ \int_{ 1 }^{ z } \frac{1}{\zeta}d\zeta$ mais ce n'est pas possible sur $\mathbb{C}^{*}$
+\end{rmq}
+\subsection{Indice d'un lacet}
+L'indice d'un lacet autour d'un point.\\
+Soit $\gamma: [ 0,1] \to \mathbb{C}$ un lacet et soit $z\in \mathbb{C}\setminus \im\gamma $, on definit l'indice $\ind( \gamma,z) $ comme
+\[ 
+\frac{1}{2\pi i}\int_{ \gamma }^{  } \frac{1}{\zeta-z}d\zeta
+\]
+\begin{propo}
+	$\ind( \gamma,z) \in \mathbb{Z}$ 
+\end{propo}
+
+
+
+
+	
+		
+		
+
+
+
+	
+\end{document}	

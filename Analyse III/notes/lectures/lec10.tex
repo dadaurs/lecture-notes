@@ -1,0 +1,89 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Mon 25 Oct}{...}
+\section{Formule de Cauchy}
+Donne les valeurs d'une fonction holomorphe a l'interieur d'un lacet en terme des valeurs sur le lacet.
+\begin{thm}[Formule de Cauchy]
+	Soit $f: D( z,\rho) \to \mathbb{C}$ holomorphe.\\
+	Soit $\gamma: [ 0,1] \to D( z,\rho) $ un lacet homotope dans $D( z,\rho) \setminus \left\{ z \right\} $ a $\del D( z,\epsilon) $ pour $\epsilon>0$, oriente dans le sens trigonometrique.\\
+	Alors
+	\[ 
+		f( z) = \frac{1}{2\pi i}\oint_\gamma \frac{f( \zeta) }{\zeta-z}d\zeta
+	\]
+	
+\end{thm}
+\begin{crly}
+	Soit $f:U\to \mathbb{C}$ holomorphe et $\gamma$ un lacet homotope dans $U\setminus z$ a $\del D( z,\epsilon) $ dans $z\in U$, alors
+	\[ 
+		f( z) = \frac{1}{2\pi i}\oint_\gamma \frac{f( \zeta) }{\zeta-z}d\zeta
+	\]
+\end{crly}
+\begin{proof}
+Par hypothese sur $\gamma$ et par holomorphie de $f$ 
+\begin{align*}
+	\frac{1}{2\pi i} \oint \frac{f( \zeta) }{\zeta-z} &= \frac{1}{2\pi i}\oint_{\del D( z,\epsilon) } \frac{f( \zeta) }{\zeta-z}d\zeta
+\end{align*}
+pour tout $\epsilon \in ( 0,\rho) $.\\
+Faisons tendre $\epsilon\to 0$, on utilise
+\[ 
+	f( \zeta) = f( z) + f'( z) ( \zeta-z) + o( \zeta-z) 
+\]
+On a donc
+\begin{align*}
+	&\frac{1}{2\pi i}\oint_{\del D( z,\epsilon) } \frac{f( z) + f'( z) ( \zeta-z) + o( \zeta-z) }{\zeta-z} d\zeta\\
+	=& f( z) + f'( z) \oint 1 d\zeta + \oint o( 1) d\zeta\\
+	=& f( z) + 0 + o( \epsilon) 
+\end{align*}
+\subsection*{Consequences}
+\begin{enumerate}
+\item Analyticite\\
+	\begin{thm}
+		Soit $f: D( z_*,\rho) \to \mathbb{C}$ holomorphe, alors $f$ est analytique, donnee par 
+		\[ 
+			f( z) = \sum a_n ( z-z_*) ^{n}
+		\]
+		de rayon de convergence $ \geq \rho$ avec
+		\[ 
+			a_n = \frac{1}{2\pi i} \oint \frac{f( \zeta) }{( \zeta-z_* )^{n+1}}d\zeta
+		\]
+		
+		
+	\end{thm}
+	\begin{proof}
+	Supposons $z_*=0$, on a 
+\begin{align*}
+	f( z) = \frac{1}{2\pi i }\oint \frac{f( \zeta) }{\zeta-z}d\zeta
+\end{align*}
+Comme 
+\[ 
+\frac{1}{\zeta-z}= \frac{1}{\zeta} \sum_{n=0}^{ \infty }\frac{1}{\zeta^{n}}z^{n}
+\]
+On a 
+\begin{align*}
+	f( z) &= \frac{1}{2\pi}\oint_{\del D( 0,\rho) } \sum \frac{f( \zeta) }{\zeta^{n+1}}z^{n}d\zeta\\
+	      &= \sum_{n=0}^{ \infty } ( \frac{1}{2\pi i}\oint \frac{f( \zeta) }{\zeta^{n+1}}d\zeta ) z^{n}
+\end{align*}
+	\end{proof}
+\item 
+Ainsi, $f$ holomorphe implique $f'$ holomorphe.
+
+	
+\end{enumerate}
+\begin{thm}[Morera]
+	Si $f:U \to \mathbb{C}$ continue satisfait $\forall \gamma$ contractible
+	\[ 
+		\oint_\gamma f( z) dz =0	
+	\]
+Alors $f$ est analytique.	
+\end{thm}
+\begin{proof}
+	Soit $z_*\in U$ et $\epsilon>0$ tq $D( z_*, \epsilon) \subset U$.\\
+	Comme tout lacet est contractible dans $D( z_*,\epsilon) $, et ainsi $f$ analytique. La condition de Morera dans $D( z,\epsilon)$ est satisfaite.
+\end{proof}
+
+
+
+\end{proof}
+	
+
+\end{document}	

@@ -1,0 +1,182 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Wed 20 Oct}{...}
+\section{Courbes dans le plan oriente}
+\begin{defn}
+	On dit que deux bases d'un ev reel de dimension finie.\\
+	On dit que deux bases ont la meme orientation si la matrice de changement de base a determinant positif.\\
+	C'est une relation d'equivalence appellee une "classe d'orientation"
+\end{defn}
+Un espace vectoriel est oriente si on en a choisi une classe d'orientation.\\
+L'orientation canonique de $ \mathbb{R}^{n}$ est celle associee a la base canonique.
+\begin{defn}[Angle oriente]
+	L'angle oriente entre deux vecteurs $\vec{a}$ et $\vec{b}$ dans un plan oriente est defini par $\hat { \vec{a},\vec{b}} = \pm \hat{ \vec{a},\vec{b}}$ avec le signe $+$ si $\left\{ \vec{a},\vec{b} \right\} $ est une base positive ( directe ) et $-$ sinon.
+\end{defn}
+\begin{defn}[L'operateur J ]
+	On note $J = R_{+\frac{\pi}{2}} $ la rotation dans un plan oriente d'angle $+ \frac{\pi}{2}$.
+\end{defn}
+Dans une base orthonormee directe, on a $J = R_{+\frac{\pi}{2}} = \begin{pmatrix}
+	0 & -1\\
+	-1 & 0
+\end{pmatrix} $ 
+\begin{defn}[Produit exterieur]
+	Le produit exterieur de deux vecteurs $\vec{a}$ et $\vec{b}$ dans un plan oriente est
+	\[ 
+	\vec{a}\wedge \vec{b} =\eng { \vec{a}, J\vec{b}} 
+	\]
+	
+\end{defn}
+\begin{rmq}
+\begin{enumerate}
+\item $a \wedge b = \N a \N b \sin \theta$, alors
+\item Si on plonge $ \mathbb{R}^{2}\to \mathbb{R}^{3}$ 
+	\[ 
+	\vec{a}\wedge \vec{b} = \eng { \vec{a}\times \vec{b}, e_3} 
+	\]
+	
+\end{enumerate}
+\end{rmq}
+\begin{defn}
+	Si $\gamma: I \to \mathbb{R}^{2}$ une courbe de classe $C^{1}$, alors on definit le vecteur normal oriente a $\gamma$ 
+	\[ 
+		N^{or}( u) 
+	\]
+	par la condition que
+	\[ 
+		T_\gamma \wedge N^{or}>0 \iff \left\{ T, N^{or}  \right\} \text{ est orthonormee directe } 
+	\]
+\end{defn}
+On definit la courbure orientee d'une courbe reguliere de classe $C^{2}$ par
+\[ 
+	k( u) = \kappa^{or}( u) = \frac{1}{V} \eng { \dot T, N^{or}} 		
+\]
+\begin{defn}
+	On dit qu'un arc de courbe $\gamma$ de classe $C^{2}$ dnas un plan oriente est convexe si $k>0 $, concave si $k<0$.\\
+	On dit que $\gamma$ est une "spirale" si la courbure est non nulle et monotone.\\
+	Un point d'inflexion si la courbure change de signe en ce point.\\
+	Un point est un "sommet" si la derivee de la courbure change de signe
+\end{defn}
+\begin{rmq}
+	Le graphe de $f( x) $ a un point d'inflexion en $f"( x) =0$ et $f"( x) $ change de signe
+\end{rmq}
+\begin{defn}[Fonction angulaire]
+	La fonction angulaire d'une courbe plane ( dans un plan oriente).\\
+	Soit $\gamma: [ a,b] \to \mathbb{R}^{2}$ une courbe $C^{2}$.\\
+	On appelle fonction angulaire de $\gamma$ la fonction
+	\[ 
+	\phi: [ a,b] \to \mathbb{R}
+	\]
+	verifiant 
+	\begin{enumerate}
+	\item $\phi$ est continue
+	\item $\phi( u) = \hat{ \dot \gamma ( u) , \vec{a}} \mod 2\pi$ 
+	\end{enumerate}
+	
+\end{defn}
+\begin{rmq}
+Si on prend $\vec{a}= e_1$, alors
+\[ 
+T = \frac{\dot\gamma}{\N { \dot\gamma }}
+\]
+
+\end{rmq}
+\begin{propo}
+La courbure orientee est la variation naturelle de la fonction angulaire.
+\end{propo}
+\begin{proof}
+	On a $T= ( \cos\phi,\sin\phi) $, donc 
+	\[ 
+		N = ( -\sin\phi,\cos\phi) 
+	\]
+	et de meme
+	\[ 
+	k= \frac{1}{V}\eng { \dot T, N} 
+	\]
+	
+\end{proof}
+\begin{thm}[Theoreme fondamental des courbes planes]
+	Soit $k: [ 0,L] \to \mathbb{R}$ une fonction continue, alors il existe une courbe $\gamma: [ 0,L] \to \mathbb{R}^{2}$, de classe $C^{2}$ de courbure $k( s)$ et de vitesse 1.\\
+	Cette courbe est unique a isometrie directe pres.
+\end{thm}
+\begin{proof}
+\subsubsection*{Existence}
+La fonction $k: [ 0,L] \to \mathbb{R}$ est donnee. On pose 
+\[ 
+	\phi( s) = \int_{ 0 }^{ s } k( u) du
+\]
+Puis on pose $T( s) = ( \cos\phi( s) ,\sin( \phi( s) ) ) $, on a donc $N( s) = ( -\sin( \phi( s) ) ) , \cos\phi( s) $.\\
+On pose encore
+\[ 
+	X( s) = \int_{ 0 }^{ s }\cos( \phi( s) ) ds, Y( s) = \int_{ 0 }^{ s }\sin( \phi( s) ) ds
+\]
+On pose enfin $\gamma( s) = ( X( s) , Y( s) ) $.\\
+L'existence est donc prouvee.\\
+L'unicite vient de $ \frac{d\phi}{ds}=k$ 
+\end{proof}
+\begin{defn}
+	On dit qu'une courbe $\gamma: [ a,b] \to \mathbb{R}^n$ est une courbe fermee de classe $C^{k}$ si $\gamma( a) =\gamma( b)$ et les derivees coincident.
+\end{defn}	
+Une telle courbe s'appelle aussi courbe periodique, car on peut l'etendre a 
+\[ 
+\gamma: \mathbb{R}\to \mathbb{R}^{2}
+\]
+\begin{thm}[Theoreme des 4 sommests]
+	Toute courbe plane $C^{2}$-fermee admet au moins 4 changement de signes  de $ \frac{dk}{du}$ 	
+\end{thm}
+\begin{proof}
+On montre le resultat dans le cas d'une courbe convexe.\\
+Soit $\gamma: [ a,b] \to \mathbb{R}^{2}$ une courbe $C^{2}$-convexe. Alors on a $k( a) =k( b) $ et on note $\gamma( s) = ( X( s) ,Y( s) ) $.\\
+On suppose $V_\gamma( s) =1$, alors on a
+\[ 
+\frac{dT}{ds}= kN
+\]
+avec 
+\[ 
+	T= ( \dot x,\dot y) , N = JT= ( -\dot y, \dot x) 
+\]
+Ainsi,
+\[ 
+\ddot x= - k \dot y, \ddot y = k \dot x
+\]
+On a alors
+\[ 
+	\int_{ a }^{ b }  \dot k ( s) = 0
+\]
+et
+\[ 
+	\int_{ a }^{ b } k( s) \dot y ( s) ds = - \int_{ a }^{ b }\ddot  y ( s) ds =0
+\]
+et
+\[ 
+	\int_{ a }^{ b }k( s) \dot x ( s) ds =0
+\]
+Supposons que $\gamma: [ a,b] \to \mathbb{R}^{2}$ est $C^{2}$-fermee avec deux changements de signe de $\dot k ( s) $, par exemple $\dot k ( s) >0$ sur $ ( a,c) $ et $\dot k ( s) <0$ sur $ ( c,b) $. Notons $p= \gamma( a) = \gamma( b) , q = \gamma( c) $, soit
+\[ 
+	h( x,y) = Ax + By+C=0
+\]
+l'equation de la droite par $p$ et $q$.\\
+Alors le signe de $\dot k ( s)( Ax+By +C)  $ est constant.\\
+Mais 
+\begin{align*}
+0<	\int_{ a }^{ b } f( s) ds &= A \int_{ a }^{ b }\dot k x( s) ds + B \int_{ a }^{ b }\dot k y( s) ds + C \int_{ a }^{ b }\dot k ds=0\\
+\end{align*}
+Contradiction.			
+		
+\end{proof}
+\section{Surfaces}
+\subsection{Le concept de variete}
+\begin{defn}[Variete]
+	Une variete topologique de dimension $n\in \mathbb{N}$ est un espace topologique $M$ tel que
+	\begin{enumerate}
+	\item Chaque point $p\in M$ admet un voisinage homeomorphe a un ouvert de $ \mathbb{R}^n$ 
+	\item L'espace topologique $M$ est separe ( de Hausdorff) et admet une base denombrable d'ouvert
+	\end{enumerate}
+\end{defn}
+\begin{defn}[Surface topologique]
+	Une surface topologique est une variete de dimension 2.
+\end{defn}
+	
+				
+
+								
+\end{document}	

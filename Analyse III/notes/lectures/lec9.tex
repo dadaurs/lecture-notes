@@ -1,0 +1,88 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Thu 21 Oct}{...}
+\begin{thm}
+	$\ind( \gamma,z) \in \mathbb{Z}$ 
+\end{thm}
+\begin{proof}
+Montrons que 
+\[ 
+	\exp( \int_{ \gamma }^{  }\frac{d\zeta}{\zeta-z}) =1
+\]
+Posons $\phi( t) = \exp ( \int_{ 0 }^{ t }\frac{\gamma'( s) }{\gamma( s) -z}ds) $ 
+
+On a donc
+\[ 
+	\del_t \log\phi( t) = \frac{\gamma'( t) }{\gamma( t) -z}
+\]
+De meme
+\[ 
+	\del_t \log( \gamma( t) -z) = \frac{\gamma'( t) }{\gamma( t) -z}
+\]
+Donc
+\[ 
+	\del_t \log ( \frac{\phi( t) }{\gamma( t) -z}) =0
+\]
+Si $\gamma$ n'est pas derivable sur un ensemble $S \subset [ 0,1] $ fini, la conclusion est la meme car si $f'( t) =0\forall t \in [ 0,1] \setminus S$ 35 $S$ fini, $f$ constante.
+\end{proof}
+\subsection{$\log$ et racines}
+\begin{propo}
+Soit $U$ un domaine simplement connexe qui ne contient pas 0 et $z_*\in U$ et $W_*$ tel que $ e^{W_*} = z_*$.\\
+Alors la fonction $L: U \to \mathbb{C}$ definie par
+\[ 
+	L( z) = W_* + \int_{ z_* }^{ z }\frac{1}{\zeta}d\zeta
+\]
+est telle que
+\[ 
+	\exp( L( z) ) =z\forall z \in U
+\]
+
+\end{propo}
+\begin{proof}
+En $z_*$ , c'est bon.\\
+On va essaier de montrer que sur un petit voisinage de $W_*$, $L\circ\exp=\id$.\\
+On a 
+\begin{align*}
+	( L( e^{z}) )' = \frac{1}{e^{z}}e^{z}=1
+\end{align*}
+Si $w$ est dans un petit voisinage de $W_*$.\\
+Donc,
+\[ 
+	\exp( L( \exp( w) ) ) = \exp ( w) 
+\]
+Comme $\exp$ est bijective dans un petit voisinage de $W_*$, on a $\exp\circ\log=\id$.\\
+Dans la section suivante, on verra que holomorphe implique analytique et le principe des zeros isoles s'applique donc a la fonction $\exp\circ\log-\id=0$ 
+\end{proof}
+Avec un log on peut definir des racines.\\
+Soit $U$ simplement connexe qui ne contient pas 0, alors pour tout $n$, il existe $n$ fonctions holomorphes $r_n: U\to \mathbb{C}$ tel que
+\[ 
+	( r_n)^{n}( z) =z
+\]
+\begin{proof}
+	Prendre $\exp \frac{1}{n}L( z) $ 
+\end{proof}
+\begin{propo}
+	Soit $U$ simplement connexe et $f:U\to \mathbb{C}$, avec $f( z) \neq 0 \forall z $, alors il existe $ L_f: U \to \mathbb{C}$ holomorphe tel que
+	\[ 
+		\exp( L_f ) 	= f( z) 
+	\]
+	et soit $z_*\in U$ et $l_*$ tel que $ e^{l_*} =z_*$ 
+	
+\end{propo}
+\begin{proof}
+On pose 
+\[ 
+	L_f( z) = l_* + \int_{ z_* }^{ z } \frac{f'( \zeta) }{f( \zeta) }d\zeta
+\]
+	
+\end{proof}
+\begin{rmq}
+	Cela couvre des cas ou $f( U) $ pourrait ne pas etre simplement connexe.
+\end{rmq}
+
+
+	
+
+
+
+\end{document}	

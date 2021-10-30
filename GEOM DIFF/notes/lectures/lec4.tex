@@ -8,7 +8,7 @@ La courbure de $\gamma$ est la variation naturelle de la direction de $\gamma$
 Soit $\gamma: I \to \mathbb{R}^n$ une courbe $C^{2}$ que l'on suppose parametree naturellement.\\
 On fixe $p= \gamma( s_0) $ et on note 
 \[ 
-	\phi( s) = \phi_{s_0} ( s) = \ang ( T_{\gamma} ( s) ,T_{\gamma} ( s_0) ) 
+	\phi( s) = \phi_{s_0} ( s) = \hat { ( T_{\gamma} ( s) ,T_{\gamma} ( s_0) )  }
 \]
 On a par trigonometrie elementaire que
 \[ 
@@ -89,7 +89,7 @@ Donc $h$ est constant et donc $\eng { \gamma( u) , B} = \eng { p,B} \forall u \i
 \begin{propo}
 La torsion mesure la variation angulaire du plan osculateur, c'est a dire que si 
 \[ 
-	\theta( s) =\ang ( B_{\gamma} ( s) ,B_{\gamma } ( s_0) ) 
+	\theta( s) =\hat { ( B_{\gamma} ( s) ,B_{\gamma } ( s_0) ) } 
 \]
 
 \end{propo}
@@ -124,14 +124,14 @@ Soit $\gamma:I\to \mathbb{R}^{3}$ Frenet reguliere, alors $\gamma$ est de pente 
 	\iff \frac{\tau}{\kappa}= \text{ constante } 	
 	\end{align*}
 Supposons donc que $\frac{\tau}{\kappa}= \text{ constante } $.\\
-On pose $\lambda = \frac{\tau}{\kappa}$ et $A= \lambdaT + B$, alors
+On pose $\lambda = \frac{\tau}{\kappa}$ et $A= \lambda T + B$, alors
 
 \begin{align*}
 	\eng { T,A} = \lambda \eng { T,T} + \eng { B,T} = \lambda = \text{ constant } 
 \end{align*}
 Verifions que $A$ est constant, car
 \[ 
-\frac{dA}{ds}= \lambda \dot T + \dot B = \lambda \kappaN - \tau N = 0
+\frac{dA}{ds}= \lambda \dot T + \dot B = \lambda \kappa N - \tau N = 0
 \]
 \end{proof}
 \subsection{Theoreme fondamental des courbes de $ \mathbb{R}^{3}$ }
@@ -184,7 +184,6 @@ En effet, on a $F( 0) F( 0) ^{T}= \id$.\\
 \begin{align*}
 	\frac{d}{ds}F( s) F( s) ^{T}&= \dot F F^{T}+ F \dot F^{T}\\
 				    &= F\Omega F^{T}- F\Omega^{T}F^{T}=0
-
 \end{align*}
 
 Et donc $F( s)\in O( 3)  $ et $F( s)\in SO( 3)  $ car l'application $\det$ est continue.\\

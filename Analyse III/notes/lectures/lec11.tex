@@ -1,0 +1,92 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Thu 28 Oct}{Liouville}
+\subsection{Applications de Morera}
+\begin{thm}
+	Soit $f_n: U\to \mathbb{C}$ une suite de fonctions holomorphes qui converge uniformement sur tous les compacts de $U$ vers $f:U\to \mathbb{C}$.\\
+	Alors $f$ est holomorphe.
+\end{thm}
+\begin{proof}
+	$f$ est continue, et pour tout $\gamma: [ 0,1] \to U$ contractible ( dans $U$ ), on a 
+	\[ 
+		\oint_{\gamma} f( z) dz = \lim_{n \to  + \infty} \oint_\gamma f_n( z) dz
+	\]
+	car $\gamma$ est compact.
+\end{proof}
+\begin{crly}
+Si $\sum f_n$ avec $f_n$ holomorphe et pour tout compact $\sum \N { f_n }_{ \infty } $ converge, alors la serie converge vers une fonction holomorphe.
+\end{crly}
+\section{Applications de la formule de Cauchy}
+\begin{thm}[Inegalites de Cauchy]
+	Soit $f:U\to \mathbb{C}$ holomorphe, $z\in U$ et $r>0$ tel que $\overline{D}( z,r) \subset U$ et soit $ \sum_{n=0}^{ \infty }a_n ( \zeta-z)^{n}$ le developpement de $f$ en $z$.\\
+	Alors
+	\[ 
+		|a_n| \leq r^{-n} \max_{\zeta\in \del D( z,r) } |f( \zeta) |
+	\]
+	
+\end{thm}
+\begin{proof}
+Par la formule de Cauchy, on a 
+\begin{align*}
+	a_n &= \frac{1}{2\pi i} \oint_\gamma \frac{f( \zeta) }{( \zeta-z)^{n+1}}d\zeta\\
+	|a_n| &\leq |\frac{1}{2\pi i}| \mathcal{L}( \del D( z,r) ) \max_{\zeta\in \del D( z,r) } \frac{|f( \zeta) |}{( \zeta-z)^{n+1}}\\
+	      &= r^{-n}\max_{\zeta\in \del D( z,r) } |f( \zeta) |
+\end{align*}
+
+\end{proof}
+\begin{thm}[Formule de Parseval]
+	Soit $f:U\to \mathbb{C}$ holomorphe, $z\in U$  et $r>0$ tel que $ \overline{D}( z,r) \subset U$.\\
+	Alors
+	\[ 
+		\sum_{n=0}^{ \infty } |a_n|^{2}r^{2n}= \frac{1}{2\pi} \int_{ 0 }^{ 2\pi }| f(r e^{i\theta}+z) |^{2} d\theta
+	\]
+	
+\end{thm}
+\begin{proof}
+Supposons $z=0$.\\
+\begin{align*}
+f( r e^{i\theta} ) = \sum_{n=0}^{ \infty } a_n r^{n} e^{i n \theta} \\
+\overline{f}( r e^{i\theta} ) = \sum_{n=0}^{ \infty }r \overline{a_n} e^{-in\theta} 
+\end{align*}
+Donc
+\begin{align*}
+	\frac{1}{2\pi} \int_{ 0 }^{ 2\pi }|f|^{2}( r e^{i\theta} ) d\theta &= \frac{1}{2\pi}  \sum_{n,m}^{ } r^{n+m} a_n \overline{a_m} \int_{ 0 }^{ 2\pi } e^{i ( n-m) \theta} d\theta\\
+	&= \sum r^{2n}|a_n|^{2}
+\end{align*}
+\end{proof}
+\begin{thm}[Principe du maximum]
+	Soit $f:U\to \mathbb{C}$ holomorphe et $z\in U$.\\
+	Alors si $|f|$ atteint un max local en $z$, $f$ est constante.
+\end{thm}
+\begin{proof}
+	Ecrivons $f( \zeta) = \sum_{}^{ } a_n ( \zeta-z) ^{n}$.\\
+	Si $|f|$ a un max, alors il existe $r>0$ tel que $ \overline{D}( z,r) \subset U$ et
+	\[ 
+		|f( z) |^{2} \geq \max_{\zeta\in \del D( z,r) } |f( \zeta) |^{2}
+	\]
+	Ainsi
+	\begin{align*}
+		\frac{1}{2\pi} \int_{ 0 }^{ 2\pi }|f( z+r e^{i\theta} ) |^{2}- f( z) d\theta &= \sum_{n=0}^{ \infty } |a_n|^{2} r^{2n} - |a_0|^{2}\\
+		&= \sum_{n=1}^{ \infty } |a_n|^{2} r^{2n} \leq 0
+	\end{align*}
+Donc $a_n=0$ 	$\forall n \geq 1$.\\
+Donc $f$ constante sur $\del D( z,r) $ et donc sur tout $U$.
+	
+\end{proof}
+\begin{thm}[Theoreme de Liouville]
+	Soit $f: \mathbb{C}\to \mathbb{C}$ holomorphe.\\
+	Alors si $|f|$ est bornee, $f$ est constante.
+\end{thm}
+\begin{proof}
+	Par les inegalites de Cauchy, appliquees a $f( z)= \sum_{n=0}^{ \infty } a_n z^{n} $, 
+	\[ 
+		|a_n| \leq  \frac{1}{r}\max |f( \zeta) |
+	\]
+		
+\end{proof}
+
+
+
+		
+
+\end{document}	

@@ -1,0 +1,84 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{6}{Wed 27 Oct}{Random Variables}
+\section{Random Variables}
+\begin{defn}[Random Variables]
+	Let $( \Omega, \mathcal{F}, \mathbb{P}) $ be a probability space.\\
+	Then $X: \Omega\mapstot \mathbb{R}$ measurable as a map $ ( \Omega, \mathcal{F}) \to ( \mathbb{R}, \mathcal{F}_E) $ is called a ( real) random variable.
+\end{defn}
+The pushforward measure $ \mathbb{P}_X ( F) = \mathbb{P}( X^{-1}( F) ) \forall F \in \mathcal{F}_E$ is called the law of $X$ 
+\begin{rmq}
+	There is a more general notion of $( \Omega_2, \mathcal{F}_2) $ valued random variable.
+\end{rmq}
+\begin{defn}[Equality of RV]
+	$X,Y$ two random variables are called equal in law if
+	\[ 
+		\mathbb{P}_X( F) = \mathbb{P}_Y( F) \forall F \in \mathcal{F}_E
+	\]
+	
+\end{defn}
+\begin{defn}
+$X$ is a R.V. we call the c.d.f. of $\mathbb{P}_X$ $F_X$ 
+\[ 
+	F_X( s) = \mathbb{P}_X( X \leq s ) 
+\]
+			
+\end{defn}
+\begin{propo}
+	Each R.V. $X$ gives rise to a unique c.d.f. $F_X( s) = \mathbb{P}_X( X \leq s) $ and conversely, each c.d.f. gives rise to a unique law of a probability measure
+\end{propo}
+\begin{proof}
+Follows directly from the proposition relating probability measures and c.d.f.
+\end{proof}
+\begin{lemma}
+\begin{enumerate}
+	\item $\mathbb{P}_X<s = F( S^{-}) $ 
+	\item $\mathbb{P}_X( X=s) = F( s) -F( s^{-}) $ 
+	\item $ \mathbb{P}_X( X\in ( a,b) ) = F( b^{-}) - F( a) $ 
+\end{enumerate}
+\end{lemma}
+\begin{defn}
+$X$ a R.V., $s\in \mathbb{R}$.\\
+If $F( s) - F( s^{-}) >0 \iff \mathbb{P}_X( X=s) >0$, then $s$ is a atom of $X$ 
+\end{defn}
+\begin{lemma}
+A R.V. can have at most countably many atoms or in other words,  a c.d.f. can have at most countably many jumps.
+\end{lemma}
+\begin{defn}
+	$X$ a R.V.\\
+	If $F_X$ increases by jumps, we call $X$  a discrete R.V.\\
+	If $F_X$ is cts, we call $X$ a cts R.V.
+\end{defn}
+\begin{propo}
+	$X$ a R.V. Then we can write $F( X) = aF_Y + b F_Z$ s.t. $a+b=1$ and $Y$ discrete, $Z$ cts R.V.
+\end{propo}
+\begin{proof}
+If $F_X$ is discrete or cts, we are done.\\
+$\exists S= \left\{ s_1,s_2, \ldots \right\}  $ s.t. $F_X( s_i) - F_X( s_i^{-}) >0$ iff $s_i \in S$ .\\
+Consider
+\[ 
+	\hat{F}_Y( s) = \sum 1_{ \left\{ S \geq s_i \right\}  } ( F( s_i) -F( s_i^{-}) ) 
+\]
+and
+\[ 
+	\hat{F}_Z( s) = F_X( s) - \hat{F}_Y( s) 
+\]
+We now show that $ \hat{F}_Z$ continuous.\\
+Finally, define
+\[ 
+	F_Y( s) = \frac{ \hat{F}_Y( s) }{ \hat{F}_Y( \infty ) }
+\]
+and similarly
+\[ 
+	F_Z( s) = \frac{\hat{F}_Z( s) }{\hat{F}_Z( \infty ) }
+\]
+
+\end{proof}
+	
+
+
+
+
+
+
+\end{document}	

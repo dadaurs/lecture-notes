@@ -59,6 +59,35 @@ Soit $c$ une categorie, et soient $b,c \in \ob C$ Si $a$ et $a'$ sont des coprod
 \begin{rmq}
 	Soit $C$ une categorie, et soient $b,c \in \ob C$. Si $a$ est un produit de $b$ et $c$ dans $C$, alors $a$ est un coproduit dans $C^{op}$.
 \end{rmq}
+\subsection{Preservation des produits/coproduits}
+\begin{propo}
+	Soit $C: L \dashv R: D$ 
+\begin{enumerate}
+	\item Soient $b,c \in \ob C$, si $b\cop c$ existe, alors $L( b\cop c) $ est un coproduit de $L( b) $ et $L( c) $ dans $D$ .
+	\item Soient $d,e \in \ob D$. Si le produit $d\times e $ existe, alors son image sous le foncteur $R$ est un produit de $R( d) $ et $R( e ) $ 
+\end{enumerate}
+\end{propo}
+\begin{proof}
+	Supposons que $b \oar i_1 b \cop c \oal i_2 c$ est un coproduit de $b$ et $c$ dans $C$, considerons son image sous $L: L( b) \oar { L( i_1) } L( b\cop c) \oal { L( i_2) } L( c) $.\\
+	Pour montrer que ceci est un coproduit de $L( b) $ et $L( c) $, il faut verifier la propriete universelle.\\
+	Soit alors un couple de morphismes $L( b) \oar f d \oal g L( c) $ dans $D$.\\
+	A voir: $\exists ! h : L( b\cop c) \to d$ qui satisfait la propriete universelle.\\
+	Observons que $f: L( b) \to d, g: L( c) \to d$ donnent $f^{\#}: b \to R( d) $ et $g^{\#}: c \to R( d) $.\\
+	Par la propriete universelle du produit, $\exists! k : b \cop c \to R( d) $ tel que $k\circ i_2 = g^{\#}$ et $k\circ i_1= f^{\#}$.\\
+	Le morphisme $k: b \cop c \to R( d) $ correspond a $k^{\flat}: L( b \cop c ) \to d$.\\
+	On va montrer que $ k^{\flat}\circ L( i_1) = f$ et que $k^{\flat}\circ L( i_2) = g$.\\
+\hr\\
+On a $k^{\flat}= \epsilon_d \circ L( k) $.\\
+De meme, on a $L( f^{\sharp}) = L( k) \circ L( i_1) $.\\
+Il suffit donc de montrer que $f= \epsilon_d \circ L( f^{\sharp}) $.\\
+Cependant, $f^{\sharp}= R( f) \circ \eta_b$ , donc $L( f^{\sharp}) = LR( f) \circ L( \eta_b) $.\\
+Reste a voir que $k^{\flat}$ est l'unique morphisme faisant commuter ces triangles.\\
+Supposons qu'il existe $l: L( b\cop c) \to d$ faisant commuter le diagramme, montrons que $l= k^{\flat}$.\\
+De maniere analogue, on trouve que $l^{\sharp}\circ i_1= f^{\sharp}$ et $l^{\sharp}\circ i_2= g$.\\
+Par l'unicite de la propriete universelle du coproduit, on en deduit que $l^{\sharp}= k^{\sharp} \Rightarrow l = k$.
+\end{proof}
+
+
 
 			
 
