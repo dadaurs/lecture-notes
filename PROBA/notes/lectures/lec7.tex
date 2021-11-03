@@ -1,0 +1,96 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Wed 03 Nov}{Example of RV}
+\subsubsection*{Geometric R.V.}
+Let $S = \mathbb{N}$ and $0<p \leq 1$.\\
+\[ 
+\mathbb{P}( X=k) = ( 1-p)^{k-1} p
+\]
+Corresponds to first succes if success rate is $p$.
+\begin{defn}
+We call a rv with support $\mathbb{N}$ memoryless if 
+\[ 
+\mathbb{P}( X>k+l| X>k) = \mathbb{P}( X>l) 
+\]
+
+\end{defn}
+\begin{propo}
+$Geo( p) $ is memoryless and every memoryless RV with suppport on $\mathbb{N}$ is a geometric rv.
+\end{propo}
+\begin{proof}
+\begin{align*}
+\mathbb{P}( X> k+l| X>k) \mathbb{P}( X>k) &= \mathbb{P}( X>k+l) = ( 1-p)^{k+l}	
+\intertext{But also $ \mathbb{P}( X>l) = ( 1-p) ^{l}$ }
+\mathbb{P}( X>k+l| X>k) = ( 1-p)^{l}
+\end{align*}
+
+Now suppose $X$ is a memoryless RV with $\mathbb{P}( X>1) >0$, then
+\[ 
+\mathbb{P}( X>l+1|X>1) = \frac{\mathbb{P}( X>l+1) }{\mathbb{P}X>1}= \mathbb{P}( X>l) 
+\]
+Inductively, it follows that $\mathbb{P}( X>l) = \mathbb{P}( X>1)^{l} $ 
+
+\end{proof}
+\subsection*{Poisson RV}
+Define 
+\[ 
+\mathbb{P}( Poi( \lambda) =k) = \frac{\lambda^{k}}{k!} e^{-\lambda} 
+\]
+\begin{propo}
+	\[ 
+	Ber( n, \frac{\lambda}{n}) \mapsto Poi( \lambda) \text{ as } n \to \infty 
+	\]
+	in the sense that $\forall k \in \mathbb{N}$ 
+	\[ 
+	\mathbb{P}( Ber( n, \frac{\lambda}{n}) =k) \to \mathbb{P}( Poi( \lambda) =k) 
+	\]
+	
+\end{propo}
+\begin{proof}
+\begin{align*}
+\mathbb{P}( Bin( n, \frac{\lambda}{n}) =k) = \binom n k ( \frac{\lambda}{n}) ^{k} ( 1- \frac{\lambda}{n})^{n-k} &= \mathbb{P}( Bin( n, \frac{\lambda}{n}) =k) = \binom n k ( \frac{\lambda}{n}) ^{k} ( 1- \frac{\lambda}{n})^{n}( 1- \frac{\lambda}{n})^{-k}\\
+&= \frac{\lambda^{k}}{k!} e^{-\lambda} ( \frac{n!}{( n-k!) n^{k}}( 1-\frac{\lambda}{n})^{-k}) \to \frac{\lambda^{k}}{k!} e^{-\lambda} 
+\end{align*}
+
+\end{proof}
+\subsection{Independence of RV}
+\begin{defn}[Independence of RV]
+	$ ( X_i)_{i \geq 1} $ RV defined on $ (\Omega, \mathcal{F}, \mathbb{P}) $ are called mutually independent if $\forall J \subset \left\{ 1,2, \ldots \right\} $ finite ad $\forall E_j \in \mathcal{F}_E\forall j \in J$.\\
+	\[ 
+	\mathbb{P}(  \bigcap_{j\in J} \left\{ X_j\in E_j \right\} ) = \prod \mathbb{P}( X_j\in E_j) 
+	\]	
+\end{defn}
+\begin{propo}
+$( X_i)_{i \geq 1} $ RV with laws $ \mathbb{P}_{X_i} $ then we can find a probability space $ ( \Omega, \mathcal{F}, \mathbb{P}) $ and RV $ \tilde X_i$ s.t.
+\begin{itemize}
+\item $X_i \simeq \tilde X_i$ 
+\item $( \tilde X_i) $ are mutually independent.h
+\end{itemize}
+
+\end{propo}
+\begin{proof}
+Consider the product probability space of $ ( \mathbb{P}_{X_i} ) $ i.e. $ ( \mathbb{R}^n, \mathcal{F}_\pi, \mathbb{P}_\pi) $.\\
+Let $\tilde X_i$ be the projection on the i-th coordinate.\\
+Are $ ( \tilde X_i) $ independent?\\
+\[ 
+\mathbb{P}_\pi ( \bigcap_{j\in J} \left\{ \tilde X_j \in E_j \right\} ) = \mathbb{P}_\pi ( \bigcap_i F_i) 
+\]
+With $F_i= \mathbb{R}$ if $i\not\in J$  and $F_i=E_i $ if $i\in J$ 
+
+\end{proof}
+\subsection{Example of continuous random variables}
+We will mainly work with a subclass of continuous rv:
+\begin{defn}[Random variables with density]
+	We call a continuous rv $X$ with c.d.f. $F_x$ a r.v. with densite if $\exists f: R \to [ 0, \infty ) $ which is integrable, $ \int_\mathbb{R} f=1$ st
+	\[ 
+	\mathbb{P}( X \leq t) = F_X( t) = \int_{ - \infty  }^{ t }f_X( s) ds
+	\]
+		
+\end{defn}
+
+
+
+
+	
+
+\end{document}	

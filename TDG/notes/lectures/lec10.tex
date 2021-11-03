@@ -1,0 +1,81 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Sun 31 Oct}{Introduction aux actions de groupe}
+\section{Actions de groupe}
+\begin{defn}[Action de groupe]
+	Une action de groupe $G$ sur l'ensemble $X$ consiste en un homomorphisme de groupe
+	\[ 
+	\phi: G \to \aut X
+	\]
+	
+\end{defn}
+De maniere equivalente, une action de $G$ sur $X$ consiste en une application
+\[ 
+\phi^{\flat}: G \times X \to X
+\]
+tel que
+\[ 
+\phi^{\flat}( a\cdot b, x) = \phi^{\flat}( a, \phi^{\flat}( b,x) ) \text{ et } \phi^{\flat}( e,x) = x\forall a,b\in G, x \in X
+\]
+\begin{defn}[Points fixes]
+	L'ensemble des points fixes par $a$ , note $X^{a}$ est le sous-ensemble de $X$ defini par
+	\[ 
+	X^{a}= \left\{ x\in X| ax=x \right\} 
+	\]
+	
+	L'ensemble des points fixes de l'action $\phi$, note $( X,\phi)^{G}$ ou simplement $X^{G}$ est le sous-ensemble de $X$ defini par
+	\[ 
+	X^{G}= \left\{ x\in X| ax= x \forall a \in G \right\} = \bigcap_{a\in G} X^{a}
+	\]
+	
+\end{defn}	
+\begin{defn}[Orbite]
+	Soit $\phi: G\to \aut X$ une action de groupe. Soit $x\in X$ 
+	\begin{enumerate}
+	\item L'orbite de $x$, note $O_x$ est le sous-ensemble de $X$ defini par
+		\[ 
+		O_x= \left\{ ax| a \in G \right\} 
+		\]
+		
+	
+	\item L'ensemble des orbites de l'action est 
+		\[ 
+			( X,\phi) _G= \left\{ O_x| x \in X \right\} 
+		\]
+		que l'on note souvent simplement $X_G$. 
+
+	\item Le stabilisateur de $x$, note $G_x$ est le sous-groupe de $G$ defini par
+		\[ 
+		G_x= \left\{ a\in G| ax=x \right\} 
+		\]
+			
+	\end{enumerate}
+\end{defn}
+\begin{itemize}
+\item Soient $x,x'\in X$, si $O_x\cap O_{x'} \neq \emptyset$, alors $ O_x= O_{x'}$.\\
+	Donc on peut decomposer $X$ en une reunion disjointe d'orbites, $\exists \overline{X}\subset X$ tel que
+	\[ 
+	X= \bigcup_{x\in \overline{X}} O_x
+	\]
+		
+\item $\forall x \in X\exists$ bijection
+	\[ 
+	\faktor{G}{G_x}\to O_x: \overline{a}\mapsto a\cdot x
+	\]
+		
+
+\item Equation de classe
+	Soit $\phi: G \to \aut X$ une action de groupe. La bijection du point precedent donne une equation de clsse
+	\[ 
+	\# X < \infty \Rightarrow \#= \sum_{x\in \overline{X}}^{ } ( G: G_x) 
+	\]
+	
+\item Soit $\phi:G\to \aut X $ une action de groupe, le lemme de Burnside exprime la relation entre orbites et ensembles de points fixes
+	\[ 
+	X = \bigcup_{x\in \overline{X}} O_x \Rightarrow \# \overline{X} = \frac{1}{\# G} \sum_{a\in G}^{ } \# X ^{a}		
+	\]
+	
+\end{itemize}
+
+
+\end{document}	

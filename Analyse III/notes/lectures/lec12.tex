@@ -1,0 +1,90 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Mon 01 Nov}{Singularites}
+\begin{propo}
+Soit $f$ entiere non constante.\\
+Alors $f( \mathbb{C}) $ est dense dans $\mathbb{C}$ 
+\end{propo}
+\begin{proof}
+Par l'absurde, sinon $\exists w \in \mathbb{C}$, $\exists \delta>0$ tel que $\forall \zeta \in f( \mathbb{C}) ,|\zeta-w| \geq \delta$.\\
+Donc $z \mapsto \frac{1}{f( z) -w}$ est bornee, donc constante, donc $f$ est constante.
+\end{proof}
+\begin{thm}[Theoreme de l'application ouverte]
+	Soit $f:U\to \mathbb{C}$ holomorphe non-constante, alors $\forall$ ouvert $V \subset U, f( V) $ est un ouvert.
+\end{thm}
+\begin{proof}
+Il faut montrer que l'image de tout voisinage de $z\in U$ est un voisinage de $f( z) \in V$.\\
+Si $f'( z) \neq 0$ , evident, par le theoreme de la fonction inverse.\\
+Supposons que $z=0$ et $f( z) =0$, alors on peut ecrire
+\[ 
+f( \zeta) =\sum_{n=k} a_n\zeta^{k} 	
+\]
+Ce qui donne
+\begin{align*}
+f( \zeta) = \zeta^{k}g( \zeta) , g( \zeta) = \sum_{n=k}^{ \infty } a_n \zeta^{n-k}
+\intertext{Dans un voisinage de $0$ , on peut ecrire}
+f( \zeta) =\phi^{k}( \zeta) , \text{ ou } \\
+\phi( \zeta) =\zeta \left( g( \zeta)  \right) ^{\frac{1}{k}}
+\end{align*}
+Maintenant $\phi'( 0) \neq 0$.\\
+Donc $\phi$ envoie un voisinage de $0$ vers un voisinage de $0$ .\\
+Maintenant $w\mapsto w^{k}$ envoie ce voisinage de $0$ vers un autre voisinage de $0$ 	
+\end{proof}
+\begin{propo}[Limite de fonctions holomorphes]
+Soit $( f_n)_{n \geq 0} $ une suite $f_n:U\to \mathbb{C}$ de fonctions holomorphes qui converge uniformement sur les compacts vers $f:U\to \mathbb{C}$.\\
+Alors $f$ est holomorphe et de plus $\forall k \geq 1$ 
+\[ 
+f^{ ( k) }_n\to f^{( k) }
+\]
+uniformement sur les compacts.
+\end{propo}
+\begin{proof}
+Montrons que pour tout $z\in U\exists \delta>0$ tel que $f^{( k) }_n\vert_{ \overline{D}( z,\delta) } \to f^{( k) }$.\\
+Soit $z_*\in U$ et $\delta>0$ tel que $ \overline{D}( z_*,2\delta) \subset U$.\\
+Pour $z\in \overline{D}( z_*,\delta) $ on  a
+\[ 
+f^{( k) }_n( z) = \frac{1}{2\pi i}\oint_{ \del \overline{D}( z_*,2\delta) } \frac{f_n( \zeta) }{( \zeta-z)^{k+1}}d\zeta
+\]
+on a que
+\[ 
+\zeta\mapsto \frac{f_n( \zeta) }{( \zeta-z) ^{k+1}} = g_n( \zeta) 
+\]
+Converge uniformement par rapport a $z$ quand $n\to \infty $ et aussi uniformement par rapport a $\zeta$.\\
+Donc 
+\[ 
+\oint g_{n} ( \zeta) d\zeta
+\]
+converge uniformement quand $n\to \infty $ 	
+					
+\end{proof}
+\section{Singularites}	
+On aimerait pouvoir considerer pour $f$ holomorphe $\frac{1}{f}$, sans se poser la question de savoir $f\neq 0$.\\
+Comme les $0$ de $f$ sont isoles, on devrait pouvoir donner un sens a cela.\\
+\subsection{Series de Laurent}
+Pour $z_*\in \mathbb{C}, \sum_{n= - \infty }^{ \infty } a_n ( z-z_*)^{n}$ est ce qu'on appelle une serie de Laurent.\\
+$ \sum_{n=0}^{ \infty } a_n ( z-z_*) ^{n}$ est appelee partie reguliere et
+$ \sum_{n= - \infty }^{ -1}a_n ( z-z_*) ^{n}$ partie singuliere.\\
+On dit que la serie converge si la partie reguliere converge et $ \lim_{N \to  + \infty} \sum_{n=-N}^{ -1}a_n ( z-z_*) ^{n}$.\\
+Pour une serie de Laurent, son anneau de convergence
+\[ 
+A( z_*, r, R) = D( z_*, R) \setminus \overline{D}( z_*, r) et r=\frac{1}{\rho}
+\]
+ou 
+\[ 
+\rho= \text{ rayon de convergence de  } \sum_{n=1}^{ \infty } a_{-n} w^{n}
+\]
+\begin{propo}[Formule de Cauchy sur l'anneau]
+Soit $f:U\to \mathbb{C}$ holomorphe et $z_*\in \mathbb{C}$ tel que $\overline{A}( z_*, r, R) \subset U$.\\
+Alors $\forall z \in A( z_*, r,R) $ 
+\[ 
+f( z) = \frac{1}{2\pi i} \oint_{\del D( z_*,R) } \frac{f( \zeta) }{\zeta-z} d\zeta- \frac{1}{2\pi i}\oint_{\del D( z_*,r) } \frac{f( \zeta) }{\zeta-z}
+\]
+
+\end{propo}
+
+
+			
+
+	
+		
+\end{document}	
