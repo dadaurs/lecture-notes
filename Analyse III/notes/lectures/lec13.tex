@@ -1,0 +1,103 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{13}{Thu 04 Nov}{Series de Laurent}
+Soit $f:U\to \mathbb{C}$ holomorphe avec $U \supset \overline{A}( z_*,r,R) $, est-ce que $f( z) = \sum_{n=- \infty }^{ \infty } a_n ( z-z_*) ^{n}$ sur $ \overline{A}( z_*,r ,R) $ ?\\
+Oui!
+\begin{thm}[Formule de Cauchy generalisee]
+	Pour $z\in A( z_*,r,R) $ 
+	\begin{align*}
+	f( z) = \frac{1}{2\pi i}\oint_\del D( z_*,R) \frac{f( \zeta) }{\zeta-z} d\zeta -\frac{1}{2\pi i}\oint_\del D( z_*,r) \frac{f( \zeta) }{\zeta-z} d\zeta
+	\end{align*}
+	
+\end{thm}
+\begin{proof}
+Comme $f$ est holomorphe sur un voisinage de $z$, $\exists \delta$ tel que
+\begin{align*}
+f( z) = \frac{1}{2\pi i} \oint_{\del D( z,\delta) }  \frac{f( \zeta) }{\zeta-z}d\zeta
+\end{align*}
+On deforme $\del D( z,\delta)  $ dans $\overline{A}( z_*,r,R) \setminus \left\{ z \right\} $ jusqua obtenir un contour entourant les deux bords de $\overline{A}( z_*,r,R) $.\\
+On a donc 
+\begin{align*}
+	f( z) = \frac{1}{2\pi i}\oint_{\del D( z_*,R) } \frac{f( \zeta) }{\zeta-z} - \frac{1}{2\pi i} \oint_{\del D( z_*,r) } \frac{f( \zeta) }{\zeta-z}d\zeta
+\end{align*}
+\end{proof}
+\begin{thm}[Developpement en serie de Laurent]
+	Soit $f:U\to \mathbb{C}$ holomorphe avec $U \supset \overline{A}( z_*,r,R) $ Alors
+	\[ 
+	f( z) = \sum_{n=- \infty }^{ \infty }a_n ( z-z_*) ^{n}
+	\]
+	sur $\overline{A}( z_*,r,R) $ ou 
+	\[ 
+	a_n = \frac{1}{2\pi i}\oint_{\del D( z,R) }  \frac{f( \zeta) }{( \zeta-z_*) ^{n+1}} d\zeta \forall n \in \mathbb{Z}
+	\]
+	avec convergence uniforme sur les compacts
+	
+\end{thm}
+\begin{proof}
+On a 
+\begin{align*}
+\frac{1}{\zeta-z} = \frac{1}{\zeta ( 1-\frac{z}{\zeta}) } \\
+&= \frac{1}{\zeta} \sum ( \frac{z}{\zeta}) ^{n} \text{ si } |z|<|\zeta|
+\end{align*}
+D'autre part, 
+\begin{align*}
+\frac{1}{\zeta-z} = \frac{-1}{z}( \frac{1}{1-\frac{\zeta}{z}}) \\
+&= -\frac{1}{z} \sum \left( \frac{\zeta}{z} \right)^{n}
+\end{align*}
+On peut supposer $z_*=0$ en posant $g( z) = f( z_*+z) $.\\
+Montrons que $g( z) = \sum_{n= - \infty }^{ \infty } a_n z^{n}$.\\
+On a
+\begin{align*}
+g( z) = \frac{1}{2\pi i} \oint_{C( R) } \frac{f( \zeta) }{\zeta-z}d\zeta - \frac{1}{2\pi i} \oint_{C( r) } \frac{f( \zeta) }{\zeta-z}d\zeta\\
+= \frac{1}{2\pi i} \left[\oint_{C( R) } g( \zeta) \frac{1}{\zeta} \sum_{n=0}^{ \infty }\frac{z^{n}}{\zeta^{n}} - \oint_{C( r) } g( \zeta) \frac{1}{z} \sum_{n=0}^{ \infty }\frac{\zeta^{n}}{z^{n}}\right] \\
+= \frac{1}{2\pi i} \sum_{n= - \infty }^{ \infty }\oint \frac{g( \zeta) }{\zeta^{n+1}} d\zeta z^{n}
+\end{align*}
+
+\end{proof}
+\begin{crly}
+Si $f:U\to \mathbb{C}$ holomorphe et $ U \supset \overline{A}( z_*,r,R)$ alors
+\[ 
+f= f_{int}  + f_{ext} 
+\]
+Ou $f_{int} $ est holomorphe sur $D( z,r)  $ et $ f_{ext} $ est holomorphe sur $ \mathbb{C}\setminus \overline{D}( z,r)  $ 	
+\end{crly}
+\subsection{Singularites}
+Si $f:U\to \mathbb{C}$ est holomorphe avec $U \supset A( z_*, 0, R) $, on dit que $f$ a une singularite en $z_*$.\\
+A partir des resultats ci-dessus, $f$ est donnee par $ \sum_{n= \infty }^{ \infty } a_n ( z-z_*)^{n}$ ou la serie converge sur les compacts de $A( z_*,0,R) $.\\
+\begin{defn}
+	Si $f$ a une singularite en $z_*$, on dit qu'elle est est effacable ou illusoire si $a_n=0 \forall n \leq -1$.\\
+	On dit qu'elle est d'ordre fini $n \geq 1$ ou dotee d'un pole d'ordre $n \geq 1$ si $a_{-n } \neq 0$ et $a_k =0 \forall k < -n$.\\
+	On dit qu'elle a une singularite essentielle si 
+	\[ 
+	\left\{ n \leq -1| a_n\neq 0 \right\} 
+	\]
+	est infini.
+\end{defn}
+\begin{defn}[Valuation]
+	On note $v_{z_*} ( f) $ la valuation de $f$ en $z_*$ defini comme 
+	\[ 
+	\inf \left\{ n: a_n \neq 0 \right\} 
+	\]
+	
+\end{defn}
+\begin{rmq}
+Si on a une singularite effacable en $z_*$, $f$ est bornee au voisinage de $z_*$ ( et peut etre etendue par $a_0$ en $z_*$ ).\\
+Reciproquement, si $f$ est bornee au voisinage de $z_*$, pour $n \leq -1$, $\zeta\mapsto \frac{f( \zeta) }{( \zeta-z_*) ^{n+1}}$ est bornee au voisinage de $z_*$ et donc $a_n =0$ 
+\end{rmq}
+\begin{thm}[Casorati-Weierstrass]
+	Soit $f$ avec une singularite essentielle en $z_*$. Alors $\forall w \in \mathbb{C}, \exists ( z_n)_{n \geq 0} $, $z_n\in U$ tel que $f( z_n) \to w$.\\
+	En d'autres termes, l'image de tout voisinage de $z_*$ est dense dans $ \mathbb{C}$.\\
+\end{thm}
+\begin{proof}
+Par l'absurde, supposons qu'il existe un $w\in \mathbb{C}$ non approchable par des suites $f( z_n) $.\\
+On aurait donc $ |f( z) -w| \geq \epsilon$ pour $\epsilon>0$ dans un voisinage de $z_*$.\\
+Mais alors $ \frac{1}{f( z) -w}$ est borne au voisinage de $ z_*$, donc elle aurait une singularite effacable.\\
+\[ 
+\frac{1}{f( z) -w} = \sum_{k=n}^{ \infty }b_k ( z-z_*) ^{k}
+\]
+Donc quand $z\to z_*$ $f( z-w) = O( \frac{1}{|z-z_*|^{n}}) $, ce qui contredit l'hypothese que c'est une singularite essentielle.
+\end{proof}
+
+
+
+\end{document}	

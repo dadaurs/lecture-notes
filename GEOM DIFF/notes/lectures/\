@@ -1,0 +1,37 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Wed 03 Nov}{Varietes (enfin)}
+\subsection{Exemples de Sous-varietes}
+\begin{enumerate}
+\item Une sous-variete de dimension $0$ de $ \mathbb{R}^n$ est un sous-ensemble discret ( tous les points sont isoles) 
+\item Un ouvert $U \subset \mathbb{R}^n$ est une sous-variete de dimension $n$.
+\item L'ensemble vide est une sous-variete de dimension $n$ $\forall n$
+\end{enumerate}
+\begin{thm}
+	Soit $f:U \subset  \mathbb{R}^m\to \mathbb{R}^n$ une application $C^{k}$ et de rang constant $=r$.\\
+	\begin{itemize}
+	\item L'ensemble des points 
+		\[ 
+		M= \left\{ x\in U | f( x) =0 \right\} \subset \mathbb{R}^m
+		\]
+		est une sous-variete differentiable de classe $C^{k}$ de dimension $m-r$.
+	
+	\item $\forall p\in U$, il existe un voisinage $V \subset U$ de $p$ tel que $N= f( V) $ est une sous-variete	
+	\end{itemize}
+
+\end{thm}
+\begin{proof}
+On applique le theoreme du rang constant.\\
+Pour la premiere partie:\\
+Il existe un voisinage $V \subset U$ de $p$ et $W$ de $f( p) =0$ dans $ \mathbb{R}^n$ 	tel que
+\[ 
+\tilde f = \psi \circ f \circ \phi^{-1}: V \to \mathbb{R}^{m}
+\]
+est donne par $\tilde f( x_1,\ldots, x_n) = ( x_1, \ldots, x_r, 0\ldots) $ 
+
+\end{proof}
+
+	
+
+
+\end{document}	
