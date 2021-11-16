@@ -1,0 +1,151 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Sat 06 Nov}{Perspectiuve categorique sur les actions de groupe}
+\subsection{Un cadre categorique pour les actions de groupe}
+Pour generaliser la notion d'action de groupe a d'autres categories que $\ens$, quelle definition doit-on essayer de generaliser?
+\begin{defn}
+	Soit $C$ une categorie, et soit $c\in \ob C$. Soit $G$ un groupe. Une action de $G$ sur $c$ consiste en un homomorphisme de groupe
+	\[ 
+	\phi: G\to \aut c
+	\]	
+	Un objet de $C$ muni d'une action de $G$ est un $G-$objet de $C.$ 	
+\end{defn}
+$\phi: G\to \aut c$ homomorphisme $\iff$ $\forall a \in G, \phi( a) :c\simeq c$ et $\forall a,b\in G$ $\phi( ab) =\phi( a) \circ\phi( b) $.\\
+Un tel couple, $( c,\phi: G\to \aut c) $ est un $G$-objet de $C$.\\
+On peut decortiquer encore plus lorsque $C$ est concrete
+\begin{rmq}
+Si $C$ est une categorie concrete, $\exists $ foncteur oubli $U: C\to \ens$.\\
+Si $( c,\phi) $ est un $G$-objet de $C$, alors on a $\phi: G\to \aut c$.\\
+Appliquons $U$  a la famille des $\phi( a) $ 
+\[ 
+U( \phi( a) ) : U( c) \oar { \simeq} U( c) 
+\]
+On a alors une action de $G$ sur l'ensemble $U( c) $.\\
+Donc une action de $G$ sur $c\in \ob C$ consiste en une action de $G$ sur $U( c) $ qui respect la structure supplementaire.
+\end{rmq}
+\begin{exemple}
+Si $V\in \vect_\mathbb{K}$, alors $\aut V = GL( V) $ le groupe general lineaire de $V$, ie., le groupe de tous les isomorphismes lineaires de $V$. \\
+Un $G$-ev est donc un espace vectoriel muni d'un homomorphisme $\phi: G \to GL( V) $ 
+\end{exemple}
+Comment definir de maniere raisonnable un morphisme entre $G$-objets dans une categorie $C$?\\
+Pour repondre a cette question, on formule la definition d'une action de groupe d'une autre maniere, encore plus categorique.
+\begin{lemma}
+Soient $C$ une categorie et $G$ un groupe.  Pour tout $c\in \ob C$, il y a une bijection
+\[ 
+\gr ( G, \aut c) \simeq \left\{ F\in \ob \fun( BG,C)| F( \star) =c  \right\} 
+\]
+\end{lemma}
+\begin{proof}
+$\alpha: \gr( G,\aut c) \to \left\{ F:BG\to C| F( \star) =c \right\} $ 
+Defini comme:\\
+Etant donne $\phi: G\to \aut c$ un homomorphisme, on definit $\alpha( \phi) $ comme etant le foncteur 
+\[ 
+\alpha( \phi) :BG\to C
+\]
+precise par 
+\begin{align*}
+\alpha( \phi) ( \star) =c\\
+\alpha( \phi) ( a) =\phi( a) :c\simeq c \forall a \in \mor BG= G
+\end{align*}
+$\alpha( \phi) $ est trivialement un foncteur.\\
+\hr
+On definit l'inverse a $\alpha$ comme
+\begin{align*}
+\beta( F) : G\to \aut c
+\end{align*}
+est l'application definie par $\beta( F) ( a) = F( a): c\to c $.\\
+On verifie que $\beta( F)( a)  $ est un isomorphisme, de plus $\beta( F)  $ est un homomorphisme.
+On montre facilement que $\beta\circ\alpha$ et $\alpha\circ\beta$ sont des identites.
+\end{proof}
+\begin{defn}
+Soient $C$ une categorie et $G$ un groupe, la categorie $\fun ( BG,C)$ est appelee la categorie des $G$-objets dans $C$. Les morphismes dans $\fun ( BG,C) $, sont appeles $G$-equivariants.
+\end{defn}
+Un morphisme $G-$equivariant est une transformation naturelle $\tau: F\to F'$ ou $F,F': BG\to C$, ie. une application $\tau: G= \ob BG\to \mor C$ telle que pour tout $a\in G$ 
+\[ 
+F'( a) \circ\tau_* = \tau_*\circ F( a) 
+\]
+Grace au lemme ci-dessus, si $( c,\phi) , ( c',\phi') $ des $G$-objets de $C$, donc $\phi: G \to \aut c, \phi':G\to \aut( c') $ un morphisme $G-$equivariant de $( c,\phi) $ vers $( c',\phi') $ consiste en
+\begin{itemize}
+\item un morphisme $f\in C( c,c') $ tel que
+	\begin{align*}
+	\phi'( a) \circ f = f\circ \phi( a) \forall a \in G
+	\end{align*}
+\end{itemize}
+\subsection{Generalisation et formalisation du cas $C= \ens$ }
+Soit $C$ une categorie. Soit $G$ un groupe.\\
+Le foncteur d'action triviale de $G$ est 
+\[ 
+\triv_G : C \to  { }_{G} { C }
+\]
+est defini par:
+\[ 
+triv_G( c) = ( c,cst_{ \id } )
+\]
+et $\forall f \in C( c,c') , triv_G( f) = f$ 	\\
+Motive par l'analyse du cas $C= \ens$, on pose 
+\begin{itemize}
+\item le foncteur orbite est l'adjoint a gauche de $\triv_G$, s'il existe
+	\[ 
+		( -) _G: { } _G C\to C
+	\]
+
+\item Le foncteur point fixe est l'adjoint a droite de $\triv_G$, s'il existe
+	\[ 
+		( -)^{G}: { } _G C \to C
+	\]
+\end{itemize}
+
+	Si $( -)_G$  existe, alors $\exists $ un isomomorphisme naturel
+	\[ 
+	{ } _G C( ( c,\phi) , \triv_G( c') ) \simeq C( ( c,\phi) _G, c') 
+	\]
+	
+	De meme, si $( -)^{G}: { } _GC \to C$ existe, alors $\exists $ isomorphisme naturel
+	\[ 
+	{ } _G C( \triv_G( c'), ( c,\phi) ) \simeq C( c', ( c,\phi)^{G})  
+	\]
+	
+\subsection{Creation d'actions libres}
+$\exists$ adjonction $  L:\ens \dashv \vect_{\mathbb{K}}: U $.\\
+Il existe egalement un foncteur oublie $U: { } _G C\to C$ $\forall C $ categorie, $G$ groupe, defini par $U( c,\phi) = c$, existe-il un adjoint a gauche de ce foncteur oubli?\\
+Ie,
+\[ 
+C( c, U( c',\phi') ) \simeq { } _G C( L( c) , ( c',\phi') ) 
+\]
+
+\begin{defn}[Action libre]
+	Soient $G$ un groupe et $C$ une categorie.
+	\begin{itemize}
+	\item Le foncteur de $G$-action libre, note $\freeg: C\to \GC$ est l'adjoint a gauche du foncteur oubli $U: \GC\to C$ lorsqu'il existe.
+	\end{itemize}
+	Alors, si l'adjoint a gauche de $U$ existe, on aura $\forall c \in \ob C, ( c',\phi') \in \ob \GC$ 
+	\[ 
+	\GC ( \freeg ( cv) , ( c',\phi') ) \simeq C( c,c') 
+	\]
+	
+	
+\end{defn}
+\subsubsection{Le foncteur $\freeg: \ens \to { }_G\ens$ }
+Soit $\mu: G\times G \to G$ la multiplication de $G$, 
+\begin{rmq}
+$G$ est lui meme un $G$-ensemble, quand on le munite de l'action de translation.
+\end{rmq}
+$\forall X\in\ob\ens$, on pose
+\[ 
+\freeg( x) = ( G\times X, \phi_X) 
+\]
+on on definit
+\[ 
+\phi_X: G\to \aut( G\times X) : a \mapsto ( ( b,x) \mapsto ( ab,x) ) 
+\]
+Donc $\free_G( x) \in \ob { }_G\ens$ 		
+
+Sur les morphismes, on definit
+\[ 
+\freeg( f)  = \id_G \times f
+\]
+
+
+
+
+\end{document}	

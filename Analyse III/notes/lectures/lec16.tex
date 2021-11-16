@@ -1,0 +1,51 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{16}{Mon 15 Nov}{Applications du theoreme des residus}
+\subsection{2 classes d'integrales souvent calculables par des residus}
+\begin{itemize}
+\item Transformee de Fourier:
+	\[ 
+	\hat{f}( \xi) = \frac{1}{2\pi}\int_{ - \infty  }^{ \infty  } f( x) e^{ -i \xi x} dx
+	\]
+
+\item Integrales de la forme
+	\[ 
+	\frac{1}{2\pi}\int_{ 0 }^{ 2\pi }f( \sin( x) , \cos( x) ) dx
+	\]
+	
+	
+\end{itemize}
+\subsection*{Motivation de la transformee de Fourier}
+Il y a un theoreme qui dit que si $f$ est raisonnable
+\[ 
+f( x) = \int_{ - \infty  }^{ \infty  } e^{i\xi x} \hat{f}( \xi) d\xi
+\]
+\subsection*{Comment calculer une transformee de Fourier}
+Idee: Calculer pour un lacet demi-cercle de rayon $R$.\\
+Avec un peu de chance, la partie $ [ -R, R] $ quand $R\to \infty $ devrait nous donner $ \int_{ - \infty  }^{ \infty  }\ldots$ et avec un peu de chance l'integrale sur le demi-cercle $\to 0$.
+\begin{propo}
+Si $f$ meromorphe sur $\mathbb{C}$ avec un nombre fini de poles et $f( z) = O( \frac{1}{z}) $ quand $|z|\to \infty $, alors pour $\xi>0	$, alors
+\[ 
+\hat{f}( \xi) =i \sum_{ z_* \in \text{ poles inferieur } }^{ }	res_{z_*} ( e^{- i \xi z} f( z) )
+\]
+et on sommme sur les singularites du plan inferieur si $\xi <0$ 
+
+\end{propo}
+\begin{rmq}
+Si $f( z) = o( \frac{1}{z}) $ marche aussi pour $\xi = 0$ 
+\end{rmq}
+\begin{propo}
+Si on souhaite integrer $ \int_{ 0 }^{ 2\pi } R( \sin\theta,\cos\theta) d\theta $, on a
+\[ 
+\int_{ 0 }^{ 2\pi } R( \sin\theta,\cos\theta) d\theta  = 2\pi i \sum_{z\in D( 0,1), \text{ poles }  } res_{z_*} ( f)
+\]
+ou $f( z) = R( \frac{1}{2i}( z-\frac{1}{z}) , \frac{1}{2}( z+\frac{1}{z}) ) $ 
+
+\end{propo}
+
+
+
+
+
+
+\end{document}	

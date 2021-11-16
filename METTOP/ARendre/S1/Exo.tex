@@ -1,0 +1,79 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{bookmark}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{mdframed}
+\begin{document}
+\title{Homework 1}
+\author{David Wiedemann}
+\maketitle
+\section*{Exercise 1}
+\subsection*{1}
+True.\\
+Suppose $X$ is connected, and suppose by contradiction that there exists $U \subset X$ s.t. $ cl( U) =int( U) $.\\
+Then $ cl( U) $ is both open and closed, contradicting the fact that $X$ is connected.\\
+Now suppose that either $U= \emptyset, U=X$ or $ cl( U) = int( U) $ but suppose that $X$ is not connected.\\
+Then there exist open sets $V$ and $U$ s.t. $V\cap U = \emptyset$ and $V \cup U= X$.\\
+Then $V$ is both closed and open and hence $cl( V)= int( V) $.\\
+\subsection*{2}
+False, the empty set and $X$ are closed.\\
+However, if the union is non-trivial, the result is true since the closed sets will also be open ( as they are complements of closed sets).\\
+\subsection*{3}
+False, consider the topologists sine curve.
+\section*{Exercise 2}
+\subsection*{1}
+Let $( X,\tau_X) $ be a topological space, $X$ is Hausdorff if and only if for all points $x, y \in X,x\neq y$, there exist open sets $U_x \ni x, U_y \ni y$ such that $U_x\cap U_y= \emptyset.$\\
+
+\subsubsection*{Hausdorff Topologies}
+Consider $\mathbb{Q}$ with the discrete topology, this is Hausdorff, since all singletons are contained in the discrete topology.\\
+
+Consider $\mathbb{Q}$ with the induced Euclidean topology, this is  Hausdorff, since $\forall x\neq y \in \mathbb{Q}, \left( B( x,  \frac{|x-y|}{3}) \cap \mathbb{Q} \right) \cap ( B(y, \frac{|x-y|}{3} ) \cap \mathbb{Q})= \emptyset $ 
+\subsubsection*{Non-Hausdorff Topologies}
+Consider $ \mathbb{Q}$ with the indiscrete topology, this is not Hausdorff since you trivially can't separate points.\\
+
+Consider $ \mathbb{Q}$ with the cofinite topology, this is not Hausdorff since for any two open sets $U$ and $V$ $\exists q \in \mathbb{Q}$ s.t. $\forall i>q, i \in U\cap V $.
+
+\subsection*{2}
+Define the set 
+\[ 
+\tau^{B} = \left\{ \prod_i U_i | U_i \in \tau_{X_i}  \right\} 	
+\]
+We show this forms a basis.\\
+First, it is clear that $\tau_B$ spans $\prod_i X_i$ since $\prod_i X_i \in \tau^{B}$.\\
+Now let $V = \prod_i V_i\in \tau_B$ and $U = \prod_i U_i\in \tau_B$.\\
+Suppose $V\cap U \neq \emptyset$, let $x= ( x_1, \ldots, x_n) \in V\cap U$.\\
+Note that $x_i \in V_i\cap U_i\in \tau_{X_i} $, hence $x \in \prod_i ( V_i\cap U_i) $. \\
+
+We now show that $ \prod_i X_i$ is Hausdorff if and only if $X_i$ is Hausdorff for all $i$.\\
+First suppose $X_i$ is Hausdorff for all $i$, let $ a= ( a_1, \ldots, a_n) , b = ( b_1, \ldots, b_n) $ be two different elements in $ \prod_i X_i$.\\
+Hence, there exists at least one $j \in [ i] $ such that $a_j \neq b_j$.\\
+Since $X_j$ is Hausdorff, there exist disjoint $ A_j, B_j \in \tau_{X_j} $ such that $a_j \in A_j, b_j \in B_j$, considering $ A = X_1 \times \ldots \times A_j \times X_{j+1} \times \ldots X_n$ and $ B= X_1 \times \ldots \times B_j \times X_{j+1} \times \ldots X_n$, note that $a \in A, b \in B$ and $A\cap B = \emptyset$.
+
+Now suppose that $\prod_i X_i$ is Hausdorff, without loss of generality, we will show that $X_1$ is Hausdorff.\\
+Let $a,b \in X_1$, for $ 2 \leq i \leq n$ fix some $x_i\in X_i$, consider $( a, x_2, \ldots, x_n) ,( b,x_2, \ldots, x_n) $.\\
+There exist open sets $ \bigcup_j \prod_i U_{ji} , \bigcup_j \prod_i V_{ji} $ separating $( a,x_2, \ldots) $ and $( b,x_2, \ldots) $.\\
+Note that $\forall i \geq 2$ $ U_{j i} \cap V_{ji} = \emptyset$, hence forcing $U_{j1} \cap V_{j 1} = \emptyset $.\\
+However $a \in U_{j 1}, b \in V_{j 1} 	 $, showing that $X_1$ is Hausdorff.\\
+
+\subsection*{3}
+We'll denote the diagonal of $X$  as $\Delta X$.\\
+First suppose that $X$ is Hausdorff, we show that the complement is open.\\
+Let $( a,b ) \in \Delta X^{C}$, by the Hausdorff property, there exist open sets  $U\ni a, V \ni b$ separating $a$ and $b$ in X, hence $U\times V\ni ( a,b) $.\\
+Furthermore, since the intersection of $U$ and $V$ is empty, $U\times V \cap \Delta X ^{C} = \emptyset$, showing that $\Delta X$ is closed.\\
+
+Now suppose that $\Delta X$ is closed, we show that $X$ is Hausdorff.\\
+Let $ a,b \in X$ be distinct points, consider $ ( a,b) \in \Delta X^{C}$, by hypothesis, there exists a open set $ \bigcup_{j} U_j\times V_j $\footnote{ Here $j$ runs over some index set and $U_j$ resp. $ V_j$ are open sets in $X$ } such that $ \left( \bigcup_j U_j\times V_j \right)\cap \Delta X = \emptyset$.\\
+Now there exists at least one $i $ such that $( a,b) \in U_i \times V_i$, note that $U_i \cap V_i= \emptyset$, since if not, the intersection with the diagonal would be non-empty.\\
+Hence, $U_i$  and $V_i$  separate $a$ and $b$ in $X$.
+\end{document}

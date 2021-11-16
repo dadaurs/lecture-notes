@@ -1,0 +1,106 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Wed 10 Nov}{Surfaces}
+\begin{propo}
+L'espace tangent en un point $p$ d'une sous-variete differentiable $ M \subset  \mathbb{R}^n$ est un sous-espace vectoriel de dimension $m = \dim M$.
+\end{propo}
+\begin{proof}
+On se donne un diffeomorphisme local adapte a $M$ au voisinage de $p$.\\
+C'est-a dire $\phi: U\to V$ diffeomorphisme entre deux ouverts $U, V \subset \mathbb{R}^n$ qui verifient $p\in U\cap M$ et $\phi( U\cap M) = V\cap E$ ou $E\subset \mathbb{R}^n$ est un sev de dimension $m$.\\
+Soit $v$ un vecteur tangent a $M$ en $p$. Alors il existe $\alpha: ( -\epsilon, \epsilon) \to \mathbb{R}^n$ de classe $C^{1}$ telle que $\alpha$ represente le vecteur $v$.\\
+Quite a restreindre $\epsilon>0,$ on peut supposer que $\alpha( t) \in M\forall t $.\\
+Notons $\beta= \phi( \alpha) $ $\beta$ est un chemin de classe $C^{1}$ tel que 
+\[ 
+\beta( t) \in \phi( U\cap M) = E\cap V
+\]
+et $\beta( 0) = \frac{d\beta}{dt}( 0) = d\phi_{\alpha( 0) } ( \dot{\alpha}( 0)) = d\phi_p( v)   $.\\
+Mais il est clair que $\dot \beta( 0) \in E$.\\
+On a donc prouve que $\forall v \in T_p M$ on a 
+\[ 
+d\phi_p( v) \in E
+\]
+Donc $v \in d\phi_p^{-1}( E) = d( \phi^{-1})_q( E) $ et donc $T_pM \subset d\phi_p^{-1}( E) $.\\
+On affirme que $( d\phi_p)^{-1}( E) \subset T_p M$, posons $w = d\phi_p( v)\in E $ et $\beta: ( -\epsilon,\epsilon) \to E\cap V$ defini par
+\[ 
+\beta( t) = q+ tw
+\]
+Alors $\alpha( t) = \phi^{-1}( \beta(t) ) $ represente $v$ 
+\end{proof}
+\begin{crly}
+Si $M= f^{-1}( 0) $ ou $f: U \subset \mathbb{R}^n\to \mathbb{R}^{k}$ est une submersion alors 
+\[ 
+T_pM = \ker ( df_p) 
+\]
+
+\end{crly}
+\begin{proof}
+On affirme que $T_pM \subset \ker ( df_p) $.\\
+En effet, si $v\in T_pM$, alors $v = \dot\alpha$ avec $\alpha( 0) = p$.\\
+Donc 
+\[ 
+f( \alpha( t) ) = c \Rightarrow df_p( v) = 0
+\]
+
+\end{proof}
+\begin{crly}
+Si $\psi:U \subset \mathbb{R}^m\to \mathbb{R}^n $ est un plongement( ie. $\psi$ est une immersion et $\psi:U \to M= \psi( U) $ est un homeomorphisme) alors $\forall p = \psi( u) \in M$ on a
+\[ 
+T_pM = \im ( d\psi_u) 
+\]
+Notons que
+\[ 
+\frac{\del \psi}{\del u_j}= \frac{d}{dt}\psi( u+t e_j) \in T_p M
+\]
+
+
+\end{crly}
+\section{Geometrie des Surfaces}
+\subsection*{Definition et exemples}
+On decrit une surface de deux manieres differentes.\\
+\textbf{  Description implicite }\\
+	Une surface $S \subset \mathbb{R}^{3}$ peut etre definie $S: f( x) = c \iff S = \left\{ x \in \mathbb{R}^{3} | f( x) = c \right\} $ ou $f:U \subset \mathbb{R}^{3}\to \mathbb{R}$ est differentiable.\\
+	On dit que $x\in U$ est un point critique si $df_x= 0$ dans ce cas $c= f( x) $ est une valeur critique.
+	\begin{defn}[Point singulier]
+		Un point singulier de $S$ est un point critique qui appartient a $S$.\\
+		$x$ est un point singulier de $S$ $\iff$ $f( x) =c, \del_i( x) = 0 \forall i \in [ 3] $.
+	\end{defn}
+\textbf{Description parametrique}\\
+Une surface parametree est la donnee d'un plongement differentiable $\psi: \Omega\to S \subset \mathbb{R}^{3}$.\\
+On a vu que $\forall p \in \psi( u) \in S$ le plan tangent est
+\[ 
+T_pS = \im d\psi_u
+\]
+et ce plan est engendre par $\frac{\del\psi}{\del u_1}, \frac{\del \psi}{\del u_2}$.
+\begin{thm}
+Toute surface implicite admet des parametrisations locales au voisinage de tout point regulier.	
+\end{thm}
+\begin{defn}
+	Si $\psi: \Omega\to S$ est une surface parametree alors on appelle repere mobile adapte a $\psi$ la donnee des trois champs de vecteurs 
+	\[ 
+	( u,v) \in \Omega \to \left\{ b_1( u,v) , b_2( u,v), n( u,v)  \right\}
+	\]
+	ou 
+	\[ 
+	b_1= \frac{\del \psi}{\del u}, b_2 = \frac{\del\psi}{\del v}, n = \frac{b_1\times b_2}{\N { b_1\times b_2} }
+	\]
+
+	
+\end{defn}
+\begin{defn}[Tenseur metrique]
+	On appelle tenseur metrique ( ou premiere forme fondamentale) de la surface parametree $\psi: \Omega \subset \mathbb{R}^{2}\to S \subset \mathbb{R}^{3}$ est la matrice de Gram de $ \left\{ b_1( u,v) , b_2( u,v)  \right\} $ 
+	\[ 
+	G( u,v) =
+	\begin{pmatrix}
+		g_{11}( u,v) & g_{12}( u,v) \\
+		g_{21}( u,v) & g_{22}( u,v) 
+	\end{pmatrix} 
+	= 
+	\begin{pmatrix}
+		\N b ^{2} & \eng { b_1,b_2} \\
+		\eng { b_1,b_2} & \N { b_2} ^{2}
+	\end{pmatrix} 			
+	\]
+				
+\end{defn}
+
+\end{document}	

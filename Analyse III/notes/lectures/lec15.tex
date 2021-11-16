@@ -1,0 +1,76 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{15}{Thu 11 Nov}{Residus}
+\begin{lemma}
+Le residu de $f$ en $z_*\in U$ est l'unique $A\in \mathbb{C}$ tel que
+\[ 
+	z\to f( z) - \frac{A}{z-z_*}
+\]
+ait localement une primitive autour de $z_*$ 
+\end{lemma}
+\begin{proof}
+Si on prend $A= res_{z_*} ( f) $, alors $z\mapsto f( z) - \frac{A}{z-z_*}$ a comme developpement en serie de Laurent
+\[ 
+\sum_{k= - \infty }^{ -2} a_k ( z-z_*)^{k} + \sum_{k=0}^{ \infty }a_k ( z-z_*) ^{k}
+\]
+qui a comme primitive
+\[ 
+\sum_{k= - \infty , k\neq -1}^{ \infty } \frac{a_k ( z-z_*)^{k+1}}{k+1}
+\]
+Comme $\frac{1}{z-z_*}$ n'a pas de primitive autour de $z_*$, ce $A$ est l'unique qui convienne.
+
+\end{proof}
+\textbf{Theoreme des Residus}
+\begin{proof}
+Posons $g:U\setminus F\to \mathbb{C}$ 
+\[ 
+g( z) = f( z) - \sum res_{z_*} ( f) \frac{1}{z-z_*}
+\]
+Par construction $g$  a localement une primitive autour de chaque $z_*\in U$.\\
+On peut donc deformer $\gamma$ au travers de chaque point de $F$ sans changer l'integrale.\\
+Donc
+\[ 
+\oint_{\gamma} f( z) dz = \oint \sum_{z_*\in F} \frac{res_{z_*} ( f) }{z-z_*}dz = \sum_{z_*\in F}^{ }res_{z_*} ( f) 2\pi ind_{z_*} ( f)
+\]
+
+\end{proof}
+\begin{crly}
+Si $\gamma = \del \Omega$ ou $\Omega$ est simplement connexe
+\begin{align*}
+\oint_{\del\Omega} f( z) dz = 2\pi i \sum_{z_*\in F\cap \Omega} res_{z_*} ( f) 
+\end{align*}
+
+\end{crly}
+\begin{crly}
+Si $f:U\to \mathbb{C}$ holomorphe, $U$ simplement connexe et $\gamma: [ 0,1] \to U$ un lacet, alors $\forall z \in U\setminus \gamma( [ 0,1] ) $ 
+\[ 
+f( z) ind_z( \gamma)= \frac{ 1}{2\pi i}\oint_{\gamma}  \frac{f( \zeta) }{\zeta-z}d\zeta
+\]
+
+\end{crly}
+\begin{crly}[Comptage des zeros]
+	
+Soit $f$ une fonction meromorphe sur $U$ et $\gamma: [ 0,1] \to U$ un contour qui ne touche ni les zeros ni les poles de $f$.\\
+Alors
+\[ 
+	\oint_{\gamma} \frac{f'( z) }{f( z) }dz = 2\pi i\sum_{z_*\in \text{ Zeros et poles de $f$  } } v_{z_*} ( f) Ind_{z_*} (f) 
+\]
+
+\end{crly}
+\subsection{Calcul des residus}
+\begin{exemple}
+Si $f( z) = \frac{res_{z_*} ( f) }{z-z_*} + \text{ partie reg } ( z) $.\\
+On regarde $z\mapsto ( z-z_*) f( z) $ et on prend la limite $z\to z_*$ 
+\end{exemple}
+De maniere generale:
+\begin{lemma}
+Si $f$ a un pole d'ordre $n$ en $z_*$ 
+\[ 
+res_{z_*} ( f) = \lim_{z\to z_*} ( \frac{d^{n-1}}{dz^{n-1}}( z-z_*) ^{n}f( z) ) \frac{1}{( n-1) !}
+\]
+
+\end{lemma}
+
+
+
+\end{document}	

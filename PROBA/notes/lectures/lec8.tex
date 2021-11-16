@@ -1,0 +1,96 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Wed 10 Nov}{rv with density}
+The gaussian random variable describes sums of independent errors
+\begin{thm}[Version of central  limit theorem]
+	Let $X_1,\ldots$ be iid random variables s.t. $ \mathbb{P}( |X_I|<C) =1$ for some $C>0$ and such that $-X_i$ and $X_i$ have the same law.\\
+	Then $ S_n=\frac{ \sum_{i=1}^{ n}X_i}{ \sqrt{n} }\to \mathcal{N}( 0, \sigma^{2}) $ in the sense that $ \mathbb{P}( S_n\in ( a,b) ) \to \mathbb{P}( \mathcal{N}( 0, \sigma^{2}) \in ( a,b) ) 	 $ 
+\end{thm}
+\subsection{Transformation of random variables}
+\begin{lemma}
+If $\phi: \mathbb{R}\to \mathbb{R}$ continuous and r.v. on $( \omega, \mathcal{F}, \mathbb{P}) $ then $\phi( X) $ is also r.v. on $( \Omega, \mathcal{F}, \mathbb{P}) $ 
+\end{lemma}
+\begin{proof}
+Need to check that $\phi\circ X$ is measurable.
+\begin{itemize}
+\item Continuous functions are measurable
+\item Composition of measurable functions is measurable
+\end{itemize}
+
+\end{proof}
+\begin{propo}
+Let $X$ be a continuous random variable with density $f_X: \mathbb{R}\to [ 0, \infty ) $.\\
+Let $\phi: \mathbb{R}\to \mathbb{R}$ bijective, continuously differentiable with $ \phi'( x) \neq 0\forall x \in \mathbb{R}$.\\
+Then $\phi( X) $ is a r.v. with density given by
+\[ 
+f_{\phi( X) } ( x) = \frac{1}{\phi^{'}\circ\phi^{-1}( X) } f_X( \phi^{-1}( x) ) 
+\]
+
+\end{propo}
+\section{Random Vectors}
+\begin{defn}[Random Vector]
+	$ ( \Omega, \mathcal{F}, \mathbb{P}) $ $X_1,\ldots, X_n$ random variables then $\overline{X}= ( X_1,\ldots, X_n) $ is called a random vector.
+\end{defn}
+\begin{rmq}
+Marginal laws on their own do not describe the behavior of $\overline{X}$.\\
+\end{rmq}
+\begin{lemma}
+If $X_1,\ldots, X_n: ( \Omega, \mathcal{F}) \to ( \mathbb{R}, \mathcal{F}_E) $ measurable $ \overline{X}$ is measurable from $ ( \Omega, \mathcal{F}) \to ( \mathbb{R}^n, \mathcal{F}_E) $ 
+\end{lemma}
+\begin{proof}
+Suffices to check that $\overline{X}^{-1}$ of each $E= F_1\times \ldots \times F_n$ is in $ \mathcal{F}$ 
+\[ 
+\overline{X}^{-1}( E) = \bigcap X_i^{-1}( F_i) \in \mathcal{F}
+\]
+Hence we can define 
+\[ 
+\mathbb{P}_{\overline{X}} ( E) \coloneqq \mathbb{P}( \overline{X}^{-1}( E) ) \forall E \in \mathcal{F}_E
+\]
+Which is a probability law on $ ( \mathbb{R}^n, \mathcal{F}_E) $ called the joint law of $ \overline{X}$ 
+\end{proof}
+\begin{propo}
+The joint law of a random vector $\overline{X}$ is uniquely characterised by the joint cdf
+\end{propo}
+\begin{proof}
+Restatement of probability measure on $ \mathbb{R}^n$ are in correspondence with joint cdf
+\end{proof}
+\begin{lemma}
+$X_1, \ldots, X_n$ random variables $ ( \Omega, \mathcal{F}) $ are independent if and only if
+\[ 
+F_{\overline{X}} ( x_1, \ldots, x_n) = \prod_i F_i( x_i) 
+\]
+
+\end{lemma}
+\subsubsection*{Transformations of random vectors}
+\begin{propo}
+$ \overline{X}$ is a $ \mathbb{R}^n$ 	valued random vector and $\phi: \mathbb{R}^n\to \mathbb{R}^m	$ continuous then $\phi( \overline{X}) $ is a $ \mathbb{R}^n$ valued random vector with values in $ \mathbb{R}^n$ 
+\end{propo}
+
+\begin{crly}
+Let $X_1, \ldots, X_n$ be random variables on $ \Omega$ then $ \sum a_i X_i$ is a random variable
+\end{crly}
+\begin{defn}[Random vectors with density]
+	Let $ \overline{X}= ( X_1, \ldots, X_n) $ random vector then
+	\[ 
+	f_{\overline{X}} : \mathbb{R}^n\to [ 0, \infty )
+	\]
+	Riemann integrable with $ \int_{ \mathbb{R}^n} f_{\overline{X}} ( y) dy= 1 $ 
+	if $\forall [ a_0, b_1) \times \ldots [ a_n, b_n) = B $ we have
+	\[ 
+	\mathbb{P}(  \left\{ X_1 \in[a_0,b_1) \right\} \cap \ldots) = \int_{B} f_{\overline{X}} ( y) dy
+	\]
+		
+\end{defn}
+\subsubsection*{Gaussian vectors}
+
+Let $ \overline{\mu} \in \mathbb{R}^n$ and $ C$ positive definite $n \times n $ matrix called covariance matrix then the density
+\[ 
+f_{\overline{\mu}, C} ( \overline{x}) = \frac{1}{( 2\pi )^{\frac{n}{2}}\det C ^{\frac{1}{2}}} \exp \left( - 2( \overline{x}- \overline{\mu})^{T}C^{-1}( \overline{x}- \overline{\mu}) \right) 
+\]
+
+
+
+
+
+
+\end{document}	

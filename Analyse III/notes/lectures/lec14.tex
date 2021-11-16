@@ -1,0 +1,79 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{14}{Mon 08 Nov}{Fonctions meromorphe}
+\section{Fonctions Meromorphes}
+\begin{defn}
+	Soit $U \subset \mathbb{C}$ un ouvert.\\
+	On dit qu'une fonction $f$ est meromorphe sur $U$ si c'est une fonction holomorphe $U \setminus K\to \mathbb{C}$ ou $K$ est fait de points isoles de $U$ et $f$ a comme singularites aux points de $K$ soit des singularites effacables soit des poles.
+\end{defn}
+\begin{lemma}
+Soient $f$ et $g$ deux fonctions meromorphes sur $U \subset \mathbb{C}$ non identiquement nulles alors $f+g, fg$ et $\frac{f}{g}$ sont meromorphes.\\
+Les poles de $\frac{1}{f}$ correspondent aux zeros de $f$ et vice-versa.
+\end{lemma}
+\begin{proof}
+Pour $f+g$, rien a faire.\\
+Pour $fg$, rien a faire.\\
+Pour $\frac{f}{g}$, les poles sont soit herites de $f$ soit ils viennent des zeros de $g$ .\\
+En ces zeros, on a 
+\[ 
+v_{z_*} ( \frac{f}{g}) = v_{z_*} ( f) - v_{z_* } ( g) 
+\]
+
+\end{proof}
+\begin{rmq}
+On peut montrer que l'ensemble des fonctions holomorphes sur un domaine $U$ est un anneau integre et que son corps des fractions est l'ensemble des fonctions meromorphes.
+\end{rmq}
+\subsection{Zeros, poles et derivees logarithmique}
+Si $f$ est meromorphe, $f'$ aussi et $\frac{f'}{f}$ aussi.\\
+\begin{lemma}
+Les poles et zeros de $f$ correspondent a des poles d'ordre 1 de $\frac{f'}{f}$ et le residu de $\frac{f'}{f}$ en un tel point $z_*$ sera $v_{z_*} ( f) $
+\end{lemma}
+\begin{proof}
+Si $f$  a un zero d'ordre $n \geq 1$ en $z_*$ 
+\[ 
+f( z) = ( z-z_*)^{n} \sum_{k=0}^{ \infty } a_{n+k} ( z-z_*) ^{k}
+\]
+\[ 
+f'(z ) = n ( z-z_*) ^{n-1}\left( \sum_{k=0}^{ \infty } a_{n+k} ( z-z_*) ^{k} \right) +( z-z_*) ^{n}\left( \sum_{k=0}^{ \infty }a_{n+k} a( z-z_*)^{k-1} \right) 
+\]
+Donc
+\begin{align*}
+\frac{f'}{f} = \frac{n}{z-z_*}+ \frac{\ldots}{\ldots}
+\end{align*}
+De meme, si $f$ a un pole d'ordre $n$, on a 
+\[ 
+f( z) = \frac{1}{( z-z_*) ^{n}} \sum_{k=0}^{ \infty }a_{-n+k} ( z-z_*) ^{k}
+\]
+Et on trouve
+\[ 
+f'/f = \frac{-n}{z-z*}+ \frac{\ldots}{\ldots}
+\]
+	
+
+\end{proof}
+\subsection{Sphere de Riemann}
+On va identifier $ \mathbb{C}\cup \left\{ \infty  \right\} = \hat{\mathbb{C}}$ avec la sphere $ \left\{ x^{2}+y^{2}+z^{2}=1 \right\} $ par projection stereographique en identifiant $\mathbb{C}$ avec le plan $ \left\{ ( u,v,-1) , u,v \in \mathbb{R} \right\} $ par la fonction 
+\[ 
+	( x,y,z) \mapsto \frac{x+iy}{1-z} \text{ et } ( 0,0,+1) \mapsto \infty 
+\]
+$\hat{\mathbb{C}}$ est muni de la topologie induite
+\begin{propo}
+Soit $f$ une fonction meromorphe sur $U$, alors $f$ s'etend en une fonction continue $ U\to \hat{\mathbb{C}}$ 
+\end{propo}
+Si $f:U\to \mathbb{C}$ est telle que $k U \supset \mathbb{C}\setminus \overline{D}( 0,r) $ pour $r \geq 0$ on dit qu'elle est definie au voisinage de l'infini si $f( \frac{1}{w}) $ est definie au voisinage de $0$ et on parlera de singularites effacables, de poles ou de singularites essentielles selon le pole de $f( \frac{1}{w}) $ 	
+
+\section{Theoreme des residus}
+\begin{thm}[Theoreme des Residus]
+
+	Soit $U$ simplement connexe, $F\subset U$ fini, $f:U\setminus F \to \mathbb{C}$ holomorphe et $\gamma: [ 0,1] \to U$ un lacet. Alors
+	\[ 
+	\frac{1}{2\pi i}\oint_{\gamma} f( z) dz= \sum_{z_{*} \in K}^{ } res_{z_*} ( f) Ind_{z_*} ( \gamma) 
+	\]
+	
+\end{thm}
+		
+
+
+
+
+\end{document}	
