@@ -1,0 +1,98 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Wed 17 Nov}{Expectation}
+\begin{propo}
+$\overline{X}$ random vector on $ \mathbb{R}^n$, $\Phi: \mathbb{R}^n\to \mathbb{R}^n$ a $C^{1}$-diffeomorphism with $J = \det D\Phi\neq 0$, then $\Phi( \overline{X}) $ is a random vector with density
+\[ 
+f_{\Phi( \overline{X}) }( \overline{y})  = \frac{1}{|J_{\phi} ( \Phi^{-1}( \overline{y}) ) } f_{\overline{X}} ( \Phi^{-1}( \overline{y}) ) 
+\]
+
+\end{propo}
+\begin{crly}
+$X,Y$ independent r.v. with density $f_X, f_Y$, the density of $X+Y$ is then equal to
+\[ 
+f_{X+Y} ( y) = \int_{\overline{R}} f_X(x) f_{Y( y-x) } dx	
+\]
+\end{crly}
+\begin{proof}
+$\Phi: \mathbb{R}^{2}\to \mathbb{R}^{2}, ( x_0,y_0) \to ( x_0,x_0+y_0) $.\\
+$\Phi$ is a nice diffeo with $J=1$, then
+\[ 
+f_{X,X+Y} ( x_0,y_0) = f_{X,Y} ( x_0,y_0-x_0) = f_X( x_0) f_Y( y_0-x_0)
+\]
+
+\end{proof}
+\subsection{Conditional law}
+\begin{defn}
+	Let $( X,Y) $ be a discrete random vector
+	Let $S_X$ be the support of $X$ and $S_Y$ the support of $Y$, then $\forall x \in S_X$ the conditional law of $Y$ given $X=x$ defined as
+	\[ 
+	\forall y \in S_Y: \mathbb{P}( Y=y|X=x) = \frac{ \mathbb{P} \left\{ X=x \right\} \cap \left\{ Y=y \right\} }{ \mathbb{P}( X=x) }
+	\]
+	
+	
+\end{defn}
+What about continuous r.v.?\\
+In general, no recipe, but all is good for r.v. with density
+\begin{defn}[Conditional law of rv with density]
+	Let $( X,Y) $ be r.v. with density, suppose $f_X( x_0) >0$, then the conditional density of $Y$ given $X=x_0$ 
+	\[ 
+	f_{Y|X} ( y) = \frac{ f_{X,Y} ( x_0,y_0) }{ f_X( x_0) }		
+	\]
+defines a density of a random variable.	
+\end{defn}
+\begin{lemma}
+$ ( X,Y) \sim N( \mu, C) $, then the conditional law of $Y$ given $X=x_0$ is again a gaussian.
+\end{lemma}
+\section{Mathematical Expectation}
+\begin{defn}[Expectation for discrete r.v.]
+	Let $X$ be a discrete r.v. with support $S_X$, we call $X$ integrable if 
+	\[ 
+	\sum_{s \in S_X} |s| \mathbb{P}( X =s) < \infty 
+	\]
+	and if $X$ is integrable, we define
+	\[ 
+	\mathbb{E} [ X] = \sum_{s\in S_X} s \mathbb{P}( X=s) 
+	\]
+	to be the expectation.
+\end{defn}
+\begin{rmq}
+$ \mathbb{E}[X] $ only depends on $ \mathbb{P}_X$, does not determine $ \mathbb{P}_X$ 
+\end{rmq}
+\begin{propo}
+Let $X,Y$ be integrable and discrete r.v.
+\begin{itemize}
+\item Linearity
+	\[ 
+	\mathbb{E}[ \lambda X + \beta Y] = \lambda \mathbb{E} X + \beta \mathbb{E}Y
+	\]
+
+\item 
+	\[ 
+	| \mathbb{E} X| \leq  \mathbb{E}|X|
+	\]
+	
+	
+\end{itemize}
+
+\end{propo}
+\begin{proof}
+\begin{align*}
+\mathbb{E} [ X+Y] = \sum_{s\in S_{X+Y} }^{ } s \mathbb{P} [ X+Y=s] \\
+\intertext{Notice}
+\mathbb{P}( X+Y=s) = \sum_{x\in S_X}^{ } \sum_{y\in S_Y}^{ } \mathbb{P}(  \left\{ X=x_0 \right\} \cap \left\{ Y=y_0 \right\} ) 1_{s= x_0+y_0} \\
+\mathbb{E} [ X+Y] =\sum_{x_0} \sum_{y_0} \sum_s s 1_{x_0+y_0=s} \mathbb{P}(  \left\{ X=x_0 \right\} \cap \left\{ Y=y_0 \right\} ) = \mathbb{E} X + \mathbb{E}Y	
+\end{align*}
+
+\end{proof}
+
+\begin{crly}
+Let $X,Y$ be integrable r.v. s.t.
+\[ 
+\mathbb{P}( X \geq Y)  =1 \implies \mathbb{E}X \geq \mathbb{E}Y
+\]
+
+\end{crly}
+
+
+\end{document}	

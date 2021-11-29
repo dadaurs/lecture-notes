@@ -1,0 +1,93 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{18}{Mon 22 Nov}{Theoreme des Nombres premiers preuve}
+\begin{proof}[1]
+On veut montrer que si $\phi( x) \sim x$, alors $\pi( x) \sim \frac{\phi( x) }{\log x}$
+\[ 
+\iff \pi( x) \log x \sim \phi( x) 
+\]
+On a clairement
+\[ 
+\pi( x) \log x \geq \phi( x) 
+\]
+Soit $\epsilon>0$, on a
+\[ 
+\phi( x) \geq  \sum_{x^{1-\epsilon} \leq p \leq x  }^{ }\log p \geq \sum_{x^{1-\epsilon} \leq p \leq  x}^{ } \log ( x^{1-\epsilon}) = ( 1-\epsilon) ( \pi( x) -\pi( x^{1-\epsilon}) ) \log x
+\]
+Pour tout $x, \pi( x^{1-\epsilon}) \leq x^{1-\epsilon}$ et $\pi( x) \geq \frac{\phi( x) }{\log x}$. Donc si $\phi( x) \sim x$ quand $x\to \infty $, alors
+\[ 
+\pi( x^{1-\epsilon}) / \pi( x) \oar { x\to \infty } 0
+\]
+et donc
+\[ 
+\phi( x) \geq ( 1-\epsilon^{2}) \pi( x) \log x
+\]
+	
+
+\end{proof}
+\begin{proof}[2]
+Prouvons le par l'absurde.\\
+Montrons qu'il n'est pas possible de trouver $\lambda>1$  une suite $a_n\to \infty $ tel que $\phi( a_n) \geq a_n $ et $a_{n+1} \geq \lambda a_n$  ou $\mu<1$ et une suite $b_n\to \infty $ avec 
+\[ 
+\phi( b_n) \leq \mu b_n \text{ et } b_{n+1} \geq \frac{1}{\mu}b_n	
+\]
+Si la suite $a_n$ existait, montrons que $I_1$ diverge.	
+Montrons que
+\begin{align*}
+\int_{ a_n }^{ \lambda a_n }	\frac{\phi( x) -x}{x^{2}}dx \geq \int_{ a_n }^{ \lambda a_n } \frac{\phi( a_n) -x}{x^{2}}dx\\
+\geq \int_{ a_n }^{ \lambda a_n } \frac{\lambda a_n -x}{x^{2}}\\
+= \int_{ 1 }^{ \lambda} \frac{\lambda-t}{t^{2}} dt \geq \frac{1}{\lambda^{2}}\int_{ 1 }^{ \lambda } ( \lambda-t) dt = \frac{\lambda-1}{2\lambda^{2}}>0
+\end{align*}
+
+\end{proof}
+Pour le lemme 3, commencons par un petit lemme intermediaire
+\begin{lemma}
+$\frac{\phi( x) }{x}$ est bornee.
+\end{lemma}
+\begin{proof}
+Pour ce faire, etudions 
+\[ 
+\phi( 2n) -\phi( n) = \log \prod_{n \leq p \leq 2n} p \leq \log \binom { 2n } n \leq \log ( 1+1)^{n}= \log ( 2 ) 2n
+\]
+Pour $x>1$ , $\phi( x) \geq \phi( \lfloor x \rfloor) $ 
+\begin{align*}
+\phi( 2x) \leq \phi( 2 \lfloor x \rfloor) )+ \log ( 2 \lfloor x \rfloor +1) 
+\end{align*}
+Donc
+\begin{align*}
+	\phi( 2x) -\phi( x) &\leq \phi( \lfloor x \rfloor ) - \phi( \lfloor x \rfloor ) + \log ( 2x+1) \\
+			    & \leq 2 \log 2 \lfloor x \rfloor + \log ( 2x+1 )\\
+			    & \leq 2 Cx
+\end{align*}
+Donc
+\begin{align*}
+\phi( x) - \phi(  \frac{x}{2^{n}}) \leq C( \frac{x}{2}+ \frac{x}{4}+ \ldots) \leq Cx
+\end{align*}
+
+
+
+\end{proof}
+\begin{proof}[3]
+Repose sur la transformation de Laplace.
+\begin{defn}[Transformee de Laplace]
+	Soit $f: \mathbb{R}_+ \to \mathbb{C} $ une fonction bornee et continue par morceaux sur $[0, \infty )$.\\
+	La transformee de Laplace de $f$, notee $ \mathcal{L}( f) $ est definie sur $ \mathbb{H}_0$ par
+	\[ 
+	\mathcal{L} f( z) = \int_{ 0  }^{ \infty  } f( z) e^{- tz} dt
+	\]
+		
+\end{defn}
+\begin{thm}
+Si $f$ est bornee et que $ \mathcal{L}f$ s'etend en une fonction meromorphe sur $ \mathbb{H}_{-\delta} $ pour $\delta>0$ sans poles sur $ \mathbb{H}_0$, alors 
+\[ 
+\int f( t) dt
+\]
+converge et vaut $\mathcal{L}f( 0) $ 
+\end{thm}
+Le lemme 3 en suit ( en prenant la transformee de Laplace ).
+\end{proof}
+
+	
+
+
+\end{document}	

@@ -1,0 +1,56 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{19}{Mon 29 Nov}{Applications conformes}
+\section{Applications conformes}
+\begin{defn}[Fonction Holomorphe]
+	Une fonction holomorphe bijective entre deux domaines.	
+\end{defn}
+\subsection{Applications conformes de $ \mathbb{D}\to \mathbb{D}$ }
+Une famille d'applications conformes $ \mathbb{D}\to \mathbb{D}$:\\
+Pour $\alpha\in \mathbb{D}$, notons $\phi_\alpha= \frac{z-\alpha}{ 1- \overline{\alpha}z}$.\\
+Montrons que $\phi_\alpha  $ est une bijection.\\
+Voyons que $\phi_\alpha	$ envoie $\del \mathbb{D}\to \del \mathbb{D}$.\\
+Pour $\beta\in \mathbb{R}$
+\begin{align*}
+| \frac{ e^{i\beta} - \alpha}{1- \overline{\alpha e^{-i\beta}} }| &= | \frac{ e^{i\beta} -\alpha}{1- \alpha e^{i-\beta} }|=1	\\
+\intertext{Par le principe du maximum, $\phi_\alpha$ envoie $ \mathbb{D}\to \mathbb{D}$ }
+\end{align*}
+On verifie de plus que l'inverse de $\phi_\alpha$ est $\phi_{-\alpha} $ 
+Pour $\alpha\in \mathbb{D}$ et $\theta \in \mathbb{R}$, on note
+\[ 
+\phi_{\alpha,\theta} ( z) = e^{i\theta} \phi_\alpha( z) 
+\]
+Voyons pourquoi les $\phi_{\alpha,\theta} $ sont les seules applications conformes $ \mathbb{D}\to \mathbb{D}$.\\
+\begin{proof}
+Idee: si $\phi: \mathbb{D}\to \mathbb{D}$ est conforme, posons $\alpha= \phi( 0) $, alors $\tilde\phi= \phi_\alpha \circ \phi( 0) =0$.\\
+De plus, si $\theta= \arg( \tilde\phi'( 0) ) $, alors 
+\[ 
+\tilde\phi= \phi_{\alpha,-\theta} \circ\phi: \mathbb{D}\to \mathbb{D}
+\]
+
+\end{proof}
+\begin{thm}
+Pour n'importe quel domaine simplement connexe $\Omega$, il existe une application conforme $ \Omega\to \mathbb{D}$.
+\end{thm}
+\begin{proof}
+L'idee est de trouver unefonction injective $\phi$ qui envoie $z\to 0$, $\phi'( z) >0$ et l'optimiser pour la rendre surjective.\\
+Posons $\Sigma_{\Omega,z_*} $ l'ensemble des fonctions holomorphes injectives qui envoient $z_*\to 0$
+\begin{lemma}
+$\Sigma_{\Omega,z_*} \neq \emptyset$ 
+\end{lemma}
+\begin{proof}
+Soit $w_0\in \mathbb{C}\setminus \Omega$, comme $z\to z-w_0$ ne s'annule pas, il existe $f( z) = \sqrt{z-w_0} $, il existe $f( z) = \sqrt{z-w_0}$. Soit $\tilde\Omega= f( \Omega) $.\\
+Montrons qu'il existe $\tilde \omega\in \mathbb{C}$ tel que $d( \tilde \omega, \tilde \Omega) >0$.\\
+En effet, $\not\exists z_1,z_2$ tel que $f( z_1) = f( z_2) $ et $\not\exists z_1\neq - z_2$ tel que $f( z_1) = - f( z_2) $.\\
+Donc
+\[ 
+f( \Omega) \cap -f(  \Omega) = \emptyset
+\]
+
+\end{proof}
+
+\end{proof}
+
+
+
+\end{document}	

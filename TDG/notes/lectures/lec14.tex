@@ -1,0 +1,182 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{14}{Fri 26 Nov}{Groupes Abeliens libres}
+\begin{lemma}
+Soit $X$ un ensemble, et soit $ \left\{ A_x| x\in X \right\} \subset \ob \ab$. Alors
+\[ 
+\# X < \infty  \iff \bigoplus_{x\in X} A_x \simeq \prod_{x\in X} A_x
+\]
+
+\end{lemma}
+\begin{proof}
+$\forall X, \bigoplus A_x < \prod_{x\in X} A_x$, de plus par definition
+\[ 
+\bigoplus A_x = \left\{ \omega: X \to \bigcup A_x | \omega( x) \neq 0 \text{ pour un nombre fini d'elements }  \right\} 
+\]
+On a donc egalite.
+
+\end{proof}
+Notation utile pour sommes directes:
+\[ 
+\omega\in \bigoplus A_x, \text{ on note } \sum_{x\in X} \omega( x) \cdot x
+\]
+
+Ou on a a droite une somme finie d'elements	
+\begin{defn}[Groupes abeliens libre]
+Soit $X$ un ensemble. La somme directe $\bigoplus_{x\in X} \mathbb{Z}$ est le groupe abelien libre de base $X$, note $F_{\ab} ( X) $ 		
+\end{defn}
+\begin{thm}[Foncteur libre]
+	La definition du groupe abelien libre s'etend en un foncteur $F_{ \ab }: \ens \to \ab$, qui est adjoint a gauche du foncteur oublie $U : \ab \to \ens$ 	
+\end{thm}
+\begin{proof}
+Il reste a definir $F_{\ab} $ sur les morphismes.\\
+Soit $f\in \ens( X,Y) $, alors
+\[ 
+F_{ \ab } ( f) : F_{ \ab }( X) \to F_{ \ab }( Y): \sum_{x\in X} n_x \cdot x \to \sum_{y\in Y} ( \sum_{x\in f^{-1}( y) } n_x) y
+\]
+La preuve que $F_{\ab} ( g\circ f) = F_{ \ab }( g) \circ F_{ \ab }( f) $ ressemble a celle donnee dans le cas du foncteur $ \mathcal{L}: \ens \to \vect_{\mathbb{K}} $.\\
+Montrons donc que $F_{ \ab }$ est l'adjoint a gauche de $U$.\\
+Etablissons la bijection naturelle $\ab( F_{ \ab }( X) , A) \to \ens( X, UA) $.\\
+On definit
+\[ 
+\alpha( \phi) = U( \phi) \circ \eta_X
+\]
+On definit de plus $\forall f : X \to UA$l
+\[ 
+\beta( f) : F_{ \ab }( X) \to A: \sum_{x\in X} n_x x \mapsto \sum_{x\in X} n_x f( x) 
+\]
+
+
+\end{proof}
+\subsection{Le foncteur $\hom$ }
+\begin{lemma}
+Il y a un foncteur $\hom: \ab^{op}\times \ab \to \ab$ specifie sur les objets par
+\[ 
+\hom( A,B) = \ab( A,B) 
+\]
+muni de l'addition definie composante par composante pour tout $a \in A$, 
+\end{lemma}
+\begin{proof}
+L'addition $f+g$ est bien un homomorphisme et clairement $f+g = g+f$.\\
+Il faut maintenant montrer que
+\[ 
+\hom( f^{op},g ) : \hom( A',B) \to \hom( A,B')
+\]
+On a en effet $\forall h, k \in \hom( A',B) $, on a 
+\[ 
+\hom( f^{op},g) ( h+l) = g\circ ( h+k) \circ f = g\circ h\circ f + g\circ k \circ f
+\]
+On en deduit que $\hom$ est bien un foncteur.\\
+
+\end{proof}
+\begin{propo}
+Soit $X$ un ensemble, et soit $ \left\{ A_x| x \in X \right\} \subset \ob \ab$. Pour tout groupe abelien $B$, il y a un isomorphisme de groupes abeliens
+\[ 
+\hom( \bigoplus A_x, B) \simeq \prod_{x\in X} \hom( A_x, B) 
+\]
+
+\end{propo}
+\begin{proof}
+On sait deja qu'il y a une bijection 
+\[ 
+\alpha: \ab( \bigoplus A_x, B) \to \prod_{x\in X} \ab( A_x,B) 
+\]
+Il suffit donc de montrer que $\alpha$ est un homomorphisme.\\
+On a en effet
+\[ 
+\alpha( h) = ( h\circ \iota_x)_{x\in X} 
+\]
+Soient $h,k\in \ab( \bigoplus A_x, B) $.\\
+Alors $\alpha( h+k) = ( ( h+k) \circ \iota_x) = \alpha( h) + \alpha( k) $ 
+\end{proof}
+\subsection{Suites Exactes}
+Une suite d'homomorphismes de groupe abelien
+\[ 
+\ldots \oar { \phi_{n+2} } A_{n+1} \oar { \phi_{n+1} } A_n \oar { \phi( n) } A_{n-1} \ldots
+\]
+est exacte si $\im\phi_{n+1} = \ker\phi_n$ pour tout $n$.\\
+Une courte suite exacte dans $\ab$ est une suite exacte d'homomorphismes de groupe abeliens dont seulement au plus trois groups, consecutifs, sont non-triviaux. On ecrit une telle suite
+\[ 
+0 \to A \oar \iota B \oar \pi C \oar{} 0
+\]
+
+
+\begin{exemple}
+Pour tout couple de groupes abeliens $A$ et $B$, il y a une suite exacte
+\[ 
+0\to A \oar \iota A\oplus B \oar \pi B \to 0
+\]
+
+\end{exemple}
+\begin{defn}[Suite exacte scindee]
+	Une suite exacte $ 0 \to A \oar \iota B \oar \pi C \to 0$ dans $\ab$ est scindee s'il existe $\sigma\in \ab( C,B) $ tel que $\pi \circ\sigma = \id$. On dit alors que $\sigma$ est une section de $\pi$.
+\end{defn}
+\begin{lemma}
+Une courte suite exacte est scindee si et seulement si il existe une retraction de l'homomorphisme, ie. il existe $\rho \in \ab( B,A) $ tel que $\rho \circ \iota= \id$ 
+\end{lemma}
+\begin{proof}
+$\exists \sigma\implies \exists\rho$\\
+Considerer $q: B \to B / \ker\pi$ et $ \hat{\pi}: B /\ker\pi\to C$.\\
+Observer que 
+\[ 
+\hat{\pi}q\sigma \hat{\pi}= \pi \sigma \hat{\pi}= \hat{\pi}
+\]
+Donc 
+\[ 
+q\sigma \hat{\pi}= \hat{\pi}^{-1}\hat{\pi}q\sigma \hat{\pi}= \id
+\]
+Par consequent $\forall b \in B$ 
+\[ 
+q( b-\sigma \hat{\pi}q( b) ) = q( b) - q\sigma \hat{\pi}q( b) = q( b) - q( b) =0
+\]
+Donc $ b - \sigma \hat{\pi}q( b) \in \ker\pi= \im \iota$.\\
+Ce qui nous permet de definir
+\[ 
+\rho( b) = \text{ l'unique  } a\in A \text{ tel que  } \iota= b- \sigma \hat{\pi}q( b) 
+\]
+Alors $\rho$ est un homomorphisme, alors
+\[ 
+\iota( a) = b - \sigma \hat{\pi}q( b) , \iota( a') = b' - \sigma \hat{\pi}q( b') 
+\]
+Alors $\iota( a+a') = b+b' - \sigma \hat{\pi}q( b+b') $.\\
+Et finalement 
+\[ 
+\rho \iota( a) = a
+\]
+car 
+\[ 
+\iota( a) - \sigma \hat{\pi}q \iota( a) = \iota( a) 
+\]
+Demontrons maintenant que l'existence de $\rho$ implique l'existence de $\sigma$.\\
+Pour tout $c\in C$, choisir $ b_c\in B$ tel que $\pi( b_c) =c$.\\
+Normalement, il n'y a aucune raison que $b_{c+c'} = b_c + b_{c'} $, ie., ces choix de pre-image des elements de $C$ ne nous donnent pas un homomorphisme de $C$ vers $B$.\\
+Modifions ces choix de la maniere suivante pour obtenir un homomorphisme:\\
+Definir $\sigma: C\to B$ par $\sigma( c) = b_c - \iota\rho( b_c) $.\\
+Il nous faut voir que $\pi\sigma( c) =c\forall c \in C$.\\
+\begin{align*}
+\pi\sigma( c) = \pi( b_c- \iota \rho( b_c) ) \\
+= c - \pi \iota\rho( b_c) = c
+\end{align*}
+Si $\pi( b) = c = \pi( b') $, alors on a $b-b'\in \ker\pi = \im\iota$.\\
+Donc il existe un unique $a\in A$ tel que $b-b' = \iota( a) $ d'ou
+\[ 
+	( b-\iota\rho( b) ) - b'- \iota\rho( b) = \iota( a) -\iota\rho\iota(a) = a
+\]
+Montrons finalement que $\sigma$ est un homomorphisme.\\
+En effet, puisque si $\pi( b) = c$ et $\pi( b') = c'$, alors 
+\[ 
+\pi( b+b') =c+c'
+\]
+donc 
+\[ 
+\sigma( c+c') = ( b+b') - \iota\rho( b+b') = b - \iota\rho( b) + b' - \iota\rho( b') = \sigma( b) + \sigma( b') 
+\]
+
+		
+
+
+
+\end{proof}
+			
+
+\end{document}	

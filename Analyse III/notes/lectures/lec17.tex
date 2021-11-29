@@ -1,0 +1,112 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{17}{Thu 18 Nov}{theoreme des nombres premiers}
+\begin{thm}[Theoreme des nombres premiers]
+	Soit $\pi( x) = \text{ nombre de $p$ premiers $ < x$  } $ alors quand $x\to \infty $ 
+	\[ 
+	\pi( x) \sim \frac{x}{\log x}
+	\]
+	
+\end{thm}
+\subsection*{Idees heuristiques}
+Regarder 
+\[ 
+\zeta( s) = \sum_{n=1}^{ \infty } \frac{1}{n^{s}} = \prod_p \frac{1}{1- p^{-s}}
+\]
+En effet
+\[ 
+\prod_p \frac{1}{1-p^{-s}}=\prod_p \sum_{n=0}^{ \infty } p^{-sm}
+\]
+On regarde
+\[ 
+\frac{\zeta'}{\zeta} = -\del_s \sum \log {1-p^{-s}} = \sum \frac{\log p}{p^{s}-1}
+\]
+\subsection*{Preuve}
+On a
+\[ 
+\zeta( s) = \sum_{n=1}^{ \infty }n^{-s}, \re( s) >1
+\]
+
+On pose
+\[ 
+\phi( x) = \sum_{p \leq x}^{ } \log p
+\]
+et
+\[ 
+\Phi( s) = \sum_p \frac{\log p}{p^{s}}
+\]
+\begin{lemma}[0]
+\[ 
+s \mapsto \zeta( s) - \frac{1}{s-1}
+\]
+est holomorphe sur $ \left\{ z: Re( z) >1 \right\} $ et s'etend de maniere holomorphe $ \mathbb{H}_0$ 
+\end{lemma}
+\begin{lemma}[1]
+Si $\phi( x) \sim x$ quand $x\to \infty $, alors $\pi( x) \sim \frac{x}{\log x }$ quand $x\to \infty $ 
+\end{lemma}
+\begin{lemma}[2]
+Si $I_1$ converge, ou 
+\[ 
+I_1 = \int_{ 1 }^{ \infty  } \frac{\phi( x) -x}{x^{2}}dx
+\]
+Alors $\phi( x) \sim x$ quand $x\to \infty $ 
+
+\end{lemma}
+\begin{lemma}[3]
+Soit $I( s)  $ defini par
+\[ 
+\int_{ 1 }^{ \infty  } \frac{\phi( x) -x}{x^{1+s}}dx
+\]
+pour $\re s >1$.\\
+Alors si $I$ a un prolongement meromorphe sur $ \mathbb{H}_{1-\epsilon}$ pour $\epsilon >0$ qui n'a pas de pole sur $ \overline{ \mathbb{H}_1}$ alors $I_1$ converge
+\end{lemma}
+\begin{lemma}[4]
+Sur $ \mathbb{H}_{1} $, on a 
+\[ 
+I( s) = \frac{\Phi( s) }{s}- \frac{1}{s-1}
+\]
+et cela s'etend sur $\mathbb{H}_{\frac{1}{2}} $.
+
+\end{lemma}
+\begin{lemma}[5]
+La fonction $\Phi$ s'etend en une fonction meromorphe $ \mathbb{H}_{\frac{1}{2}} $ avec des poles correspondants aux poles de $\zeta$.\\
+Les zeros de $\zeta$ d'ordre $n$ donnent des poles simples de $\Phi$ de residu $-n$.\\
+Les poles de $\zeta$ d'ordre $n$ donnent des poles simples de $\Phi$ de residu $n$.
+\end{lemma}
+\begin{lemma}[6]
+La fonction $\zeta$ n'a pas de zeros sur $ \overline{\mathbb{H}_1}$ 
+\end{lemma}
+\begin{proof}[Du theoreme des nombres premiers, avec les lemmes]
+	
+Avec lemme 6 et lemme 0, le seul pole de $\zeta$ sur $ \overline{\mathbb{H}_1}$ en $s=1$ n'a pas de zeros, donc $\Phi$ a juste un pole simple de residu $1$ en $s=1$, pas d'autres poles sur $ \overline{\mathbb{H}_1}$.\\
+Donc l'extension de $I( s) $ a $\mathbb{H}_{\frac{1}{2}} $ n'a pas de poles sur $ \overline{\mathbb{H}_1}$ , donc $I_1$ converge, donc $\phi( x) \sim x$ et donc $\pi( x) \sim \frac{x}{\log x}$ 
+\end{proof}
+On prouve les lemmes
+\begin{proof}[-1]
+	
+Soit $E( N)$ l'ensemble des nombres dont les facteurs premiers sont $ \leq N$, alors
+\[ 
+\prod_{p \leq N} \frac{1}{1-p^{-s}} \prod_{p \leq N}  ( 1+ p^{-s}+ \ldots) = \sum_{n \in E( n) } \frac{1}{n^{s}}
+\]
+En faisant tendre $N\to \infty $, on obtient le resultat.
+\end{proof}
+\begin{proof}[0]
+On a 
+\[ 
+\frac{1}{s-1}= \int_{ 1 }^{ \infty  }\frac{1}{x^{s}}dx
+\]
+On a donc
+\begin{align*}
+\vert\sum_{n=1}^{ \infty } \frac{1}{n^{s}}- \int_{ 1 }^{ \infty  } \frac{1}{x^{s}}dx \vert &= \vert\int_{ 1 }^{ \infty  }(  \frac{1}{\lfloor{x}^{s}}- \frac{1}{x^{s}} )dx\vert\\
+&= \sum_{n=1}^{ \infty } \int_{ n }^{ n+1 } |( \frac{1}{n^{s}}- \frac{1}{x^{s}})| dx \\
+& \leq \frac{|s|}{n^{\re( s) +1}}	
+\end{align*}
+
+\end{proof}
+
+
+
+
+
+
+\end{document}	

@@ -1,0 +1,152 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{13}{Fri 19 Nov}{Groupes Abeliens}
+\section{Groupes Abeliens}
+\subsection{Constructions categoriques dans $\ab$ }
+Comment distinguer les groupes abeliens parmis tous les groupes?
+\begin{lemma}
+Un groupe $G$ est abelien si et seulement si sa multiplication $\mu: G\times G\to G$ est un homomorphisme
+\end{lemma}
+\begin{proof}
+$\mu: G\times G\to G: ( a,b) \mapsto ab$.\\
+Alors $\mu$ un homomorphisme de groupe $\iff \forall a,b,a',b'\in G$
+\[ 
+\mu( ( a,b) \times ( a',b') ) = \mu( a,b) \times \mu( a',b') 
+\]
+Donc
+\begin{align*}
+\mu( ( aa',bb') ) = aba'b' = aa'bb' = aba'b' \forall a,b,a',b'\in G
+\intertext{ Ce qui est equivalent a demandenr que}
+a'b= ba'\forall a',b\in G	
+\end{align*}
+$G$ est abelien.
+
+\end{proof}
+\subsection{Sommes directes}
+Comment construire des coproduits dans $\ab$?
+\begin{lemma}
+Pour tout couple de groupes abeliens $A$ et $B$,
+\[ 
+A \oar i_1 A\times B \oal i_2 B
+\]
+ou $i_1( a) = ( a,0) $ et $i_2 ( b) = ( 0,b) $ pour tout $a \in A$ et tout $b \in B$ est un coproduit dans $\ab$.
+
+\end{lemma}
+\begin{proof}
+Il suffit de verifier la propriete universelle.\\
+Soient $f\in \ab( A,C) , g \in \ab( B,C) $, Comment definir $h \in \ab( A\times B, C) $ tel que $hi_1=f, hi_2=g$.\\
+Observer que $hi_1 = f \iff h( a,0) = f( a) \forall a \in A$ et $h i_2 = g \iff h( 0,b) = g( b) \forall b \in B$.\\
+Cependant,
+\[ 
+h( a,b) = h( a,0) + h( 0,b) = f( a) + g( b)
+\]
+Definissons donc $ h( a,b) = f( a) + g( b) $ 
+
+\end{proof}
+Pour distinguer les deux roles categoriques de $A\times B$ au lieu du produit, on le note $A\oplus B$ et on l'appelle la somme directe et on ecrira les elements comme une somme formelle $a+ b \in A\oplus B$.\\
+Quelle est la relation entre la notion de $\oplus$ ci-dessus et celle de $\oplus$ de 2 sous-groupes d'un groupe abelien?\\
+Parfois on considere la somme directe comme une operation interne a l'ensemble des sous-groupes d'un groupe abelien. Si $B$ et $C$ sont des sous-groupes de $A$, leur somme, notee $B+C$ est un sous-groupe de $A$.
+\hr\\
+Traduisons la propriete universelle de la somme directe de groupes abeliens
+\begin{rmq}
+Selon la propriete universelle du coproduit
+\[ 
+\forall f \in \ab( A,C), \in \ab( B,C), \exists! h \in \ab( A\oplus B, C) 
+\]
+tel que
+\[ 
+\ab( A\oplus B, C) \to \ab( A, C) \times \ab( B,C) :h \mapsto ( h\circ i_1, h\circ i_2) 
+\]
+est une bijection.\\
+Ainsi l'existence de $\alpha$ ne depend que de l'existence de $i_1$ et $i_2$.\\
+De plus, la propriete universelle de $A\oplus B$ nous donne un inverse a $\alpha$ 
+\[ 
+\beta( f,g) = f+g
+\]
+
+\end{rmq}
+\begin{defn}[Produit quelconque d'ensembles]
+	Soit $X$ un ensemble et soit $ \left\{ Y_x |x\in X \right\} \subset \ob \ens $ Le produit des $Y_x$ note $\prod_X Y_x$ est l'ensemble
+	\[ 
+	\left\{ \omega \in \ens( X, \bigcup Y_x) | \omega( x) \in Y_x\forall x \in X \right\} 
+	\]
+	
+\end{defn}
+Ceci se generalise naturellement aux groupes
+\begin{defn}[Produit quelconque de groupes]
+	Soit $\left\{ G_x| x \in X \right\} \subset \ob \gr$. Le produit des $G_x$, note $\prod G_x$ est le groupe dont le sous-ensemble sous-jacent est
+	\[ 
+	\left\{ \omega\in \ens( X, \bigcup G_x) | \omega( x) \in G_x\forall x \in X \right\} 
+	\]
+	muni de la mulitplication definie par
+
+	\[ 
+( \omega\cdot \omega' )	( x) = \omega( x) \cdot \omega'( x) 
+	\]
+\end{defn}
+Notons que ici, les projections selon les coordonnees sont en particulier des homomorphismes.
+\begin{rmq}
+Le produit d'une famille quelconque d'ensembles ou de groupes verifie une propriete universelle qui generalise celle de la definition du produit de deux objets, notamment
+Dans $\gr: \forall \left\{ f_{x'} \in \gr( H, G_{x'} ) | x'\in X \right\} $, 
+\begin{align*}
+\exists ! f \in \gr( H, \prod G_x ) 
+\end{align*}
+tel que $p_{x'} \circ f  = f_{x'} \forall x'$ 
+
+\end{rmq}
+Generalisons la notion de somme directe aux familles quelconques de groupes abeliens.
+\begin{defn}[Somme directe quelconque]
+	Soit $X$ un ensemble, et soit $ \left\{ A_x|x\in X \right\} \subset \ob\ab$. Une somme directe des groupes abeliens $A_x$ consiste en un groupe abelien $B$ muni d'homomorphismes $i_x: A_x\to B$ pour tout $x\in X$ tel que l'application
+	\[ 
+\ab( B,C) \to \prod_{x\in X} \ab( A_x, C) : h \to ( h\circ i_x)_{x\in X} 	
+	\]
+	
+\end{defn}
+\begin{propo}
+Soit $X$ un ensemble, et soit $\left\{ A_x| x \in X \right\} \subset \ob \ab$. La somme directe des $A_x$ existe et est unique a isomorphisme pres.\\
+\end{propo}
+\begin{proof}
+Posons $B = \left\{ \omega\in \prod_{x\in X} A_x | \# \left\{ x\in X| \omega( x) \neq 0 \right\} < \infty  \right\} $ et $\iota_x: A_{x'} \to B: a \mapsto \iota_{x'} (a ) $ ou 
+\[ 
+\iota_{x'} ( a) : X \to \bigcup_{x\in X} A_x: x \mapsto 
+\begin{cases}
+a: x= x'\\
+0: x\neq x'
+\end{cases}
+\]
+On veut definir un inverse a $\alpha: \ab( B,C) \to \prod_{x\in X} \ab( A_x,C) $.\\
+On definit $\beta: \prod_{x\in X} \ab( A_x,C) \to \ab( B,C) $ par
+\[ 
+\beta( ( f_x) _{x\in X} ) = f 
+\]
+ou $f: B\to C: \omega\mapsto \sum_{x\in X}^{ }f_X( \omega( x) ) $ 
+$f$ est un homomorphisme, car:
+\[ 
+f( \omega+\omega') = \sum_{x\in X}^{ }f_x ( ( \omega+\omega') ( x) ) = \sum_{x\in X}^{ }f_x( \omega( x) ) + \sum_{x\in X}^{ }f_x( \omega'( x) ) = f( \omega) + f( \omega') 
+\]
+Il reste a voir que c'est bien un inverse
+\[ 
+\prod_{x\in X} \ab( A_x,C) \oar \beta \ab( B,C) 
+\]
+\[ 
+	( f_x)_{x\in X} \mapsto f \mapsto ( f\circ \iota_x)_{x\in X} 
+\]
+Donc 
+\[ 
+\forall a \in A_{x'} : f\circ \iota_{x'} ( a) = \sum_{x\in X}^{ }f_x( \iota_{x'} ( a) ( x) ) = f_{x' } ( a)  
+\]
+On veut montrer que $\beta\alpha= \id$ 
+\[ 
+\ab( B,C) \oar \prod_{x\in X} \ab( A_x,C) \oar \ab( B,C)
+\]
+On a donc
+\begin{align*}
+	\beta( ( f\circ\iota_x) _{x\in X} )( \omega) &= \sum_{x\in X}^{ }f\circ \iota_x( \omega( x) ) \\
+\end{align*}
+
+
+		
+\end{proof}
+							
+
+\end{document}	

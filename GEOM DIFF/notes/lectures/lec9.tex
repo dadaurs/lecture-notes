@@ -1,0 +1,75 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Wed 17 Nov}{...}
+\begin{defn}[Intersection Transversale]
+	Deux sous-varietes $M_1,M_2 \subset \mathbb{R}^n$ s'intersectent transversalement en un point $p$ si $p\in M_1\cap M_2$ et $T_pM_1+T_p M_2= \mathbb{R}^n$ 	
+\end{defn}
+\begin{propo}
+Si $M_1$ et $M_2$ s'intersectent transversalement en $p$ et si $\dim M_1 + \dim M_2= n$, alors il existe un systeme de coordonnees au voisinage $U$ de $p$. tel que $M_1\cap U = \left\{ u\in U | u_{m+1} = \ldots = u_n =0 \right\} $ 	
+\end{propo}
+\hr\\
+Une surface parametree, reguliere
+\[ 
+\psi: \Omega \subset  \mathbb{R}^{2}\to S \subset \mathbb{R}^{3}
+\]
+Ce tenseur depend de $( u,v) \in \Omega$ et est la matrice de Gram pour le produit scalaire standard de $ \mathbb{R}^{3}$ sur $ b_1, b_2$ 	
+\subsection*{Tube autour d'une courbe}
+On choisit deux champs de vecteurs $w_1, w_2: I\to \mathbb{R}^{3}$ le long de $\gamma$ tel que
+\[ 
+\forall t \left\{ w_1( t) , w_2( t)  \right\} = \text{ base orthonormee de  } \dot \gamma ^{\vert}
+\]
+et on pose 
+\[ 
+r( u,t) = \gamma( t) + a ( \cos ( u) w_1( t) + \sin u w_2( t)  ) 
+\]
+\subsection{Courbes tracees sur une surface}
+Soit $\psi: \Omega\to S \subset \mathbb{R}^{3}$ une surface parametree ( reguliere) et $\gamma: I \to S= \psi( \Omega) $ une courbe reguliere.\\
+On pose $\tilde\gamma: I \to \Omega, \tilde\gamma( t) = \psi^{-1}( \gamma( t) ) $ .\\
+\begin{defn}
+	On appelle $\tilde\gamma$ la representation de $\gamma$ dans la carte $\psi^{-1}$ 
+\end{defn}
+\begin{propo}
+La longueur d'un arg $\gamma$ se calcule a partir de $\tilde\gamma$ par la formule
+\[ 
+l( \gamma) = \int_{ t_0 }^{ t_1 } \sqrt{ E( u( t) ,v( t) ) \frac{du}{dt}^{2} + 2 F( u( t,v( t) ) ) \frac{du}{dt}\frac{dv}{dt}+ G( u,v) \frac{dv}{dt}^{2}	 } dt= \int_{ t_0 }^{ t_1 }\sqrt{ \sum} g_{ij} ( u( t) ,v( t) ) 
+\]
+
+\end{propo}
+\begin{proof}
+\[ 
+\dot\gamma( t) = \frac{d}{dt}\psi( \tilde\gamma( t) ) = \frac{d\psi}{du} \frac{du}{dt}+ \frac{d\psi}{dv}\frac{dv}{dt}= \frac{du}{dt}b_1 + \frac{dv}{dt}b_2
+\]
+
+\end{proof}
+\subsection{Angle entre deux courbes}
+Soient $\alpha,\beta: I \to S \subset \mathbb{R}^{3} $ tel que $\alpha( 0) = \beta( 0) = p$.\\
+Comment trouver l'angle $\theta$ entre $\dot\alpha( 0) $ et $\dot\beta( 0) $ dans $T_pS \subset \mathbb{R}^{3} $ a partir des representations $\tilde\alpha= \psi^{-1}\circ\alpha, \tilde\beta= \psi^{-1}\circ \beta$ 
+\begin{propo}
+L'angle $\theta $ entre $\alpha$ et $\beta$ est donne par
+\[ 
+\cos\theta = \frac{Eu_1'v_2' + F (   u_1'v_2'+ u_2'v_1'	) + Gv_1'v_2'	 }{ \sqrt{ E u_1'^{2} F u_1'v_1'+ Gv_2'^{2}} \sqrt{ E u_2'^{2}+ 2 F u_2'v_2'+ Gv_2'^{2}} }
+\]
+
+\end{propo}
+	
+\subsection{Aire d'une surface}
+\begin{defn}
+	Si $\psi: \Omega \to S$ est une surface parametree reguliere et $\psi$ est bijective. Alors l'aire de $S$ est definie par
+	\[ 
+	\text{ Aire } ( s) = \iint \sqrt{EG- F^{2}} du dv = \iint \sqrt{ \det G} du dv.
+	\]
+	
+\end{defn}
+De plus si $h: S \to \mathbb{R}$ est une fonction continue, alors l'integrale de $h$ sur $S$ est
+\[ 
+\iint_{\Omega} \psi^{-1}.h( u,v) \sqrt{\det G} du dv 
+\]
+Et le centre de gravite de $S$ est defini par
+\[ 
+C = \frac{1}{ \mathrm{Aire}( S) }  \int_{ S }^{  } \psi( u,v)  \sqrt{\det G} du dv
+\]
+
+
+
+		
+\end{document}	

@@ -1,0 +1,191 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Wed 24 Nov}{Expectation}
+\subsection{Expected value for general random variables}
+Let $X$ be a r.v.on $( \Omega, \mathcal{F}, \mathbb{P}) $.\\
+We discretize $X$ , define
+\[ 
+\forall n \geq 1 X_n( \omega) = 2^{-n}\lfloor 2^{n} X( \omega) \rfloor	
+\]
+$X_n$ is a random variable.\\
+Exo that
+\[ 
+X_n( \omega) \leq X( \omega) \leq X_n( \omega) +2^{-n}
+\]
+\begin{propo}
+Let $X$ be a random variable, we say that $X$ is integrable if
+\[ 
+\mathbb{E} |X_1|< \infty 
+\]
+and then, $\forall n \geq 1$, $ \mathbb{E}|X_n| < \infty $.\\
+In which case, the limite
+\[ 
+\lim_{n \to  + \infty} \mathbb{E}X_n
+\]
+existsand we define $ \mathbb{E}|X| = \lim \mathbb{E}|X_n|$ 
+\end{propo}
+\begin{proof}
+The property above implies
+\[ 
+X_n( \omega) -1 \leq X_1( \omega) \leq X_n( \omega) +1 \quad \forall \omega \in \Omega
+\]
+To show that the limit exists, we show that the sequence $ ( \mathbb{E} X_n) $ is cauchy.\\
+Take $n \in \mathbb{N}, m \geq n$ 
+\[ 
+|\mathbb{E}X_n- \mathbb{E}X_m| = | \mathbb{E} ( X_n-X_m) |	
+\]
+But now $X_n -X_m \leq 2^{-n+1}$, and hence $ \mathbb{E} |X_n-X_m| \to 0$ 	
+\end{proof}
+\begin{propo}
+Properties of $ \mathbb{E}$ 
+\begin{itemize}
+\item linear
+\item $ \mathbb{E} X \leq  \mathbb{E}|X|$ 
+\item $ \mathbb{P}( X \leq Y) =1 \Rightarrow \mathbb{E}X \leq \mathbb{E}Y$ 
+\end{itemize}
+\begin{proof}
+By discretization
+\end{proof}
+
+\end{propo}
+\begin{propo}
+$X$ a r.v. with density, then $X$ is integrable iff
+\[ 
+\int_{ \mathbb{R} }^{  } |y| f_X( y) dy < \infty 
+\]
+and then
+\[ 
+\mathbb{E}X= \int_{ \mathbb{R} }^{  }y f_X( y) dy
+\]
+
+
+\end{propo}
+\begin{proof}
+Take $X_n$ the discretization of $X$, we have
+\[ 
+\mathbb{E} X_n = \sum_{k\in \mathbb{Z}}^{ }k 2^{-n}\mathbb{P}( X_n= k 2^{-n}) 
+\]
+Then
+\[ 
+\mathbb{P}( X_n = k 2^{-n}) = \int_{ k 2^{-n} }^{ ( k+1) 2^{-n} } f_X( y) dy
+\]
+\[ 
+\mathbb{E}X_n = \sum_{k \geq 2}^{ } \int_{ k 2^{-n} }^{ ( k+1	)2^{-n}	  } k_2^{-n} f_X( y) 
+\]
+\begin{align*}
+\mathbb{E}X_n \leq \sum_{k\in \mathbb{Z}} \int_{ k 2^{-n} }^{ ( k+1)2^{-n} } y f_X( y) dy
+\end{align*}
+and
+\[ 
+\mathbb{E}X_n \geq \sum_{k\in \mathbb{Z}}^{ }\int_{ k 2^{-n} }^{ ( k+1)2^{-n} } ( y-2^{-n}) f_X( y) dy 
+\]
+and hence
+\[ 
+\mathbb{E}X_n\to \int_{\mathbb{R}} y f_X( y) dy
+\]
+
+
+\end{proof}
+\begin{propo}
+Take $ \overline{X}$ some random vector in $ \mathbb{R}^n$ and 
+\[ 
+\Phi: \mathbb{R}^n\to \mathbb{R}
+\]
+measurable.
+
+\begin{itemize}
+\item $\overline{X}$ is discrete, then $\Phi( \overline{X}) $ is also discrete, so if
+	\[ 
+	\Phi( \overline{X}) 
+	\]
+	integrable, then
+	\[ 
+\mathbb{E} \Phi( \overline{X}) = \sum_{s\in S_{\Phi( X) } }^{ } s \mathbb{P}( \Phi( \overline{X}) =s) = \sum_{x\in S_X}^{ } \Phi( x) \mathbb{P}( \overline{X}= x_0) 	
+	\]
+Similarly if $\overline{X}$ is a random vector with density, $\Phi( \overline{X}) $ is integrable and "nice", then
+\[ 
+\mathbb{E}\Phi( \overline{X}) = \int_{ \mathbb{R}^n }^{  }\Phi( x) f_{\overline{X}} ( x) dx
+\]
+
+\end{itemize}
+
+\end{propo}
+\begin{proof}
+Sketch for $2$:\\
+Discretisize $\Phi$ and write
+\[ 
+\mathbb{E} \Phi_n = \sum_{k\in \mathbb{Z}}^{ } k 2^{-n} \mathbb{P}( \Phi_n= k 2^{-n}) 
+\]
+
+\end{proof}
+\begin{propo}
+$X\sim Y$ iff 
+\[ 
+\forall g : \mathbb{R}\to \mathbb{R} \text{ continuous and bounded } 
+\]
+\[ 
+\mathbb{E}g( X) = \mathbb{E}g( Y) 
+\]
+
+\end{propo}
+\begin{proof}
+One direction is obvious.\\
+In the other direction, note that
+\[ 
+X\sim Y \iff \forall t \in \mathbb{R} F_X( t) = F_Y( t) 
+\]
+but
+\begin{align*}
+F_X( t) = \mathbb{P}( X \leq t) = \mathbb{E}1_{X \leq t} 
+\end{align*}
+hence $X\sim Y$ iff
+\[ 
+\forall t \in \mathbb{R} \mathbb{E}1_{X \leq t} = \mathbb{E} 1_{X \leq t} 
+\]
+We approximate $ 1_{X \leq t} $ by a continuous function.
+\end{proof}
+\begin{propo}
+If $X,Y$ independent, $g( X) ,h( Y) $ integrable, then
+\[ 
+\mathbb{E}g( X) h( Y) = \mathbb{E}g( X) \mathbb{E}h( Y) 
+\]
+Furthermore, if $\forall h,g$ continuous and bounded
+\[ 
+\mathbb{E}h( X) g( Y) = \mathbb{E}h( X) g( Y) 
+\]
+then $X$ and $Y$ independent.
+\end{propo}
+\begin{proof}
+$X,Y$ are independent iff $F_{X,Y} ( t) = F_X( t) F_Y( t) $ , hence
+\begin{align*}
+\mathbb{E} 1_{X \leq t_1, Y \leq t_2} = \mathbb{E} 1_{X \leq t_1} \mathbb{E}1_{Y \leq  t_2} 	
+\end{align*}
+We then approximate as in the last proof.\\
+For the second part, using the exercise sheet shows that
+\[ 
+X,Y \text{ independent } \implies g( X) h( Y) \text{ independent } 
+\]
+so it suffices to shwo that $ \mathbb{E}XY= \mathbb{E}X \mathbb{E}Y$.\\
+We have to prove in two steps
+\begin{itemize}
+\item $X,Y$ discrete
+\item via discretization $X_n, Y_n$. 
+\end{itemize}
+Note that
+\begin{align*}
+\mathbb{E}XY = \sum_{S_{XY} }^{ } s \mathbb{P}( XY=s) 
+\end{align*}
+and
+\begin{align*}
+\mathbb{E}X \mathbb{E}Y \sum_{S_X}^{ } \sum_{S_Y}^{ } x_0y_0 \mathbb{P}( X=x_0) \mathbb{P}( Y=y_0) \\
+\mathbb{E}XY = \sum_{S_X}^{ } \sum_{S_Y}^{ } xy \mathbb{P}( X=x, Y=y) \sum_{S_{X,Y} }^{ } 1_{s=xy} \\
+= \sum_{S_{X,Y} }^{ } \sum_{S_X}^{ } \sum_{S_Y}^{ } s 1_{s=xy} \mathbb{P}( X=x, Y=y) = \mathbb{P}( XY=s) 
+\end{align*}
+
+
+\end{proof}
+
+
+
+
+\end{document}	

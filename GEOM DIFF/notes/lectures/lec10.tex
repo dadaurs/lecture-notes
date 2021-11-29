@@ -1,0 +1,143 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Wed 24 Nov}{geometrie intrinseque}
+\subsection{Geometrie intrinseque/extrinseque des surfaces}
+\begin{defn}
+	Soit $S \subset \mathbb{R}^{3}$ une surface reguliere connexe.\\
+	La distance intrinseque dans $S$ entre deux points est definie par
+	\[ 
+	d_S( p,q) = \inf \left\{ l( \gamma) : \gamma( 0) =p, \gamma( 1) =q, C^{1} \text{ par morceaux sur } S \right\} 
+	\]
+		
+\end{defn}
+\begin{lemma}
+$( S,d_s) $ est un espace metrique 
+\end{lemma}
+\begin{defn}[distance intrinseque]
+	On appelle cette distance la distance intrinseque dans $S$, tandis que la distance euclidienne est la distance intrinseque.
+\end{defn}
+\begin{exemple}
+Si $S$ est une sphere de rayon $a$ et de centre $c$, alors $d_S( p,q) = a\theta$ ou $\theta$ est l'angle entre $p-c$ et $q-c$ 
+\end{exemple}
+Question:\\
+Comment decider si deux surfaces $S_1,S_2 \subset \mathbb{R}^{3}$ sont isometriques pour la distance intrinseque.
+\begin{defn}	
+$S_1,S_2$ sont intrinsequement isometriques si il existe $f: S_1\to S_2$ bijective tel que
+\[ 
+d_{S_2} ( f( p), f( q) ) = d_{S_1} ( p,q) 
+\]
+
+\end{defn}
+\begin{exemple}
+soit $\gamma: \mathbb{R}\to \mathbb{R}^{2}$ une courbe $C^{2}$ parametree naturellement et simple ( $\gamma$ injective).\\
+Le cylindre ( generalise) de base $\gamma$ est la surface reglee
+\begin{align*}
+\psi: \mathbb{R}^{2}\to \mathbb{R}^{3}\\
+\psi( u,v) = ( \gamma( u) , v) 
+\end{align*}
+Le tenseur metrique est tres simple a calculer, avec $b_1 = ( \dot\gamma ( u),0 ) $ et $b_2 = ( 0,0,1) $, donc $ds^{2}= du^{2}+dv^{2}$.\\
+Donc la longueur des courbes dans $S$ sont egales aux longueurs dans $\mathbb{R}^{2}$.\\
+Donc le cylindre generalise $S$ est isometrique au plan euclidien $\mathbb{R}^{2}$.
+\end{exemple}
+\begin{rmq}
+Si la courbe $\gamma: I\to \mathbb{R}^{2}$ n'est pas complete ( $I\neq \mathbb{R}$ ), alors la surface $S$ et le plan euclidien sont localement isometrique.
+\end{rmq}
+\begin{defn}
+Si $M_1 \subset \mathbb{R}^m$ et $M_2 \subset \mathbb{R}^n$ sont deux sous-varietes differentiables, alors on dit qu'une application $f: M_1\to M_2$ est differentiable si il existe un voisinage ouvert $U$ de $M_1$ et $F: U \to \mathbb{R}^n$ tel que $F$ est differentiable et $F|_{M_1} =f $.
+\end{defn}
+\begin{exemple}
+Si $S \subset \mathbb{R}^{3}$ est une surface de classe $C^{k}$, alors on appelle application de Gauss
+\[ 
+\nu: S \to S_2
+\]
+definie par $\nu( p) = $ le vecteur unite qui est orthogonal a $T_PS$ 
+\end{exemple}
+\begin{rmq}
+$\nu$ est definie au signe pres, de plus $\nu$ n'est pas toujours definie de facon continue globalement( cf. ruban de Moebius).
+\end{rmq}
+Toutefois, si $S$ est definie implicitement, ou si elle est parametree injectivement, alors l'application de Gauss
+\[ 
+\nu: S\to S^{2}
+\]
+est bien definie ( au signe pres) et est une application differentiable( de classe $C^{k-1}$ )
+\begin{proof}
+Si la surface $S= \left\{ f( x) =0 \right\} $ alors
+\[ 
+\nu( p) = \pm \frac{1}{\N { \nabla f( p) } } \nabla f( p)  
+\]
+De plus, si $\psi: \Omega\to S$ est injective, alors
+\[ 
+\nu( p) = \frac{b_1\times b_2}{\N{  b_1\times b_2 }}
+\]
+
+\end{proof}
+\begin{propo}
+Soient $\psi_1: \Omega_1\to S_1\subset \mathbb{R}^{3}, \psi_2: \Omega_2\to S_2\subset \mathbb{R}^{3}$ deux surfaces regulieres ( $C^{1}$ ) parametree injectivement. Alors une application differentiable $f: S_1\to S_2$ est une isometrie ( globale) si et seulement si 
+\[ 
+G_1( u) = Dh( u) ^{T}G_2( u) Dh( u) 
+\]
+Ou $h: \Omega_1\to \Omega_2= \psi_1 \circ f \circ \psi_2^{-1}$ 
+\end{propo}
+\begin{defn}
+	Si $\psi : \Omega \to S$ est une parametrisiation bijective, alors $\phi =\psi^{-1}: S \to \Omega$ s'appelle la carte.\\
+	L'application $h$ ( comme ci-dessus) 	s'appelle la representation de $f$ dans les cartes $\psi_1^{-1},\psi_2^{-1}$ 
+\end{defn}
+\begin{proof}
+Si $f: S_1\to S_2$ est une applicaiton differentiable alors $\forall p \in S_1$, la differentielle $df_p: T_p( S_1)\to T_q S_2$ est bien definie et lineaire.\\
+Il faut voir que $dF_p: \mathbb{R}^{3}\to \mathbb{R}^{3}, dF_p|_{T_P S_1} : T_PS_1\to T_qS_2$.\\
+Donc, si $v\in T_pS_1 \implies dF_p( v) \in T_qS_2$.\\
+En effet, dire que $v\in T_pS_1 $, signifie que $\exists\gamma$ tel que
+\begin{align*}
+v= \dot\gamma ( 0), \gamma :I\to S_1, \gamma \text{ differentiable et } \gamma( 0) =p.
+\end{align*}
+Mais alors $f\circ\gamma( t) = F ( \gamma( t) ) \forall t$ verifie que $dF_p( \dot\gamma( 0) ) = dF_p( v) $.\\
+$f: S_1\to S_2$ est une isometrie si et seulement si pour tout courbe $\gamma: I \to S_1$, on a 
+\[ 
+l( \gamma) = l( f( \gamma) ) 
+\]
+donc $\N { \dot\gamma( t) } = \N { \dot { \tilde\gamma} ( t) } $.\\
+Ou encore
+\begin{align*}
+\N { df_p( v) } = \N { v} \forall p \in S_1, \forall v \in T_p S_1\\
+\eng { df_p( v, df_p( w) ) = \eng { v,w} } \\
+df_p: T_pS_1\to T_q S_2 \text{ est une isometrie entre les plans tangents  } \forall p\\
+\end{align*}
+Pour une surface parametree $\psi: \Omega \to S$, le tenseur metrique peut s'ecrire
+\begin{align*}
+G( u) = D\psi( u) ^{T}D\psi( u) 
+\end{align*}
+Prouvons donc l'equadiff.\\
+On a 
+\begin{align*}
+	G_1( u) &= D\psi_1( u) ^{T}D\psi_1 ( u) \\
+	      &= D( f\circ\psi_1)^{T}D( f\circ\psi_2) \\
+	      &= D( \psi_2\circ h)^{T}D( \psi_2\circ h) \\
+	      &= ( D\psi_2 Dh )^{T}( D\psi_2Dh) \\
+	      &= D\psi_2^{T} G_2 D\psi_2
+\end{align*}
+
+\end{proof}
+\begin{exemple}[Changement de Cartes]
+	Si $\psi_1$ et $\psi_2$ sont deux parametrisations de la meme surface $S$ au voisinage d'un point $p$, alors on a 
+	\[ 
+	G_1 = Dh^{T}G_2Dh
+	\]
+	
+\end{exemple}
+\begin{defn}
+	Une surface $S$ est developpable si au voisinage de chaque point , il existe une carte dont le tenseur metrique est le tenseur euclidien.
+\end{defn}
+\begin{rmq}
+La surface $S= \psi( \Omega) $ est developpable si et seulement si $\exists h$.\\
+La surface $S$ est conformement plate si au voisinage de chaque point une parametrisation telle que
+\[ 
+G = \lambda(u) I_n
+\]
+
+\end{rmq}
+	
+
+
+
+
+\end{document}	
