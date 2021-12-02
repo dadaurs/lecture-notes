@@ -1,0 +1,127 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Wed 01 Dec}{Variance}
+\subsection{Variance and covariance}
+\begin{defn}[Variance]
+	Let $X$ be an integrable random variable s.t. $X^{2}$ is also integrablee, then we define the variance of $X$ as
+	\[ 
+	var( X) = \mathbb{E}( ( X- \mathbb{E}X)^{2}) 
+	\]
+	and it is well defined
+\end{defn}
+Then $\sigma( X) = \sqrt{var( X) } $ is called the standard deviation.
+\begin{rmq}
+\[ 
+	( X- \mathbb{E}X)^{2} \leq  |X|^{2}+ 2|X| \mathbb{E}X+ ( \mathbb{E}X )^{2} < 2 ( |X|^{2}+ \mathbb{E}|X|^{2}) 
+\]
+\end{rmq}
+Note that if $Var(X) =0$, then $X= \mathbb{E}X$ almost surely.
+Furthermore
+\[ 
+\mathbb{E}( X- \mathbb{E}X)^{2} = \mathbb{E}( X^{2}) - 2\mathbb{E}( X\mathbb{E}X) + ( \mathbb{E}X )^{2}= \mathbb{E}X^{2}- ( \mathbb{E}X)^{2}
+\]
+\begin{propo}[Chebyshev inequality]
+$X$ integrable random variable with finite variance
+\[ 
+\mathbb{P}( |X- \mathbb{E}X|>t) \leq \frac{ Var X}{t^{2}}		
+\]
+
+\end{propo}
+\begin{proof}
+If $Y$ is positive and integrable, we have
+\[ 
+\mathbb{P}( Y>t) = \frac{\mathbb{E}y}{t}
+\]
+and we apply this to $Y= ( X- \mathbb{E}X^{2}) $.
+\end{proof}
+\begin{defn}[Covariance]
+	Let $X,Y$ be integrable, with finite variance, then the covariance of $X$ and $Y$ is defined as
+	\[ 
+	Cov( X,Y) = \mathbb{E}(  ( X- \mathbb{E}X) ( Y- \mathbb{E}Y) ) 
+	\]
+	and we call 
+	\[ 
+	Cor( X,Y) = \frac{Cov( X,Y) }{\sqrt{ VarX VarY} }
+	\]
+the correlation.\\
+As long as the variances are different from 0.
+\end{defn}
+\subsection{Moments of a random variable}
+\begin{defn}[Moment ]
+	Let $X$ be a random variable such that $|X|^{n}$ is integrable.\\
+	Then we say that $X$ admits a $n$-th moment $ \mathbb{E}X^{n}$.\\
+\end{defn}
+Why is this useful?
+\begin{itemize}
+\item We get control on the tails, if $X$ admits a $n$-th moment, then $ \mathbb{P}( |X|^{n}>t) \leq \frac{\mathbb{E}|X|^{n}}{ t^{n}}$ 
+\item Sometions determines the law 
+\end{itemize}
+\begin{propo}
+Let $X,Y$ be random variable such that $ \mathbb{P}( X) ( X \in [ -C,C] ) = \mathbb{P}( Y \in [ -C,C] ) =1$ for some $C\in \mathbb{R}$.\\
+Then $X\sim Y$ if and only if $ \forall n \mathbb{E}X^{n}= \mathbb{E}Y^{n}$
+\end{propo}
+\begin{proof}
+Notice that $X,Y$ admit $n$-th moments for all $n$ as they are bounded by $C$.\\
+Clearly if $X,Y$ are equal in law, then $X^{n},Y^{n}$ are equal in law.
+\begin{thm}[Stone- Weierstrass]
+	Let $g$ be a continuous function on $ [ -c,c] $.\\
+	Then $\forall \epsilon>0$, there exists a polynomial $P_\epsilon$ s.t. $\sup_{x\in [ -c,c] } |g( x) - P_\epsilon( x) |< \epsilon$ 
+\end{thm}
+We will use this theorem to prove the proposition.\\
+It suffices to show that $\forall g$ continuous and bounded $ \mathbb{E}g( X) = \mathbb{E}g( Y) $.\\
+Observe that $\forall $ polynomial $P$, $ \mathbb{E}P( X) = \mathbb{E}P( Y) $ by linearity of $ \mathbb{E}$.\\
+Given $g$ continuous and bounded, notice that $ \mathbb{E}g( X) = \mathbb{E} \tilde g ( X) $.\\
+This is because $ \mathbb{P}( X\in [ -C,C] ) $.\\
+Now pick $\epsilon>0$ and apply Stone-Weierstrass to $\tilde g$.\\
+This gives $P_\epsilon$ s.t. $\sup_{x\in [ -C,C] } |\tilde g( x) - P_\epsilon( x) |< \epsilon$.\\
+Now
+\[ 
+|\mathbb{E}g( X) - \mathbb{E}g( Y)| \leq |\mathbb{E}g( X) - \mathbb{E}P_\epsilon( X) | + | \mathbb{E}P_{\epsilon} ( Y) - \mathbb{E}g( Y) | 
+\]
+
+\end{proof}
+\begin{rmq}
+\begin{itemize}
+\item Holds more generally, but not always:\\
+	Sometimes moments don't exist\\
+	Sometimes moments grow too fast and don't characterise uniquely
+\end{itemize}
+
+\end{rmq}
+\subsection{Moment Generating functions}
+\begin{defn}
+	Let $X$ be a random variable s.t. $\exists c>0$ s.t. $\forall t \in [ -c,c]  $, the function $\exp( tX) $ is integrable, then we define the moment generating function
+	\[ 
+	M_x( t) = \mathbb{E}( \exp( tX) ) 
+	\]
+	
+\end{defn}
+\begin{rmq}
+Might no exist even when all moments exist.
+\end{rmq}
+\begin{thm}[MGF determines the law]
+	If $X,Y$ are random variables that admit MGF in some interval $ [ -c,c] $, then $X\sim Y\iff \forall ( -t,t) M_X( t) = M_Y( t) $.
+\end{thm}
+We can also define MGF for random vectors
+\begin{defn}[MGF for random vectors]
+	Let $( X_1,\ldots, X_N) $ be random vectors s.t. $\forall t$ 
+	\[ 
+	\exp{ \langle t, \overline{X}\rangle }
+	\]
+	is integrable, then MGF of $ \overline{X}$ is defined as 
+	\[ 
+	M_{\overline{X}}( t) = \mathbb{E}\exp( \langle t,X\rangle ) 
+	\]
+	
+\end{defn}
+\begin{thm}
+	If $X,Y$ are random vectors admitting MGF in some $ ( -c,c)^{n}$, then $X\sim Y\iff M_X( t) = M_Y( t) $ 
+\end{thm}
+
+
+
+
+
+
+
+\end{document}	

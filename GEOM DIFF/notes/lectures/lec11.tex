@@ -1,0 +1,193 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Wed 01 Dec}{Courbure }
+\begin{thm}
+	Toute surface reguliere de classe $C^{2}, S \subset \mathbb{R}^{3}$ admet un parametrage conforme ( local) au voisinage de tout point.
+\end{thm}
+\begin{defn}[Pseudosphere]
+	La pseudosphere est la surface de revolution d'une tractrice autour de son asymptote
+\end{defn}
+Mise en equation:\\
+On suppose que l'asymptote est l'axe $Oz$, que $c=1$ et que $\N { \dot\gamma} =1$ et $\gamma( 0) = ( 1,0) $.\\
+On trouve l'equation $\dot x + x = 0 \implies x= e^{-t} $, et
+\[ 
+\dot x ^{2} + \dot x ^{2} =1\\
+z( t) = \int_{ 0 }^{t } \sqrt{1- e^{-z} } dz
+\]
+
+donc la pseudosphere admet la parametrisation
+\[ 
+\psi: [ 0,2\pi] \times [ 0, \infty ) \to P \subset \mathbb{R}^{3} 
+\]
+avec
+\[ 
+\psi( \theta,t) = ( \cos\theta e^{-t}, \sin\theta e^{-t} ,f( t) ) 
+\]
+Le tenseur metrique va valoir
+\[ 
+G= \begin{pmatrix}
+	e^{-2t} & 0\\
+	0 & 1
+\end{pmatrix} 
+\]
+On peut maintenant poser $v= e^{t} , u=\theta$, alors
+\[ 
+ds^{2} = e^{-2t} ( du^{2}+ dv^{2}) = \frac{du^{2}+ dv^{2}}{v^{2}}
+\]
+
+\subsection{Geodesiques et courbure des courbes sur une surface}
+\begin{defn}[Geodesique]
+	Une geodesique d'une surface reguliere $S \subset \mathbb{R}^{3}$ est une courbe $\gamma:I\to S$ de classe $C^{2}$ verifiant 
+	\[ 
+	\ddot\gamma \perp T_{\gamma} S
+	\]
+
+\end{defn}
+\begin{rmq}
+Si $S$ est une surface de revolution, $\gamma$ est geodesique si et seulement si $\ddot\gamma \times\nabla f$ 
+\end{rmq}
+\begin{propo}
+Toute geodesique est parcourue a vitesse constante.
+\end{propo}
+\begin{thm}
+	Soit $\gamma: [ a,b] \to S$ une courbe de classe $C^{2}$ parametree a vitesse constante telle que $\gamma$ minimise la distance entre $p= \gamma( a) $ et $q= \gamma( b) $.\\
+C'est a dire
+\[ 
+l( \gamma) = d_s( p,q) 
+\]
+Alors $\gamma$ est geodesique.
+\end{thm}
+\begin{defn}
+	Soit $\gamma:I\to S$ une courbe de classe $C^{2}$ reguliere.\\
+	On note $\nu( t) = \nu( \gamma( t) ) $ le vecteur unitaire normal a $T_{\gamma( t) } S$.\\
+	\[ 
+	T_{\gamma} ( t) = \frac{1}{V}\dot\gamma
+	\]
+	et
+	\[ 
+	\mu( t) =\nu( t) \times T_{\gamma} ( t) 
+	\]
+	On dit que $ \left\{ \nu( t) ,T_\gamma( t),\mu( t)  \right\} $ est le repere de Darboux de la courbe $\gamma$ relatif a $S$.
+\end{defn}
+\begin{rmq}
+\begin{itemize}
+\item Le repere est orthonorme et direct
+\item $T,\mu$ sont tangents a $S$ et forment une base orthonormee du plan tangent.
+\end{itemize}
+
+\end{rmq}
+\begin{defn}[Courbure normale]
+	On appelle courbure normale de $\gamma$ en $t$ 
+	\[ 
+k_n( t) = \langle K,\nu\rangle	
+	\]
+et on appelle la courbure geodesique
+\[ 
+k_\gamma = \langle K, \mu\rangle
+\]
+
+\end{defn}
+\begin{thm}[de Meusnier]
+	La courbure normale d'une courbe $C^{2}$ tracee sur une surface $S$, la courbure normale ne depend que de la direction de $\dot\gamma$
+\end{thm}
+\begin{proof}
+On a $\gamma:I\to S, $ $C^{2}$, reguliere.\\
+On pose $f:I\to \mathbb{R}, f( t) = \langle \nu,\dot\gamma\rangle$ On derive $f:$ 
+\[ 
+0 = \frac{d}{dt}f = \langle \dot\nu,t\rangle + \langle \nu, \dot T\rangle
+\]
+On a donc
+\[ 
+0 = \frac{1}{V} \langle \dot\nu,\dot\gamma\rangle + V \langle \nu, K\rangle
+\]
+Et donc
+\[ 
+k_{\gamma} = - \frac{1}{V^{2}}\langle \dot\nu,\dot\gamma\rangle
+\]
+On se rappelle que $\nu$ est la restriction a $\gamma$ de l'application de Gauss
+\[ 
+S\to S^{2}
+\]
+et $\dot\nu= \frac{d}{dt}\nu( \gamma( t) )= d\nu_{\gamma( t) } ( \dot\gamma)  $ 
+
+Donc
+\[ 
+k_\gamma = - \frac{\langle d\nu_{\gamma( t) ( \gamma) , \dot\gamma\rangle} }{\N { \dot\gamma} }
+\]
+
+
+\end{proof}
+On peut donc definir la courbure normale de $S$ en un point $p$
+\[ 
+k_n: T_p S \to \mathbb{R}: v \mapsto \frac{- \langle d\nu_p( v),v}{\N { V} ^{2}}
+\]
+\begin{defn}
+	L'application de Weingarten d'une surface $S$ reguliere de classe $C^{2}$ est la differentielle de l'application de Gauss.
+On la note $L_p: T_p S\to T_p S: L_p( v) = d\nu_p( v) $.\\
+$L_p$ est un endomorphisme de $T_pS$ car de facon generale 
+\[ 
+	\nu: S \to S^{2}
+\]
+Alors 
+\[ 
+d\nu_p : T_pS \to T_{\nu( p) } S^{2}
+\]
+Or $\forall q \in S^{2}$ on a $T_qS = q^{\perp}= \left\{ v \in \mathbb{R}^{3}| \langle v,q\rangle = 0  \right\} $ 
+Donc
+\[ 
+T_pS = \left\{ v| \langle \nu( p) , v\rangle = 0 \right\} = T_{\nu( p) S^{2}} 
+\]
+
+\end{defn}
+\begin{defn}[Deuxieme forme fondamentale]
+	La deuxieme forme fondamentale de $S$ en $p$ est la forme bilineaire
+	\[ 
+	h( v,w) = - \langle L_pv,w\rangle, v,w \in T_pS
+	\]
+		
+\end{defn}
+\begin{propo}
+$h$ est une forme bilineaire symmetrique et de facon equivalente
+$L_p$ est autoadjointe.
+\end{propo}
+\begin{proof}
+On va montrer que 
+\[ 
+h( b_i, b_j) = h( b_j,b_i) 
+\]
+pour $b_i, b_j$ une base de $T_pS$.\\
+On se donne une parametrisation au voisinage de $p\in S$.\\
+On a donc
+\[ 
+\psi:\Omega\to S
+\]
+et on pose $b_1= \frac{\del\psi}{\del u}, b_2= \frac{\del\psi}{\del v}$.\\
+$h_p( b_i, b_j) = - \langle d\nu_p( b_i) , b_j\rangle$.\\
+Or $d\nu_p( b_i) = \frac{\del}{\del u_i}( \nu\circ\psi( u)  ) $.\\
+Donc
+\[ 
+h_p( b_i, b_j) = - \langle \frac{\del}{\del u_i}kl( \nu\circ\psi( u) ), \frac{\del\psi}{\del u_j}
+\]
+Or $\langle\nu\psi, \frac{\del\psi}{\del u_j}\rangle =0$ 
+
+Donc
+\[ 
+0 = \frac{\del}{\del u_i}\langle \nu\circ\psi, \frac{\del\psi}{\del u_j}= \langle\nu\circ\psi, \frac{\del^{2}\psi}{\del u_j\del u_i}\rangle + \del \frac{\del}{\del u_i}( \nu\circ\psi) , \frac{\del\psi}{\del u_j}
+\]
+Et donc
+\[ 
+h( b_i, b_j) = \langle \nu\circ\psi, \frac{\del ^{2}\psi}{\del u_i\del u_j} = h( b_j, b_i) 
+\]
+\end{proof}
+Donc par le theoreme spectral:
+\begin{crly}
+$L_p$ est orthogonalement diagonalisable et on notes les valeurs propres $k_1, k_2$ 
+\end{crly}
+De plus $k_1, k_2$ sont les valeurs maximales et minimales de la courbure normale.
+
+
+	
+
+
+
+\end{document}	
