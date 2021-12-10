@@ -1,0 +1,105 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{21}{Mon 06 Dec}{Fonctions Elliptiques}
+\begin{propo}
+\[ 
+\frac{\pi^{2}}{\sin^{2}( \pi z )} = \sum_{n\in \mathbb{Z}}^{ }\frac{1}{( z-n) ^{2}}
+\]
+
+\end{propo}
+\begin{proof}
+Posons
+\[ 
+f( z) = \frac{\pi^{2}}{\sin^{2}\pi z}
+\]
+et
+\[ 
+g( z) = \sum_{n\in \mathbb{Z}}^{ } \frac{1}{( z-n)^{2}}
+\]
+On veut montrer que $f-g=0$.
+Pour $z\in \mathbb{C}\setminus \mathbb{Z}$,
+\[ 
+\frac{1}{|z-n|^{2}}= \frac{1}{ \im z ^{2}+ ( \re z -n )^{2}} \leq  \frac{1}{( ( \re z -n))^{2} }
+\]
+Si on somme sur les $n \in \mathbb{Z}$, on a quelquechose en $O( \frac{1}{n^{2}}) $ quand $n\to \infty $ donc la somme converge.\\
+Pourquoi $g$ meromorphe?\\
+On a que la serie converge uniformement sur $D( 0,R) \setminus \mathbb{Z}\forall R>0$.\\
+Il suffit de voir que $g( z) = \sum_{n \in \mathbb{Z}\cap D( 0,R)  }^{ } \frac{1}{( z-n)^{2}} + \sum_{n \in \mathbb{Z}\setminus D( 0,R) }^{ } \frac{1}{( z-n)^{2}} $ 
+
+Les termes de la premiere serie sont bornes par $\frac{1}{( R-n)^{2}}$ et donc on a convergence uniforme.	
+Pour montrer que $f-g =0$, voyons d'abord que $f-g$ n'a pas de poles.\\
+$f$ et $g$ n'ont de poles que sur les entiers et sont clairement $\mathbb{R}$-periodiques de periode 1.\\
+Par periodicite, il suffit de voir ce qu'il se passe en 0.\\
+Au voisinage de 0, on a 
+\[ 
+\frac{\pi^{2}}{( \pi z - \pi^{2}z^{2} 6^{-1}+ O( z^{6})  )^{2}} = \frac{1}{z^{2}( 1- \pi^{3}z^{2} 3^{-1}) }
+\]
+Donc $f-g$ n'a pas de poles en 0.\\
+Montrons que $f-g$ est bornee.\\
+Voyons pourquoi quand $\im z\to \pm\infty $ $f,g\to 0$ Pour $f$ on utilise
+\[ 
+|\sin^{2}z| = \sin^{2}\re z+ \sinh^{2}( \im z ) 
+\]
+Comme $\sinh^{2}( \im z) \to \infty $ quand $\im z\to \infty $ il est clair que $f\to 0$.\\
+Pour $g$ il suffit de montrer que c'est le cas dans la bande $ [ 0,1] \times i \mathbb{R}$ 	
+$ forall \epsilon>0, \exists R>0 $ tel que
+\[ 
+\sum_{z\in \mathbb{Z}\setminus [ -R,R] }^{ } \frac{1}{( z-n) ^{2}} \leq \epsilon /2
+\]
+Donc quand $\im z \to \infty $, $g$ tend vers 0.\\
+Donc $f-g$ est bornee et donc constante et donc $f-g=0$.
+\end{proof}
+\begin{propo}
+
+\[ 
+\sum_{n}^{ } \frac{1}{n^{2}}= \frac{\pi^{2}}{6}
+\]
+
+\end{propo}
+\begin{proof}
+\[ 
+g( z) -\frac{1}{z^{2}}= 2 \sum_{n=1}^{ \infty } \frac{1}{( n-z)^{2}}
+\]
+Or
+\[ 
+\lim_{z \to 0} f( z) -\frac{1}{z^{2}}= \frac{pi^{2}}{3}
+\]
+
+
+\end{proof}
+\subsection{Fonctions Elliptiques}
+Soient $T_1,T_2\in \mathbb{C}, \frac{T_1}{T_2}\notin \mathbb{R}$.\\
+On obtient ainsi un reseau $ \Lambda = \left\{ k_1T_1+ k_2T_2| k_1,k_2\in \mathbb{Z} \right\} $ \\
+Une fonction est alors elliptique si $f( z+\mu) = f( z) \forall \mu\in \Lambda $ et $f$ meromorphe.
+\begin{defn}[Fonction de Weierstrass]
+	La fonction de Weierstrass est definie par
+	\[ 
+	\wp = \frac{1}{z^{2}}+\sum_{\lambda \in \Lambda\setminus \left\{ 0,0 \right\} }^{ } \frac{1}{( z-\lambda)^{2}} - \frac{1}{\lambda^{2}}
+	\]
+	
+\end{defn}
+
+\begin{propo}
+La serie $\wp$ converge normalement sur $ \mathbb{C}\setminus \Lambda$ et definit une fonction elliptique.
+\end{propo}
+\begin{proof}
+On a que $ |\Lambda \cap A( 0,R,R+1)| = O( R)  $ \\
+Donc
+\begin{align*}
+|\frac{1}{( z-\lambda)^{2}}- \frac{1}{\lambda^{2}}= |\frac{\lambda^{2}- ( z-\lambda) ^{2}}{\lambda^{2}( z-\lambda^{2}) }|\\
+= | \frac{2\lambda z -z ^{2}}{( z-\lambda)^{2}\lambda^{2}} = ( O( \frac 1 \lambda^3) ) 
+\end{align*}
+Donc pour tout $z\in D( 0,R)\setminus \Lambda $ on a convergence uniforme ( par rapport a $z$ ) de la serie.\\
+Donc $\wp$ est meromorphe avec poles sur $ \Lambda$ \\
+Montrons que $\wp$ est elliptique, regardons $\wp'= -2\sum_\Lambda  \frac{1}{( z-\lambda)^{3}}$ 
+On a 
+\[ 
+\frac{d}{dz}( \wp( z+p) -\wp( z) ) = 0
+\]
+Donc $z\to \wp( z+\mu) -p( z) $ est constante	
+\end{proof}
+
+
+
+
+\end{document}	

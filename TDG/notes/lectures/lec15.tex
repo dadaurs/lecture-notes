@@ -1,0 +1,212 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{15}{Sat 04 Dec}{Lemme des cinqs}
+\begin{rmq}
+$\im\sigma \leq \ker\rho$ par construction
+\[ 
+\rho( \underbrace{b- \iota\rho( b)}_{\sigma( b) }) = \rho( b ) - \rho( b) = 0
+\]
+Par consequent, puisque $b- \sigma\pi( b) \in \ker\pi= \im\iota$ et donc $\exists! a\in A$ tel que $\iota( a) =b- \sigma\pi( b) $ on a que
+\[ 
+\rho( b-\sigma\pi( b) ) = \rho( b) -\rho\sigma\pi( b) = \rho( b) 
+\]
+Et
+\[ 
+a= \rho\iota( a) 
+\]
+d'ou $\iota\rho( b) = b -\sigma\pi( b) $ 
+autrement dit, si la suite $0 \to A \to B \to C \to 0$ est scindee avec section $\sigma$ et retraction $\rho$, alors $b = \iota\rho( b) + \sigma\pi( b)\forall b \in B $ 
+
+\end{rmq}
+\begin{rmq}
+Si la suite $0 \to A \to B \to C\to 0$ est scindee, avec section $\sigma$ et retraction $\rho$, alors il y a des isomorphismes mutuellement inverses
+\[ 
+A\oplus C \to B : a+ c \to \iota( a) + \sigma( c) \text{ et } B\to A\oplus C: b\to \rho( b) + \pi( b) 
+\]
+On a 
+\[ 
+\alpha\beta( b) = \alpha( \rho( b) + \pi( b) ) = \iota\rho( b) + \sigma\pi( b) = b
+\]
+De meme
+\[ 
+\beta\alpha( a+c) = \beta( \iota( a) + \sigma( c) ) = \rho( \iota( a) + \sigma( c) ) + \pi( \iota( a) + \sigma( c) ) = \rho\iota( a) + \rho( \sigma( c) ) + \pi\iota( a) + \pi\sigma( c) = a+c
+\]
+
+
+\end{rmq}
+\begin{propo}[Lemme des Cinq]
+Soit
+\[\begin{tikzcd}
+	0 & A & B & C & 0 \\
+	0 & {A'} & {B'} & {C'} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow["\iota", from=1-2, to=1-3]
+	\arrow["\pi", from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=2-1, to=2-2]
+	\arrow["{\iota'}", from=2-2, to=2-3]
+	\arrow["{\pi'}", from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+	\arrow["\phi"', from=1-2, to=2-2]
+	\arrow["\psi"', from=1-3, to=2-3]
+	\arrow["\omega"', from=1-4, to=2-4]
+\end{tikzcd}\]
+un diagramme commutatif dans $\ab$, ou les deux suites horizontales sont exacts. Si $\phi$ et $\omega$ sont des isomorphismes, alors $\psi$ est aussi un isomorphisme.
+\end{propo}
+\begin{proof}
+Puisque $\psi$ est un homomorphisme, il suffit de voir que $\psi$ est bijectif.\\
+\begin{itemize}
+\item $\psi$ est surjectif.\\
+	Soit $b'\in B'$, $\exists! c\in C$ tel que $\omega( c) = \pi'( b') $.\\
+	Puisque $\pi$ est surjectif, $\exists b \in B$ tel que $\pi( b) = c$.\\
+	Si $\psi( b) =b'$, on a fini. En general, $\psi( b) \neq b'$, mais on peut le "corriger" pour obtenir une pre-image de $b$.\\
+	Observer que
+	\[ 
+	\pi'\psi( b) =\omega\pi( b) =\pi'( b') 
+	\]
+D'ou $b'- \psi( b) \in \ker\pi' = \im\iota'$.\\
+Donc $\exists! a' \in A' $ tel que $\iota'( a') = b' - \psi( b) $.\\
+Puisque $\phi: A \to A'$ est un iso, $\exists! a \in A$ tel que $\phi( a) = a'$.\\
+Alors $b+ \iota( a) \in \psi^{-1}( b')$ , car
+\[ 
+\psi( b+ \iota( a) ) = \psi( b) + \psi\iota( a) = \psi( b) + \iota'\phi( a) = \psi( b) + b'- \psi( b) = b'
+\]
+\item $\psi$ est injectif.\\
+	Soit $b \in B$, si $\psi( b) =0$, alors 
+\[ 
+\omega\pi( b) = \pi'\psi( b) = 0
+\]
+Puisque $\omega$ est un iso, cela implique que $\pi( b) =0$, ie. que $b \in \ker\pi = \im\iota$.\\
+Donc $\exists! a \in A$ tel que $b = \iota( a) $.\\
+Par consequent,
+\[ 
+0 = \psi( b) = \psi\iota( a) = \iota'\phi( a),
+\]
+d'ou $\phi( a) = 0$ car $\iota'$ injectif et donc $a= 0$ car $\phi$ injectif.\\
+On en deduit que $b = \iota( a) =0$ 
+\end{itemize}
+
+\end{proof}
+\subsection{Torsion et divisibilite}
+Soit $( A,+,0) $ un groupe abelien.\\
+But: Distinguer des sous-groupes importants d'un groupe abelien qui nous aident a comprendre sa structure.\\
+\begin{defn}
+	Soit $a\in A$. L'element $a$ est un element de torsion s'il existe $n \in \mathbb{N}$ tel que $na= 0$.\\
+	Si $a$ est un element de torsion, alors l'ordre de $a$ est
+	\[ 
+	o( a) = \min \left\{ n| na =0 \right\} 
+	\]
+	 	
+\end{defn}
+\begin{defn}[Elements de torsion]
+	On pose 
+	\[ 
+	T( A) = \left\{ a \in A| a \text{ element de torsion }  \right\} 
+	\]
+	et pour $n \in \mathbb{N}$ 
+	\[ 
+	T_n( A) = \left\{ a\in A | na = 0 \right\} 
+	\]
+	Observer que $T( A) = \bigcup T_n( A) $ 	
+\end{defn}
+\begin{lemma}
+$T_n( A) $ et $T( A) $ sont des sous-groupes.
+\end{lemma}
+\begin{defn}
+Soit $p$ un premier. On pose
+\[ 
+A( p) = \bigcup_{k\in \mathbb{N}} T_{p^{k}} ( A) = \left\{ a\in A| \exists k \text{ tel que } p^{k}a= 0 \right\} 
+\]
+et on l'appelle le sous-groupe de $p$-torsion de $A$.
+\end{defn}
+\begin{defn}
+	Soit $p$ un premier. Un groupe abelien $A$ est $p$-divisible si pour tout $a\in A$, il exists $b \in A$ tel que $pb= a$. Il est divisible s'il est $p$-divisible pour tout premier $p$.
+\end{defn}
+\subsection{La structure des $p$-groupes abelien}
+Restricition a une classe speciale de groupes abeliens, ce qui nous permet d'en faire une analyse plus fine de leur structure.
+\begin{defn}
+	Un groupe abelien $A$ est un $p$-groupe abelien s'il existe $k\in \mathbb{N}$ tel que $|A| = p^{k}$.
+\end{defn}
+\begin{rmq}
+Si $A$ est un $p$-groupe abelien, alors $A= A( p) $ puisque $o( a) | |A|\forall a \in A$.\\
+Si $A$ est un $p$-groupe abelien et $B<A$, alors $ \faktor{A}{B}$ est aussi un $p$-groupe abelien. 
+\end{rmq}
+\begin{lemma}
+Si $|A( p) | < \infty $, alors $A( p) = T_{p^{N}} ( A) $ ou
+\[ 
+N = \max \left\{ k | \exists a \in A( p) \text{ tel que } o( a) = p^{k} \right\} 
+\]
+Si $|A( p) | < \infty $, alors $A( p) $ est un $p$-groupe abelien.
+\end{lemma}
+\begin{proof}
+Le premier point est evident.\\
+Par recurrence sur $|A( p) |$.\\
+Si $|A( p) | =1$, alors $A( p) = 0$.\\
+Si vrai $\forall |A( p) | < N$, supposons que $|A( p) | = N$. Alors $\exists a \in A( p) \setminus \left\{ 0 \right\} $.\\
+Par le premier theoreme d'isomorphisme, on a 
+\[ 
+	\faktor{A( p) }{ \langle a\rangle} \simeq ( \faktor{A}{\langle a\rangle})( p)  
+\]
+Par l'hypothese de recurrence, $\exists k$ tel que
+\[ 
+| ( \faktor{A}{\langle a\rangle}( p) )| = p^{k} 
+\]
+Par consequent
+\[ 
+|A( p) | = | ( \faktor{A}{\langle a\rangle})| | \langle a \rangle| = p^{k+ o( a) }
+\]
+
+\end{proof}
+\begin{lemma}
+Soit $A$ un $p$-groupe abelien et soit $b \in A\setminus \left\{ 0\right\}$. S'il existe un entier positif $k$ tel que $ p^{k}b\neq 0$ et $ o( p^{k}b) = p^{m}$, alors $ o( b) = p^{k+m}$
+\end{lemma}
+\begin{lemma}
+Soit $A$ un $p$-groupe abelien, et soit $a \in A$ tel que $o( a) $ soit maximal. Pour tout $\overline{b} \in \faktor{A}{\langle a\rangle}$, il existe $b \in \overline{b} $ tel que $o( b) = o ( \overline{b}) $.
+\end{lemma}
+\begin{proof}
+Soit $q: A \to \faktor{A }{\langle a\rangle}$ l'homomorphisme quotient.\\
+Observer que si $b \in A$ et $p^{k}b = 0$, alors $p^{k} \overline{b}= 0$, d'ou
+\[ 
+o(  \overline{b}) \leq  o( b) 
+\]
+On veut donc montrer que $\forall b \in A \exists b' \in A$ tel que $ \overline{b}= \overline{b'}$ et 
+\[ 
+o( b')  = o( \overline{b}) 
+\]
+Poser $p^{s}= o( a) $ et $p^{r}= o( \overline{b}) $ d'ou $p^{r}\overline{b}=0$.\\
+Si $p^{r}b =0$, on en deduit que $o( b) = p^{r}$ et on a fini.\\
+Si $p^{r}b\neq 0$, on doit trouver $b' \in A$ tel que $p^{r}b'=0$ et $ \overline{b'}= \overline{b}$, ie., $b- b' \in \langle a \rangle$.\\
+Or $p^{r}b \neq 0 \implies \exists 0< n < p^{s}$ tel que $p^{r}b = na$.\\
+Ecrivons $n = p^{t}m$ avec $p\not|m$, alors
+\[ 
+p^{r}b = p^{t}m a
+\]
+Puisque $p \not| m$, $( p^{s},m) = 1$, donc $\exists u,v \in \mathbb{Z}$ tel que
+\[ 
+up^{s}+ vm = 1
+\]
+d'ou $a = 1 a = ( up^{s}+ vm ) a = up^{s}a + vma = vma $.\\
+Par ailleurs, ceci implique que $( p^{s},v) = 1$.\\
+En particulier $p\not| v$ et donc $p\not| vm$.\\
+Donc $o( ma) = o( a) = p^{s}$.\\
+Par consequent
+\[ 
+o( p^{r}b) = o( na) = o( p^{t}ma) = p^{s-t}
+\]
+Donc par le lemme precedent, on a
+\[ 
+o( b) = p^{s-t+ r}
+\]
+Puisque $p^{s}$ est l'ordre maximal d'un element de $A$, il s'ensuit que $s-t+r \leq  s$, ie., $r \leq  t$.\\
+Poser $b' = b - p^{t-r}ma $. \\
+Alors $p^{r}b' = p^{r}b - p^{t}ma = 0$ 
+
+\end{proof}
+
+
+
+	
+
+
+
+\end{document}	

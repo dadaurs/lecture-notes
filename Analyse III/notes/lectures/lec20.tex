@@ -1,0 +1,74 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{20}{Thu 02 Dec}{Application conforme de Riemann}
+\begin{lemma}
+Soit $\psi\in \Sigma_{\Omega,z_*} $, si $\psi$ n'est pas surjective, il existe $\xi\in \Sigma_{\Omega,z_*} $ tel que $\xi'( z_*)> \psi'( z_*)  $.
+\end{lemma}
+\begin{proof}
+Soit $\alpha\in  \mathbb{D}\setminus \psi( \Omega) $, posons $\psi_0= \phi_\alpha\circ\psi$, comme $\psi_0$ ne s'annulle pas sur $\Omega$, il existe $\psi_1= \sqrt{\psi_0} $.\\
+Posons $\beta= \psi_1( z_*) $ et choisissons $\theta$ tel que
+\[ 
+\psi_2= \phi_{\beta,\theta} \circ\psi_1\in \Sigma_{\Omega,z_*} 
+\]
+Posons $\xi= \psi_2$.\\
+Pourquoi a-t'on $\xi'( z_*) >\psi'( z_*) $?\\
+\[ 
+\xi= \phi_{\beta,\theta} \circ \sqrt{\phi_{\alpha} \circ\psi} 
+\]
+Alors
+\[ 
+\psi = \phi_{-\alpha} \left( ( \phi_{- e^{i\beta} \theta,-\theta}\circ\xi ) ^{2} \right)
+\]
+
+Donc
+\[ 
+\psi'( z_*) = F'( 0) \xi'( z_*) 
+\]
+Pourquoi $F'( 0) <1$?\\
+$F:\mathbb{D}\to \mathbb{D}$ et $F( 0) =0$.\\
+Or $F$ n'est pas bijective, et donc, par le lemme de Schwarz, $F'( 0) < 1$
+
+\end{proof}
+\begin{defn}[Famille Normale]
+	Soit $\Omega \subset \mathbb{C}$, une famille de fonctions $ \mathcal{F}$ est dite normale si $\forall ( f_n)_{n\in \mathbb{N}} $, il existe une sous-suite $f_{n_k} $ qui converge uniformement sur les compacts de $\Omega$.\\
+	Soit $ \mathcal{F}$ une famille de fonctions holomorphes $\Omega\to \mathbb{C}$ uniformement bornee sur les compacts de $\Omega$. Alors $ \mathcal{F}$ est normale.
+\end{defn}
+\begin{proof}
+Considerons $\Sigma_{\Omega,z_*} $.\\
+Soit $f_n$ une suite de fonctions dans $\Sigma_{\Omega,z_*} $ tel que $f_n'( z_*) \to \sup_{f\in \Sigma_{\Omega,z_*} } f'( z_*) $.\\
+Comme $\Sigma_{\Omega,z_*} $ est une famille normale il existe $f_{n_k} \to f$ uniformement sur les compacts.\\
+$f$ est holomorphe et $f'( z_*) < \infty $.\\
+Il reste seulement a montrer que $f\in \Sigma_{\Omega,z_*} $ et donc que $f$ est injective.\\
+Soit $z\in \Omega$ et $\alpha= f( z) $, montrons qu'il n'existe pas de $w\in\Omega$ tel que $f( w) =\alpha$, donc que $f( z) -\alpha$ ne s'annule qu'en $z$.\\
+$f$ n'est pas constante car $f'( z_*) >0$.\\
+Donc les zeros de $f-\alpha$ sont isoles.\\
+Soit donc $w\in \Omega\setminus \left\{ z \right\} $, montrons que $f( w) -\alpha$ est non nul.\\
+On sait comme $f-\alpha$ qu'il existe un voisinage $D( w,\delta) $ tel que $D( z_2,\delta) \subset \Omega\setminus \left\{ z_1 \right\} $  et sur $\del D( w,\delta) $, $f-\alpha$ ne s'annulle pas.\\
+On a que le nombre de zeros sur $D( w,\delta) $  est donne par
+\[ 
+\frac{1}{2\pi i}\int_{\del D( w,\delta) } \frac{f'( \zeta) }{f( \zeta)-\alpha }d\zeta= \lim_{k \to  + \infty} \frac{1}{2\pi i} \oint \frac{f'_{n_k} ( z) }{f_{n_k}( z) -f_{n_k} ( z_*)  } dz =0
+\]
+On a donc prouve l'existence, il reste l'unicite.
+En effet, $( f_1\circ f_2^{-1} )'( 0) >0$ et $( f_1\circ f_2^{-1}) ( \mathbb{D}) = \mathbb{D}$ et donc $f_1\circ f_2= \id\implies f_1= f_2$ 
+\end{proof}
+\section{Fonctions Elliptiques}
+Une fonction $f: \mathbb{C}\to \mathbb{C}$ est dite bi-periodique s'il existe $T_1,T_2\in \mathbb{C}$ $ \mathbb{R}$-lineairement independantes tel que $f( z + T_1) = f( z+ T_2) = f( z) \forall z$.\\
+\begin{propo}
+Une fonction holomorphe biperiodique est toujours constante
+\end{propo}
+\begin{proof}
+\[ 
+\sup_{z\in \mathbb{C}} f( z) = \sup_{z\in K} |f( z) | < \infty 
+\]
+ou $K$ est compact tel que $\forall z \in \mathbb{C}$ $\exists ( k_1,k_2) \in \mathbb{Z}^{2}$ tel que $z-k_1T_1- k_2T_2\in K	$.\\
+Par Liouville $f$ constante.\\
+
+\end{proof}
+\begin{defn}
+	Une fonction meromorphe biperiodique est dite elliptique.	
+\end{defn}
+		
+	
+
+
+\end{document}	

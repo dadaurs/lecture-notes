@@ -1,0 +1,169 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Wed 08 Dec}{Quelquechose}
+\subsection{Formule de variation premiere pour la longueur}
+Question: Si on a une famille de courbes sur une surface $S$, on aimerait determiner la derivee de la longueur de ces courbes.\\
+Plus precisement, on considere une courbe $\gamma: [ a,b] \to S$( parametree naturellement) et on deforme cette courbe par $f: [ a,b] \times ( -\epsilon,\epsilon) \to S$ telle que 
+\[ 
+f( u,0) = \gamma( u) \forall u\in [  a,b]
+\]
+On veut calculer 
+\[ 
+\frac{d}{dv}|_{v=0} l( \gamma_v) 
+\]
+Supposons que $\gamma,f$ sont $C^{2}$ 
+\begin{thm}[Formule de variation premiere]
+	Sous ces hypotheses, on a 
+	\[ 
+	\frac{d}{dv}|_{v=0} l( \gamma_v) = \langle \frac{\del f}{\del v}( u,0) ,\dot\gamma( u) - \int_{ 0 }^{ b } k_g( u) \langle \mu( u) , \frac{\del f}{\del v}\rangle du
+	\]
+		
+\end{thm}
+\begin{crly}
+Si la deformation $f$ est a extremites fixees et si $\gamma$ est geodesique, alors
+
+\[ 
+\frac{d}{dv}l( \gamma_v) = 0
+\]
+
+\end{crly}
+\begin{proof}
+On a 
+\[ 
+\frac{d}{dv}l( \gamma_v) = \frac{d}{dv} \int_{ a }^{ b }\N { \dot\gamma( u) } du = \int_{ a }^{ b } \frac{\del}{\del v} \sqrt { \langle \frac{\del f}{\del u}, \frac{\del f}{\del u}\rangle}
+\]
+Or
+\[ 
+\frac{\del}{\del v} \sqrt{\langle \frac{\del f}{\del u}, \frac{\del f}{\del u}\rangle}  = \frac{1}{\N { \dot\gamma_v} }\langle \frac{\del ^{2}f}{\del u \del v}, \frac{\del f}{\del u}\rangle
+\]
+En $v=0$, on a 
+\[ 
+\N { \dot\gamma_v( u) } =1
+\]
+Ainsi,
+\[ 
+\frac{d}{dv}l( \gamma_v) = \int_{ a }^{ b }\langle \frac{\del ^{2}f}{\del u \del v}, \frac{\del f}{\del u}\rangle du
+\]
+\[ 
+\frac{d}{dv}\vert_{v=0}  l( \gamma_v ) \int_{ a }^{ b }\frac{\del }{\del u}\langle \frac{\del f}{\del v}, \frac{\del f}{\del u}\rangle du - \int_{ a }^{ b }\langle\frac{\del f}{\del v}, \frac{\del^{2}f}{\del u ^{2}} du
+\]
+\[ 
+= \langle \frac{\del f}{\del v}, \dot\gamma\rangle \vert_{a=0}^{b}- \int_{ a }^{ b } \langle \frac{\del f}{\del v}, \ddot\gamma( u) \rangle du
+\]
+On a $\ddot\gamma = K_\gamma$ 	
+\end{proof}
+\begin{crly}
+Une courbe de classe $C^{2}$ $\gamma:I\to S$ est geodesique $\iff$ 
+\begin{enumerate}
+\item $\N { \dot\gamma( u) } = $ constante
+\item La courbe $\gamma$ minimise localement la longueur entre ses points.
+	\[ 
+	\forall t \in I \exists \epsilon>0 \text{ tq si } t-\epsilon \leq t_1 \leq t_2 \leq t_2+ \epsilon
+	\]
+	Alors
+	\[ 
+	d_S( \gamma( t_1), \gamma( t_2) ) = l( \gamma|_{[t_1,t_2]} ) 
+	\]
+	
+	
+\end{enumerate}
+
+\end{crly}
+\subsection{Courbure normale d'une surface}
+\begin{defn}[Courbure normale]
+La courbure normale a une surface $S$ en un point $p$ et une direction $v\in T_pS\setminus\left\{ 0 \right\} $ 	
+\[ 
+k_n( v) = \frac{h( v,v) }{\langle v,v\rangle} = - \frac{\eng { L_p( v) ,v} }{\N { v}^{2}}	
+\]
+On remarque que $k_n( \lambda,v) = k_n( v) \forall \lambda \in \mathbb{R}\setminus \left\{ 0 \right\} $.\\
+On regarde souvent $k_n$ comme fonction 
+\[ 
+k_n : \left\{ v\in T_pS| \N v = 1  \right\} \to \mathbb{R}
+\]
+
+
+\end{defn}
+\subsection*{Comment calculer $L_p$? }
+Soit $\psi: \Omega\to S$ une parametrisation reguliere $C^{2}$.\\
+On a le repere adapte $b_1= \frac{\del\psi}{\del u_1}, b_2= \frac{\del\psi}{\del u_2}, v= \frac{b_1\times b_2}{\N { b_1\times b_2} }	$
+\[ 
+L_p b_1= d\nu ( \frac{\del \psi}{\del u_i}) = \frac{\del \nu}{\del u_i}
+\]
+
+Donc
+\[ 
+L( b_1 ) = l_{11} b_1 + l_{21} b_2
+\]
+et on en obtient la matrice.\\
+\subsection*{ Il est souvent plus simple de calculer $h$}
+On a 
+\[ 
+h( v,w) = - \eng { Lv, w} 
+\]
+Donc
+\[ 
+h_{ij} = h( b_i, b_j) = - \eng { L( b_i), b_j} = - l_{1i} \eng { b_1, i} - l_{2j} \eng { b_2, b_j} = l_{1i} g_{1i} + l_{2i} g_{2j} 
+\]
+Et donc 
+\[ 
+H = 
+\begin{pmatrix}
+	h_{11} & h_{12}\\
+	h_{12} & h_{22}
+\end{pmatrix} , G = 
+\begin{pmatrix}
+	g_{11} &g_{12}\\
+	g_{12} & g_{22}
+\end{pmatrix} 
+\]
+Donc on peut calcule $L_p$ grace a 
+\[ 
+L= - G^{-1}H
+\]
+	
+\begin{defn}[Surface complete]
+	La surface $S$ est complete si toute suite de Cauchy ( pour la distance intrinseque) converge
+\end{defn}
+\begin{thm}[Hoph-Rinow ~1930]
+Si $S$ est une surface complete et connexe, alors il existe une geodesique minimale entre deux points quelconques.	
+\end{thm}
+C'est aussi un corollaire du theoreme d'Arzela-Ascoli.
+\subsection{Courbures principales, moyenne et de Gauss}
+Par le theoreme spectral, $L$ est orthogonalement diagonalisable.
+Il existe donc une base $ \left\{ v_1,v_2 \right\} $ orthonormee de $T_p S$ propre pour $L_p$.\\
+On note $k_1, k_2$ les valeurs propres de $-L$ ( on suppose $k_1 \leq k_2$ ) .\\
+En effet
+\[ 
+k_n ( v_i) = - \frac{\eng { L_p( v_i), v_i} }{\N v_i ^{2}}= k_i
+\]
+\begin{defn}[Typologie des points sur une surface]
+	\begin{enumerate}
+	\item Les vecteurs propres de $L_p$ sont les directions principales de $S$ en $p$.
+	\item La courbure de Gauss de $S$ en $p$ est 
+		\[ 
+		K= k_1k_2= \det L_p = \frac{\det H}{\det G}
+		\]
+		
+	\item La courbure moyenne de $S$ en $p$ est 
+		\[ 
+		H = \frac{1}{2} ( k_1+k_2) = -\frac{1}{2}\mathrm{Tr} L_p
+		\]
+
+	\item Le point $p$ est elliptique si $K( p) >0$ 
+	\item Le point $p$ est hyperbolique si $K( p) <0$ 
+	\item Le point $p$ est parabolique si $k_1k_2= 0$ mais $ H\neq 0$ 	
+	\item Le point $p$ est plat si $K= H = 0$
+	\item Le point $p$ est ombillique si $ k_1= k_2$ 
+		
+	\end{enumerate}
+			
+\end{defn}
+\begin{thm}
+	Si $S$ est une surface reguliere de classe $C^{3}$ dont tous les points sont ombilliques alors $S$ est un plan ou une sphere.
+\end{thm}
+	
+
+
+
+	
+\end{document}	

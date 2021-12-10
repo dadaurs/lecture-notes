@@ -1,0 +1,108 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{22}{Thu 09 Dec}{Analyse Vectorielle}
+\section{Analyse Vectorielle}
+But: Comprendre le gradient, le rotationnel, la divergence, le laplacien et les theoremes les reliant.\\
+\begin{defn}
+Soit $U \subset \mathbb{R}^n$ un domaine.\\
+Des fonctions $C^1$ $\phi: U \to \mathbb{R}$ est apellee champ scalaire et $X: U\to \mathbb{R}^m$ un champ vectoriel.
+\end{defn}
+\subsection{Integrales curvilignes et circulation}
+Soit $U$ un domaine, $\phi:U\to \mathbb{R}$ un champ, et $\gamma [ 0,1] \to U$ $C^{1}$ par morceaux, continue, derivees bornees.
+\begin{defn}[Integrale curviligne]
+	L'integrale curviligne de $\phi$ le long de $\gamma$ 
+	\[ 
+	\int_{ \gamma }^{  }\phi ds
+	\]
+	est par definition
+	\[ 
+	\int_{ 0 }^{ 1 } \phi( \gamma( s) ) \N { \gamma'( s) } ds
+	\]
+	En particulier
+	\[ 
+	l( \gamma) = \int_\gamma 1 ds
+	\]
+	
+	
+\end{defn}
+\begin{rmq}
+Une reparametrisation ne change pas la valeur de l'integrale.
+\end{rmq}
+\begin{defn}[Circulation]
+	Soiit $X:U\to \mathbb{R}^n$ un champ vectoriel et $\gamma$ une courbe.\\
+	La circulation de $X$ le long de $\gamma$ est defini par
+	\[ 
+	\int_{ \gamma }^{  }X \cdot ds = \int_{ 0 }^{ 1 }X( \gamma( s) ) \cdot \gamma'( s) ds
+	\]
+	
+\end{defn}
+\begin{rmq}
+Cette definition est aussi invariante par reparametrisation.
+\end{rmq}
+\begin{defn}[Gradient]
+	Le gradient d'un champ scalaire $\phi$ est donne par
+	\[ 
+	\nabla \phi = ( \del_1\phi,\ldots,\del_n\phi) 
+	\]
+	    	
+\end{defn}
+\begin{propo}
+Circulation d'un gradient.
+\[ 
+\int_{ \gamma }^{  }\nabla\phi\cdot ds = = \phi( \gamma( 1) ) -\phi( \gamma( 0) ) 
+\]
+\end{propo}
+\begin{proof}
+	En supposant $\gamma C^1$ 
+\[ 
+\int_{ 0 }^{ 1 } \nabla\phi( \gamma( s) ) \cdot \gamma'( s) ds = \int_{ 0 }^{ 1 } \frac{d}{ds}( \phi\circ\gamma ) ds = \phi( \gamma( 1) ) -\phi( \gamma( 0) ) 
+\]
+
+\end{proof}
+On dit qu'un champ vectoriel derive d'un potentiel ( scalaire) s'il existe $\phi$ tel que
+\[ 
+\nabla\phi= X
+\]
+\begin{propo}
+Si $X:U\to \mathbb{R}^n$ est un champ vectoriel tel que $\forall \gamma$ un lacet
+\[ 
+\int_{ \gamma }^{  }X ds =0
+\]
+Alors $X$ derive d'un potentiel.
+\end{propo}
+\begin{proof}
+Soit $x_*\in U$, posons pour $x\in U$ 
+\[ 
+\phi( x) = \int_{ \gamma} X ds
+\]
+ou $\gamma$ est un chemin de $x_*$ vers x.\\
+Cette integrale ne depend pas du choix de $\gamma$.\\
+Montrons que $\nabla \phi = X$.\\
+$\forall v \in \mathbb{R}^n$ 
+\[ 
+\nabla\phi( x) \cdot v = X( x) \cdot v
+\]
+On a donc
+\[ 
+\lim_{t \to  + \infty} \frac{1}{t}\int_{ x }^{ x+tv } X ds
+\]
+On parametre le segment de maniere affine
+\[ 
+= \frac{1}{t} X( x+stv)\cdot tv= X( x+stv) \cdot v\to X( x) \cdot v	
+\]
+\subsection{Rotationel}
+Pour $X:U \subset \mathbb{R}^{2}\to \mathbb{R}^{2}$ 
+\[ 
+\nabla\times X: U \to \mathbb{R} : x \to \del_1X_2- \del_2X_1
+\]
+
+
+
+
+
+
+\end{proof}
+
+
+	
+\end{document}	

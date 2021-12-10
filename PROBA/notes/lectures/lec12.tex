@@ -1,0 +1,136 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Wed 08 Dec}{Sequences of random variables}
+\subsection{MGF vs independence}
+\begin{propo}
+Let $X,Y$ be r.v. s.t. $M_X,M_Y$ exist for $t\in ( -c,c) $.\\
+$X,Y$ are independent iff
+\[ 
+M_X( t) M_Y( s) = M_{X,Y} ( t,s) \quad \forall t,s\in \mathbb{R}
+\]
+
+\end{propo}
+\begin{proof}
+If $X,Y$ are independent, then 
+\[ 
+\mathbb{E}g( X) h( Y) = \mathbb{E}g( X) \mathbb{E}h( y) 
+\]
+And we apply to $\exp tX, \exp tY$.\\
+Take $\tilde X, \tilde Y$ independent s.t. $\tilde X\sim X,\tilde Y \sim Y$, then the moment generating function of $\tilde X,\tilde Y$ agree.
+But then
+\[ 
+M_{X,Y} = M_X M_Y= M_{\tilde X} M_{\tilde Y} = M_{\tilde X,\tilde Y} 
+\]
+Hence $X,Y$ are independent.
+\end{proof}
+\begin{propo}
+If $\tilde X\sim N( \mu,C) $, then it's MGF is
+\[ 
+M_{\tilde X} = \exp( \langle\mu,t) + \frac{1}{2} t^{T}Ct
+\]
+
+\end{propo}
+\section{Limit Theorems}
+\subsection{Sequences of events}
+Let $E_1,\ldots$ be a sequence of events.\\
+Define $F_1= \left\{ \text{ only finitely many  } E_i \text{ occur }  \right\} $.\\
+Do we have $F_1\in \mathcal{F}$ ?
+Yes.\\
+Can we estimate the probability of these events
+\begin{lemma}
+Let $E_1,\ldots$ be mutually independent. Then at least one of $E_i$ happens almust surely ( ie. $\mathbb{P}( \cup E_i) =1$ ) if and only if
+\[ 
+\prod ( 1- \mathbb{P}E_i) \to 0
+\]
+
+\end{lemma}
+\begin{proof}
+Write
+\[ 
+\mathbb{P}( \cup E_i) = 1 - \mathbb{P}( \cap E_i^{c}) \geq 1- \mathbb{P}( \bigcup_{ n \leq i \leq 1} E_i) \geq 1- \prod( 1- \mathbb{P}E_i) 
+\]
+
+\end{proof}
+
+\begin{thm}[Borel-Cantelli I]
+	Let $E_1,\ldots$ be events s.t. $ \sum \mathbb{P}( E_i) < \infty $, then the probability that only finitely many happen.\\
+	Then a.s. only finitely many $E_i$ occur
+	\[ 
+	\mathbb{P}( F_3) = \mathbb{P}( \bigcap_{n \geq 1} \bigcup_{i} E_i) =0
+	\]
+	
+\end{thm}
+\begin{proof}
+We want to show that $\mathbb{P}( \bigcap_{n \geq 1} \bigcup_{i} E_i) =0$.\\
+So 
+\[ 
+\mathbb{P}( F_3) \leq  \mathbb{P}( \bigcup_{i \geq n} E_i) \leq \sum_{i \geq n}^{ } \mathbb{P}( E_i) \to 0
+\]
+
+\end{proof}
+\begin{exemple}
+Let $X_1,X_2\ldots$ be Geometric random variables with value $\frac{1}{2}$, s.t. $ \mathbb{P} ( X_i>k )= 2^{-k}$.\\
+Let $E_n= \left\{ \max_{i\in [ n] }  X_i >n \right\} $.\\
+Do infinitely many $E_n$ occur?\\
+\[ 
+	\mathbb{P}( E) \subset \mathbb{P}( \bigcup \left\{ X_i>n \right\} ) \leq n 2^{-n}
+\]
+Hence, the sum $ \sum_{n \geq 1} \mathbb{P}( E_n) < \infty $.\\
+So we can apply BC-I, and hence
+\[ 
+\mathbb{P}( \text{ infinitely many } E_i \text{ occur } ) =0
+\]
+
+\end{exemple}
+Is there a criteria for infinitely many events to happen?
+\begin{thm}[Borel-Cantelli II]
+	Let $E_1\ldots$ be independent events s.t. $ \sum_{i \geq 1} \mathbb{P}( E_i) = \infty $, then $ \mathbb{P}( \bigcap_{n \geq 1} \bigcup_{i \geq n} E_i) = 1$ 
+\end{thm}
+\begin{proof}
+We want
+\[ 
+\mathbb{P}( ( \bigcap_{n \geq 1} \bigcup_{i \geq n} E_i )^{c})  \leq \sum_{n \geq 1} \mathbb{P}( \bigcap_{i \geq n} E_i^{c} ) 
+\]
+We need that $\forall n$ 
+\[ 
+\mathbb{P}( \bigcap_{i \geq n} E_i^{c}) =0
+\]
+We have
+\[ 
+\mathbb{P}( \bigcap_{i \geq n} E_i^{c}) = \prod_{i \geq n} ( 1- \mathbb{P}( E_i) ) 
+\]
+Now using that $1-x \leq e^{-x} $, hence
+\[ 
+\prod_{i \geq n} ( 1- \mathbb{P}( E_i) ) \leq \exp( - \sum_{i \geq n}^{ } \mathbb{P}( E_i) )\to 0	 
+\]
+
+\end{proof}
+
+\subsection{Sequences of random variables}
+Do we have infinitely many $X_i \geq 0$, does $X_n$ converge, is $X_n$ bounded?\\
+In all cases, we have to see that our questions make sense!
+\begin{defn}[Almost sure convergence]
+	Let $X_1,X_2,\ldots$ be random variables defined on the same probability space.\\
+	Then we say that $X_i$ converges to $X_0$ almost surely if
+	\[ 
+	\mathbb{P}( \left\{ \omega: X_n( \omega) \to X_0( \omega)  \right\} ) =1
+	\]
+		
+\end{defn}
+Is the set $ \left\{ \omega: X_n( \omega) \to X_0( \omega)  \right\} $ even measurable?\\
+\begin{defn}[Convergence in law]
+	Let $X_1,\ldots$ be random variable.\\
+	We say that $X_n$ converges to $X_0$ in law if 
+	\[ 
+	F_n( t) = \mathbb{P}( X_n \leq t) 
+	\]
+	converges to $F_X( t) $ as $n\to \infty $ for all $t$ s.t. $\mathbb{P}( X=t) =0$ ie. $t$ is a continuity point of $F_X$
+\end{defn}
+
+
+
+
+		
+
+
+\end{document}	

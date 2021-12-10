@@ -1,0 +1,114 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{16}{Fri 10 Dec}{Classification des groupes Abeliens Finis}
+\subsection{Classification des groupes abeliens finis}
+\begin{thm}[Classifiaction]
+	Si $A$ est un groupe abelien fini d'ordre $n$, alors pour tout nombre premier $p$ qui divise $n$, il existe une unique suite d'entiers
+	\[ 
+	r_{p,1} \geq r_{p,2} \ldots \geq r_{p,m_p} 
+	\]
+	tels que
+	\[ 
+	A= \prod_{p\in P_n} \faktor{\mathbb{Z}}{p^{r_{p,1} \mathbb{Z}} } \times \ldots \times faktor{\mathbb{Z}}{p^{r_{p,m_p} \mathbb{Z}} }
+	\]
+ou $P_n = \left\{ p \text{ premier } \vert p|n \right\} $ 	
+	
+\end{thm}
+Il nous faut deux lemmes techniques necessaires pour la demonstration du theoreme.
+\begin{lemma}
+Si $A$ est un groupe abelien tel que $A= T_n( A) $ et $n=lm$  ou $( l,m) =1$, alors
+\[ 
+A = T_l( A) \oplus T_m( A) 
+\]
+
+\end{lemma}
+\begin{proof}
+$( l,m) =1$ implique $\exists r,s \in \mathbb{Z} \text{ tel que } rl + sm =1$.\\
+Ainsi
+\[ 
+\forall a \in A, a = rla + sma \in T_m( A) + T_l( A) 
+\]
+Par ailleurs, si $a\in T_m( A) \cap T_l( A) $, alors
+\[ 
+la = 0 = ma
+\]
+d'ou $rla+ sma = 0$, donc $a=0$.\\
+Donc $T_m( A) \cap T_l( A) = \left\{ 0 \right\} $, donc on a bien une somme directe.
+\end{proof}
+Une consequence du lemme ci-dessous est
+\begin{lemma}
+Si $A$ est un groupe abelien, tel que $A= T_n( A) $, alors $A= \bigoplus_{p \in P_n} A( p) $ 
+\end{lemma}
+\begin{proof}
+On ecrit $n = p_1^{l_1}\ldots p_k^{k}$, ou $P_n = \left\{ p_1, \ldots, p_k \right\} $.\\
+Par recurrence sur $k$, on conclut.
+\end{proof}
+\begin{proof}[du theoreme de classification]
+	Notons que, si $A$ est abelien fini, et $|A| = n$ alors
+	\[ 
+	A= T_n( A) 
+	\]
+	Donc par le lemme precedent 
+	\[ 
+	A= \bigoplus_{p\in P_n} A( p) 
+	\]
+	On sait aussi que chaque $A( p) $ est un $p$ groupe abelien, puisque $|A( p) |< \infty $.\\
+	Ainsi, il suffit de demontrer que si $A$ est un $p$ groupe abelien, il existe une suite unique $r_1 \geq \ldots \geq r_m$ tel que
+	\[ 
+	A \simeq \faktor{\mathbb{Z}}{p^{r_1}\mathbb{Z}}\times \ldots \times \faktor{\mathbb{Z}}{p^{r_m}\mathbb{Z}}
+	\]
+\subsubsection*{Existence}
+Par recurrence sur $|A|$.\\
+Si $|A| = 1$, on a fini.\\
+Si $|A| = p $, alors $A = \faktor{\mathbb{Z}}{p \mathbb{Z}}$ \\
+Supposons qu'une telle decomposition en produit de groupes cycliques existe pour tout $p$-groupe abelien $A$ tel que $|A| = p^{k}, \forall k < n$.\\
+Soit $A$ un $p$-groupe abelien tel que $|A| = p^{n}$.\\
+Soit maintenant $a\in A$ d'ordre maximal, $o( a_1) = p^{r_1}$, alors
+\[ 
+| \faktor{A}{\langle a_{1}\rangle}| = p^{n-r_1}< p^{n}
+\]
+Par l'hypothese de recurrence, il existe une suite $r_2 \geq \ldots \geq r_m$ tel que $\exists $ iso 
+\[ 
+\phi: \faktor{A}{\langle a_1\rangle}\to \faktor{\mathbb{Z}}{p^{r_2}\mathbb{Z}}\times\ldots
+\]
+Posons $ \overline{a_i}= \phi^{-1}( ( 0, \ldots, 1, \ldots) ) $ avec un $1$ a la $i-1$ eme place.\\
+Alors $o( \overline{a_i}) = p^{r_i}\forall i$ et
+\[ 
+\faktor{A}{\langle a_1\rangle}\simeq \bigoplus_{i=2}^{m} \langle \overline{a_i}\rangle
+\]
+Par le lemme 4.5, il existe un representant de $ \overline{a_i}$ dont l'ordre est $p^{r_i}$.\\
+Sans perte de géneralité, $o( a_i) = p^{r_i}$.\\
+On affirme que 
+\[ 
+A = \bigoplus_{i=1}^{m} \langle a_i \rangle \simeq \prod_{i=1}^{m} \faktor{\mathbb{Z}}{p^{r_i}\mathbb{Z}}
+\]
+Considerons l'homomorphisme quotient $q: A \to \faktor{A}{\langle a_1\rangle}$.\\
+$\forall b \in q$, il existe $s_2, \ldots, s_m$ tel que $ \overline{b}= q( b) = s_2 \overline{a_2}+ \ldots + s_m \overline{a_m}$ 	\\
+Par consequent 
+\[ 
+\overline{b}= \overline{s_2a_2+ \ldots+ s_m a_m}
+\]
+Donc il existe $s_1\in \mathbb{Z}$ tel que
+\[ 
+b - s_2a_2- \ldots - s_m a_m = s_1a_2
+\]
+ie, $b = \sum_i s_i a_i$
+
+Finalement on observe que $\langle a_i \rangle \cap \langle a_j \rangle = \left\{ 0 \right\} $ 
+\subsubsection*{Unicite}
+Recurrence sur $|A|$.\\
+Si $|A| = 1, p$, on a un seul choix.\\
+Ensuite, si
+\[ 
+	\faktor{ \mathbb{Z}}{p^{r_1}\mathbb{Z}}\times \ldots \times \frac{\mathbb{Z}}{p^{r_m}} \simeq \faktor{ \mathbb{Z}}{p^{s_1}\mathbb{Z}}\times \ldots \times \frac{\mathbb{Z}}{p^{s_m}}
+\]
+avec $r_1$ et $s_1$ maximal.\\
+Alors $r_1= s_1$ car a gauche l'ordre maximal est $p^{r_1}$ et a droite, l'ordre maximal est $p^{s_1}$.\\
+Et on a fini par recurrence.
+
+\end{proof}
+	
+	
+
+
+\end{document}	
