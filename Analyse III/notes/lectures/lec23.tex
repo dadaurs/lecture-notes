@@ -1,0 +1,47 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{23}{Mon 13 Dec}{Analyse vectorielle}
+On se demande si un champ vectoriel derive d'un potentiel
+
+\begin{propo}
+Soit $x\in U$ et $T \subset \mathbb{R}^{2}$ un triangle, soit $T_{x,\epsilon} = x + \epsilon T$.\\
+Alors si on orient $\del T_{x,\epsilon} $ dans le sens trigonometrique, alors
+\[ 
+\int_{ \del T_{x,\epsilon}  }^{  }X\cdot ds = Aire( T_{x,\epsilon} ) rot( X) 
+\]
+
+\end{propo}
+\begin{crly}
+On peut remplacer $T$ par tout polygone en le decoupant en triangles.
+\end{crly}
+\begin{rmq}
+On voit que si $X$  a un potentiel $rot X =0$ 
+\end{rmq}
+En 3D, plus complique car il faut choisir comment representer des petits lacets
+\begin{propo}
+Soit $T \subset \mathbb{R}^{3}$ le  triangle avec sommets $0,v,w$ apparaissant dans cet ordre suivant l'orientation de $\del T$.\\
+Alors 
+\[ 
+\int_{ \del T_{x,\epsilon}  }^{  } X ds = \frac{1}{2}\epsilon rot X \cdot ( v\times w) 
+\]
+
+\end{propo}
+\subsection{Formule de Green-Riemann et Kelvin-Stokes}
+Que dire de 
+\[ 
+\int_{ \gamma }^{  }X \cdot ds
+\]
+si $\gamma$ est le bord de $U \subset \mathbb{R}^{2}$ 
+\begin{thm}[Green-Riemann]
+	\[ 
+	\int_{\gamma} X\cdot ds = \int_{ U }^{  }rot X du dv
+	\]
+	
+\end{thm}
+
+
+
+
+
+
+\end{document}	

@@ -1,0 +1,182 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{13}{Wed 15 Dec}{Geometrie Hyperbolique}
+\section{Geometrie Hyperbolique}
+Constat: La sphere $S^{n}$ et l'espace euclidien verifient 
+\begin{enumerate}
+\item Ces espaces sont homogenes
+\item Ce sont des espaces metriques complets
+\item Topologiquement simples ( simplement connexe) 
+\end{enumerate}
+On dit que $( X,d) $ est un espace homogene si le groupe des isometries agit transitivement 
+\[ 
+\iff \forall p,q \in X \exists f:X\to X \text{ une bijection isometrique } f( p) = q
+\]
+Question:\\
+Existe-t'il aussi un espace metrique, simplement connexe, complet, homogene et tel que ( en dimension 2), on a que
+\[ 
+K = -1
+\]
+\begin{thm}[Hilbert]
+	Toute surface de $ \mathbb{R}^{3}$ a courbure de Gauss constante negative n'est pas complete.\\
+	Cependant, il existe une surface ( non-plongee dans $ \mathbb{R}^{3}$ ) simplement connexe, a courbure constante, homogene, on l'appelle le plan hyperbolique
+\end{thm}
+\subsection*{Varietes Riemanniennes}
+\begin{defn}	
+	Une metrique riemannienne sur une variete $M$ est la donnee pour tout $p\in M$ d'un produit scalaire $g_p = \langle , \rangle_{M,p} $ sur $T_pM$ 
+	\[ 
+	g_p: T_pM \times T_pM \to \mathbb{R}
+	\]
+	qui varie de facon differentiable.
+\end{defn}
+Donc, une variete Riemannienne est donc un espace qui est infinitesimalement Euclidien.\\
+Si $\gamma: [ a,b] \to ( M,g) $ est une courbe $C^{1}$, sa longueur est 
+\[ 
+l_g( \gamma) = \int_{ a }^{ b } \N { \dot\gamma( t) } dt
+\]
+\[ 
+\iff l_g( \gamma) = \int_{ a }^{ b } g_{\gamma( t) } ( \dot\gamma( t)  \dot\gamma( t))^{\frac{1}{2}} 
+\]
+Alors $d_g( p,q) = \inf \left\{ l_{g}( \gamma)   \right\} $ est une distance sur $M$.\\
+\begin{defn}
+	La geometrie Riemannienne est l'etude de l'espace metrique $ ( M, d_g) $ 	 
+\end{defn}
+\begin{thm}
+	Si $ ( M_1,g_1) $ et $ ( M_2,g_2) $ sont deux varietes riemanniennes, alors l'application
+	\[ 
+	f:M_1\to M_2
+	\]
+est une isometrie pour la distance intrinseque $\iff$ $f$ est differentiable et $df_p: T_pM_1\to T_{f( p) } M_2$ respecte les produits scalaires.
+\[ 
+g_2( df( \xi), df( \eta) ) = g_1( \xi, \eta) 
+\]
+
+\end{thm}
+\begin{defn}[Application conforme]
+	$f: ( M_1,g_1) \to ( M_2,g_2) $ est dite conforme si elle respecte les angles:
+	\[ 
+	\xi, \eta\in T_p M_1 \setminus \left\{ 0 \right\} \implies angle( \xi,eta) = angle ( df_p( \xi) , df_p( \eta) ) 
+	\]
+	
+\end{defn}
+\begin{lemma}
+	$f$ est conforme $\iff$ $g_2( df( \xi) , df( \eta) ) = \lambda^{2}( p) g_1( \xi, eta) $ 
+\end{lemma}
+\begin{exemple}
+\begin{enumerate}
+\item Si $M$ est une sous-variete de $ \mathbb{R}^n$, on a la metrique Riemannienne induite par le produit scalaire de $ \mathbb{R}^n$ 
+	\[ 
+	g_p( \xi,, \eta) = \langle \xi, \eta\rangle_{ \mathbb{R}^n} \forall \xi, \eta \in T_pM \subset \mathbb{R}^n
+	\]
+
+\item Si $\Omega \subset \mathbb{R}^m$ est un domaine, alors une metrique riemannienne est donnee par $G$, avec $g_{i,j} ( u) = g_u( e_i, e_j) $.\\
+	Si $\xi= \sum \xi_i e_i, \eta= \sum \eta_i e_i\in T_m \Omega $.\\
+	Alors
+	\[ 
+	g_u( \xi,\eta) = \sum_{i,j}  g_{ij} \xi_i \eta_j
+	\]
+	
+\end{enumerate}
+\end{exemple}
+\begin{rmq}
+Si on parametrise une surface par $\psi: \Omega\to S \subset \mathbb{R}^{3}$, alors $\psi$ est une isometrie entre $\Omega$, munie du tenseur metrique et $S$ munit de la metrique Riemannienne induite par le plongement $S \subset \mathbb{R}^{3}$ 
+\end{rmq}
+$M$ peut etre une sous-variete d'un espace pseudo-Euclidien $ \mathbb{E}^{p,q}= \mathbb{R}^{p+q}$ muni d'une forme quadratique de signature $( p,q) $
+\begin{exemple}
+L'espace de Minkovski est 
+\[ 
+\mathbb{E}^{2,1}= \mathbb{R}^{3}
+\]
+muni de la forme quadratique 
+\[ 
+Q( x,y,z) = x^{2} + y^{2} - z^{2}
+\]
+La forme bilineaire associee est 
+\[ 
+B: \mathbb{R}^{3}\times \mathbb{R}^{3}\to \mathbb{R}: ( x,y) \to x_1y_1 + x_2y_2 - x_3y_3
+\]
+		
+\end{exemple}
+\begin{defn}
+	La surface $S \subset  \mathbb{E}^{2,1}$ dans l'espace de Minkovski est admissible ( de type espace ) si pour tout point $p\in S$, la restriction de $B$ a $T_pS$ est definie positive.\\
+	Alors $g_p ( \xi, \eta) = B( \xi, \eta) $ est un produit scalaire sur $T_p M$, donc une surface admissible $S \subset  \mathbb{E}^{2,1}$ est une variete riemannienne de dimension 2.
+\end{defn}
+\begin{rmq}
+Si $S \subset  \mathbb{E}^{2,1}$ est admissible et $\psi: \Omega\to S$ un parametrage, alors le tenseur metrique sur $\Omega$ se calcule par 
+\[ 
+g_{ij} ( u) = g_u(e_i, e_j ) = B ( d\psi_u ( e_i) , d\psi_u( e_j) ) 
+\]
+
+\end{rmq}
+\begin{exemple}
+On definit 
+\[ 
+H = \left\{ x\in \mathbb{E}^{2,1}| Q( x) = -1 \right\} 
+\]
+$H$ est la surface de revolution de la branche de l'hyperbole $x^{2}-z^{2}= -1$ 
+
+\end{exemple}
+\begin{rmq}
+$H$ est la sphere de Rayon $i$ 
+\end{rmq}
+Si on parametrise $H$ comme surface de revolution de l'hyperbole, on peut calculer le tenseur metrique
+\[ 
+G = dt^{2}+ \sinh^{2}( t) d\theta^{2}
+\]
+
+\begin{propo}
+Si le tenseur metrique d'une surface est de la forme 
+\[ 
+g= dt^{2}+ a^{2}( t) d\theta^{2}
+\]
+Alors la courbure de Gauss est $K = - \frac{a"}{a}$ 
+\end{propo}
+\subsection{Projection stereographique de $H$ }
+$\pi: H \to \mathbb{D}^{2}$ par $p\in H$ $u = \pi( p) \in \mathbb{D}^{2}$.\\
+On note $\psi: \mathbb{D}^{2}\to H$ son inverse.\\
+C'est un parametrage de $H$.\\
+Le plan hyperbolique $H$ est donc isometrique a $ \mathbb{D}^{2}= \left\{ z \in \mathbb{C}| |z| < 1 \right\} $ muni de la metrique 
+\[ 
+g= ds^{2}= \frac{4 dz^{2}}{( 1- z^{2} )^{2}}
+\]
+La longueur ( hyperbolique )  d'un chemin $\gamma( t) = z( t) $ est 
+\[ 
+l( \gamma) = \int_{ t_0 }^{ t_1 } \frac{2| \dot z( t) |}{(  1- |z( t) |^{2} )}dt
+\]
+\begin{defn}[Disque de Pointcarre]
+	Le disque $\mathbb{D}^{2}$ avec la metrique Riemannienne.
+\end{defn}
+On veut montrer que $ \mathbb{D}^{2}$ est complet et homogene et on veut une formule pour calculer $ d_{\mathbb{D}^{2}} ( z_1,z_2) = ?$ 
+\subsection{Le modele du demi-plan de Poincarre}
+C'est un autre modele conforme:
+\[ 
+\mathbb{H}^{2}= \left\{ w\in \mathbb{C}| \im w>0 \right\} 
+\]
+avec le tenseur metrique 
+\[ 
+ds^{2}= \frac{|dw|^{2}}{\im w ^{2}}
+\]
+\begin{propo}
+$ \mathbb{D}^{2}$ et $ \mathbb{H}^{2}$ avec les metriques proposees sont isometriques 
+\end{propo}
+\begin{proof}
+On cherche une isometrie sous $ h: \mathbb{H}^{2}\to \mathbb{D}^{2}$.\\
+On sait que $h$ est conforme, donc $h$ est holomorphe.\\
+Par le theoreme de l'application conforme de Riemann elle existe.\\
+On peut decider que $h( i) =0$.\\
+On veut aussi que $ h( \del H^{2}) = \del \mathbb{D}^{2}$, on peut prendre
+\[ 
+h( w) = \frac{w-i}{w+i}
+\]
+Il reste a prouver que $h$ est une isometrie
+\[ 
+\frac{dw}{\im w }= \frac{z dz}{1- |z|^{2}} \text{ si }  z= h( w) 
+\]
+
+\end{proof}
+
+
+
+
+
+\end{document}	

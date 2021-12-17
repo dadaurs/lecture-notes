@@ -1,0 +1,56 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{17}{Sat 11 Dec}{Sous-groupes de Sylow}
+\section{Theoremes de Sylow}
+\subsection{Les $p$-groupes}
+Dorenavant, $p$ sera toujours un premier fixe.\\
+\begin{defn}
+Si $G$ est un groupe fini, $|G|$ est l'ordre de $G$.\\
+Si $H$ st un sous-groupe d'un groupe fini $G$, alors $( G:H) $ est l'index de $H$ dans $G$, ie., $|G|/|H|$ 
+\end{defn}
+\begin{defn}[p-groupes]
+	Un groupe fini $G$ est un $p$-groupe si $|G|$ est une puissance de $p$.\\
+	Un $p$-sousgroupe d'un groupe $G$ est un sous-groupe non-trivial $H$ de $G$ tel que $|H|$ est une puissance de $p$.\\
+	Un $p$-sous-groupe fini $G$ est dit de Sylow si $|H|$ est la puissance maximale de $p$ qui divise $|G|$.
+\end{defn}
+\begin{defn}
+Pour tout groupe $G$, on pose
+\[ 
+\mathcal{S}_p( G) = \left\{ H\in \mathcal{S}( G) | H \text{ un p-sous-groupe }  \right\} 
+\]
+Si $p$ divise $|G|$, on note l'ensemble des $p$-sous-groupes de Sylow par
+\[ 
+Syl_p( G) = \left\{ H \in \mathcal{S}_p( G) | H \text{ de Sylow }  \right\} 
+\]
+
+\end{defn}
+\subsection{Existence des $p$-sous-groupes}
+\begin{thm}[Existence de p-sous-groupes]
+	Si $G$ est un groupe fini tel que $p$ divise $|G|$, alors $Syl_p( G) \neq 0$ 
+\end{thm}
+On a deja vu que dans le cas ou $G$ est abelien, $Syl_p( G) $ est non-vide.
+\begin{defn}[Centre d'un groupe]
+	Le centre d'un groupe $G$ est le sous-groupe
+	\[ 
+	Z( G) = \left\{ a\in G| ab = ba \forall b \in G \right\} 
+	\]
+
+\end{defn}
+\begin{rmq}
+Le centre d'un groupe est toujours abelien. Par ailleurs pour tout groupe $G$ 
+\[ 
+Z( G) = \ker \gamma_G
+\]
+ou $\gamma_G$ est l'homomorphisme de representation adjointe.
+\end{rmq}
+Observer que 
+\[ 
+b\in Z( g) \iff ab = ba \forall a\in G \iff C_G( b) = G \iff ( G:G_b) = 1
+\]
+
+Par consequent, l'equation de classe devient
+\[ 
+|G| = \sum_{b \in Z( G) }^{ } ( G:G_b) + \sum_{b \in \overline{G}\setminus Z( G) }^{ }( G:G_b)  = |Z( G) | + \sum_{b\in \overline{G}\setminus Z( G) }^{ } ( G:C_G( b) ) 	
+\]
+
+\end{document}	

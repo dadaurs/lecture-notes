@@ -1,0 +1,146 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{13}{Wed 15 Dec}{LLN}
+\begin{lemma}
+Let $X_1,\ldots$ be a sequence of r.v. $( X_n)\to X_0$ iff $\forall a<b$ continuity points of $F_{X_0} $,
+\[ 
+\mathbb{P}( X_n\in( a,b) ) \to \mathbb{P}( X_0\in ( a,b) ) 
+\]
+
+\end{lemma}
+\begin{proof}
+If $a,b$ are continuity points, then
+\[ 
+\mathbb{P}( X_0\in ( a,b) ) = F_{X_0} ( b) - F_{X_0} ( a) 
+\]
+In the other direction, fix $b$ a continuite point of $X_0$, observe $\forall a_n \to - \infty $ continuite points of $F_{X_0} $, now
+\[ 
+	F_{X_n} ( b) - \mathbb{P}( X_n \leq b) \geq \mathbb{P}( X_n \in ( a_k,b) ) 
+\]
+by assumption $\to \mathbb{P}( X_0\in ( a_k,b) ) $ which goes too $F_{X_0} ( b) $ as $k\to \infty $ 	
+hence $ \liminf F_{X_n} ( b) \geq  F_{X_0} ( b) $\\
+Now consider instead $( b,c_k) $, then similarly
+\[ 
+\liminf \mathbb{P}( X_n > b) \geq  \mathbb{P}( X_0 >b) 
+\]
+but $ \mathbb{P}( X_0 < b) + \mathbb{P}( X_0>b) =1$ and
+\[ 
+\liminf \mathbb{P}( X_n <b) + \liminnf \mathbb{P}( X_n >b) \leq \liminf \mathbb{P}( X_n <b) + \mathbb{P}( X_n >b) =1
+\]
+
+\end{proof}
+\begin{rmq}
+In facr a similar proof gives $\iff \forall ( a,b) $ 
+\[ 
+\liminf \mathbb{P}( X_n \in ( a,b) ) \geq \mathbb{P}( X_1\in ( a,b) ) 
+\]
+
+\end{rmq}
+\subsection{Convergence in law vs almost sure convergence}
+Convergence in law $\not\implies $ a.s. convergence.\\
+Let $X_1,X_2,\ldots$ be i.i.d. $ Ber( \frac{1}{2}) $ random variables.\\
+Now $( X_i) $ converge in law to $Ber( \frac{1}{2}) $ but they don't converge almost surely since $X_i( \omega) $ converges iff becomes constant.\\
+Define $E_n = \left\{ X_k \text{ constant on } [ 2^{n-1}, 2^{n}]  \right\} $.\\
+\[ 
+\mathbb{P}( E_n) = 2^{-2 ^{n-1}}
+\]
+Since $ \sum \mathbb{P}( E_n) < \infty $ 
+\[ 
+B \subset I \implies \mathbb{P}( \left\{ \text{ inf many $E_i$ occur }  \right\} ) = 0
+\]
+\begin{propo}
+	If $X_0, X_1\ldots$ random variables on $( \Omega, \mathcal{F}, \mathbb{P}) $, if $( X_n) \to X_0$ almost surely then $( X_n) \to X_0$ in law.
+\end{propo}
+\begin{proof}
+\begin{lemma}
+$\forall \epsilon>0, \mathbb{P}( |X_n -X_0| > \epsilon) \to 0$.\\
+Proof of proposition 
+\end{lemma}
+Let $t$ be a continuity point of $F_{X_0} $, hence
+\[ 
+F_{X_0} ( t) = \lim_{m \to  + \infty} F_{X_0} ( t+ \frac{1}{m}) = \lim_{m \to - \infty } F_{X_0} ( t- \frac{1}{m}) 
+\]
+Now $F_{X_n} ( t=)  \mathbb{P}( X_n \leq t) = \mathbb{P}( X_n \leq t \and X_0 \leq t+ \frac{1}{m})+ \mathbb{P}( X_n \leq t \and X_0 > t+ \frac{1}{m})  $ 
+\[ 
+\leq \mathbb{P}( X_0 \leq t+ \frac{1}{m}) + \mathbb{P}( |X_0 -X| > \frac{1}{m}) \implies F_{X_n} ( t) \leq  F_{X_0} ( t+1.m) + \mathbb{P}( |X_0-X_n| > \frac{1}{m}) 		
+\]
+Similarly we get working with $F_{X_0} ( t-\frac{1}{n}) $ 
+\[ 
+F_{X_n} ( t) \geq F_{X_0} ( t-\frac{1}{m}) - \mathbb{P}( |X_0-X_n| > \frac{1}{m}) 
+\]
+
+
+\end{proof}
+\begin{proof}[Of lemma]
+$ \left\{ X_n \text{ converges to } X_0 \right\} $ has probability $1$ 
+\[ 
+\left\{ X_n \to X_0 \right\} \subset\bigcup_{m\in \mathbb{N}}  \left\{  |X_n-X_0| \leq \epsilon \forall n \geq m\right\} 
+\]
+So let $E_m = \left\{ |X_n-X_0| \leq \epsilon \forall n \geq m \right\} $, now since $E_m \subset E_{m+1} $ 
+\[ 
+1= \mathbb{P}(  \left\{ X_n \to X_0 \right\} ) \leq  \mathbb{P}( \bigcup E_m) =1
+\]
+since $E_m \subset E_{m+1} $, then $ \lim \mathbb{P}( E_m) \to 1$.\\
+But now $ \mathbb{P}( |X_n-X_m|\ \geq \epsilon) \leq \mathbb{P}( E_m^{c}) \to 0$
+\end{proof}
+\begin{defn}[Convergence in probability]
+	Let $X_0, \ldots $ be random variables on $( \Omega, \mathcal{F}, \mathbb{P}) $.\\
+	We say $( X_i) $ converges in probability to $X_0$ if $\mathbb{P}( |X_n -X_0| >\epsilon	 )\to 0\forall \epsilon>0 $
+\end{defn}
+\section{Law of large numbers}
+Let $X_1,\ldots$ be a sequence of random variables on $( \Omega, \mathcal{F}, \mathbb{P}) $, set 
+\[ 
+S_n = \frac{\sum_i X_i}{ n}
+\]
+How does $S_n$ behave?\\
+\begin{itemize}
+\item In general this might be difficult, take for example
+	\[ 
+	X_1= X_2= \ldots
+	\]
+
+\item In case of suffiicent independence, there is an averaging effect $S_n \sim \mathbb{E}X_1$ 
+\end{itemize}
+\begin{thm}[Weak LLN]
+	Let $X_1, X_2, \ldots$ 	be i.i.d. integrable random variables, then
+	\[ 
+	\mathbb{P}( |S_n- \mathbb{E}X_1| > \epsilon) \to 0
+	\]
+	
+\end{thm}
+\begin{thm}[Strong LLN]
+	Let $X_1, X_2, \ldots$ be i.i.d. integrable 
+	\[ 
+	S_n  \to \mathbb{E}X_1
+	\]
+	
+\end{thm}
+Clearly $ SLLN \implies WLLN$ 
+\begin{rmq}
+Hypothesis can be weakened 
+\begin{itemize}
+
+\item Don't need identical distribution
+\item Don't need full independence 
+\end{itemize}
+\end{rmq}
+\begin{rmq}
+Limit of $S_n$ depends only on $ \mathbb{E}X_1$ 
+\end{rmq}
+\begin{proof}[WLLN]
+Assuming $ \mathbb{E}X_1^{2} <C$\\
+Idea: work with expectation and use Markov.
+\[ 
+\mathbb{P}( |S_n- \mathbb{E}X_1| > \epsilon) =  \mathbb{P}( |S_n- \mathbb{E}X_1|^{2} > \epsilon^{2}) \leq \frac{\mathbb{E}( S_n- \mathbb{E}X_1)^{2} }{\epsilon^{2}} = \epsilon^{-2} \mathbb{E}(   \sum(  X_i- \mathbb{E}X_1) \frac{1}{n})
+\]
+Now
+\[ 
+= \frac{1}{n^{2}} \sum_{i,j} \mathbb{E}( X_i- \mathbb{E}X_i)( X_j- \mathbb{E}X_j) = \frac{1}{n^{2}} \sum_{i} \mathbb{E}( X_i- \mathbb{E}X_i)^{2} \leq \frac{1}{n^{2}} n C \to 0
+\]
+
+\end{proof}
+
+
+	
+	
+\end{document}	

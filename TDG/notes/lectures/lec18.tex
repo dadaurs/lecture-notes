@@ -1,0 +1,191 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{18}{Fri 17 Dec}{Existence des groupes de Sylow}
+Grace a cette version de l'equation de classe, on a 
+\begin{lemma}
+Soit $G$ un groupe tel que $p$ divise $|G|$. Si $p$ divise $( G:H) $ pour tout sous-groupe propre $H$ de $G$, alors $p$ divise aussi l'ordre du centre $Z( G) $ de $G$ 	
+\end{lemma}
+\begin{proof}
+\[ 
+|G| = |Z( G) | + \sum_{b \in \overline{G}\setminus Z( G) }^{ }( G|C_G( b) ) 
+\]
+Or par hypothese, la somme a droite est divisible par $p$, alors la somme est aussi divisible par $p$.\\
+Donc $ \sum_{b\in \overline{G}\setminus Z( G) }^{ } ( G:C_G( b) ) $ est divisible par $p$.\\
+Puisque $p||G|$, on en deduit que $p|  |Z( G) |$.
+
+\end{proof}
+\begin{lemma}
+Si $G$ est un groupe abelien fini tel que $p$ divise $|G|$, alors il existe $a\in G$ tel que $o( a) = p$.
+\end{lemma}
+\begin{proof}
+$G = G( p) \oplus G'$ ou $p\not||G'|$ Puisque $p| |G|$, on doit avoir que $p| |G( p) |$ donc $\exists a \in G( p) \setminus \left\{ 0 \right\} $, donc il existe $k>0$ tel que $o( a) = p^{k}$, donc $o( p^{k-1}a) = p$.
+\end{proof}
+\subsection{Preuve du theoreme d'existence}
+Par recurrence sur $|G|$.\\
+Rappel: $G $ un groupe fini tel que $|G| < \infty $ et tel que $p| |G|$.\\
+\begin{proof}
+Base de la recurrence $|G| = p$, alors $G \simeq \faktor{ \mathbb{Z}}{p \mathbb{Z}}$ et donc $Syl_p ( G) = \left\{  \faktor{\mathbb{Z}}{p \mathbb{Z}} \right\} $ .\\
+Pas de recurrence: Supposons vrai $\forall G$ groupe fini tel que $|G| < N$ ou ( $N> p$) et tel que $p | |G|$.\\
+Soit $G$ un groupe fini tel que $|G| = N$ et tel que $p|N$.\\
+Posons $n = \max \left\{ k | p^{k}|N \right\} $.\\
+On veut montrer qu'il existe un sous-groupe $P < G$ tel que $|P| = p^{n}$.\\
+\begin{enumerate}
+\item Supposons qu'il existe un sous-groupe propre $H \leq  G$ tel que $p \not| ( G:H) $.\\
+	Alors $p^{n}| |H|$ et puisque $|H|< |G| = N$, on a fini par recurrence.\\
+\item Supposons donc que $p | ( G:H) \forall H < G$, alors le lemme implique que $p ||Z( G) |$ ce qui implique que $\exists a \in Z( G) $ tel que $o( a) = p$.\\
+	Puisque $a \in Z( G) $, $\langle a \rangle $ est un sous-groupe normal.\\
+	Ainsi $ \faktor{G }{\langle a\rangle}$ est un groupe.\\
+	Par ailleurs $ | \faktor{G}{\langle a \rangle}| = \frac{N}{p}< N$et $n -1$ est la puissance maximale de $p$ qui divise l'ordre du groupe quotient.\\
+	Ainsi par recurrence $ Syl_p(  \faktor{G}{\langle a \rangle}) $	et il existe donc $P < \faktor{G}{\langle a \rangle}$ tel que $ |P| = p^{n-1}$.\\
+	Par le 3eme theoreme isomorphisme, il existe donc $\tilde P< G	$ 	 $\langle a\rangle < \tilde P$ et $|\tilde P | = |P| \cdot | \langle a \rangle|= p^{n}$.\\
+
+\end{enumerate}
+
+\end{proof}
+\subsection{Proprietes des $p$-sous-groupes de Sylow}
+Pour formuler les proprietes, on a besoin du normalisateur
+\begin{defn}[Normalisateur]
+	Soient $G$ un groupe et $H < G$. Le normalisateur de $H$ dans $G$, note $N_G( H) $ est le sous-groupe de $G$ specifie par
+	\[ 
+	N_G( H) = \left\{ a \in G | aba^{-1}\in H \forall b \in H \right\} 
+	\]
+	
+\end{defn}
+\begin{rmq}
+Quelques soient $G$ et $H< G$, le normalisateur est le plus grand sous-groupe de $G$ par rapport auquel $H$ est un sous-groupe normal.
+\end{rmq}
+\begin{thm}[Proprietes importantes]
+	Soit $G$ un groupe tel que $p$ divise $|G|$ 
+	\begin{enumerate}
+	\item Quelques soient $H \in \mathcal{S}_p( G) $ et $P \in Syl_p( G)$, il existe $Q \in Syl_p( G) $ et $a \in G$ tels que 
+		\[ 
+		Q = aPa^{-1} \text{ et  } H<Q
+		\]
+		
+	\item Quelques soient $P,Q\in Syl_p( G) $, il existe $a\in G$ tel que $Q = a Pa^{-1}$ 
+	\item La cardinalite de $Syl_p( G) $ est egale a $( G:N_G( P) ) $ quelque soit $P \in Syl_p( G) $ 
+	\item Il existe $m \in \mathbb{N}$ tel que la cardinalite de $Syl_p( G) $ est egale a $mp+1$ 
+	\end{enumerate}
+	
+\end{thm}
+\begin{rmq}
+Soit $G$ un groupe et soit $ T \subset \mathcal{S}$. Si $aK a^{-1}\in T$ pour tout $a\in H$ et tout $K \in T$, alors il y a une action de $H$ sur $T$ 
+\[ 
+\beta_{H, T} : H \to \aut( T) 
+\]
+specifie par 
+\[ 
+\beta_{H,T} ( a) : T \to T: K \to aKa^{-1}
+\]
+pour tout $a \in H$.\\
+Pour tout $K \in T$, on notera l'obrite de $K$ sous l'action $\beta_{H,T} $ par 
+\[ 
+O_K^{H}= \left\{ aKa^{-1}| a \in H \right\} 
+\]
+et son stabilisateur par
+\[ 
+	H_K = \left\{ a \in H | aKa^{-1}= K \right\} 
+\]
+
+\end{rmq}
+
+Si $T$ est fini, l'equation de classe pour cette action devient
+\[ 
+|T| = \sum_{i\in I}^{  } ( H: H_{K_i} ) 
+\]
+Par exemple, pour $\beta_{G, Syl_{p} ( G) } $ puisque
+\[ 
+ P < N_G( P) = G_p
+\]
+on sait que $p \not| ( G:G_p) $ ce qui implique que
+\[ 
+p \not | | O_p| 
+\]
+car $| O_p| = ( G:G_p) $.\\
+\begin{lemma}
+Soient $G$ un groupe tel que $p$  divise $|G|$, $P \in Syl_p( G) $ et $H \in \mathcal{S}_p( G)$ . Si $H < N_G( P) $ alors $H<P$ 
+\end{lemma}
+\begin{proof}
+Strategie: Montrer que $HP = P$ car si $HP = P$, alors $\forall a \in H, b \in P \exists c \in P$ tel que $ab= c$ d'ou $ a= cb^{-1}\in P$, ie. $H < P$.\\
+Pour y arriver
+\begin{enumerate}
+\item $HP < G $ 
+	\[ 
+	\forall a_1, a_2 \in H, b_1,b_2\in P
+	\]
+	\[ 
+		( a_1b_1) ( a_2b_2)^{-1} = a_1 a_2^{-1}( a_2b_1a_2^{-1}) ( a_2b_2^{-1}a_2^{-1}) 
+	\]
+	Donc $( a_1b_1) ( a_2b_2)^{-1}\in HP$ 
+\item $P < HP$ est un sous-groupe normal:\\
+	$\forall b \in P\forall ac \in HP$, alors 
+	\[ 
+		( ac) b ( ac)^{-1}= a( cbc^{-1}) a^{-1}
+	\]
+	
+\item $H \cap P < H$ est un sous-groupe normal car $\forall b \in H\cap P, \forall a \in H: aba^{-1}\in H\cap P$.
+
+\item Donc par le 3eme theoreme d'isomorphisme 
+	\[ 
+	 \faktor{H}{H\cap P} \simeq \faktor{HP}{P}	
+	\]
+D'ou $HP$ est un $p$-groupe qui contient $P \in Syl_p( G) $.\\
+Par la maximalite des $p$-sous-groupes de Sylow, on en deduit que $HP= P$ 
+	
+\end{enumerate}
+\subsection{Preuve des proprietes de $Syl_p( G) $ }
+\begin{enumerate}
+\item Soit $H \in \mathcal{S}_p( G) $, soit $P\in Syl_p( G) $, on doit montrer que
+$\exists Q \in Syl_P( G) $ et $a\in G$ tel que $Q= aPa^{-1}$ et $H < Q$.\\
+Considerons $\beta_{H, O_P^{G}} : H \to Aut( O_p^{G}) $.\\
+Si $P'\in O_P^{G}$, alors 
+\begin{itemize}
+\item soit $H_{p'} =H$ 
+\item Soit $H_{p'} < H$
+\end{itemize}
+Si $H_{p'} < H$, alors $p | ( H:H_{p'} ) $.\\
+Ecrivons $O_P^{G}= \bigcup O_{P_i} $ ou $\left\{ P_1, \ldots \right\} \subset O_P^{G}$.\\
+L'equation de classe dit alors quee
+\[ 
+|O_P^{G}| = \sum_{i | H_{p_i} = H}^{ } ( H: H_{p_i} ) + \sum_{i | H_{P_i} < H}^{ }( H:H_{p_i} ) 
+\]
+car la somme a droite est divisible par $p$  et $|O_P^{G}$ n'est pas divisible par $p$ $ \sum_{i | H_{p_i} = H}^{ } ( H: H_{p_i} ) $ est non-nul.\\
+Il existe donc un $p_i$ tel que $H_{p_i} = H$, ie. $aP_i a^{-1}= P_i \forall a \in H$.\\
+Autrement dit $ H < N_G( P_i) $ et donc $H< P_i$.\\
+Ainsi, on a bien que $H<P_i$ et il existe $a \in G$ tel que $P_i = aPa^{-1}$ puisque $P_i \in O_P^{G}$.\\
+\item On fixe $P, Q\in Syl_p( G) $, on doit montrer que $Q \in O_P^{G}$.\\
+	Puisque $Q \in Syl_p( G) $, on sait que $Q \in \mathcal{S}_p$, on applique $1$ a $Q$ et on a donc qu'il existe $Q' \in Syl_p( G) $ et $a \in G$ tel que $Q' = aPa^{-1}$ et $Q \leq  Q'$ d'ou $Q= Q'$ en comparant les cardinalites.
+\item Calculer $ |Syl_p( G) | $ en termes de $N_G( P) $ avec $P \in Syl_p( G) $.\\
+	Considere $\beta_{Syl_p( G) , G} : G \to\aut( Syl_p( G) ) $.\\
+	Par 2, $\forall P \in Syl_p( G) , O_P^{G}= Syl_p( G) $.\\
+	D'ou par l'equation de classe
+	\[ 
+	|Syl_p( G) | = |O_P^{G}| = ( G:G_p) = ( G: N_G( P) ) 
+	\]
+
+\item Un autre calcul de $ |Syl_p( G) | $.\\
+	On considere maintenant pour $P \in Syl_P( G) $ 
+	\[ 
+	\beta_{P, Syl_p( G) } : P \to \aut( Syl_p( G) ) 
+	\]
+	Alors 
+	\[ 
+	O_P^{P}= \left\{ aPa^{-1}| a\in P \right\} = \left\{ P \right\} 
+	\]
+	et si $P \neq Q$ alors $p | ( P:P_Q) $ car si $p \not| ( P:P_G) $, alors $P = P_Q = \left\{ a \in P | aQa^{-1}= Q \right\} $ ce qui veut dire que $P < N_G( Q) $ et donc $P= Q$ ce qui est impossible.\\
+	Et alors l'equation de classe donne
+\[ 
+|Syl_p( G) | = |O_P^{P}| + \sum_{i}^{ } O_{Q_i} ^{P} = 1+pm
+\]
+	
+
+
+\end{enumerate}
+
+
+
+\end{proof}
+
+
+
+\end{document}	
