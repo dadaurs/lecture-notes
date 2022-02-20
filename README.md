@@ -1,4 +1,14 @@
 # Lecture Notes For Math Bachelor
+## BA3
+[Analyse 3](BA3/Analyse&#32;III/notes/main.pdf)
+
+[Theorie des Groupes](BA3/TDG/notes/main.pdf)
+
+Metric and topological spaces: No course notes
+
+[Differential Geometry](BA3/GEOM&#32;DIFF/notes/main.pdf)
+
+[Probability](BA3/PROBA/notes/main.pdf)
 ## BA2
 [Analyse 2](BA2/Analyse&#32;II/notes/main.pdf)
 
