@@ -1,0 +1,47 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{14}{Wed 22 Dec}{Central limit theorem}
+\begin{proof}[of SLLN]
+	We suppose $ \mathbb{E} X_1^{4}< C$.\\
+Recall that $ \mathbb{P}( |X_n- X| > \epsilon) \leq \frac{\epsilon }{n}$.\\
+Instead of $ \mathbb{E}( S_n- \mathbb{E}X_1)^{2} $, we look at 
+$ \mathbb{E}( S_n- \mathbb{E}X_1)^{4}$.\\
+Define
+\[ 
+A_{ij}  = \mathbb{E}( ( X_i - \mathbb{E}X_i)^{2} ( X_j - \mathbb{E}X_j)^{2}) 
+\]
+We can now apply Cauchy-Schwarz to see that $A_{ij} \leq  C'$.\\
+By Markov 
+\[ 
+\mathbb{P}( |S_n- \mathbb{E}X_i| > \epsilon) = \mathbb{P}( |S_n - \mathbb{E}X_1|^{4}> \epsilon^{4}) \leq \frac{c}{n^{2}}
+\]
+Hence the event $ \left\{ |S_n- \mathbb{E}X_1| > \epsilon \right\} $ can only happen finitely many times.
+
+
+\end{proof}
+\subsection{Central limit theorem}
+\begin{thm}[Central limit theorem]
+	Let $X_1,\ldots, $ be i.i.d. random variables with $ Var X_1= \sigma^{2}$, then
+	\[ 
+	\frac{ \sum_{i=1}^{ n}( X_i - \mathbb{E}X_i) }{ \sqrt{n} } \to \mathcal{N}( 0, \sigma^{2}) 
+	\]
+	
+\end{thm}
+Observe that we can assume $\mathbb{E}X_i = 0$ by adding a constant and $ Var X_1 =1$ by scaling.
+\begin{proof}
+The idea is that swapping $X_i$ for $ \mathcal{N}( 0,1) $ shouldn't influence the sum.\\
+We will show we can swap all of them.\\
+We prove it under the assumption that $ \mathbb{E}|X_i| ^{3}< \infty $.\\
+\begin{propo}[Lindeberg Exchange principle]
+Given a sequence of random variables $X_1, \ldots$ with 0 mean and variance 1, then
+\[ 
+S_n = \frac{ \sum_{i=1}^{ n}X_i}{ \sqrt{n} }, |g|,|g'|, |g"|, |g'''| < C \text{ then }    \mathbb{E}( g( S_n) - g( X) ) \to 0
+\]
+
+\end{propo}
+Lindeberg exchange principle implies CLT.
+
+\end{proof}
+
+	
+\end{document}	

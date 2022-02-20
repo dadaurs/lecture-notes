@@ -1,0 +1,102 @@
+#+OPTIONS: tex:t
+#+STARTUP: latexpreview
+* Some stuff to do
+* Proba
+** DONE Reprendre series 
+CLOSED: [2022-01-07 Fri 10:33]
+** TODO Reprendre preuve 2.38
+** TODO Reprendre preuve 3.11
+** TODO Reprendre preuve 4.11
+** Exos
+*** Sheet 13 exo 2 revoir
+*** 6.29 livre
+*** 6.13 livre
+*** 5.28 livre
+*** 4.15 livre
+*** Reprendre 4.30
+*** Random variable on disk 5.7
+*** Check solution for 4.25
+
+** TODO Exam question 2
+* Analyse
+** DONE Reprendre exam blanc + corrige 
+CLOSED: [2021-12-28 Tue 10:18]
+** Exos lang
+*** Page 149 qqes bons exos
+** DONE Visual complex functions regarder
+CLOSED: [2021-12-28 Tue 10:55]
+** DONE Theoreme des nombres premiers reprendre preuve + exos dessu
+CLOSED: [2021-12-28 Tue 16:13]
+** DONE Analyse vectorielle reprendre preuves + trouver exos
+CLOSED: [2022-01-08 Sat 16:24]
+** Exos
+*** Page 47
+*** Lire appendix 3 pour preuve ode et ode lin
+* Topo
+** DONE Check out "Counterexamples in topology"
+CLOSED: [2022-01-08 Sat 16:24]
+** TODO ask kuratowski formulation why is cl(cl(a))= cl(a) necessary?
+** TODO Course proofs
+** DONE Questions in class 
+CLOSED: [2022-01-07 Fri 14:31]
+** DONE Exercise sheets + exos sup
+CLOSED: [2022-01-07 Fri 10:33]
+** DONE Does X,Y simply connected => XxY simply connected work for infinite products
+CLOSED: [2022-01-07 Fri 14:31]
+Yes, since you can consider
+$$(\gamma_1, ... )$$
+** DONE Is cl(U_n A_n) = U_n cl(A_n) for infinite countable unions
+CLOSED: [2022-01-07 Fri 14:31]
+False, consider $$Q\subset R$$ and enumerate
+$$ cl(\bigcup_{q\in Q} \{q\} ) = R$$ but $$\bigcup_{q\in Q} cl (q) = Q$$
+** Preuves
+*** Revoir 4.14,15,16
+*** Revoir 4.20
+*** Revoir 4.42
+** Exos
+*** Revoir exo 5 sheet 7
+*** Question 2 week 10 ask for counterexamples given in class
+In a metric space, we used that around any $x\in \partial A$, we can find nested subsets $B(x,1/n)$ which always intersect $A$ and so we can construct a sequence converging to x.
+This doesnt work in a topological space since we cant always find such a family of open nested subsets
+*** Question 6 week 4 ask discord
+This is still true, since we can consider the composition $f\circ \gamma$, now if $Im f\circ \gamma= \{0,1\}$, then clearly it must be constant, if the image contains the whole set however, we may consider $(f\circ\gamma)^{-1}(\{0,1\})$
+and $(f\circ\gamma)^{-1}(\{2\})$ which must be disjoint and thus form an open partition of $[0,1]$, which is connected
+*** Question 12 week 4
+Yes there is, suppose there isn't, consider an interval $(a,b)$ on which $f$ is polynomial with $p$, note this interval can never be maximal since $f$ is polynomial around b and thus $p_b$ and $p_b$ and $p$
+agree on an open set, implying they are actually equal.
+*** Question 1 week 5
+It is connected since any open set contains an infinite amount of elements.
+Consider a path $\gamma: [0,1] \to N$ going from a to b, then $\gamma^{-1}( a^c)$ is open and contains 1, similarly $\gamma^{-1}(b^c)$ is open and contains 0, finally $\gamma^-1(\{a,b\}^c)$ is open and contains neither 0 nor 1, and hence we've formed a partition of [0,1], which is absurdjk;w
+*** Question 6 week 5 review solution without hyp cl(A) connected
+actually, $A$ connected implies $cl(A)$ is connected, hence the proof stays the same.
+To show $B$ is connected, simply consider a partition $U\cup V= B$, now note that this implies (wlog) that $U \subset A$ and hence $V \subset cl(A)$, but any open set around $\partial A$ always intersects A, which is absurd
+*** Question 1.2 week 8
+It is bounded (obv) and is closed as the graph of a cts function.
+*** Question 6 week 8
+The sets $S(a,b)$ are closed since their complements can be written as $\bigcup_{i < a} S(i,b)$.
+$\{-1,1\}$ is closed since it's complement can be written as $\bigcup_p S(0,p)$
+If there was a finite amount of prime numbers, their intersection would also be a closed set and so $\{-1,1\}$ would open, which is impossible
+*** Question 4 week 9
+We can take the discrete and the euclidean metric and the last one is kinda broken
+*** Question 4 week 10 ask 
+*** Question 10 week 13
+*** Question 3 week 14
+Seems meagre since $\sum(a_i+\epsilon)(b_i+\epsilon)$ will diverge 
+** Munkres
+*** Exo 9 chap 3 p 167
+* Geom diff
+** TODO Exo 12.4 reprendre
+** TODO Toponogov regarder exos
+** DONE Demander matteo exos de trotro
+CLOSED: [2022-01-10 Mon 16:26]
+** DONE Reprendre series
+CLOSED: [2022-01-06 Thu 08:51]
+** Reprendre propo 1.22
+** Exos
+*** Parametrisation  tractrice reprendre
+
+* TDG
+** DONE Reprendre series de l'annee passee
+CLOSED: [2022-01-07 Fri 10:31]
+** TODO Exas blancs (aussi ceux de l'annee passee peut etre)
+** TODO serie 4 deux derniers exos sur les monades

@@ -1,0 +1,98 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{14}{Wed 22 Dec}{Rudiments de Geometrie hyperbolique}
+Rappel: La sphere unite  $S^{2} \subset \mathbb{R}^{3}$.\\
+On a des cartes ( parametrisations) conformes classiques telles que
+\begin{enumerate}
+\item Carte de Mercator
+\item Carte stereographique 
+\end{enumerate}
+\begin{propo}
+Le disque de Poincarre est isometrique au demi-plan de Poincarre.
+\end{propo}
+\begin{proof}
+On a une application bi-holomorphe $\phi: \mathbb{H}_+ \to \mathbb{D}^{2}$ 
+\[ 
+\phi( z) = \frac{z-i}{z+i}
+\]
+Il suffit de montrer que $w= \phi( z) $ implique
+\[ 
+\frac{|dz|}{\im z}= \frac{2 |dw|}{( 1-|w|^{2}) }
+\]
+
+\end{proof}
+\subsection*{Digression: Groupe de Moebius}
+En notation complexe, une similitude du plan euclidien $ \mathbb{R}^{2} \simeq \mathbb{C}$ s'ecrit 
+\[ 
+f( z) = az+ b = |a| e^{i\alpha} z + b
+\]
+ou
+\[ 
+f( z) = a \overline{z}+ b
+\]
+En ajoutant l'inversion $z \to \frac{1}{ \overline{z}}$ on obtient le groupe de Moebius.
+\begin{defn}[Transformation de Moebius]
+Une application de Moebius est une application de la forme
+\[ 
+f( z) = \frac{az + b}{cz+d}
+\]
+avec $ad- bc \neq 0 $.	
+\end{defn}
+On note $ Mob^{+}( 2) $ l'ensemble des transformations de Moebius et on les appelle aussi des Homographie.	
+\begin{propo}
+Les transformations de Moebius forment un groupe et l'application 
+\[ 
+GL_2( \mathbb{C}) \to Mob^{+}( 2) 
+\]
+est un homomorphisme de groupe.\\
+On a la suite exacte
+\[ 
+0 \to \mathbb{C}\to GL_2( \mathbb{C}) \to Mob^{+}( 2) \to 1
+\]
+
+On note $PGL_2(  \mathbb{C}) = \faktor{ GL_2( \mathbb{C}) }{ \mathbb{C}^{*}}$ 
+
+\end{propo}
+Une homographie $f$ agit sur $ \hat{ \mathbb{C}}$ par $f( \infty ) = \frac{a}{c}, f( \frac{-d}{c}) = \infty $.
+
+\begin{lemma}
+La derivee complexe de $f( z) = \frac{az+b}{cz+ d}$ est 
+\[ 
+f'( z) = \frac{ad- bc}{( cz+ d) ^{2}}
+\]
+
+\end{lemma}
+\begin{propo}
+$ \mathbb{H}^{2}$ et $ \mathbb{D}^{2}$ sont isometriques
+\end{propo}
+\begin{proof}
+On a que $\phi: H^{2}\to \mathbb{D}^{2}$ est une isometrie.
+\end{proof}
+\begin{propo}
+Les homographies et anti-homographies reelles sont les isometries du demi-plan de Poincarre.
+\end{propo}
+\subsection{Droites hyperboliques ( dans $\mathbb{H}^{2}$ ) }
+\begin{lemma}
+La distance entre deux points de meme partie reelle dans $ \mathbb{H}^{2}$ est
+\[ 
+d( z_1,z_2) = | \log ( \frac{\im z_1}{\im z_2}) 
+\]
+
+\end{lemma}
+\begin{proof}
+Le chemin le plus court entre deux points $z_1$ et $z_2$ de $ \mathbb{H}^{2}$ est la droite verticale ou l'arc de cercle orthogonal a $ \del \mathbb{H}^{2}$ passant par $z_1$ et $ z_2$ 
+\end{proof}
+\begin{defn}
+	Une droite hyperbolique de $ \mathbb{H}^{2}$ est une demi-droite verticale ou un demi-cerrcle orthogonal a $\del \mathbb{H}^{2}$ 
+\end{defn}	
+
+
+\[ 
+\int_{ 0 }^{ \infty  } \frac{x^{2}}{\sin x
+}
+\]
+
+
+
+
+\end{document}	
