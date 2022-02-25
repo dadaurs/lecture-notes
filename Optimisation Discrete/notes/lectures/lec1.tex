@@ -1,0 +1,19 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Tue 22 Feb}{Introduction}
+\section{What is optimization?}
+Given $f:X\to \mathbb{R}$ find
+\[ 
+\max \left\{ f( x) :x\in S \right\} \text{ where $S \subset \mathbb{R}^n $  } 
+\]
+$f$ is called the objective function and $S$ the feasible region.\\
+The answer will be a point $x_0 \in S$ such that $f( x_0) \geq f( x) $ for all other $x\in S$.\\
+A solution is anything you can plug into $f$.\\
+A feasible solution is something in $S$ and the $x_0$ would be called an optimal solution.\\
+We consider feasible regions described by intersection of equalities and inequalities.\\
+A constraint is "active" or "tight" if $f$ satisfies it with equality.
+\subsection{New lagrange multipliers}
+We should try to satisfy $\nabla f= \sum_i \lambda_i \nabla g_i$ where $\lambda_i=0$ whenever $g_i$ is not active.
+Feasible regions split into nice ones and not so nice ones.\\
+A region $S$ is convex if $\forall x,y \in S$ and all $\lambda\in [ 0,1] $, then $\lambda x+ ( 1-\lambda) y\in S$ 
+\end{document}	

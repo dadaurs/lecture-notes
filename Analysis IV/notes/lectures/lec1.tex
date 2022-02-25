@@ -1,0 +1,200 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Wed 23 Feb}{Measure theory}
+\section{Lebesgue Measure}
+\subsection*{Motivation}
+Given a set $\Omega \subset \mathbb{R}^n $ and $f:\Omega\to \mathbb{R}$ is it possible to integrate $f$ over $\Omega$.\\
+For $n=1$ and $\Omega= [ a,b] $ riemann-integral works, at least for continuous functions.\\
+However, it is not fully satisfactory
+\begin{enumerate}
+\item Extends badly to $ \mathbb{R}^n$ 
+\item Stability with limits
+	Take $f_n: [ 0,1] \to [ 0,1] $ continuous and pointwise decreasing, define $f( x) = \lim f_n( x) $, then the integral over $f$ might not exist.
+\item Differentiation and integration.\\
+	What is the biggest class of functions for which the fundamental theorem works?\\
+	For sure in $C_1$ but that is not the biggest class.
+\item Consider $C^{0}( [ 0,1] ) $ with $L^{1}$-distance.\\
+	Then $C^{0}$ is not complete, what is the completion of $\bar{C^{0}}^{d}$
+\end{enumerate}
+We want to find a satisfactory theory of integration.\\
+How can we define the length/volume of a subset $\Omega \subset \mathbb{R}^n$ ?\\
+Ideally to $\Omega \subset \mathbb{R}^n$ associate $m( \Omega) =0$ with
+\[ 
+0 \leq m( \Omega) \leq \infty \quad m( ( 0,1) ^{m}) =1 \quad m( A\cup B) =m( A) +m( B) \text{ if $A$ and $B$ disjoint. }
+\]
+\[ 
+m( A) \leq m( B) \quad m( A+x) =m( A) 
+\]
+This is impossible!
+\subsection{Measurable sets}
+We can ask that
+\begin{itemize}
+\item ( Borel Property) Open and closed are measurable
+\item $\Omega$ measurable $\implies \Omega^{c} $ measurable
+\item ( $\sigma$-algebra) We want to take countable intersection of measurable sets
+\end{itemize}
+\begin{defn}[Lebesgue Measure]
+	The lebesgue measure $m( \Omega) $ of any measurable set will obey
+	\begin{itemize}
+	\item $m( \emptyset) =0$ 
+	\item $ \infty \geq m( \Omega) \geq 0$ 
+	\item Monotonicity $m( \Omega_1) \leq m( \Omega_2) $ if $\Omega_1 \subset \Omega_2$ 
+	\item If $\Omega_1,\ldots$ are measurable and disjoint, then we want 
+		\[ 
+		m( \bigcup_{i=1}^{ \infty } \Omega_i) = \sum_{i=1}^{ \infty } m( \Omega_i) 
+		\]
+		and with $ \leq $ if they are not disjoint.
+	\item ( Normalisation) 
+		\[ 
+		m( ( 0,1)^{n}) =1
+		\]
+	
+	\item ( Translation invariance) 
+		\[ 
+		m( \Omega+x) =m( \Omega) \forall x \in \mathbb{R}^{n}
+		\]
+		
+	\end{itemize}
+	
+\end{defn}
+\begin{rmq}
+\begin{itemize}
+\item From countable subadditivity, finite subadditivity follows
+\item Monotonicity is redundant because, given $\Omega_1 \subset \Omega_2$ 
+	\[ 
+m( \Omega_2) = m( \Omega_1 \cup ( \Omega_2\setminus\Omega_1 )) 	= m( \Omega_1) + m( \Omega_2\setminus\Omega_1) 
+	\]
+
+\item The sums above might be infinite
+	
+\end{itemize}
+\end{rmq}
+\begin{rmq}
+$m$ is a positive measure if the first four conditions above are satisfied
+\end{rmq}
+\begin{thm}[Existence of Lebesgue Measure]
+	There exists a notion of measurable set obeying the conditions of measurable sets and a measure obeying the conditions.
+\end{thm}
+\subsection{Outer Measure}
+We first want to describe a cube and associate a measure to these boxes.\\
+Then we will take a more general set, cover it with boxes and define it's measure by the smallest possible covering by boxes.
+\begin{defn}[Box]
+	A open box $B \subset \mathbb{R}^n$ is
+	\[ 
+	B= \prod_{i=1}^{n}( a_i,b_i) 
+	\]
+	
+\end{defn}
+and define the volume of a box
+\begin{defn}[Volume of a box ]
+	Given $B =\prod_{i=1}^{n}( a_i,b_i) $, we define
+	\[ 
+	volB = \prod_i ( b_i-a_i) 
+	\]
+	
+\end{defn}
+Now, how can we cover $\Omega \subset \mathbb{R}^n$ ?
+\begin{defn}[Covered set]
+	Given $\Omega \subset \mathbb{R}^n$ is covered by $ \left\{ B_j \right\}_{j\in J} $ if $\Omega \subset \bigcup B_j$ 
+\end{defn}
+\begin{rmq}
+If $m$ ( the lebesgue measure) exists and $J$ is countable, then
+\[ 
+m( \Omega) \leq m( \bigcup B_j) \leq \sum_{}^{ }m( B_j) 
+\]
+
+
+\end{rmq}
+\begin{defn}[Outer-Measure]
+The outer measure of a set $\Omega$ is defined as
+\[ 
+m^{\ast}( \Omega) =\inf \left\{ \sum vol B_j : \left\{ B_j \right\} \text{ is a countable cover of $\Omega$  } \right\} 
+\]
+
+\end{defn}
+\begin{rmq}
+For every $\Omega$ there exists at least one countable cover
+\end{rmq}
+\begin{lemma}
+The outer measure obeys
+\begin{enumerate}
+\item $m^{*}( \emptyset) =0$ 
+\item $0 \leq m^{*}( \Omega) \leq \infty $ 
+\item $m^{*}( \Omega_1) \leq m^{*}( \Omega_2) $ if $\Omega_1 \subset \Omega_2$ 
+
+\item $m^{*}( \Omega+x) = m^{*}( \Omega) $ 
+\item Countable subadditivity: $m^{*}( \bigcup \Omega_j) \leq \sum_{}^{ } m^{*}( \Omega_j) $ 
+\end{enumerate}
+
+\end{lemma}
+\begin{proof}
+	\begin{itemize}
+	\item $m^{*}( \emptyset) =0$ because $\emptyset, \left\{ 0 \right\} \subset ( -\epsilon,\epsilon)^{n} \forall \epsilon>0$ 
+	\item All good
+
+	\item Any cover of $\Omega_2$ also covers $\Omega_1$ 
+	\item For any cover of $\Omega$ we can translate it over to $\Omega+x$ 
+	\item For every $J\in \mathbb{N}$, let $\left\{ B_i^{J} \right\}_{i\in I_J}  $ cover $\Omega_J$, then $\Omega_j \subset \bigcup_{i\in I_J} B_i^{J}$, then
+		\[ 
+		\sum vol( B_i^{J}) \leq m^{*}( \Omega_J) +\frac{\epsilon}{2^{J}}	
+		\]
+		and since $ \left\{ B_{i}^{J} \right\} _{i,J} $ covers $\bigcup \Omega_J$ 
+		\[ 
+		m^{*}( \bigcup \Omega_J) \leq \sum_{j\in \mathbb{N}} \sum_{i\in I_J}^{ }vol( B_i^{J}) \leq \sum_{j\in \mathbb{N}}^{ }( m^{*}( \Omega_J) +\frac{\epsilon}{2^{J}}	) = \epsilon+\sum m^{*}( \Omega_J) 	
+		\]
+		
+	\end{itemize}
+
+	
+\end{proof}
+
+\begin{propo}
+\[ 
+m^{*}( \overline{B}) =vol( B) 
+\]
+
+\end{propo}
+\begin{proof}
+Clearly $\overline{B}$ is covered by $\prod ( a_i+\epsilon,b_i+\epsilon) $ 
+Hence
+\[ 
+m^{*}( \overline{B}) \leq vol( \prod( a_i+\epsilon,b_i+\epsilon) ) \to \prod ( b_i-a_i) 
+\]
+Hence $m^{*}( \overline{B}) \leq vol( B) $ \\
+Now we show that $ vol( B) \leq m^{*}( \overline{B}) $.\\
+By Heine-Borel, $\overline{B}$ is compact.\\
+Hence we only need to show the result with a finite cover.\\
+In dimension 1, we are given $( a_1,b_1) ,\ldots$ covering $[a,b]$.\\
+Remark that
+\[ 
+	1_{[a,b]} \leq \sum_i 1_{( a_i,b_i) } 
+\]
+Integrating ( Riemann-integral), we get
+\[ 
+	( b-a) \leq \sum ( b_i-a_i) 
+\]
+Now, we use induction
+\[ 
+B_J=\prod_{i=1}^{n} ( a_i^{s},b_i^{s}) = \prod_{i=1}^{n-1}( a_i^{s},b_i^{s}) \times ( a_n^{s},b_n^{s}) 
+\]
+Define
+\[ 
+f_J( x_m) = vol( A_J) 1_{( a_n,b_m) } ( x_m) 
+\]
+For every $x_m$, we get
+\[ 
+	\left\{ A^{J}:j\in J, x_n\in ( a_n^{J},b_n^{J})  \right\} \text{ is a cover of $\overline{A}$  } 
+\]
+\[ 
+	\sum_{}^{ }f_j( x_m) = sum_{j\in J,x_n} vol( A_j) 1_{( a_n,b_n) } \geq vol \overline{A}
+\]
+
+\end{proof}
+
+
+
+
+	
+
+
+\end{document}	

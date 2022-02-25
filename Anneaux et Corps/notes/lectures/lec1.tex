@@ -1,0 +1,69 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Mon 21 Feb}{Introduction}
+\section{Generalites}
+\subsection{Definitions de base et exemples connus}
+Tous les anneaux ont des unites.
+\begin{exemple}
+\begin{itemize}
+\item $\mathbb{Z}, \mathbb{R}, \mathbb{C}, M_n( \mathbb{R}) $ 
+\end{itemize}
+
+\end{exemple}
+\begin{defn}[Sous-anneau]
+	Pour $B \subset A$, A un anneau, $B$ est un sous-anneau ssi 
+	\begin{itemize}
+	\item $B$ est stable pour l'addition et la multiplication
+	\item $1\in B$ 
+	\end{itemize}
+		
+\end{defn}
+\begin{defn}[Morphismes d'anneau]
+	$f:A\to B$ est un homomorphisme si
+	\begin{itemize}
+	\item $f$ preserve $+,\cdot$ 
+	\item $f( 1) =1$ 
+	\end{itemize}
+		
+\end{defn}
+\begin{propo}
+Si $f:A\to B$ est un homomorphisme d'anneaux, alors $Im f \subset B$ est un sous-anneau
+\end{propo}
+\begin{propo}
+Si $f:A\to B$ est un homomorphisme d'anneaux, $B=0$ $\implies \ker f \subset A$ n'est pas un sous-anneau.
+\end{propo}
+\begin{exemple}
+\begin{itemize}
+\item $a_0+a_1t+ a_2t^{2}+\ldots, a_i \in A$ les series formelles sur $A$ avec l'addition et la multiplication usuelle.
+\item Polynomes: serie formelle avec nb fini de coeff. non nuls
+\end{itemize}
+
+\end{exemple}
+\begin{propo}[Propriete universelle de l'anneau des polynomes]
+	$ev_c$ est un homomorphisme et tout morphisme partant de $A$ factorise a travers $A[t]$.
+
+\end{propo}
+\begin{defn}[Sous-anneau engendre]
+	Pour $f: A\to B$ une inclusion,
+	l'image $Im ev_c= A[c] \subset B$ est le plus petit sous-anneau de $B$ engendre par $A$ et $c$.
+\end{defn}
+\begin{exemple}
+$\mathbb{Z}[i]= \left\{ \sum_{j=0}^{ n}a_j i^{j}| a_j \in \mathbb{Z} \right\} = \left\{a+bi| a,b \in \mathbb{Z} \right\} $ 	
+\end{exemple}
+\begin{exemple}[ Anneaux de groupes]
+	Soit $G$ un groupe fini et $A$ un anneau, alors on construit
+	\[ 
+	AG= \left\{ \sum_{}^{ } \lambda_g g| \lambda_g \in A \right\} 
+\]
+	
+\end{exemple}
+\subsection{Anneaux integres et corps}
+\begin{defn}[Diviseurs de 0]
+	Un element $a$ est un diviseur de $0$  si il existe $b$ non nul tel que $ab$ ou $ba =0$ 
+\end{defn}
+\begin{defn}[Anneau integre]
+	Un anneaux est integre ssi $a\cdot b = 0 \implies a=0$ ou $b=0$ 
+\end{defn}
+
+
+\end{document}	
