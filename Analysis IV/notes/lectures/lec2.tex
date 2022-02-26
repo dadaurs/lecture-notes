@@ -2,7 +2,7 @@
 \begin{document}
 \lecture{2}{Thu 24 Feb}{Existence of Lebesgue Measure}
 \begin{crly}
-$m^{*}*B= vol( B) $ for every open box $B$.
+$m^{*}(B)= vol( B) $ for every open box $B$.
 \end{crly}
 \begin{proof}
 For one direction, we use monotonicity,
@@ -30,8 +30,9 @@ We want to know whether $\forall A,E \subset \mathbb{R}^m$, the inequality
 \[ 
 m^{*}( A) \leq m^{*}( A\cap E) + m^{*}( A \setminus E) 
 \]
-holds?
-This inequality follows directly from countable subadditivity.
+generalises to an equality?\\
+The inequality follows directly from countable subadditivity.
+In fact equality does not hold in general.
 \begin{defn}[Lebesgue Measurable set]
 A set $E \subset \mathbb{R}^m$ is Lebesgue measurable if 
 \[ 
@@ -52,10 +53,10 @@ We now establish a few basic facts about measurable sets.
 \begin{lemma}
 \begin{itemize}
 \item The complement of a measurable set is measurable
-\item The translation of a measurable set is measurable, ie. $E$ measurable, $x\in \mathbb{R}^n$ implies $E+x$ 
+\item The translation of a measurable set is measurable, ie. $E$ measurable, $x\in \mathbb{R}^n$ implies $E+x$ measurable
 \item Finite unions of measurable sets is measurable. ( as well as the intersection) 
 \item Open ( as well as closed)  boxes are measurable.
-\item If the outer measure of a set is $9$, then $E$ is measurable.	
+\item If the outer measure of a set is $0$, then $E$ is measurable.	
 \end{itemize}
 \end{lemma}
 \begin{proof}
@@ -105,11 +106,11 @@ m^{*}( \bigcup_{j\in \mathbb{N}} E_j) = \sum_{j=1}^{ \infty } m^{*}( E_j)
 \]
 
 \end{propo}
-The proof depeds on a lemma
+The proof depends on a lemma
 \begin{lemma}
 Let $E_1,\ldots,E_n$ be measurable disjoint sets, $A \subset \mathbb{R}^m$,then
 \[ 
-m^{*}( A\cap ( \bigcup E)j) ) = \sum_{j=1}^{ n}m^{*}( A\cap E_j) 
+m^{*}( A\cap ( \bigcup E_j) ) = \sum_{j=1}^{ n}m^{*}( A\cap E_j) 
 \]
 As a consequence of this, we get finite additivity.
 \end{lemma}

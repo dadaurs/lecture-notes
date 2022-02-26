@@ -1,9 +1,9 @@
 function vm = valeurmoyenne(v)
-sum=0
-nbels=0
+	sum=0;
+	nbels=0;
 for i = v
-	sum+=i
-nbels++
+	sum+=i;
+	nbels++;
 end
-vm = sum/nbels
+vm = sum/nbels;
 end

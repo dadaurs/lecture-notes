@@ -134,11 +134,11 @@ The outer measure obeys
 
 	\item Any cover of $\Omega_2$ also covers $\Omega_1$ 
 	\item For any cover of $\Omega$ we can translate it over to $\Omega+x$ 
-	\item For every $J\in \mathbb{N}$, let $\left\{ B_i^{J} \right\}_{i\in I_J}  $ cover $\Omega_J$, then $\Omega_j \subset \bigcup_{i\in I_J} B_i^{J}$, then
+	\item For every $J\in \mathbb{N}$, let $\left\{ B_i^{J} \right\}_{i\in I_J}  $ cover $\Omega_J$, then $\Omega_j \subset \bigcup_{i\in I_J} B_i^{J}$, then we can choose the $B_i^{J}$ in such a way that
 		\[ 
-		\sum vol( B_i^{J}) \leq m^{*}( \Omega_J) +\frac{\epsilon}{2^{J}}	
+		\sum_i vol( B_i^{J}) \leq m^{*}( \Omega_J) +\frac{\epsilon}{2^{J}}	
 		\]
-		and since $ \left\{ B_{i}^{J} \right\} _{i,J} $ covers $\bigcup \Omega_J$ 
+		and since $ \left\{ B_{i}^{J} \right\} _{i,J} $ covers $\bigcup_J \Omega_J$ 
 		\[ 
 		m^{*}( \bigcup \Omega_J) \leq \sum_{j\in \mathbb{N}} \sum_{i\in I_J}^{ }vol( B_i^{J}) \leq \sum_{j\in \mathbb{N}}^{ }( m^{*}( \Omega_J) +\frac{\epsilon}{2^{J}}	) = \epsilon+\sum m^{*}( \Omega_J) 	
 		\]
@@ -149,6 +149,7 @@ The outer measure obeys
 \end{proof}
 
 \begin{propo}
+	For a closed box $\overline{B}$ 	
 \[ 
 m^{*}( \overline{B}) =vol( B) 
 \]
