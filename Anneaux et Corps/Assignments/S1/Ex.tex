@@ -1,0 +1,59 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\begin{document}
+\title{Series 2 Exercise 7}
+\author{David Wiedemann}
+\maketitle
+\section*{$\nu( 1) = 0$ and $\nu( -1) =0$  }
+Indeed, note that 
+\[ 
+\nu( 1\cdot 1) = \nu( x) +\nu( 1) = \nu(1) \iff 2\nu( 1) =\nu( 1) \iff \nu( 1) =0
+\]
+Now for the second part, notice that since $-1\cdot -1 = 1$ we get
+\[ 
+\nu( -1\cdot -1) = \nu( -1) +\nu( -1) = \nu( 1) = 0\iff 2\nu( -1) =0 \iff \nu( -1) =0
+\]
+\section*{$R_\nu$ is a subring of $K$ }
+To show $R_\nu$ is a subring, we have to show that $  1,0\in R_{\nu} $ and that $R_\nu$  is closed under addition and multiplication.\\
+
+Using the first part of the exercise, we immediatly get that $1\in R_\nu$ since $\nu( 1) \geq 0$  and by definition $0\in R_\nu$.\\
+\subsubsection*{ $R_\nu$ is closed under multiplication}
+Let $x,y \in R_\nu\setminus \left\{ 0 \right\} 	$, we get that $\nu( x\cdot y) = \nu( x) +\nu( y) \geq 0$ since $\nu( x) ,\nu( y) \geq 0$ by hypothesis.\\
+If either $x$ or $y$ is equal to 0, then clearly $x\cdot y = 0\in R_\nu.$\\
+Hence $R_\nu$ is closed under multiplication.
+\subsubsection*{ $R_\nu$ is closed under addition}
+Indeed, let $x,y\in R_\nu$, now $ \nu( x+y) \geq \min ( \nu( x) ,\nu( y) ) \geq 0$ hence $x+y\in R_\nu$.\\
+
+This show that $R_\nu$ is a subring of $K$.
+\section*{$K$ is the fraction field of $R_\nu$ }
+Before proving the result, we notice two things.
+\begin{itemize}
+\item Given $x\in K$, we have that $\nu( x^{-1}) = - \nu( x) $, this follows immediatly using part 1.
+\item If $\nu$ is a non-trivial valuation, we have that $\forall N \in \mathbb{N} \exists x\in K$ such that $\nu( x) \geq N$.\\
+	Indeed, by the above point we can find $x\in K, \nu( x) > 0$( which exists since the valuation is non-trivial), simply note that there exists $n\in \mathbb{N}$ such that $\nu( x^{n}) =n\cdot \nu( x) \geq 0$ 
+\end{itemize}
+First, suppose the valuation is non-trivial and fix $x\in K$ such that $\nu( x) \geq 0$ 
+We now show that $K$ satisfies the universal property of the fraction field.\\
+Let $L$ be a field and $j: R_\nu\to L$ a ring homomorphism.\\
+Given $a\in K$, let $n \in \mathbb{N}$ such that $\nu( x^{n}\cdot a) \geq 0$, then we define
+\[ 
+	f( a) = f( \frac{a\cdot x^{n}}{x^{n}}) = \frac{j( a\cdot x^{n}) }{ j( x^{n}) }
+\]
+We now show that $f$ is well defined ( ie. doesn't depend on $x$ and the choice of $n$ ), that $f$ is a ring homomorphism and that it is the unique function $f: K \to L $ with the universal property of the fraction field.
+
+
+
+
+
+
+
+
+
+\end{document}
