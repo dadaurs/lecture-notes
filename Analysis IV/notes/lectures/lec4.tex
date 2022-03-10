@@ -1,0 +1,126 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Wed 09 Mar}{Lebesgue Integration}
+\subsection{Lebesgue integration}
+\begin{defn}[Simple functions]
+	A measurable function $f: \Omega \subset \mathbb{R}^n \to \mathbb{R}$ is simple if ( $\Omega$ is measurable)  
+	\begin{enumerate}
+	\item $ f( \Omega) $ is a finite set
+	\item $\exists c_1, \ldots, c_n \in \mathbb{R} $ and $E_1,\ldots, E_n \subset \Omega$ measurable s.t.
+		\[ 
+		f= \sum_{i=1}^{ n}c_i 1_{E_i} 
+		\]
+		
+	\end{enumerate}
+	
+\end{defn}
+\begin{proof}
+Clearly $ \left\{ c_1,\ldots, c_n \right\} = f( \Omega) $, conversely, if $f( \Omega) = \left\{ c_1,\ldots, c_n \right\}$, define $E_i = f^{-1}( c_i) $ 
+\end{proof}
+\begin{rmq}
+Note that simple functions are vector spaces
+\end{rmq}
+\begin{lemma}
+Let $f: \Omega\to \mathbb{R}_{ \geq 0} $ be measurable. Then $\exists$ an increasing sequence $ \left\{ f_n \right\} $ converging pointwise to $f$ 
+\end{lemma}
+\begin{proof}
+Define $f_n( x) = \sup_j \left\{ 2^{-n}J \leq \min ( f( x) , 2^{n})  \right\}  $.\\
+\end{proof}
+\begin{defn}
+	Let $f:\Omega\to \mathbb{R}_{ \geq 0} $ be a simple function, then the lebesgue integral of $f$ is
+	\[ 
+	\int_\Omega f dx = \sum_{ \lambda \in f( \Omega) , \lambda \geq 0}^{ } \lambda \mu \left\{ x\in \Omega: f( x) = \lambda \right\} 
+	\]
+Note this definition works for general measures.	
+\end{defn}
+\begin{rmq}
+Let $f= \sum_{i}^{ } c_i 1_{E_i} $, then 
+\[ 
+\int_{ \Omega }^{  } f dx = \sum_{i}^{ } c_i \mu( E_i) 
+\]
+
+The integral may be infinite.
+\end{rmq}
+\begin{defn}[Almost everywhere]
+	A property $P( x) $ holds almost everywhere if $P( x) $ holds for every $x$ except a set of measure $0$.
+\end{defn}
+\begin{propo}[Properties of simple functions]
+Let $f,g : \Omega\to \mathbb{R}_{ \geq 0} $ be simple functions
+\begin{enumerate}
+\item $0 \leq  \int_\Omega f  \leq  \infty $ and $ \int_{ \Omega }^{  }f = 0 \iff f\equiv 0$ almost everywhere.
+\item $ \int_{ \Omega }^{  } f+g d\mu = \int_{ \Omega }^{  }f d\mu + \int_{ \Omega }^{  }g d\mu$ 
+\item $ \lambda\int_{ \Omega }^{  } f d\mu =c \int_{ \Omega }^{  } f$ 
+\item if $f \leq g$, then $\int_{ \Omega }^{  }f + \int_{ \Omega }^{  }g$ 
+\end{enumerate}
+
+\end{propo}
+\begin{defn}[Lebesgue Integral of non-negative function]
+Let $f: \Omega \subset \mathbb{R}^n\to \mathbb{R}_{ \geq 0} $ be measurable, we define 
+\[ 
+\int_{\Omega} f \coloneqq \sup \left\{ \int_{ \Omega }^{  }s dx: s \leq f, s \text{ simple }  \right\} 
+\]
+
+\end{defn}
+\begin{rmq}
+In fact, if $f$ is simple both definitions are compatible.
+\end{rmq}
+\begin{propo}
+Let $f,g : \Omega \to \mathbb{R}_{ \geq 0} $ be measurable
+\begin{itemize}
+\item $ 0 \leq \int_{ \Omega }^{  }f \leq \infty $ and $ \int_{ \Omega }^{  }f = 0 \iff f=0$ a.e.
+\item $ \int_{ \Omega }^{  } cf = c \int_{ \Omega }^{  }f$ 
+\item If $f \leq g$ then $ \int_{ \Omega }^{  } f \leq \int_{ \Omega }^{  } g$ 
+\item If $f=g$ a.e. then $ \int_{ \Omega }^{  }f = \int_{ \Omega }^{  }g$ 
+\item if $\Omega' \subset \Omega$, then $ \int_{ \Omega' }^{  }f = \int_{ \Omega }^{  }( f 1_{\Omega'} ) $ 
+\end{itemize}
+We will prove additivity later on
+\end{propo}
+\begin{thm}[Lebesgue Monotone convergence theorem]
+	Let $\Omega \subset \mathbb{R}^n$ be a measurable set and take $f_n$ an increasing sequence of functions converging pointwise to $f$.\\
+Then
+\[ 
+\int_{ \Omega }^{  } f = \lim_{m \to  + \infty}  \int_{ \Omega }^{  }f_n
+\]
+
+\end{thm}
+\begin{proof}
+By definition $f( x) = \lim_{n \to  + \infty} f_n( x) = \sup_n f_n( x) $ ( since the $f_n$ are increasing).\\
+Using the propositions above, we have that
+\[ 
+\int_{ \Omega }^{  }\sup_m f_m \geq \int_{ \Omega }^{  }f_m \quad \forall m
+\]
+Hence $ \int_\Omega f \geq \sup \int_{ \Omega }^{  } f_m$.\\
+We claim $ \int_{ \Omega }^{  }\sup f_m \leq \sup \int_{ \Omega }^{  }f_m$.\\
+It suffices to show that $\forall \epsilon$ 
+\[ 
+	( 1-\epsilon) \int_{ \Omega }^{  } s \leq \sup_m \int_{ \Omega }^{  }f_m \quad \forall s \leq \sup f_m \text{ simple  } 
+\]
+Indeed, note that $\forall x \in \Omega\exists N \coloneqq N( x) $ s.t. $f_N( x) \geq ( 1-\epsilon)  s( x)  $.\\
+Let $E_n = \left\{ x\in \Omega:f_n \geq ( 1-\epsilon) s \right\} $.\\
+Since $ f_n$ is increasing, $E_1 \subset E_2 \ldots$ and $ \bigcup E_i = \Omega$, hence we get
+\[ 
+	( 1-\epsilon) \int_{ E_m }^{  } s = \int_{ E_m }^{  }( 1-\epsilon) s \leq \int_{ E_m }^{  }f_N \leq \int_{ \Omega }^{  } f_n
+\]
+Taking the sup yields
+\[ 
+\sup_n ( 1-\epsilon) \int_{ E_n }^{  }s \leq \sup_n \int_{ \Omega }^{  }f_n
+\]
+Hence, we only need to show that the left hand side equals $ ( 1-\epsilon) \int_\Omega s$.\\
+Indeed, the inequality $\sup_n ( 1-\epsilon) \int_{ E_n }^{  }s \leq  ( 1-\epsilon) \int_{ \Omega }^{  }s$.\\
+For the other inequality, write $s= \sum 1_{F_j } c_j $, then 
+\[ 
+\int_{ E_n }^{  }s = \int_{ \Omega }^{  } \sum c_j 1_{E_n\cap F_j} 
+\]
+
+
+
+
+\end{proof}
+	
+
+
+
+
+
+
+\end{document}	

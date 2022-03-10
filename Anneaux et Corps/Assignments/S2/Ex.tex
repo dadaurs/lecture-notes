@@ -1,0 +1,63 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{faktor}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\begin{document}
+\title{Série 3 Exercice 8}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+Indeed, let $\frac{a}{b}\in \mathbb{Q}$ in reduced form such that $\nu_p(\frac{a}{b} )=0 $. By the definition of $p$-adic, this means that we may suppose both $a$ and $b$ share no common factors with $p$, then $\frac{b}{a}$ also shares no common factor with $p$ and hence $\nu_p( \frac{b}{a}) =0$, implying $ \frac{b}{a}\in R_\nu$.\\
+Finally, $\frac{a}{b}\cdot \frac{b}{a}= \frac{1}{1}$ which finally implies that $\frac{a}{b}$ is invertible in $R_\nu$.
+\section*{2}
+First we show that all $( p^{n}) $ are distinct ideals of $ R$, indeed suppose there exists $a,b \in \mathbb{N}$ such that $ ( p^{a}) = ( p^{b} )$, without loss of generality suppose $a<b$.\\
+Hence, there exists an element $ \frac{a}{b} \in \mathbb{Q}$ with $ \nu_p( \frac{a}{b} ) \geq 0$ such that $ \frac{a}{b}p^{b} = p^{a} $.\\
+As $ \mathbb{Q}$ is a field, this implies that $ \frac{a}{b}= p^{a-b}$ which means $ \frac{a}{b}$ has a negative valuation which contradicts our hypothesis.\\
+
+Now we show that the ideals mentionned in the exercise are indeed all the ideals of $ R$.\\
+Let $I$ be an non-zero ideal of $ R$.\\
+Define $ a = \inf_{x \in I\setminus \left\{ 0 \right\} 	} \left\{ \nu( x)  \right\} $. Since $\nu\vert_{I \setminus \left\{ 0 \right\} }  $ has codomain $ \mathbb{N}$, this infimum exists and is attained by some element $y \in I$.\\
+Since we may write $ y = p^{a} \frac{d}{c}$ where $d$ and $c$ are coprime to $p$.\\
+By part $1$, we know that $\frac{d}{c}$ is invertible, hence implying that ( since $I$ is an ideal) $p^{a}\in I$.\\
+
+We pretend that $ I = ( p^{a}) $, to do this, we show the double inclusion.\\
+First, note that, since by definition $ p^{a}\in I$, we immediatly get that $ ( p^{a}) \subset I$ since $( p^{a}) $ is the smallest ideal containing $ p^{a}$.\\
+Furthermore, let $x \in I$, then by definition of $a$, $\nu( x) \geq a$.\\
+Since we may then write $x = p^{\nu( x) }\frac{d}{c} = p^{a} p^{\nu( x) -a}\frac{d}{c}$ where $d$ and $c$ are coprime to $p$, this implies that $x\in ( p^{a}) $.\\
+Hence, if $I$ is a  non-zero ideal, $I$ is of the form $p^{n}$ for some $n$ and since these ideals are disjoint, we have characterised all of them.
+\section*{3}
+Using the exercise of week 2, we know that $ \mathbb{Z} \subset R$.\\
+Hence consider the composition $ \mathbb{Z} \xhookrightarrow{\iota} R \xmapsto{q_R} \faktor { R} { ( p^{n}) } $ where $\iota$ is the inclusion morphism and $q_R$ is the canonical projection morphism.\\
+Furthermore define $ q: \mathbb{Z}\to \faktor { \mathbb{Z}} { ( p^{n}) } $ to be the canonical projection.\\
+We now pretend that $\ker ( q_R\circ \iota) = \ker q = ( p^{n}) $, indeed if $ a \in \ker q = ( p^{n}) $, then $p^{n}| a$ hence $p^{n}| \iota( a) \implies q_R( a) = 0$.\\
+Similarly, if $ r\in \ker( q_R\circ \iota) $, then $p^{n}| r$, ie. there exists $ \frac{a}{b}\in R$ ( in reduced form)  such that
+$p^{n}\frac{a}{b} = r$ since $\nu( \frac{a}{b}) \geq 0$, in particular we may suppose $b$ is coprime to $p$.\\
+Hence, since $p^{n} \frac{a}{b}$ is an integer, $b| a$ implying $b=1$.\\
+Finally, this means that there exists an integer $a$ such that $p^{n} a = r$ which means that $a\in ( p^{n}) = \ker q$.\\
+Hence applying the universal property of the quotient ring, we get an induced morphism as such:
+\[\begin{tikzcd}
+	{\mathbb{Z}} & {\faktor{R}{(p^n)}} \\
+	{\faktor{\mathbb{Z}}{(p^n)}}
+	\arrow["{q_R\circ\iota}", from=1-1, to=1-2]
+	\arrow["q"', from=1-1, to=2-1]
+	\arrow["{\exists !\varphi}"', dotted, from=2-1, to=1-2]
+\end{tikzcd}\]
+We now show that $q_R \circ iota$ is surjective.
+Let $ \left[ p^{i}\frac{a}{b} \right]\in \faktor { R} { ( p^{n}) }  $, where, as always, we have assumed $\frac{a}{b}$ is in reduced form and shares no factors with $p$.\\
+Now we pretend that $q_R\circ \iota ( p^{i} a) = [ p^{i} \frac{a}{b}] $, indeed, notice that 
+\[ 
+p^{i}\frac{a}{b} - p^{i}a = \frac{p^{i}( b-1) a}{b}
+\]
+
+
+
+\end{document}

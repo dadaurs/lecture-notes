@@ -8,6 +8,7 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{mdframed}
+\usepackage[most]{tcolorbox}
 \usepackage[french]{babel}
 \usepackage{bbm} %RCQ
 \usepackage{verbatim}
@@ -24,6 +25,7 @@
 \usepackage[fixed]{fontawesome5}
 \usepackage{imakeidx}
 \makeindex
+
 % figure support
 \usepackage{import}
 \usepackage{xifthen}
@@ -93,7 +95,7 @@
 
     % theorem envs
 
-\newmdtheoremenv{thm}{Theorème}
+\newtheorem{thm}{Theorème}
 \newtheorem{defn}{Definition}
 
 \newmdtheoremenv{propo}[thm]{Proposition}
@@ -116,6 +118,13 @@
 
 \newtheorem{exo}[thm]{Exercice}
 
+\tcolorboxenvironment{thm}{
+    enhanced jigsaw, colframe=cyan, interior hidden, breakable, before skip=10pt, after skip=10pt}
+\tcolorboxenvironment{lemma}{
+    enhanced jigsaw, colframe=green, interior hidden, breakable, before skip=10pt, after skip=10pt}
+\tcolorboxenvironment{proof}{
+    blanker, breakable, left=5mm, before skip=10pt, after skip=10pt,
+    borderline west={0.2mm}{0pt}{red}}
 
 %\hypersetup{
     %unicode=true,          % non-Latin characters in Acrobat’s bookmarks

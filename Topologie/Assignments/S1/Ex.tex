@@ -1,0 +1,113 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{faktor}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\id}{Id}
+
+%\input{../../../newcommands.tex}
+
+\begin{document}
+\title{Série 1}
+\author{David Wiedemann}
+\maketitle
+\section*{1}
+On montre la double implication.\\
+$\Longleftarrow$\\
+Pour montrer que $p$ est une application quotient, il faut montrer que $F \subset B$ est ferme ssi $p^{-1}( F) $ est ferme .\\
+Puisque $p$ est continue ( c'est la composition de $q$ avec l'inclusion $ A \hookrightarrow X$ ), si $F$ est ferme alors $p^{-1}( F) $ est ferme.
+
+De plus, si $p^{-1}( F) $ est ferme, alors c'est un ensemble ferme sature et par hypothese il existe un ferme sature $ E \subset X$ tel que $E\cap A = p^{-1}( F )$ et $q( E) \cap B = F$ et ainsi $F$ est ferme.\\
+On a alors bien que $q( E) $ est un ferme puisque $E$ etait un ferme sature.\\
+$\Longrightarrow$\\
+Supposons maintenant que $p$ est un quotient, soit $ F \subset A$ un ferme $p$-sature.\\
+Ainsi, puisque $p$ est un quotient, $p(F) $ est un ferme de $ B$.\\
+On pose alors $E' = \cl_Y p( F)  $, ie. l'intersection sur tous les fermes de $Y$ contenant et on definit $ E= q^{-1}( E')$.\\
+Remarquons d'abord que
+\begin{itemize}
+\item $E$ est $q$-sature, car c'est une preimage d'un ensemble de $Y= \faktor{X}{\sim}$  , et ainsi une reunion de classes d'equivalences
+\item $E$ est ferme, en effet, c'est la preimage d'un ferme.
+\end{itemize}
+
+On pretend que $F = E\cap A$.\\
+En effet, l'inclusion $ F \subset E \cap A$ est immediate:\\
+Soit $f \in F$, alors $p( f) \in p( F) \subset \cl_Y( p( F) ) $, et donc $f\in q^{-1}( \cl_Y ( p( F) ) )= E $ et de plus $f \in A$, on en deduit que $f\in E\cap A$.\\
+Puisque $F \subset A$ est un ferme sature, $p( F) \subset B$ est ferme et donc il existe un ferme $K \subset Y$ tel que $ K \cap B = p( F) $ ( par definition de la topologie quotient) et donc $ q^{-1}( K) \cap A = F$.\\
+De plus $E' \subset K$ et donc $ q^{-1}( E') \cap A \subset q^{-1}( K) \cap A = F$.\\
+Ce qui montre la double inclusion des ensembles.\\
+\section*{2}
+Comme indique sur piazza, on supposera que l'application $p$ est un quotient, sinon l'enonce est faux avec le contre exemple $ X = \mathbb{R}, A = [ 0,1) $ et $x\sim y \iff x-y \in \mathbb{Z}$.\\
+
+Soit $A \subset X$ comme dans l'enonce.\\
+Soit $\sim$ la relation d'equivalence sur $X$, on notera $\sim'$ la relation d'equivalence induite sur $A$.\\
+On notera $\iota: A \hookrightarrow X$ l'inclusion et  $q_A: A \to \faktor A { \sim' }$, $q_X: X \to \faktor X \sim$ les applications canoniques.\\
+On montre le resultat en deux temps, on montrera que
+\begin{itemize}
+\item $q_X\circ \iota$ passe au quotient de $q_A$ et induit une application $g: \faktor A { \sim' }\to \faktor { X} { \sim} $
+\item L'application $q_A$ passe au quotient de $q_X\circ \iota$ 
+\end{itemize}
+et on conclura.
+\subsection*{ $q_X \circ\iota$ passe au quotient de $q_A$ }
+En effet, si $ a\sim' b\in A$, on a que $ q_X\circ \iota( a) = q_X( a) = q_X( b)  $ car $\sim'$ est la restriction de $\sim$, ainsi on a une application induite
+\[\begin{tikzcd}
+	A & {\faktor {X} {\sim}} \\
+	{\faktor {A} {\sim'}}
+	\arrow["{q_A}"', from=1-1, to=2-1]
+	\arrow["{q_X\circ\iota}", from=1-1, to=1-2]
+	\arrow["{\exists ! f}"', dashed, from=2-1, to=1-2]
+\end{tikzcd}\]
+\subsection*{ $q_A$ passe au quotient de $q_X\circ \iota$ }
+Remarquons que $q_X \circ \iota= p$ et est donc par hypothese une application quotient.\\
+
+On a bien que si $p ( a) = p( b) $, alors $a\sim b \iff a\sim' b \iff q_A( a) = q_A( b) $ et on a une deuxieme application induite 
+\[\begin{tikzcd}
+	A & { \faktor {A} {\sim'}} \\
+	{\faktor {X} {\sim}}
+	\arrow["{q_A}"', from=1-1, to=2-1]
+	\arrow["{q_X\circ\iota}", from=1-1, to=1-2]
+	\arrow["{\exists ! g}"', dashed, from=2-1, to=1-2]
+\end{tikzcd}\]
+
+Finalement, on obtient les diagrammes suivants
+\[\begin{tikzcd}
+	{} \\
+	&& {\faktor {X} {\sim}} &&&& {\faktor {A} {\sim'}} \\
+	&& A & { \faktor {A} {\sim'}} &&& A & {\faktor {X} {\sim}} \\
+	&& {\faktor {X} {\sim}} &&&& {\faktor {A} {\sim'}}
+	\arrow["{q_X\circ\iota}"', from=3-3, to=4-3]
+	\arrow["{q_A}", from=3-3, to=3-4]
+	\arrow["{\exists ! g}"', dotted, from=4-3, to=3-4]
+	\arrow["{q_X\circ\iota}"', from=3-3, to=2-3]
+	\arrow["{\exists ! f}"', dotted, from=3-4, to=2-3]
+	\arrow["{q_A}"', from=3-7, to=4-7]
+	\arrow["{q_A}", from=3-7, to=2-7]
+	\arrow["{q_X\circ \iota}"{description}, from=3-7, to=3-8]
+	\arrow["{\exists ! f}"{description}, dotted, from=4-7, to=3-8]
+	\arrow["{\exists ! g}"{description}, dotted, from=3-8, to=2-7]
+\end{tikzcd}\]
+Ainsi, on a que $g\circ f \circ p = p$ et par une derniere application de la propriete universelle, on trouve que $g\circ f = \id_{ \faktor A { \sim '} } $, le meme raisonnement montre que $f\circ g = \id_{ \faktor X \sim} $.
+
+\section*{3}
+Soit $\sim $ la relation d'equivalence sur $ \mathbb{R}$ decrite dans l'enonce et soit $\sim '$ la relation restreinte a $I$.\\
+On a clairement que $\sim '$ identifie les points $0$ et $1$ et donc $\sim '$ est la meme relation d'equivalence que decrite dans l'enonce.\\
+On verifie les deux hypotheses de la partie 2 de l'exercice
+\begin{itemize}
+\item $q\vert_A$ est bien surjectif, soit $x\in \mathbb{R}$, alors $x- \lfloor x\rfloor\in I$ et $ x- \lfloor x \rfloor \sim x$ 
+\item Montrons que c'est une application quotient en appliquant le critere de la partie 1, soit $ F$ un ferme sature de $I$, on pretend que la saturation de $F$ dans $ \mathbb{R}$ reste un ferme.\\
+	En effet, puisque $I$ est ferme dans $ \mathbb{R}$, $F$ est aussi un ferme dans $ \mathbb{R}$.
+	Soit $ b\in q^{-1}( q( F) ) ^{c} = ( F + \mathbb{Z})^{c}$, et soit $ b \sim a$ avec $a \in I$, soit $U\ni a$ un ouvert dans $I$ separant $ a$ de $F$, alors la $q$-saturation de $ U$ est donnee par $ \mathbb{Z}+ U$ et contient donc $b$, de plus elle est clairement disjointe de $ q^{-1}( q( F) ) $.
+\end{itemize}
+Ainsi par la partie 1, on deduit que $ p$ est un quotient et ainsi on peut appliquer le critere etabli en 2 et conclure que $\faktor  { \mathbb{R} } { \sim} = \faktor { I} { \sim '} = \faktor { I} { \left\{ 0,1 \right\}  } = S^{1}$. 
+
+
+
+
+\end{document}

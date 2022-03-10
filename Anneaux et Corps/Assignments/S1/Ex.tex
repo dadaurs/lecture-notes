@@ -3,10 +3,16 @@
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
 \usepackage{lmodern}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+
+
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
 \input{../../../newcommands.tex}
+\DeclareMathOperator{\fr}{Frac}
 \begin{document}
 \title{Series 2 Exercise 7}
 \author{David Wiedemann}
@@ -34,19 +40,73 @@ Indeed, let $x,y\in R_\nu$, now $ \nu( x+y) \geq \min ( \nu( x) ,\nu( y) ) \geq 
 This show that $R_\nu$ is a subring of $K$.
 \section*{$K$ is the fraction field of $R_\nu$ }
 Before proving the result, we notice two things.
-\begin{itemize}
-\item Given $x\in K$, we have that $\nu( x^{-1}) = - \nu( x) $, this follows immediatly using part 1.
-\item If $\nu$ is a non-trivial valuation, we have that $\forall N \in \mathbb{N} \exists x\in K$ such that $\nu( x) \geq N$.\\
-	Indeed, by the above point we can find $x\in K, \nu( x) > 0$( which exists since the valuation is non-trivial), simply note that there exists $n\in \mathbb{N}$ such that $\nu( x^{n}) =n\cdot \nu( x) \geq 0$ 
-\end{itemize}
-First, suppose the valuation is non-trivial and fix $x\in K$ such that $\nu( x) \geq 0$ 
-We now show that $K$ satisfies the universal property of the fraction field.\\
-Let $L$ be a field and $j: R_\nu\to L$ a ring homomorphism.\\
-Given $a\in K$, let $n \in \mathbb{N}$ such that $\nu( x^{n}\cdot a) \geq 0$, then we define
+We now explicit an isomorphism between $K$ and $\fr R_\nu$.\\
+Let $j: R_\nu \to K$ be the inclusion of $R_\nu$ in $K$, this is obviously a ring homomorphism.\\
+Now applying the universal property of the fraction field to $j$, we get a unique ring homomorphism $\phi: \fr R_\nu\to K$.\\
+
+\[\begin{tikzcd}
+	{R_\nu} & K \\
+	{\fr R_\nu}
+	\arrow["j", from=1-1, to=1-2]
+	\arrow["\iota"', from=1-1, to=2-1]
+	\arrow["{\exists ! \phi}"', from=2-1, to=1-2]
+\end{tikzcd}\]
+Recall from the proof of the universal property of the fraction field that $\phi$ is defined by
+$\phi( \frac{a}{b}) = \iota( a) \cdot \iota( b) ^{-1}$.\\
+We now show $\phi$ is injective.\\
+Indeed, suppose $\phi( \frac{a}{b}) = \phi( \frac{c}{d}) $, then $j ( a) j( b) ^{-1}= j( c) j( d)^{-1}\implies j(a ) j( d) = j( c) j(b) $, ie. that $ad= cb$, which in turn implies $\frac{a}{b}= \frac{c}{d}$ in $ \fr R_\nu$ 
+Thus, we only need to show that $\phi$ is surjective.\\
+Let $a\in K$, if $\nu( a) \geq 0$, then clearly $ \phi( \frac{a}{1}) = j( a) \cdot 1= a$.\\
+If $\nu( a) <0$, then notice that $\frac{1}{\frac{1}{a}}\in \fr R_\nu$  $\phi( \frac{1}{\frac{1}{a}}) = j( 1) \cdot j( \frac{1}{a})^{-1} = a $ 
+\section*{ For every $x\in \mathbb{Z}, \nu( x) \geq 0$ }
+Obviously $ \nu( 0) $ is undefined so I guess this is a typo and show the result for $ \mathbb{Z}\setminus \left\{ 0 \right\} $.\\
+
+Indeed, since $\nu( 1) =\nu( -1) =0$, we get $\forall x \in \mathbb{Z}, x >0$ 
 \[ 
-	f( a) = f( \frac{a\cdot x^{n}}{x^{n}}) = \frac{j( a\cdot x^{n}) }{ j( x^{n}) }
+\nu(x) = \nu( \underbrace{1+\ldots + 1}_{ x \text{ times } }) \underbrace{\geq}_{ \text{ since $\nu$ is a valuation } } 1 
 \]
-We now show that $f$ is well defined ( ie. doesn't depend on $x$ and the choice of $n$ ), that $f$ is a ring homomorphism and that it is the unique function $f: K \to L $ with the universal property of the fraction field.
+Similarly, if $x<0$, we may write $ \nu( x) = \nu( \underbrace{-1\ldots-1}_{x \text{ times } }) \geq 0 $ by the same argument as above.
+\section*{ If $\nu( p) =0$ for all primes $p$, then $\nu$ is trivial.}
+First, note that, since we may write any integer as product of primes, we get that for all $x\in \mathbb{Z}\setminus \left\{ 0 \right\} $, $\nu( x) = \nu\left( \prod_{i=1}^{n} p_i\right) = \sum_{i=1}^{ n} \nu( p_i) = 0 $, where $\prod_{i=1}^{n}p_i$ is the decomposition of $x$ into prime factors.\\
+For the general case, first notice that $\forall x\in \mathbb{Q}$, we have that $\nu( 1) = \nu( \frac{x}{x}) = \nu( x ) +\nu( \frac{1}{x}) =0$, hence $\nu( x^{-1}) = -\nu( x) $.\\
+Hence, for $\frac{a}{b}\in \mathbb{Q}, a,b \in \mathbb{Z}$, we get $\nu( \frac{a}{b})= \nu( a ) -\nu( b) =0 $, thus implying $\nu$  is trivial.
+\section*{$\nu( p) \neq 0$ happens for at most one prime}
+Let $p,q$ be primes in $\mathbb{Z}$ and suppose $\nu( p) ,\nu( q) \neq 0$, then by part 4, we know that $\nu( p),\nu( q) >0 $.\\
+By Bezout's equality, there exist $a,b \in \mathbb{Z}$ such that $ a p + bq =1$.\\
+Applying $\nu$ to the above equality, we get
+\[ 
+\nu( ap + bq)  = \nu( 1) = 0 \geq \min ( \nu( ap) , \nu( bq) ) 
+\]
+Hence, either $ \nu( ap) \leq 0$ or $\nu( bq) \leq 0$. Without loss of generality, suppose $ \nu( ap) \leq 0$, then $\nu( a) +\nu( p) \leq 0$ which means that $\nu( a) <0$ ( since by hypothesis, $\nu( p) >0$ ), however, this contradicts part 3.
+\section*{$p$-adic valuation}
+Suppose $\nu( p) = c$, then clearly, $\nu( p^{i}) = i\cdot c$.\\
+Furthermore, if $a,b\in \mathbb{Z}$ are coprime to $p$, then $ \nu( \frac{a}{b}) = \nu( p_{a,1} \ldots p_{a,n} 	) - \nu( p_{b,1} \ldots p_{b,m} )=0 $, where $p_{a,1}\ldots p_{a,n}  $ ( resp. $ p_{b,1} \ldots p_{b,m} $  ) is the prime decomposition of $a$ ( resp. $b$ ) and the last equality follows from part 6.\\
+Combining both observations above, we get that $ \forall \frac{c}{d}\in \mathbb{Q}$, we may write
+\[ 
+\nu( \frac{c}{d}) = \nu( p^{i} \frac{c'}{d'}) =\nu(p^{i}) + \nu( \frac{c'}{d'}) = i\cdot c
+\]
+where in the first equality, we have simply isolated all factors from $c$ and $d$ which are powers of $p$.\\
+We now show that $\nu_p$ is indeed a discrete valuation on $ \mathbb{Q}$ if $c=1$.\\
+Let $ p^{i} \frac{a}{b}, p^{j} \frac{c}{d}\in \mathbb{Q}$ be fractions of the form stated in the instruction.\\
+We then have $\nu\left( p^{i} \frac{a}{b} p^{j} \frac{c}{d}	\right) = \nu( p^{i+j} \frac{ac}{bd})  $, since both $ac$ and $bd$ are prime to $p$, we get $\nu\left( p^{i+j} \frac{ac}{bd}\right) = ( i+j )\cdot c = i+j$, showing the first property of a discrete valuation.\\
+Now suppose without loss of generality, that $ i<j$, then we may write 
+\[ 
+\nu( p^{i}\frac{a}{b}+ p^{j}\frac{c}{d}) = \nu\left( p^{i}\left( \frac{a}{b}+ p^{j-i} \frac{c}{d}\right) \right) 
+\]
+Furthermore, note that $ \frac{a}{b}+ p^{j-i}\frac{c}{d}= \frac{ad+ p^{j-i}cb}{bd}$, notice that $bd$ is clearly prime to $p$, furthermore, if $ad + p^{j-i}cb$ was not prime to $p$, then in particular $ p | ad$ contradicting our hypothesis.\\
+From this, we deduce that 
+\[ 
+\nu( p^{i} \frac{a}{b}+ p^{j} \frac{c}{d}) = \min ( i,j) 	
+\]
+\section*{Valuation ring of $\nu_p$ is not $ \mathbb{Z}$ }
+Indeed, to show this we simply have to find an element of $ R_{ \nu_p }$ which is not in $ \mathbb{Z}$, to see this take any integer $a\in \mathbb{Z}$ prime to $p$ and note that
+\[ 
+\nu( \frac{p}{a}) = 1
+\]
+But obviously $\frac{p}{a}\notin \mathbb{Z} $.
+
+
+
 
 
 

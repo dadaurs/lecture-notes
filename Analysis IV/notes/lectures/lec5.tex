@@ -1,0 +1,96 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Thu 10 Mar}{Monotone Convergence theorem}
+\begin{crly}
+$f,g:\Omega \to [ 0, \infty ) $ measurable, then
+\[ 
+\int_\Omega f+g = \int_\Omega f + \int_\Omega g
+\]
+
+\end{crly}
+\begin{proof}
+Let $s_n, t_n$ be simple functions converging pointwise to $f$ respectively $g$, then $s_n+t_n$ converges pointwise to $f+g$.\\
+Then
+\[ 
+\int_{ \Omega }^{  } f+g = \lim_{n \to  + \infty} \int_{\Omega} s_n+t_n = \lim_{n \to  + \infty} \int_{ \Omega }^{  } s_n + \int_{ \Omega }^{  }t_n = \int f + \int g	
+\]
+\end{proof}
+\begin{crly}
+Let $g_1,\ldots: \Omega\to [ 0, \infty ) $ be measurable functions, then
+\[ 
+\int_\Omega \sum_{i=1}^{ \infty } g_i = \sum_{i=1}^{ \infty } \int_{ \Omega }^{  }g_i
+\]
+
+\end{crly}
+\begin{proof}
+Let $G_n = \sum_{i=1}^{ n} g_i$, this is a sequence of functions converging to $G$ ( from below) 
+\[ 
+\int_{ \Omega }^{  } \sum_{i=1}^{ \infty } g_i = \int_{ \Omega }^{  } G = \lim_{n \to  + \infty} \int_{ \Omega }^{  }G_n = \lim_{n  \to  + \infty} \sum_{i=1}^{ n} \int_\Omega g_i = \sum_{i=1}^{ \infty } \int_\Omega g_i			
+\]
+
+\end{proof}
+\subsection{Fatou's lemma}
+\begin{thm}[Fatou's lemma]
+Let $f_i$ be a sequence of measurable functions $\Omega \to [ 0, \infty ) $, then
+\[ 
+\int_{ \Omega }^{  }\liminf_{ m\to \infty } f_m \leq \liminf_{m \to \infty } \int_{ \Omega }^{  }f_m
+\]
+
+\end{thm}
+\begin{proof}
+By definition
+\[ 
+\liminf f_m = \sup_n \inf_{m \geq n} f_m
+\]
+By monotone convergence theorem
+\[ 
+\int_{ \Omega }^{  } \liminf_{n} f_n = \sup_n \int_{ \Omega  }^{  }\inf_{m \geq n} f_m 
+\]
+
+Since $ \int_{ \Omega }^{  }\inf_{m \geq n} f_m \leq  \int_{\Omega} f_J \forall J \geq m$, hence
+\[ 
+\int_{ \Omega  }^{  }\inf_{m \geq n} f_m \leq  \inf_{ J \geq m} \int_{ \Omega }^{  } f_J
+\]
+And finally
+\[ 
+\int_{ \Omega }^{  } \liminf f_m \leq \sup_m \inf_{J \geq m} \int_{ \Omega }^{  }f_J = \liminf_{J \to  + \infty} \int_{\Omega} f_J
+\]
+\end{proof}
+\begin{lemma}
+Let $f:\Omega\to [ 0, \infty ] $ be a measurable function, if $ \int_{ \Omega }^{  }f < \infty $, then 
+\[ 
+\mu \left\{ x\in \Omega: f( x) = \infty  \right\} =0
+\]
+
+\end{lemma}
+\begin{proof}
+Suppose not, let $E$ be this set, then $\forall n$ 
+\[ 
+n 1_E \leq f \implies n \mu( E) \leq  \int_\Omega f
+\]
+
+\end{proof}
+\begin{exemple}[Borel-Cantelli]
+Let $ \left\{ \Omega_i \right\} $ be measurable sets such that $\sum \mu( \Omega_i) < \infty $, then
+\[ 
+\limsup \Omega_i = \left\{ x\in \Omega: x\in\Omega_i \text{ for infinitely many values }  \right\} 
+\]
+has measure 0.
+\end{exemple}
+\begin{proof}
+ We claim that $ \int_{ \Omega }^{  }\sum_i 1_{\Omega_i} < \infty $,, then by the lemma, $f< \infty $ almost everywhere, hence $x\in\Omega_i$ only for finitely many $i$, hence $x \notin \limsup \Omega_i$.\\
+ The proof of the claim follows from the corollary to fatou's lemma:
+ \[ 
+ \int_{ \Omega }^{  }\sum_i 1_{\Omega_i} = \sum_i \int_{ \Omega }^{  }1_{\Omega_i} = \sum \mu( \Omega_i) < \infty 
+ \]
+ 
+\end{proof}
+
+
+	
+	
+
+		
+
+
+\end{document}	
