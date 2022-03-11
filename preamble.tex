@@ -98,11 +98,11 @@
 \newtheorem{thm}{Theorème}
 \newtheorem{defn}{Definition}
 
-\newmdtheoremenv{propo}[thm]{Proposition}
+\newtheorem{propo}[thm]{Proposition}
 
-\newmdtheoremenv{crly}[thm]{Corollaire}
+\newtheorem{crly}[thm]{Corollaire}
 
-\newmdtheoremenv{lemma}[thm]{Lemme}
+\newtheorem{lemma}[thm]{Lemme}
 
 \newmdtheoremenv{propr}[thm]{Propriete}
 
@@ -119,9 +119,17 @@
 \newtheorem{exo}[thm]{Exercice}
 
 \tcolorboxenvironment{thm}{
-    enhanced jigsaw, colframe=cyan, interior hidden, breakable, before skip=10pt, after skip=10pt}
+    enhanced jigsaw, colframe=cyan, breakable, before skip=10pt, after skip=10pt}
+
+\tcolorboxenvironment{crly}{
+    enhanced jigsaw, colframe=green!50!white, colback=green!5!white,breakable, before skip=10pt, after skip=10pt}
+
 \tcolorboxenvironment{lemma}{
-    enhanced jigsaw, colframe=green, interior hidden, breakable, before skip=10pt, after skip=10pt}
+    enhanced jigsaw, colframe=yellow!50!white, colback=yellow!10!white,breakable, before skip=10pt, after skip=10pt}
+
+\tcolorboxenvironment{defn}{
+    enhanced jigsaw, colframe=blue!50!white, colback=blue!20!white, breakable, before skip=10pt, after skip=10pt}
+
 \tcolorboxenvironment{proof}{
     blanker, breakable, left=5mm, before skip=10pt, after skip=10pt,
     borderline west={0.2mm}{0pt}{red}}
