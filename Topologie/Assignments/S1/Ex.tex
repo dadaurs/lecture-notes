@@ -17,37 +17,41 @@
 
 \begin{document}
 \title{Série 1}
-\author{David Wiedemann}
+\author{David Wiedemann, Nino Courtecuisse, Matteo Mohammedi}
 \maketitle
 \section*{1}
 On montre la double implication.\\
-$\Longleftarrow$\\
-Pour montrer que $p$ est une application quotient, il faut montrer que $F \subset B$ est ferme ssi $p^{-1}( F) $ est ferme .\\
-Puisque $p$ est continue ( c'est la composition de $q$ avec l'inclusion $ A \hookrightarrow X$ ), si $F$ est ferme alors $p^{-1}( F) $ est ferme.
 
-De plus, si $p^{-1}( F) $ est ferme, alors c'est un ensemble ferme sature et par hypothese il existe un ferme sature $ E \subset X$ tel que $E\cap A = p^{-1}( F )$ et $q( E) \cap B = F$ et ainsi $F$ est ferme.\\
-On a alors bien que $q( E) $ est un ferme puisque $E$ etait un ferme sature.\\
+$\Longleftarrow$\\
+Pour montrer que $p$ est une application quotient, il suffit de montrer que $F \subset B$ est fermé si et seulement si $p^{-1}( F) $ est fermé .\\
+Puisque $p$ est continue (c'est la composition de $q$ avec l'inclusion $ A \hookrightarrow X$), si $F$ est fermé alors $p^{-1}( F) $ est fermé.
+
+De plus, si $p^{-1}( F) $ est fermé, alors c'est un ensemble fermé saturé et par hypothèse il existe un fermé saturé $ E \subset X$ tel que $E\cap A = p^{-1}( F )$ d'ou $q( E) \cap B = F$ et ainsi $F$ est fermé.\\
+On a alors bien que $q( E) $ est un fermé puisque $E$ etait un fermé saturé.\\
+
 $\Longrightarrow$\\
-Supposons maintenant que $p$ est un quotient, soit $ F \subset A$ un ferme $p$-sature.\\
-Ainsi, puisque $p$ est un quotient, $p(F) $ est un ferme de $ B$.\\
-On pose alors $E' = \cl_Y p( F)  $, ie. l'intersection sur tous les fermes de $Y$ contenant et on definit $ E= q^{-1}( E')$.\\
+Supposons maintenant que $p$ est un quotient, soit $ F \subset A$ un fermé $p$-saturé.\\
+Ainsi, puisque $p$ est un quotient, $p(F) $ est un fermé de $ B$.\\
+On pose alors $E' = \cl_Y p( F)  $, ie. l'intersection sur tous les fermés de $Y$ contenant $p( F) $  et on définit $ E= q^{-1}( E')$.\\
 Remarquons d'abord que
 \begin{itemize}
-\item $E$ est $q$-sature, car c'est une preimage d'un ensemble de $Y= \faktor{X}{\sim}$  , et ainsi une reunion de classes d'equivalences
-\item $E$ est ferme, en effet, c'est la preimage d'un ferme.
+\item $E$ est $q$-saturé, car c'est une préimage d'un ensemble de $Y= \faktor{X}{\sim}$  , et ainsi une reunion de classes d'équivalence
+\item $E$ est fermé, en effet, c'est la préimage d'un fermé.
 \end{itemize}
 
-On pretend que $F = E\cap A$.\\
-En effet, l'inclusion $ F \subset E \cap A$ est immediate:\\
-Soit $f \in F$, alors $p( f) \in p( F) \subset \cl_Y( p( F) ) $, et donc $f\in q^{-1}( \cl_Y ( p( F) ) )= E $ et de plus $f \in A$, on en deduit que $f\in E\cap A$.\\
-Puisque $F \subset A$ est un ferme sature, $p( F) \subset B$ est ferme et donc il existe un ferme $K \subset Y$ tel que $ K \cap B = p( F) $ ( par definition de la topologie quotient) et donc $ q^{-1}( K) \cap A = F$.\\
-De plus $E' \subset K$ et donc $ q^{-1}( E') \cap A \subset q^{-1}( K) \cap A = F$.\\
+On prétend que $F = E\cap A$.\\
+En effet, l'inclusion $ F \subset E \cap A$ suit du raisonnement suivant:\\
+Soit $f \in F$, alors $p( f) \in p( F) \subset \cl_Y( p( F) ) $, et donc $f\in p^{-1}( \cl_Y ( p( F) ) ) \subset q^{-1}( \cl_Y ( p( F) ) )E $ et de plus $f \in A$ puisque $F \subset A$ , on en deduit que $f\in E\cap A$.\\
+
+On montre donc l'inclusion $F \supset E \cap A$.\\
+Puisque $F \subset A$ est un fermé saturé, $p( F) \subset B$ est fermé et donc il existe un fermé $K \subset Y$ tel que $ K \cap B = p( F) $ (par définition de la topologie quotient) et donc $ q^{-1}( K) \cap A = F$.\\
+De plus $E' = \cl_Y( p( F) ) \subset K$ et donc $ q^{-1}( E') \cap A \subset q^{-1}( K) \cap A = F$.\\
 Ce qui montre la double inclusion des ensembles.\\
 \section*{2}
-Comme indique sur piazza, on supposera que l'application $p$ est un quotient, sinon l'enonce est faux avec le contre exemple $ X = \mathbb{R}, A = [ 0,1) $ et $x\sim y \iff x-y \in \mathbb{Z}$.\\
+Comme indiqué sur piazza, on supposera que l'application $p$ est un quotient, sinon l'énoncé est faux en prenant le contre exemple $ X = \mathbb{R}, A = [ 0,1) $ et $x\sim y \iff x-y \in \mathbb{Z}$.\\
 
-Soit $A \subset X$ comme dans l'enonce.\\
-Soit $\sim$ la relation d'equivalence sur $X$, on notera $\sim'$ la relation d'equivalence induite sur $A$.\\
+Soit $A \subset X$ comme dans l'énoncé.\\
+Soit $\sim$ la relation d'équivalence sur $X$, on notera $\sim'$ la relation d'équivalence induite sur $A$.\\
 On notera $\iota: A \hookrightarrow X$ l'inclusion et  $q_A: A \to \faktor A { \sim' }$, $q_X: X \to \faktor X \sim$ les applications canoniques.\\
 On montre le resultat en deux temps, on montrera que
 \begin{itemize}
@@ -93,19 +97,29 @@ Finalement, on obtient les diagrammes suivants
 	\arrow["{\exists ! f}"{description}, dotted, from=4-7, to=3-8]
 	\arrow["{\exists ! g}"{description}, dotted, from=3-8, to=2-7]
 \end{tikzcd}\]
-Ainsi, on a que $g\circ f \circ p = p$ et par une derniere application de la propriete universelle, on trouve que $g\circ f = \id_{ \faktor A { \sim '} } $, le meme raisonnement montre que $f\circ g = \id_{ \faktor X \sim} $.
+Ainsi, on a que $g\circ f \circ p = p$ et par une derniere application de la propriete universelle, on trouve que $g\circ f = \id_{ \faktor A { \sim '} } $, le même raisonnement montre que $f\circ g = \id_{ \faktor X \sim} $.\\
+Ainsi $f$ est un homeomorphisme ce qui conclut la preuve.
 
 \section*{3}
-Soit $\sim $ la relation d'equivalence sur $ \mathbb{R}$ decrite dans l'enonce et soit $\sim '$ la relation restreinte a $I$.\\
-On a clairement que $\sim '$ identifie les points $0$ et $1$ et donc $\sim '$ est la meme relation d'equivalence que decrite dans l'enonce.\\
-On verifie les deux hypotheses de la partie 2 de l'exercice
+Soit $\sim $ la relation d'équivalence sur $ \mathbb{R}$ décrite dans l'énoncé et soit $\sim '$ la relation restreinte a $I$.\\
+On a clairement que $\sim '$ identifie les points $0$ et $1$ et donc $\sim '$ est la même relation d'équivalence que décrite dans l'énoncé.\\
+On vérifie les deux hypotheses de la partie 2 de l'exercice
 \begin{itemize}
-\item $q\vert_A$ est bien surjectif, soit $x\in \mathbb{R}$, alors $x- \lfloor x\rfloor\in I$ et $ x- \lfloor x \rfloor \sim x$ 
-\item Montrons que c'est une application quotient en appliquant le critere de la partie 1, soit $ F$ un ferme sature de $I$, on pretend que la saturation de $F$ dans $ \mathbb{R}$ reste un ferme.\\
-	En effet, puisque $I$ est ferme dans $ \mathbb{R}$, $F$ est aussi un ferme dans $ \mathbb{R}$.
-	Soit $ b\in q^{-1}( q( F) ) ^{c} = ( F + \mathbb{Z})^{c}$, et soit $ b \sim a$ avec $a \in I$, soit $U\ni a$ un ouvert dans $I$ separant $ a$ de $F$, alors la $q$-saturation de $ U$ est donnee par $ \mathbb{Z}+ U$ et contient donc $b$, de plus elle est clairement disjointe de $ q^{-1}( q( F) ) $.
+\item $q\vert_A$ est bien surjectif, soit $x\in \mathbb{R}$, alors $x- \lfloor x\rfloor\in I$ et $ x- \lfloor x \rfloor \sim x$ .
+\item Montrons que c'est une application quotient en appliquant le critère de la partie 1, soit $ F$ un fermé saturé de $I$, on prétend que la saturation de $F$ dans $ \mathbb{R}$ par $\sim$  reste un fermé.\\
+	En effet, puisque $I$ est fermé dans $ \mathbb{R}$, $F$ est aussi un fermé dans $ \mathbb{R}$.
+	On distingue deux cas:
+	\subsection*{Si $ 0 \in F$ }
+	On montre que le complément de la saturation de $F$ est un ouvert de $ \mathbb{R}$.
+	Soit $ b\in q^{-1}( q( F) ) ^{c} = ( F + \mathbb{Z})^{c}$, et soit $ b \sim a$ avec $a \in I$, soit $U\ni a$ un ouvert dans $I$ séparant $ a$ de $F$.\\
+	Alors la $q$-saturation de $ U$ est donnee par $ \mathbb{Z}+ U$ et contient donc $b$, de plus elle est clairement disjointe de $ q^{-1}( q( F) ) $.
+	\subsection*{ Si $ 0\notin F$ }
+	Soit $ b \in q^{-1}( q( F) ) $, si $ b \notin \mathbb{Z}$, on considère le même ouvert $U$ que ci-dessus et on le choisit disjoint de $ 0$ et de $1$ (ce qui est toujours possible puisque $ F \cup \left\{ 0,1 \right\} $  reste un fermé).\\
+	Si $ b \in \mathbb{Z}$, alors on choisit deux ouverts $U$ et $V$ de $I$ disjoints de $F$ tel que $ 0\in U$ et $ 1\in V$.\\
+	Il est alors clair que la saturation de $U\cup V$ dans $ \mathbb{R}$ reste un ouvert qui sera disjoint de $F$.
+	
 \end{itemize}
-Ainsi par la partie 1, on deduit que $ p$ est un quotient et ainsi on peut appliquer le critere etabli en 2 et conclure que $\faktor  { \mathbb{R} } { \sim} = \faktor { I} { \sim '} = \faktor { I} { \left\{ 0,1 \right\}  } = S^{1}$. 
+Ainsi par la partie 1, on deduit que $ p$ est un quotient et ainsi on peut appliquer le critère établi en 2 et conclure que $\faktor  { \mathbb{R} } { \sim} = \faktor { I} { \sim '} = \faktor { I} { \left\{ 0,1 \right\}  } = S^{1}$. 
 
 
 

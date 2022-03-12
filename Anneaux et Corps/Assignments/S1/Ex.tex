@@ -17,19 +17,19 @@
 \title{Series 2 Exercise 7}
 \author{David Wiedemann}
 \maketitle
-\section*{$\nu( 1) = 0$ and $\nu( -1) =0$  }
+\section{$\nu( 1) = 0$ and $\nu( -1) =0$  }
 Indeed, note that 
 \[ 
-\nu( 1\cdot 1) = \nu( x) +\nu( 1) = \nu(1) \iff 2\nu( 1) =\nu( 1) \iff \nu( 1) =0
+\nu( 1\cdot 1) = \nu( 1) +\nu( 1) = \nu(1) \iff 2\nu( 1) =\nu( 1) \iff \nu( 1) =0
 \]
 Now for the second part, notice that since $-1\cdot -1 = 1$ we get
 \[ 
 \nu( -1\cdot -1) = \nu( -1) +\nu( -1) = \nu( 1) = 0\iff 2\nu( -1) =0 \iff \nu( -1) =0
 \]
-\section*{$R_\nu$ is a subring of $K$ }
+\section{$R_\nu$ is a subring of $K$ }
 To show $R_\nu$ is a subring, we have to show that $  1,0\in R_{\nu} $ and that $R_\nu$  is closed under addition and multiplication.\\
 
-Using the first part of the exercise, we immediatly get that $1\in R_\nu$ since $\nu( 1) \geq 0$  and by definition $0\in R_\nu$.\\
+Using the first part of the exercise, we immediatly get that $1\in R_\nu$ since $\nu( 1) \geq 0$  and by definition $0\in R_\nu$.
 \subsubsection*{ $R_\nu$ is closed under multiplication}
 Let $x,y \in R_\nu\setminus \left\{ 0 \right\} 	$, we get that $\nu( x\cdot y) = \nu( x) +\nu( y) \geq 0$ since $\nu( x) ,\nu( y) \geq 0$ by hypothesis.\\
 If either $x$ or $y$ is equal to 0, then clearly $x\cdot y = 0\in R_\nu.$\\
@@ -38,11 +38,10 @@ Hence $R_\nu$ is closed under multiplication.
 Indeed, let $x,y\in R_\nu$, now $ \nu( x+y) \geq \min ( \nu( x) ,\nu( y) ) \geq 0$ hence $x+y\in R_\nu$.\\
 
 This show that $R_\nu$ is a subring of $K$.
-\section*{$K$ is the fraction field of $R_\nu$ }
-Before proving the result, we notice two things.
-We now explicit an isomorphism between $K$ and $\fr R_\nu$.\\
+\section{$K$ is the fraction field of $R_\nu$ }
+We explicit an isomorphism between $K$ and $\fr R_\nu$.\\
 Let $j: R_\nu \to K$ be the inclusion of $R_\nu$ in $K$, this is obviously a ring homomorphism.\\
-Now applying the universal property of the fraction field to $j$, we get a unique ring homomorphism $\phi: \fr R_\nu\to K$.\\
+Now applying the universal property of the fraction field to $j$, we get a unique ring homomorphism $\phi: \fr R_\nu\to K$ making the following diagramm commute:
 
 \[\begin{tikzcd}
 	{R_\nu} & K \\
@@ -54,23 +53,23 @@ Now applying the universal property of the fraction field to $j$, we get a uniqu
 Recall from the proof of the universal property of the fraction field that $\phi$ is defined by
 $\phi( \frac{a}{b}) = \iota( a) \cdot \iota( b) ^{-1}$.\\
 We now show $\phi$ is injective.\\
-Indeed, suppose $\phi( \frac{a}{b}) = \phi( \frac{c}{d}) $, then $j ( a) j( b) ^{-1}= j( c) j( d)^{-1}\implies j(a ) j( d) = j( c) j(b) $, ie. that $ad= cb$, which in turn implies $\frac{a}{b}= \frac{c}{d}$ in $ \fr R_\nu$ 
+Indeed, suppose $\phi( \frac{a}{b}) = \phi( \frac{c}{d}) $, then $j ( a) j( b) ^{-1}= j( c) j( d)^{-1}\implies j(a ) j( d) = j( c) j(b) $, ie. that $ad= cb$, which in turn implies $\frac{a}{b}= \frac{c}{d}$ in $ \fr R_\nu$.\\
 Thus, we only need to show that $\phi$ is surjective.\\
 Let $a\in K$, if $\nu( a) \geq 0$, then clearly $ \phi( \frac{a}{1}) = j( a) \cdot 1= a$.\\
 If $\nu( a) <0$, then notice that $\frac{1}{\frac{1}{a}}\in \fr R_\nu$  $\phi( \frac{1}{\frac{1}{a}}) = j( 1) \cdot j( \frac{1}{a})^{-1} = a $ 
-\section*{ For every $x\in \mathbb{Z}, \nu( x) \geq 0$ }
-Obviously $ \nu( 0) $ is undefined so I guess this is a typo and show the result for $ \mathbb{Z}\setminus \left\{ 0 \right\} $.\\
+\section{ For every $x\in \mathbb{Z}, \nu( x) \geq 0$ }
+Obviously $ \nu( 0) $ is undefined so I guess this is a typo and I show the result for $ \mathbb{Z}\setminus \left\{ 0 \right\} $.\\
 
 Indeed, since $\nu( 1) =\nu( -1) =0$, we get $\forall x \in \mathbb{Z}, x >0$ 
 \[ 
 \nu(x) = \nu( \underbrace{1+\ldots + 1}_{ x \text{ times } }) \underbrace{\geq}_{ \text{ since $\nu$ is a valuation } } 1 
 \]
 Similarly, if $x<0$, we may write $ \nu( x) = \nu( \underbrace{-1\ldots-1}_{x \text{ times } }) \geq 0 $ by the same argument as above.
-\section*{ If $\nu( p) =0$ for all primes $p$, then $\nu$ is trivial.}
+\section{ If $\nu( p) =0$ for all primes $p$, then $\nu$ is trivial.}
 First, note that, since we may write any integer as product of primes, we get that for all $x\in \mathbb{Z}\setminus \left\{ 0 \right\} $, $\nu( x) = \nu\left( \prod_{i=1}^{n} p_i\right) = \sum_{i=1}^{ n} \nu( p_i) = 0 $, where $\prod_{i=1}^{n}p_i$ is the decomposition of $x$ into prime factors.\\
 For the general case, first notice that $\forall x\in \mathbb{Q}$, we have that $\nu( 1) = \nu( \frac{x}{x}) = \nu( x ) +\nu( \frac{1}{x}) =0$, hence $\nu( x^{-1}) = -\nu( x) $.\\
 Hence, for $\frac{a}{b}\in \mathbb{Q}, a,b \in \mathbb{Z}$, we get $\nu( \frac{a}{b})= \nu( a ) -\nu( b) =0 $, thus implying $\nu$  is trivial.
-\section*{$\nu( p) \neq 0$ happens for at most one prime}
+\section{$\nu( p) \neq 0$ happens for at most one prime}
 Let $p,q$ be primes in $\mathbb{Z}$ and suppose $\nu( p) ,\nu( q) \neq 0$, then by part 4, we know that $\nu( p),\nu( q) >0 $.\\
 By Bezout's equality, there exist $a,b \in \mathbb{Z}$ such that $ a p + bq =1$.\\
 Applying $\nu$ to the above equality, we get
@@ -78,15 +77,19 @@ Applying $\nu$ to the above equality, we get
 \nu( ap + bq)  = \nu( 1) = 0 \geq \min ( \nu( ap) , \nu( bq) ) 
 \]
 Hence, either $ \nu( ap) \leq 0$ or $\nu( bq) \leq 0$. Without loss of generality, suppose $ \nu( ap) \leq 0$, then $\nu( a) +\nu( p) \leq 0$ which means that $\nu( a) <0$ ( since by hypothesis, $\nu( p) >0$ ), however, this contradicts part 3.
-\section*{$p$-adic valuation}
+\section{$p$-adic valuation}
 Suppose $\nu( p) = c$, then clearly, $\nu( p^{i}) = i\cdot c$.\\
-Furthermore, if $a,b\in \mathbb{Z}$ are coprime to $p$, then $ \nu( \frac{a}{b}) = \nu( p_{a,1} \ldots p_{a,n} 	) - \nu( p_{b,1} \ldots p_{b,m} )=0 $, where $p_{a,1}\ldots p_{a,n}  $ ( resp. $ p_{b,1} \ldots p_{b,m} $  ) is the prime decomposition of $a$ ( resp. $b$ ) and the last equality follows from part 6.\\
+Furthermore, if $a,b\in \mathbb{Z}$ are coprime to $p$, then
+\[
+\nu( \frac{a}{b}) = \nu( p_{a,1} \ldots p_{a,n} 	) - \nu( p_{b,1} \ldots p_{b,m} ) \underbrace{=}_{ \text{ all } p_{k,j} \text{ are prime to  } p.}0 
+\]
+, where $p_{a,1}\ldots p_{a,n}  $ ( resp. $ p_{b,1} \ldots p_{b,m} $  ) is the prime decomposition of $a$ ( resp. $b$ ) and the last equality follows from part 6.\\
 Combining both observations above, we get that $ \forall \frac{c}{d}\in \mathbb{Q}$, we may write
 \[ 
 \nu( \frac{c}{d}) = \nu( p^{i} \frac{c'}{d'}) =\nu(p^{i}) + \nu( \frac{c'}{d'}) = i\cdot c
 \]
 where in the first equality, we have simply isolated all factors from $c$ and $d$ which are powers of $p$.\\
-We now show that $\nu_p$ is indeed a discrete valuation on $ \mathbb{Q}$ if $c=1$.\\
+We now show that $\nu_p$ is indeed a discrete valuation on $ \mathbb{Q}$ when $c=1$.\\
 Let $ p^{i} \frac{a}{b}, p^{j} \frac{c}{d}\in \mathbb{Q}$ be fractions of the form stated in the instruction.\\
 We then have $\nu\left( p^{i} \frac{a}{b} p^{j} \frac{c}{d}	\right) = \nu( p^{i+j} \frac{ac}{bd})  $, since both $ac$ and $bd$ are prime to $p$, we get $\nu\left( p^{i+j} \frac{ac}{bd}\right) = ( i+j )\cdot c = i+j$, showing the first property of a discrete valuation.\\
 Now suppose without loss of generality, that $ i<j$, then we may write 
@@ -98,10 +101,10 @@ From this, we deduce that
 \[ 
 \nu( p^{i} \frac{a}{b}+ p^{j} \frac{c}{d}) = \min ( i,j) 	
 \]
-\section*{Valuation ring of $\nu_p$ is not $ \mathbb{Z}$ }
+\section{Valuation ring of $\nu_p$ is not $ \mathbb{Z}$ }
 Indeed, to show this we simply have to find an element of $ R_{ \nu_p }$ which is not in $ \mathbb{Z}$, to see this take any integer $a\in \mathbb{Z}$ prime to $p$ and note that
 \[ 
-\nu( \frac{p}{a}) = 1
+\nu( \frac{p}{a}) = 1\implies \frac{p}{a}\in R_{\nu_p} 	
 \]
 But obviously $\frac{p}{a}\notin \mathbb{Z} $.
 

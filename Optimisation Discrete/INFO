@@ -1,0 +1,8 @@
+#!/bin/sh
+NAME="Analyse Avancee II"
+COURS_ZOOM=true
+COURS="https://epfl.zoom.us/j/81412314397"
+EX_ZOOM=true
+EX="https://epfl.zoom.us/s/87880903605"
+ASS=true
+LANG=FRENCH
