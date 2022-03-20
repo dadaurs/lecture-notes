@@ -1,0 +1,186 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Fri 18 Mar}{Morphisms of Affine Varieties}
+In general any morphism $\phi: V\to W$ induces a morphism of rings ( of $k$-algebras) $\tilde\phi:\Gamma( W) \to\Gamma( V) $ by composition, ie.
+\[ 
+\tilde\phi( f) =f\circ\phi
+\]
+\begin{propo}
+This defines a one to one correspondence 
+\[ 
+\left\{ \text{ Morphisms $\phi:V\to W$  }  \right\} \leftrightarrow \left\{ \text{ $k$-algebra homomorphisms $\tilde\phi:\Gamma( W) \to \Gamma( V) $  }  \right\}
+\]
+
+\end{propo}
+In particular $\phi$ is an isomorphism iff $\tilde\phi$ is an isomorphism.
+\begin{proof}
+Need to construct for any $\alpha:\Gamma( W) \to \Gamma( V) $ a morphism $ \overline\alpha:V\to W$ s.t.
+\[ 
+	\tilde{\overline{\alpha}} = \alpha
+\]
+Suppose $V \subset \mathbb{A}^{n}, W \subset \mathbb{A}^{m}$ and write
+\[ 
+	\Gamma( V) = \faktor { k[x_1,\ldots,x_n]} { I( V) } \text{ and } \Gamma( W) = \faktor { k[y_1,\ldots,y_m]} { I( W) }
+\]
+Choose lifts $T_i$ of $\alpha( [ Y_i] ) $ in $k[x_1,\ldots,x_n]$ .\\
+In particular $\forall f \in\Gamma( W) $ and $F$ a lift,then
+\[ 
+\alpha( f) =F( T_1,\ldots,T_m) \mod I( V) 
+\]
+Then define $ T:\mathbb{A}^{n}\to \mathbb{A}^{m}:x\mapsto ( T_1( x) \ldots T_m( x) ) $ .\\
+We claim that $T( V) \subset W$ .\\
+From the diagram, we see that for any $G\in I( W) $, $G( T_1,\ldots,T_m) \in I( V) $, hence for any $v\in V$ , $0= G( T_1,\ldots,T_m) ( v) = G( T( v) ) $ which means that $T( v) \in W$.\\
+Now 
+\[ 
+	\tilde{\overline{\alpha}} :\Gamma( W) \to\Gamma( V) 
+\]
+satisfies $\forall v \in V\forall f \in\Gamma( W) $ 
+\[ 
+	\tilde{\overline{\alpha}}( v) =f( \overline{\alpha}( v) ) = f( T( v) ) = \alpha( f( v) ) \implies \tilde{\overline{\alpha}} = \alpha
+\]
+
+\end{proof}
+\begin{defn}
+	The quotient field $K( V) $ of $\Gamma( V) $ is called the field of rational function on $V$.
+\end{defn}
+Let $f\in K( V) $ is defined at a point $p\in V$ if we can write $f$ as the quotient $f= \frac{a}{b}$ and $b( p) \neq 0$.\\
+The pole set of $f\in K( V) $ is the set of points where $f$ is not defined.
+\begin{rmq}
+$\Gamma( V) $ is not a UFD in general, and so the presentation $ f= \frac{a}{b}$ is not unique.
+\end{rmq}
+\begin{exemple}
+$V= ( xy-zw) \subset \mathbb{A}^{4}$ and let $ \overline{x}, \overline{y}, \overline{z},\overline{w}\in\Gamma( V) $ be the respective images.\\
+Then $f= \frac{\overline{x}}{\overline{y}}= \frac{\overline{z}}{\overline{w}}$.\\
+Hence $f$ is defined whenever $Y\neq 0$ or $w\neq 0$ \\
+Hence the pole set of $f$ is $ \left\{ Y=0 \right\} \cap \left\{ W=0 \right\} $ 
+\end{exemple}
+\begin{defn}[Local Ring]
+	The local ring of $V$ at a point $p\in V$ is a subring $K( V) $ defined by
+	\[ 
+	\O_p( V) = \left\{ f\in K( V) | f \text{ defined at $p$  }  \right\} 
+	\]
+	
+\end{defn}
+We have natural inclusions $\Gamma( V) \subset \O_p( V) \subset K( V) $ 
+\begin{rmq}
+$\Gamma( V) , \O_p( V) $ and $K( V)  $ are intrinsic to $V$, ie. if $V\simeq W$ then $\Gamma( V) \simeq \Gamma( W) $ and $\O_p( V) \simeq \O_{p'} ( W) $ 
+\end{rmq}
+\begin{propo}
+Let $p\in V$ and $m_p \subset \Gamma( V) $ be the corresponding maximal ideal, then
+\[ 
+\O_p( V) \simeq \Gamma( V)_{m_p}  
+\]
+In particular $\O_p( V) $ is a noetherian local domain and we have that
+\[ 
+\Gamma( V) = \bigcap_{p\in V}  \O_p( V) \subset K( V) 
+\]
+
+\end{propo}
+\begin{proof}
+Recall that $m_p= \left\{ f\in\Gamma( V) | f( p) =0 \right\} $, then
+\begin{align*}
+	\Gamma( V) _{m_p} &= \left\{ f\in K( V) | f = \frac{a}{b}, b \notin m_p \right\} \\
+	&= \O_p( V) 
+\end{align*}
+The rest follows from standard properties of localization.\\
+In particular for any domain $R$ we have that
+\[ 
+R= \bigcap_{m \in R, m \text{ maximal } } R_m
+\]
+\end{proof}
+Notice that the notions of regular functions is sufficient to define morphisms of local rings etc.\\
+How can we extend this to quasi-affine varieties?
+\begin{exemple}
+Consider $ V( XY-1) \subset \mathbb{A}^{2}$ .\\
+There is a natural projection $\phi:V( XY-1) \to x\in \mathbb{A}^{1}$.\\
+The image of $\phi$ is $ \mathbb{A}^{n}\setminus \left\{ 0 \right\} $ quasi-affine and we'd like $\phi$ to be an isomorphism, ie.
+\[ 
+\phi^{-1}( x) = ( x, \frac{1}{x}) 
+\]
+Ie. the map $x\to \frac{1}{x}$ should be a regular function on $ \mathbb{A}^{1}\setminus \left\{ 0 \right\} $.
+\end{exemple}
+\begin{defn}
+	Let $V \subset \mathbb{A}^{n}$ be quasi-affine.\\
+	A map $f:V\to \mathbb{A}^{1}=k$ is called regular if $\forall v \in V$ there exists an open neighbourhood $v\in U \subset V$ and $g,h\in k[x_1,\ldots,x_n]$ s.t. $h( V) \neq 0 \forall x \in U$ and $f( x) = \frac{g( x) }{h( x) }$ 
+\end{defn}
+Why do we need the $U$ ?
+\begin{exemple}
+Consider again $V= V( XY-ZW) \setminus V( Y,W) $ and consider $f= \frac{x}{w}= \frac{z}{y}$ on $V$.\\
+None of the two presentations works on $V$ 
+\end{exemple}
+\begin{defn}
+	Let $\O( V) $ be the ring of regular functions on $V$ 
+\end{defn}
+\begin{rmq}
+$f: V \mathbb{A}^{1}\setminus \left\{ 0 \right\} \to \mathbb{A}^{1}: x\mapsto \frac{1}{x}$ is regular.\\
+Then we may take $U=V$, it is not hard to see that
+\[ 
+	\O( V) = k[x] [ \frac{1}{x},\frac{1}{x^{2}},\ldots] 
+\]
+In particular $\O( V) \supsetneq \Gamma( \mathbb{A}^{1}) $ 
+\end{rmq}
+If $V \subset \mathbb{A}^{n}$ is affine, then we have $ k[x_1,\ldots,x_n]\to \O( V): F \mapsto \left( v\mapsto F( v) \right)  $ .\\
+\begin{propo}
+For $V$ affine, we have that $\Gamma( V) \simeq \O( V) $.
+\end{propo}
+\begin{proof}
+We have $O( V) \subset O_p(V ) $ $\forall p\in V$ hence $\Gamma( V) \hookrightarrow O( V) \hookrightarrow \bigcap_{p\in V} O_p( V) = \Gamma( V) $ 
+\end{proof}
+\begin{lemma}
+Let $V$ be a quasi-affine subset and $f:V\to \mathbb{A}^{1}$ regular, then $f$ is continuous ( with respect to the Zariski topology) 
+\end{lemma}
+\begin{proof}
+It is enough to show that $f^{-1}( X) $ is closed for any closed $X$ .\\
+Without loss of generality $X= \left\{ x \right\} $.\\
+Let $V = \cup_i U_ii$ a cover such that $f|_{U_i} = \frac{g_i}{h_i}$ and $h_i\neq 0$ on $U_i$.\\
+Then $f^{-1}( X) \cap U_i = \left\{ v\in U_i | f( v) = \frac{g_i( v) }{h_i( v) } \right\}= \left\{ v\in U_i| x\cdot h_i( v) - g_i( v) =0 \right\}  $ which is an algebraic set.\\
+Hence $f^{-1}( X) \cap U_i$ is closed which implies $f^{-1}( X) $ is closed.
+\end{proof}
+\begin{crly}
+Let $f,g\in O( V) $ and $U \subset V$ non empty and open s.t. $f|_U= g|_U$ then $f=g$ 
+\end{crly}
+\begin{proof}
+Using an exercise, open subsets are dense, since $f,g$ are continuous
+\[ 
+f|_U = g|_U \implies f|_{ \cl U} = f|_{ \cl V} 
+\]
+
+\end{proof}
+\begin{rmq}
+Let $U \subset V$ open, then the restriction of functions induces $\O( V) \to \O( U) $.\\
+i.e. $\O( -) $ defines a sheaf of $k$-algebras on $V$.\\
+Using this one can define a general algebraic as a topological space $X$ with some sheaf $\O_X$ which locally looks like a quasi-affine variety $V$ with $\O( -) $.\\
+We'll define $\O_p( V) $ and $K( V) $ for $V$ quasi-affine, but these depend only on "local structure".\\
+We can guess $\O_p( V) = \O_p( \cl V) $ and similarly for the quotient field.
+\end{rmq}
+\section{( Quasi-)Projective and general algebraic varieties}
+Affine varieties usually "go to infinity" when we draw them.\\
+This leads to complications in the theory
+\begin{exemple}
+Two distinct lines in $ \mathbb{A}^{2}$ they will intersect in $1$ point unless they're parallel
+\end{exemple}
+\subsection{Projective space}
+\begin{defn}[Projective n-space]
+$\mathbb{P}^{n}$ is the set 
+\[ 
+	\mathbb{P}^{n} = \faktor { K^{n+1}\setminus \left\{ 0 \right\} } { \sim} 
+\]
+Where we identify 
+\[ 
+	( x_1,\ldots, x_{n+1} ) \sim ( y_1,\ldots, y_{n+1} ) \text{ if  } \exists \lambda \in K^{\ast} \text{ s.t. } x_i = \lambda y_i
+\]
+Elements in $ \mathbb{P}^n$ 	are called points.
+\end{defn}
+If $p\in \mathbb{P}^{n}$ is the equivalence classe of $ ( x_1,\ldots, x_{n+1} )\in \mathbb{A}^{n+1} $ we write
+\[ 
+p = [ x_1:\ldots:x_n] 
+\]
+$x_1,\ldots, x_n$ are the homogenuous coordinates of $p$.
+\begin{rmq}
+Any point in $ \mathbb{A}^{n}\setminus \left\{ 0 \right\} $ defines a line through the origin and $x,y\in \mathbb{A}^{n}\setminus \left\{ 0 \right\} $ define the same line iff $x=\lambda y$ 
+\end{rmq}
+
+	
+
+	
+\end{document}	

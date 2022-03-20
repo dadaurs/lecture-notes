@@ -37,7 +37,7 @@ Hence $R_\nu$ is closed under multiplication.
 \subsubsection*{ $R_\nu$ is closed under addition}
 Indeed, let $x,y\in R_\nu$, now $ \nu( x+y) \geq \min ( \nu( x) ,\nu( y) ) \geq 0$ hence $x+y\in R_\nu$.\\
 
-This show that $R_\nu$ is a subring of $K$.
+This shows that $R_\nu$ is a subring of $K$.
 \section{$K$ is the fraction field of $R_\nu$ }
 We explicit an isomorphism between $K$ and $\fr R_\nu$.\\
 Let $j: R_\nu \to K$ be the inclusion of $R_\nu$ in $K$, this is obviously a ring homomorphism.\\
@@ -53,16 +53,22 @@ Now applying the universal property of the fraction field to $j$, we get a uniqu
 Recall from the proof of the universal property of the fraction field that $\phi$ is defined by
 $\phi( \frac{a}{b}) = \iota( a) \cdot \iota( b) ^{-1}$.\\
 We now show $\phi$ is injective.\\
-Indeed, suppose $\phi( \frac{a}{b}) = \phi( \frac{c}{d}) $, then $j ( a) j( b) ^{-1}= j( c) j( d)^{-1}\implies j(a ) j( d) = j( c) j(b) $, ie. that $ad= cb$, which in turn implies $\frac{a}{b}= \frac{c}{d}$ in $ \fr R_\nu$.\\
+Indeed, suppose $\phi( \frac{a}{b}) = \phi( \frac{c}{d}) $, then $j ( a) j( b) ^{-1}= j( c) j( d)^{-1}\implies j(a ) j( d) = j( c) j(b)\iff j( ad) = j( cb) $, ie. that $ad= cb$, which in turn implies $\frac{a}{b}= \frac{c}{d}$ in $ \fr R_\nu$. Here we used the fact that $j$ is injective. \\
 Thus, we only need to show that $\phi$ is surjective.\\
 Let $a\in K$, if $\nu( a) \geq 0$, then clearly $ \phi( \frac{a}{1}) = j( a) \cdot 1= a$.\\
-If $\nu( a) <0$, then notice that $\frac{1}{\frac{1}{a}}\in \fr R_\nu$  $\phi( \frac{1}{\frac{1}{a}}) = j( 1) \cdot j( \frac{1}{a})^{-1} = a $ 
+If $\nu( a) <0$, then notice that $\frac{1}{\frac{1}{a}}\in \fr R_\nu$ since $ \nu( 1) = \nu( \frac{a}{a}) = \nu( a) + \nu( \frac{1}{a}) \iff \nu( a) = -\nu( \frac{1}{a}) $, hence if $a$ has a negative valuation, $\frac{1}{a}\in R_\nu$   \\
+Finally the following calculation shows that $\phi$ is surjective.
+\[
+\phi\left( \frac{1}{\frac{1}{a}}\right) = j( 1) \cdot j\left( \frac{1}{a}\right)^{-1} = a 
+\]
+Hence $ \fr R_\nu \simeq K$ which concludes the proof.
+
 \section{ For every $x\in \mathbb{Z}, \nu( x) \geq 0$ }
 Obviously $ \nu( 0) $ is undefined so I guess this is a typo and I show the result for $ \mathbb{Z}\setminus \left\{ 0 \right\} $.\\
 
 Indeed, since $\nu( 1) =\nu( -1) =0$, we get $\forall x \in \mathbb{Z}, x >0$ 
 \[ 
-\nu(x) = \nu( \underbrace{1+\ldots + 1}_{ x \text{ times } }) \underbrace{\geq}_{ \text{ since $\nu$ is a valuation } } 1 
+\nu(x) = \nu( \underbrace{1+\ldots + 1}_{ x \text{ times } }) \underbrace{\geq}_{ \text{ since $\nu$ is a valuation } } 0 
 \]
 Similarly, if $x<0$, we may write $ \nu( x) = \nu( \underbrace{-1\ldots-1}_{x \text{ times } }) \geq 0 $ by the same argument as above.
 \section{ If $\nu( p) =0$ for all primes $p$, then $\nu$ is trivial.}
@@ -88,7 +94,7 @@ Combining both observations above, we get that $ \forall \frac{c}{d}\in \mathbb{
 \[ 
 \nu( \frac{c}{d}) = \nu( p^{i} \frac{c'}{d'}) =\nu(p^{i}) + \nu( \frac{c'}{d'}) = i\cdot c
 \]
-where in the first equality, we have simply isolated all factors from $c$ and $d$ which are powers of $p$.\\
+where in the first equality, we have simply isolated all factors from $c$ and $d$ which are powers of $p$, hence implying that $c'$ and $d'$ are both coprime to $p$\footnote{One can always do this, simply consider the prime decomposition of $c$ and $d$ and isolate all powers of $p$.}.\\
 We now show that $\nu_p$ is indeed a discrete valuation on $ \mathbb{Q}$ when $c=1$.\\
 Let $ p^{i} \frac{a}{b}, p^{j} \frac{c}{d}\in \mathbb{Q}$ be fractions of the form stated in the instruction.\\
 We then have $\nu\left( p^{i} \frac{a}{b} p^{j} \frac{c}{d}	\right) = \nu( p^{i+j} \frac{ac}{bd})  $, since both $ac$ and $bd$ are prime to $p$, we get $\nu\left( p^{i+j} \frac{ac}{bd}\right) = ( i+j )\cdot c = i+j$, showing the first property of a discrete valuation.\\
@@ -96,11 +102,15 @@ Now suppose without loss of generality, that $ i<j$, then we may write
 \[ 
 \nu( p^{i}\frac{a}{b}+ p^{j}\frac{c}{d}) = \nu\left( p^{i}\left( \frac{a}{b}+ p^{j-i} \frac{c}{d}\right) \right) 
 \]
-Furthermore, note that $ \frac{a}{b}+ p^{j-i}\frac{c}{d}= \frac{ad+ p^{j-i}cb}{bd}$, notice that $bd$ is clearly prime to $p$, furthermore, if $ad + p^{j-i}cb$ was not prime to $p$, then in particular $ p | ad$ contradicting our hypothesis.\\
+Furthermore, note that $ \frac{a}{b}+ p^{j-i}\frac{c}{d}= \frac{ad+ p^{j-i}cb}{bd}$, notice that $bd$ is clearly prime to $p$, furthermore, we may write
+\[ 
+ad+ p^{j-i}cb = p^{k} l \text{ for some integers  } k \text{ and } l.
+\]
 From this, we deduce that 
 \[ 
-\nu( p^{i} \frac{a}{b}+ p^{j} \frac{c}{d}) = \min ( i,j) 	
+\nu( p^{i} \frac{a}{b}+ p^{j} \frac{c}{d}) = \nu( p^{i}) + \nu( p^{k}l) \geq \nu( p^{i}) \geq  \min ( i,j) 	
 \]
+Where the last inequality followed from our assumption that $i < j$.
 \section{Valuation ring of $\nu_p$ is not $ \mathbb{Z}$ }
 Indeed, to show this we simply have to find an element of $ R_{ \nu_p }$ which is not in $ \mathbb{Z}$, to see this take any integer $a\in \mathbb{Z}$ prime to $p$ and note that
 \[ 
