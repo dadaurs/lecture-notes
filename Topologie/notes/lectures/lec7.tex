@@ -1,0 +1,102 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Mon 21 Mar}{Groupe Fondamental}
+\subsection{Groupe Fondamental}
+Un lacet 
+\[ 
+\alpha: I \to X
+\]
+est une application satisfaisant $\alpha( 0) = x_0 = \alpha( 1) $ ce qui signifie qu'il existe une application induite
+\[ 
+\overline{\alpha}:S^{1}\to X
+\]
+Et on note alors
+\[ 
+\pi_1( X,x_0) = \pi_1X = [ ( S^{1},1) , ( X,x_0) ] 
+\]
+$\pi_1 X$ a une structure de groupe donnee par la concatenation de lacets $\alpha \star \beta$ 
+\begin{defn}[Pinch and Fold]
+	L'application pinch
+	\[ 
+	pinch: \sum A = \faktor { A\times I} { \sim} \to \faktor { \sum A} { A\times \frac{1}{2}} \simeq \sum A \vee \sum A
+	\]
+	
+\end{defn}
+\begin{defn}[Fold]
+	Le pliage est une application
+	\[ 
+	\nabla: X\vee X \to X
+	\]
+	definie par la propriete universelle du pushout du diagramme $ X\leftarrow \ast \rightarrow X$ avec le cone $\id_X:X\to X$ 
+\end{defn}
+La concatenation de deux lacets $\alpha,\beta: S^{1}\to X$ est representee par
+\[ 
+	\alpha \ast \beta: S^{1}\xrightarrow{ \text{ pinch } }  S^{1}\vee S^{1} \xrightarrow{\alpha\vee \beta} X\vee X \xrightarrow{\nabla} X
+\]
+On a vu que la concatenation equipe $ [ S^{1},X] _\ast$ d'une structure de groupe.\\
+L'associativite du groupe fondamental revient a dire que le diagramma suivant commute:
+A REMPLIR\\
+
+En fait le groupe fondamental $\pi_1$ est un foncteur $\top_\ast \to \gr$, des espaces pointes vers les groupes 
+\begin{propo}
+Une application pointee $f:X\to Y$ induit un homomorphisme de groupes $f_\ast:\pi_1 X\to \pi_1$ 
+\end{propo}
+\begin{proof}
+On sait que la postcomposition avec $f$ induit une application $f_\ast: [ S_1, X]_\ast \to [ S_1, Y]_\ast $.\\
+On montre que c'est un homomorphisme.\\
+Soient $\alpha,\beta: S^{1}\to X$, pointees, alors le diagramme suivant commute
+A REMPLIR\\
+
+On a que $1$ et $2$ commutent et 3 commute aussi par la propriete universelle 
+\end{proof}
+On souhaite calculer $\pi_1( X\times Y) $, on note $C_\ast ( S^{1},X) $ l'ensemble des applications pointees $\alpha: S^{1}\to X$.\\
+Le groupe $\pi_1 ( X) $ en est un quotient $ [ S^{1},X]_\ast =\faktor { C_\ast ( S^{1}, X)  } { \simeq} $.\\
+La propriete universelle du produit est qu'une application $\omega: S^{1}\to X\times Y$ est donnee par ses projections $p_1\circ \omega$ et $p_2\circ \omega$, ie.
+\begin{align*}
+F: C_\ast ( S^{1}, X) \times C_\ast ( S^{1},Y) \to C_\ast ( S^{1},X\times Y) \\
+( \alpha,\beta) \mapsto(  \omega: S^{1}\to X\times Y)
+\end{align*}
+est une bijection d'inverse 
+\[ 
+G: C_\ast( S^{1},X\times Y) \to C_\ast ( S^{1}, X) \times C_\ast ( S^{1},Y) 
+\]
+donne par la projection.
+\begin{propo}
+	Le foncteur $\pi_1$ preserve les produits.
+\end{propo}
+\begin{proof}
+Les bijections $F$ et $G$ passent au quotient.\\
+On montre que si $\alpha\simeq \alpha', \beta\simeq \beta'$, alors $F( \alpha,\beta) \simeq F( \alpha',\beta') $ et de meme, si $\omega\simeq \omega'$, alors la postcomposition par $p_i$ donne des applications homotopes.\\
+La compatibilite avec la structure de groupes vient du fait que $G$ est definie par $( p_1) _\ast$ et $( p_2 )_\ast$ sur les deux composantes.
+\end{proof}
+\subsection{Surfaces}
+\begin{defn}[Surface]
+	Une surface $S$  est un espace topologique connexe par arcs, compact, sans bord tel que tout point $s\in S$ admet un voisinage ouvert $U$ homeomorphe a $D^{2}$ avec $\del U \simeq S^{1}$ 
+\end{defn}
+\begin{defn}[Somme connexe]
+	Soient $S$ et $T$ deux surfaces, la somme connexe $S\# T$ est la surface obtenue en choisissant $s\in S, t\in T$ , des voisinages $s\in U\simeq D^{2}$ et $t\in V$ et un homeomorphisme $f:\del U \to S^{1}\to \del V$ et en recollant
+	\[ 
+		S\# T = \faktor { ( S\setminus U) \coprod }{x\simeq f( x) } \quad \forall x \in \del U
+	\]
+	
+\end{defn}
+\begin{rmq}
+$ S\# T$ est bien defini ( sans preuve), de plus
+\[ 
+T \# S^{2}\simeq T
+\]
+
+\end{rmq}
+
+\begin{exemple}
+$T^{2}\# T^{2}$ est une surface de genre 2, un tore a deux trous.
+\end{exemple}
+
+
+	
+
+
+
+	
+\end{document}	
+

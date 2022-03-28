@@ -16,7 +16,7 @@
 \author{David Wiedemann}
 \maketitle
 \section*{1}
-Indeed, let $\frac{a}{b}\in \mathbb{Q}$ in reduced form such that $\nu_p(\frac{a}{b} )=0 $. By the definition of $p$-adic, this means that we may suppose both $a$ and $b$ share no common factors with $p$, then $\frac{b}{a}$ also shares no common factor with $p$ and hence $\nu_p( \frac{b}{a}) =0$, implying $ \frac{b}{a}\in R_\nu$.\\
+Indeed, let $\frac{a}{b}\in \mathbb{Q}$ in reduced form such that $\nu_p(\frac{a}{b} )=0 $. By the definition of $p$-adic valuation, this means that we may suppose both $a$ and $b$ share no common factors with $p$, then $\frac{b}{a}$ also shares no common factor with $p$ and hence $\nu_p( \frac{b}{a}) =0$, implying $ \frac{b}{a}\in R_\nu$.\\
 Finally, $\frac{a}{b}\cdot \frac{b}{a}= \frac{1}{1}$ which finally implies that $\frac{a}{b}$ is invertible in $R_\nu$.
 \section*{2}
 First we show that all $( p^{n}) $ are distinct ideals of $ R$, indeed suppose there exists $a,b \in \mathbb{N}$ such that $ ( p^{a}) = ( p^{b} )$, without loss of generality suppose $a<b$.\\
@@ -30,7 +30,7 @@ Note that we may write $ y = p^{a} \frac{d}{c}$ where $d$ and $c$ are coprime to
 By part $1$, we know that $\frac{d}{c}$ is invertible, hence implying that ( since $I$ is an ideal) $p^{a}\in I$.\\
 
 We pretend that $ I = ( p^{a}) $, to do this, we show the double inclusion.\\
-First, note that, since by definition $ p^{a}\in I$, we immediatly get that $ ( p^{a}) \subset I$ since $( p^{a}) $ is the smallest ideal containing $ p^{a}$.\\
+First, note that, since by construction $ p^{a}\in I$, we immediatly get that $ ( p^{a}) \subset I$ since $( p^{a}) $ is the smallest ideal containing $ p^{a}$.\\
 Furthermore, let $x \in I$, then by definition of $a$, $\nu( x) \geq a$.\\
 We may then write $x = p^{\nu( x) }\frac{d}{c} = p^{a} p^{\nu( x) -a}\frac{d}{c}$ where $d$ and $c$ are coprime to $p$, this implies that $x\in ( p^{a}) $.\\
 Hence, if $I$ is a  non-zero ideal, $I$ is of the form $p^{n}$ for some $n$ and since these ideals are disjoint, we have characterised all of them.
@@ -40,11 +40,14 @@ Hence consider the composition $ \mathbb{Z} \xhookrightarrow{\iota} R \xmapsto{q
 Furthermore define $ q: \mathbb{Z}\to \faktor { \mathbb{Z}} { ( p^{n}) } $ to be the canonical projection.\\
 We now pretend that $\ker ( q_R\circ \iota) = \ker q = ( p^{n}) $.\\
 
-Indeed if $ a \in \ker q = ( p^{n}) $, then $p^{n}| a$ hence $p^{n}| \iota( a) \implies q_R( a) = 0$.\\
-Similarly, if $ r\in \ker( q_R\circ \iota) $, then $p^{n}| r$, ie. there exists $ \frac{a}{b}\in R$ ( in reduced form)  such that
-$p^{n}\frac{a}{b} = r$ since $\nu( \frac{a}{b}) \geq 0$, in particular we may suppose $b$ is coprime to $p$.\\
-Hence, since $p^{n} \frac{a}{b}$ is an integer, $b| a$ implying $b=1$.\\
-Finally, this means that there exists an integer $a$ such that $p^{n} a = r$ which means that $a\in ( p^{n}) = \ker q$.\\
+Indeed if $ a \in \ker q = ( p^{n}) $, then $p^{n}| a$ hence $p^{n}| \iota( a) \implies q_R(\iota ( a )) = 0$.\\
+
+Similarly, now suppose $r\in \ker ( q_R\circ\iota) $, this means that $\iota( r) \in \ker q_R = ( p^{n}) $ (where now $( p^{n}) \subset R$).\\
+Hence there exists $ \frac{a}{b}\in R$ (where we suppose $ \gcd( a,b) = 1 $ without loss of generality) such that $ p^{n} \frac{a}{b}= \iota( r) $.\\
+Now, since $\frac{a}{b}\in R$, $\nu( \frac{a}{b}) \geq 0$ which implies in particular that $b$ is coprime to $p$.\\
+Hence, since $\iota( r) $ is an integer, $ \frac{a}{b}$ has to be an integer which implies $b=1$.\\
+Thus $ p^{n}a = \iota( r) \implies p^{n}a = r $  (in $ \mathbb{Z}$), ie. $ r \in ( p^{n}) \subset \mathbb{Z}$.
+
 Hence applying the universal property of the quotient ring, we get an induced morphism as such:
 \[\begin{tikzcd}
 	{\mathbb{Z}} & {\faktor{R}{(p^n)}} \\
@@ -55,37 +58,15 @@ Hence applying the universal property of the quotient ring, we get an induced mo
 \end{tikzcd}\]
 We pretend that it is now sufficient to show that $q_R \circ\iota$ is surjective to show that $\phi$ is indeed an isomorphism.\\
 Before showing that $q_R \circ\iota$ is surjective, we show how this implies $\phi$ is an isomorphism.\\
-Indeed, suppose $q_R\circ\iota$ is surjective, since $\ker q_R\circ\iota = \ker q$ the universal property of the quotient implies that there exists a unique map $\psi: \faktor { R} { ( p^{n}) }\to \faktor { \mathbb{Z}} { ( p^{n}) }  $ making the following diagram commute
-\[\begin{tikzcd}
-	{\mathbb{Z}} & {\faktor{\mathbb{Z}}{(p^n)}} \\
-	{\faktor {R}{(p^n)}}
-	\arrow["{q_R\circ\iota}"', from=1-1, to=2-1]
-	\arrow["q", from=1-1, to=1-2]
-	\arrow["{\exists ! \psi}"', dotted, from=2-1, to=1-2]
-\end{tikzcd}\]
-Finally, we pretend that $\psi$ is an inverse to $\phi$, indeed, notice that the following diagrams commute:
-\[\begin{tikzcd}
-	{\faktor {R}{(p^n)}} && {\faktor {\mathbb{Z}}{(p^n)}} \\
-	{\mathbb{Z}} & {\faktor{\mathbb{Z}}{(p^n)}} & {\mathbb{Z}} & {\faktor {R}{(p^n)}} \\
-	{\faktor {R}{(p^n)}} && {\faktor {\mathbb{Z}}{(p^n)}}
-	\arrow["{q_R\circ\iota}"', from=2-1, to=3-1]
-	\arrow["q", from=2-1, to=2-2]
-	\arrow["{q_R\circ \iota}", from=2-1, to=1-1]
-	\arrow["\phi"', from=2-2, to=1-1]
-	\arrow["\psi"', from=3-1, to=2-2]
-	\arrow["q"', from=2-3, to=3-3]
-	\arrow["q", from=2-3, to=1-3]
-	\arrow["\phi"', from=3-3, to=2-4]
-	\arrow["\psi"', from=2-4, to=1-3]
-	\arrow["{q_R\circ\iota}"{description}, from=2-3, to=2-4]
-\end{tikzcd}\]
-Hence $q_R\circ\iota= \psi\circ\phi\circ q_R\circ\iota$ and a finaly application of the universal property of the quotient implies that $\psi\circ\phi= \id_{\faktor { R} { ( p^{n}) } } $.\\
-This shows that $ \faktor { R} { ( p^{n} )}\simeq \faktor { \mathbb{Z}} { ( p^{n}) }  $.\\
+Indeed, if $ q_R\circ \iota$ is surjective, then
+\[ 
+\faktor { R} { ( p^{n}) } \simeq \im q_R \circ\iota \underbrace{\simeq}_{ \text{ by first isom. theorem } } \faktor { \mathbb{Z}} { \ker q_R \circ\iota } \underbrace{\simeq}_{ \text{ since } \ker q_r\circ\iota = ( p^{n}) } \faktor { \mathbb{Z}} { ( p^{n}) } 
+\]\\
 
 
 
 We now show that $q_R \circ \iota$ is surjective.\\
-Let $ \left[ p^{i}\frac{a}{b} \right]\in \faktor { R} { ( p^{n}) }  $, where, as always, we have assumed $\frac{a}{b}$ is in reduced form and shares no factors with $p$.\\
+Let $ \left[ p^{i}\frac{a}{b} \right]\in \faktor { R} { ( p^{n}) }  $, where, again, we assume $\frac{a}{b}$ is in reduced form and shares no factors with $p$.\\
 To show this, we must find an integer $d \in \mathbb{Z}$ such that 
 \[ 
 \frac{a}{b}p^{i}- d = k p^{n}, \quad k \in R 
@@ -117,8 +98,11 @@ Applying $\phi$ to this chain yields a chain of ideals in $ R_q$
 \[ 
 	\phi( ( p )) \supsetneq \phi( (  p^{2} )) \supsetneq \ldots
 \]
-Using the result cited above, this immediatly implies that $\phi( ( p^{i}) ) = ( q^{i})  $.\\
-Since $R_p$ and $R_q$ are supposed isomorphic, we would need to have that $ \faktor { R_p} { ( p) } \simeq \faktor { R_q} { ( q) } $ are isomorphic. Using part 3, this would imply that $ \faktor { \mathbb{Z}} { ( q) }\simeq \faktor { \mathbb{Z}} { ( p) } $ which is a contradiction, since they are not even in bijection as sets.\\
+Using the result cited above, this immediatly implies that $\psi( ( p^{i}) ) = ( q^{i})  $.\\
+In particular, $ ( p) $ is a maximal ideal and $\phi$ takes maximal ideals to maximal ideals, hence we get that $\phi( p) = ( q) $ .\\
+Since $R_p$ and $R_q$ are supposed isomorphic, we would need to have that $ \faktor { R_p} { ( p) } \simeq \faktor { R_q} { ( q) } $ are isomorphic.\\
+Indeed, consider $q_q\circ\psi: R_p\to \faktor{R_q}{( q) }$ the composition of the isomorphism with the canonical quotient map and $q_p: R_p \to \faktor{R_p}{( p) }$ since $( p) = \psi^{-1}( ( q) ) $ and $q_q\circ\psi$ is surjective, we conclude by the first isomorphism theorem that $\faktor { R_p}{( q) } \simeq \faktor { R_q} { ( q) }  $.\\
+Using part 3, this would imply that $ \faktor { \mathbb{Z}} { ( q) }\simeq \faktor { \mathbb{Z}} { ( p) } $ which is a contradiction, since they are not even in bijection as sets.\\
 
 We now show the result cited at the beginning of part 4.\\
 So let $ \phi: A \to B $ be an isomorphism of rings and let $I \subset A$ be an ideal, then $\phi( I) $ is an ideal since:
@@ -126,7 +110,8 @@ So let $ \phi: A \to B $ be an isomorphism of rings and let $I \subset A$ be an 
 \item Clearly $\phi( I) $ is an additive subgroup since $\phi( 0) = 0 \in \phi( I) $ and $\phi( a) + \phi( b) = \phi( a+b) \in\phi( I) $.
 \item Let $\lambda\in B$ and $\phi( a) \in \phi( I) $, then $ \lambda\phi( a) = \phi( \phi^{-1}( \lambda) ) \phi( a) = \phi( \underbrace{\phi^{-1}( \lambda) a}_{\in I	})\in \phi( I)$. 
 \end{itemize}
-This correspondence is clearly a bijection between the ideals of $A$ and $B$ since $\phi$ is a bijection and the correspondence obviously preserves inclusions since maps of set preserve inclusions.
+This correspondence is clearly a bijection between the ideals of $A$ and $B$ since $\phi$ is a bijection and the correspondence obviously preserves inclusions since maps of set preserve inclusions.\\
+In particular, if $\mathrm{m} $ is a maximal ideal, then $\phi( \mathrm{m} ) $ is maximal since if $B \supsetneq J \supsetneq \phi( \mathrm{m}) $, then $A \supsetneq\phi^{-1}( J) \supsetneq \mathrm{m}$.
 
 
 
