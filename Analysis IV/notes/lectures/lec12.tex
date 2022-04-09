@@ -1,0 +1,122 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Wed 06 Apr}{there exist measurable sets which are not Borel}
+\subsection{$ \mathcal{B} \subsetneq M$ }
+Let $C$ be the cantor set.\\
+Let $x\in ( 0,1) $ and write $x= 0.\epsilon_1\epsilon_2\ldots$ where $\epsilon_i \in \left\{ 0,1 \right\} $, ie. it's binary expansion.\\
+Write $f( x) = \sum_{k=1}^{ \infty } \frac{2 \epsilon_i}{3}$
+\begin{lemma}
+$f( [ 0,1] ) \subset C$ , $f$ is strictly monotone and therefore measurable.
+\end{lemma}
+\begin{proof}
+$f( x) $ in ternary representation has digits $2\epsilon_k = 2$ or $0$, hence is in the cantor set.\\
+Let $ \sum_{}^{ } \frac{a_n}{2^{n}}=x<y= \sum_{}^{ } \frac{b_n}{2^{n}}$.\\
+Let $k>1$ such that $a_n=b_n\forall n <k$ and $a_k \neq b_k$.\\
+Then $f( y) - f( x) = \sum_{ n \geq k}  \frac{2( b_n-a_n )}{3}= \frac{2}{3^{k}} + \sum_{ n \geq k+1 }^{ } \frac{2( b_n-a_n) }{3^{n}}> \frac{2}{3^{k}} - \sum_{ n \geq k+1}^{ } \frac{2}{3^{n}} = 0$ 
+\end{proof}
+\begin{lemma}
+Let $f: \mathbb{R}\to \mathbb{R}$ measurable, $B\in \mathcal{B}$, then $f^{-1}( B) $ is measurable.
+\end{lemma}
+\begin{proof}
+Claim: $A_f = \left\{ B \subset \mathbb{R} | f^{-1}( B) \text{ is measurable. }  \right\} $ is a $\sigma$-algebra containing intervales.\\
+Then, since $ \mathcal{B}$ is the smallest $\sigma$-algebra containing intervals, we conclude.
+\end{proof}
+Now we can show that there exist measurable sets which are not Borel.
+\begin{proof}
+Let $V \subset [ 0,1] $ non-measurable and write $B= f( V) \subset f( [ 0,1] ) = C $ where $f$ is the lebesgue function.\\
+We claim $B$ is not Borel.\\
+Let's assume by contradiction that $B$ is Borel.\\
+Then $f^{-1}( B) $ is measurable by the lemma above.\\
+However, $f^{-1}( f( V) ) =V$ which is not measurable.
+\end{proof}
+\section{Fourier Analysis}
+\subsection{Derivation of the heat equation}
+Consider a metal plate $\Omega \subset \mathbb{R}^{2}$.\\
+We want to study the temperature $u( t,x,y) $.\\
+Newton's cooling law dictates that heat flows from higher to lower temperatures at a rate proportionale to the difference of temperatures.\\
+Consider $S$  a small square, the heat "in $S$ " is defined as $ \int_{ S }^{  } u( t,x,y) $ and the heat flow in $S$ is $ \frac{\del}{\del t} \int_{ S }^{  }u( t,x,y) = \int_{ S }^{  } \del_t u( t,x,y) \simeq h^{2} \del_t u( t,x_0,y_0) $ \\
+Then the heat flow through the boundary $\del S$ is 
+\begin{align*}
+k h\del_x u( t,x_0+ \frac{h}{2}, y_0) - kh \del_x u( x_0-\frac{h}{2}, y_0) + k h \del_{y} u( t,x_0, y_0+\frac{h}{2})  - kh \del_y( t,x_0,y_0-\frac{h}{2}2)\\
+\simeq kh^{2} \del_{xx  } u( t,\xi,y_0) + kh \del_{yy} u( t,x_0,\xi')
+\end{align*}
+Now newton's law implies
+\[ 
+h^{2} \del_t u( t,x_0,y_{0}) = kh^{2} ( \del_{xx} u( t,\xi,y_0) + \del_{yy} u( t,x_0,\xi') )  
+\]
+Now we cancel $h^{2}$ and find
+\[ 
+\del_t u( t,x,y)  = k \del_{xx} u( t,x,y) + k\del_{yy} u( t,x,y) 
+\]
+So now we consider the Dirichlet problem in $D= \left\{ ( x,y) : x^{2} + y^{2} \leq 1\right\} $ 
+We fix boundary conditions $u( 1,\theta) = f( \theta) $ ( where we now have polar coordinates).\\
+We now rewrite the pde in polar coordinates.
+\[ 
+\Delta u = \del_{rr} u + \frac{1}{2}\del_r u + \frac{1}{r^{2}}\del_{\theta\theta} u
+\]
+So our PDE reads 
+\begin{align*}
+\begin{cases}
+r^{2}\del_{rr} u + r \del_r u = - \del_{\theta\theta} u\\
+u( 1,\theta) = f( \theta) 
+\end{cases}
+\end{align*}
+For now, we look for solutions of the form
+\[ 
+u( r,\theta) = F( r) G( \theta) 
+\]
+So we get
+\[ 
+r^{2}F''(r)G( \theta)  + r F'( r) G( \theta) = F( r) G''( \theta) 
+\]
+Hence
+\[ 
+\frac{1}{F( r) }( r^{2} F''( r) + r F'(r) ) =- \frac{G''( \theta) }{G( \theta) }
+\]
+So both sides have to be constant, so we get a system
+\[ 
+\begin{cases}
+G'' + \lambda G = 0 \\
+r^{2} F'' + r f' - \lambda F = 0
+\end{cases}
+\]
+Solutions of the first ODE are $\cos(  \sqrt{\lambda} \theta), \sin(  \sqrt{\lambda } \theta) $ if $\lambda \geq 0$ or $ e^{ \sqrt{-\lambda}  \theta} $ if not, but the second kind of solutions are not periodic, so we discard them.\\
+The periodicity constraint also implies that $ \lambda = m^{2}, m \in \mathbb{N}$ \\
+So 
+\[ 
+G( \theta) = \tilde { A} \cos( m\theta)  + \tilde { B}  \sin( m\theta)  = A e^{im\theta} + B e^{-im\theta} 
+\]
+The solutions to $F( r) $ are of the form
+\begin{align*}
+\begin{cases}
+r^{m}\\
+r^{-m}\\  \text{ if }  m >0
+\log r \text{ if } m=0
+\end{cases}
+\end{align*}
+But we can reject the last two solutions as they blow up in the origin.\\
+\begin{rmq}
+Note that, if $u_1,u_2$ are solutions to the equation, then $ u_1+ u_2$ is too.
+\end{rmq}
+Hence, if $f( \theta) = \sum a_m e^{im\theta} $, then a solution of the heat equation is
+\[ 
+u( r,\theta) = \sum a_m r^{m} e^{im\theta} 
+\]
+So this motivates the leading question of Fourier analysis, namely:\\
+Given $f: [ 0,2\pi] \to \mathbb{R}$, when can we write it as above?
+
+
+
+
+
+	
+
+
+
+				
+
+
+
+
+	
+\end{document}	

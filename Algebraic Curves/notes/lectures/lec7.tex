@@ -1,0 +1,174 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Fri 08 Apr}{rational functions and dimension}
+\subsection{The field of rational functions}
+\begin{defn}[Field of rational functions]
+	$K( V) $ is the set of pairs $ ( U,f) $ with $U \subset V$ open and non-empty and $f$ a regular function on $U$ modulo the equivalence relation $( U,f) \sim ( U',f') $  iff $f=f'$ on $U\cap U'$ .
+\end{defn}
+\begin{rmq}
+Since $V$ is irreducible, any non-empty open is dense, hence $U\cap U'$ is non-empty and open as well.\\
+\end{rmq}
+Furthermore, note that $ [U,f ] $ has $\frac{1}{f}$ as an inverse.\\
+As in the affine case, we have inclusions
+\[ 
+\O( V) \hookrightarrow \O_p( V) \hookrightarrow K( V) 
+\]
+\begin{propo}
+\begin{enumerate}
+\item Let $V$ be an algebraic variety and $U \subset V$ open and non-emtpy.\\
+Then $K( V) = K( U) $ and $ \O_p( V) = \O_p( U) $ for any $ p\in U$ 
+\item For any algebraic variety $V$ and any $p\in V, K( V) $ is the quotient field of $\O_p( V) $.
+\item If $V$ is affine, then $\O_p( V) = \Gamma( V) _{m_p} $ for anu $p\in V$ and $K( V) $ is the quotient field at $\Gamma( V) $.\\
+	In particular all definitions of $K( V) $ and $\O_p( V) $ agree for affine varieties.
+\end{enumerate}
+\end{propo}
+\begin{rmq}
+\begin{enumerate}
+\item For $V \subset \mathbb{P}^{n}$ quasi-projective and $P\in V\cap U_i$ for some $i$, then $\O_p( V) = \O_p( \overline{V}) = \O_p( \overline{V}\cap U_i) $.\\
+	Since $U_i = \mathbb{A}^{n}, \overline{V}\cap U_i$ is affine and $\O_p( \overline{V}\cap U_i) = \Gamma( \overline{V}\cap U_i) _{m_p} $.\\
+	Thus $\O_p( V) $ is always an explicit localization( as any variety is quasi-projective). 
+\end{enumerate}
+\end{rmq}
+\begin{proof}
+\begin{enumerate}
+\item Immediate from the definition: $ [ W,f] \in \O_p( V)  $.\\
+We know that $ [ W,f] \sim [ W\cap U, f] \in \O_p( U)  $ so there is a bijection between the equivalence classes.\item As in the remark, we can reduce to the affine case and then it follows from the third part of the proposition.
+\item We have a map $\Gamma( V) \to \O_p( V) $ sending $\frac{f}{g}\to [ V, \frac{f}{g}] $.\\
+	It is injective by continuity ( as $V$ is open hence dense. ).\\
+	And also surjective by definition of $\O_p( V) $.\\
+	Indeed, any $ [ U,h] \in \O_p( V) $ is of the form $h = \frac{f}{g}$ with $g( u) \neq 0$ on $U$.\\
+	Since $U$ is quasi-affine , $f$ and $g$ are both quotients of regular functions  on $ V = \overline{U} $ .\\
+	Similarly, we have an inclusion $ Q( \Gamma( V) ) \hookrightarrow K( V) $ sending $ \frac{f}{g}\to   [ V, \frac{f}{g}] $.\\
+	But any $ [ U, h] \in K( V) $ is contained in $\O_p( V) \subset Q( \Gamma( V) )  $ for any $p\in U$ so we also have a reverse inclusion.
+\end{enumerate}
+
+\end{proof}
+\subsection{Dimension of a Variety}
+Should be a basic invariant, in fact it isn't.
+\begin{defn}[Dimension of a topological space ]
+	The dimension of a topological space $X$ is the largest integer $n$ such that there exists a chain $Z_n \supset \ldots \supset Z_1 \supset Z_0$ of distinct irreducible closed subsets of $X$ .\\
+	Then, the dimension of an algebraic set is it's dimension as a topological space.\\
+
+\end{defn}
+So now we'd like to relate this definition with the dimension theory for rings.\\
+Recall that in any ring $A$, the height $ht( p) $ of a prime ideal $P \subset A$ is the supremum of all integers $n$ such that $ \exists$ a chain $ p_{0} \subset \ldots \subset p_n = p$ of distinct prime ideals.\\
+The krull dimension of $A$ is defined as
+\[ 
+\dim A = \sup \left\{ ht( p) | p \subset A  \text{ prime } \right\} 
+\]
+\begin{propo}
+If $V \subset \mathbb{A}^{n}$ is an affine algebraic variety, then
+\[ 
+\dim V = \dim \O( V) 
+\]
+
+\end{propo}
+\begin{proof}
+If $V_0 \subset V_1\ldots \subset V_d = V$ is a maximal chain of irreducible closed subsets of $V$, then ( $ d < \infty $ by Noetherianity), applying $I$ gives 
+\[ 
+I( V_1) \supset \ldots \supset I( V_d) = I( V) 
+\]
+is a chain of distinct prime ideals containing $I( V) $, so in the quotient we get a chain 
+\[ 
+p_0 \supset \ldots p_d = ( 0) \text{ in  } \O( V) 
+\]
+So $\dim \O( V) \geq \dim V$, we can of course go the other way to find $\dim \O( V)  \leq  \dim V$ 
+
+\end{proof}
+Computing dimensions is hard, the main tool is the following theorem
+\begin{thm}
+Let $K$ be a field and $B$ a domain, which is a finitely generated $K$-algebra, then
+\begin{itemize}
+\item 
+	\[ 
+	\dim B = \text{ transcendence degree of  } \faktor { Q( B) } { K} 
+	\]
+	
+\item For any prime ideal $p \subset B $ we have
+	\[ 
+	ht( p)  + \dim \faktor { B} { p} = \dim B
+	\]
+	
+\end{itemize}
+\end{thm}
+\begin{crly}
+$\dim \mathbb{A}^{n}= n$ 
+\end{crly}
+\begin{proof}
+We have that
+\[ 
+\dim \mathbb{A}^{n}= \dim K [ x_1,\ldots, x_n] = trdeg K( x_1,\ldots,x_n) = n
+\]
+\end{proof}
+\begin{crly}
+If $V \subset \mathbb{P}^{n}$ is a quasi-projective variety, then
+\[ 
+\dim \overline{V} = \dim V
+\]
+
+\end{crly}
+To prove this, we need the following lemma
+\begin{lemma}
+If $X$ is a topological space and $ \left\{ U_i \right\} $ a family of open subsets covering $X$, then
+\[ 
+\dim X = \sup_i \dim U_i
+\]
+
+\end{lemma}
+\begin{proof}
+Let $U_1,\ldots, U_{n+1} $ be the open charts of $ \mathbb{P}^{n}$, then $V_i = V \cap U_i$ gives an open cover of $V$ by quasi-affine varieties and $\overline{V}\cap U_i = \overline{V_i}$ where the second closure is taken in $\mathbb{U}_i \simeq \mathbb{A}^{n}$.\\
+If we know the corollary for quasi-affine varieties, we get that
+\[ 
+\dim \overline{V} = \sup \dim \overline{V_i}= \sup \dim V_i = \dim V
+\]
+Therefore, assume $V \subset \mathbb{A}^{n}$ is quasi-affine of dimension $d$ and let $z_0 \subset \ldots \subset z_d$ be a maximal chain of irreducibles in V.\\
+Hence $Z_d = V $ and $Z_0 = \left\{ x \right\} $.\\
+Let $m \subset \O( \overline{V}) $ be the maximal ideal corresponding to $x$, we claim that $ht( m) = d$.\\
+If this is true, then we have
+\[ 
+\dim \overline{V}= \dim \O( \overline{V}) = \dim \O( \faktor{ \overline{V} } { m} ) + \ht( m) = d 
+\]
+So now we have to prove the claim.\\
+Clearly $ht( m) \geq d$.\\
+Let $p_{0} \subset \ldots \subset p_r=m$ be a longer chain of distinct prime ideals in $ \O( \overline{V}) $.\\
+Set $W_i = V( p_i) \to \overline{V} = W_0 \supset \ldots \supset W_r = \left\{ x \right\} $.\\
+Intersecting with $V$ gives 
+\[ 
+	V = W_{0} \cap V \supset \ldots \supset W_r \cap V = \left\{ x \right\} 
+\]
+Since $W_i \cap V \subset W_i$ are open and non-empty, $W_i \cap V$ is irreducible.\\
+By maximality of the initial sequence $\exists i$ such that 
+\[ 
+W_i \cap V = W_{i+1} \cap V 
+\]
+But then $W_i = \overline { W_i \cap V} = \overline { W_{i+1} \cap V} = W_{i+1} $ which is a contradiction.
+\end{proof}
+From linear algebra, we would expect that if $V$ is given by $r$ "independent" equations should have dimension $n-r$.
+\begin{propo}
+	\begin{itemize}
+	\item 
+	Let $V$ be an affine variety of $\dim d$ and $H = V( F) \subset \mathbb{A}^{n}$ a hypersurface such that $V \subsetneq H$. Then every irreducible component of $V \cap H$ has dimension $d-1$.\\
+
+\item Let $I \subset K[x_1,\ldots,x_n]$ be an ideal that can be generated by $r$ polynomials, then every irreducible component of $V( I) $ has dimension $ \geq n-r$ 
+
+	\end{itemize}
+\end{propo}
+Note that it is \underline { not} true that if we choose the number of generators, we do not get equality
+\begin{exemple}
+	If $ I = ( XY,YZ) \subset K[x,y,z]$, then
+	\[ 
+	V( I) = V( Y) \cup V( X,z) 
+	\]
+	
+\end{exemple}
+
+
+
+
+
+
+				
+
+					
+
+\end{document}	

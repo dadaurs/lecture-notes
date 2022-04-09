@@ -1,0 +1,168 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{6}{Fri 01 Apr}{Algebraic varieties}
+\subsection{Quasi-projective and general varieties}
+\begin{defn}
+	A projective variety is a closed irreducible subset of $ \mathbb{P}^{n}$.\\
+	A quasi-projective variety is an open subset of a projective variety.\\
+	An algebraic variety is one of the four types we've seen: affine, quasi-affine, projective or quasi-projective.	
+\end{defn}
+\begin{rmq}
+In order to define morphisms between varieties, we need regular functions, ie. $ \O ( V) $ for $V$ quasi-projective.
+\end{rmq}
+\begin{defn}
+	Let $ V \subset \mathbb{P}^{n}$ be quasi-projective, a map $f: V\to k$ is regular at $p\in V$ if $\exists$ an open neighbourhood $p\in U \subset V$ and $g,h \in k[x_1,\ldots,x_{n+1} ]$ formes of the same degree such that $h( U) \neq 0$ and such that $f( u) = \frac{g( u) }{h( u) }$  
+\end{defn}
+\begin{exemple}
+Set $V= \mathbb{P}^{n}$ and take also $U=V$ in the definition, then $h( u) \neq 0 \forall u \in \mathbb{P}^{n}$ is only possible if $h$ is constant.\\
+In fact, constants are the only regular functions on $ \mathbb{P}^{n}$ and in fact on any projective variety.
+\end{exemple}
+\begin{defn}
+	We again, define $ \O ( V) $ the ring of regular functions on $V$.\\
+\end{defn}
+\begin{rmq}
+As in the quasi-affine case, regular functions are continuous for the Zariski topology.
+\end{rmq}
+\subsection{Morphisms}
+\begin{defn}[Morphism]
+	A morphism between two algebraic varieties $V,W$ is a continuous map $\phi:V\to W$ such that for every open $U \subset W$ and every $f\in \O( U) $ the map $\phi\circ f :\phi^{-1}( U) \to k$ is regular.
+\end{defn}
+$\phi$ is an isomorphism if $\exists  \psi: W\to V $ such that $ \phi\circ\psi$ and $\psi\circ\phi$ is the identity.
+\begin{rmq}
+In particular any $\phi:V\to W$ induces a map $\tilde { \phi} : \O ( W) \to \O( V) $ a $k$-algebra homomorphism.\\
+The converse is only true if $W$ is affine.
+\end{rmq}
+\begin{propo}
+The maps $\phi_i: \mathbb{A}^{n}\to U_i \subset \mathbb{P}^{n}$ are isomorphisms.\\
+In fact, for every $ V \subset \mathbb{A}^{n}$ quasi-affine, $\phi_i |_V$ is an isomorphism onto it's image $\phi_i( V) \subset \mathbb{P}^{n}$ which is quasi-projective. 
+\end{propo}
+\begin{proof}
+We may take $i= n+1$ and write $\phi= \phi_{n+1} : \mathbb{A}^{n}\to U$\\
+We know that $\phi$ is a homeomorphism, hence $\phi( V) $ is quasi projective since
+\[ 
+\phi( V) \subset \phi( \overline{V}) = \overline { \phi( V) } = \overline { \phi( V) }^{\ast} \cap U \subset \overline{  \phi( V)  } ^{\ast}
+\]
+Let $F$ be some regular function on some open $W \subset \phi( V) $.\\
+By shrinking if necessary we can write $F= \frac{G}{H}$ where $G$ and $H$ are forms of the same degree and $H( w) \neq 0 \forall w \in W$ .\\
+Then
+\[ 
+F\circ\phi = \frac{G\circ\phi}{H\circ\phi} = \frac{G_\ast}{H_\ast}
+\]
+and since $G_\ast$ and $H_{\ast} $ don't vanish on $\phi^{-1}( W) $ , $F\circ\phi$ is regular.\\
+Thus $\phi|_V$ is a morphism of algebraic varieties.\\
+Conversely, we have $\phi^{-1}: U\to \mathbb{A}^{n}$, let $W \subset V$, take $F\in \O( W) $, up to shrinking.\\
+Then $F\circ\phi^{-1} ( [ x_1:\ldots:x_{n+1} ] ) = \frac{G( \frac{x_1}{x_{n+1} },\ldots) }{H( \frac{x_1}{x_{n+1} },\ldots) }= x_{n+1}^{\alpha}	\frac{ G^{\ast}( [ x_1:\ldots:x_{n+1} ] ) } { H^{\ast}[x_1:\ldots:x_{n+1} ]} $.\\
+Now, if $\alpha \geq 0$ then $x_{n+1}^{\alpha}$ then $x_{n+1} ^{\alpha} G^{\ast}$ and $H^{\ast}$ are of the same degree.\\
+If $\alpha< 0$, then $G^{\ast}$ and $x_{n+1}^{-\alpha}H^{\ast}$.\\
+Hence $F\circ\phi^{-1}\in \O ( \phi( V) ) $ and hence $\phi^{-1}$ is a morphism.
+\end{proof}
+\begin{defn}
+	A variety is ( quasi-) affine or quasi-projective if $V$ is isomorphic to a quasi-affine or quasi-projective variety.
+\end{defn}
+\begin{crly}
+Any variety is quasi-projective.\\
+Every quasi-projective variety admits a finite open cover by  quasi-affine varieties namely $V = \bigcup_i V\cap U_i$ 
+\end{crly}
+\begin{proof}
+projective implies quasi-projective and affine implies quasi-affine and the theorem above gives quasi-affine implies quasi-projective.\\
+Furthermore, since $ \mathbb{P}^{n}= \bigcup_i U_i \implies V = \bigcup V\cap U_i$.\\
+If $V$ is projective,$V\cap U_i \subset U_i \simeq \mathbb{A}^{n}$ is closed and irreducible, hence $V\cap U_i$.\\
+Finally, if $V \subset \overline{V} \subset \mathbb{P}^{n}$ quasi-projective, then $V\cap U_i \subset \overline{V}\cap U_i$ is quasi-affine.
+\end{proof}
+\begin{exemple}
+	For any polynomial $f\in k[x_1,\ldots,x_n]$, $ \mathbb{A}^{n}\setminus V( f) $ is affine, but $ \mathbb{A}^{2}\setminus \left\{ 0 \right\} $ is not affine.
+\end{exemple}
+\begin{rmq}
+The above also shows that if $V$ is quasi-affine, then $\O( V) \simeq \O( \phi( V) ) $, hence all our definitions of $\O( -) $ are compatible.
+\end{rmq}
+The definition of a morphism is clean, but difficult to check in practice.\\
+It becomes easier if at least the target is affine:
+\begin{lemma}
+Let $\phi:V\to W$ be a map, suppose $W \subset \mathbb{A}^{n}$ affine, and $ x_i:\mathbb{A}^{n}\to \mathbb{A}^{1}$ coordinate functions, then $\phi$ is a morphism $\iff x_i\circ\phi: V\to \mathbb{A}^{1}$ is regular.
+\end{lemma}
+\begin{proof}
+If $\phi$ is a morphism, then $x_i\circ\phi$ is regular by definition.\\
+Conversely, if $x_i\circ\phi$ is regular for all $1 \leq i \leq n$, then 
+\[ 
+f\circ\phi
+\]
+is also regular for any $f \in k [ x_1,\ldots,x_n] $ .\\
+Since regular functions form a ring.\\
+Hence 
+\begin{align*}
+	\phi^{-1}( V( f_1,\ldots,f_k) \cap W) &= \bigcap \phi^{-1}( V( f_i) \cap W) 			 \\
+	&= \bigcap ( f\circ\phi) ^{-1}( 0) 
+\end{align*}
+Thus $\phi$ is continuous.\\
+Now let $U \subset W$ be open and $f\in \O( U) $, after shrinking, we may suppose $f= \frac{g}{h}$ where $g,h \in k[x_1,\ldots,x_n], h( u) \neq 0 \forall u \in U$.\\
+Then
+\[ 
+f\circ\phi = \frac{g\circ\phi}{h\circ\phi}
+\]
+where $g\circ\phi, h\circ\phi$ are regular and $h\circ\phi( v) \neq 0 \forall v\in V$.\\
+Thus $ \frac{1}{h\circ\phi}$ is regular, therefore $ \frac{g\circ\phi}{h\circ\phi}$ is regular.
+\end{proof}
+\begin{exemple}
+Now, the map $ \mathbb{A}^{1}\setminus \left\{ 0 \right\} \to V( XY-1) \subset \mathbb{A}^{2}$ is a morphism.
+\end{exemple}
+\begin{crly}
+Let $V,W$ be two varieties and $W$ affine, then there is a bijection
+\[ 
+\hom_{ Var} ( V,W) \simeq \hom_{ k- \text{ alg } } ( \O( W) , \O( V) ) 
+\]
+sending $\phi \to \tilde\phi $ 
+\end{crly}
+\begin{rmq}
+If $V$ is projective, we claim that $\O( V) \simeq k$ 
+\end{rmq}
+\subsection{General rational functions an local rings}
+Let $V$ be an algebraic variety and $p\in V$.\\
+\begin{defn}[Local ring]
+	The local ring of $V$ at $p$: $\O_p( V) $  is the set of pairs $ \langle U, f\rangle$, where $U \subset V$ is open containing $p$ and $f$ is a regular function on $U$, modulo the relation
+	\[ 
+		 [ U,f ] \sim [  U',f' ] \iff f=f' \text{ on } U\cap U'
+	\]
+	
+\end{defn}
+\begin{lemma}
+$\sim$ is an equivalence relation and $\O_p( V) $ is a ring with the operations
+\[ 
+[ U,f] + [ U',f'] = [ U\cap U', f+f'] 
+\]
+and similarly for the product
+\[ 
+	[ U,f] \cdot [ U',f'] = [ U\cap U', f\cdot f'] 
+\]
+Furthermore $\O_p( V)$ is a local ring with maximal ideal
+\[ 
+m = \left\{ [ U,f] | f( p) =0 \right\} 
+\]
+
+\end{lemma}
+\begin{proof}
+	Reflexivity and identity is obvious, we need to check transitivity, suppose $ [ U,f] \sim [ U',f'] $ and $[U'',f''] \sim [ U',f'] $ then clearly $F= f''$ on $U\cap U'\cap U''$ but 
+	\[ 
+	U\cap U' \cap U'' \subset U\cap U''
+	\]
+	is open and dense and since $f,f''$ are continuous, $f=f''$ on $U\cap U''$.\\
+	To show the ring is local, notice that there is an evaluation morphism
+	\begin{align*}
+	\O_p( V) \to k \\
+	[ U,f] \to f( p) 
+	\end{align*}
+This map is surjective since we have constant functions.\\
+Hence $m_p $ is a maximal ideal.\\
+Finally $\O_p( V) $ is local since $ [ U,f] \notin m_p$ hence $f( p)\neq 0 $.\\
+Thus $ \frac{1}{f}$ is regular in some neighbourhood of $p$.\\
+Thus $f$ is a unit.
+\end{proof}
+
+
+
+
+
+
+
+	
+
+\end{document}	

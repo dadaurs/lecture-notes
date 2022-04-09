@@ -1,0 +1,20 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Thu 31 Mar}{Lusin's theorem}
+\begin{thm}[Lusin's theorem]
+	Let $\Omega$ be a measurable set, $m( \Omega) < \infty $ and $f: \Omega \to \mathbb{R}$ measurable/\\
+	Then $\forall \epsilon>0$ $\exists F_\epsilon \subset \Omega$ closed s.t. $m( \Omega \setminus F_\epsilon) \leq \epsilon$ such that $f|_{F_\epsilon} $ is continuous.
+\end{thm}
+\begin{rmq}
+$F_\epsilon$ cannot be taken open.
+\end{rmq}
+\begin{proof}
+Using approximation of $L^{1}$ functions with smooth functions, $\exists f_n \to f 1_{ \left\{ |f| \leq M \right\} } \in L^{ \infty }( \Omega) \subset L^{1}( \Omega) $ .\\
+And we choose $M$ s.t. $m(  \left\{ |f| >M \right\} ) < \frac{\epsilon}{4}$.\\
+Now we can apply Egoroov to make the convergence uniform.\\
+Let $C_{\frac{\epsilon}{4}} \subset \Omega$ s.t. $f_n\to f$ uniformly in $C_\epsilon$ 
+\end{proof}
+
+
+
+\end{document}	
