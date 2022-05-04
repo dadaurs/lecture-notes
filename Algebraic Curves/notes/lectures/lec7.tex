@@ -115,18 +115,18 @@ If $X$ is a topological space and $ \left\{ U_i \right\} $ a family of open subs
 \]
 
 \end{lemma}
-\begin{proof}
+\begin{proof}[Of the Corrolary]
 Let $U_1,\ldots, U_{n+1} $ be the open charts of $ \mathbb{P}^{n}$, then $V_i = V \cap U_i$ gives an open cover of $V$ by quasi-affine varieties and $\overline{V}\cap U_i = \overline{V_i}$ where the second closure is taken in $\mathbb{U}_i \simeq \mathbb{A}^{n}$.\\
 If we know the corollary for quasi-affine varieties, we get that
 \[ 
 \dim \overline{V} = \sup \dim \overline{V_i}= \sup \dim V_i = \dim V
 \]
-Therefore, assume $V \subset \mathbb{A}^{n}$ is quasi-affine of dimension $d$ and let $z_0 \subset \ldots \subset z_d$ be a maximal chain of irreducibles in V.\\
+Therefore, assume $V \subset \mathbb{A}^{n}$ is quasi-affine of dimension $d$ and let $Z_0 \subset \ldots \subset Z_d$ be a maximal chain of irreducibles in $V$ .\\
 Hence $Z_d = V $ and $Z_0 = \left\{ x \right\} $.\\
 Let $m \subset \O( \overline{V}) $ be the maximal ideal corresponding to $x$, we claim that $ht( m) = d$.\\
 If this is true, then we have
 \[ 
-\dim \overline{V}= \dim \O( \overline{V}) = \dim \O( \faktor{ \overline{V} } { m} ) + \ht( m) = d 
+\dim \overline{V}= \dim \O( \overline{V}) = \dim  \faktor{ \O(\overline{V}) } { m}  + ht( m) = d 
 \]
 So now we have to prove the claim.\\
 Clearly $ht( m) \geq d$.\\
@@ -153,11 +153,11 @@ From linear algebra, we would expect that if $V$ is given by $r$ "independent" e
 
 	\end{itemize}
 \end{propo}
-Note that it is \underline { not} true that if we choose the number of generators, we do not get equality
+Note that it is \underline {not} true that if we choose the minimal number of generators, we get equality
 \begin{exemple}
 	If $ I = ( XY,YZ) \subset K[x,y,z]$, then
 	\[ 
-	V( I) = V( Y) \cup V( X,z) 
+	V( I) = V( Y) \cup V( X,Z) 
 	\]
 	
 \end{exemple}

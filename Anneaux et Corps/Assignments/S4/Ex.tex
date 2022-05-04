@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
 \usepackage{lmodern}
+\usepackage{faktor}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -23,9 +24,9 @@ Note that, in $K[x]$, we may write
 \end{align*}
 Hence, $ax^{2}+bx+c$ is not irreducible in $K[x]$ and thus also not in $A[x]$.\\
 
-Now suppose $ ax^{2}+bx + c$ is not irreducible in $A[x] $, then it is also not irreducible in $ K[x]$ by Gauss's lemma ( as $ ax^{2}+ bx +c$ is primitive by hypothesis ) .\\
+Now suppose $ ax^{2}+bx + c$ is not irreducible in $A[x] $, then it is also not irreducible in $ K[x]$ by Gauss's lemma (as $ ax^{2}+ bx +c$ is primitive by hypothesis) .\\
 We now use the fact that a polynomial of degree two over a field is not irreducible if and only if it's zero set is non-empty (example 3.4.7.4 from the course notes).\\
-Thus, rewrite ( in $K[x]$ ) 
+Thus, rewrite (in $K[x]$) 
 \begin{align*}
 ax^{2} + bx + c &= a ( x^{2}+ \frac{b}{a}x + \frac{c}{a}) \\
 &= a \left[ ( x+ \frac{b}{2a})^{2}  - \frac{b^{2}}{4a^{2}}+ \frac{c}{a} \right] \\
@@ -33,9 +34,10 @@ ax^{2} + bx + c &= a ( x^{2}+ \frac{b}{a}x + \frac{c}{a}) \\
 \end{align*}
 Thus, if 
 \[ 
-a \left[ ( x+ \frac{b}{2a}) ^{2} - \frac{b^{2}-4ac}{4a^{2}} \right] =0
+a \left[ ( x+ \frac{b}{2a}) ^{2} - \frac{b^{2}-4ac}{4a^{2}} \right] 
 \]
-Then, there exists $ \frac{s'}{d'}\in K[x], s',d' \in A[x]$ such that
+
+has a non-empty zero-set, then, there exists $ \frac{s'}{d'}\in K, s',d' \in A$ such that
 \[ 
  ( \frac{s'}{d'} + \frac{b}{2a}) ^{2} - \frac{b^{2}-4ac}{4a^{2}} = 0
 \]
@@ -43,27 +45,46 @@ In particular, define $ s=  s'2a + bd' $ then we have that
 \[ 
 \frac{s^{2}}{4a^{2}d'^{2}}= \frac{b^{2}-4ac}{4a^{2}}\iff \frac{s^{2}}{d'^{2}} = b^{2}-4ac
 \]
-Thus $ \frac{s^{2}}{d^{2}}= \left( \frac{s}{d}\right) ^{2}$ is an element of $A$  satisfying the condition.
+Thus $ \frac{s}{d'}$ is an element of $K$  satisfying the condition.\\
+In fact $ \frac{s}{d'} $ is in $A$ and we show this general fact below.\\
+This concludes the proof.\\
+
+\underline{Claim}:\\
+If $ a,b \in A$ and $ \frac{a^{2}}{b^{2}}\in A$, then in fact $ \frac{a}{b}\in A$.\\
+Indeed, suppose $ \frac{a}{b}\notin A$, then writing $ a= v \prod_{i=1}^{n} a_i, b = u \prod_{j=1}^{m}b_i$ implies there exists an element $b_k$ which is not associated to any $ a_i, 1 \leq i \leq n$.\\
+Indeed, if there was no such element, we could simplify $ \frac{a}{b}$ to an element of $A$. \\
+But then $ \frac{a^{2}}{b^{2}}= \frac{ v^{2}\prod_{i=1 }^{n}a_i^{2}}{ u ^{2} b_k ^{2} \prod_{j=1,j \neq k }^{m}b_j^{2}}\notin A$ as $ b_k$ still has no associated element in the $ a_j^{2}$, this follows from the fact that in a UFD, factorization into irreducibles is unique up to units.
+\footnote{This result only holds if $ A$ is a UFD, if $A$ is not a UFD the result is false and I believe taking $ A=\faktor{\mathbb{C}[x,y]}{ ( y^{2}- x^{2}( x+1) ) }$ and $ ( \frac{y}{x} )^{2}= x+1$ is a counterexample.}
 \section*{2}
 \subsection*{a)}
-We view $ x^{2}+ yx + 1$ as an element of $ ( \mathbb{C}[y] ) [ x] $ and use the criteria established above.\\
-Indeed, $ x^{2}+ yx +1$ is primitive as a polynomial over $ \mathbb{C}[y]$ as $ \gcd( 1, y,1) = 1$.\\
-Furthermore, $ y^{2}-4$ (the discrimant $ b^{2}-4ac$ of the polynomial)  may be rewritten as $ ( y-2) ( y+2) $, and we claim that there does not exist a polynomial $f$ such that $ f^{2}= ( y-2) ( y+2) $.\\
-Indeed, this would mean that $ \deg f = 1$, but then $f$ is linear and thus has exactly one 0, however $f^{2}$ has two zero's, a contradiction.\\
+We view $ x^{2}+ 2yx + 1$ as an element of $ ( \mathbb{C}[y] ) [ x] $ and use the criteria established above.\\
+Indeed, $ x^{2}+ 2yx +1$ is primitive as a polynomial over $ \mathbb{C}[y]$ as $ \gcd( 1, 2y,1) = 1$.\\
+Furthermore, $ 4y^{2}-4$ (the discrimant $ b^{2}-4ac$ of the polynomial)  may be rewritten as $ ( 2y-2) ( 2y+2) $, and we claim that there does not exist a polynomial $f$ such that $ f^{2}= ( 2y-2) ( 2y+2) $.\\
+Indeed, this would mean that $ \deg f = 1$, but then $f$ is linear and thus has exactly one 0, however $f^{2}$ has two distinct zero's, a contradiction.\\
 Hence, the polynomial is irreducible.
 \subsection*{b)}
 Simply write
 \[ 
 y^{2}x^{2} + yx^{2} + yx + y^{2} = y ( yx^{2} + x^{2} + x + y) 
 \]
-Thus, the polynomial is not irreducible.
+Thus, the polynomial is not irreducible, to find it's irreducible form, note that, looking at $ ( y+1) x^{2} +x +y$ as a polynomial in $(  \mathbb{C}[y] )[x]$, $yx^{2}+x^{2}+x+y$ is primitive since $\gcd( y+1,1,y) =1$.\\
+Furthermore,
+\[ 
+1- 4 ( y+1) y = 1 - 4y^{2}-4y
+\]
+As $ 1- 4y^{2}-4y$ has two distinct roots ($ -\frac{1}{2 }- \frac{1}{ \sqrt{2} }$ and $ -\frac{1}{2}+ \frac{1}{\sqrt{2} }$), it cannot be the square of an element of $ \mathbb{C}[y]$ (by the same argument as above).\\
+Thus the factorization we have found is the decomposition into irreducibles.
 \subsection*{c)}
 We use the same trick as in a) and consider it as a polynomial over $ \mathbb{C}[y]$.\\
 Hence the discrimant is $ y^{2}-4y^{2}= -3y^{2}$ which is the square of $ \sqrt{3} i y$.\\
 Thus, we may write (this formula follows from our general computations in part 1) 
 \[ 
-	(x - \frac{- y - \sqrt{3} i y}{2}) ( x- \frac{-y + \sqrt{3} i y}{2}) = x^{2} + yx + y^{2}.
+	\left(x - \frac{- y - \sqrt{3} i y}{2}\right) \left( x- \frac{-y + \sqrt{3} i y}{2}\right) = x^{2} + yx + y^{2}.
 \]
+As both these polynomials are irreducible over $ \mathbb{C}[x,y]$  (they are primitive as their leading coefficient is 1 and of degree 1), we have found the decomposition of $x^{2}+yx + y^{2}$ into irreducibles.\\
+
+For completeness sake, we still prove that polynomials of degree $1$ are irreducible. \footnote{I'm not showing that the degree is multiplicative for multivariate polynomials over $\mathbb{C}$ }\\
+Indeed, if $ f,g \in \mathbb{C}[x,y]$ such that $ f\cdot g = ax +by +c$, then $ \deg f + \deg g = 1$ implying either $ f$ or $ g$ is constant and thus invertible, hence $ ax+by + c$ is irreducible.
 
 
 
