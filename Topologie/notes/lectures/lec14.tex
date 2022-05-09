@@ -4,7 +4,7 @@
 On veut calculer $\pi_1\left( T^{2}\# \mathbb{R}P^{2}\right) $.\\
 Comme $ \mathbb{R}P^{2} \# \mathbb{R}P^{2} \# \mathbb{R}P^{2}\simeq T^{2} \# \mathbb{R}P^{2}$.\\
 On calcule le groupe fondamental grace a la presentation de $Y \coloneqq T^{2}\# \mathbb{R}P^{2}$ .\\
-Si $P$ est le pushout de $ \vee_1^{3} \leftarrow \delH \simeq S^{1}\hookrightarrow H \simeq D^{2}$, on a une application induite $P\to Y$, c'est une bijection d'un compact vers un hausdorff, c'est un homeomorphisme.\\
+Si $P$ est le pushout de $ \vee_1^{3} \leftarrow \del H \simeq S^{1}\hookrightarrow H \simeq D^{2}$, on a une application induite $P\to Y$, c'est une bijection d'un compact vers un hausdorff, c'est un homeomorphisme.\\
 Donc $\pi_1 Y = \pi_1 P = \pi_1\left( ( S^{1}_d \vee S^{1}_e\vee S^{1}_f)\cup_p e^{2} \right) \simeq \langle \delta, \epsilon, \phi | r\rangle$ .\\
 Ici, $r$ est le mot $[p] \in \left[ S^{1}, S^{1}\vee S^{1}\vee S^{1}\right] $ 	qui est l'image de $\id_{\del H} $ par $p_\ast$.\\
 Comme $\id_{\del H} = d' \ast e' \ast \overline{d''} \ast \overline{e''} \ast f' \ast f''$.\\
@@ -48,7 +48,7 @@ Pour $x\in X$, on appellera $p^{-1}( x) = Fx$ la fibre au-dessus de $X$
 \begin{defn}
 	Une application $p: E \to X$ est un revetement si tout point $x\in X$ admet un voisinage ouvert trivialisant $U \ni x$, tel que $p^{-1}( U) $ est une reunion disjoint de $U_i, i \in I$, appeles feuillets, avec $p|_{U_i} : U_i \to U$ un homeomorphisme.
 \end{defn}
-\begin{exemples}
+\begin{exemple}
 \begin{enumerate}
 \item $\id_X$ est un revetement
 \item $\exp : \mathbb{R}\to S^{1}$ est un revetement
@@ -56,7 +56,7 @@ Pour $x\in X$, on appellera $p^{-1}( x) = Fx$ la fibre au-dessus de $X$
 \item Pour $F$ discret, la projection $p_2 : X\times F\to X$ est le revetement trivial.
 \end{enumerate}
 
-\end{exemples}
+\end{exemple}
 \begin{lemma}
 Les fibres sont des espaces discrets
 \end{lemma}
@@ -67,6 +67,12 @@ Alors $e$ appartient a un seul feuillet $U_i$ et donc dans $Fx$
 \begin{propo}
 Un revetement est une surjection ouverte, en particulier un quotient. 
 \end{propo}
+\begin{proof}
+Soit $V$ un ouvert connexe de $E$ et $x\in p( V) $.\\
+On choisit un ouvert trivialisant $U \ni x$, alors $x= p( y) $, $y \in V \subset E$, $y \in V \subset E$ et il existe donc un feuillet $U_i$ tel que $U_i \cap V\neq \emptyset$.\\
+Comme $p|_{U_i} $ est un homeo, $p|_{U_i \cap V} $ aussi. Donc $p( U_i \cap V) $ est ouvert.
+\end{proof}
+
 
 
 	

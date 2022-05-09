@@ -1,0 +1,193 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{15}{Mon 09 May}{Relevement d'homotopies}
+\begin{propo}
+Soit $p: E\to X$ un revetement. Si $Y$ est un espace connexe, $f,g: Y \to E$ deux applications tel que $p\circ f = p\circ g$ alors $Z= \left\{ y\in Y | f( y ) = g( y)  \right\} $.
+\end{propo}
+\begin{proof}
+On va montrer que $Z$ est ouvert et ferme.\\
+Comme $Y$ est connexe, $Z$ sera donc $Y$ ou $\emptyset$.\\
+Montrons que $Z$ est ouvert.\\
+Pour $z\in Z$, on choisit un ouvert trivialisant $U$ de $p( f( z) ) = p( g( z) ) $.\\
+Soit $U_i$ le feuillet contenant $f( z) = g(z ) $.\\
+Alors $f^{-1}( U_i)\cap g^{-1}( U_i)  $ est un ouvert de $Y$.\\
+On montre qu'il est contenu dans $Z$.\\
+Soit $y$ un point de l'intersection, alors $f( y) $ et $g( y) \in E	$ et $p( f( y) ) = p( g( y) ) $ dans $X$.\\
+Or $p|_{U_i} $ est un homeo et $f( y) , g( y) \in U_i$. Donc $f( y) = g( y) $.\\
+Montrons donc que $Z$ est ferme.\\
+Soit $y\in Z$ 	et $U$ un ouvert trivialisant de $p( f( y) ) = p( g( y) ) $.\\
+Soit $U_i$ le feuillet dans $E$ qui contient $f( y) $ et $U_j$ celui qui contient $g( y) $ .\\
+Puisque $f( y) \neq g( y) $ et $p|_{U_i} $ est un homeo, on sait que $i \neq j$.\\
+Alors $f^{-1}( U_i) \cap g^{-1}( U_j) $ est un ouvert de $Y$ qui contient $y$.\\
+C'est donc un voisinage ouvert de $y$ dans $Y$.\\
+On affirme qu'il est entierement contenu dans $Y\setminus Z$ 
+\end{proof}
+\begin{defn}[Morphisme de Revetement]
+	Soient $E_1 \xrightarrow{p_1} X$ et $E_2 \xrightarrow{p_2} X$ est une application $f: E_1\to E_2$ tel que
+	$p_2 \circ f = p_1$
+	\[\begin{tikzcd}
+	{E_1} & {} & {E_2} \\
+	& X
+	\arrow["f", from=1-1, to=1-3]
+	\arrow["{p_1}"', from=1-1, to=2-2]
+	\arrow["{p_2}", from=1-3, to=2-2]
+\end{tikzcd}\]
+Un automorphisme d'un revetement $p:E\to X$ est un morphisme inversible en tant que morphisme de revetement.\\
+Il existe donc $g: E\to E$ tq $g\circ f = f\circ g = \id_E$ et $p\circ f = p$ et $p\circ g = p$.\\
+On note $\aut ( p) $ l'ensemble de tous ces automorphismes.
+\end{defn}
+\begin{exemple}
+L'application $\mathbb{R}\to \mathbb{R}$ qui envoie $x\mapsto x+n$ est un automorphisme de $\exp : \mathbb{R} \to S^{1}$.
+\end{exemple}
+\begin{rmq}
+Soient $p,q$ deux revetements composables, alors $q\circ p$ est un revetement si les fibres de $q$ sont finies mais ce n'est pas le cas en general.
+\end{rmq}
+\subsection{Relevement de chemins}
+\begin{thm}[Relevement unique de chemins]
+	Soit $p:E\to X$ un revetement et $\gamma:I\to X$ un chemin. Soit $y_0 \in p^{-1}( x_0) $ ou $x_0= \gamma( 0) $. Il existe alors un unique chemin $\tilde \gamma: I \to E$ tq $p\circ\tilde \gamma = \gamma$ et $\tilde\gamma( 0) = y_0$ 
+\[\begin{tikzcd}
+	0 & E \\
+	I & X
+	\arrow["\iota", from=1-1, to=1-2]
+	\arrow["\iota"', from=1-1, to=2-1]
+	\arrow["p", from=1-2, to=2-2]
+	\arrow["\gamma"', from=2-1, to=2-2]
+	\arrow["{\exists! \tilde\gamma}", dashed, from=2-1, to=1-2]
+\end{tikzcd}\]
+\end{thm}
+\begin{proof}
+Soit $U_\alpha$ un recouvrement de $X$ par des ouverts trivialisants.\\
+Comme $I$ est compact, il existe $\delta>0$ tel que tout intervalle de $I$ de rayon $< \delta$ a son image dans l'un de ces ouverts.\\
+On choisit $n \in \mathbb{N}$ tel que $\frac{1}{n}< \delta$.\\
+On construit $\tilde\gamma$ inductivement.\\
+L'intervalle $[0,\frac{1}{n}]$ a son image par $\gamma$ contenue dans $U_{\alpha_1} $, un ouvert trivialisant.\\
+Alors $y_0 \in p^{-1}( x_0) $ est dans l'un des feuillets $( U_{\alpha_1})_{i_1} $.\\
+On pose alors $\tilde\gamma : [ 0,\frac{1}{n}] \to U_{\alpha_1} \xrightarrow{ ( p|_{( U_{\alpha_1} )_{i_1}  } )^{-1}} \to ( U_{\alpha_1} )_{i_1} \subset E   $.\\
+On continue par induction, supposons que $\tilde\gamma$ est definie sur $ [ 0, \frac{k}{n}] $, alors 
+\[ 
+\gamma [ \frac{k}{n}, \frac{k+1}{n}] \subset  U_{\alpha_{k+1} } 
+\]
+et $\tilde\gamma( \frac{k}{n}) = y_k \in ( U_{\alpha_{k+1} } )_{i_{k+1} }  $.\\
+On pose
+\[ 
+	\tilde\gamma: [ \frac{k}{n}, \frac{k+1}{n}]\xrightarrow{\gamma} U_{\alpha_{k+1} }   \to(  U_{\alpha_{k+1} } ) _{i_{k+1} }	
+\]
+L'unicite suit de la proposition.\\
+Supposons en effet que $\tilde\gamma, \tilde{\gamma'}: I\to E$ sont deux relevements, alors $\tilde\gamma( 0) = y_0= \tilde\gamma'( 0) $, donc $Z= \left\{ t\in I | \tilde\gamma( t) = \tilde\gamma'( t)  \right\} $ n'est pas vide.\\
+Donc c'est l'intervalle tout entier.
+\end{proof}
+\begin{propo}
+Soit $p: E\to X$ un revetement et $Y$ un espace localement connexe par arcs.\\
+Si $f:Y\to E$ est une application et $H:Y\times I\to X$ est une homotopie $p\circ f = H( -,0) \simeq H( 0,1) $.\\
+Il existe $\tilde H : Y\times I \to E$ tel que $\tilde H( -,0) =f$ et $p\circ\tilde H = H$ 
+\[\begin{tikzcd}
+	{Y\times 0} & E \\
+	{Y\times I} & X
+	\arrow["f", from=1-1, to=1-2]
+	\arrow["\iota"', from=1-1, to=2-1]
+	\arrow["p", from=1-2, to=2-2]
+	\arrow["H"', from=2-1, to=2-2]
+	\arrow["{\tilde H}", from=2-1, to=1-2]
+\end{tikzcd}\]
+
+\end{propo}
+\begin{propo}
+Soit $p: E\to X$ un revetement. Si $f,g: I\to E$ sont deux chemins avec $f( 0) =g( 0) $ et $H: I\times I\to X$ est une homotopie entre $p\circ f$ et $p\circ g$ avec $H( 0,t) = x_0$ et $H( 1,t) =x_1$ pour tout $t\in I$, alors $f\simeq g $ 
+\end{propo}
+\begin{proof}
+Par la propriete de relevement, il existe une homotopie $\tilde H: I\times I \to E$ tel que $p\circ \tilde H= H$ et $\tilde H( s,0) = f( s) $.\\
+Par la propriete des relevement, $\tilde H( 0,t)$ est l'unique chemin qui releve $H( 0,t) $ et idem pour $\tilde H( 1,t) =y_1 = f( 1) $.\\
+Finalement, $\tilde H( s,1) = g $.\\
+$\tilde H( s,m_1) $ est un chemin qui part de $y_0$, qui releve $p\circ g$ et par unicite c'est donc $g$.
+\end{proof}
+\begin{crly}
+Toutes les fibres sont des espaces discrets de meme cardinal.
+\end{crly}
+\begin{proof}
+Soient $x_0,x_1\in X$ et $\gamma:I\to X$ avec $\gamma( 0) = x_0$ et $\gamma( 1) = x_1$.\\
+Le theoreme associe a tout $y \in p^{-1}( x_0) $ un unique chemin $\tilde\gamma$ qui releve $\gamma$.\\
+On pose $\Phi:p^{-1}( x_0) \to p^{-1}( x_1) $ en associant $y \to \tilde\gamma( 1) $ de meme pour $ \overline{\gamma}$ on construit $\Phi^{-1}$ et on etablit donc une bijection.
+\end{proof}
+\begin{crly}
+Soit $p: E \to X$ un revetement, alors $p_\ast: \pi_1 E \to \pi_1 X$ est un monomorphisme.
+\end{crly}
+\begin{proof}
+On applique la proposition pour des lacets $f,g:I\to E$.\\
+Ici, $f( 0) =f( 1) = y_0= g( 0) = g(1) $.\\
+On sait que si $p\circ f \simeq p\circ g$ au sens pointe, alors $f\simeq g$ au sens pointe.\\
+Ceci signifie que $p_\ast( f) = p_\ast g\implies [ f] = [ g] $ 
+\end{proof}
+
+\subsection{Revetements et Actions de groupe}
+Soit $G$ un groupe discret, agissant sur un espace $X$.\\
+\begin{defn}[Action totalement discontinue]
+L'action de $G$ sur $X$ est totalement discontinue si pour tout $x\in X$, il existe un voisinage $x\in U$ tel que $Ug \cap U = \emptyset$ pour tout $g\neq e $ 	
+\end{defn}
+\begin{propo}
+Si $X$ est connexe par arcs et localement connexe par arcs et que $G$ agit de maniere totalement discontinue, alors $q: X\to X /G$ est un revetement.
+\end{propo}
+\begin{proof}
+On rappelle que $q( x) = xG$, on choisit un ouvert de $x$ comme dans la definition. Alors on a 
+\[ 
+q^{-1}( q( U) ) = \bigcup_{g\in G} Ug
+\]
+est une reunion disjoint d'ouverts de $X$. En particulier $q( U) $ est un voisinage ouvert de $x\in X/G$.\\
+Pour montrer que $q( U) $ est un ouvert trivialisant, on etude $q|_{Ug} : Ug \to q( U) $.\\
+D'abord, cette application est continue puisque $q$ est continue.\\
+De plus elle est ouverte, si $V \subset U$ est un ouvert, $q( V) $ est un ouvert de $q( U) $ et de meme $q( Vg) = q( V) $ est ouvert.\\
+Elle est surjective car $q( Ug) = q( U) $.\\
+Elle est injective car si $q( ug) = q( vg) $, alors il existe $h$ tel que $ug = vgh $ et donc $u = vghg^{-1}$.\\
+Or $U \cap U ghg^{-1}= \emptyset$ si $ghg^{-1}\neq e \iff h \neq e  $.\\
+On conclut que $q|_{U_g} $ est un homeo.
+\end{proof}
+\subsection{Relevements en general}
+La propriete de relevement unique des chemins permet en fait de resoudre des problemes plus generaux.
+\begin{propo}
+Soit $p: E \to X$ un revetement et $f:Y\to X$ une application. On fixe des points de base $e_0\in E, x_0\in X,y_0\in Y$ avec $p( e_0) =x_0= f( y_0) $. Alors $f$ admet un relevement $\tilde f: Y\to E$ si et seulement si $f_\ast ( \pi_1 Y) \subset p_\ast (\pi_1 E) $ 
+\end{propo}
+\begin{proof}
+Si $f= p\circ \tilde f$, alors on a $\pi_1Y \to \pi_1 E \hookrightarrow \pi_1 X$.\\
+Ainsi, $f_\ast = p_\ast\circ \tilde f _\ast$ et en particulier $\im f_\ast \subset \im p_\ast$.\\
+Soit donc $y\in Y$ et, par connexite par arcs, il existe un chemin $\gamma$ dans $Y$ avec $\gamma( 0) = y_0, \gamma( 1) = y$.\\
+Par la propriete de relevement des chemins, il existe un unique $\tilde\gamma$ qui releve $f\circ\gamma:I\to Y \to X$.\\
+On pose alors $\tilde f( y) = \tilde\gamma( 1) $. On a alors $p\circ \tilde\gamma( 1) = f(\gamma( 1) )= f( y)$.\\
+On montre que $\tilde f$ est bien definie.\\
+Soit $\gamma'$ un autre chemin entre $y_0$ et $y$. Soit $\tilde\gamma'$ le relevement $f\circ\gamma'$ dans $E$.\\
+Alors $f\circ \gamma' \ast \overline{f\circ\gamma}$ est un lacet $\omega $ base en $x_0\in X$.\\
+Comme $\omega= f( \gamma\ast\overline{  \gamma' }) $, on conclut que $[\omega] = \im f_\ast \subset \im p_\ast$.\\
+Il existe un lacet $\tilde\alpha:I\to E$ base en $e_0$ tel que $p_\ast [ \tilde\alpha] = [ p\circ \tilde\alpha] = [ \omega] $.\\
+Il existe une homotopie $H: I\times I\to X$ entre $p\circ\tilde\alpha$ et $\omega$.\\
+Par la propriete de relevement des homotopies, il existe une homotopie $\tilde H$ entre $\tilde \alpha$ et un lacet $\tilde\omega= \tilde H( -,1) $ tel que $p\circ \tilde\omega= \omega$.\\
+Sur $[0,\frac{1}{2}]$, $\tilde\omega$ releve $f\circ\gamma'$ et sur $ [ \frac{1}{2},1] $, $\tilde\omega$ releve $ \overline{f\circ\gamma}$. Ainsi, $\tilde\omega$ est forme des seuls chemins $\tilde\gamma' $ et $ \overline{\tilde \gamma}$.\\
+En particulier $\tilde\gamma( 1) = \tilde\gamma' ( 1) $.\\
+Est-ce que $\tilde f$ est continue?\\
+Pour montrer que la preimage d'un ouvert est ouverte, on va montrer que pour tout $e\in E$ de cet ouvert, $y \in \tilde f^{-1}( e ) $, il existe un voisinage ouvert $y \in V \subset Y$ tel que $\tilde f ( V) $ est contenu dans cet ouvert.\\
+On choisit un ouvert trivialisant $U$ de $p( e ) $ et on appelle $U_e$ le feuillet qui contient $e$.\\
+Quitte a restreindre l'ouvert original, on peut suposer que c'est un feuillet.\\
+Comme $f^{-1}( U) $ contient $y$, cart $p\circ \tilde f( y) = f( y) $, on choisit un ouvert $y \in V$ connexe par arcs.\\
+On affirme que $\tilde f( V) \subset  U_e$.\\
+On fixe un chemin $\gamma$ entre $y_0$ et $y$ dans $Y$ et on choisit dans $V$ un chemin $\beta$ entre $y$ et $v\in V$.\\
+On utilise $\gamma \ast \beta$ comme chemin entre $y_0$ et $v$.\\
+Pour comprendre $\tilde f ( v)$, on releve le chemin 
+\[ 
+f\circ ( \gamma\ast \beta ) = ( f\circ \gamma) \ast ( f\circ \beta) 
+\]
+en un chemin $\tilde\gamma\ast \tilde\beta$.\\
+Mais $f\circ \beta$ est contenu dans $f( V) \subset U$ si bien que $\tilde \beta$ est obtenu comme $( p|_{U_e} )^{-1}\circ ( f\circ \beta) $ et il est entierement contenu dans $U_e$.\\
+En particulier, $\tilde f( v) = ( \tilde\gamma\ast \tilde\beta) ( 1) = \tilde\beta( 1) \in U_e$ 
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+						
+
+
+
+\end{document}	

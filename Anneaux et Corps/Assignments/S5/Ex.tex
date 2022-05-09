@@ -46,16 +46,16 @@ Let us now first suppose that $ \frac{p}{q}, \frac{x}{y}\neq 0$, we'll treat the
 Let $a,b \in \mathbb{Z}$ such that $ s^{2}+ as + b = 0$.\\
 Plugging $s= \frac{p}{q}+ \frac{x}{y} \sqrt{-d} $ into the polynomial yields
 \begin{align*}
-\frac{p^{2}}{q^{2}} - 2 \frac{p}{q} \frac{x}{y} \sqrt{-d}  - \frac{x^{2}}{y^{2}}d + a \frac{p}{q} + a \frac{x}{y} \sqrt{-d} + b = 0
+\frac{p^{2}}{q^{2}} + 2 \frac{p}{q} \frac{x}{y} \sqrt{-d}  - \frac{x^{2}}{y^{2}}d + a \frac{p}{q} + a \frac{x}{y} \sqrt{-d} + b = 0
 \end{align*}
 as $ \sqrt{-d} $ and $1$ are linearly independent over $\mathbb{Q}$, we get the system of equations
 \begin{align}
 \frac{p^{2}}{q^{2}} - \frac{x^{2}}{y^{2}} d + a \frac{p}{q} + b =0\\
-- 2 \frac{p}{q} \frac{x}{y} + a \frac{p}{q} = 0
+ 2 \frac{p}{q} \frac{x}{y} + a \frac{p}{q} = 0
 \end{align}
 From equation 2 above we deduce (and by our assumption that $\frac{p}{q} \neq 0$) that
 \[ 
--2 \frac{x}{y} + a =0
+2 \frac{x}{y} + a =0
 \]
 By coprimality of $x$ and $y$, this implies that $ y =1$ or $y=2$, we treat these cases separately:
 \subsubsection*{If $y=1$ }
@@ -69,7 +69,7 @@ Rewriting equation $1$ above then yields
 Since $q| x^{2}dq^{2}$, $ q | p^{2} + apq + bq^{2}\implies q | p^{2} $ which is a contradicition, since we supposed that $p$ and $q$ share no common factors and $q\neq 1$.\\
 Thus $q=1$ and $ s = p + x \sqrt{ -d} $.
 \subsubsection*{ If $y=2$ }
-By equation 2 above, we know that then $ x=a$.
+By equation 2 above, we know that then $ x=-a$.
 This implies in particular that $a$ is not a multiple of $2$ as $( x,2) =1$. 
 Plugging this into equation $1$ yields:
 \begin{align*}
@@ -91,27 +91,40 @@ Now, if $e$ is a multiple of $2$, then the above relation simply reduces to
 	0 &\equiv p^{2}\mod 4
 \end{align*}
 Which implies $4 | p^{2} \implies 2 | p$ which would mean $\frac{p}{q}$ is not irreducible, a contradiction.\\
-Thus, suppose $e$ is not a multiple of 2.\\
-It now suffices to check that this is impossible for the different congruence classes of $d$ modulo 4.
-\subsubsection*{If $d \equiv 0 \mod 4$ }
-Then $d$ is divisible by 4, but $d$ is square free, which is impossible.
-\subsubsection*{If $d\equiv 1 \mod 4$ }
+Thus, $e$ is not a multiple of 2.\\
 Notice that an uneven number squared is always congruent to $1$ modulo 4, since $( 2k+1)^{2} \equiv 4k^{2} + 4k + 1 \equiv 1 \mod 4$.\\
-Using this, in equation 3 above yields with $d\equiv 1 \mod 4$ .\\
-\begin{align*}
-	a^{2} e ^{2} &\equiv p^{2} + 2 ape \mod 4\\
-	1 \cdot 1 &\equiv 1 + 2 ( 1\cdot 1 \cdot 1) \mod 4	
-\end{align*}
-Where we used that $a,e $ and $p$ are all uneven and that reduction modulo some integer is a morphism of rings.\\
-But $1 \not\equiv 3 \mod 4$ and we get a contradiction.
-\subsubsection*{If $d\equiv 2\mod 4$ }
-Further reducing the congruence relation in 3 yields
-\[ 
-0 \equiv p^{2} \mod 2
+Thus,
+\[
+	a^{2} d e^{2} \mod 4 \equiv ( a\mod 4)^{2} ( d\mod 4 ) ( e\mod 4)^{2} \equiv d\mod 4
 \]
-Whence $2| p^{2} \implies 2 |p $ which is a contradiction.\\
+And similarly
+\[ 
+	( p^{2} + 2ape) \mod 4 \equiv ( p\mod 4)^{2} + 2 ( ape \mod 4) \equiv 1 + 2 \mod 4 \equiv 3 \mod 4
+\]
+Thus, equation 3 implies that $d \equiv 3\mod 4 $ which contradicts our hypothesis.
 
-Hence, we have eliminated all possibilities for the values of $d$.\\
+
+
+%It now suffices to check that this is impossible for the different congruence classes of $d$ modulo 4.
+%\subsubsection*{If $d \equiv 0 \mod 4$ }
+%Then $d$ is divisible by 4, but $d$ is square free, which is impossible.
+%\subsubsection*{If $d\equiv 1 \mod 4$ }
+%Notice that an uneven number squared is always congruent to $1$ modulo 4, since $( 2k+1)^{2} \equiv 4k^{2} + 4k + 1 \equiv 1 \mod 4$.\\
+%Using this, in equation 3 above yields with $d\equiv 1 \mod 4$ .\\
+%\begin{align*}
+	%a^{2} e ^{2} &\equiv p^{2} + 2 ape \mod 4\\
+	%1 \cdot 1 &\equiv 1 + 2 ( 1\cdot 1 \cdot 1) \mod 4	
+%\end{align*}
+%Where we used that $a,e $ and $p$ are all uneven and that reduction modulo some integer is a morphism of rings.\\
+%But $1 \not\equiv 3 \mod 4$ and we get a contradiction.
+%\subsubsection*{If $d\equiv 2\mod 4$ }
+%Further reducing the congruence relation in 3 yields
+%\[ 
+%0 \equiv p^{2} \mod 2
+%\]
+%Whence $2| p^{2} \implies 2 |p $ which is a contradiction.\\
+
+%Hence, we have eliminated all possibilities for the values of $d$.\\
 It remains to show the special cases mentionned at the start.
 \subsubsection*{If $\frac{x}{y}=0$ }
 We may suppose $ \frac{p}{q}\neq 0 $ and that $( p,q) =1$  then plugging this into our quadratic equation yields
@@ -122,7 +135,7 @@ We may suppose $ \frac{p}{q}\neq 0 $ and that $( p,q) =1$  then plugging this in
 \end{align*}
 But then $q | p^{2}$ and thus $q=1$ by our hypothesis
 \subsubsection*{If $ \frac{p}{q}= 0$ }
-Again, recall $( p,q) =1$ 
+Again, recall $( p,q) =1$.\\
 Then plugging $ \frac{p}{q} \sqrt{-d} $ into the equation yields
 \begin{align*}
 -d\frac{p^{2}}{q^{2}} + a \frac{p}{q} \sqrt{-d}  + b =0
@@ -133,7 +146,7 @@ If $a =0$, then rewriting the above gives
  d p^{2} = bq^{2}
 \]
 
-Whence, since $( p,q) =1$ $q^{2} |d$ which contradicts our hypothesis.\\
+Whence, since $( p,q) =1$, $q^{2} |d$ which contradicts our hypothesis.\\
 
 And that's it for part 2 (whew).
 
