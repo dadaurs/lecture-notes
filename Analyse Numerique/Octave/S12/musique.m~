@@ -1,0 +1,3 @@
+function qq=musique()
+  y=audioread('foryoublue.wav')
+  plot(y)

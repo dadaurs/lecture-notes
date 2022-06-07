@@ -1,0 +1,45 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{18}{Mon 30 May}{Dernier cours (sniff)}
+\subsection{Revetements Galoisiens}
+\begin{defn}[Revetement Galoisien]
+	Un revetement $p:E\to X$ est galoisien si pour tout $x\in X$, tous $e,e' \in p^{-1}( x) $, il existe un automorphisme $f$ de $p$ tel que $f( e  ) = e'$ 
+\end{defn}
+\begin{propo}
+Le revetement $p$ est galoisien si et seulement si $\im p_\ast $ est un sous-groupe normal de $\pi_1X$ 
+\end{propo}
+\begin{proof}
+On cherche a factoriser l'application $p: ( E,e) \to ( X,x) $ a travers $p: ( E,e') \to ( X,x) $.\\
+On sait que $f: ( E,e) \to ( E,e') $ existe si et seulement si $p_\ast \pi_1( E,e) \subset p_\ast \pi_1 ( E,e') = [ \omega] p_\ast \pi_1( E,e) [ \omega]^{-1}$ .\\
+Pour que $f$ existe pour tous $e,e'\in F_x$ il faut et il suffit que $p_\ast \pi_1( E,e) = [ \omega] p_\ast\pi_1E [ \omega]^{-1}$ pour tout $[\omega] \in \pi_1( X,x) $ 
+\end{proof}
+\begin{propo}
+Si $p:E\to X$ est galoisien, alors $X \simeq \faktor{E}{\aut( p) }$ 
+\end{propo}
+\begin{proof}
+Puisque pour tout automorphisme $f\in \aut( p) $, $p( f( e ) ) = p( e ) $, la propriete universelle du quotient nous donne $ \overline{p}: \faktor{E}{\aut( p) }\to X$. Pour montrer que c'est un homeo, on construit $\overline{q}:X \to \faktor{E}{\aut( p) }$ induite par $q:E\to \faktor{E}{\aut( p) }$.\\
+Pour $x\in X$, on pose $ \overline{q}( x) = q( e ) $ pour $e\in F_x$, bien defini car $p$ est galoisien et donc $\aut( p)$ agit transitivement.\\
+De plus $ \overline{q}$ est continue: Soit $U \subset  \faktor{E}{\aut( p) }$ ouvert, on a $ ( \overline{q} )^{-1}( U) = p( q^{-1}( U) ) $ ouvert car $p$ est ouvert. 
+\end{proof}
+\begin{propo}
+Si $G$ agit totalement discontinument sur $E$, alors $p: E\to \faktor{E}{G}$ est galoisien et $\aut( p) \simeq G$  
+\end{propo}
+\begin{proof}
+Comme l'action est toalement discontinue, $G\to \aut( p) $ est injective, il reste a voir qu'elle est surjective.\\
+Soit $f\in \aut( p) ,  e\in F_x$ et $f(  e )= e'\in eG $, il existe $g\in G$ tel que $eg = e'$. On a $f:E\to E$ et $( ) .g:E\to E$ qui relevent $\id_{ \faktor{E}{G}} $	et coincident sur $e$.\\
+Par tout ou rien, $f= ( ).g$ 
+\end{proof}
+\begin{lemma}
+Pour tout revetement $p$, $\aut( p) \leftrightarrow \left\{ \text{ Bijections } \pi_1( X,x_0) \text{ equivariantes de $F_{x_0} $ }  \right\} $ 
+\end{lemma}
+Si $p$ est galoisien, ceci permet d'identifier la structure de groupe de $\aut( p) \simeq \faktor{\pi_1( X,x_0) }{ p_\ast ( \pi_1( E,e_0) ) }$	 
+\begin{crly}
+Si $G$ agit totalement discontinument sur $E$, alors $ \pi_1 (  \faktor{E}{G})= G $ 
+\end{crly}
+
+	
+
+
+
+
+\end{document}	

@@ -1,0 +1,117 @@
+% Created 2022-06-03 Fri 13:00
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{TODO's}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={TODO's},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.1 (Org mode 9.5.2)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Muh revisions}
+\label{sec:org66efa00}
+\subsection{Anneaux et Corps}
+\label{sec:org90db8fd}
+\subsubsection{Revoir preuve eisenstein dans Lang}
+\label{sec:org003df07}
+\subsubsection{Contreexemple irr \(\not\rightarrow\)  premier dans \(\mathbb{Z}[\sqrt{5}i]\)}
+\label{sec:org89fa7ec}
+\subsubsection{Statistiques Exo 30 page 82}
+\label{sec:org00e1920}
+
+\section{Random}
+\label{sec:org323cda8}
+\subsubsection{{\bfseries\sffamily DONE} Read classification of finite fields}
+\label{sec:org288c71d}
+\subsubsection{{\bfseries\sffamily DONE} submit disopt}
+\label{sec:org00fabe8}
+\subsubsection{{\bfseries\sffamily DONE} Send mail bonn housing}
+\label{sec:orgb72fefb}
+\subsubsection{{\bfseries\sffamily DONE} Reask ruru for mettop}
+\label{sec:orgc72b5ef}
+\section{Analyse Num}
+\label{sec:org0e38796}
+\subsubsection{{\bfseries\sffamily DONE} Watch Analyse Num}
+\label{sec:org7f47415}
+
+CLOSED: \textit{[2022-05-15 Sun 09:16]}
+\subsubsection{{\bfseries\sffamily DONE} ask second video analyse num}
+\label{sec:orgb0d8c5f}
+\subsubsection{{\bfseries\sffamily DONE} lire cours}
+\label{sec:org5051050}
+\subsubsection{{\bfseries\sffamily DONE} Series 12}
+\label{sec:orgc89bb48}
+\section{Anneaux et Corps}
+\label{sec:orgbc20077}
+\subsubsection{{\bfseries\sffamily DONE} ac exo 3.1 est-ce que f|g dans F\textsubscript{p\textsuperscript{n}} implique division dans F\textsubscript{p} si f,g \(\in\) F\textsubscript{p}}
+\label{sec:org0f6d321}
+oui 
+CLOSED: \textit{[2022-05-16 Mon 15:27]}
+\subsubsection{{\bfseries\sffamily DONE} Exo 3.5 comment mq a chaque etape il existe un pol irreductible.}
+\label{sec:org94b4fe6}
+immediat par decomp en irreduc
+\subsubsection{{\bfseries\sffamily DONE} Faire exo 3.4}
+\label{sec:org8710a03}
+\subsubsection{{\bfseries\sffamily DONE} Series 12}
+\label{sec:org1b433cd}
+
+\section{Topo}
+\label{sec:org646396e}
+\subsubsection{{\bfseries\sffamily DONE} Plastifier hatcher}
+\label{sec:org7bf968b}
+\subsubsection{{\bfseries\sffamily DONE} Lire section sur les revetements hatcher}
+\label{sec:org619ddf4}
+\subsubsection{{\bfseries\sffamily DONE} Serie 12}
+\label{sec:org8e03fea}
+
+\section{Disopt}
+\label{sec:org32714ef}
+\subsubsection{{\bfseries\sffamily DONE} Read course}
+\label{sec:org8926cd2}
+\subsubsection{{\bfseries\sffamily TODO} Series 12 review second exercise}
+\label{sec:orgfe582eb}
+\section{Analysis IV}
+\label{sec:org21bef75}
+\subsubsection{{\bfseries\sffamily DONE} Review Serie 11 analysis}
+\label{sec:org12b5d14}
+
+\subsubsection{{\bfseries\sffamily TODO} Series 12 review 3rd exercise}
+\label{sec:org41c4eb9}
+
+\section{Stats}
+\label{sec:org41162e0}
+\subsubsection{{\bfseries\sffamily DONE} review course}
+\label{sec:orge885e04}
+\subsubsection{{\bfseries\sffamily DONE} chapter 4 up to 5.1}
+\label{sec:orgec79e93}
+\subsubsection{{\bfseries\sffamily TODO} Lire chap. 2 + exos}
+\label{sec:orga09fdc9}
+
+\section{Courbes Algebriques}
+\label{sec:orge2d2f4e}
+\subsubsection{{\bfseries\sffamily DONE} comprendre algo intersections + exo 3 serie 10}
+\label{sec:orga643abf}
+
+
+
+\subsubsection{{\bfseries\sffamily TODO} Relire preuve bezout + serie}
+\label{sec:orgfe64050}
+\end{document}

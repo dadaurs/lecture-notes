@@ -1,0 +1,55 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{19}{Thu 12 May}{Applications of Fourier Transforms to PDE's}
+\section{Fourier Transforms and PDE's}
+\begin{exemple}
+\begin{enumerate}
+\item Let $u: \mathbb{R}\to \mathbb{R}$, we search for the solutions to $\del_{xx} u =0$ 
+\item Ordinary Differential equations
+\item 
+	\[ 
+	\del_{xx} u + \del_{yy} u =0 \quad \text{ Laplace equation } 
+	\]
+
+
+\item Poisson equation
+	\[ 
+	\Delta u = f
+	\]
+	for some given function $f$ 
+\item Heat equation
+	\[ 
+	\del_t u - \Delta u =0
+	\]
+	
+\item Wave Equation
+	\[ 
+	\del_{tt} u - \Delta u =0
+	\]
+	
+\item Finding $u$ such that
+	\[ 
+	\nabla u = f
+	\]
+	
+\item Burger equation
+\[ 
+\del_t u - \del_{xx} ( u^{2}) =0
+\]
+
+\end{enumerate}
+\end{exemple}
+\begin{defn}[PDE]
+	A partial differential equation ( PDE) is finding  a function $u$ such that
+	\[ 
+	F( x, u( x) , \nabla u( x) , \ldots, \nabla^{k} u( x) ) =0
+	\]
+	where $x \in \Omega \subset  \mathbb{R}^n$, $u: \Omega \to \mathbb{R}^{N}$ 
+\end{defn}
+\begin{rmq}
+The laplace, heat and wave equations are linear PDE's, namely, if $u,v$ are solution, then $ \alpha u + \beta v$ is a solution.	
+\end{rmq}
+Typically, PDE's come with boundary conditions and/or initial conditions
+
+
+\end{document}	

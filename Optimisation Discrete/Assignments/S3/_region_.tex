@@ -1,0 +1,63 @@
+\message{ !name(Ex.tex)}\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage[displaymath,textmath]{preview}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\begin{document}
+
+\message{ !name(Ex.tex) !offset(-3) }
+
+\title{Assignment 3}
+\author{David Wiedemann}
+\maketitle
+\section{Problem Set 7, Exercise 3}
+To each edge $e\in E$, we associate a number $a( e ) \in \left\{ 0,1 \right\}  $ 
+We will say that $e$ is in $M$ if $a( e ) =1$ and that $e$ is not in $M$ if $a( e  ) =0$.\\
+Now, for each vertex $v\in V$, we denote by $E( v) \subset E$ the set of all edges containing $v$.\\
+The condition for $M$ to be a matching then reads as $\sum_{ e \in E( v) } a( e )  \leq 1\forall  v \in V$.\\
+Thus, the problem of finding a matching with a maximal number of edges reads as
+\begin{align*}
+	\max & \sum_{ e \in E} a( e  ) \\
+	\text{ s.t. } & \sum_{e \in E( v) } a( e ) \leq 1\forall v \in V\\
+		      &a( e  ) \in \left\{ 0,1 \right\} 
+\end{align*}
+\section{Every tree has at least one leaf vertex}
+Recall that a tree is a connected graph that contains no cycles and that a leaf is a vertex of degree 1.\\
+Let $T= ( V,E) $ be a (finite) tree.\\
+Suppose by contradiction that $T$ does not contain any leaf, we construct a path as follows.
+We pick some vertex $ v_1\in V$, as $T$ is connected, there is some vertex $v_2$ connected to $v_1$.\\
+As $v_2$ is not a leaf it is at least of degree 2, so there is a vertex $v_3$ different from $v_1$ which is connected to $v_2$.\\
+Proceeding inductively in this way, we get a path $v_1, v_2,\ldots, $ where each vertex satisfies $v_{n+1} \neq v_{n-1} \forall n \geq 2 $ (ie. we aren't going back and forth).\\
+As the set $V$ is finite, this path must cross itself again at some point, ie. there is some index $j$ and some $i< j-1$ satisfying $v_i = v_j$.\\
+We may pick $j$ minimal among all indexes with this property, then the walk $v_i, v_{i+1} , \ldots, v_{j-1} , v_j =v_i$ is in fact a cycle (as it doesn't intersect itself by our minimality assumption on $j$).\\
+But this contradicts the fact that $T$ is a tree.
+\section{Problem Set 9, Exercise 2.a)}
+Let $x$ be a basic solution for $ \mathcal{P}$, then there exists a basis $\beta$ of $n$ elements such that 
+\[ 
+A_\beta x_\beta = b
+\]
+and such that for every index $i\notin \beta$, $x_i=0$.\\
+As the set of collumn vectors of $A_\beta$ is linearly independent, we know that $A_\beta$ is invertible and thus by hypothesis $\det A_\beta = \pm 1 $.\\
+Cramer's rule tells us that for all $j\in \beta$, the value of $x_j$ is given by
+\[ 
+x_j = \frac{ \det A_\beta^{j}}{ \det A_\beta}
+\]
+where $A_\beta^{j}$ denotes the matrix $A_\beta$ where we've replaced the $j$-th collumn with the vector $b$.\\
+But then $\det A_\beta^{j}$ is an integer and as $\det A_\beta= \pm 1$, we conclude that in fact $x$ is a vector with integer entries.
+
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
+\message{ !name(Ex.tex) !offset(-63) }

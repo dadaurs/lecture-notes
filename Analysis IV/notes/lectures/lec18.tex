@@ -1,0 +1,183 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{18}{Wed 11 May}{Fourier Transform}
+\begin{crly}
+Let $K_\delta= \delta ^{-\frac{1}{2}} e^{ - \frac{\pi x ^{2}}{\delta}} $, then $\hat{K}_\delta = e^{- \pi \delta \xi^{2}} $.\\
+The following two things hold
+\begin{enumerate}
+\item $ \int_{  }^{  } K_\delta = \int_{  }^{  }K_1 = 1$ (this is an exercise) 
+\item $ \int_{ |X| > \eta }^{  } K_\delta \to 0$ as $\delta \to 0$ 
+\end{enumerate}
+\end{crly}
+\begin{proof}
+Indeed,
+\[ 
+\int_{ |x| > \eta }^{  } K_\delta = \int_{ |y| > \frac{\eta}{ \sqrt{\delta} } }^{  } e^{- \pi y^{2}} dy \to 0
+\]
+
+\end{proof}
+\subsection{Fourier Inversion Formula}
+Let $f\in L^{1}( \mathbb{R}) $ s.t. $ |\hat{f}| \in L^{1}( \mathbb{R}) $, then
+\[ 
+f( x) = \int_{  }^{  } \hat{f}( \xi) e^{i 2 \pi \xi y} 
+\]
+\begin{rmq}
+Note that it is natural to suppose $ \hat{f}\in L^{1}$ to define the right hand side of the equation above, this implies in particular that $f$ coincides a.e. with a continuous function.\\
+It is natural to ask if there are other conditions for which $f, \hat{f}\in L^{1}$  is satisfied.\\
+The Schwartz space is the set of all function $f\in C^{ \infty }( \mathbb{R}) $ s.t.
+\[ 
+\sup_x |x|^{k}||f^{( l) }( x) | < \infty \quad \forall k , l \in \mathbb{N}
+\]
+The Schwartz space $ \mathcal{S}( \mathbb{R}) $ contains all smooth compactly supported functions, as well as Gaussians.\\
+Moreover, if $f \in \mathcal{S}( \mathbb{R})  $, then $ \hat{f}\in \mathcal{S}( \mathbb{R})$, in particular, the Fourier inversion formula applies to $f \in \mathcal{S}( \mathbb{R}) $.
+		
+\end{rmq}
+\begin{crly}
+The Fourier Transform $ \mathcal{F}: \mathcal{S}( \mathbb{R}) \to \mathcal{S}( \mathbb{R}) $ is an automorphism of vector spaces.
+\end{crly}
+\begin{proof}
+Let $ \mathcal{F}^{*}g = \int_{  }^{  } g( y) e^{2 \pi \xi y} dy$, then
+\[ 
+\mathcal{F}^{*}\circ \mathcal{F} = \id \text{ on  } \mathcal{S}( \mathbb{R}) 
+\]
+Furthermore, since $ \mathcal{F}^{*}g = \mathcal{F}( g( -x) ) $, $\mathcal{F} \mathcal{F}^{*}= \id$.
+
+\end{proof}
+Now we prove the Fourier Inversion formula
+\begin{proof}
+We first prove the result for $f \in C^{0}\cap L^{ \infty }$.\\
+We prove the FIF for \underline{all} $x$.\\
+We first want to show that
+\[ 
+f( 0) = \int_{  }^{  } \hat{f}( \xi) d\xi
+\]
+By lemma $7$ ,
+\begin{align*}
+\int_{  }^{  } f( x) K_\delta ( x) dx = \int_{  }^{  }\hat{f}( \xi) G_\delta( \xi) d\xi
+\end{align*}
+As $\delta \to 0$, we want to show that
+\[ 
+\int_{  }^{  } \hat{f}( \xi) G_\delta( \xi) d\xi \to \int_{  }^{  } \hat{f}( \xi) d\xi
+\]
+Indeed
+\begin{align*}
+|f( 0) - \int_{  }^{  }f( x) K_\delta( x) dx| & \leq \int_{  }^{  } |f( 0) - f( x) | K_\delta ( x) dx\\
+					      & \leq \int_{ |x| < \eta }^{  } | f( 0) - f( x)| K_\delta + \N { f} _{L^{ \infty }} o( 1)
+\end{align*}
+For general $x$, recall that for $F( y) = f( x+y) $, then
+\[ 
+f( x) = F( 0) = \int_{  }^{  } \hat{F}( \xi) d\xi = \int_{  }^{  } \hat{f}( \xi) e^{2 \pi i \xi x} d\xi
+\]
+Now we prove the result for general functions $f$ satisfying $f,\hat{f}\in L^{1 }( \mathbb{R}) $.\\
+For any $x$, write the multiplication formula applied to  $F( y) = f( x+y) $ and $K_\delta$, then we get
+\begin{align*}
+\int_{ - \infty  }^{ \infty  } F( y) K_\delta( y) dy &= \int_{ - \infty  }^{ \infty  } \hat{F}( \xi) G_\delta( \xi) d\xi\\
+&= \int_{ - \infty  }^{ \infty  } \hat{f}( \xi) e^{i 2 \pi \xi x}  G_\delta( \xi) d\xi
+\end{align*}
+Now we let $\delta\to 0$, then the RHS goes to $ \int_{ - \infty  }^{ \infty  } \hat{f}( \xi) e^{i 2 \pi \xi x} $.\\
+Furthermore, we claim that the LHS 
+\[ 
+\int_{  }^{  } f( x+y) K_\delta( y) dy \to f( x) 
+\]
+We now prove this claim:\\
+Note that
+\begin{align*}
+	|f_\delta ( x) - f( x)| & \leq  |\int_{ - \infty  }^{ \infty  } ( f( x+y) - f( x) ) K_\delta( y) dy|
+\end{align*}
+Thus
+\begin{align*}
+	\int_{ - \infty  }^{ \infty  } |f_\delta ( x) - f( x) | dx &\leq  \int_{ - \infty  }^{ \infty  } \int_{-\infty}^{+\infty} |f( x+y) - f( x) | K_\delta ( y) dy dx\\
+								   & = \int_{  }^{  } \N{ f( \cdot + y) - f}_{L^{1}}  K_\delta ( y) dy\\
+  &=  \int_{-\infty}^{+\infty} \N { f(  \cdot + \delta^{\frac{1}{2}}y) -f} _{L^{1}} e^{- \pi y ^{2}} 
+\end{align*}
+Now recall from an exercise that $\forall f \in L^{p}(  \mathbb{R}) $, the translations $ \N { f( \cdot + y) - f}_{L^{p}} \to 0$ as $|y|\to 0$.\\
+Thus the quantity above is dominated and the integral goes to 0.
+
+				
+
+\end{proof}
+\subsection{Plancherel Identity}
+
+\begin{thm}[Plancherel]
+Let $f \in L^{1}\cap L^{2}( \mathbb{R}) $, then $ \hat{f}\in L^{2}$ and		
+\[ 
+\N { f}_{L^{2}} = \N { \hat{f}}_{L^{2}} 
+\]
+
+\end{thm}
+Let's first prove a preliminary result
+\begin{propo}
+Let $f,g \in L^{1}( \mathbb{R}) $ and consider their convolution
+\[ 
+f\ast g = \int_{  }^{  } f( x-y) g( y) dy
+\]
+Then
+\begin{enumerate}
+\item $f\ast g $ is well defined for a.e. and $ \N { f\ast g } \leq  \N { f} \N { g} $ 
+\item $f\ast g = g\ast f$ 
+\item $ \hat{f \ast  g}= \hat{f } \hat{g}$ 
+\end{enumerate}
+\begin{proof}
+We do not prove measurability.\\
+\begin{align*}
+	\int \int f( x-y) g( y) dy dx &\leq  \int_{  }^{  } \int |f( x-y) g( y) | dy dx\\
+				      &= \int \N { f}_{L^{1}} |g( y)| dy \\
+				      & \leq \N { f}_{L^{1}} \N { f }_{L^{1}} 
+\end{align*}
+Thus $f\ast g $ is bounded.\\
+It is an exercise to show that $ \hat{f\ast g }= \hat{f}\hat{g}$ 
+\end{proof}
+
+
+\end{propo}
+
+\begin{proof}
+Let's first present a "wrong" proof which we'll then fix.\\
+Let $g( x) = f( -x) $, observe that $ \hat{g}( x) = \int_{  }^{  } f( -y  ) e^{- i 2 \pi \xi y} dy = -\hat{f}( \xi) $.\\
+Let $h = f \ast  g$, then $ \hat{h}= \hat{f} \hat{g} = | \hat{f}| ^{2}$, thus
+\begin{align*}
+h( 0) &= \int_{  }^{  } f( y) g( 0-y) dy\\
+&= \int_{  }^{  } |f| ^{2} ( y) dy
+\end{align*}
+However, note that FIF can not be applied at $x=0$ as we only have equality a.e.\\
+And we also need $ \hat{h}\in L^{1}$ \\
+Hence, to conclude the proof, we show that if $ f \in L^{1}\cap L^{2} ( \mathbb{R}) \implies $ $h$ is continuous and $ \hat{f} \in L^{2}$.\\
+To prove $1$, notice that
+\begin{align*}
+|h( x+\epsilon) - h( x) | &= | \int_{  }^{  } f( y)  ( ( g( x+\epsilon -y) - g( x-y) ) ) dy\\
+&=  \int\int |f( y) | | f( y-x - \epsilon) - f( y-x) |dxdy\\
+& \leq  \N { f ( \cdot + \epsilon ) - f} _{L^{2}} \N { f}_{L^{2}} \to 0
+\end{align*}
+Finally, we have to show that $\hat{f}$ is in $L^{2}$.\\
+At this point, we know that Plancherel holds if $f \in L^{1}\cap L^{2}$ and $\hat{f} \in L^{2}$.\\
+Let $f_\delta = f \ast K_\delta$, we want to apply the above fact to $f_\delta$ and then let $\delta \to 0$.\\
+We know that $ \hat{f}_\delta = \hat{f} \hat{K}_\delta$.\\
+We need to verify that $ f_\delta$ satisfies the right assumptions.\\
+We know that $f_\delta \in L^{1}$ from the proposition.\\
+Furthermore, since $ \hat{f}_\delta = \hat{f} \hat{K}_\delta$, since $ \hat{f}\in L^{ \infty }$ and $e^{- \pi \delta x^{2}}\in L^{1}$ and thus $\hat{f}_\delta$ is in $L^{2}$ (as $ \hat{K}_\delta$ is) \\
+We first bound $f_\delta$ pointwise
+\begin{align*}
+	\hat{f}_\delta^{2} ( x) &= \left[ \int_{ - \infty  }^{ \infty  } f( y) K_\delta ( x-y) dy \right]^{2}
+	\intertext{Applying Hoelder inequality yields}
+			  & \leq  \int_{-\infty}^{+\infty} f^{2}( y) K_\delta( x-y) dy \int_{-\infty}^{+\infty} K_\delta( x-y) dy\\
+			  &= \int_{-\infty}^{+\infty} f^{2}( y) K_\delta ( x-y) dy
+\end{align*}
+We now integrate wrt. $x$, thus
+\begin{align*}
+	\int_{-\infty}^{+\infty} f_\delta ^{2}( x) &\leq  \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty} f( y) ^{2} K_\delta( x-y) dydx\\
+	&= \int_{-\infty}^{+\infty} f( y) ^{2}  \int_{-\infty}^{+\infty}K_\delta ( x-y) dx dy\\
+	&= \int_{-\infty}^{+\infty} f( y)^{2}.
+\end{align*}
+
+
+
+
+
+
+\end{proof}
+
+
+		
+
+
+\end{document}	

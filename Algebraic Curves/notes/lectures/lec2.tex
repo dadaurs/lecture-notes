@@ -4,7 +4,7 @@
 \subsection{Affine spaces and algebraic sets}
 Let $k$ be a field.
 \begin{defn}
-	For every $n \geq 0$ the affine $n$ -space $ \mathbb{A}_k^{n}$ the set $k^{n}$ .	
+	For every $n \geq 0$ the affine $n$ -space $ \mathbb{A}_k^{n}$ is the set $k^{n}$ .	
 \end{defn}
 In particular $ \mathbb{A}^{0}$ is a point, $ \mathbb{A}^{1}$ is a line, $ \mathbb{A}^{2}$ the affine plane.\\
 Given a subset $ S \subset k [ X_1,\ldots, X_n] $ of polynomials, we set
@@ -100,14 +100,15 @@ Using this, there is a one to one correspondence
 	Let $K$ be algebraically closed, every maximal ideal $I \subset K[X_1,\ldots, X_n]$ is of the form $ I= \left\{ x_1-a_1,\ldots, x_n-a_n \right\} $ with $a= ( a_i) \in \mathbb{A}^{n}$ 
 \end{thm}
 \begin{crly}
-	Let $I \subset K[X_1,\ldots, X_n$ be any ideal, then $V( I) $ is a finite set $\iff \faktor { k[X_1,\ldots, X_n]} { I} $ is a finite dimensional $K$- vector space.\\
+	Let $I \subset K[X_1,\ldots, X_n]$ be any ideal, then $V( I) $ is a finite set $\iff \faktor { k[X_1,\ldots, X_n]} { I} $ is a finite dimensional $K$- vector space.\\
 	In this case
 	\[ 
 	|V( I) | \leq \dim_k \faktor { k[X_1,\ldots, X_n]} { I}
 	\]
 \end{crly}
 \begin{proof}
-	Let $I \subset k[X_1,\ldots, X_n]$ be any ideal and $P_1, \ldots, P_n \subset V( I) $ distinct.\\
+	First, we show that if $ \faktor{k[x_1,\ldots,x_n]}{I}$ is finite dimensional, then $V( I) $ is finite.\\ 
+	Let $I \subset k[X_1,\ldots, X_n]$ be any ideal and $P_1, \ldots, P_r \subset V( I) $ be distinct points, we want to show that $ r \leq  \dim_k \faktor{k[x_1,\ldots,x_n]}{I}$  .\\
 	We can choose ( Exercise) $F_1,\ldots, F_r \in K[X_1,\ldots, X_n]$ s.t. $F_i( P_j) = \delta_{ij} $, then we write $f_1,\ldots, f_r$ for the residues of $F_1,\ldots, F_r$ in $\faktor{  K[X_1,\ldots, X_n] } { I} $.\\
 	We claim $f_1,\ldots, f_r$ are linearly independent.\\
 	Indeed suppose $\sum_i \lambda_i f_i = 0$, this implies $ \sum_i \lambda_i F_i \in I$ hence $0 = \sum \lambda_i F_i( P_j) $ which implies $\lambda_j = 0 $, hence the $f_i$ are linearly independent.\\

@@ -1,0 +1,73 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Fri 20 May}{Projective Plane Curves}
+\section{Projective Plane Curves}
+\begin{defn}[Plane Curves]
+	Two non constant forms $F,G\in k[x,y,z]$ are equivalentif $\exists \lambda \in K^{\ast}$ such that $F= \lambda G$.\\
+	A projective plane curve is an equivalence class of forms.\\
+	The degree of a projective plane curve is the degree of a form representing it.\\
+	As before we'll write $F \subset \mathbb{P}^{2}$ instead of $V( F) $.
+\end{defn}
+Curves of degrees $1,2,3,4$ are called lines, conics, cubics and quartics.\\
+Components and multiplicities are defined as in th affine case.\\
+If $p= [ x:y:1]$, then $\O_p( F) = \O_{( x,y) } ( F_\ast) $.\\
+The multiplicity $m_p( F) $ of $F$ at $p\in \mathbb{P}^{2}$ is defined as ( for $F$ irreducible) 
+\[ 
+m_p( F) = \dim_k \faktor{m_p^{n}( F) }{m_p^{n+1}( F) }
+\]
+for $n $ big enough.\\
+If $p\in F$ is a simple point ( $\iff m_p( F) =1$ ) and $F$ is irreducible then $\O_p( F) $ is a DVR.\\
+We write $ord_p^{F}$ for the corresponding order function on $K(F ) $.\\
+Finally, if $P= [ x,y,1] $ and $F,G$ projective plane curves, we set $I( p,F\cap G) = I( ( x,y), F_\ast\cap G_\ast )= \dim_k \faktor{\O_{( x,y) }( \mathbb{A}^{2})  }{ ( F_\ast,G_\ast) } $.\\
+Where we always choose a "practical" dehomogenization.
+\begin{rmq}
+We'd like to define
+\[ 
+I( p,F\cap G) = \dim_k (  \faktor{\O_p( \mathbb{P}^{2}) }{( F,G) }) 
+\]
+but $F,G$ are not functions defined in a neighbourhood of $p$.
+\end{rmq}
+However if $L$ is any line in $\mathbb{P}^{2}$ not containing $p$, then $ \frac{F}{L^{\deg F}}\in \O_p( \mathbb{P}^{2}) $, if $L'$ is another line, then $ \frac{F}{L^{\deg F}}, \frac{F}{L'^{\deg F}}$ differ by $ ( \frac{L'}{L})^{\deg F} $ which is a unit in $\O_p( \mathbb{P}^{2}) $.\\
+By abuse of notation we may write $F\in \O_p( \mathbb{P}^{2}) $ for $\frac{F}{L^{\deg F}}$ which is well defined up to a unit.\\
+And then
+\[ 
+I( p,F\cap G) = \dim_k \left( \faktor{\O_p( \mathbb{P}^{2}) }{( F,G) }\right) 
+\]
+In particular, $I( p,F\cap G) $ does not depend on the dehomogenization we choose.
+\begin{defn}
+	A line $L$ is tangent to $F$ at $p$ if
+	\[ 
+	I( p,L\cap F) > m_p( F) 
+	\]
+\end{defn}
+$P$ is an ordinary multiple point of $F$ if there are $m_p( F) $ distinct tangents.
+\subsection{Bezout's Theorem}
+\begin{thm}[Bezout]
+	Let $F,G$ be projective plane curves of degree $m$ and $n$ and suppose $F$ and $G$ have no common component.\\
+	Then,
+	\[ 
+	\sum_{p\in F\cap G} I( p,F\cap G) = mn
+	\]
+\end{thm}
+We defer the proof until next week.
+\begin{crly}
+If $F,G$ have no common components, then
+\[ 
+\sum_{p\in F\cap G} m_p( F) m_p( G) \leq \deg F \deg G
+\]
+
+\end{crly}
+\begin{proof}
+Immediate using the theorem about general properties of intersection numbers.
+\end{proof}
+\begin{crly}
+If $F$ and $G$ meet in $\deg F\deg G$ points, then all these points are simple.
+\end{crly}
+\begin{crly}
+If two curves of degree $m$ and $n$ have more than $mn$ points in common, then they must have a common component.
+\end{crly}
+
+
+
+
+\end{document}	
