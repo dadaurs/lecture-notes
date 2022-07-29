@@ -1,0 +1,114 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Thu 31 Mar}{qqchose}
+\subsection{Interpolation sur les points de Chebyshev}
+En partant de la characterisation de l'erreur d'interpolation
+\[ 
+\N { f- p^{n}} \leq  \max | f^{( n+1) } ( \eta) \max |\pi_n( x) |
+\]
+Comment $\pi_n( x) $ depend des points choisis et quels sont les points minimisant $ \N { f-p^{n}} $ ?\\
+On se pose sur l'intervalle $ [ -1,1], p_n( x) = x^{n} +  \sum_{ i=1}^{n-1} a_i x^{i} $, quels sont les coefficients $a_1,\ldots, a_{n-1} $ tel que 
+\[ 
+\min_{p_n \in \mathbb{P}_n^{1}} \max_{x} |p_n( x) |
+\]
+\begin{thm}
+	Ces polynomes existent pour tout $n$ et il sonts de la forme $T_n( x) = \cos ( n \arccos( x) ) , x\in [ -1,1] $ 
+\end{thm}
+On procede par etapes
+\begin{propo}
+Si $p_n\in \mathbb{P}_n^{1}$ minimise le probleme ci-dessus, alors $p_n$ prend la valeur $L = \max_{x} |p_n( x) |$ exactement $n+1$ fois.
+\end{propo}
+\begin{proof}
+On montre le cas $n=3$.\\
+Supposons que $p_3$ atteint le min seulement 3 fois, $p( x_1) =L, p( x_2) = -L, p_3 ( x_3) = L$.\\
+Prenons $q_2$ tel que $ q_2( x_1) > 0 , q_2( x_2) < 0 , q_3( x_3) >0$.\\
+Alors $ p_3- \epsilon q_2 \in \mathbb{P}_3^{1 }$ .\\
+Alors $p_3-\epsilon q_2$ a diminue sa valeur en $x_1,x_2,x_3$ mais donc le polynome $p_3$ n'etait pas minimisant.
+\end{proof}
+\subsection*{Les polynomes de Chebyshev sont des polynomes}
+On verifie juste quelques cas
+\begin{align*}
+T_0 = \cos 0 = 1\\
+T_1 = \cos \arccos x = x\\
+T_2 = \cos ( 2 \arccos x ) = 2x
+\end{align*}
+De plus, $T_n( x) \leq 1\forall x $ et les racines de $T_n( x) $ sont $ \cos( \frac{2k+1}{2n} \pi) , k = 0,\ldots, n-1$.\\
+De plus, $T)n( x) $ atteint $-1$ et $1$ exactement $n+1$ fois.\\
+Ainsi,
+\[ 
+	\min_{p_n \in \mathbb{P}_n^{1}} \max _{x\in [ -1,1] } |p_n( x) | = \max_x |2^{-n}T_n( x) |
+\]
+En revenant au probleme d'interpolation
+\[ 
+\N { f- p^{n}}  \leq \max_{\eta \in [-1,1] } | f^{( n+1) ( \eta) }\max_x |\pi_n( x) |
+\]
+Ainsi, en prenant $\pi_n( x) = \frac{1}{( n+1) !} 2^{-n}T_{n+1} ( x) $.\\
+Les points d'interpolation qui minimisent l'erreur sont donc les racines de $T_{n+1} ( x) $ 
+\begin{thm}
+	Soit $f: [ -1,1] \to \mathbb{R}, f $ Lipschitz, et si $p_n^{c}( x) $ est le polynome interpolant de $f( x) $ sur les points de Chebychev, alors
+	\[ 
+	\lim_{n \to  + \infty} \N { f- p_n^{c}} = 0
+	\]
+
+\end{thm}
+\begin{rmq}
+On peut passer  de $ [ a,b] $ vers $ [ -1,1] $ a travers une transformation lineaire.
+\end{rmq}
+\subsection{Approximation par des polynomes dans la norme $L^{2}$ }
+Jusqu'ici, on a cherche a minimiser 
+\[ 
+\N { f-p_n} _{ \infty }  = \max_{x\in [ a,b] }  |f( x) - p_n( x) |
+\]
+On cherche maintenant un polynome $p_n$ tel que $ \N { f- p_n}_{ L^{2}} $ est minimale.\\
+On cherche donc $p_n$ qui minimise $ \int_{ a }^{ b } ( f( x) - p_n( x) )^{2} dx$.\\
+On ecrit donc
+\[ 
+p_n( x) = \sum_k \alpha_k p_k( x) 
+\]
+ou les $p_k$ sont des polynomes de Legendre.\\
+On cherche donc $p_n$ tel que
+\[ 
+\int_{ a }^{ b } ( f-p_n) ^{2} \leq  \int_{ a }^{ b } ( f-q_n) ^{2} \forall q_n
+\]
+Ainsi,
+\[ 
+\int_{ a }^{ b } ( f- \sum \alpha_k p_k)^{2} = \int_{ a }^{ b } f^{2} - 2 \sum_k \alpha_k \int_{ a }^{ b } f p_k + \sum_k \sum_{ k'} \alpha_k \alpha_{ k'} \int_{ a }^{ b } p_k p_{k'} 
+\]
+Sauf que les polynomes de Legendre sont orthogonaux pour la norme $L^{2}$ et donc
+\[ 
+\int_{ a }^{ b } ( f- \sum_k \alpha_k p_k) ^{2} = \int_{ a }^{ b } f^{2} - 2\sum_k \alpha_k \int_{ a }^{ b } \alpha_k \int_{ a }^{ b } f p_k + \sum_k \alpha_k^{2} \int_{ a }^{ b } p_k^{2}
+\]
+On cherche donc les coefficients $\alpha_k$ tel que
+\begin{align*}
+	\frac{d}{d \alpha_i} ( \int_{ a }^{ b } ( f- p_n)^{2}) &= 0\\
+\iff -2 \int_{ a }^{ b } f p_i + 2 \alpha_i  \int_{ a }^{ b }p_i ^{2}=0
+\end{align*}
+Ainsi, $\alpha_i = \frac{ \int_{ a }^{ b } f p_i}{\int_{ a }^{ b } p_i ^{2}}$.\\
+\begin{rmq}
+Pour calculer $p_n( x) $ on n'utilise pas une interpolation sur les points, mais on a besoin de connaitre $ \int_{  }^{  } f p_k$.\\
+En general $ \int_{ a }^{ b } f p_k $ ne peut pas etre calculee exactement, donc on peut ecrire
+\[ 
+\int_{ a }^{ b } f p_k = Q( f p_k) 
+\]
+Soit $x_0,\ldots,x_n$ $n+1$ points de Gauss sur l'intervalle $ [ a,b] $, alors 
+\[ 
+\int_{ a }^{ b } fp_k \simeq \sum_i f( x_i)  p_k( x_i) c_i
+\]
+Il s'agit d'une integrale approche mais c'est le mieux qu'on puisse faire avec $n+1$ approximations.\\
+Ainsi, on obtient un polynome moins optimal
+\[ 
+	\tilde{p_n} = \sum_{k=0}^{n}\tilde { \alpha}_k p_k
+\]
+ou $\tilde { p} _n$ est calculee grace a $n+1$ evaluations de $f$.\\
+
+Quel est alors le comportement asymptotique de $ \N { f- \tilde { p} _n}_{ L^{2}} $ par rapport a $n$ .
+\end{rmq}
+
+
+
+
+	
+
+	
+
+\end{document}	

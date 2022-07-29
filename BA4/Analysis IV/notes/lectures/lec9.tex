@@ -1,0 +1,69 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Thu 24 Mar}{Smooth functions are dense}
+\subsection{Approximation of $L^p$ functions with $C_c^\infty( \Omega) $ }
+\begin{defn}[Compactly supported]
+	If $f:\Omega\to \mathbb{R}\cup \left\{ \pm \infty  \right\} $, then $\supp f = \left\{ x: f( x) \neq 0 \right\} $ \\
+	\[ 
+	C^{0}_c ( \Omega) = \left\{ f\in C^{0}( \Omega) :\supp f \subset \subset \Omega \right\} 
+	\]
+Where we require $\supp f$ to be compact.	
+And then we define
+\[ 
+	C^{k}_c( \Omega)  = C^{0}_c ( \Omega) \cap C^{k}( \Omega) 
+\]
+\end{defn}
+\begin{thm}
+	Let $\Omega$ be an open set, $1 \leq p < \infty , f\in L^p( \Omega) $ then $\exists g_k \in C_k^{ \infty }( \Omega)  $  st. $\lim_{k \to  + \infty} \N { g_k -f }_{L^{p}( \Omega) } $ 
+\end{thm}
+\begin{proof}
+We prove the result for $\Omega= \mathbb{R}^{n}$ , we first find $g_k \in C_c^{0}( \mathbb{R}^n) $ \\
+We prove the result for $f= 1_B$ , $B$ a box.\\
+Define $g_\epsilon( x) = \min( 1- \frac{d( x,B) }{\epsilon},1) $ \\
+Now we want to go from indicator of boxes to indicators of measurable sets.\\
+So assume $f= 1_E, E$ measurable and $ \overline{E}$ is compact.\\
+Let $\epsilon>0$ and $ \left\{ B_i \right\} $ be a cover of $E$ st. $\sum m( B_i) \leq m( E)  +\epsilon$.\\
+This implies that
+\[ 
+\int_{  }^{  } |1_E - \sum 1_{ B_i }| = \sum \int |1_{B_i} -1_E| = \sum m( B_i) - m( E) \leq \epsilon
+\]
+Take $N$ st. $\sum_{i=N+1}^{ \infty } m( B_i) < \epsilon$ \\
+Using step 1, we find $h^{i} \in C_c^{0}( \mathbb{R}^n) $ st. $ \N { h^{i}- 1_{B_i} } \leq \frac{\epsilon}{N} $ .\\
+Take $h = \sum_{i=1}^{N } h^{i} \in C_c^{0}(  \mathbb{R}^n) $ .\\
+Now for $p=1$, we want to estimate
+\[ 
+\N { 1_E - h}_{L^{1}} \leq \N { 1_E - \sum_{i=1}^{ N}1_{B_i} } _{L^{1}} + \N { \sum ( 1_{B_i} - h^{i}) }_{L^{1}} \leq \epsilon + \sum_{i=1}^{ N} \frac{\epsilon}{N} = 2\epsilon
+\]
+If $p>1$, take $ \hat{h}= \max( \min( h , 1),0) $, now
+\[ 
+\N { 1_E - \hat{h}} _{L^{p}} ^{p} = \int_{  }^{  } |1_E - \hat{h}|^{p} \leq \int |1_E - \hat{h}| \to 0
+\]
+
+Now we prove the statement for $f$ simple, this means that $ f= \sum c_i \frac{1}{E_i}$ where the $E_i$ are bounded ( by hypothesis on $f$ ).\\
+By the step above, take a sequence 	
+\[ 
+h^{i}_k \to 1_{E_i} 
+\]
+And look at 
+\[ 
+	\N { \sum c_i h^{i}_k - f}_{L^{p}}  = \N { \sum c_i h^{i}_k - 1_{E_i}  }\to 0	
+\]
+Now suppose $f \geq 0$ be measurable, then let 
+\[ 
+1_{B_k} \phi_k \to f
+\]
+from below.\\
+Then there exist $g_k \in C^{0}_c ( \mathbb{R}^n) $ such that
+\[ 
+\N { g_k 1_{B_k} \phi_k}_{L^{p}} \leq \frac{1}{K}
+\]
+then
+\[ 
+\N { g_k -f} _{L^{p}} \to 0
+\]
+
+	
+
+\end{proof}
+
+\end{document}	

@@ -1,4 +1,0 @@
-function sigma=var(m)
-  [E,p,pval,x,y,f]=donnees(m,1)
-
-  

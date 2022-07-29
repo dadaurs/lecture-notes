@@ -1,0 +1,71 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{16}{Wed 04 May}{truc}
+\begin{thm}[Uniform convergence of Fourier Series]
+	Let $f\in C^{1}$ and 1-periodic, then
+	\[ 
+	\sum_{}^{ } | \hat{f}( n) | < \infty 
+	\]
+	and
+	\[ 
+	F_n f \to f 
+	\]
+	uniformly on $[0,1]$.
+\end{thm}
+\begin{rmq}
+Informally, given $f( x) = \sum_{- \infty }^{ \infty } \hat{f}( m) e^{i\pi n x} $ and
+\[ 
+f'( x) = \sum_{ - \infty }^{ \infty } \hat{f}( m) i \pi n e^{i\pi n x} 
+\]
+And in fact, it is true that $ \hat{f'}( m) = i \pi m \hat{f}( m) $.\\
+Rigourously,
+\begin{align*}
+\hat{f'}( m) = \int_{  }^{  } f' e^{- i \pi n x } dx = - \int_{  }^{  } f( x) ( - i \pi n) e^{- i \pi n x } dx = i \pi n \hat{f}( n) 
+\end{align*}
+\end{rmq}
+\begin{proof}
+Let's show $f\in C^{1}\implies \sum | \hat{f}( m) | < \infty $.\\
+By Plancherel,
+\begin{align*}
+\infty  > \N { f'} _{L^{2}}^{2} = \sum_{}^{ } | \hat{f'}^{2}( m) |= \sum_{}^{ } \pi^{2}n^{2} | \hat{f}( n) ^{2}|
+\end{align*}
+
+Now we show that that $F_n \to f$ uniformly, we know that
+\begin{align*}
+|f( x) - F_N( x) | &= \sum_{ |n| \geq N -1}^{ } \hat{f}( n)  e^{i\pi n x} \\
+		   & \leq | \hat{f}( n) | \leq  \infty 
+\end{align*}
+
+
+\end{proof}
+\subsection{Fourier Series in $\sin$ }
+Given $f: [ 0, l] \to \mathbb{R}$ \\
+We can extend $f$ oddly on $[-l,l]$ and then extend it by periodicity.\\
+Now we write the fourier series of $\tilde f$ 
+\[ 
+F \tilde f = \sum b_n \sin(  \frac{\pi}{l} n x ) 
+\]
+where $b_n$ are the fourier coefficients which we may rewrite as
+\begin{align*}
+b_n &= \frac{1}{l}  \int_{ -l }^{ l } \tilde f ( y)  \sin ( \frac{\pi ny}{l}) dy \\
+    &= \frac{2}{l} \int_{ 0 }^{ 1 } f( y) \sin(  \frac{\pi n y}{l}) dy
+\end{align*}
+\begin{defn}
+The fourier series in sines of $f$ is 
+\[ 
+F^{s}f = \sum_{}^{ }b_n \sin ( \frac{\pi}{l} nx) 
+\]
+
+\end{defn}
+\begin{crly}
+If $f\in L^{2}( 0,l) $, then $F_N^{s}f \to f$ in $L^{2}$ 
+\end{crly}
+\begin{proof}
+Trivial.
+\end{proof}
+We similarly define the fourier series in cosines 
+
+			
+
+
+\end{document}	

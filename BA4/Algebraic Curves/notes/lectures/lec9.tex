@@ -1,0 +1,150 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Fri 06 May}{stuff}
+We now show the lemma above.\\
+\begin{proof}
+	Let $\mathfrak{m}_i = \mathfrak{m}_{p_i} $ and $R= \faktor { k[x_1,\ldots,x_n]} { I} $ and $R_i = \faktor { \O_i} { I \O_i} $.\\
+	For each $i$ we have the localisation map
+	\[ 
+		\phi_i:	\faktor{ K[x_1,\ldots,x_n] }{I}  \to \faktor { \O_i} { I \O_i} 
+	\]
+	And we define $\phi$  as the product of the $\phi_i$ .\\
+	To show that $\phi$ is an isomorphism, we construct idempotents: $e_1,\ldots, e_n \in R$ such that
+	\[ 
+	e_i ^{2} = e_i, e_i e_j = 0 \text{ and } \sum_i e_i = 1
+	\]
+	Further, we'll want $e_i( P_i) =1$ and $\forall G\in  k[x_1,\ldots,x_n] $ with $G( P_i) \neq 0	$, $\exists t\in R$ such that $tg = e_i$ ($g= \overline{G}$) .\\
+	Let's suppose we have such $e_i$'s, then
+	\begin{enumerate}
+	\item $\phi$ is injective.\\
+		Indeed, if $f\in \ker\phi_i\iff \exists G$ with $G( P_i) \neq 0$ and $GF \in I$ 
+		Thus, $f\in \ker\phi\implies \forall i \exists G_i$ with $G_i( P_i) \neq 0$ and $G_i F= 0$ 
+		\[ 
+		f= \sum_{i}^{ } e_i f = \sum_{i}^{ } t_i g_i f
+		\]
+
+	\item $\phi$ is surjective.\\
+		Let $z= ( \frac{a_1}{g_1},\ldots, \frac{a_n}{g_n}) \in \prod R_i$ where $g_i( P_i) \neq 0$.\\
+		Let $t_i \in R$ be such that $t_i g_i = e_i$, since $e_i ( P_i) =1$ , $\phi_i( e_i) \in R^{\ast}$.\\
+		$\phi_i ( e_j) = \phi_i ( e_j e_i ) \phi( e_i)^{-1}= 0$
+			
+		Thus
+		\[ 
+		\phi_i(e_i  ) = \phi_i( \sum_i e)i) = \phi_i( 1) = 1 
+		\]
+		Hence $\phi_i( t_i g_i) = 1 $ and 
+		\[ 
+		\frac{a_i }{g_i}= \phi_i ( a_i t_i) 
+		\]
+		
+		
+	\end{enumerate}
+	Let's construct $e_1,\ldots, e_n$:\\
+	By the nullstellensatz, we have that $ \sqrt{I} = I( P_1,\ldots,P_n) = \bigcap_{i=1}^{N} \mathfrak{m}_i$\\
+	Thus there exists $d$ such that $( \bigcap_{i} \mathfrak{m}_i)^{d} \subset I$.\\
+	Choose $F_i$ such that $F_i( P_j) = \delta_{ij} $ and set $ E_i = 1- ( 1-F_i^{d})^{d}$.\\
+	Then the residues $e_i\in R$ of $E$ satisfy 1 and 2.\\
+	We have $E_i = F_i^{d}D_i$ thus $E_i \in \mathfrak{m}_j^{d}\forall j \neq i$.\\
+	Then $i\neq j$ implies $E_i E_j \in \bigcap_k\mathfrak{m}_k^{d}= ( \bigcap \mathfrak{m}_k)^{d }\subset I $.\\
+	Then 
+	\begin{align*}
+		1- \sum_i E_i = 1- E_j = \sum_{i\neq j} E_i\in \bigcap_k \mathfrak{m}_k^{d} \subset I
+	\end{align*}
+	Further
+	\[ 
+		E_i - E_i^{2} = E_i ( 1- F_i^{d})^{d} \in \bigcap \mathfrak{m}_j^{d} \mathfrak{m}_i^{d}\subset I
+	\]
+	Let $G\in k[x_1,\ldots,x_n], G( P_i) \neq 0$, say $G( P_i) =1$, $H= 1-G\in \mathfrak{m}_i$.\\
+	Then $H^{d}E_i \in \mathfrak{m}_i \bigcap_{j\neq i} \mathfrak{m}_j^{d}\in I$.\\
+	Then 
+	\[ 
+	g( e_i + he_i + \ldots + h^{d-1}e_i) = e_i - h^{d}e_i = e_i 
+	\]
+	
+	
+
+	
+\end{proof}
+\subsection{Curves and DVR's}
+\begin{propo}
+Let $R$ be a domain that is not a field, then the two following things are equivalent
+\begin{enumerate}
+\item $R$ is a noetherian, local and the maximal ideal is principal.
+\item There exists an irreducible element $t\in R$ such that every non zero element $z\in R$ can be written uniquely as $z= U \cdot t^{n}$, where $U \in R^{\times}$ and $n \in \mathbb{Z}_{ \geq 0} $.\\
+
+\end{enumerate}
+\end{propo}
+\begin{defn}[Discrete valuation ring]
+	A ring satisfying these properties is called a discrete valuation ring.
+\end{defn}
+\begin{exemple}
+	\begin{enumerate}
+	\item $ K [ [  t] ] $, with maximal ideal $( t) $ 
+	\item $k[x]_{( x) } = \left\{ \frac{f}{g} | g( 0) \neq 0 \right\} $ 
+	\item $ \mathbb{Z}_{ ( p) } $.
+
+	\end{enumerate}
+\end{exemple}
+We prove the equivalence above.
+\begin{proof}
+	$1 \implies 2$\\ Let $\mathfrak{m} \subset R$, let $t\in \mathfrak{m}$ be a generator.\\
+	Since $ ( t) = \mathfrak{m}$, $t$ is irreducible.\\
+	Assume $u t^{m}= v t^{n}$ with $n \geq m$.\\
+	Then
+	\[ 
+		u = v t^{n-m}\in R \setminus  \mathfrak{m}
+	\]
+	Assume $\exists z \in R \setminus \left\{ 0 \right\}  $ which is not of the form $ u t^{n}$ .\\
+	Since $z$ is not a unit, $z\in ( t) $.\\
+	Thus there exists $z_1$ such that $z= t z_1$.\\
+	If $z_1$ is a unit, we're  done, otherwise we get $z_1,\ldots,$ with $z_i= t z_{i+1} $.\\
+	Since $R$ is noetherian, the chain
+	\[ 
+		( z) \subset ( z_1) \subset \ldots	
+	\]
+	stabilizes.\\
+	Thus, there exists a $v\in R$ such that $z_{n+1} = vz_n = vt z_{n+1} $.\\
+	$2\implies 1$\\
+	Clearly $\mathfrak m = ( t) $ is the set of non-units, thus $R$ is local with maximal ideal $( t) $.\\
+	It's enough to show that every ideal of $R$ is finitely generated.\\
+	Let $I \subset R$ be an ideal, then $I \subset \mathfrak m$.\\
+	Let $n = \min \left\{ n | \exists n \in R^{\times} \text{ such that } u t^{n} \in I\right\} $.\\
+	Then $t^{n}\in I$, but any $z\in I$ is of the form $ut^{m}$ and thus $I$ is finitely generated.\\
+	The proof also shows that any ideal in $R$ is of the form $( t^{n}) $, thus DVR $\implies $ PID.
+\end{proof}
+\begin{defn}[uniformizer]
+	A generator $t$ of $\mathfrak m$ in DVR is a uniformizer.
+\end{defn}
+If $K= Q( R) $ denotes the quotient field, then any $z\in K$ can be written uniquely as $z= u t^{n}$ with $u \in R^{\times}$ and $n \in \mathbb{Z}$ .\\
+The integer $n$ is called the order of $z$ and is denoted $ord( z) $.
+\begin{crly}
+Let $F$ be an irreducible plane curve and $p \in F$, then $p$ is simple iff $\O_p( V) $ is a DVR.
+\end{crly}
+In this case, if $L= aX + bY +c$ is any line through $P$ that is not tangent to $F$, then it's image in $\O_p( F) $ is a uniformizer.
+\begin{defn}
+	If $p \in F$ is simple, $F$ irreducible, we write $ord_p^{F}$ for the order on $K( F) $.	
+\end{defn}
+We have $ ord_p^{F}( g) = \dim_K ( \faktor { \O_p( F) } { ( g) } ) $ for any $g\in \O_p( F) $.
+\begin{proof}
+If $\O_p( F) $ is a DVR, let $\mathfrak m _p( F)= ( x)  $, then
+\[ 
+\mathfrak { m} _p( F)^{n}= ( x^{n}) \to \O_p( F) \to k
+\]
+Where we send $\lambda x^{n}$ to $\lambda$.\\
+This map is surjective with kernel $( X^{n+1})$, thus
+\[ 
+	m_P( F) = \dim_K ( \faktor { ( X^{n}) }{ X^{n+1}} ) =1
+\]
+Conversely, let $P$ be a simple point, say $P=( 0,0) $.\\
+Let $T$ be the unique tangent and $L\neq T$ a line as in the statement.\\
+$\exists A\in GL_2( K) $ such that $AT = \left\{ y=0 \right\} $ and $AL = \left\{ X=0 \right\} $.\\
+Since $FA \simeq F$ as varieties, we may assume that $T=Y, L=X$.\\
+Then $F= Y + $ terms of higher order.\\
+We need to show $\mathfrak{m}_p( F) = ( x,y) \subset \O_p( F) $ is principal with generator $X$.\\
+Write $F= \text{ ( All monomial containing Y)  } + \text{ Rest } = Y( 1+ H( x,y) ) + X^{2} G( x) $.\\
+The image of $1+H$ is a unit in $\O_p( F) $.\\
+Thus $Y= x^{2} G( x) ( 1+H)^{-1}\in \O_pF$.\\
+Thus $( x,y) = ( x) $ is principal, thus $\O_p( F) $ is a DVR.
+
+\end{proof}
+\end{document}	

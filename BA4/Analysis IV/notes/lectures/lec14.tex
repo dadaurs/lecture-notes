@@ -1,0 +1,90 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{14}{Wed 27 Apr}{Fourier Series}
+Recall that $f= \sum_{m=- \infty }^{ \infty } \hat{f} e^{i 2 \pi n x} $ when $f$ is a trigonometric polynomial.
+We will show that in fact
+\begin{thm}
+	$\forall f \in L^{2}\left(  [ 0,1] \right) $, the series
+	\[ 
+	\sum_{m= - \infty }^{ \infty } \hat{f} e^{i 2 \pi nx} 
+	\]
+	converges in $L^{2}$ to $f$.
+\end{thm}
+In particular $ f= \sum_{m=- \infty }^{ \infty } \hat{f} e^{i 2 \pi n x} $ almost everywhere.
+\begin{proof}
+By weierstrass approximation theoreme $\forall \epsilon\exists P $ a trigonometric polynomial such that
+\[ 
+\N { f- P}_{L^{2}}  \leq \N { f- P} _{L^{ \infty }} \leq \epsilon
+\]
+In fact we show the following lemma
+\begin{lemma}
+$ \N { f- F_N}_{L^{2}} \leq  \N { f-P}_{L^{2}} $ 
+\end{lemma}
+Hence, we prove this lemma.\\
+Indeed,
+\begin{align*}
+\langle f-F_n( f) , e_m \rangle =0 \forall m= -N, \ldots, N
+\intertext{Since}
+\langle f- F_n f, e_m \rangle  = \langle f,e_m\rangle - \langle F_n f , e_m\rangle = 0
+\end{align*}
+Furthermore
+\begin{align*}
+	\N { f- P}_{L^{2}}^{2} &= \N { f-F_nf} _{L^{2}} ^{2} + \N { F_nf-P}_{L^{2}}^{2} + \underbrace{2 \langle f-F_nf, F_nf -P\rangle}_{=0}\\
+\end{align*}
+To conclude the proof, for $f\in L^{2}, \epsilon>0$, since $C^{0}$ is dense in $L^{2}$, $\exists g\in C^{0}$ such that 
+\[ 
+\N { f-g}_{L^{2}} \leq \frac{\epsilon}{2}
+\]
+
+
+By the previous part, for $N$ large enough
+\[ 
+\N { g- F_ng} \leq \frac{\epsilon}{2}
+\]
+But now,
+\begin{align*}
+	\N { f-F_n f}_{L^{2}} &\leq \N { f-F_ng}_{L^{2}} \\
+			      & \leq  \N { f-g} _{L^{2}} + \N { g-F_ng} _{L^{2}} \\
+			      &\leq \epsilon
+\end{align*}
+\end{proof}
+\begin{thm}[Parseval]
+	For $f\in L^{2}$, 1-periodic
+\[ 
+\N { f}_{L^{2}}^{2} = \sum_{n=- \infty }^{ \infty }| \hat{f}( m) |^{2}
+\]
+\end{thm}
+\begin{proof}
+Let $f\in L^{2}, \epsilon>0$, by the previous theorem, there exists a large enough $N$ such that
+\[ 
+\N { f- F_nf}_{L^{2}} < \epsilon
+\]
+Note that
+\[ 
+\N { f}_{L^{2}} - \N { f-F_n f }  \leq  \N { F_nf}_{L^{2}} = \left( \sum_{-N}^{ N} | \hat{f}( m) |^{2}\right)^{\frac{1}{2}}
+\]
+We also know that
+\begin{align*}
+	\N { F_n f}_{L^{2}}^{2} &\leq  \N { f}_{L^{2}}^{2} \\
+			    & = \N { f-F_n f } + \N { F_n f} 
+\end{align*}
+\end{proof}
+\begin{defn}
+	Let $f: \mathbb{R}\to \mathbb{R}$ be a $2l$-periodic function $ L^{1}( 0,2l) $.\\
+	The trigonometric fourier coefficients of $f$ are
+	\[ 
+	a_n = \frac{1}{l} \int_{ 0 }^{ l } f( x) \cos( \frac{2\pi x}{l}) \quad b_n = \frac{1}{l} \int_{ 0 }^{ l }f( x) sin( \frac{\pi n x}{l}) 
+	\]
+	
+\end{defn}
+\begin{crly}
+Let $f$ be $2l$ periodic, then the trigonometric fourier series
+\[ 
+\frac{a_0}{2} + \sum_{n \geq 1}^{ } a_n \cos(  \frac{\pi n x }{l}) + b_n \sin( \frac{\pi n x}{l}) 
+\]
+in $L^{2}( 0,2l) $ 
+\end{crly}
+
+
+
+\end{document}	

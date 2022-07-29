@@ -1,0 +1,46 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Sat 12 Mar}{Homotopies et groupe fondamental}
+\section{Homotopies et Groupe Fondamental}
+\subsection{Homotopie}
+\begin{defn}[Homotopie entre applications]
+	Soient $f,g: X\to Y$ des applications. On dit que $f$ et $g$ sont homotopes et on note $f\simeq g$ s'il existe une application $H:X\times I\to Y$ tel que $H( -, 0) =f$ et $H( -,1) =g$.\\
+	On appelle $H$ une \underline { homotopie}.
+\end{defn}
+\begin{propo}
+La relation $\simeq $ est une relation d'equivalence.
+\end{propo}
+\begin{proof}
+\subsection*{Reflexivite}
+Suit du fait qu'on peut definir une homotopie constante.
+\[ 
+H:X\times I \to Y: ( x,t) \mapsto f( x) 
+\]
+
+\subsection*{Symetrie}
+La symetrie suit du fait qu'on peut parcourir une homotopie dans l'autre sens.\\
+Ainsi, soit $H:X\times I\to Y$ une homotopie entre $f$ et $g$. On pose
+\[ 
+G:X\times I \to Y : ( x,t) \mapsto H( x,1-t) 
+\]
+
+\subsection*{Transitivite}
+Supposons que $H:X\times I\to Y, G:X\times I \to Y$ sont des homotopies, $f\simeq g\simeq h$. On construit une homotopie $K :X\times I\to Y$ entre $f$ et $h$ 
+\[ 
+	( x,t) \mapsto
+	\begin{cases}
+H( x,2t) \text{ si } 0 \leq t	\leq \frac{1}{2}\\
+G( x,2t-1) \text{ si  } \frac{1}{2}< t \leq 1	
+	\end{cases}
+\]
+On voit que $K$ est continue et montre que $f\simeq h$.
+\end{proof}
+\begin{defn}[Classes d'homotopie]
+On note $ [ X,Y] $ l'ensemble des classes d'homotopies d'applications $f:X\to Y$.\\
+C'est donc $\faktor{  C( X,Y) }{\simeq} $.
+\end{defn}
+		
+
+
+	
+\end{document}	

@@ -1,0 +1,54 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Tue 01 Mar}{Stuff}
+There are 3 different possibilities for optimisation problems
+\begin{enumerate}
+\item The finite max exists
+\item The problem is unbounded
+\item The problem is infeasible, ie. $S = \emptyset$ 
+\end{enumerate}
+There is a special class of functions $f$ which allow us to solve problems rather easily
+\begin{itemize}
+\item $f$ is linear
+\item $S$ is made up of linear inequality constraints.
+\end{itemize}
+Such an optimisation problem is called a linear program.
+\subsection{Geometry of linear equalities}
+What can the feasible region of a LP look like?\\
+It will look like an intersection of half spaces, we call it a polyhedron.
+
+\begin{propo}
+Polyhedra are convex
+\end{propo}
+Indeed they are finite intersections of half-spaces, which are all convex.
+Given vectors $v_1,\ldots, v_n$ we can look at
+\begin{enumerate}
+\item linear combinations ( span) 
+\item positive linear combinations $\sum a_i v_i, a_i \geq 0$ ( cone) 
+\item convex combinations $\sum a_i v_i, 0 \leq a_i \leq 1, \sum_i a_i =1$ ( convex hull) 
+\end{enumerate}
+If we have a linear program, only active constraints can be involved in optimal solutions.\\
+Given a linear program, we want to turn it into a standard form.
+\begin{defn}[Equivalent linear programs]
+	Two linear programs $P $ and $P'$  are equivalent if for every feasible $x$ in $P$, there exists a feasible $x' \in P'$ with $value_P( x) = value_{P'} ( x') $ and conversely.\\
+	Furthermore, finding $x$ from $x'$ and $x'$ from $x$ is easy.
+\end{defn}
+What does a general linear program look like?
+\[ 
+\max c \cdot x
+\]
+s.t. $Ax \geq b$.
+\begin{propo}
+every linear program can be transformed into a linear program in inequality standard form.
+\end{propo}
+Given an equality constraint $a\cdot x \geq b$, we can turn it into $a \cdot x =b+w$ with $w \geq 0$.\\
+Such a variable $w$ is called a slack variable.\\
+Hence, given the constraint $Ax \geq b$, we can turn it into an equality constraint
+\[ 
+	Ax = b + \left[ w_1, \ldots, w_n \right]^{T}
+\]
+and ask $w_i \geq 0\forall i$ 
+
+
+
+\end{document}	

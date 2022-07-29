@@ -1,0 +1,80 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{14}{Mon 02 May}{Revetements}
+On veut calculer $\pi_1\left( T^{2}\# \mathbb{R}P^{2}\right) $.\\
+Comme $ \mathbb{R}P^{2} \# \mathbb{R}P^{2} \# \mathbb{R}P^{2}\simeq T^{2} \# \mathbb{R}P^{2}$.\\
+On calcule le groupe fondamental grace a la presentation de $Y \coloneqq T^{2}\# \mathbb{R}P^{2}$ .\\
+Si $P$ est le pushout de $ \vee_1^{3} \leftarrow \del H \simeq S^{1}\hookrightarrow H \simeq D^{2}$, on a une application induite $P\to Y$, c'est une bijection d'un compact vers un hausdorff, c'est un homeomorphisme.\\
+Donc $\pi_1 Y = \pi_1 P = \pi_1\left( ( S^{1}_d \vee S^{1}_e\vee S^{1}_f)\cup_p e^{2} \right) \simeq \langle \delta, \epsilon, \phi | r\rangle$ .\\
+Ici, $r$ est le mot $[p] \in \left[ S^{1}, S^{1}\vee S^{1}\vee S^{1}\right] $ 	qui est l'image de $\id_{\del H} $ par $p_\ast$.\\
+Comme $\id_{\del H} = d' \ast e' \ast \overline{d''} \ast \overline{e''} \ast f' \ast f''$.\\
+Son image est le lace $d\ast e \ast \overline{d} \ast \overline{e} \ast f \ast f $.\\
+Sa classe d'homotopie est donc donnee par $\delta \epsilon \delta^{-1}\epsilon^{-1} \phi^{2}$.\\
+De la boite noire, il suit que toute surface est soit la sphere, soit une somme connexe de tores et plans projectifs.\\
+S'il n'y pas de $ \mathbb{R}P^{2}$, on a une somme connexe de $g$ tores, un tore a $g$ trous.\\
+Sinon, il y a au moins une copie de $ \mathbb{R}P^{2}$ et la surface $S$ sera de la forme $ T^{2} \# \ldots \# T^{2} \# \mathbb{R}P^{2} \ldots \# \mathbb{R}P^{2}= ( T^{2})^{\# a} \# ( \mathbb{R}P^{2})^{\# b} = ( \mathbb{R}P^{2})^{\#2a+b}$.
+\begin{thm}[Theoreme de classification]
+	Une surface est homeomorphe a , $ ( T^{2} )^{\# g}$  ou $ ( \mathbb{R}P^{2})^{k}$ pour $g \geq 1, k \geq 1$.
+\end{thm}
+On pourrait montrer pour conclure que les $\pi_1$ de ces surfaces sont tous distincts, on va plutot etudier  $H_1 S = ( \pi_1S)_{ab} $.\\
+On sait que $\pi_1 S^{2} =1 , H_1 S^{2}=0$.\\
+On calcule $H_1( ( T^{2}) ^{\# g}) = \mathbb{Z}^{2g}$.
+\begin{lemma}
+$H_1(  ( \mathbb{R}P^{2})^{\# k}) = \mathbb{Z}^{k-1}\times \faktor { \mathbb{Z}} { 2\mathbb{Z}} $ 
+\end{lemma}
+\begin{proof}
+\begin{align*}
+\pi_1( ( \mathbb{R}P^{2})^{\# k}) =\langle a_1,\ldots, a_k | a_1^{2} \ldots a_k ^{2}\rangle
+\end{align*}
+On construit $\phi: \pi_1(  ( \mathbb{R}P^{2} )^{\# k}) \to A= \mathbb{Z}^{k-1}\times \faktor { \mathbb{Z}} { 2\mathbb{Z}}; a_i \to e_i, a_k \to f- ( e_1 +\ldots + e_{k-1} ) $ ou $e_i $ est le ieme generateur de $ \mathbb{Z}^{k-1}$.\\
+On verifie que $\phi( a_1^{2} \ldots a_k^{2}) =0 $ pour etre sur que $\phi$ est un homomorphisme.\\
+Calculons $\phi( a_1^{2} \ldots a_k ^{2}) = 2 \phi ( a_1) +\ldots +  2\phi( a_k) ) + 2 ( f- e_1 -\ldots - e_{k-1} ) = 2f =0 $.\\
+Comme $A$ est abelien, $\phi$ induit $ \overline{\phi}: \pi_{ab} \to A$.\\
+On construit l'inverse a $\psi$ en envoyant $e_i \to \overline{a_i}$ et $f\to \overline{a_1 a_2 \ldots a_k}$.\\
+Comme $A$ est un groupe libre abelien produit avec $ \faktor { \mathbb{Z}} { 2 \mathbb{Z}} $, il suffit de verifier que $\psi( 2f) =0$ ce qui est immediat.\\
+On termine en verifiant que $\psi$ est l'inverse de $\phi$.\\
+Comme les groupes $0, \mathbb{Z}^{2g}, \mathbb{Z}^{k-1}\times \faktor { \mathbb{Z}} { 2 \mathbb{Z}} $.\\
+\end{proof}
+\begin{rmq}
+Pour reconnaitre $S$, il n'est pas necessaire de calculer $H_1 S$, il suffit de savoir si $S$ est orientable (sinon elle contient un ruban de moebius) et de calculer $\xi( S) $, la caracteristique d'euler.\\
+En general $\xi( S) $ est $\#$ sommets $- \#$ arretes + $\#$ faces pour un polyedre.\\
+Pour nous, c'est donc $ 1-  l + 1= 2-l$ 
+\end{rmq}
+\section{Les Revetements}
+\subsection{Definitions}
+Tous les espaces sont Hausdorrf, connexes par arcs et localement connexes par arcs.\\
+Ie.,  tout voisinage de tout point contient un voisinage de ce point qui est connexe par arcs.\\
+Pour $x\in X$, on appellera $p^{-1}( x) = Fx$ la fibre au-dessus de $X$ 
+\begin{defn}
+	Une application $p: E \to X$ est un revetement si tout point $x\in X$ admet un voisinage ouvert trivialisant $U \ni x$, tel que $p^{-1}( U) $ est une reunion disjoint de $U_i, i \in I$, appeles feuillets, avec $p|_{U_i} : U_i \to U$ un homeomorphisme.
+\end{defn}
+\begin{exemple}
+\begin{enumerate}
+\item $\id_X$ est un revetement
+\item $\exp : \mathbb{R}\to S^{1}$ est un revetement
+\item $q: S^{2} \to \mathbb{R}P^{2}$ est un revetement
+\item Pour $F$ discret, la projection $p_2 : X\times F\to X$ est le revetement trivial.
+\end{enumerate}
+
+\end{exemple}
+\begin{lemma}
+Les fibres sont des espaces discrets
+\end{lemma}
+\begin{proof}
+Soit $e\in Fx$ et $U\ni x$ un ouvert trivialisant.\\
+Alors $e$ appartient a un seul feuillet $U_i$ et donc dans $Fx$ 
+\end{proof}
+\begin{propo}
+Un revetement est une surjection ouverte, en particulier un quotient. 
+\end{propo}
+\begin{proof}
+Soit $V$ un ouvert connexe de $E$ et $x\in p( V) $.\\
+On choisit un ouvert trivialisant $U \ni x$, alors $x= p( y) $, $y \in V \subset E$, $y \in V \subset E$ et il existe donc un feuillet $U_i$ tel que $U_i \cap V\neq \emptyset$.\\
+Comme $p|_{U_i} $ est un homeo, $p|_{U_i \cap V} $ aussi. Donc $p( U_i \cap V) $ est ouvert.
+\end{proof}
+
+
+
+	
+
+\end{document}	

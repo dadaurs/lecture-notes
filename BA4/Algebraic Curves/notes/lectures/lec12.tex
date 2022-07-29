@@ -1,0 +1,123 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Fri 27 May}{Bezout's Theorem}
+\begin{proof}[Bezout's Theorem]
+First, notice that $F$ and $G$ having no common components implies that $|F\cap G| < \infty $.\\
+After a projective change of coordinates, we may assume that none of these points lie at $ \infty $.\\
+Then,
+\[ 
+	\sum_{p\in F\cap G}^{ } I( p,F\cap G) = \sum_{ p \in F_\ast \cap G_\ast}^{ } I( p, F_\ast\cap G_\ast) = \dim_k \faktor{k[x,y]}{( F_\ast,G_\ast) }	
+\]
+Now, let $\Gamma = \faktor{ k[x,y,z]}{ ( F,G) }, \Gamma_\ast = \faktor{k[x,y]}{( F_\ast,G_\ast) }$ and $R= k[x,y,z]$.\\
+Consider $h:\Gamma\to \Gamma_\ast$ sending $\overline{H}\to \overline{H}_\ast$.\\
+Set $\Gamma_d = \left\{ \overline{H}\in \Gamma| \deg H =d \right\} \cup \left\{ 0 \right\} $, note that $\Gamma_d$ is a vector space.\\
+We claim that $\dim_k \Gamma_d = mn$ for $d \geq m+n$.\\
+Since $F,G$ have no common components, we have an exact sequence
+\[ 
+0\to	R\xrightarrow{\psi}R\times R \xrightarrow{\phi} R\to \Gamma \to 0
+\]
+
+where $\psi( c) =( cG, -cF) $ and $\phi( A,B) = ( AF+BG) $.\\
+Restricting this to a given degree, we get
+\[ 
+0\to R_{d-m-b} \to R_{d-m} \times R_{d-n} \to R_d \to \Gamma_d \to 0
+\]
+Since $\dim R_k = \frac{( k+1) ( k+2) }{2}$ we get $\Gamma_d =mn$.\\
+
+Now, we claim that the map $\alpha:\Gamma\to \Gamma$ sending $\overline{H}\to \overline{zH}$ is injective.\\
+In particular, $\alpha|_{\Gamma_d} : \Gamma_d \to \Gamma_{d+1} $ is an isomorphism for $d \geq m+n$.\\
+Assume $ \overline{zH}=0 \iff zH = AF+BG$.\\
+Let $A_0,B_0,F_0,G_0\in k[x,y]$ be $A( x,y,0) ,\ldots$.\\
+As $F\cap G\cap \left\{ z=0 \right\} = \emptyset$, $F_0$ and $G_0$ have no common components, since any such component would be homogeneous and it's $0$-set would be contained in $F\cap G\cap \left\{ z=0 \right\} $.\\
+Thus $B_0= F_0c$ and $A_0= - G_0 C$.\\
+Set $A'= A+ GC$ and $B'= B-FC$.\\
+Then $A_0' = A_0+G_0c=0 = B_0'$, thus $z|A', z|B'$.\\
+Thus $zH = AF+BG= ( A+GC)F+ ( B-FC) G$, thus $ \overline{H}=0$.\\
+
+Finally, we claim that $H|_{\Gamma_d} : \Gamma_d \to \Gamma_\ast$ is an isomorphism of $k$-vector spaces.\\
+Let $\overline{A}_1,\ldots, \overline{A}_{mn} $ be a basis of $\Gamma_d$.\\
+The image of this basis generates $\Gamma_\ast$:\\
+Let $H_\ast\in \Gamma_\ast$ and $N>0$ such that
+\[ 
+z^{N}H^{\ast}= z^{N'} H( \frac{x}{z},\frac{y}{z}) 
+\]
+is a form of degree $N'= d+r \geq d$,, thus $ \overline{z^{N'} H^{\ast}}\in \Gamma_{d+r} \simeq \Gamma_d$ .\\
+Thus
+\begin{align*}
+	\overline{ z^{N'} H } = \sum_{i}^{ } \lambda_i \overline{z^{r}A_i}\\
+	\overline{H}= \overline{( z^{N'}H )_\ast}= \sum_{i}^{ } \lambda_i \overline{A_i}_\ast r
+\end{align*}
+Finally, we have to show they are linearly independent:\\
+Assume $\sum_i \lambda_i \overline{A}_{i,\ast} =0 \iff \sum_i \lambda_i A_{i,\ast} = AF_\ast+ BG_\ast$ 	.\\
+Then, homogenizing gives
+\[ 
+z^{a}\sum_i \lambda_i A_i = z^{b}A^{\ast}F + z^{c}B^{\ast}G
+\]
+Thus, $ \sum_{i}^{ }\lambda_i \overline{z^{a}A_i}=0$ in $\Gamma_{d+a} $ and thus, by the second claim, $\lambda_i =0$.
+\end{proof}
+\subsection{Applications to Incidence Geometry}
+\begin{thm}[Cayley-Bacharch]
+	Let $F_1,F_2$ be two projective cubics intersecting in $9$ different points $A_1,\ldots, A_9\in \mathbb{P}^{2}$.\\
+	If $G$ is another cubic such that $A_1,\ldots, A_8\in G$, then $G$ is a linear combination of $F_1,F_2$.
+\end{thm}
+\begin{proof}
+\begin{enumerate}
+\item No 4 points of $F_1\cap F_2$ are colinear, otherwise, this line $L$ containing these points would be a component of $F_1$ and $F_2$.
+\item By the same argument, no seven points lie on a quadric.
+\item Any 5 points in $F_1\cap F_2$ define a unique quadric.\\
+\underline{Existence}:\\
+A genenral quadric $Q$ in $\mathbb{P}^{2}$ has the following form
+\[ 
+a_1X^{2}+ a_2Y^{2}+ \ldots + a_6 XZ
+\]
+The 5 points will give 5 linear conditions for $a_1, \ldots, a_6$, thus there exists  anon trivial solution.\\
+\underline{Uniqueness}:\\
+Assume $Q_1,Q_2$ are two quadrics containing the $5$ points, then they share a component, thus they must share a line $L_1$ (otherwise $Q_1= Q_2$ ).\\
+By the first part, this line contains at most 3 of the $5$ points.\\
+Let $L_2$ be the line passing through the other two, then $ \frac{Q_1}{L_1}= L_2= \frac{Q_2}{L_1}\implies Q_1= Q_2$ 
+\item No $3$ points in $A_1,\ldots, A_8$ are colinear: \\
+	Assume $A_1,A_2,A_3$ lie on a line $L$, then $A_4,\ldots, A_8$ don't lie on $L$ (using the first part) and $\exists!$ quadric $Q$ passing through  $A_4,\ldots, A_8$.\\
+	Let $B\in L\setminus \left\{ A_1,A_2,A_3 \right\} $ and $C\in \mathbb{P}^{2}\setminus \left\{ L,Q \right\} $.\\
+	By linear algebra $\exists \alpha,\beta,\gamma\in K$ not all $0$ such that
+	\[ 
+	H \coloneqq  \alpha F_1 + \beta F_2 + \gamma G
+	\]
+	vanishes on $B$ and $C$ and $H\neq 0$ (otherwise we're done).\\
+	Then $H$ vanishes on $A_1,A_2,A_3,B$, thus $L|H$ and the quadric $\frac{H}{L}$ vanishes on $A_4,\ldots, A_8$.\\
+	Using 3, $\frac{H}{L}= Q\implies H = LQ$ but $L( C ) Q( C)\neq 0$ 
+
+\item No 6 points on $ \left\{ A_1,\ldots, A_8 \right\} $ lie on a quadric (Exercise) 
+\item Finally, let $L$ be the line through $A_1, A_2$ and $Q$ the unique quadric through $A_3,\ldots, A_7$.\\
+	Pick $B,C\in L \setminus \left\{ A_1,A_2 \right\} $ and let $H = \alpha F_1 + \beta F_2 + \gamma G$ such that $B,C \in H$ and assume $H\neq 0$.\\	
+Then $A_1,A_2,B ,C\in L\cap H\implies L|H$ and $A_3, \ldots, A_7\in \frac{H}{L}$, thus $\frac{H}{L}= Q$.\\
+However $A_8\notin QL=H$, thus $H=0$ 
+\end{enumerate}
+\end{proof}
+\begin{crly}[Pappus theorem]
+Let $L_1,L_2\in \mathbb{P}^{2}$ be two distinct lines. Let $A_1,A_2,A_3\in L_2\setminus L_2$ and $B_1,B_2,B_3\in L_2\setminus L_1$.\\
+Let $c_{ij} $ be the intersection of the lines $\overline{A_iB_j}$ and $\overline{A_jB_i}$ for $ij = 12,23,31$, then $C_{12},C_{23}, C_{31}$ are colinear.
+\end{crly}
+\begin{proof}
+Let $G$ the line through $C_{12},C_{23}$ with  $|F_1\cap F_2| = 9$.\\
+As $G$ contains $8$ of them, $C_{31}\in G$.\\
+However $C_{31}\notin L_1L_2\implies C_{31}\in \overline{C_{12}C_{23}}$.
+\end{proof}
+\begin{rmq}
+Typically this theorem is stated in $\mathbb{R}^{2}$, but we may just consider the equations of the real lines in $ \mathbb{C}^{2}$, homogenize and then apply the actual corolarry.
+\end{rmq}
+\subsection{Elliptic Curves}
+We have seen in an exercise that $F \subset \mathbb{P}^{2}$ of degree 2 and irreducible is isomorphic to $ \mathbb{P}^{1}$.\\
+Elliptic curvesare the next "simplest" case, ie. $\deg F =3$.
+\begin{defn}[Elliptic Curve]
+	An elliptic curve $( E,0) $ is a non-singular cubic $E \subset \mathbb{P}^{2}$ together with a point $0\in E$.\\
+	$( E,0) $ comes with a commutative group structure.
+\end{defn}
+Define a map $\phi:E\times E\to E$ by $\phi( A,B) \in E$ is the unique third intersection point of the line $ \overline{AB}$ with $E$ if $A\neq B$.\\
+Or of the tangent of $A$ with $E$ if $A=B$.\\
+Finally, we define $A+B = \phi( 0, \phi( A,B) ) $ 
+
+
+
+
+
+\end{document}	

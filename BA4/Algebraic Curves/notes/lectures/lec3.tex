@@ -1,0 +1,178 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Fri 11 Mar}{Irreducible sets}
+\subsection{Irreducible sets}
+\begin{defn}[Irreducible set]
+	An algebraic set $V \subset \mathbb{A}^{n}$ is irreducible if $\forall W_1,W_2\subset \mathbb{A}^{n}$ algebraic s.t. $ V = W_1\cup W_2$, then either $W_1=V$ or $W_2=V$ 	 
+\end{defn}
+\begin{exemple}
+	\begin{itemize}
+	\item Let $V = \left\{ x_1,\ldots,x_n \right\} \subset \mathbb{A}^{n}$ is irreducible iff $n=1$  
+	\item Let $f( X,Y) = Y( X^{2}-Y) , V=V( f) \subset \mathbb{A}^{2}$ is not irreducible by taking $W_1= V( Y) ,W_2= V( X^{2}-Y) $ 	
+	\end{itemize}
+\end{exemple}
+\begin{propo}
+An algebraic set $V$ is irreducible iff $I( V) $ is prime.
+\end{propo}
+\begin{proof}
+If $I( V) $ is not prime, let $F_1,F_2\notin I( V) $ s.t. $F_1,F_2\in I( V) $, then we can write $V= ( V\cap V( F_1) ) \cup ( V\cap V( F_2) ) $.\\
+Conversely, if $V= W_1\cup W_2$ and $W_i\neq V$, then $I( W_i) \supsetneq I( V)$, pick $F_i\in I( W_i) \setminus I( V) $, then $F_1F_2= I( W_1) \cap I( W_2) = I( V) $.
+\end{proof}
+If $V \subset \mathbb{A}^{n}$ is irreducible, we can decompose it into a union of irreducible sets.\\
+The union is always finite as the polynomial ring is noetherian.
+\begin{thm}[Theorem name]
+	Every $V \subset \mathbb{A}^{n}$ algebraic can be written uniquely ( up to ordering) as a union of irreducible sets.
+	\[ 
+	V= V_1\cup\ldots\cup V_k
+	\]
+	where the $V_i$'s are irreducible and $V_i \not \subset V_j\forall i\neq j$ 
+			
+\end{thm}
+\begin{defn}[Irreducible Components]
+	The $V_1\ldots V_k$ are irreducible components of $V$.
+\end{defn}
+\begin{rmq}
+Applying $I$ in theorem 1.9, we get
+\[ 
+I( V) = I( V_1) \cap\ldots \cap I( V_k) 
+\]
+and $I( V_i) $ is the primary decomposition of $I( V) $ 
+\end{rmq}
+In general, it is quite difficult to find this decomposition.\\
+For hypersurfaces, it's easy, for $I( F)$, write $F= F_1^{\alpha_1}\cdot\ldots F_k^{\alpha_k}$, then $V( F) = V( F_1) \cup\ldots\cup V( F_k) $.\\
+\subsection{Algebraic subsets of $ \mathbb{A}^{2}$ }
+\begin{lemma}
+	Let $F,G\in k[X,Y]$ with no common factors, then $V( F) \cap V( G) $ is a finite set of points.
+\end{lemma}
+\begin{proof}
+By Gauss's lemma, $F,G$ have no common factors in $k( X) [ Y] $. Since $k( x) [ Y] $ is a PID $\exists A,B\in k( X) $ such that 
+\[ 
+AF +BG=1
+\]
+Now there exists $C\in k[X]$ such that $AC,BC\in k[X]$ .\\
+Let $( x,y) \in V( F,G) $, then $C( x) =0$ and hence there are only finitely many $x$'s possible.\\
+By symmetry, the same is true for the $Y$ coordinate, hence $ |V( F,G) | < \infty $ 
+\end{proof}
+Using this,  we can now classify all algebraic subsets of $ \mathbb{A}^{2}$.
+\begin{crly}
+The irreducible algebraic subsets of $ \mathbb{A}^{2}$ are $ \mathbb{A}^{2}, V( F) $ with $F$ irreducible or singletons.
+\end{crly}
+\section{Affine algebraic varieties}
+\begin{defn}[Affine algebraic variety]
+	An affine algebraic variety is an irreducible affine algebraic set.
+\end{defn}
+\subsection{Zariski topology}
+\begin{defn}[Zariski topology]
+The Zariksi-topology on $ \mathbb{A}^{n}$ is the topology whose open sets are complements of algebraic sets.	
+\end{defn}
+\begin{lemma}
+This indeed defines a topology on $ \mathbb{A}^{n}$ 
+\end{lemma}
+\begin{proof}
+Certainly $\emptyset, \mathbb{A}^{n}$ are algebraic, hence their complements are open.\\
+Let $ \left\{ U_i \right\} $ be a family of open sets, ie. such that
+\[ 
+U_i = \mathbb{A}^{2} \setminus V( I) 
+\]
+Then
+\[ 
+\bigcup U_i = \bigcup \mathbb{A}^{n}\setminus V( I_i) = \mathbb{A}^{n}\setminus \bigcap_i V( I_i) = \mathbb{A}^{n}\setminus V( \bigcup I) 
+\]
+Similarly, if $U_1,U_2$ are open, then
+\[ 
+U_1\cap U_2 = \mathbb{A}^{n} \setminus I( V_1V_2) 	
+\]
+is again open.
+
+\end{proof}
+\begin{exemple}
+If $n=1$, then algebraically closed sets are either $ \mathbb{A}^{n}, \emptyset$ are finite union of points so the Zariski topology is the cofinite topology. Hence the open sets are huge.	
+\end{exemple}
+\begin{defn}
+	For $V \subset \mathbb{A}^{n}$ an algebraic variety or set, the Zariski topology on $V$ is just the subspace topology.
+\end{defn}
+\begin{defn}[New definition of irreducibility]
+	A non-empty subset $V$ of a topological space $X$ is irreducible if it cannot be expressed as $V= W_1\cup W_2$ where $W_1,W_2 \subsetneq V$ are closed subsets.	
+\end{defn}
+\begin{lemma}
+A non-empty open subset of an irreducible topological space is again irreducible and dense.\\
+Furthermore, if $ V \subset X$ is irreducible, then so is $ \overline{V}$ 
+\end{lemma}
+The proof is an exercise.
+\begin{defn}[Quasi-affine algebraic variety]
+	A quasi-affine variety is an open subset of an affine variety.	
+\end{defn}
+\begin{rmq}
+By the lemma above, quasi-affine variety are also irreducible.
+\end{rmq}
+\subsection{Regular functions and coordinate rings}
+Regular functions are the natural "continuous" functions on algebraic varieties.
+\subsubsection{Affine case}
+\begin{defn}
+	Let $V \subset \mathbb{A}^{n}$ be an affine algebraic variety.\\
+	A map
+	\[ 
+	f:V\to K= \mathbb{A}^{1}
+	\]
+	is regular if $\exists F\in k[X_1,\ldots,X_n]$ such that 
+	\[ 
+	f( X) =F( X) \forall X\in V
+	\]
+	The set $\Gamma( V) $ of regular functions on V	is a ring with the usual pointwise multiplication and addition. and is called the coordinate ring of $V$.
+	
+\end{defn}
+\begin{lemma}
+If $I=I( V) $ for some prime, then
+\[ 
+	\Gamma( V) \simeq \faktor { k[X_1,\ldots,X_n]} { I( V) } 
+\]
+In particular, $\Gamma( V) $ is a domain.
+\end{lemma}
+\begin{proof}
+By definition, we have a surjective morphism
+\[ 
+	k[X_1,\ldots,X_n] \to \Gamma( V) 
+\]
+Now note that $F\in \ker\phi \iff F( X) =0\forall x \in V \iff F\in I( V) $ 
+\end{proof}
+\begin{defn}[Subobjects]
+	An affine subvariety of $V$ is an affine variety contained in $V$.
+\end{defn}
+\begin{lemma}
+There is a one-to-one correspondence between $V$ and $\Gamma( V) $ where 
+\[ 
+\left\{ \text{ algebraic subsets of } V \right\} \leftrightarrow \left\{  \text{ radical ideals of } \Gamma( V)  \right\} 
+\]
+\[ 
+\left\{ \text{ algebraic subvarieties of } V \right\} \leftrightarrow \left\{  \text{ prime ideals of } \Gamma( V)  \right\} 
+\]
+\[ 
+\left\{ \text{ points of } V \right\} \leftrightarrow \left\{  \text{ maximal ideals of } \Gamma( V)  \right\} 
+\]
+
+\end{lemma}
+The proof is again an exercise.
+\begin{defn}[Morphism]
+	A morphism $\phi:V\to W$ between affine algebraic varieties $V \subset \mathbb{A}^{n}, W \subset \mathbb{A}^{m}$ is a map such that $\exists$  polynomials $T_1,\ldots,T_m\in k[X_1,\ldots,X_n]$ such that
+	\[ 
+	\phi( X) = ( T_1( X) ,\ldots,T_m( X) ) 
+	\]
+	Then $\phi$ is an isomorphism if there exists a morphism $\psi$ such that $\phi\circ\psi= \id$ and $\psi\circ\phi=\id$.
+		
+\end{defn}
+\begin{exemple}
+Take $V( X^{2}-Y) \subset \mathbb{A}^{2}$ the the projection $p: V( X^{2}-Y) \to \mathbb{A}^{1}$ on the first coordinate is an isomorphism with inverse $\psi( X) = ( X,X^{2}) $.\\
+A non-example of a bijective map which is not an isomorphism:\\
+$\phi: \mathbb{A}^{1}\to V( Y^{2}-X^{3}) $, $\phi( t ) = ( t^{2},t^{3}) $.\\
+One can check that $\phi$ is bijective but not an isomorphism.
+\end{exemple}
+
+
+		
+
+
+
+
+
+
+\end{document}	

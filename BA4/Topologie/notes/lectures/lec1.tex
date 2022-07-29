@@ -1,0 +1,93 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Mon 21 Feb}{Introduction}
+\section{Quotients topologiques}
+Un espace topologique $( X,\tau) $ est ecrit $X$ si la topologie est claire.\\
+Le singloton $ \left\{ \ast \right\} $ est note $\ast$.\\
+La boule unite de $ \mathbb{R}^n$ 	est notee $D^{n}$ et la version ouverte sera $int( D) ^{n}$.\\
+\subsection{La topologie quotient}
+But: Construire de nouveaux espaces a l'aide d'espaces connus en identifiant des points.\\
+Soit $X$ un espace, $Y$ un ensemble et $q:X\to Y$ surjective.
+\begin{defn}[Topologie quotient]
+	La topologie quotient sur $Y$ est la topologie des $V \subset Y$ tel que $q^{-1}( V) $ est ouvert dans $X$ .
+\end{defn}
+\begin{rmq}
+$q$ est alors continue et on verifie que c'est une topologie.
+\end{rmq}
+\begin{exemple}
+$X= [ 0,1] $ et $Y= ( 0,1) \cup \left\{ \ast \right\} $ et $q$ l'application qui envoie $0$ et $1$ sur $\ast$.\\
+Alors $q$ est surjective et donc $Y$ peut etre muni de la topologie quotient et est homeomorphe a un cercle.\\
+On definit $f: S^{1}\to Y: e^{2\pi i t} \mapsto t $ si $0<t<1$ et $\ast$ sinon.
+\end{exemple}
+\begin{propo}
+Soit $q:X\to Y$ une application continue, surjective et ouverte, alors $q$ est un quotient.
+\end{propo}
+\begin{propo}
+Soit $V \subset Y$ un sous-ensemble tel que $q^{-1}( V) $ est ouverte dans $X$. Comme $q$ est surjective, alors $V = q( q^{-1}( V) ) $ et c'est un ouvert car $q$ envoie les ouverts sur les ouverts.	
+\end{propo}
+\begin{propo}
+Une composition de quotients est un quotient.
+\end{propo}
+\begin{thm}
+La topologie quotient est la plus fine qui rend $q$ continue. De plus, pour $g: Y \to Z$, $g$ est continue si et seulement si $g\circ q$ est continue.
+\end{thm}
+\begin{propo}
+Si $q:X\to Y$ est continue, la preimage d'un ouvert de $Y$ est ouvert dans $X$.\\
+La topologie quotient est celle qui contient le plus d'ouvert possibles.\\
+Clairement, si $g$ est continue, alors $g\circ q$ l'est aussi.\\
+Si $g\circ q$ est continue, soit $W \subset Z$ un ouvert, alors $( g\circ q )^{-1}( W) = q^{-1}( g^{-1}( W) ) $ est ouvert et par definition $g^{-1}( W) $ est ouvert dans $Y$.
+\end{propo}
+\begin{propo}
+Le quotient d'un compact est compact
+\end{propo}
+\begin{proof}
+L'image d'un compact est compacte.
+\end{proof}
+\subsection{Relations d'equivalence}
+Si $q:X\to Y$ est un quotient, on definit sur $X$ une relation d'equivalence $\sim $ par $x\sim x'$ ssi $q( x) =q( x') $, alors les points de $Y$ sont les classes d'equivalence $[x]$.\\
+\begin{defn}
+	Si $\simeq$ est une relation d'equivalence sur $X$, alors $X /\sim$ est l'espace quotient des classes d'equivalence.
+\end{defn}
+\begin{propo}[Proprietes universelles]
+	
+Soit $\sim$ une relation d'equivalence sur $X$ et $f:X\to Z$ tel que $x\sim x' \implies f( x) =f( x') $, alors il existe un unique $ \overline{f}: X /\sim \to Z$ tel que $ \overline{f}\circ q = f$ 
+\end{propo}
+\begin{proof}
+Pour que le triangle commute, on doit poser $\overline{f}( [ x] ) = f( x) $ et l'application est bien definie par hypothese et donc unique.\\
+On sait que $\overline{f}$ est continue ssi $\overline{f}\circ q $ l'est.
+\end{proof}
+\begin{defn}
+	Si $A \subset X$, on pose $x\sim x' \iff x=x'$ ou $x,x' \in A$. Le collapse $X /A$ est l'espace quotient $X /\sim$ 
+\end{defn}
+Par exemple $I / \left\{ 0,1 \right\} $.
+\begin{exemple}
+\[ 
+D^{n} /\partial D^{n}= D^{n} /S^{n-1}= S^{n}
+\]
+
+
+\end{exemple}
+Pour deux espaces bien connus, pointes $( X_1,x_1) $ et $( X_2,x_2) $, on peut construire un nouvel espace en identifiant $x_1$ et $x_2$.\\
+\begin{defn}[Reunion disjointe]
+	Soit $I$ un ensemble, $X_\alpha$ un espace pour chaque $\alpha\in I$.\\
+	La reunion disjointe $\bigcup X_\alpha$ est l'ensemble $\bigcup_{\alpha\in I} X_\alpha\times \left\{ \alpha \right\} $ dont la topologie est engendree par les sous-ensemble de la forme $U_\alpha\times \left\{ \alpha \right\} $ 
+\end{defn}
+\begin{defn}
+Soit $I$ un ensemble et pour tout $\alpha \in I$, $( X_\alpha,x_\alpha) $ un espace pointe.\\
+Le wedge $\bigvee_\alpha X_\alpha$ est le collapse de la reunion disjointe ou on identifie les points de base
+\end{defn}
+\begin{defn}
+	Soit $X$ un espace. Le cylindre $Cyl( X)$ est $X\times I$ et le cone $CX$ est le collapse du cylindre a la base.
+\end{defn}
+\subsection{Separation et quotients}
+On definit sur $\mathbb{R}\times \left\{ 0;1 \right\} $ une relation d'equivalence $\sim$ par $( x,0) \sim( x,1) $ si $x\neq 0$.\\
+Le quotient est la droite a deux origines dont on ne peut separer les deux origines $( 0,1) $ et $( 0,0) $ par des ouverts.\\
+Regardons le graphe de $\sim$ dans $ \mathbb{R}\times \left\{ 0;1 \right\} \times ( \mathbb{R}\times \left\{ 0,1 \right\} ) 	$ ( ie. une copie de 4 plans)
+\begin{propo}
+Si $X /\sim$ est separe, alors le graphe de $\sim$ dans $X\times X$ est ferme.
+\end{propo}
+\begin{proof}
+La preimage de $\Delta \subset  X /\sim\times X /\sim$ par $q\times q$ est $\Gamma_\sim$.\\
+Comme $\Delta$ est ferme, sa preimage aussi.
+\end{proof}
+\end{document}	

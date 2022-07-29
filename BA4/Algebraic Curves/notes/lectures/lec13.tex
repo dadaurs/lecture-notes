@@ -1,0 +1,64 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{13}{Fri 03 Jun}{Elliptic Curves}
+\begin{thm}
+	$( E,0,+) $ is a commutative group.
+\end{thm}
+\begin{proof}
+We saw that $0$ is a neutral element in the exercises and that $\forall A \in E$, $-A \coloneqq \phi( A,\phi( 0,0) ) $ is an additive inverse.\\
+So it suffices to show associativity.
+We want to show that $( P+Q) +R = P+ ( Q+R) $, let $S'= \phi( P,q) , S= P+Q, U'= \phi( Q,R) , Q+R=U$.\\
+We want to show that $S+R = P+U$, it is sufficient to show that $\phi( S,R) = \phi( P,U) $.\\
+Assume that none of the points are the same.\\
+Let $F$ be the product of $ \overline{QP}, \overline{U,U'}, \overline{RS} $ and $G$ the product of $ \overline{QR}, \overline{SS'}, \overline{PU}$.\\
+$F\cap E$ intersect in $9$ different points and $G$ contains 8 of them (all but $\phi( P,U) $ a priori).\\
+By Cayley-Bacharach, $G$ also contains $\phi( P,U) \in G$ but $|G\cap E|=9$.
+\end{proof}
+(Up to here for exam) 
+\begin{lemma}
+Any elliptic curve is isomorphic to a curve with equation
+\begin{align*}
+Y^{2}Z-X^{3} - aX Z^{2} - b Z^{3}
+\end{align*}
+
+where $a,b\in K$ such that $4a^{3}+27b^{2}\neq 0$ 
+\end{lemma}
+\begin{proof}[Sketch]
+To get the equation, one has to do a series of coordinate changes.\\
+The condition $4a^{3}+27b^{2}\neq 0$ is equivalent to the curve being non-singular.\\
+Note that $0$ is the only point of the curve at $ \infty $ and it is a simple point.\\
+If $z=1$, we get $Y^{2}-X^{3}-aX-b$.\\
+Taking the derivatives, we get $ \frac{\del E}{\del Y}= 2Y$ and $ \frac{\del E}{\del X}= 3X^{2}-a$.\\
+Thus, $Y=0$ implies $X^{3}+aX+b =0$ and $3X^{2}-a$. solving this gives the criteria.
+\end{proof}
+If we add the point $0$, we get something compact.\\
+Topologically, all elliptic curves are Tori, ie. $E\simeq S^{1}\times S^{1}$.\\
+The fact that $E$ has a group structure is reflected by the fact that $S^{1}\times S^{1}$ has many automorphisms.\\
+If $\deg ( F) >3$, $F( \mathbb{C}) $ is a torus with many holes, which has few automorphisms and so putting a group structure on it is difficult.\\
+The fact that elliptic curves have a group structure is useful:
+\subsection*{Lenstra's Algorithm for integer factorization}
+Given $n\in \mathbb{Z}$, is it prime? If not, find the factorization.\\
+The basic idea is to compute $\gcd( a,n) $ for $a$ variying in some finite subset of $ \mathbb{Z}$ 
+\subsubsection*{Pollard's $( p-1) $-method }
+Choose $a \in \faktor{\mathbb{Z}}{n \mathbb{Z}}$ random and fix $k\in \mathbb{N}$ with many small prime factors.\\
+Then, compute $a^{k}\mod ( n) $ and $\gcd( a^{k}=1,n) $.\\
+This works well if $n$ has a prime divisor $p$ such that $p-1$ is a product of small primes and $p-1|k$.\\
+If further $p\not| a $ then by Fermat $p|a^{k}-1\implies p| \gcd( a^{k}-1,n) $ .\\
+If we believe that everything we learned about elliptic curves over an algebraically closed field $K$ can be extended to $ \faktor{\mathbb{Z}}{n \mathbb{Z}}$, we can describe Lenstra's algorithm.\\
+Choose a random elliptic curve over $ \faktor{\mathbb{Z}}{n \mathbb{Z}}$ i.e. an equation of the form $ Y^{2}Z-X^{3}-aZ^{2}-bZ^{3}$.\\
+Choose $K$ with many small prime divisors and a random point $e\in E$ satisfying the Weierstrass equation.\\
+Now compute $Ke= e+ \ldots+e$ $k$-times and then $\gcd( n, z- \text{ coordinate } ) $.\\
+If this gcd is $>1$ we're done.\\
+\underline{Why does this work?}\\
+If $n$ has a prime divisor $p$ s.t. $|E( \faktor{\mathbb{Z}}{p\mathbb{Z}})| | K$ then $Ke=0$ in $ \faktor{\mathbb{Z}}{p \mathbb{Z}}$.\\
+\begin{rmq}[Weil bound]
+	$ p+1- 2 \sqrt{p}  | E ( \faktor{\mathbb{Z}}{p \mathbb{Z}}) | \leq  p+1+ 2 \sqrt{p}  $ 
+
+\end{rmq}
+
+
+
+	
+
+	
+\end{document}	

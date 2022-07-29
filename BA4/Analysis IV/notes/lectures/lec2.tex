@@ -1,0 +1,222 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Thu 24 Feb}{Existence of Lebesgue Measure}
+\begin{crly}
+$m^{*}(B)= vol( B) $ for every open box $B$.
+\end{crly}
+\begin{proof}
+For one direction, we use monotonicity,
+$m^{*}( B) \leq m^{*}( \overline{B}) = vol( B) $.\\
+Furthermore, set $ B= \prod ( a_i,b_i) $, then for $\epsilon>0$, we get
+\[ 
+\prod [ a_i+\epsilon,b_i-\epsilon] \subset \prod_i ( a_i,b_i) \implies m^{*}( \prod [ a_i+\epsilon,b_i-\epsilon]  ) \leq \prod_i ( b_i-a_i) 
+\]
+
+\end{proof}
+\begin{exemple}
+	\begin{itemize}
+	\item 
+$m^{*}( \mathbb{R}) = \infty $ since by monotonicity, we get $m^{*}( \mathbb{R}) \geq m^{*}( [ 0,N] ) >N$ 
+\item $m^{*}( \mathbb{Q}) =0 $ since
+	\[ 
+	m^{*}( \mathbb{Q}) \leq m^{*}( \left\{ q \right\} ) =0
+	\]
+	Which proves that the reals are uncountable.
+	\end{itemize}
+	
+\end{exemple}
+\subsection{Measurable sets ( again) }
+We want to know whether $\forall A,E \subset \mathbb{R}^m$, the inequality
+\[ 
+m^{*}( A) \leq m^{*}( A\cap E) + m^{*}( A \setminus E) 
+\]
+generalises to an equality?\\
+The inequality follows directly from countable subadditivity.
+In fact equality does not hold in general.
+\begin{defn}[Lebesgue Measurable set]
+A set $E \subset \mathbb{R}^m$ is Lebesgue measurable if 
+\[ 
+m^{*}( A) = m^{*}( A\cap E) + m^{*}( A\setminus E) \forall A \subset \mathbb{R}^n
+\]
+Then the lebesgue measure of $E$ is defined as
+\[ 
+m( E) \coloneqq m^{*}( E) 
+\]
+
+\end{defn}
+Note that, according to this definition, $\emptyset, \mathbb{R}^n$ are both measurable.
+\begin{lemma}
+Half-spaces are measurable
+\end{lemma}
+The proof is given as an exercise.\\
+We now establish a few basic facts about measurable sets.
+\begin{lemma}
+\begin{itemize}
+\item The complement of a measurable set is measurable
+\item The translation of a measurable set is measurable, ie. $E$ measurable, $x\in \mathbb{R}^n$ implies $E+x$ measurable
+\item Finite unions of measurable sets is measurable. ( as well as the intersection) 
+\item Open ( as well as closed)  boxes are measurable.
+\item If the outer measure of a set is $0$, then $E$ is measurable.	
+\end{itemize}
+\end{lemma}
+\begin{proof}
+	\begin{itemize}
+
+	\item 
+		\[ 
+		m^{*}( A) =m^{*}( A\cap E^{c^{c}}) + m^{*}( A\cap E^{c}) 
+		\]
+	\item 
+		Given $A$ a set and $x\in \mathbb{R}^n$, we get
+		\[ 
+		m^{*}( A-x) = m^{*}( A-x \cap E) +m^{*}( ( A-x) \cap E^{c}) = m^{*}( A\cap E+x) + m^{*}( A\cap E^{c}+x) = m^{* }( A) 
+		\]
+
+	\item 
+		\[ 
+		m^{*}( A) =m^{*}( A\cap ( E_1\cup E_2) ) + m^{*}( A\cap ( E_1\cup E_2)^{c} ) 
+		\]
+		
+	\item Consider the union of two setsWe now bound $m^{*}( A) $ by below ( the upper bound is always true) 
+		\[ 
+		m^{*}( A) = m^{*}( A\cap E_1) +m^{*}( A\cap E_1^{c})
+	\]
+	\[ 
+		=m^{*}( A\cap E_1\cap E_2) +m^{*}( A\cap E_1\cap E_2^{c}) +m^{*}( A\cap E_1^{c}\cap E_2) +m^{*}( A\cap E_1^{c}\cap E_2^{c})
+	\]
+	\[
+		\geq m^{*}( A\cap ( E_1\cup E_2) ) + m^{*}( A\cap ( E_1\cup E_2)^{c} ) 
+	\]
+		The general result follows immediatly by induction on the number of sets.
+	\item We get that
+		\[ 
+		m^{*}( A) \geq m^{*}( A\cap E) + m^{*}( A\cap E^{c}) 
+		\]
+		
+	\item We write boxes as intersections of halfspaces
+		
+	\end{itemize}
+	
+\end{proof}
+Now we want to show that the lebesgue measure is countably additive.
+\begin{propo}
+If $( E_j )_{j\in \mathbb{N}} $ are measurable disjoint sets, then $\bigcup_{i\in \mathbb{N}} E_i$ is measurable and
+\[ 
+m^{*}( \bigcup_{j\in \mathbb{N}} E_j) = \sum_{j=1}^{ \infty } m^{*}( E_j) 
+\]
+
+\end{propo}
+The proof depends on a lemma
+\begin{lemma}
+Let $E_1,\ldots,E_n$ be measurable disjoint sets, $A \subset \mathbb{R}^m$,then
+\[ 
+m^{*}( A\cap ( \bigcup E_j) ) = \sum_{j=1}^{ n}m^{*}( A\cap E_j) 
+\]
+As a consequence of this, we get finite additivity.
+\end{lemma}
+\begin{proof}
+For $n=2$ , we get
+\[ 
+m^{*}( A\cap ( E_1\cup E_2) ) =m^{*}( A\cap ( E_1\cup E_2) \cap E_1) + m^{*}( A\cap ( E_1\cup E_2) \cap E_1^{c}) 
+\]
+\[ 
+=m^{*}( A\cap E_1) + m^{*}( A\cap E_2) 
+\]
+and the general case follows by induction.
+
+\end{proof}
+\begin{crly}
+$E \subset F$ measurable implies $F\setminus E$ is measurable and
+\[ 
+m^{*}( F\setminus E) = m( F) -m( E) 
+\]
+
+\end{crly}
+\begin{proof}
+The set is trivially measurable since $F\setminus E = F\cap E^{c}$ 	
+Using the lemma above, we get
+\[ 
+m^{*}( F) = m^{*}( E) +m^{*}( F\setminus E) 
+\]
+
+\end{proof}
+We can now prove countable additivity
+\begin{proof}
+Let $E= \bigcup_{j=1} ^{ \infty } E_j$.\\
+We claim that $\forall A$ 
+\[ 
+m^{*}( A) \geq m^{*}( A\cap E) + m^{*}( A\setminus E) 
+\]
+Indeed note that
+\[ 
+m^{*}( A\cap E) \leq \sum_{j=1}^{ \infty }m^{*}( A\cap E_J) = \sup_N \sum_{j=1}^{ N} m^{*}( A\cap E_j) 		
+\]
+
+Set $F_n = \bigcup_{j=1}^{N}E_j$, by the lemma, the finite sum above is 
+\[ 
+\sup_N \sum_{j=1}^{ N} m^{*}( A\cap E_j) =m^{*}( A\cap F_N) 
+\]
+Since $F_N \subset E$,
+\[ 
+m^{*}( A\setminus E) \leq m^{*}( A\setminus F_N) 
+\]
+Then
+\[ 
+m^{*}( A\cap E) +m^{*}( A\setminus E) < \sup_N m^{*}( A\cap F_N) + \underbrace{m^{*}( A\setminus E)}_{ \leq m^{*}( A\setminus F_N) }< \sup_N m^{*}( A) 	
+\]
+This proves that $m( E) \geq \sup_N m( F_N) = \sup_N \sum_{j=1}^{ N}m( E_j) = \sum_{j=1}^{ \infty }m( E_J) $ 
+
+\end{proof}
+\begin{lemma}[Lebesgues sets are a sigma-algebra]
+If $( E_J )_J\in \mathbb{N}$ are measurable, then $\bigcup E_j$ and $\bigcap E_j$ are measurable.
+\end{lemma}
+\begin{proof}
+\[ 
+E_1\cup \ldots  = E_1 \cup ( E_2\setminus E_1) \cup ( E_3\setminus ( E_1\cup E_2) ) \ldots
+\]
+and the property about intersections follows from $\bigcap E_J = ( \bigcup E_J^{c})^{c}$
+\end{proof}
+\begin{lemma}[Open sets are measurable]
+Every open set is measurable 
+\end{lemma}
+\begin{proof}
+By an exercise, every open set is a countable union of open boxes and a countable union of measurable sets is countable by the lemma above.
+\end{proof}
+\subsection{A glimps on abstract measure theory and theoretical foundations of probability}
+The idea of Lebesgue was to fix the measure of boxes and then extend the measure to the sigma algebra of measurable sets.
+\begin{thm}[Caratheodory theorem]
+	Given a set $\Omega$, $\mathcal{G}$ an algebra ( finite union of boxes), $A$ the smallest algebra containing $ \mathcal{G}$.\\
+	Let $m_0: \mathcal{G}\to [ 0, \infty ] $ be a function s.t. $m( \emptyset) =0, m_0( \bigcup_{i=1}^{ \infty }A_i) = \sum_{m=1}^{ \infty } m_0( A_m) $ if $A_m \in \mathcal{G}, A_m$ disjoint and $ \bigcup A_m\in \mathcal{G}$ \\
+	Then $\exists $ a measure on $A$ such that $m\vert_{ \mathcal{G}} = m_0$ and, if the measure of $m_0( \Omega) < \infty \implies m$ is unique.
+\end{thm}
+Furthermore
+\begin{thm}
+	Every probability $\mathbb{P}$ on $ \mathbb{R}^n$ gives rise to a cumulative distribution function, conversely, every cdf gives rise to a ( unique) probability measure.
+\end{thm}
+\subsection{The cantor set}
+\begin{defn}[Cantor set]
+	Consider $ [ 1,1] $, define $P_0= [ 0,1] $, $P_1= [ 0,\frac{1}{3}, ] \cup [ \frac{2}{3},1] $ and keep going.\\
+By definition $P_0 \supset P_1 \ldots$, the cantor set is the intersection of all of them.
+\end{defn}
+There are a few nice properties of the cantor set
+\begin{thm}
+\begin{enumerate}
+\item $P$ is compact
+\item $m^{*}( P) =0$ 
+\item $P$ is uncountable
+\item $P$ is perfect\footnote { No point in $p$ is isolated.}  and has empty interior.
+\end{enumerate}
+
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

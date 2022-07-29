@@ -1,0 +1,62 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{17}{Thu 05 May}{Fourier Transform}
+\section{The Fourier Transform}
+\begin{defn}[Fourier Transform]
+	Let $f\in L^{1}( \mathbb{R}) $, then the Fourier Transform
+	\[ 
+	\mathcal{F} f( \xi) = \hat{f}( \xi) \coloneqq \int_{ - \infty  }^{ \infty  } f( y) e^{- i 2 \pi y \xi} dy
+	\]
+\end{defn}
+\begin{rmq}
+Sometimes, the Fourier transform is defined without a $2\pi$ in the exponent and a $\frac{1}{ \sqrt{2\pi} }$ in front.
+\end{rmq}
+\begin{lemma}[Basic properties of the Fourier Transform]
+	Let $f,g \in L^{1}( \mathbb{R}) $, $a,b \in \mathbb{R}$, then
+\begin{enumerate}
+\item $\hat{f}$ is a continuous function, $ \lim_{ |\xi| \to \infty }=0 $ and $ \N { \hat{f}}_{L^{ \infty }} \leq  \N { f}_{L^{1}} $ 
+\item $ \mathcal{F}(  af + bg) = a \mathcal{F}f+ b \mathcal{F}g$ 
+\item If $f$ is differentiable and $f'$ is in $L^{1}$, then
+	\[ 
+	\hat{f'}( \xi) =2\pi i \xi \hat{f}( \xi) 
+	\]
+
+\item If $h( x) = x f( x) \in L^{1}$, then $ \hat{f}$ is differentiable
+\item If $h( x) = f( x+a) $, then $\hat{h}( \xi) = e^{2\pi i \xi a } \hat{f}( \xi) $ 
+\item If $h( x) = f( ax)$, then $ \hat{h}( \xi) = \frac{1}{a} \hat{f}(  \frac{\xi}{a}) $.
+\item Multiplication formula:
+	\[ 
+	\int_{ - \infty  }^{ \infty  } \hat{f}( x) g( x) dx = \int_{ - \infty  }^{ \infty  } f( x) \hat{g}( x) dx
+	\]
+	
+\end{enumerate}
+\end{lemma}
+\begin{propo}[Gaussians are good kernels]
+	Let $f( x) = e^{- \pi x^{2}} $,, then $\hat{f}= f $ 
+\end{propo}
+\begin{proof}
+$f'( x) = - 2\pi  x f( x) $ and thus
+\[ 
+\hat{f'}( \xi) = -  2\pi \hat{ xf( x) }( \xi) 
+\]
+Now applying the lemma above gives
+\[ 
+2\pi i \xi \hat{f}( \xi) = -i  \hat{f}'( \xi) 
+\]
+So $\hat{f}$ satisfies the ODE $ \hat{f}' = - 2\pi \xi \hat{f}$ and since
+\[ 
+\hat{f}( 0)  = \int_{  }^{  } f( y) dy
+\]
+\end{proof}
+
+\begin{crly}
+If $\delta >0 $ and $\kappa_\delta ( x) = \delta ^{-\frac{1}{2}} e^{- \pi \frac{x^{2}}{\delta}} $.\\
+Then 
+\[ 
+\hat{ \kappa_\delta}= e^{- \pi \xi ^{2}} 
+\]
+
+\end{crly}
+
+
+\end{document}

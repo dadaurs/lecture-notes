@@ -1,0 +1,64 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Thu 03 Mar}{Measurable functions}
+\subsection{Measurable functions}
+
+\begin{defn}[Measurable functions]
+Let $\Omega \subset \mathbb{R}^m$ measurable, $f:\Omega\to \mathbb{R}^m$ is measurable if $\forall V$ open, $f^{-1}( V) $ is measurable.
+\end{defn}
+\begin{rmq}
+Any function $f: \Omega \subset \mathbb{R}^m\to \mathbb{R}^m$ is measurable $\iff$ $f^{-1}( B) $ is measurable $\forall B$ open boxes. 
+\begin{proof}
+Indeed, the implication $\implies$ is immediate.\\
+For the other direction, note that any open set $V$ is a countable union of boxes
+\[ 
+V= \bigcup_i B_i
+\]
+and $f^{-1}( V) =\bigcup_i f^{-1}( B_i) $ which is measurable.
+\end{proof}
+\end{rmq}
+\begin{rmq}
+Let $f:\Omega\to \mathbb{R}$ is measurable $\iff$ $f^{-1}( ( a, \infty ) ) $ are measurable.
+\begin{proof}
+By the remark above, it is enough to show that $f^{-1}( ( a, \infty ) ) $ are measurable $\forall a,b$ 
+\[ 
+f^{-1}( ( a,b) ) = f^{-1}( ( - \infty ,b) \cap ( a, \infty ) ) = f^{-1}( a, \infty ) \cap f^{-1}( [ b, \infty ) ) ^{c}
+\]
+Now, rewrite $ f^{-1}(  [ b, \infty ) )= \bigcap_i f^{-1}( ( b- \frac{1}{i}, \infty ) )  $ 
+\end{proof}
+
+\end{rmq}
+\begin{defn}
+	$f:\Omega\to \mathbb{R}^{*}= \mathbb{R}\cup \left\{ \pm \infty  \right\} $ is measurable if $ f^{-1}( ( a, \infty ] ) $ is measurable $\forall a \in \mathbb{R}$ 	 
+\end{defn}
+Using the remark above, the definition is compatible with the definition of measurable functions.\\
+\begin{rmq}
+Consider $f:\Omega \subset \mathbb{R}^n\to \mathbb{R}^m$, $f $ is measurable $\iff$ all projections of $f$ are measurable.
+\begin{proof}
+To prove this, recall that $f$ is measurable $\iff$ $f^{-1}( B)$ are measurable, we may write $B= B_1\times\ldots\times B_n$, hence, $f^{-1}( B) = \bigcap_{i=1}^{n}f_i^{-1}( B_i) $.\\
+Hence the right to left implication follows.\\
+$\implies$ Consider $B= \mathbb{R}\times\ldots\times B_i\times\ldots\times \mathbb{R}$, then $f^{-1}( B)= f_i^{-1}( B_i)  $ is measurable
+\end{proof}
+\end{rmq}
+\begin{rmq}
+Let $f:\Omega\to W$ and $g:W\to \mathbb{R}^{p}$, then $g\circ f$ is measurable if $g$ is continuous and $f$ measurable.
+\end{rmq}
+\begin{lemma}
+Let $\Omega \subset \mathbb{R}^n$ measurable, $f_m:\Omega\to \mathbb{R}^{*}$ measurable, then the functions
+\[ 
+\sup f_m, \inf f_m, \limsup f_m, \liminf f_m
+\]
+are measurable.\\
+In particular, if $f_m\to f$ pointwise, then $f$ is measurable.
+\begin{proof}
+Call $F= \sup f_n$, we want to prove that
+\[ 
+	F^{-1}( ( a, \infty ] ) = \bigcup f_m^{-1}( ( a, \infty ] ) 
+\]
+
+\end{proof}
+
+\end{lemma}
+
+
+\end{document}	

@@ -1,0 +1,118 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Thu 17 Mar}{Integration Numerique}
+\begin{lemma}
+Si une formule a $s$ noeuds est d'ordre $p$, alors $p \leq 2s$ 
+\end{lemma}
+\begin{proof}
+Supposons que $p = 2s+1$, si $Q_s$ est d'ordre $2s+1$, par le theoreme fondamental, ceci implique que
+\[ 
+\int_{ 0 }^{ 1 } M( t) g( t) =0 \forall g( t) : \deg g \leq s
+\]
+Ainsi, en particulier pour $g( t) = M( t) $ on a 
+\[ 
+\int_{ 0 }^{ 1 }M( t) ^{2} dt = 0 
+\]
+et donc $M( t)=0 $ 
+
+\end{proof}
+On se demande maintenant si on peut trouver la valeur des noeuds de maniere facile?
+\subsection{Noeuds d'integration optimaux: Formule de Gauss}
+\begin{defn}[Polynomes de Legendre]
+	On considere la suite de polynomes $ \left\{ p_k \right\}_{k =0, \ldots, n} $, avec $\deg p_k = k$ et $ \int_{ -1 }^{ 1 } p_k( x) \cdot g( x) = 0 \forall g( x) \deg g \leq  k-1$ 
+\end{defn}
+\begin{thm}[Forme des polynomes de Legendre]
+	Les polynomes de Legendre ont la forme
+	\[ 
+		p_k( x) = \frac{1}{2^{k}k!} \frac{d^{k}}{dx^{k}}\left[( x^{2}-1)^{k}\right]
+	\]
+	
+\end{thm}
+\begin{proof}
+	On veut montrer que
+\begin{align*}
+\int_{ -1 }^{ 1 }p_k ( x) g( x) dx = 0 \forall g \quad \deg g \leq k-1
+\end{align*}
+\begin{align*}
+\int_{ -1 }^{ 1 } \frac{d^{k}}{dx^{k}} [ ( x^{2}-1) ^{k}] g( x) dx = - \int_{ -1 }^{ 1 } \frac{d^{k}}{dx^{k-1}} \left[ ( x^{2}-1)^{k} \right] \frac{d}{dx} g( x) dx \left[ \frac{d^{k-1}}{dx^{k-1}} [ ( x^{2}-1)^{k}]\cdot g \right]_{-1}^{1}\\
+= ( -1) ^{k}\int_{ -1 }^{ 1 } ( x^{2}-1) ^{k} \underbrace{\frac{d^{k}}{dx^{k}}g( x)}_{=0} 
+\end{align*}
+
+
+\end{proof}
+\begin{thm}
+	Toutes les racines de $P_k$ sont reelles, distinctes et dans l'intervalle $( -1,1) $.
+\end{thm}
+\begin{proof}
+Par l'absurde supposons qu'il y a $\tau_1,\ldots, \tau_r$ racines distinctes de $p_k( x) $ dans l'intervalle $( -1,1) , r <k$.
+Ainsi $g( x) = ( x-\tau_1) \ldots ( x- \tau_r) \quad \deg g \leq k-1$ 
+Par hypothese, on a donc
+\[ 
+\int_{ -1 }^{ 1 } p_k ( x) g( x) = \int_{ -1 }^{ 1 } q g^{2} 
+\]
+Or $q$ ne change pas de signe, donc l'integrale ne peut pas etre nulle.
+\end{proof}
+\begin{lemma}
+Les polynomes de Legendre se calculent par 
+\[ 
+	( k+1) P_{k+1} = ( 2k+1) x P_k - k P_{k-1} 
+\]
+
+\end{lemma}
+On cherchait $c_1,\ldots, c_s$ tel que $\deg M = s$ et tel que
+\[ 
+\int_{ 0 }^{ 1 }M( t) g( t) =0 \forall g: \deg g \leq s-1
+\]
+Choisissons donc
+\[ 
+M( t) = P_s( 2t-1) 
+\]
+En effet
+\[ 
+\int_{ 0 }^{ 1 } M( t) g( t) dt = \int_{ -1 }^{ 1 }P_s( x) g( \frac{x}{2}+1) \frac{1}{2}dx
+\]
+On a que $P_s( 2t-1) $ a aussi $s$ racines distinctes dans l'intervalle $( 0,1) $.\\
+Ces racines sont les deux d'integration optimaux.
+\begin{defn}
+	La formule de quadrature $ ( \left\{ b_i \right\} , \left\{ c_i \right\} ) $ avec $c_i$ choisis comme racines de $P_s( 2t-1) $ et $b_i$ les poids corresponndants s'appelle formule de quadrature de Gauss.
+\end{defn}
+\subsection{Etude d'erreur des formules de quadrature}
+\begin{thm}[Erreurs dans les formules de quadrature]
+	Soit $f \in C^{r}( [ a,b] ) , r \geq p$ .\\
+	Soit $Q_s( \cdot) $ une formule de quadrature d'ordre $p$.\\
+	\[ 
+	I_n( f) = \sum_{j=0}^{ n-1}h_j \sum_{i=1}^{ s}b_i f( x_j + c_i h_j)
+	\]
+On a alors que
+\[ 
+| \int_{ a }^{ b } f( x) dx - I_n( f) | \leq  C \frac{h^{p}}{p!} \max_{x\in [ a,b] } |f^{( p) }( x) |
+\]
+ou $h= \max_j h_j$ et $C$ ne depend ni de $f$, ni de $p$ ni de $h$, mais depend de 
+\[ 
+\frac{\max h_i}{\min h_i}
+\]
+\end{thm}
+\begin{proof}
+Dans cette demonstration, $C$ indiquera une constante generique qui ne depend pas de $ h,f, p$.\\
+On definit
+\begin{align*}
+	E_n( f) &= | \sum_{j=0}^{ h-1} \int_{ 0 }^{ 1 } f( x_j + h_j t ) dt - \sum_{i=1}^{ s}b_i f( x_j + h_j C_i) |
+	\intertext{Posons $g( t) = f( x_j + h_j t) $ et}
+E_h^{j} ( f) = |\int_{ 0 }^{ 1 } g( t) dt - \sum_{i=1}^{ s}b_i g( c_i)|  ( = E( g) ) \\
+\intertext{Supposons d'abord que $g( x) $ est une fonction entiere, alors}
+\sum_{r \geq 0}^{ } \frac{g^{( r) }( 0) }{r!}t^{r}\\
+g( t) = \sum_{r=0}^{ p-1} \frac{g^{( r) }( 0) }{r!} t^{r} + \sum_{r \geq p}^{ } \frac{g^{( r) }( 0) }{r!}t^{r}
+\intertext{La formule de quadrature est exacte sur la premiere partie, ainsi}
+E( g) = | \int_{ 0 }^{ 1 } \sum_{r \geq p}^{ } \frac{g^{( r) }( 0) }{r!} t^{r} - \sum_{r \geq p}^{ } \sum_{i=1}^{ s} b_i \frac{g^{( r) }( 0) }{r!} c_i^{r}|\\
+= | \sum_{r \geq p}^{ } \frac{g^{( r) }( 0) }{r!} \underbrace{ [ \frac{1}{r+1} - \sum_{i=1}^{ s}b_i c_i^{r}]}_{=C_r} |\\
+= c_p  \frac{g^{( p) }( 0) }{p!} + \text{ "reste" } \\
+\intertext{On a }
+g^{p}( 0)  = ( f( x_j + th_j)^{( p) }) |_{t=0} = h_j ^{p}\cdot f^{( p) } ( x_j) \\
+\intertext{On peut aussi montrer que}
+c_p = | \frac{1}{p+1}- \sum_{}^{ } b_i c_i^{p}| \leq 2
+\end{align*}
+Ainsi $E_n^{j}( f) \leq  2 \frac{1}{p!} h_j^{p} |f^{( p) }( x_j) |$ 
+\end{proof}
+
+		
+\end{document}	

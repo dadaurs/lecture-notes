@@ -1,0 +1,105 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\input{../../../newcommands.tex}
+\begin{document}
+\title{Série 1}
+\author{David Wiedemann}
+\maketitle
+\section{Problem Set 2 Exercise 3}
+We first note that we may rewrite
+\begin{align*}
+	P &= \quad &\min \text{  }  &2x+3|y-10|\\
+	  &  \text{ s.t. } & & |x-2|+y \leq 5
+	  \intertext{as}
+	P' &= \quad &\min \text{  }  &2x+3w\\
+	  &  \text{ s.t. } && |x-2|+y \leq 5\\
+	  & & & w \geq y-10\\
+	  & & & w \geq  10-y\\
+	  \intertext{Applying the same trick for $|x-2|$ yields}
+	P'' &= &\min \text{  } & 2x+3w\\
+	  &  \text{ s.t. }& & z+y \leq 5\\
+	  & & & w \geq y-10\\
+	  & & & w \geq  10-y\\
+	  & & & z \geq x-2\\
+	  & & & z \geq 2-x\\
+	  \intertext{Note that positivity conditions on $w$ and $z$ are not needed as at least one $y-10$ or $10-y$ ( respectively $x-2$ or $2-x$ ) will be positive. }
+\end{align*}
+We now justify why $P$ and $P'$ have the same objective value.\\
+First of, suppose $P$ has an optimal solution $v=(  x_0,y_0) $, we then pretend $v_\ast =( x_0,y_0, |y_0-10|) $ ( where the last coordinate is the value of $w$ ) also is an optimal solution for $P'$ which takes the same objective value as $P$.\\
+Indeed, the fact that it takes the same objective value as $P$ is clear.\\
+Now suppose $P'$ has a smaller optimal solution than $P$, then, as the constraints on $x$ are left unchanged, this implies the value of $w$ is smaller than the value of $|y-10|$, but this is impossible since we force $w \geq y-10$ and $w \geq 10-y$.\\
+The very same argument applied to go from $P'$ to $P''$ works to show $P''$ has the same optimal objective value as $P'$.\\
+Hence $P''$ is a linear program with the same optimal objective value as $P$ 
+\section{Problem Set 3 Exercise 2}
+Let $v$ be a vertex of a polyhedron $P$, by definition this implies there exists a vector $c$ such that $c\cdot v > c\cdot y \forall y \in P \setminus \left\{ v \right\} $.\\
+Now suppose $v$ is not an extreme point, this means there exists $x,y\in P\setminus \left\{ v \right\} $ such that $ v = \lambda x + ( 1-\lambda) y$.\\
+Now first note that $c\cdot x \neq c\cdot y$, indeed, if $c\cdot x = c\cdot y$, then
+\[ 
+c\cdot v = c\cdot ( \lambda x+ ( 1-\lambda) y) = \lambda c\cdot x + ( 1-\lambda) c\cdot x = c\cdot x
+\]
+Which is impossible since $v$ is the unique optimal solution.\\
+Hence, we may suppose without loss of generality that $c\cdot x >c\cdot y$, but then
+\[ 
+c\cdot x= \lambda c \cdot x + ( 1-\lambda) c\cdot x > \lambda c\cdot x + ( 1-\lambda) c\cdot y = c\cdot v
+\]
+Which contradicts $v$ being a vertex of $P$.\\
+\section{Problem Set 3 Exercise 3}
+We set $v_i$ to be the vectors corresponding to the different planes $P_1,\ldots, P_4$  and $k_i$ the corresponding constant terms.
+To determine in which order the ray passes through the $P_i$, we have to solve the equations
+\[ 
+v_i\cdot ( x^{*}+ \lambda d) = k_i
+\]
+for $\lambda$.\\
+We first solve the equation in general and then plug in the values, ie. we solve
+\begin{align*}
+\begin{pmatrix}
+a\\b\\c\\
+\end{pmatrix} \cdot \left( 
+	\begin{pmatrix}
+		0\\1\\1
+	\end{pmatrix} 
+	+ \lambda 
+	\begin{pmatrix}
+	1 \\1\\-1
+	\end{pmatrix} 	
+\right) &=k\\
+a\lambda + b + b\lambda + c -c\lambda &= k\\
+( a+b-c) \lambda &= k -b-c\\
+\lambda &= \frac{k-b-c}{a+b-c}
+\end{align*}
+Now pluging in the different values for $a,b,c$ and $k$ , we get
+\begin{align*}
+\lambda_1 = `` -\frac{5}{0}'' \text{ is undefined , since} \\
+( 1 2 3) x^{*}\neq 0\\
+\intertext{We conclude the ray never passes through $P_1$ }
+\lambda_2= \frac{1}{4}\\
+\lambda_3 = 0\\
+\lambda_4= \frac{5}{2}	
+\end{align*}
+From this we conclude that the ray
+\begin{itemize}
+\item Never passes through $P_1$ 
+\item Then passes through 
+	\begin{enumerate}
+	\item $P_3$ 
+	\item $P_2$ 
+	\item $P_4$ 
+	\end{enumerate}
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\end{document}

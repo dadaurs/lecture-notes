@@ -1,0 +1,44 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Thu 21 Apr}{Retractes}
+\begin{defn}[Retracte]
+	Un sous-espace $\iota: A\hookrightarrow X$ est un retracte de $X$  s'il existe une retraction $r:X\to A$ tel que $r\circ \iota= \id_A$.
+\end{defn}
+\begin{exemple}
+\begin{enumerate}
+\item $S^1$ est un retracte de $S^1 \vee S^{1}$.\\
+
+\item Tout point $x_0\in X$ est un retracte de $X$ $r: X\to \left\{ x_0 \right\} $ .
+\end{enumerate}
+\end{exemple}
+\begin{rmq}
+$S^{1}$ n'est pas un retracte du disque $D^{2}$, il n'existe aucune application continue $r: D^{2} \to S^{1}$ tel que $r( x) = x $ si $x\in S^{1}$.\\
+Sinon $ \pi_1S^{1}\xrightarrow{\iota_\ast} \pi_1 D^{2} \xrightarrow{r_\ast} \pi_1 S^{1}$ .\\
+Si la composition $r\circ \iota$ etait l'identite, la composition $ \mathbb{Z}\to 0 \to \mathbb{Z} $ serait l'identite, ce qui est impossible.
+\end{rmq}
+\begin{defn}[Retracte de deformation ]
+	Un retracte $\iota: A \hookrightarrow X$ est un retracte de deformation de $X$ s'il existe une homotopie $\iota \circ r \simeq \id_X$
+\end{defn}
+\begin{exemple}
+Le peigne du topologue $P$ $ \left\{ ( 0,1)  \right\} \subset P$ est un retracte de deformation.\\
+On definit l'homotopie $H$ en trois temps.
+\begin{enumerate}
+\item Contracter les dents du peigne
+\item Contracter la base du peigne.
+\item Remonter en $ ( 0,1) $ 
+\end{enumerate}
+Cette homotopie n'a pas fixe le point $ ( 0,1) $ 
+\end{exemple}
+\begin{defn}[Retracte de deformation fort]
+	Un retracte de deformation $\iota: A\hookrightarrow X$ est un retracte de deformation fort si l'homotopie $H: \iota\circ r \simeq \id_X$ peut etre choisie relative a $A$, ie, $H( a,t) =a$ pour tout $t\in I$ et pour tout $a\in A$ 
+\end{defn}
+\begin{exemple}[Le collier]
+	Soit $A$ un espace et $ Col( A) = A \times [ 0, \frac{3}{4}[ $, l'inclusion de $A\times 0\hookrightarrow Col( A) $ est un retracte de deformation fort.\\
+	On pose $r( a,t) = ( a,0) \forall a\in A, \forall t$.\\
+	On definit donc $H: Col( A) \times I \to Col( A) $ en envoyant $( a,t,s) \mapsto ( a,ts) $ qui verifie clairement toutes les hypotheses ci-dessus.
+\end{exemple}
+
+	
+
+		
+\end{document}	

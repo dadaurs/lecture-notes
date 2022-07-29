@@ -2,13 +2,13 @@
 These are my latex'd lecture notes for different courses from the mathematics bachelor at EPFL.
 They most certainly are full of typos and errors, the only reason this repo is public is so that I can have easy acces to them.
 ## BA4 (current semester)
-[Analysis IV](Analysis&#32;IV/notes/main.pdf) given by Maria Colombo during the 2022 autumn semester
+[Analysis IV](BA4/Analysis&#32;IV/notes/main.pdf) given by Maria Colombo during the 2022 autumn semester
 
-[Algebraic Curves](Algebraic&#32;Curves/notes/main.pdf) given by Dimitri Stelvio Wyss during the 2022 spring semester
+[Algebraic Curves](BA4/Algebraic&#32;Curves/notes/main.pdf) given by Dimitri Stelvio Wyss during the 2022 spring semester
 
-[Topologie](Topologie/notes/main.pdf) given by Jerome Scherer during the 2022 spring semester
+[Topologie](BA4/Topologie/notes/main.pdf) given by Jerome Scherer during the 2022 spring semester
 
-[Analyse Numerique](Analyse&#32;Numerique/notes/main.pdf) given by Annalissa Buffa during the 2022 spring semester
+[Analyse Numerique](BA4/Analyse&#32;Numerique/notes/main.pdf) given by Annalissa Buffa during the 2022 spring semester
 ## BA3
 [Analyse 3](BA3/Analyse&#32;III/notes/main.pdf) given by Clement Hongler during the 2021 winter semester
 

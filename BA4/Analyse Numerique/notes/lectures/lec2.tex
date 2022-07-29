@@ -1,0 +1,184 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Thu 10 Mar}{Integration Numerique}
+\section{Integration Numerique}
+On veut construire des algorithme pour calculer de maniere approchee $ \int_{ a }^{ b }f( x) dx$ 
+\subsection{Formules d'integration de Newton-Cotes}
+On ecrit
+\[ 
+\int_{ a }^{ b } f( x) dx = \sum_{i=0}^{ N-1}\int_{ x_i }^{ x_{i+1}  } f( x) dx
+\]
+Chacun des termes de la somme se reecrit comme
+\[ 
+\int_{ x_i }^{ x_{i+1}  } f( x) dx = \int_{ 0 }^{ 1 } f( x_i + th_i) h_i dt
+\]
+Et on trouve
+\[ 
+\int_{ a }^{ b }f( x) dx = \sum_{i=1}^{ N-1}h_i \int_{ 0 }^{ 1 } f( x_i + th_i) dt
+\]
+Ainsi, il suffit de trouver un algorithme pour calculer des integrales de la forme $ \int_{ 0 }^{ 1 }g( t) dt$.
+La maniere la plus naive pour approximer cette integrale serait de prendre $ \int_{ 0 }^{ 1 } g( t) dt \approx g( \frac{1}{2}) $, et on note $Q_1^{nc}( g) = g( \frac{1}{2}) $.\\
+Une maniere moins naive de faire est d'approcher $g$ par une fonction lineaire et de prendre l'approximation
+\[ 
+\int_{ 0 }^{ 1 }g( t) dt \approx \frac{1}{2} \left( g( 0) +g( 1) \right)= Q_2^{nc}( g) 	 ( \text{ formule de Newton-Cote a deux noeuds } ) 
+\]
+ou encore
+\[ 
+\int_{ 0 }^{ 1 } \approx \frac{1}{6}( g( 0) + 4 g( \frac{1}{2}) + g( 1) ) = Q_3^{nc}( g) ( \text{ formule de cote a trois noeuds ou formule de Simpson } ) 
+\]
+De maniere generale, on appelle formule de Newton-Cotes a $S$ noeuds
+\[ 
+\int_{ 0 }^{ 1 }g( t) dt \approx \int_{ 0 }^{ 1 }p( t) dt
+\]
+ou $p( t) $ est le polynome de degre $s-1$ passant par les points $ ( c_i, g( c_i) ) $, ou $ 0 \leq c_1 \leq \ldots \leq c_{s-1} < c_{s} \leq 1$.\\
+Ainsi, de maniere generale
+\[ 
+Q_S^{nc}( g) = \sum_{i=1}^{ s} b_i g( c_i) 
+\]
+ou $b_i$ sont les poids des formules de N.C.\\
+On veut donc essayer de trouver des formules qui donnennt les poids de l'integration de Newton-Cotes.
+\begin{defn}[Formule de Quadrature]
+	Une formule de quadrature $Q_s( f) $ est donnee par n'importe quelle ensemble de couples $ ( \left\{ b_i \right\}_{i=1}^{s}, \left\{ c_i \right\}_{i=1}^{s}) $ :
+	\[ 
+	Q_s( f) = \sum_{i=1}^{ N}b_i f( c_i) 
+	\]
+	
+\end{defn}
+\begin{defn}
+	$Q_s( \cdot) $ 	est d'ordre $s$ quand elle est exacte sur tout polynomme de degre $ \leq s-1$
+\end{defn}
+\begin{rmq}
+Par definition les formules $Q_s^{nc}$ sont d'ordre $s$.
+\end{rmq}
+\begin{thm}
+	Etant donne $s$ noeuds distincts $ \left\{ c_i \right\}_{i=1}^{N}$, la formule donnee par $ \left( \left\{ b_i \right\}, \left\{ c_i \right\} \right) $ est d'ordre $s$ si et seulement si les poids verifient
+	\[ 
+	\sum_{i=1}^{ s} c_i^{q-1} b_i = \frac{1}{q} \quad \forall q = 1, \ldots, s
+	\]
+\end{thm}
+\begin{proof}
+Supposons que $Q$ est d'ordre $s$, alors prenons
+\[ 
+p( t) = t^{q} \quad q= 1\ldots s 
+\]
+On ecrit
+\[ 
+\int_{ 0 }^{ 1 }p( t) dt = \int_{ 0 }^{ 1 }t^{q-1}dt = \frac{1}{q}
+\]
+d'autre part
+\[ 
+\sum_{i=1}^{ s}b_i p( c_i)  = \sum_{i=1}^{ s}b_i p( c_i) = \sum_{i=1}^{ s}b_i c_i^{q-1}
+\]
+Dans l'autre sens, si $ \sum_{i=1}^{ s}c_i^{q-1}b_i = \frac{1}{q}$, alors la formule est exacte sur tout monome ( par le raisonnement ci-dessus), par linearite, elle sera donc exacte sur n'importe quel polynome.
+\end{proof}
+On montre maintenant qu'enfait les poids $ b_i$ sont uniques etant donne les $ c_i$, en effet, etant donne le theoreme ci-dessus, on a
+\[ 
+\begin{pmatrix}
+	1 & 1 &1 &\ldots & 1\\
+	c_1 & c_2 & c_3 & \ldots & c_s\\
+	c_1^{2} & c_2^{2} & c_3^{2} & \ldots & c_s^{2}\\
+	\vdots & \vdots & \vdots & \ddots & \vdots\\
+	c_1^{s-1 }& c_2^{s-1}& c_3^{s-1}&\ldots & c_s^{s-1}
+\end{pmatrix} 
+\cdot
+\begin{pmatrix}
+b_1\\
+\vdots \\
+\vdots\\
+\vdots\\
+b_s\\
+\end{pmatrix} 
+=
+\begin{pmatrix}
+1\\
+\frac{1}{2}\\
+\frac{1}{3}\\
+\vdots\\
+\frac{1}{s}
+\end{pmatrix} 
+\]
+Ainsi, soit la matrice $A$ ci-dessus est inversible, alors il y a un seul choix de poids pour la formule de N.C.\\
+Par un theoreme d'algebre lineaire, la matrice est inversible
+En appliquant donc ceci a une fonction $f$ generale, on trouve
+\[ 
+\int_{ a }^{ b }f( x) dx = \sum_{j=0}^{N-1} \int_{ x_j }^{ x_{j+1}  }f( x) dx = \sum_{j=0}^{ N-1}h_j \int_{ 0 }^{ 1 } f( x_j + th_j) dt
+\]
+\[ 
+= \sum_{j=0}^{ N-1}h_j  Q_s^{nc} ( f( x_j + th_j) ) = \sum_{j=0}^{ N-1}h_j \sum_{i=1}^{ s}b_i f( x_j + c_i h_j) 
+\]
+\begin{rmq}
+Pour les noeuds $c_i$ fixes, il existe un seul choix de poids qui garantit que $Q_s$ est d'ordre $s$.
+\end{rmq}
+\subsection*{Quel est le choix optimal des noeuds?}
+\begin{itemize}
+\item \textbf { Choix 1} Choisir des noeuds equidistants.\\
+	Ce choix rend le calcul instable en arithmetique finie.\\
+	En effet, supposons qu'on veut integrer $f( x) >0$, on aura $ \sum_{i=1}^{ s}f( ih) b_i$.\\
+	Alors les poids oscillent fortement.
+\item \textbf { Choix 2} On cherche a comprendre ou placer les noeuds pour maximiser l'ordre de la formule.
+	\begin{exemple}
+	On considere a nouveau la formule de Simpson
+	\[ 
+	Q_3^{nc}( g) = \frac{1}{6} \left[ g( 0) + 4 g( \frac{1}{2}) + g( 1) \right] 
+	\]
+	Ainsi, pour $c_i = 0,\frac{1}{2}, 1$ on a les poids $ b_i = \frac{1}{6}, \frac{2}{3}, \frac{1}{6}$ 
+	Est-ce que cette formule est d'ordre $4$?
+	\[ 
+\int_{ 0 }^{ 1 }t^{3}dt = \frac{1}{4}= \sum_{i}^{ }b_i c_i^{3} = \frac{1}{4} ( \text{ en substituant les valeurs } ) 	
+	\]
+	Est-elle aussi d'ordre 5?
+	\[ 
+	\int_{ 0 }^{ 1 } t^{4}dt = \frac{1}{5}= \sum_{i}^{ } b_i c_i^{4}= \frac{2}{3}\frac{1}{16}+ \frac{1}{6}\neq \frac{1}{5}
+	\]
+		
+	\end{exemple}
+\end{itemize}
+\subsection{Formules de quadrature d'ordre optimal}
+On veut donc choisir des noeuds $c_1,\ldots, c_s$ pour maximiser l'ordre de la formule de quadrature
+
+\begin{thm}[Thm. fondamental de la theorie de l'integration]
+	Soit $ ( \left\{ b_i \right\} , \left\{ c_i \right\} ) $ une formule de quadrature d'ordre $s, Q_s( \cdot)  $.\\
+	Soit $M( t) = ( t-c_1) ( t-c_2) \ldots ( t-c_s) $, alors la formule $Q_s( \cdot) $ est d'ordre $p \geq s+m$ si et seulement si
+	\[ 
+	\int_{ 0 }^{ 1 }M( t) g( t) =0
+	\]
+	
+\end{thm}
+\begin{proof}
+Soit $f( t) $ un polynome de degre $s+m-1$, prenons $r( t) $ un polynome de degre $s-1$ passant par les points $ ( c_i, f( c_i) ) $.\\
+Alors $f( t) -r( t) $ est un polynome de degre $s+m-1$ est un polynome s'annullant sur tous les noeuds.\\
+Ainsi
+\[ 
+f( t) -r( t) = M( t) g_f( t) \text{ avec } \deg g_f \leq m-1
+\]
+$\Leftarrow$\\
+Supposons que $ \int_{ 0 }^{ 1 }M( t) g( t) dt =0$ $\forall $ polynome $g( t) : \deg g \leq m-1$.\\
+On demontre que la formule est d'ordre $s+m-1$.\\
+Soit $f$ un polynome $\deg f \leq s+m-1$, on peut donc ecrire
+\[ 
+f( t) = r( t) + \underbrace{ \int_{ 0 }^{ 1 }M( t) g_f( t) dt}_{=0}
+\]
+De meme, on a que 
+\[ 
+Q_s( f) = \sum_{i=1}^{ s}b_i f( c_i) = \sum_{i=1}^{ s} b_i \left[ r( c_i) +  \underbrace{M( c_i) g_f( c_i)}_{=0	} \right] = \int_{ 0 }^{ 1 }r( t) dt	
+\]
+Et donc la formule est exacte\\
+$\Rightarrow$ \\
+Supposons que la formule est d'ordre $s+m$, demontrons que $ \int_{ 0 }^{ 1 }M( t) g( t) dt = 0 \forall g, \deg g \leq m-1$, ainsi
+\[ 
+\int_{ 0 }^{ 1 }M( t) g( t) dt = \sum_{i=1}^{ s}b_i M( c_i) g( c_i)  =0
+\]
+
+
+
+\end{proof}
+
+	
+
+
+
+
+
+
+
+\end{document}	
