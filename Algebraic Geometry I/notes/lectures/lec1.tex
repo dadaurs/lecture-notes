@@ -1,0 +1,164 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Mon 10 Oct}{Intro}
+\section*{Quick Motivation}
+We study schemes.\\
+These are objects that "look locally" like $( spec A, A ) $.\\
+Examples include
+\begin{itemize}
+\item $A$ itself
+\item Varieties in affine or Projective 
+\end{itemize}
+\section{Presheaves and Sheaves}
+\subsection{Presheaves}
+
+Let $X$ be a topological space.
+\begin{defn}[Presheaf]
+	Let $C$ be a category. A presheaf $\mathcal{F}$ of $C$ on $X$ consists of 
+	\begin{itemize}
+	\item $\forall U \subset X$ open, an object in $C$ $\mathcal{F}( U) $ 
+	\item $\forall V \subset U \subset X$ open, a morphism $\rho_{U,V} : \mathcal{F}( U) \to \mathcal{F}( V) $ 
+	\end{itemize}
+	such that 
+	\begin{itemize}
+	\item $\forall U$ open, $\rho_{U,U} $ is the identity on $\mathcal{F}( U) $ 
+	\item Restriction maps are compatible
+		\[ 
+			\foralll W \subset V \subset U \subset X
+		\]
+		open, we have $\rho_{U,V} \circ \rho_{V,W} = \rho_{U,W} $ 
+	\end{itemize}
+	
+\end{defn}
+\begin{rmq}
+Usually, $C = Set, Ab, Ring, etc.$ 
+\end{rmq}
+In particular, we usually assume the objects in $C$ have elements.
+\begin{rmq}
+\begin{itemize}
+\item Elements of $\mathcal{F}( U) $ are called sections of $\mathcal{F}$ over $U$.
+\item $\mathcal{F}( U) $ is called the space of sections of $\mathcal{F}$ over $U$ 
+\item Elements of $\mathcal{F}( X) $ are called global sections.
+\item There are alternative notations for $\mathcal{F}( U) $ : $ \Gamma( U,F) $ or $H_0( F) $ 
+\item The $\rho_{UV} $ are called restriction maps, for $s\in \mathcal{F}( U) $, we write $s|_V \coloneqq  \rho_{UV} ( s) $ and is called restriction of $s$ to $V$.
+\end{itemize}
+\end{rmq}
+\begin{exemple}
+\begin{itemize}
+	\item For any object $A$ in $C$, we define the constant presheaf $ \underline{A}'$ defined by $\underline{A}'( U) = A $ and with restriction maps the identity.
+	\item The presheaf of continuous functions: $C^{0}$.\\
+		We define $C^{0}( U) \coloneqq \left\{ f:U\to \mathbb{R}| f \text{ continuous }  \right\} $ and the restriction maps are the natural restrictions.
+	\item More generally, if $\pi:Y\to X$ is continuous, we can look at the presheaf of continuous sections of $\pi$, here
+		\[ 
+		\mathcal{F}_\pi( U) \coloneqq  \left\{ s:U \to Y | s \text{ continuous } \pi \circ s = \id \right\} 
+		\]
+		This example is universal in a certain sense
+\end{itemize}
+\end{exemple}
+\begin{rmq}
+Define the category $Ouv_X $ with
+\begin{itemize}
+\item objects $U \subset X$ open subsets
+\item morphisms $U \to V$ are either empty or the inclusion $U \to V$ if $U \subset V$ 
+\end{itemize}
+Then a presheaf of $C$ on $X$ is just a contravariant functor $ Ouv_X^{op}\to C$ 
+\end{rmq}
+\begin{defn}[Morphism of presheaves]
+	A morphism $\phi: \mathcal{F}_1 \to \mathcal{F}_2$ of presheaves on $X$ consists of a collection of morphisms $\rho( U) : \mathcal{F}_1( U) \to \mathcal{F}_2( U) $ which are natural.
+\end{defn}
+\begin{exemple}
+\begin{itemize}
+	\item Every morphism of objects $A \to B$ in $C$ yields a morphism $ \underline{A}' \to \underline{B}'$ 
+	\item If $X = \mathbb{R}^{n}$, let $C^{ \infty }$ be the presheaf of smooth functions, then for every open $U$, there is an inclusion $C^{ \infty }( U) \to C^{0}( U) $ and these inclusions induce a morphism of sheaves $C^{ \infty }\to C^{0}$ 
+
+	\item If $\pi_2 Y_2\to \pi_1 Y_1 \to X$ are continuous, we get $\rho: \mathcal{F}_{\pi_1\circ\pi_2} = \mathcal{F}_{\pi_1} $ by mapping a section $s \in \mathcal{F}_{\pi_1\circ\pi_2} ( U) \to \pi_2\circ s$ 
+\end{itemize}
+\end{exemple}
+\begin{rmq}
+There is an equivalence of categories 
+\[ 
+\text{ Presheeaves of $C$ on $X$  }  \simeq Fun( Ouv_X^{op},C) 
+\]
+\end{rmq}
+\subsection{Sheaves}
+\begin{defn}[Sheaf]
+	Let $C = Set, Ab,Rings$ .\\
+	A sheaf $\mathcal{F}$ of $\mathcal{C}$ on $X$ is a presheaf such that $\forall U \subset X $ open and all open covers $U = \bigcup_{i \in I} U_i$ 
+	\begin{itemize}
+	\item $\forall s,t\in \mathcal{F}( U) $ , if $s|_{U_i} = t|_{U_i} $ $\forall i \in I$ then $s=t$
+	\item  $\forall \left\{ s_i \right\} $ with $s_h\in \mathcal{F}( U_i) $ and $s_i|_{U_i \cap U_j} =s_j |_{ U_i \cap U_j} $ $\forall i,j\in I$, then $\exists s \in \mathcal{F}( U) $ such that $s|_{U_i} = s_i$ 
+	\end{itemize}
+\end{defn}
+Condition 1 is called locality and condition 2 is the gluing condition.
+\begin{rmq}
+	\begin{itemize}
+		\item The section $s$ of the gluability condiiton is unique by the locality condition.
+	\item If $C$ has products, then a presheaf is called a sheaf if 
+		\[ 
+		\mathcal{F}( U) \to\prod_{i\in I} \mathcal{F}( U_i) twoarrows  \prod_{i,j \in I} \mathcal{F}( U_i \cap U_j) 
+		\]
+		is an equalizer diagram
+		
+	\end{itemize}
+\end{rmq}
+\begin{exemple}
+\begin{enumerate}
+\item If $\mathcal{F}$ is a sheaf , let $U \emptyset  \subset X$ and $I = \emptyset$, then $\mathcal{F}( \emptyset ) $ contains at most one element
+\item $C^{0}$ ( and $C^{ \infty }$ if $X = \mathbb{R}^{n}$ ) are sheaves since $\forall U \subset X$ open
+	\begin{itemize}
+	\item Two continuous functions $f,g:U \to \mathbb{R}$ that coincide on an open cover are equal
+	\item Given an open cover $U= \bigcup_{i \in I} U_i$ and $f_i: U_i \to \mathbb{R}$, the function $f:U \to \mathbb{R} $ defined in the obvious way is continuous ( resp. smooth) because continuity ( resp. smoothness) is local.
+	\end{itemize}
+\end{enumerate}
+\end{exemple}
+\begin{defn}[Morphisms of sheaves]
+	A morphism of sheaves $\rho: \mathcal{F}_1 \to \mathcal{F}_2$ is a morphism of the underlying presheaves.
+\end{defn}
+\begin{rmq}
+\begin{itemize}
+\item $PSh_C( X) $ is the category of presheaves of $C$ on $X$ 
+\item $Sh_C( X) $ is the category of sheaves of $C$ on $X$ 
+\end{itemize}
+If $C= Ab$, we drop the index.
+\end{rmq}
+\begin{rmq}
+There is a forgetful functor $Sh_C( X) \to PSh_C( X) $.\\
+By definition, this functor is fully faithful
+\end{rmq}
+\subsection*{Recall}
+Let $A$ be a commutative ring ( with 1), then $Spec A$ is the set of prime ideals of $A$.\\
+The closed subsets of the Zariski topology on $Spec A$ are of the form $V( M) = \left\{ p \in Spec A | M \subset p \right\} $.\\
+A basis of this topology is given by $D( a)  \left\{ p \in Spec A | a \notin p  \right\} $, here $a\in A$ 
+\begin{defn}[Natural sheaf on Spec A]
+	Let $A$ be a ring and $X= Spec A$, then the structure sheaf $ \O_X$ on $X$ is defined by
+	\[ 
+	\O_X( U) = \left\{ s: U \to \coprod_{p \in Spec A}  A_p | s \text{ satisfies i and ii }  \right\} 
+	\]
+	where
+	\begin{enumerate}
+		\item $\forall p\in U, s( p) \in A_p$
+		\item $\forall p \in U, \exists a,b \in A$ and $V \subset U$ open with $p \in V \subset D( b) $ with $s( q) = \frac{a}{b}\in A_q \forall q\in V$ 
+	\end{enumerate}
+	and $\rho_{UV} $ are simply the ( pointwise) restrictions.
+\end{defn}
+\begin{rmq}
+$\O_X$ is a sheaf of rings:
+\begin{itemize}
+\item $\O_X( U) $ is a ring with pointwise multiplication and addiiton
+\end{itemize}
+
+\end{rmq}
+
+
+
+
+
+
+
+
+
+
+
+
+		
+\end{document}	
