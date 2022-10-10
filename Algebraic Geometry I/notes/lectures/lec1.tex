@@ -3,7 +3,7 @@
 \lecture{1}{Mon 10 Oct}{Intro}
 \section*{Quick Motivation}
 We study schemes.\\
-These are objects that "look locally" like $( spec A, A ) $.\\
+These are objects that "look locally" like $( \spec A, A ) $.\\
 Examples include
 \begin{itemize}
 \item $A$ itself
@@ -24,7 +24,7 @@ Let $X$ be a topological space.
 	\item $\forall U$ open, $\rho_{U,U} $ is the identity on $\mathcal{F}( U) $ 
 	\item Restriction maps are compatible
 		\[ 
-			\foralll W \subset V \subset U \subset X
+			\forall W \subset V \subset U \subset X
 		\]
 		open, we have $\rho_{U,V} \circ \rho_{V,W} = \rho_{U,W} $ 
 	\end{itemize}
@@ -56,48 +56,57 @@ In particular, we usually assume the objects in $C$ have elements.
 \end{itemize}
 \end{exemple}
 \begin{rmq}
-Define the category $Ouv_X $ with
+Define the category $\Ouv_X $ with
 \begin{itemize}
 \item objects $U \subset X$ open subsets
 \item morphisms $U \to V$ are either empty or the inclusion $U \to V$ if $U \subset V$ 
 \end{itemize}
-Then a presheaf of $C$ on $X$ is just a contravariant functor $ Ouv_X^{op}\to C$ 
+Then a presheaf of $C$ on $X$ is just a contravariant functor $ \Ouv_X^{op}\to C$ 
 \end{rmq}
 \begin{defn}[Morphism of presheaves]
 	A morphism $\phi: \mathcal{F}_1 \to \mathcal{F}_2$ of presheaves on $X$ consists of a collection of morphisms $\rho( U) : \mathcal{F}_1( U) \to \mathcal{F}_2( U) $ which are natural.
+\[\begin{tikzcd}
+	{\mathcal{F}_1(U)} & {\mathcal{F}_2(U)} \\
+	{\mathcal{F}_1(V)} & {\mathcal{F}_2(V)}
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow["{\rho(U)}", from=1-1, to=1-2]
+	\arrow["{\rho(V)}"', from=2-1, to=2-2]
+\end{tikzcd}\]
 \end{defn}
 \begin{exemple}
 \begin{itemize}
 	\item Every morphism of objects $A \to B$ in $C$ yields a morphism $ \underline{A}' \to \underline{B}'$ 
 	\item If $X = \mathbb{R}^{n}$, let $C^{ \infty }$ be the presheaf of smooth functions, then for every open $U$, there is an inclusion $C^{ \infty }( U) \to C^{0}( U) $ and these inclusions induce a morphism of sheaves $C^{ \infty }\to C^{0}$ 
 
-	\item If $\pi_2 Y_2\to \pi_1 Y_1 \to X$ are continuous, we get $\rho: \mathcal{F}_{\pi_1\circ\pi_2} = \mathcal{F}_{\pi_1} $ by mapping a section $s \in \mathcal{F}_{\pi_1\circ\pi_2} ( U) \to \pi_2\circ s$ 
+	\item If $Y_2\xto{\pi_2}  Y_1 \xto{\pi_1} X$ are continuous, we get $\rho: \mathcal{F}_{\pi_1\circ\pi_2} \to \mathcal{F}_{\pi_1} $ by mapping a section $s \in \mathcal{F}_{\pi_1\circ\pi_2} ( U) \to \pi_2\circ s$ 
 \end{itemize}
 \end{exemple}
 \begin{rmq}
 There is an equivalence of categories 
 \[ 
-\text{ Presheeaves of $C$ on $X$  }  \simeq Fun( Ouv_X^{op},C) 
+\text{ Presheaves of $C$ on $X$  }  \simeq Fun( \Ouv_X^{op},C) 
 \]
 \end{rmq}
 \subsection{Sheaves}
 \begin{defn}[Sheaf]
-	Let $C = Set, Ab,Rings$ .\\
+	Let $C = \Set, \Ab, \ring$ .\\
 	A sheaf $\mathcal{F}$ of $\mathcal{C}$ on $X$ is a presheaf such that $\forall U \subset X $ open and all open covers $U = \bigcup_{i \in I} U_i$ 
 	\begin{itemize}
 	\item $\forall s,t\in \mathcal{F}( U) $ , if $s|_{U_i} = t|_{U_i} $ $\forall i \in I$ then $s=t$
-	\item  $\forall \left\{ s_i \right\} $ with $s_h\in \mathcal{F}( U_i) $ and $s_i|_{U_i \cap U_j} =s_j |_{ U_i \cap U_j} $ $\forall i,j\in I$, then $\exists s \in \mathcal{F}( U) $ such that $s|_{U_i} = s_i$ 
+	\item  $\forall \left\{ s_i \right\} $ with $s_i\in \mathcal{F}( U_i) $ and $s_i|_{U_i \cap U_j} =s_j |_{ U_i \cap U_j} $ $\forall i,j\in I$, then $\exists s \in \mathcal{F}( U) $ such that $s|_{U_i} = s_i$ 
 	\end{itemize}
 \end{defn}
 Condition 1 is called locality and condition 2 is the gluing condition.
 \begin{rmq}
 	\begin{itemize}
-		\item The section $s$ of the gluability condiiton is unique by the locality condition.
+		\item The section $s$ of the gluability condition is unique by the locality condition.
 	\item If $C$ has products, then a presheaf is called a sheaf if 
 		\[ 
-		\mathcal{F}( U) \to\prod_{i\in I} \mathcal{F}( U_i) twoarrows  \prod_{i,j \in I} \mathcal{F}( U_i \cap U_j) 
+		\mathcal{F}( U) \to\prod_{i\in I} \mathcal{F}( U_i) \rightrightarrows  \prod_{i,j \in I} \mathcal{F}( U_i \cap U_j) 
 		\]
 		is an equalizer diagram
+		Here the first map is induced by the maps $s_i: \mathcal{F}( U) \to \mathcal{F}( U_i)  $, the two second maps are induced by, for each pair $i,j \in I$ the restrictions $\rho_{U_i, U_i\cap U_j} $ resp. $\rho_{ U_j, U_i\cap U_j} $ 
 		
 	\end{itemize}
 \end{rmq}
@@ -126,13 +135,13 @@ There is a forgetful functor $Sh_C( X) \to PSh_C( X) $.\\
 By definition, this functor is fully faithful
 \end{rmq}
 \subsection*{Recall}
-Let $A$ be a commutative ring ( with 1), then $Spec A$ is the set of prime ideals of $A$.\\
-The closed subsets of the Zariski topology on $Spec A$ are of the form $V( M) = \left\{ p \in Spec A | M \subset p \right\} $.\\
-A basis of this topology is given by $D( a)  \left\{ p \in Spec A | a \notin p  \right\} $, here $a\in A$ 
+Let $A$ be a commutative ring ( with 1), then $\Spec A$ is the set of prime ideals of $A$.\\
+The closed subsets of the Zariski topology on $\Spec A$ are of the form $V( M) = \left\{ p \in \Spec A | M \subset p \right\} $.\\
+A basis of this topology is given by $D( a) = \left\{ p \in \Spec A | a \notin p  \right\} $, here $a\in A$ 
 \begin{defn}[Natural sheaf on Spec A]
-	Let $A$ be a ring and $X= Spec A$, then the structure sheaf $ \O_X$ on $X$ is defined by
+	Let $A$ be a ring and $X= \Spec A$, then the structure sheaf $ \O_X$ on $X$ is defined by
 	\[ 
-	\O_X( U) = \left\{ s: U \to \coprod_{p \in Spec A}  A_p | s \text{ satisfies i and ii }  \right\} 
+	\O_X( U) = \left\{ s: U \to \coprod_{p \in \Spec A}  A_p | s \text{ satisfies i and ii }  \right\} 
 	\]
 	where
 	\begin{enumerate}
