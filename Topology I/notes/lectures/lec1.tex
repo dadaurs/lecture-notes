@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\section{Homology Theories}
+\lecture{1}{Mon 10 Oct}{Introduction}
+
+Aim: Study further algebraic invariants of topological spaces.\\
+We want to assign to pairs of topological spaces abelian groups.
+\[ 
+h_n: T \to \ab \quad \forall n \in \mathbb{Z}	
+\]
+and to pairs continuous maps, we want to assign a map $h_n( f) :h_n( X) \to h_n( Y) $ which is functorial.
+Here $T$ is the category of pairs of topological spaces $A \subset X$ with morphisms $f:( X,A) \to ( Y,B) $ such that $f( A) \subset B$.\\
+To relate $h_n$ for different $n\in \mathbb{N}$, we will construct connecting morphisms $\del_n: h_n ( X,A) \to h_{n-1} ( A, \emptyset) $.
+\begin{axiom}[Eilenberg-Steenrod Axiom]
+	A (generalised) homology theory consists of functors $h_n: T\to \ab$ and natural connecting homomorphisms $\del_n: h_n( X,A) \to h_{n-1} ( A,\emptyset)  $\footnote{ From now on, we write $h_n( A ) \coloneqq h_n( A,\emptyset)  $}  satisfying
+\begin{itemize}
+\item Homotopy invariance:\\ If $f,g:( X,A) \to ( Y,B) $ are homotopic continous maps of pairs then the induced maps $h_n( f) = h_n( g)  $.
+	Here homotopy of pairs means that there exists $H:X\times [ 0,1] \to Y$ such that $H( A\times [ 0,1] ) \subset B$
+\item Long exact sequence of a pair (LES) :\\
+	Given a pair of topological spaces $( X,A) $ there is a long exact sequence of abelian groups.\\
+	Denote $i:( A,\emptyset) \to ( X,\emptyset) $ and $j:( X,\emptyset )\to ( X,A)  $, then
+	\[ 
+		h_n( A,\emptyset ) \xrightarrow { h_n( i)  } h_n( X,\emptyset) \xrightarrow{  h_n( j)  } h_n( X,A) \xrightarrow{ \del_{n} } \to h_{n-1} ( A,\emptyset) 
+	\]
+
+\item Excision\\
+	Given $B \subset A \subset X$ subspaces such that $\overline{B} \subset A^{o}	$, the inclusion induces a group isomorphism
+	\[ 
+	h_n( X\setminus B, A\setminus B)  \to h_n( X,A) 
+	\]
+	We add another axiom to "make things easier"
+
+\item Additivity:\\
+	Given a family of pairs of spaces  $( X_i,A_i) _{i \in I} $, the inclusions induce an isomorphism
+	\[ 
+	\bigoplus h_n ( X_i,A_i) \to h_n( \coprod X_i, \coprod A_i)  
+\]
+This is the end of the axioms for a generalised homology theory, the homology theory is called an ordinary homology theory if the \underline { Dimension Axiom} holds, namely
+\[ 
+	h_n( \text{pt}) =0 \forall n \neq 0
+\]
+The abelian group $h_0( \text{ pt } ) $ is the called the coefficient group of $( h_n,\del_n) $ 
+\end{itemize}
+\end{axiom}
+\begin{lemma}
+If $f:X\to Y$ is a homotopy equivalence, then $\forall n \in \mathbb{Z}$ we obtain $h_n( f) : h_n( X) \to h_N( Y) $ to be an isomorphism for any homology theory $( h_n, \del_n) $ 
+\end{lemma}
+\begin{proof}
+Choose $g:Y \to X$  such that $g\circ f \simeq \id_X$ and $f\circ g \simeq \id_Y$, then by functoriality and homotopy invariance $\id_{h_n( X) } =h_n( \id_X) = h_n( g) \circ h_n( f)$, by symmetry, $h_n( f) $ and $h_n( g) $ are inverses.
+\end{proof}
+Similarly, if $f: ( X,A) \to ( Y,B) $ is a homotopy equivalence of pairs, then the same result holds.
+\begin{exemple}
+For any such homology theory 
+\[ 
+h_n(  \mathbb{R}^{k}) \simeq h_n( \text{ pt } ) \simeq h_n ( D^{k}) 
+\]
+
+\end{exemple}
+
+
+
+
+\end{document}	
