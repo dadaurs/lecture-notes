@@ -1,8 +1,20 @@
 # Lecture Notes For Math Bachelor
 These are my latex'd lecture notes for different courses from the mathematics bachelor at EPFL.
 They most certainly are full of typos and errors, the only reason this repo is public is so that I can have easy acces to them.
+I am currently doing an exchange year in Bonn and so lecture notes from BA5 were taken there.
 ## BA4 (current semester)
-[Analysis IV](BA4/Analysis&#32;IV/notes/main.pdf) given by Maria Colombo during the 2022 autumn semester
+[Algebraic Geometry I](Algebraic&#32;Geometry#32;I/notes/main.pdf) given by Gebhard Martin during the 2022 winter semester
+
+[Class Field Theory](Class&#32;Field&#32;Theory/notes/main.pdf) given by Edgar Assing during the 2022 winter semester
+
+[Topology I](Topology&#32;I/notes/main.pdf) given by Viktoriya Ozornova during the 2022 winter semester
+
+[Introduction to Manifolds](Manifolds/notes/main.pdf) given by Matthias Lesch during the 2022 winter semester
+
+[Functional Analysis](Functional&#32;Analysis/notes/main.pdf) given by Sergio Conti during the 2022 winter semester
+
+## BA4 (current semester)
+[Analysis IV](BA4/Analysis&#32;IV/notes/main.pdf) given by Maria Colombo during the 2022 spring semester
 
 [Algebraic Curves](BA4/Algebraic&#32;Curves/notes/main.pdf) given by Dimitri Stelvio Wyss during the 2022 spring semester
 
