@@ -3,7 +3,7 @@ These are my latex'd lecture notes for different courses from the mathematics ba
 They most certainly are full of typos and errors, the only reason this repo is public is so that I can have easy acces to them.
 I am currently doing an exchange year in Bonn and so lecture notes from BA5 were taken there.
 ## BA4 (current semester)
-[Algebraic Geometry I](Algebraic&#32;Geometry#32;I/notes/main.pdf) given by Gebhard Martin during the 2022 winter semester
+[Algebraic Geometry I](Algebraic&#32;Geometry&#32;I/notes/main.pdf) given by Gebhard Martin during the 2022 winter semester
 
 [Class Field Theory](Class&#32;Field&#32;Theory/notes/main.pdf) given by Edgar Assing during the 2022 winter semester
 
