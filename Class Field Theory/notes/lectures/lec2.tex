@@ -1,0 +1,149 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Thu 13 Oct}{Infinite galois theory}
+\section{Galois Theory and profinite groups}
+\begin{exemple}
+$\mathbb{F}_p \subset \mathbb{F}_{p^{n}} \subset \overline{ \mathbb{F}_p}$.\\
+Though the extension is infinite, we can look at $\gal( \overline{\mathbb{F}_p}| \mathbb{F}_p) $ and it still contains the frobenius $ \phi( x) =x^{p}$.\\
+Let $H = \left\{ \phi^{n}| n \in \mathbb{Z} \right\} = \eng { \phi_n} \subset \gal( \overline{\mathbb{F}_p}| \mathbb{F}_p) $.\\
+Note that $ \overline{\mathbb{F}_p}^{H}= \mathbb{F}_p$ BUT $H \subsetneq \gal( \overline{\mathbb{F}_p}| \mathbb{F}_p) $ 
+\end{exemple}
+
+\begin{lemma}
+Let $T$ be a Hausdorff topological space.\\
+The following are equivalent
+\begin{itemize}
+\item $T$ is an inverse limit of finite discrete spaces
+\item $T$ is compact and every point in $T$ has a basis of neighborhoods of subsets that are clopen
+\item $T$ is compact and totally disconnected
+\end{itemize}
+\end{lemma}
+\begin{proof}[Sketch]
+$1\implies 2$ follows from construction (exercise) \\
+$2\implies 3$ Take $x\in T$ and let $C_x$ be the connected component of $x$.\\
+Then
+\[ 
+C_x= \bigcap_{x\in U , \text{ clopen } } U = \left\{ x \right\} 
+\]
+because $X$ is Hausdorff.\\
+$3\implies 1$ Let $ I= \left\{ \text{ equivalence relation } R \subset T\times T| \faktor{T}{R} \text{ is finite discrete }  \right\} $ .\\
+Then, consider $\phi: T \to \varprojlim \faktor{T}{R}$, one then checks this is a homeomorphism. (exercise again) 
+\end{proof}
+\begin{defn}[Profinite space]
+A profinite space is a totally disconnected, compact and Hausdorff space.
+\end{defn}
+\begin{lemma}
+Let $G$ be a Hausdorff topological group.\\
+Then the following are equivalent
+\begin{itemize}
+\item $G$ is the inverse limit of discrete finite groups
+\item $G$ is compact and the identity in $G$ has a basis of neighborhoods consisting of normal clopen subgroups.
+\item $G$ is compact and totally disconnected.
+\end{itemize}
+
+\end{lemma}
+\begin{proof}
+$1\implies 3$ see course notes\\
+$2\implies 1$ We want to show that $\phi: G \to \varprojlim \faktor{G}{U}$ where the limit is taken over all normal clopen subgroups.\\
+$3\implies 2$ We take a basis for $e$ as in the lemma above.\\
+We take a basis of clopen neighborhoods $U$ and then define 
+\[ 
+V= \left\{ v\in U | Uv \subset U \right\} \text{ and } H= \left\{ h \in V |h^{-1} \in V \right\} 
+\]
+and one can show that $H$ is a normal finite subgroup of finite index.
+\end{proof}
+\begin{defn}[Profinite group]
+A totally disconnected compact Hausdorff topological group is called a profinite group.
+\end{defn}
+\begin{exemple}
+\begin{itemize}
+\item $ \mathbb{Z}_p = \varprojlim \faktor{\mathbb{Z}}{p^{n}\mathbb{Z}}$ 
+\item $ \hat{\mathbb{Z}}= \lim_{n \in \mathbb{N}} \faktor{\mathbb{Z}}{ N \mathbb{Z}}$ where the inverse system is given by divisibility
+\end{itemize}
+\end{exemple}
+Now we try to fix the fundamental theorem of Galois theory.\\
+Let $F$ be a field with algebraic closur $ \overline{F}$.\\
+Write $G_E = \gal( \overline{F}| E) $ for a field extension $F \subset E \subset \overline{F}$.\\
+In particular, $G_F$ is just the absolute Galois group of $F$ 
+\begin{defn}[Krull Topology]
+	For some element $\sigma \in G_F$, define a absis of (open) neighborhoods to be 
+	\[ 
+\left\{ \sigma G_E | F \subset E \text{ finite normal }  \right\} 	
+	\]
+	
+\end{defn}
+\begin{propo}
+$G_F$ equipped with the Krull topology is a profinite group. We have
+\[ 
+G_F = \varprojlim \gal( E/F) 
+\]
+where $E$ runs over finite Galois extensions of $E$ 
+\end{propo}
+\begin{crly}
+$G_{\mathbb{F}_p} \simeq \varprojlim_n \gal( \mathbb{F}_{p^{n}} / \mathbb{F}_p)\simeq \hat{\mathbb{Z}} $ 
+\end{crly}
+\begin{thm}[Fundamental Theorem of Galois Theory (Cool version)]
+	The assignment 
+	\[ 
+K \to  \gal ( \overline{F}| K) 	
+	\]
+	is a one-to-one correspondence between extensions $F \subset K \subset \overline{F}$ and closed subgroups of $G_F$.\\
+	The open subgroups of $G_F$ correspond to finite extensions of $F$.
+\end{thm}
+\begin{proof}
+\begin{enumerate}
+	\item First, notice that an open subgroup of $G_F$ is closed.
+\item Finite extensions correspond to open subgroup (essentially by definition, one needs to take the normal closure) 
+\item Now, for an arbitrary field extensionf
+	\[ 
+	\gal( \overline{F}| K) = \bigcap_i \gal( \overline{F}| K_i) 
+	\]
+	as $K_i$ varies over all finite subextensions of $K$ 
+\item This assignment is injective as $K$ is the fixed field of $\gal( \overline{F}| K) $ 
+\item This assignment is surjective:\\
+	Take $H \subset G_F$ a closed subgroup and let $K = \overline{F}^{H}$, so that $H \subset \gal ( \overline{F}|K) $.\\
+	To see that this is in fact an equality, we take $\sigma\in \gal( \overline{F}| K) $ and we show that $\sigma \in \overline{H}=H$.\\
+	Take some finite extension $K \subset L \subset \overline{F}$ so that $\sigma \gal( \overline{F}|L) $ is a neighborhood of $\sigma$.\\
+	We need to show that 
+	\[ 
+	H\cap \sigma \gal( \overline{F}| L) \neq \emptyset
+	\]
+	To do this, we have to show $\tau \in H$ such that $\tau|_L = \sigma|_L$.
+	\[ 
+	p: G_K \to \gal( L/K) 
+	\]
+	is surjective and $p( H) \subset \gal( L /K) $.\\
+	Since $K$ is the fixed field of $H$, $L^{p( H) }= K$, we have $p|_H : H \to \gal ( L /K) $ is surjective.
+	
+\end{enumerate}
+
+\end{proof}
+\section{Local Fields}
+\begin{example}
+$\mathbb{R}$ and $\mathbb{C}$ are local fields for us
+\end{example}
+\begin{defn}[Local Field]
+	A local field is a topological field which is locally compact but not discrete.
+\end{defn}
+\begin{defn}
+Let $F$ be a field. An absolute value on $F$ is a map $|\cdot|: F \to \mathbb{R}$ such that
+\begin{enumerate}
+\item $|x| \geq 0$ and $|x|=0$ and $|x| = 0 \iff x=0$ 
+\item $|xy| = |x||y|$ 
+\item $|x+y| \leq |x| + |y|$ 
+\end{enumerate}
+\end{defn}
+\begin{exemple}
+	\begin{itemize}
+	\item $ \mathbb{R}$ and $\mathbb{C}$ with euclidean norm
+	\item If $\O$ is a DVR, $F = \frac( \O) $, then $|x| = c^{-\nu( x) }$ with $c>1$ defines an absolute value.
+	\item 
+	\end{itemize}
+	
+\end{exemple}
+
+
+
+
+
+\end{document}	

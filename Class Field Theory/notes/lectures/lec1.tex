@@ -58,7 +58,7 @@ If $\beta_i \neq \beta_j$, then there is $\zeta \in Gal( K_f| \mathbb{Q}) $ such
 The Artin symbol of $p$ is $\sigma_p = C_{\gal} ( \sigma_{\beta_i} ) $.\\
 For now we suppose $Gal( K_f| \mathbb{Q}) $ is an abelian group, in this case, we can turn the Artin Symbols into a map
 \[ 
-	\mathbb{Q}^{*}\supset \Gamma_{D_{K_f}} = \eng{ p \not| D_{K_f} } \to \Gal( K_f| \mathbb{Q}) 
+	\mathbb{Q}^{*}\supset \Gamma_{D_{K_f}} = \eng{ p \not| D_{K_f} } \to \gal( K_f| \mathbb{Q}) 
 \]
 by sending $p \to \sigma_p$ 
 
@@ -70,7 +70,7 @@ by sending $p \to \sigma_p$
 	
 \end{lemma}
 \begin{thm}[Artin Reciprocity]
-	For $K_f / \mathbb{Q}$ abelian, the Artin map $\sigma: \Gamma_{D_{K_f} } \to \Gal( K_f| \mathbb{Q}) $ is surjective and it's kernel contains the "ray class group".
+	For $K_f / \mathbb{Q}$ abelian, the Artin map $\sigma: \Gamma_{D_{K_f} } \to \gal( K_f| \mathbb{Q}) $ is surjective and it's kernel contains the "ray class group".
 \end{thm}
 Here the ray class group is 
 \[ 
@@ -102,7 +102,7 @@ Let $I$ be a directed ordered set  ( $i,j\in I\implies \exists k $ such that $i 
 Take $X_i = \faktor{\mathbb{Z}}{p^{j}\mathbb{Z}}\to \faktor{\mathbb{Z}}{p^{i} \mathbb{Z}}, i \leq j $.\\
 Then, the inverse limit is defined by 
 \[ 
-X= \invlim_{i \in I} X_i = \left\{ ( x_i) \in \prod X_i | f_{ij} ( x_j) = x_i \forall i \leq  j \right\}  \subset \prod_{i \in I} X_i
+X= \varprojlim_{i \in I} X_i = \left\{ ( x_i) \in \prod X_i | f_{ij} ( x_j) = x_i \forall i \leq  j \right\}  \subset \prod_{i \in I} X_i
 \]
 
 \end{exemple}

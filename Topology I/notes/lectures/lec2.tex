@@ -1,0 +1,158 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Wed 12 Oct}{Homology Theories}
+Recall that the natural homomorphisms $\del_n$ are natural, in the sense that the compositions
+\[ 
+h_{n-1} ( f) \circ\del_n : h_n( X,A) \to h_{n-1} ( A) \to h_{n-1} ( B) 
+\]
+and
+\[ 
+\del_n \circ h_n( f) : h_n( X,A) \to h_n( Y,B) \to h_{n-1} ( B) 
+\]
+coincide.\\
+Today, we compute the homology groups $h_\ast( S^{k}) $ for $k \geq 0$ for a given ordinary homology theory $h_\ast$ 
+Here, the $k$-sphere is defined as a subspace of $\mathbb{R}^{k+1}$.\\
+Recall from the exercises that $h_\ast( pt \coprod pt) = h_\ast( pt) \oplus h_\ast( pt) $ for ordinary homology theories concentrated in degree 0.\\
+There are two maps $\pm: pt\to S^{0} $ and one natural map $S^{0}\to pt$ called the "fold" map.\\
+By functoriality, the composition $h_\ast( pt) \to h_\ast( S^{0}) \to h_\ast pt$ is the identity.\\
+To compute $h_\ast( S^{k}) $, we use two LES 
+\[ 
+	\ldots\xto{\del_{n+1}} h_n( S^{k}) \xto{h_\ast\iota} h_n( D^{k+1})= 0  \xto{h_\ast \iota} h_n( D^{k+1},S^{k}) \to h_{n-1} ( S^{k}) \to h_{n-1} ( D^{k+1}) =0  \ldots
+\]
+As $h_n( D^{k+1}) =0 $ for $n\neq 0$, we have an isomorphism $\del_n:h_n( D^{k+1},S^{k}) \to h_{n-1} ( S^{k}) $.\\
+The inclusion $D^{k}\subset S^{k}$ ( as the upper hemisphere) gives rise to another LES
+\[ 
+	0= h_n D^{k}\xto{h_\ast\iota} h_nS^{k} \xto{h_\ast\iota} h_n( S^{k},D^{k} ) \xto{\del_n} h_{n-1} D^{k}=0\to h_{n-1}  S^{k} \ldots 
+\]
+And thus we also get an isomorphism $ h_n \iota: h_n S^{k}\to h_{n-1} D^{k} $ 
+The inclusion of the north pole $pt \subset D^{k} \subset S^{k}$ induces, using excision, the isomorphism $h_n( S^{k}\setminus pt, D^{k}\setminus pt)\simeq h_n( S^{k}, D^{k})$ of the following diagram
+\[\begin{tikzcd}
+	{h_n(D^k,S^{k-1})} && {h_n(S^k\setminus pt, D^k\setminus pt)} & {h_n(S^k,D^k)} \\
+	{h_{n-1}(S^{k-1})} && {h_{n-1}(D^k\setminus pt)} & {h_{n-1}(D^k)}
+	\arrow["{\del_n}"', from=1-3, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow["\simeq", from=1-3, to=1-4]
+	\arrow["{\del_n}", from=1-4, to=2-4]
+	\arrow["{\simeq }"', from=1-3, to=1-1]
+	\arrow["{\simeq \del_n}"', from=1-1, to=2-1]
+	\arrow["{h_\ast\iota}"', from=2-1, to=2-3]
+\end{tikzcd}\]
+We know that the bottom row of this diagram is an ES.\\
+In particular $ h_n( D^{k},S^{k-1})\simeq h_n ( S^{k},D^{k})$.\\
+The isomorphism $\del_n: h_{n} ( D^{k},S^{k-1}) \to h_{n-1} ( S^{k-1}) $ now almost allows us to use induction to find the homology groups.\\
+We now consider the case $n \in \left\{ 0,1 \right\} $ 
+(This part of the proof is not complete yet) 
+\[ 
+	h_1( D^{k}) = 0 \to h_1 S^{k} \to h_1( S^{k},D^{k}) \xto{\del_1} h_0 D^{k}\to h_0 S^{k}\to h_0 ( S^{k},D^{k}) \to h_{-1} D^{k}=0
+\]
+The case $n\in \left\{ 0,1 \right\} $ gives a split short exact sequence 
+\[ 
+0 \to h_0 D^{k}\to h_0S^{k} \to h_0( S^{k},D^{k}) \simeq h_0( D^{k},S^{k-1}) \to 0
+\]
+
+
+
+The homotopy equivalence $pt \to D^{k}$ gives a split of this exact sequence $h_0S^{k}\to h_0 pt\to h_0 D^{k}$ .\\
+The boundary homomorphism $h_1 ( S^{k},D^{k}) \to h_0 D_k$ being 0 using results from the exercise sheet.\\
+
+Now by induction, $h_n S^{k}=0  $ for all $n< 0$ and $h_0 S^{k}= h_0( pt) $ for all $k>0$.\\
+We also have that $h_n S^{1}\simeq h_{n-1} S^{0}$ for $ n \notin \left\{ 0,1 \right\} $.\\
+What about $h_1 S^{1}$ ?\\
+\[ 
+h_1( D^{1},S^{0}) \to h_1( S^{1},D^{1}) \to h_0( D^{1}) 
+\]
+and 
+\[ 
+h_1( D^{1},S^{0}) \to h_0 S^{0} \to h_0( D^{1}) 
+\]
+Where the last morphism is induced by the fold map, namely $h_0S^{0}= h_0 pt \oplus h_0 pt \to h_0( pt) $ and $( x,y) \mapsto x+y$.\\
+We have
+\[ 
+h_1 D^{1}\to h_1 ( D^{1},S^{0}) \to h_0 S^{0} = h_0 pt \oplus h_0 pt\to h_0 D^{1}
+\]
+
+We were able to show isomorphisms $h_n S^{k} \simeq h_{n-1} S^{k-1}$ for $n \notin \left\{ 0,1 \right\} $, $h_0 S^{k}\simeq h_0 pt$ for $k>0$ and $h_1 S^{1}\simeq h_0 pt$.\\
+What about $h_1 S^{k}$ for $k>1$ ?\\
+We have isomorphisms
+\[ 
+	h_1 S^{k}\to h_1( S^{k},D^{k}) \xto{\del} h_0 D^{k} \simeq h_0 S^{k}
+\]
+and 
+\[ 
+h_1( D^{k},S^{k-1}) \simeq h_1( S^{k},D^{k}) \to h_0 S^{k-1}\simeq h_0 D^{k}
+\]
+and thus $h_1 S^{k}= 0$ for $k>1$ .\\
+\begin{propo}
+FOr any ordinary homology theory $( h_\ast,\del_\ast) $, the following holds
+\[ 
+h_n S^{k}= 
+\begin{cases}
+h_0 pt \oplus h_0 pt \text{ if } k=0=n\\
+0, k>0, n \notin \left\{ 0,k \right\} \\
+h_0 pt \text{ if } k>0 \text{ and } n \in \left\{ 0,k \right\} \\
+0, else
+\end{cases}
+\]
+\end{propo}
+We add one additional assumption, that there exists an ordinary homology theory with coefficient group $h_0 pt \simeq \mathbb{Z}$ 	
+\begin{crly}
+$S^{k}$ and $S^{l}$ are not homotopy equivalent for $k \neq l$ 
+\end{crly}
+\begin{proof}
+\[ 
+h_k S^{k}\simeq h_0 pt \neq h_k S^{l} = 0
+\]
+\end{proof}
+\begin{crly}[Brouwer fixed point theorem]
+Any continuous map $f: D^{n}\to D^{n}$ has a fixed point.
+\end{crly}
+\begin{proof}
+Assume $f: D^{n}\to D^{n}$ is a map without a fixed point.\\
+Consider $g: D^{n}\to S^{n-1}$ sending $ x\mapsto \frac{x- f( x) }{\N { x- f( x) } }$, by assumption, this is continuous.\\
+Next, we claim that $g|_{S^{n-1}} $ is homotopic to $\id_{S^{n-1}} $ via the map
+\[ 
+H( x,t) \coloneqq \frac{x- t f( x) }{\N { x-t f( x) } }
+\]
+If $t=1$, the denominator is $\neq 0$, if $t<1$ 
+\[ 
+	\N{t f( x) } = t \N { f( x) } < \N { f( x) } \leq 1
+\]
+Hence, $\N { x- t f( x) } \neq 0$ and $H$ is a well defined continuous map.\\
+Now, consider
+\[ 
+	h_{n-1} S^{n-1}\xto{ind} h_{n_1} D^{n}\xto{h_{n-1} ( g) } h_{n-1} S^{n-1}
+\]
+By homotopy equivalence $h_{n-1 } ( g) \circ ind$ is the identity.\\
+For $n>1$, this implies that the identity factors through 0, which is a contradiction.\\
+The special case $n=1$ gives
+\[ 
+h_0 S^{0}\to h_0 D^{1}\to h_0 S^{0}
+\]
+If the coefficient group is $\mathbb{Z}$, this is a contradiction.
+\end{proof}
+\section{Constructing singular homology}
+We want to construct a (ordinary) homology theory.\\
+The idea is to study $X$ by mapping topological simplices into $X$, here the topological $n$ simplex is defined as
+\[ 
+\Delta^{n} = \left\{ ( t_0,\ldots,t_n) | t_i \geq 0\forall i, \sum_i t_i = 1  \right\} \subset \mathbb{R}^{n+1}
+\]
+We define
+\[ 
+Sing_n( X) = \left\{ f: \Delta^{n}\to X \text{ continuous }  \right\} 
+\]
+in general, this set is huge.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

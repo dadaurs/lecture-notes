@@ -1,0 +1,89 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Wed 12 Oct}{Introduction}
+\section{Recap}
+Recall theorems about differentiable maps
+\begin{itemize}
+\item Implicit function theorem\\
+	For $U \subset \mathbb{R}^{p},V\subset \mathbb{R}^{q}$, $f\in C^{k}( U\times V, \mathbb{R}^{q}) , 1 \leq k \leq \infty $ and $ ( a,b) \in U\times V$ st.
+	\[ 
+	D_2 f( a,b) = D( f( a, -) ) ( b) 
+	\]
+	is invertible. Then there exists $a\in U_1 \subset U,b \in V_1 \subset V$ and $\phi\in C^{k}( U_1,V_1) $ such that
+	\[ 
+	f( x,x') = y_0
+	\]
+	iff $x'= \phi( x) $ 
+
+\item Inverse function theorem\\
+	If $U \subset \mathbb{R}^{p}$ is open and $f\in C^{k}( U, \mathbb{R}^{q}) , 1 \leq k \leq \infty, a \in U$ such that
+	\[ 
+	Df( a) 
+	\]
+	is invertible, then there are $a \in U_1 \subset U$ and $f( a) \in V_1 \subset \mathbb{R}^{q}$  open such that 
+	\[ 
+	f|_{U_1} : U_1\to V_1
+	\]
+	is a diffeomorphism and
+	\[ 
+	Df^{-1}|_U ( x) = ( Df( f^{-1}|_U ( x) ) ) ^{-1}
+	\]
+	for all $x\in U$ in particukar $f^{-1}$ is $C^{k}$ 
+\item Rank theorem\\
+	$U \subset \mathbb{R}^{p}$ open and $f\in C^{k}( U, \mathbb{R}^{q}) , 1 \leq k \leq \infty $, $a\in U, b \coloneqq f( a) , r= rank( Df( a) ) $ 
+	then there are diffeomorphisms
+	\[ 
+	\psi: U_\psi\to V_\psi \text{ and } \phi:U_\phi\to V_\psi
+	\]
+	with $U_\psi,V_\psi\subset \mathbb{R}^{p}$ and $U_\phi,V_\phi \subset \mathbb{R}^{q}$ such that
+	\[ 
+		\phi\circ f\circ \psi( x_1,\ldots,x_p) = ( x_1,\ldots,x_r, \tilde{f}( x_1,\ldots,x_p) ) 
+	\]
+	If $rk( D( f) ) $ is contant around $r$, then we can obtain $\tilde f =0$ 
+	
+\end{itemize}
+\section{Manifolds}
+\begin{defn}[Basis]
+	A basis for a topology on $X$ is a collection $B$ of open sets such that every open set in $X$ is the union of sets in $B$.\\
+\end{defn}
+$X$ is called second countable if it has a countable topological basis.
+\begin{defn}[Chart]
+	Let $X$ be a topological space
+	\begin{enumerate}
+	\item A chart on $X$ is a  pair  $( U,\phi) $ where $U \subset X$ open and $\phi: U \to \mathbb{R}^{n}$ for some $n$ which is a homeomorphism onto an open subset.
+	\item An atlas is a collection of charts $ A= \left\{ ( U_i,\phi_i) |i \in I \right\} $ such that $X= \bigcup_{i \in I} U_i$ 
+	\item $A$ is called smooth (  $C^{k}$ ,continuous, holomorphic, algebraic,\ldots) if and only if for any
+		\[ 
+			( U_i,\phi_i)_{i \in \left\{ 1,2 \right\} } \in A
+		\]
+		we have $\phi_1\circ\phi_2^{-1}$ is smooth ( $C^{k}$ ,\ldots) wherever it is defined.
+	\item A chart $( U,\phi) $  is compatible with an atlas $A$ if and only if 
+		\[ 
+		A \cup \left\{ ( u,\phi)  \right\} 
+		\]
+		is smooth
+	\item An atlas $A$  is maximal if it contains all charts compatible with $A$.
+	For any atlas $A$ ( not necessarily maximal), denote $A_{max} $ the maximal atlas containing it.\\
+	This maximal atlas is necessarily unique
+	\end{enumerate}
+\end{defn}
+\begin{defn}[Manifold]
+	A smooth manifold of dimension $n$   is a second countable Hausdorrf space with a maximal smooth atlas of dimension $n$.
+\end{defn}
+\subsection*{Why Hausdorff?}
+Consider $ \mathbb{R} /\sim$, $x\sim y \iff |x| = |y| >1$, this space is locally homeomorphic to $\mathbb{R}$ but the points $x$ and $y$ cannot be separated.
+\subsection*{Why second countable?}
+Take a disjoint union of infinitely many manifolds.\\
+For a connected example, take $\aleph_1 \times [ 0,1)$ with the order topology.\\
+\subsection{Smooth maps}
+A function $f:M\to N$ between smooth manifolds is called smooth if for each $p \in M$, there are charts $( U,\phi), ( V,\psi) $  $p\in U \subset M, f( p) \in V\subset N$ such that 
+\[ 
+\psi\circ f \circ\phi^{-1}
+\]
+is smooth.\\
+
+$f$ smooth implies $\tilde\psi\circ f \circ \tilde\phi^{-1}$ is smooth for any charts $( \tilde U, \tilde\phi) ,( \tilde V,\tilde\psi) $ where this is defined.
+
+
+
+\end{document}	

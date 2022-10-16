@@ -1,0 +1,30 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\section{Introduction}
+\lecture{1}{Wed 12 Oct}{Introduction}
+
+Main reference is "Functional Analysis" by H.W. Alt.
+\subsection{Topological Spaces}
+\begin{defn}[Topological space]
+	Let $X$ be a set, a topology is a subset $\tau \subset P( X) $ is a topology if
+	\begin{itemize}
+		\item $\emptyset, X \in \tau$ 
+		\item any union of opens is open
+		\item Finite intersections of opens are open.
+	\end{itemize}
+\end{defn}
+\begin{defn}[Properties]
+	For $A \subset X$ , $ \overline A$ is the smallest closed set containing $A$ and the interior $A^{o}$  is the biggest open set contained in $A$.\\
+	Finally, the boundary is $\del A = \overline A \setminus A^{o}$.\\
+	$X$ is separable if $\exists $ a dense countable subset
+\end{defn}
+\begin{defn}[Sequences]
+	Let $x: \mathbb{N}\to X, \overline{x}\in X$, $\lim x_k = \overline x \iff $ any neighbourhood $U \in T$ of $x$ eventually contains $x_k$ 
+\end{defn}
+\begin{defn}[Continuity]
+A function $f:X\to Y$ is continuous if $\forall U \in \tau_Y, f^{-1}( U) $.\\
+This is different from sequential continuity $x_n \to \overline{x} \implies f( x_n) \to f( \overline{x})  $ .\\
+$f$ is continuous at $x\in X$ if $\forall V \in S$ st $f( x) \in V \implies f^{-1}( V) \in \tau_X$ 
+\end{defn}
+
+\end{document}	

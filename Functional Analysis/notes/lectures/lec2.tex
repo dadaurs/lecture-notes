@@ -1,0 +1,168 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Fri 14 Oct}{More recaps}
+\subsection{Metric spaces}
+\begin{defn}[Metric space]
+	$X$ a set, $d:X\times X \to [ 0, \infty ) $ is a matrix
+\end{defn}
+\begin{defn}
+	$X$ a set, $d_1,d_2$ metrics
+	\begin{enumerate}
+	\item $d_1$ is topologically stronger than $d_2$ if $\tau_{d_1} $ is finer.
+	\item $d_1$ is uniformly stronger than $d_2$ if $\exists C>0$ such that $d_2 \leq C d_1$ 
+	\item $d_1$ is uniformly stronger than $d_2$ if $\exists C>0$ such that $\frac{1}{C} d_1 \leq d_2 \leq C d_1$ 
+	\end{enumerate}
+\end{defn}
+\begin{lemma}
+THe following are equivalent
+\begin{enumerate}
+\item $d_1$ is topologically stronger than $d_2$ 
+\item $\id: ( X,\tau_{d_1} ) \to ( X,\tau_{d_2} ) $ is continuous
+\item If $x_n \to \overline{x}$ in $d_1$ then $x_n \to \overline{x}$ in $d_2$ 
+\item $\forall x \in X \forall \epsilon>0\exists \delta_{\epsilon,x} >0$ such that
+	\[ 
+	d( x,y) \leq \delta \implies d_2( x,y) < \epsilon
+	\]
+\end{enumerate}
+\end{lemma}
+\begin{defn}
+	Let $( X,d) $ be a metric space
+	\begin{enumerate}
+	\item $A \subset X$ is bounded if $\exists \overline{x}\in X$ such that $\sup_{y \in A} d( x,y) < \infty $ or $A= \emptyset$ 
+\item $x_n$ is Cauchy if 
+	\[ 
+	\lim_{n\to \infty } \sup_{i,j \geq n} d( x_i,x_j ) = 0
+	\]
+
+\item $X$ complete if $x$ Cauchy $\implies$ $x$ convergent.
+\item $( Y,e) $ is a matric, $fX\to Y$ is uniformly continuous if $\forall \epsilon>0 \exists \delta>0$ such that $d( x,y) < \delta\implies e( f( x) ,f( y) ) < \epsilon$.
+	
+	\end{enumerate}
+	
+\end{defn}
+Define $X= \left\{ x: \mathbb{N}\to \mathbb{R} \text{ such that } \exists N \text{ such that } x_i =0 \text{ eventually }  \right\} $.\\
+This space, with $p$-norm is not complete, so we construct the completion.
+\begin{propo}
+Let $( X,d) $ a metric space and $( Y,e) $ a complete metric space, $A \subset X, \phi:A\to Y$ uniformly continuous.\\
+Then $\exists $ unique $\psi: \overline{A}\to Y$ such that $\psi$ is uniformly continuous and $\phi= \psi|_A$.
+\end{propo}
+\begin{proof}
+If $x: \mathbb{N}\to A$ is Cauchy, then $\phi\circ x$ is also cauchy.\\
+To prove this, let $\epsilon>0$ and $\del_\epsilon^{\phi}>0$ be such that $d( x,y) < \delta\implies e( \phi( x) ,\phi( y) ) < \epsilon$.\\
+Let $N= N_\delta^{x} $ be such that $i,j \geq N\implies d( x_i,x_j) < \delta$ , then $e( \phi( x_i) ,\phi( x_j) ) < \epsilon$ \\
+
+Now, let $a\in \overline{A}$ , then $\exists x_k$ converging to $a$.\\
+$x$ is $d$-Cauchy and $\phi\circ x$ is $e$-cauchy.\\
+$\exists$ a limit $b^{\ast}= \lim\phi( x_k ) $ 
+So we define $\psi( a) = b^{\ast}$.\\
+We now prove continuity/uniform continuity.\\
+Let $a,b \in \overline{A}, x,y: \mathbb{N}\to A$ and $x_i\to b, y_j \to b$.\\
+Then
+\[ 
+e( \psi( a) , \psi( b) ) =\lim e( \phi( x_i) ,\phi( y_j) ) 
+\]
+Now, let $\epsilon>0$, then $\exists \delta>0$ such that $d( x,y) < \delta$.\\
+Thus $e( \phi( x) ,\phi( y) ) < \epsilon$ \\
+If $d( a,b) < \delta$ $\exists N$ such that $d( x_i,y_j) < \delta \forall i,j >N$ 
+\[ 
+e( \phi( x_i) ,\phi( y_j) ) < \epsilon \implies e( \psi( a) ,\psi( b) \leq \epsilon) 
+\]
+\end{proof}
+\begin{thm}
+	If $( X,d) $ is a metric space, then there exists a complete metric space $( Y,e) $ and an isometry $\phi:X\to Y$ such that $Y= \overline{\phi( X) }$ .\\
+	Both are unique up to a bijective isometry.
+\end{thm}
+\begin{proof}
+Define $C_X \coloneqq \left\{ x: \mathbb{N}\to X, x \text{ Cauchy }  \right\} $ and $x\tilde y$ if $\lim_{j \to \infty } d( x_i,y_j) =0$.\\
+Write $Y = C_X /\sim$ .\\
+For $x,y \in Y$, define $ e( x,y) = \lim_{j \to \infty } d( x_i,x_j) $ .\\
+Is this well defined?\\
+If $j,k \geq N$ 
+\[ 
+|d( x_i,y_i) - d( x_k,y_k) | \leq d( x_i,x_k) + d( y_j,y_k) 
+\]
+And if $x\tilde x'$, then
+\[ 
+\lim d( x_i,y_j ) = \lim d( x_j', y_j) 
+\]
+because
+\[ 
+|d( x_i,y_j) - d( x_j', y_j ) | \leq  d( x_j, x_j') \to 0
+\]
+To show that $e$ is a metric, most properties are obvious.\\
+We show that if $e( x,y) =0 $ then $\lim d( x_j, y_j) =0 \implies x\tilde y \implies x=y$ \\
+Triangular equality holds because
+\[ 
+e( x,y	= \lim d( x_j, y_j	\leq  \limsup d( x_i,z_j) + d( z_j,y_j)  = e( x,z) + e( z,y) 	
+\]
+The isometry $\phi:X\to Y$ simply sends $x\mapsto [ x] $.\\
+We now show $ [ x] \in Y$, $\phi( x_k) $ is a sequence in $Y$, we want to show that $\phi( x_k) \to [ x] $.\\
+\[ 
+\lim_{k \to \infty } e( \phi( x_k) , [ x] ) = \lim_{k \to  + \infty} \lim_{j \to \infty } d( x_k, x_j ) =0
+\]
+Which shows $Y= \overline{\phi( X) }$ 
+Let $y^{k}$ Cauchy $\forall k \exists x_k \in X$ such that  $e( [ y^{k}] ,\phi( x_k)  ) < 2^{-k}$.\\
+We claim $[y^{k}] \to [ x] $ 
+\[ 
+d( x^{k},x^{h}= e( \phi( x^{k },\phi( x^{h}) ) ) )  \leq  2^{-k}+ 2^{-h + e( [ y^{k}], [ y^{h}]  ) }
+\]
+Thus $x\in C_X$ 
+$[x]\in Y$ 
+\[ 
+	e( [ y^{k}] ,[x] ) = \lim d( y_j^{k},x_j) \leq  \lim d( U_j^{k},x_k ) + d( x_k,x_j) \leq  2^{-k}
+\]
+
+
+Finally, to show uniqueness, if $( Y,e) $ and $( Y', e') $ are two completions.\\
+Let $\psi= \phi\circ( \phi')^{-1}: \phi'( X) \to Y$ .\\
+$\psi$ is an isometry so there is a unique extension $\psi:Y' \to Y$ and this is an isometry.
+\end{proof}
+\subsection{Norms, Banach Spaces}
+Throughout, $K = \mathbb{R}$ or $ \mathbb{C}$
+\begin{defn}[Normed space]
+	$\N \cdot : X\to [ 0, \infty ) $ is a norm if
+	\begin{itemize}
+	\item $ \N x = 0 \iff x=0$ 
+	\item $\N { \lambda x } = |\lambda| \N X$ 
+	\item $\N { x+y} \leq \N x + \N y$ 
+	\end{itemize}
+\end{defn}
+\begin{defn}
+	$c_0$ is the space$c_0 = \left\{ x: \mathbb{N}\to \mathbb{R} \text{ s.t. } \lim x_k =0 \right\} $ together with $\N { x} _{c_0} = \sup |x_k |$ \\
+	For $p \in [ 1, \infty ) $ , $l_p = \left\{ x: \mathbb{N}\to \mathbb{R} \text{ s.t. } \sum_{k \in \mathbb{N}} |x_k|^{p}< \infty  \right\} $ with $\N { x} _{l_p} = \left( \sum |x_k|^{p} \right)^{\frac{1}{p}}$ 
+\end{defn}
+\begin{defn}[Banach Space]
+	A Banach space is a complete normed space.	
+\end{defn}
+\begin{propo}
+Any normed space has a completion which is Banach.
+\end{propo}
+\begin{proof}
+Let $( Y,e) $ be the completion as above, define
+\[ 
+[ x] + [ y] \coloneqq  [ x+y] \text{ and } \lambda [ x] \coloneqq  [ \lambda x ] 
+\]
+\end{proof}
+\subsection{Basis of a normed space}
+\begin{defn}
+	Let $A \subset X$.\\
+	$A$ is linearly independent if $\forall N\in \mathbb{N}, \forall a_i \in A\forall \lambda_i \in K, \sum_i \lambda_i a_i = 0 \implies \lambda_i = 0$.\\
+	We define
+	\[ 
+	span( A) = \left\{ \sum(i) \lambda_i a_i , \lambda_i \text{ as above }  \right\} 
+	\]
+	$A$ is a Hamel basis if $A$ is linearly independent and $X= span A$ 
+\end{defn}
+\begin{defn}[Schauder Basis]
+	$e: \mathbb{N}\to X$ is  a Schauder basis if $\forall x\in X$ there is a unique $\lambda: \mathbb{N}\to K$ such that $ x = \sum_{i = 0}^{ \infty } \lambda_i e_i \iff \lim \N { x- \sum^{N}\lambda_i e_i } =0$ 
+\end{defn}
+
+
+
+
+
+
+
+
+
+\end{document}	

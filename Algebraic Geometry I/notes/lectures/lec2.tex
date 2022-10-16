@@ -1,0 +1,180 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Fri 14 Oct}{Stalks}
+\subsection{Stalks}
+Let $X$ be a topological space.
+\begin{defn}
+	Let $( I, \leq  ) $ be a pair where $I$ is a set and $ \leq $ is a binary relation.\\
+	$( I, \leq ) $ is called a preorder if $ll$ is reflexive and transitive.\\
+	$( I, \leq ) $ is called a poset if it is preordered and $ \leq $ is antisymmetric\\
+	$( I, \leq ) $ is called a directed set if it is preordered and $\forall i,j \in I \exists k \in I$ such that $i, j \leq k$ 
+\end{defn}
+\begin{exemple}
+\begin{enumerate}
+\item Let $I= \left\{ U \subset X | U \text{ open }  \right\} $ and $U \leq V \iff V \subset U$.\\
+	Then $I $ is a directed poset.
+\item For $x\in X$, let
+	\[ 
+	I_x = \left\{ U \subset X| U \text{ open } x\in U \right\} 
+	\]
+	This is a directed poset.
+\end{enumerate}
+\end{exemple}
+\begin{defn}
+	Let $( I, \leq ) $ be a directed set and $C$ a category.\\
+	A direct system in $C$ indexed by $I$ is a pair $\left(  \left\{ A_i \right\}, \left\{ \rho_{ij}  \right\}_{i,j \in I, i \leq j}   \right)$.\\
+	Where the $A_i$ are objects in $C$, the $\rho_{ij} : A_i \to A_j$ are morphisms in $C$ such that
+	\begin{enumerate}
+	\item $\rho_{ii} = \id_{A_i} $ 
+	\item $\rho_{ik} = \rho_{j k}\circ \rho_{i j}  $ 
+	\end{enumerate}
+\end{defn}
+\begin{exemple}
+If $\F$ is a presheaf of $C$ on $X$ and $I_X$ as in the second example above, then
+\[ 
+	\left( \left\{ \F( U_i) _{U_i \in I_X}\right\} , \left\{ \rho_{U_i, U_j} \right\}   \right) 
+\]
+is a direct system.
+\end{exemple}
+\begin{defn}[direct limit] 
+	Let $( I, \leq ) $ be a directed set, $C$ a category.\\
+	Let $ \left( \left\{ A_i \right\}_{i \in I} , \left\{ \rho_{ij}  \right\}_{i,j \in I} \right) $ be a directed system, then the direct limit is a pair
+	$( \lim_{i \in I} A_i, \left\{ \rho_i \right\}_{i \in I} ) $ where $\lim A_i$ is in $C$ and $\rho_i: A_i \to \lim A_i$ such that 
+	\begin{enumerate}
+	\item $\rho_j \circ \rho_{ij }= \rho_i $ 
+	\item For all objects $A$ in $C$ and morphisms $f_i: A_i \to A$ such that 
+		\[ 
+		f_j \circ \rho_{ij} = f_i \forall i,j \in I, i \leq j
+		\]
+	$\exists ! f: \lim_{i \in I} A_i \to A$ such that $f\circ \rho_i = f_i$ 	
+	\end{enumerate}
+\end{defn}
+\begin{rmq}
+The direct limit is unique up to unique isomorphism.
+\end{rmq}
+\begin{exemple}
+Write $( \ast) =(  \left\{ A_i \right\}_{i \in I} , \left\{ \rho_{ij}  \right\} _{i,j \in I ,i \leq j} ) $.\\
+Let $\ast$ be a direct systement in $\Set$.\\
+Let $\lim_{i \in I} A_i \coloneqq A_i / \sim$ where $a_i \simeq a_j\iff \exists k \in I, i,j \leq k$ such that $\rho_{ik} ( a_i) = \rho_{j k} ( a_j) $.\\
+This is the direct limit of $\ast$.\\
+If $\ast$ is a system in $\ab$ , let $\lim A_i \coloneqq  \bigoplus A_i /N$ with $N= \eng{ a_i - \rho_{ij}( a_i) }$.\\
+The natural map $\bigcup A_i / \sim \to \bigoplus A_i /N$ is a bijection
+\end{exemple}
+\begin{rmq}
+Taking the direct limits in $(\ab) $ is exact in the following sense:\\
+$\forall$ directed sets $I$, $\forall$ direct systems $\left\{ M_i \right\} , \left\{ N_i \right\} , \left\{ P_i \right\} $ indexed by $I$ and for all collections of commutative diagrams, we get
+\[ 
+0 \to \lim M_i \to \lim N_i \to \lim P_i \to 0
+\]
+\end{rmq}
+\begin{defn}
+	Let $C$ be a category with direct limits. Let $x\in X$ be a point, $\F$ a presheaf of $C$ on $X$.\\
+	Then the stalk of $\F$ at $x$ is
+	\[ 
+\F_x = \lim \F(U) 	
+	\]
+	where $U$ runs over all open neighbourhoods of $x$.\\
+For $s\in \F( U) $, we write $s_x$ for the image of $s$ in $\F_x$ and call it the germ of $s$ at $x$.
+	
+\end{defn}
+\begin{rmq}
+A morphism of sheaves $\phi: \F \to \G$ induces $\phi_x: \F_x\to \G_x \forall x \in X$ 
+\end{rmq}
+\begin{rmq}
+Let $x\in X, \F$ a presheaf of $\Set,\ab$
+\begin{enumerate}
+\item $\forall U \subset X$ open, $x \in U,s,t\in \F( U) $ 
+	\[ 
+	s_x = t_x \iff \exists V \subset U \text{ open such that  }  s|_V = t|_V
+	\]
+	
+\item $\forall s \in \F_x, \exists x \in U $ open and $t \in \F( U) $ such that $t_x =s$.
+\end{enumerate}
+\end{rmq}
+\begin{defn}[Sheafification]
+	Let $\F$ be a presheaf of sets ( $\ldots$ ) on $X$.\\
+	The sheafification of $\F$ is the sheaf $\F^{+}$ defined by
+	\[ 
+	\F^{+}( U) = \left\{ s: U \to \coprod_{x\in U} \F_x | s \text{ satisfies properties 1 and 2  }  \right\} 
+	\]
+\begin{enumerate}
+\item $\forall x \in U s( x) \in \F_x $ 
+\item $\forall x \in U \exists V \subset U$ open and $t\in \F( V) t_u = s( y) \forall y  \in V$ 
+\end{enumerate}
+\end{defn}
+\begin{rmq}
+\begin{enumerate}
+\item $\F^{+}$ is a sheaf
+\item Sheafification is functorial.\\
+	For $\rho:\F \to \G$ a morphism of presheaves, the collection $\phi^{+}( U) :\F^{+}( U) \to \G^{+}( U) $ sending $s \to ( \coprod_{x\in U} \phi_x) \circ s$ 
+\item $\exists$ a natural morphism $\iota_\F : \F \to \F^{+}$ defined by $\iota_F( U) ( s) :x\to s_x$ 
+\item $\forall s \in \F^{+}( U) $ there is an open cover $U = \bigcup_{i \in I} U_i$ and $s_i \in \F( U_i) $ such that $s|_{U_i} = \iota_\F( U_i) ( s_i) $ 
+\item $\forall x \in X$, the map $\iota_{\F,x} : \F_x \to \F_x^{+}$ is an isomorphism.
+\end{enumerate}
+\end{rmq}
+\begin{propo}
+$\forall$ morphisms $\phi:\F \to \G$ such that $\G$ is a sheaf, there exists a unique morphism $\phi^{+}: \F^{+}\to \G$ such that $\phi= \phi^{+}\circ \iota_\F$ 
+\end{propo}
+\begin{proof}
+Let $U \subset X$ open, let $s\in \F^{+}( U) $ $\exists $ an open cover $U = \bigcup_{i \in I} U_i$ and $s_i \in \F( U_i) $ such that $\iota_\F( U_i) ( s_i) = s|_{U_i} $.\\
+Since we want $\phi = \phi^{+}\circ \iota_\F$, we have to set 
+\[ 
+\phi^{+}( U_i ) ( s|_{U_i} ) = \phi( U_i) ( s_i) 
+\]
+Since $\G$ is a sheaf and
+\[ 
+\phi( U_i ) ( s_i) |_{U_i \cap U_j}  = \phi( U_i \cap U_j) ( s_i |_{U_i \cap U_j} ) = \phi( U_j) ( s_i) |_{U_i \cap U_j} 
+\]
+there exists a unique $t\in \G( U) $ with $t|_{U_i} = \phi( U_i) ( s_i) $.\\
+For $\phi^{+}$ to be a morphism, we have to set $\phi^{+}( U) ( s) = t$.\\
+We still have to check that $\phi^{+}$ is compatible with restriction maps.
+\end{proof}
+\begin{rmq}
+	The proposition above shows that $\hom_{Sh( X) } ( \F^{+},\G) \xto{\sim} \hom_{Psh( X) } ( \F,\G)  $ naturally in the presheaf and the sheaf $\G$.\\
+	Hence $( -) ^{+}$ is left-adjoint to the forgetful functor $Sh(X)\to Psh( X)  $ 
+\end{rmq}
+\begin{propo}
+$X= \spec A$ $\forall a \in A$ there exist isomorphisms $\phi_a: A_a \to \O_X( D( a) ) $ such that $\forall b \in A$ with $D( b) \subset D( a) $ 
+\[\begin{tikzcd}
+	{A_a} & {\O_X(D(a))} \\
+	{A_b} & {\O_X(D(b))}
+	\arrow[from=1-1, to=2-1]
+	\arrow["\sim", from=1-1, to=1-2]
+	\arrow["\sim"', from=2-1, to=2-2]
+	\arrow[from=1-2, to=2-2]
+\end{tikzcd}\]
+\end{propo}
+\begin{proof}
+Define $\phi_a: A_a \to \O_X( D( a) ) $ by sending $\frac{s}{a^{n}}\mapsto ( p \to \frac{s}{a^{n}}\in A_p) $.\\
+Clearly, these make the diagram commute.\\
+This map is injective, indeed, suppose $\phi_a( \frac{s}{a^{n}}) =0$.\\
+Let $I = Ann( s) = \left\{ r \in A | rs = 0 \right\} $.\\
+Since $\frac{s}{a^{n}}= 0 \forall p\in D( a) $, we have $I \not\subset p$, hence $V( I) \subset V( a) \implies a \in \sqrt{I} $.\\
+Thus there exists $m \geq 1$ such that $a^{m}s = 0$, hece $\frac{s}{a^{n}}=0$.\\
+To show surjectivity, let $s\in \O_X( D( a) ) $, by definition of $\O_X$ and because $D( h_i) $ form a basis, we find $a_i, g_i, h_i \in A$ such that
+\[ 
+D( a) = \bigcup D( h_i) , D( h_i) \subset D( g_i ) 
+\]
+and $s( q) = \frac{a_i }{g_i}$ for all $q \in D( h_i) $.\\
+\begin{enumerate}
+\item Claim 1: Can choose $g+i = h_i$ 
+\item Claim 2: Can choose $I $ finite
+\item Claim 3: Can choose $a_i, h_i$ such that $h_j a_i = h_i a_j$.\\
+\end{enumerate}
+Using these claims, since $D( a) = \bigcup D( h_i)$ , we find $n>0,b_j \in A$ such that $a^{n}= \sum b_j h_j $.\\
+Write $c= \sum a_i b_i$.\\
+Then $h_j = \sum_i a_i b_i h_j = \sum a_j b_i h_i = a^{n}a_j $.\\
+Thus $\frac{c}{a^{n}}= \frac{a_j }{h_j }\in A_{h_j }\implies \phi_a ( \frac{c}{a^{n}}) =s  $ 
+
+\end{proof}
+
+
+
+
+			
+
+
+	
+
+	
+\end{document}	
