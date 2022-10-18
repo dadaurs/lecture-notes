@@ -157,16 +157,186 @@ D( a) = \bigcup D( h_i) , D( h_i) \subset D( g_i )
 \]
 and $s( q) = \frac{a_i }{g_i}$ for all $q \in D( h_i) $.\\
 \begin{enumerate}
-\item Claim 1: Can choose $g+i = h_i$ 
+\item Claim 1: Can choose $g_i = h_i$ 
 \item Claim 2: Can choose $I $ finite
 \item Claim 3: Can choose $a_i, h_i$ such that $h_j a_i = h_i a_j$.\\
 \end{enumerate}
 Using these claims, since $D( a) = \bigcup D( h_i)$ , we find $n>0,b_j \in A$ such that $a^{n}= \sum b_j h_j $.\\
 Write $c= \sum a_i b_i$.\\
 Then $h_j = \sum_i a_i b_i h_j = \sum a_j b_i h_i = a^{n}a_j $.\\
-Thus $\frac{c}{a^{n}}= \frac{a_j }{h_j }\in A_{h_j }\implies \phi_a ( \frac{c}{a^{n}}) =s  $ 
+Thus $\frac{c}{a^{n}}= \frac{a_j }{h_j }\in A_{h_j }\implies \phi_a ( \frac{c}{a^{n}}) =s  $.\\
+We now prove the claims
+\begin{enumerate}
+\item We have $D( h_i) \subset D( g_i)  $ thus $V( g_i) \subset V( h_i) $ and thus $h_i \in \sqrt{( g_i) } $.\\
+	So there exists $c_i \in A$ and $n>1$ such that $h_i^{n}=c_i g_i$.\\
+	Now, we replace $h_i$ by $h_i^{n}$ and $a_i$ by $a_i c_i$. Then
+	\[ 
+	\frac{a_i c_i}{h_i ^{n}}= \frac{a_i}{g_i}
+	\]
+
+\item We have $D( a) \subset \cup D( h_i) \iff V( \sum h_i)  = \cap V( h_i) \subset V( a) $.\\
+	This is equivalent to saying that $a\in \sqrt{\sum ( h_i) } $.\\
+	Thus there exists $n \geq 1$ such that $a^{n}\in \sum_{i}^{ }( h_i) $.\\
+	So there exist finitely many $b_i \in A$ such that $a^{n}= \sum b_j h_j $ 
+\item On $D( h_i) \cap D( h_j) = D( h_i h_j) $, we have
+	\[ 
+	\phi_{h_ih_j} ( \frac{a_i}{h_i}) = s|_{D( h_i h_j) } = \phi_{h_ih_j} ( \frac{a_j}{h_j}) 
+	\]
+	Thus 
+	\[ 
+	\frac{a_i}{h_i}= \frac{a_j}{h_j}\in A_{h_i h_j}
+	\]
+	Thus, there exists $N_{j}  \geq 1$ such that $( h_i h_j)^{N_j }( h_j a_i - h_i a_j) =0$.\\
+	From claim 2, $I$ is finite, so we can choose $N$ big enough such that $N$ works for all $D( h_i) $.\\
+	Now, we replace $h_i $ by $h_i^{N+1}$ and $a_i$ by $h_i^{N}a_i$ and we get $h_j a_i -h_i a_j =0 \in A$.
+\end{enumerate}
+\end{proof}
+\begin{crly}
+Take $X= \spec A$, then $\forall p \in \spec A\exists $ isomorphisms $\phi_p: A_p \to \O_{X,p} $ such that the appropriate diagram commutes.
+\end{crly}
+\begin{proof}
+\begin{enumerate}
+\item Observe $\lim_{a\in A\setminus p} = A_a \simeq A_p$ (check universal property) 
+\item Observe that $\lim_{p \in D( a) } \O_X( D( a) ) \simeq \O_{X,p} $ 
+\end{enumerate}
+\end{proof}
+\subsection{Kernels, cokernels, exactness}
+In this chapter, every (pre)-sheaf is a (pre)sheaf of Abelian groups.\\
+\begin{defn}[Subsheaf]
+	Let $\F$ be a (pre)sheaf on $X$.\\
+	Then a sub(pre)sheaf of $\F$ is a (pre)sheaf $\G$ such that $\G( U) \subset \F( U) $ for every open and the restriction maps are induced by $\F$.
+\end{defn}
+\begin{defn}[Kernel, cokernel of presheaves]
+Let $\phi:\F\to \G$ be a morphism of sheaves
+\begin{enumerate}
+\item The presheaf kernel of $\phi$ is the presheaf $\ker^{pre}( \phi) $ defined by $\ker^{pre}( \phi) ( U)= \ker( \phi( U) )  $ 
+\item The presheaf image is defined as $\im^{pre}( \phi) ( U) = \im ( \phi( U) ) $ 
+\item The presheaf cokernel is $\coker^{pre}( \phi) ( U) = \coker( \phi( U) ) $.
+\end{enumerate}
+In each case, the restriction maps are induced by those in of $\F$ or $\G$.
+
+\end{defn}
+\begin{lemma}
+If $\F$ and $\G$ are sheaves, then the presheaf kernel is a sheaf.
+\end{lemma}
+\begin{proof}
+Let $U \subset X$ open and $U = \bigcup U_i$ an open cover, $s_i \in \ker^{pre}( \phi)( U_i)  $ such that $s_i|_{U_i\cap U_j }= s_j |_{U_i\cap U_j}  $.\\
+Since $\F$ is a sheaf, $\exists s \in \F( U) $ such that $s|_{U_i} = s_i$.\\
+Since $\ker^{pre}( \phi) ( U_i) = \ker( \phi( U_i) ) $, we have $\phi( U_i) ( s_i) =0$.\\
+Thus
+\[ 
+\phi( U) ( s) |_{U_i} = \phi( U_i) ( s|_{U_i} ) = 0
+\]
+Since $\G$ is a sheaf, $\phi( U) ( s) =0 \implies s \in \ker^{pre}( \phi) ( U) $.
+\end{proof}
+\begin{exemple}
+By an exercise, the image presheaf and cokernel presheaf are, in general, no sheaves, even if $\F$ and $\G$ are.
+\end{exemple}
+\begin{defn}[Cokernel/image of morphisms of sheaves]
+	Let $\phi:\F\to \G$ be a morphism of sheaves
+	\begin{enumerate}
+	\item sheaf kernel: $\ker^{pre}( \phi) $ 
+	\item sheaf image $( \im ^{pre}( \phi) )^{+}$
+	\item sheaf cokernel $( \coker ^{pre}( \phi) )^{+}$
+	\end{enumerate}
+	
+\end{defn}
+\begin{lemma}[cokernels are cokernels]
+Let $\phi:\F\to \G$ be a morphism of sheaves
+\begin{enumerate}
+\item $\ker\phi\to \F$ is a categorical kernel in $Sh( X) $ 
+\item $\G\to \coker\phi$ is a categorical cokernel in $Sh( X) $.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+	\begin{enumerate}
+	\item 
+This means that for each commutative diagram with solid arrows, the dotted arrow is unique\\
+"Insert cokernel/kernel diagram here"\\
+This holds for every open $U$ and so the kernel is a sheaf.
+\item The appropriate diagram commutes and we use the universal property of sheafification.
+	\end{enumerate}
+\end{proof}
+\begin{propo}
+Let $\phi:\F\to \G$ be a morphism of sheaves of abelian groups, then the following are equivalent
+\begin{enumerate}
+\item $\phi$ is a monomorphism in $Sh( X) $ 
+\item $\ker( \phi) = 0 $ 
+\item $\ker ( \phi( U) ) =0$ 
+\item $\ker( \phi_x) = 0$ 
+\end{enumerate}
+\end{propo}
+\begin{proof}
+Recall $\phi$ is a monomorphism if for every $\psi: \F' \to \F , \phi\circ\psi = 0 \implies \psi= 0$ .\\
+The implication $1 \implies 2$ follows by applying the monomorphism property to $\ker \phi \to \F$ 
+$2 \implies 1$ If $\phi\circ\psi= 0$, then $\psi$ factors through the kernel $\ker\phi\to \F$ and so $\psi = 0$ \\
+$2 \iff 3$ Since $\ker ( \phi) ( U) = \ker ( \phi( U) ) $ \\
+$3 \implies 4$  Follows because taking direct limits is exact.\\
+$4 \implies 3$ Let $s\in \F( U) $ with $\phi( U) ( s) =0$, then $\phi_x( s_x) = ( \phi( U) ( s) ) _x = 0$.\\
+So $s_x =0 \forall x\in U$ and so $s =0$ 
+\end{proof}
+\begin{propo}
+Let $\phi: \F\to \G$ be a morphism of sheaves of abelian groups, then the following are equivalent
+\begin{enumerate}
+\item $\phi$ is an epimorphism in $Sh( X) $ 
+\item $\coker ( \phi) =0$ 
+\item $\coker( \phi_x) =0$ 
+\end{enumerate}
+\end{propo}
+\begin{proof}
+Recall that $\phi$ is an epimorphism if for every $\psi:\G\to \G', \psi\circ\phi = 0 \implies \psi =0$ \\
+$1\implies 2 $ Apply epimorphism property to $\G \to \coker( \phi) $ \\
+$2\implies 3$ We have
+\begin{align*}
+0 &= ( \coker \phi)_x\\
+&= ( \coker^{pre}\phi) _x = \coker ( \phi_x) 
+\end{align*}
+$3 \implies 1$ \\
+Let $\psi: \G \to \G'$ such that $\psi\circ\phi=0$, this implies that $0 = ( \psi\circ\phi)_x = \psi_x \circ\phi_x$.\\
+Since $\phi_x$ is an epimorphism of abelian groups, we get $\psi_x=0$.\\
+As the hom sheaf is a sheaf, we get that $\psi =0$ 
 
 \end{proof}
+\begin{rmq}
+If $\coker( \phi( U) ) =0 \forall U \subset X\implies \coker( \phi) =0$ but the converse is not true.
+\end{rmq}
+\begin{crly}
+If $\phi:\F\to \G$ is a morphism of sheaves, then the following are equivalent
+\begin{enumerate}
+\item $\phi$ is an isomorphism
+\item $\phi( U) $ is an isomorphism $\forall U \subset X$ open
+\item $\phi_x$ is an isomorphism $\forall x \in X$ 
+\end{enumerate}
+\end{crly}
+\begin{proof}
+
+$1\implies 2$ since taking sections is a functor\\
+$2\implies 3$ since taking limits is functorial\\
+$2\implies 1$ because $( \phi( U) )^{-1}$ defines a morphism of sheaves\\
+$3\implies 2$ Need to show surjectivity of $\phi( U) $.\\
+Let $t\in \G( U) $, since $\phi_x$ is an isomorphism $\forall x \in U$, we find $s_x \in \F_x$ such that $\phi_x(s_x)= t_x $.\\
+There exists an open neighbourhood and $s_{V_x} \subset \F( V_x) $ such that $( s_{V_x})_x = s_x$\\
+Since 
+\[ 
+	( \phi( V_x) ( s_{V_x} ) ) _x = t_x
+\]
+we can choose $V+x$ sufficiently small such that $\phi( V_x) ( s_{V_x} ) = t|_{V_x} $.\\
+Since $\phi( V_x\cap V_y) $ is injective and $\phi( V_x\cap V_y) ( s_{V_x} |_{V_x\cap V_y} ) = t |_{V_x\cap V_y} = \phi( V_x\cap V_y) ( s_{V_y} |_{V_x\cap V_y} ) $, we have $s_{V_x} |_{V_x\cap V_y} = s_{V_y} |_{V_x\cap V_y} $.\\
+Thus there exists $s\in \F( U) $ such that $s|_{V_x} = s_{V_x} $ and $\phi( U) ( s) |_{V_x} = t|_{V_x} $ and thus $\phi( U) ( s) =t$.
+\end{proof}
+\begin{defn}[Exact Sequence of sheaves]
+	A sequence of sheaves $\F_1\xto { \phi_1} \F_2 \xto{\phi_2} \F_3$  is called exact if $\ker \phi_2= \im \phi_1$ 
+\end{defn}
+\begin{crly}
+A sequence of sheaves is exact iff the associated sequence on stalks is exact for all points.
+\end{crly}
+
+
+
+
+
+
+
 
 
 

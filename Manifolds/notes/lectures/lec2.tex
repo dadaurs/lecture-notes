@@ -1,0 +1,69 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{2}{Mon 17 Oct}{Smooth maps}
+\begin{exemple}[Projective Spaces]
+Let $K= \mathbb{R}$ or $\mathbb{C}$, take $K\mathbb{P}^{n}= \left\{ \text{ all lines in  } K^{n+1} \right\} = K^{n+1}\setminus 0 / \sim$.\\
+Then  $x\sim y \iff \exists \lambda x= \lambda y$l\\
+We have $\mathbb{R}\mathbb{P}^{n}= S^{n} / x \sim -x = S^{n} / \faktor{\mathbb{Z}}{2 \mathbb{Z}}$ \\
+Similarly, $ \mathbb{C}\mathbb{P}^{n} = S^{2n+1}/ S^{1}$.\\
+To give projective space a smooth structure, we introduce homogeneous coordinates.\\
+We write $[x] = [ x_0: \ldots:x_n] $ for the equivalence class of $x$.\\
+For $0 \leq j \leq n$ put
+\[ 
+U_j = \left\{ [ x] \in \mathbb{K}\mathbb{P}^{n} / x_j \neq 0 \right\} 
+\]
+and $\phi_j: U_j \to K^{n}$ is a chart sending $[x] \to ( \frac{x_0}{x_j},\ldots, \frac{x_n}{x_j }) $ 
+\end{exemple}
+\begin{rmq}
+\begin{enumerate}
+\item Composition of smooth maps are smooth.
+\item If $M\xto f N$ is a diffeomorphism if it is a smooth map whose inverse is smooth.
+\end{enumerate}
+\end{rmq}
+\subsection{Partitions of Unity}
+\begin{thm}[Paracompactness]
+	Let $M$ be a smooth manifold.\\
+	Let $( U_\alpha) $ be an open covering of $M$.\\
+	Then there exists a locally finite refinement $ ( V_\beta)_{\beta\in B} $ that is
+	\begin{enumerate}
+	\item locally finite, ie. each point has an open neighbourhood which meets finitely many $V_\beta$.
+	\item $\forall \beta \exists \alpha V_\beta \subset U_\alpha$ 
+	\end{enumerate}
+	More precisely, we can choose $V_\beta$ such that there exist charts $\psi_\beta:V_\beta \to \left\{ x \in \mathbb{R}^{n}||x|<3 \right\} $ and such that $M$ is covered by
+	\[ 
+	M = \bigcup_{\beta\in B} \psi_\beta^{-1}( \left\{ x\in \mathbb{R}^{n}| |x|<1 \right\} ) 
+	\]
+\end{thm}
+\begin{proof}
+From the definition, it is clear that any manifold is locally compact.\\
+Hence there exist compact sets 
+\[ 
+K_1 \subset K_2^{o} \subset K_2 \subset K_3^{o}\ldots
+\]
+sich that $M= \bigcup K_j $.\\
+$K_{j+1} \setminus K_j ^{o}$ is compact, hence for $p \in K_{j+1} \setminus K_j^{o}$, there exists $( V_p,\phi_p) $ with $\phi_p( V_p) = B( 0,3) $, $V_p \subset K_{j+2}^{o}\setminus K_{j-1} $ and $V_p \subset U_\alpha$.\\
+By compactness $\exists p_{j_1} ,\ldots, p_{jr_j} $ such thtat
+\[ 
+K_{j+1} \setminus K_j^{o} = \bigcup  \phi_{jl}^{-1}( B( 0,1) ) 
+\]
+The union of all these charts is a locally finite refinement with the desired properties.
+\end{proof}
+We can now define a map $f_1: \mathbb{R}\to \mathbb{R}, f_1( t) = e^{-\frac{1}{t}}$ if $t>0$ and $0$ if not.\\
+$f_1$ is $C^{ \infty }( \mathbb{R} ) $.\\
+Now, define $f_2( t) = \frac{f_1( t) }{f_1( t) + f_1( 1-t)  }$ 
+and then $f_3( t)= f_2( 2+t) f_2( 2-t)  $.\\
+We can now define $f_4: \mathbb{R}^n\to \mathbb{R}$ as $f_4( x) = f_3( |x|) $ 
+\begin{thm}[Partition of unity]
+	Let $M$ be a $C^{ \infty }$ manifold and $( U_\alpha) $ an open covering.\\
+	There exist $\phi_U\in C^{ \infty }( M) $ such that
+	\begin{enumerate}
+	\item $0 \leq \phi_n \leq 1$ 
+	\item $\supp\phi_n$ is locally finite
+	\item $\forall n \exists \alpha\in A, \supp\phi_n \subset U_\alpha$ 
+	\item $\forall p\in M, \sum_{n=1}^{ \infty }\phi_n( p) =1$ 
+	\end{enumerate}
+	
+\end{thm}
+
+
+\end{document}	

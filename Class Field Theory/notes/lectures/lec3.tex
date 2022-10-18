@@ -1,0 +1,179 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Mon 17 Oct}{Local Fields}
+\begin{rmq}
+	\begin{enumerate}
+	\item On a local field, we get a metric $d( x,y) = |x-y|$ which induces a topology on our field $F$ 
+	\item We could define the discrete metric which induces the discrete topology, but we always exclude it
+	\end{enumerate}
+\end{rmq}
+\begin{defn}[Equivalent metrics]
+	\begin{enumerate}
+	\item We call $|\cdot|_1$ and $ |\cdot|_2$ equivalent if they induce the same topology.
+	\item If $|x+y| \leq \max( |x|,|y|) \leq |x| + |y|$ holds, then we call $|\cdot|$ non-archimedean.
+	\end{enumerate}
+\end{defn}
+Observe that, if $|\cdot|_1$ and $|\cdot|_2$ are equivalent absolute values, then
+\[ 
+|x|_1 < 1 \implies x^{n}\to 0 \text{ in $|\cdot|_1$  } \implies x^{n}\to 0 \text{ in $|\cdot|_2$  } \implies |x|_2 <1.
+\]
+\begin{propo}
+Two absolute values $|\cdot|_1, |\cdot|_2$ are equivalent iff there is $s>0$ such that
+\[ 
+|\cdot|_1 = |\cdot|_2^{s}	
+\]
+
+\end{propo}
+\begin{proof}
+The implication from right to left is easy.\\
+Fix $y \in F^{\times}$ with $|y|_1>1$.\\
+For any $x\in F^{\times}$ there is $\alpha\in \mathbb{R}$ such that
+\[ 
+|x|_1 = |y|_1^{\alpha}
+\]
+Take a rational approximation from above $ \frac{m_i}{n_i}\to \alpha$, we get $ | \frac{x^{n_1}}{y^{m_1}}|_1<1 \implies | \frac{x^{n_1}}{y^{m_1}}|_2<1$\\
+Thus $|x|_2 \leq |y|_2^{ \frac{m_i}{n_i}}\implies |x|_2 \leq |y|_2^{\alpha}$.\\
+Doing the same with an approximation of $\alpha$ from below we get $|x|_2 = |y|_2^{\alpha}$.\\
+Then
+\[ 
+0<s= \frac{\log |y|_1}{\log |y|_2} = \frac{\log |x|_1}{\log |x|_2}
+\]
+\end{proof}
+\begin{thm}[Approximation Theorem]
+Let $|\cdot|_1,\ldots,|\cdot|_n$ be pairwise inequivalent absolute values.\\
+For all $a_1,\ldots,a_n \in F$ and every $\epsilon>0$, there is $x\in F$ such that
+\[ 
+|x-a_i|_i <\epsilon
+\]
+
+\end{thm}
+\begin{rmq}
+Taking $F= \mathbb{Q}$ and $p,q$ primes.\\
+There are valuations $v_p,v_q$ which induce absolute values $|\cdot|_p = p^{- v_p( \cdot) }$ which are non-archimedean and inequivalent.\\
+A special case of the theorem above says that for each $a_1,a_2\in \mathbb{Z}$ and all $\epsilon>0$  there is $x\in \mathbb{Q}$ such that $|a_1-x|_p < \epsilon	$ and $|a_2-x|_q < \epsilon$
+\end{rmq}
+\begin{proof}
+We claim: There is $z\in F$ such that $|z|_1>1$ and $|z|_j <1$ for $j = 2 ,\ldots,n$.\\
+First, take $\alpha,\beta\in F$ such that
+\[ 
+|\alpha|_1 < 1 \leq |\alpha|_n \text{ and   } |\beta|_1 \geq 1 > |\beta|_n
+\]
+Put $y= \frac{\beta}{\alpha}$.\\
+The case $n=2$ follows from this (with $z=y$).\\
+By induction, for $n>2$ we argue by induction. Say $z'$ satisfies the claim for $n-1$.\\
+If $|z'|_n \leq 1$, take $z= ( z')^{m}y$ for $m$ large enough.\\
+If $|z'|_n >1$, look at 
+\[ 
+t_m = \frac{( z') ^{m}}{1+ z'^{m}}
+\]
+$t_m$ will converge to $1$ for $j= 1,n$ and $0$ if not.\\
+Take $z= t_m y$ for $m$ large enough.\\
+By the same argument we find $z_i \in F$ such that $|z_i|_i >1$ and $|z_i|_j<1$ for $j \neq i$.\\
+Put $x= a_1 z_1^{m_1}+ \ldots + a_n z_n^{m_n}$ for $m_1,\ldots,m_n \in \mathbb{N}$ large enough.
+Look at script here:
+\[ 
+|x-a_1|_1 \leq  |a_1|_1 
+\]
+
+\end{proof}
+\begin{propo}
+An absolute value $|\cdot|$ on a field $F$ is non-archimedean iff $ ( |n|)_{n \in \mathbb{N}} $ is bounded.
+\end{propo}
+\begin{proof}
+``$\implies$'' $|n| = |1+ \ldots+1| \leq \max( |1|,\ldots) = 1$ \\
+``$\impliedby$'' Say $|n| \leq N$, look at $|x+y|^{l} \leq \sum_{v=0}^{ l} | \binom{l}{v}| \underbrace{|x|^{v}|y|^{l-v}}_{ \leq \max( |x|,|y|)^{l}}$.\\
+Taking $l$-th roots, we get $|x+y| \leq N^{\frac{1}{l} } ( 1+l)^{\frac{N}{l}}\max( |x|,|y|) $ 
+\end{proof}
+\begin{defn}[Complete Field]
+	We call $( F,|\cdot|) $ complete if every Cauchy sequence has a limit in $F$.
+\end{defn}
+Any valued field has a completion $( \hat{F},|\cdot|) $.
+\begin{exemple}
+	$ ( \mathbb{Q}, |\cdot|) \xto{ \text{ completion } } ( \mathbb{R},|\cdot|_{ \infty } ) $.\\
+	We can do the same for the p-adic absolute values
+	$( \mathbb{Q}, |\cdot|_p) \xto { \text{ completion } } ( \mathbb{Q}_p, |\cdot|_p) $.
+	
+\end{exemple}
+\begin{thm}[Ostrowski]
+	Let $F$ be a complete valued field such that $|\cdot|$ is archimedean.\\
+	Then there is an isomorphism $\sigma:F\to \mathbb{R}$ or $ \mathbb{C}$ such that $|x| = |\sigma( x) |_{ \infty }^{s}\forall x \in F$ 
+\end{thm}
+\begin{proof}
+As $|\cdot|$ is archimedean, the sequence $( n) $ is unbounded and hence $char( F) = 0$.\\
+Hence $ \mathbb{Q} \to \hat{ \mathbb{Q}} \to F$ and thus $ \mathbb{R}\subset F$.\\
+Take $a\in F$, we want to find a quadratic polynomial in $ \mathbb{R}[x]$ that $a $ satisfies.
+Define $f( z) = |a^{2}- Tr_{\mathbb{C}| \mathbb{R}} ( z) a + Nr_{\mathbb{C}|\mathbb{R}} ( z) $ for $ z \in \mathbb{C}$.\\
+Note that $f: \mathbb{C}\to [ 0, \infty ) $ and $f( z) \to \infty $ as $|z| \to \infty $.\\
+So $m = \min_{z\in \mathbb{C}} f(z) $ is attained in $S= \left\{ z\in \mathbb{C}| f( z) =m \right\} $.\\
+We claim $m=0$.\\
+Take $z_0 \in S$ and suppose $m = f( z_0) >0$, consider
+\[ 
+	g( x) = x^{2} - Tr_{ \mathbb{C}|\mathbb{R}} ( z_0) x + Nr_{ \mathbb{C}| \mathbb{R}} ( z_0) + \epsilon \in \mathbb{R}[x]
+\]
+Let $z_1,z_1'$ be complex roots of $g$, we must have 
+\[ 
+z_1z_1' = Nr_{\mathbb{C}|\mathbb{R}}( z_0) + \epsilon
+\]
+and in particular $ |z_1| > |z_0|$.\\
+Consider $G( x) = [ g( x) - \epsilon]^{n}- ( -\epsilon)^{n}= \prod_{i=1}^{n}( x-\alpha_i) $ and assume $\alpha_1 = z_1$ 
+\[ 
+|G( a) |^{2}= \prod_{i=1} ^{2n} f( \alpha_i)  \geq  f( z_1 ) |m|^{2n-1}
+\]
+and 
+\[ 
+|G( a) | \leq  f( z_0) ^{n}+ \epsilon^{n}= m^{n}+ \epsilon^{n}
+\]
+Rearranging 
+\[ 
+\frac{f( z_1) }{m} \leq  ( 1+ ( \frac{\epsilon}{m})^{n}) ^{2} \to 1 
+\]
+as $n \to \infty $.\\
+Rearranging $f( z_1) \leq m = f( z_0)  $ 
+\end{proof}
+\begin{defn}
+	The fields $ \mathbb{R}$ and $\mathbb{C}$ are called archimedean local fields.
+\end{defn}
+Let $|\cdot|$ be non-archimedean
+\begin{defn}
+	Let $\O = \left\{ x \in F | |x| \leq 1 \right\} $ be the `` valuation ring ''.\\
+	Then 
+	\[ 
+	p = \left\{ x\in F | |x| < 1 \right\} 
+	\]
+	is the unique maximal ideal of $p$.\\
+	Then $\O^{\times} = \left\{ x \in F | |x| = 1 \right\} $ are the units and $k = \faktor{\O}{p}$ is the residue field. 
+\end{defn}
+\begin{defn}[Non-archimedean local field]
+	A non-archimedean local field is a complete valued field such that $|\cdot|$ is non-archimedean and $k$ is finite.
+\end{defn}
+\begin{defn}
+	The valuation $v$ defined by $v( x) = - \log( |x|) $ is called discrete if there is a $s>0$ such that $v( F^{\times}) \subset s \mathbb{Z}$.\\
+	We say $v$ is normalized if $v( F^{\times}) = \mathbb{Z}$ 
+\end{defn}
+\begin{propo}
+Let $( F,|\cdot|) $ be a non-archimedean  valued field with completion $( \hat{F}, |\cdot|) $, then 
+\[ 
+\faktor{ \hat{\O}}{\hat{p}} \simeq \faktor{\O}{p}
+\]
+Further, if $|\cdot|$ has discrete valuation then
+\[ 
+\faktor{ \hat{\O}}{ \hat{p}^{n}}\simeq \faktor{\O}{p^{n}} \text{ and }  \hat{\O} = \lim \faktor{\O}{p^{n}}
+\]
+Similarly
+\[ 
+\hat{\O}^{\times = \lim \faktor{\O^{\times}}{U^{n}}}
+\]
+for $U^{n}= 1 + p^{n}$ 
+
+\end{propo}
+
+
+
+
+
+
+
+	
+
+
+\end{document}	
