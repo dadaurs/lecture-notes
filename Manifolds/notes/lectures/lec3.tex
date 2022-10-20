@@ -1,0 +1,92 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Wed 19 Oct}{Partitions of Unity}
+\begin{propo}
+Let $M $ be a smooth manifold, $A \subset M$ closed, $G \subset M$ open with $A \subset G$, then there exists a smooth function $f$ on $M$, such that $\im f \subset [ 0,1] $ and $f|_A \equiv 1$ and $f|_{G^{C}}  \equiv 0$ 
+\end{propo}
+\begin{proof}
+$( M\setminus A,G) $ is an open cover and $( \phi_0,\phi_1) $ a partition of unity subordinate to this open cover, then $f= \phi_1$ does the job.
+\end{proof}
+\begin{thm}
+Let $M$ be a smooth manifold, $( U_\alpha) $ an open cover, then there exists $\phi_n \in C^{ \infty }( M), n \in \mathbb{N}	 $ such that
+\begin{enumerate}
+\item $0 \leq \phi_n \leq 1$ 
+\item $ \left\{ \supp \phi_n \right\} $ locally finite
+\item $\forall n \supp \phi_n \subset U_\alpha$ 
+\item $ \sum_{}^{ } \phi_n = 1 $ 
+\end{enumerate}
+\end{thm}
+\begin{proof}
+By the partition of unity theorem, there are charts $( V_n, \psi_n) $ of $M$ with $\psi_n:V_n \to B( 0,3) $.\\
+We let $\tilde\phi_n( x) \coloneqq  f_4( \psi_n( x) ) , x \in V_n$ and $0$ otherwise.\\
+$\forall x \in M\exists n $s.t.$ \tilde\phi_n ( x) >0$, by local finiteness $\tilde\phi( x) = \sum \tilde\phi_n >0$ and $\tilde\phi$ is non zero and we let $\phi_n = \frac{\tilde\phi_n}{\tilde\phi}$ 
+\end{proof}
+As an addendum, we claim that if $A \subset \mathbb{N}$, then $A$ can be chosen as index set for the partition, ie. $\phi_n=0$ if $n \notin A$ and $\supp \phi_n \subset U_n$ 
+Let
+\[ 
+J_k \coloneqq \left\{ i \in \mathbb{N}| i \in A \setminus J_0\cup \ldots \cup J_{k-1} , \supp \phi_i \subset U_k \right\} 
+\]
+and we let 
+\[ 
+\chi_k = \sum_{i\in J_k}^{ } \phi_i
+\]
+\section{Tangent Space}
+If $M \subset \mathbb{R}^n$ is a submanifold, $M = \left\{ x| F( x) =0 \right\} $, $F: \mathbb{R}^n\to \mathbb{R}$ a submersion, then $T_pM = \nabla F( p) ^{\perp}$.\\
+Let $v\in T_pM$ and choose $\gamma:( -\epsilon,\epsilon) \to M$ such that $\gamma( 0) =p,\gamma'( 0) =v$.\\
+Given $C^{ \infty }M\ni f \mapsto vf$ .\\
+This map is a derivation at $p$.
+\begin{defn}[Tangent Space]
+	Let $M$ be a smooth manifold, $p \in M$.\\
+	A derivation at $p$ is a linear map $X_p:C^{ \infty }( M) \to \mathbb{R}$ with $X_p( fg) = f( p) X_pg + g( p) X_pf$.\\
+	Then $T_pM$ is the set of all derivations at $p$ and it is a subspace of $C^{ \infty }( M) ^{\ast}$ 
+\end{defn}	
+\begin{rmq}
+\begin{enumerate}
+\item If $\phi \in C^{ \infty }( M) $ constant in a neighborhood of $p$, then $X_p\phi = 0$ for each $X_p \in T_p M$.\\
+	To prove this, suppose wlog $\phi =1 $ in a neighborhood of $p$.\\
+	There exists $\xi$ a smooth function on $M$, constant in a neighborhood of $p$ and $0$ outside of the neigborhood.\\
+	Thus $\chi\phi = \chi$.\\
+	Applying the chain rule gives
+	\[ 
+	X_p \chi = \phi( p) X_p\chi + \chi( p ) X_p\phi
+	\]
+	and thus $X_p\phi =0$ 
+\item If $p\neq q$, then $T_pM \cap T_qM = \left\{ 0 \right\} $.\\
+	To prove this, suppose $p \neq q$. Choose $\phi \in C^{ \infty }( M) $ with $\phi\equiv 1$ in a neighborhood of p and $\equiv 0$ in a neighborhood of $q$. Thus $X\phi =0$.\\
+	Let $f\in C^{ \infty }M$ such that $f( 1- \phi)\equiv 0 $ in a neighborhood of $p$ and thus 
+	\[ 
+	X( f) = \phi( q) X_q f + f( q) X_q f
+	\]
+	
+\item Given $X\in T_pM, U$ a neigborhood of $p$, then $X\in T_pU$ by extending $f\in C^{ \infty }( U) $ to a function on $M$.
+\item If $( U,\phi) $ is a chart at $p$ with coordinate functions $x_1,\ldots,x_n$ then we define
+	\[ 
+\frac{\del}{\del x_i} f|_p \coloneqq \frac{\del}{\del r_i} f\circ\phi^{-1}|_{\phi( p) } = D( f\circ\phi^{-1}) ( \phi( p) ) [ e_i] 	
+	\]
+
+\end{enumerate}
+\end{rmq}
+We want to show that $T_pM$ has dimension $n$ 
+\begin{lemma}
+Let $M$ be a smooth manifold and $p\in M$. Let $( U,\phi) $ be a chart centered at $p$ ( ie. $\phi( p) =0$ ), coordinate functions $x_1,\ldots,x_n$.\\
+Then for $f\in C^{ \infty }( U) $, there exists $f_1,\ldots,f_n\in C^{ \infty }( U) $ such that 
+\[ 
+f= \sum_{i=1}^{ n} f_j x_j + f( p) 
+\]
+
+\end{lemma}
+\begin{proof}
+Without loss of generality $U = ( -\epsilon,\epsilon)^{n}$.\\
+Then
+\begin{align*}
+	f( x) &= \left[ \sum_{j=1}^{ n} f( x_1,\ldots,x_j,0,\ldots,0) - f( x_1,\ldots,x_{j-1} ,0,\ldots,0)  \right]+ f( 0) \\
+	&= f( 0) + \left[ \sum_{j=1}^{ n} \int_{ 0 }^{ 1 } ( \del_j f) ( x_1,\ldots,x_{j-1} , t x_j)dt x_j\right] 
+\end{align*}
+\end{proof}
+\begin{thm}
+	For $M$  a smooth manifold, let $( U,\phi) $ be a chart centered at $p$ taking values in $ \mathbb{R}^{n}$, then the dimension of the tangent space is $n$.
+\end{thm}
+
+
+
+\end{document}	

@@ -1,0 +1,175 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Wed 19 Oct}{Projections onto Hilbert spaces}
+\begin{defn}[Equivalence of Norms]
+	Let $\N{\cdot}_1$ and $\N{\cdot}_2$ be norms on a vector space $X$ 
+	\begin{enumerate}
+		\item $\N{\cdot}_1$ is stronger than $\N{\cdot}_2$ if the induced metrics are topologically stronger
+		\item $\N{\cdot}_1$ is equivalent to $\N{\cdot}_2$ if the induced metrics are equivalent
+	\end{enumerate}
+\end{defn}
+\begin{lemma}
+\begin{enumerate}
+	\item If $\N{\cdot}_1$ is stronger than $\N{\cdot}_2 \implies \exists C>0 $ such that $\N{x}_2 \leq C \N{x}_1$ 
+	\item If $\N{\cdot}_1$ is equivalent to $\N{\cdot}_2 \implies \exists C>0 $ such that $\frac{1}{C}\N{x}_1 \leq \N{x}_2 \leq C \N{x}_1$ 
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+\begin{enumerate}
+	\item If not, $\forall k \in \mathbb{N}, \exists v_k \in X$ such that $\N{v_k}_2 > k \N{v_k}_1$.\\
+		Let $w_k = \frac{v_k}{\N{v_k}_2}$ then $1= \N{w_k}_2 > k \N { w_k}_1$.\\
+		Thus $w_k \to 0\in \N{\cdot}_1$, thus $w_k \to 0\in \N{\cdot}_2$ which is a contradiction.
+	\item Follows from $1$.
+\end{enumerate}
+
+\end{proof}
+\subsection{Scalar products and Hilbert spaces}
+\begin{defn}
+	Let $H$ be a $K$-vector space.\\
+	A map $b:H\times H \to K$ is a scalar product if it satisfies
+	\[ 
+b( x,\lambda y + \mu z) = \lambda b( x,y) + \mu b( x,z) 	
+	\]
+	\[ 
+		b( \lambda x + \mu y,x) = \overline{\lambda} b( x,z) + \overline{\mu} b( y,z) 	
+	\]
+	$b( x,y) = \overline{b( y,x) }$ and $b( x,x) >0$.\\
+	$( H,b) $ is a pre-Hilbert space
+\end{defn}
+\begin{exemple}
+	\begin{enumerate}
+	\item $K^{d}$ with the usual scalar product\\
+	\item $\ell^{2}( \mathbb{R}) $ 
+	\end{enumerate}
+\end{exemple}
+\begin{propo}
+\begin{enumerate}
+	\item $\N{x}_H = ( x,x)^{\frac{1}{2}}$ is a norm on $H$ 
+	\item Cauchy-Schwarz: $|( x,y)| \leq \N{x} \N{y}$ 
+	\item $\N{x+y}^{2}+ \N{x-y}^{2} = 2( \N{x}^{2}+ \N{y}^{2}) $ 
+\end{enumerate}
+\end{propo}
+\begin{proof}
+To show Cauchy-Schwarz, note that $( x+ty,x+ty) \geq 0\forall t \in K$, thus
+\[ 
+	( x,x) + t( ( x,y) + ( y,x) ) + t^{2}( y,y) \geq 0
+\]
+The middle term is $2 t \re( x,y) $, if the scalar product isn't real, we may rotate $y$ to make it real
+
+\end{proof}
+\begin{propo}
+	Let $( X,\N{\cdot}) $ be a normed space.\\
+	If the parallelogram identity holds, then there is a scalar product $b$ such that $\N{x} = b( x,x)^{\frac{1}{2}}$ 
+\end{propo}
+\begin{proof}
+	Define $b( x,y) = \frac{1}{4}\left( \N{x+y}^{2}-\N{x-y}^{2}\right) $.\\
+	We want to check $b( x,\lambda y + \mu z ) = \lambda b( x,y) + \mu b( x,z) $.\\
+	First, check $b( x,y+y') + b( x,y-y') = 2b( x,y) $ 
+	\[ 
+		\frac{1}{4}\left[ \N { x+y+y'} ^{2} - \N{x-y-y'}^{2} + \N { x+y-y'}^{2} - \N{x-y-y'}^{2}\right] = \frac{1}{2} ( \N{x+y}^{2} - \N{x-y}^{2}) 
+	\]
+	
+	From the parallelogram identity, we get that the left hand side is
+	\[ 
+		\frac{1}{4} \left[ 2 \N { x+y}^{2} + 2\N{y'}^{2} - 2 \N{x-y}^{2} - 2 \N{y'}^{2}\right] 
+	\]
+	and thus the equality above holds.\\
+	If $y'=y \implies b( x,2y ) = 2 b( x,y) $ and thus 
+	\[ 
+	y' = ny \quad b( x, ( n+1) y) = 2 b( x,y) - b( x,y-ny) 
+	\]
+	and we conclude by induction that $b( x,ny) = n b( x,y) $.\\
+	Thus $b( x,qy) = q b( x,y) \forall q \in \mathbb{Q}$ and by continuity, they agree on $ \mathbb{R}$.\\
+	Pick $v,w \in X$ and $y = \frac{v+w}{2}, y' = \frac{v-w}{2}$ in the above equality, then
+	\[ 
+	b( x,v) + b( x,w) = 2 b( x, \frac{v+w}{2}) 
+	\]
+	and we conclude from linearity.\\
+	For complex numbers, consider $s( x,y) = b( x,y)  - i b( x,iy) $ 
+	
+\end{proof}
+\begin{defn}[Hilbert Space]
+$( H,b) $ is a Hilbert space if it is a complete pre-Hilbert space.
+\end{defn}
+\begin{lemma}
+Every pre-Hilbert space has a completion, unique up to bijective isometry.
+\end{lemma}
+If $M \subset X$, then $p:X\to M$ is a projection if $p^{2}=p$ and $p( X) = M$.\\
+$M$ is convex if $x,y \in M, t \in [ 0,1] $, then $tx + ( 1-t) y \in M$ 
+\begin{thm}
+	Let $H$ be a Hilbert space, $M \subset H$ non-empty, closed, convex, then $\exists $ a unique map $p:H \to M$ such that
+	\[ 
+		\N{x- px} = d( x,M) 
+	\]
+	
+\end{thm}
+\begin{proof}
+If $x\in M, px=x$.\\
+If $x\notin M, $ let $d= d( x,M) >0$.\\
+If $y,z\in M$ are minimizers, then
+\[ 
+	\frac{1}{2}\N{x-y}^{2} + \frac{1}{2}\N{x-z}^{2} = \N { x- \frac{y+z}{2}} + \N { \frac{y-z}{2}}^{2}
+\]
+If $\N { x-y} = \N { x-z} =d$, then $\frac{y+z}{2}\in M \implies \N { y-z} \leq 0 \implies y=z\implies $ uniqueness.\\
+To show existence, let $d= \inf_{y \in M} \N{x-y}$.\\
+There is a sequence $y: \mathbb{N}\to M$ such that $\N{x-y_k} \to d$.\\
+Thus
+\[ 
+	\frac{1}{2} \N{x-y_h}^{2} + \frac{1}{2}\N{x-y_k}^{2} = \N { x - \frac{y_h+ y_k}{2}} + \frac{1}{4}\N { y_h -y_k}^{2}
+\]
+The LHS goes to $d^{2}$ and $\N {  x-\frac{y_h + y_k}{2}} \geq d^{2}$.
+\end{proof}
+\begin{lemma}
+Let everything as above,, then $p:H\to M$ is an orthogonal projection $\iff \forall y \in M \forall x \in H, \re( x-Px,y-px) \leq 0$ 
+\end{lemma}
+\begin{proof}
+Let $f( t) = \N{ x- ( ty + ( 1-t) px) }^{2} $, thus $f( 0) = \min f( [ 0,1] ) $, thus $f'( 0) \geq 0$ 
+\[ 
+f( t) = \N { x-Px}^{2} - t \left[ ( x-px,y-px) + ( y- px,x-px) \right] + t^{2} \N { y- px}^{2}
+\]
+Thus $f'( 0) = - Re( x-px,y -px) \geq 0$ 
+\end{proof}
+\begin{crly}
+If $M \subset H$ is a closed linear subspace, then 
+\[ 
+M^{\perp}= \left\{ x\in H: ( x,m) =0 \forall m \in M \right\} 
+\]
+is a closed linear subspace, $M \cap M^{\perp}= \left\{ 0 \right\} , H = M \oplus M^{\perp}$ and $p:H \to M$ satisfies $x-px \in M^{\perp}$ and $p$ is linear
+\end{crly}
+\begin{defn}[Orthonormal systemes]
+	Let $( X,b) $ be a pre-Hilbert space, the family $( e_i)_{i \in I} $ of vectors in $X$ are orthonormal if $b( e_i,e_j) = \delta_{ij } $ 
+\end{defn}
+\begin{lemma}
+If the $e_1, \ldots, e_n$ are orthonormal, then $\forall  x $ 
+\[ 
+\sum_i | ( e_i,x) |^{2} \leq  \N { x}^{2}
+\]
+and if $e_1,\ldots, $ are orthonormal, then $\forall x $ 
+\[ 
+\sum_i |( e_i,x) |^{2} \leq  \N { x} ^{2}
+\]
+
+\end{lemma}
+\begin{proof}
+Let $y = \sum_i \lambda_i e_i \in span e_i$ 
+\[ 
+g( \lambda) \N { x- \sum_i \lambda_i e_i}^{2} = \N { x}^{2} - \sum_i  ( \overline{\lambda_i}( e_i,x)+ \lambda_i ( x,e_i) ) + \sum_i \lambda_i ^{2}
+\]
+Setting $\lambda_i = ( e_i,x) $, we get 
+\[ 
+g( \lambda) = \N { x} ^{2} - \sum |\lambda_i|^{2}
+\]
+
+\end{proof}
+
+
+
+
+
+
+	
+
+
+
+
+\end{document}	

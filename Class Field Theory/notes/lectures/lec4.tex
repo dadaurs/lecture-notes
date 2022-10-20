@@ -1,0 +1,138 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Thu 20 Oct}{Local fields}
+\begin{lemma}[Hensel]
+Let $( F,|\cdot|) $ be a non-archimedean complete valued field.\\
+Let $f\in \O[x]$ and assume $f= \overline{g}\overline{h} \mod p$ with $\overline{g}$ and $\overline{h}$ coprime over $ \faktor{\O}{p}[x]$, thenthis factorization lifts to $\O$ and $\exists g,h \in \O[x]$ such that $g \mod p = \overline{g}$, $h \mod p = \overline{h}$ $\deg g= \deg \overline{g}$  
+\end{lemma}
+\begin{proof}
+Let $d= \deg f,m = \deg \overline{g}$.\\
+Define $g_0 $ to be a lift of $ \overline{g}$ to $\O[x]$ and $h_0$ a lift of $h$ with same degree.\\
+Look at $f- g_0 h_0$, take $a,b \in \O[x]$ such that $ag-+bh_0 \equiv 1 \mod p \O[x]$ and look at $ag_0+bh_0-1$.\\
+Define $\omega$ to be any element of $p$ that divides $f-g_0h_0, ag_0+bh_0-1$.\\
+We will construct $( g_n, h_n) $ such that $\deg g_n = m$, $\omega^{n}| g_n - g_{n-1} $ and $\omega^{n}| h_{n} - h_{n-1} $ such that $ \omega^{n+1}| f- g_n h_n$.\\
+Suppose we've constructed $g_{n-1} , h_{n-1} $ we want to find $g_n = g_{n-1} + \omega^{n} p_m$ and $h_n = h_{n-1} + \omega^{n} q_m$. We'll be able to take $\deg p_m <m$.\\
+Write 
+\begin{align*}
+	f- g_n h_n&\equiv ( f- g_{n-1} h_{n-1} ) - \omega^{n}( p_n h_{n-1} + q_n g_{n-1} )\mod \omega^{n+1}  \\
+		  & \equiv \omega^{n}( \frac{f- g_{n-1h_{n-1} } }{\omega^{n}}- p_n h_{n-1} - q_n g_{n-1} )
+\end{align*}
+We work with $\omega$ now, so we want 
+\[ 
+p_n h_0 + q_m g_0 \equiv \underbrace{\frac{f - g_{n-1} h_{n-1} }{\omega^{n}}}_{=f_n}\mod \omega
+\]
+We have $bh_0 + ag_0 \equiv 1 \mod \omega$ and thus
+\[ 
+	( bf_n) h_0 + ( af_n) g_0 \equiv f_n \mod \omega
+\]
+Write $bf_n = qg_0 +p_n$ with $\deg p_n< m$.\\
+Letting $q_n \coloneqq  af_n + p h_0$, all the conditions hold and we get our $g_n,h_n$.\\
+The factors of the respective sequences converge in $\O[x]$ because the coefficieents are Cauchy and $\O$ is complete.
+
+\end{proof}
+\begin{exemple}
+\begin{enumerate}
+	\item If $f\in \O[x]$ and $\overline{a} \in \faktor{\O}{p}$ such that $f( a) \equiv 0 \mod p, f'( a) \in \O^{\times}$ then $\exists a \in 0, a \equiv \overline{a}\mod p$ such that $f( a) =0$ 
+	\item $f\in K[x]$ such that $f $ is irreducible $f( 0) \in \O $ then $f\in \O[x]$ 
+\end{enumerate}
+
+\end{exemple}
+\begin{thm}[Classification of non-archimedean local fields]
+	The non-archimedean local fields are the finite extensions of $ \mathbb{Q}_p$ and $ \mathbb{F}_p ( ( t) ) $ 
+\end{thm}
+\begin{thm}
+	Let $( F,|\cdot|) $ be complete valued, then $|\cdot|$ has a unique extension to $ \overline{F}$.\\
+	If $E /F < \infty $, then $|\cdot| $ is given by 
+	\[ 
+		|\alpha|_E = | N_{E /F} ( \alpha) |_F^{\frac{1}{[E:F]}}
+	\]
+	and $E$ is again complete for $|\cdot|$ .
+	
+\end{thm}
+\begin{proof}
+We can assume that $F$ is non-archimedean.\\
+It suffices to show $\exists !$ extension to $E$ (a finite extension).\\
+\begin{enumerate}
+\item Does $|N_{E/F} |^{\frac{1}{ [ E:F] }}$ define an absolute value?\\
+	Multiplicativity and $\alpha=0 \iff |\alpha|=0$ is clear.\\
+	We want to show that $|\alpha| \leq 1 \implies |\alpha+1| \leq 1$.\\
+	Fix such an $\alpha$ and look at the minimal polynomial of $\alpha$, say $f$.\\
+	Then $( f( 0) )^{\frac{1}{[E:F]}}= N_{E|F} ( \alpha) $, thus $|f( 0) |_F \leq 1, f( 0) \in \O_F\implies f \in \O_F[x]$ thus $f\in \O_F[x]$.\\
+	Hence $f( x-1) \in \O_F[x]$ which is just the minimal polynomial of $\alpha+1$, thus $N( \alpha+1) \in \O_F\implies |\alpha+1|_E \leq 1$ 
+\item We show uniqueness.\\
+	Suppose $|\cdot|'$ is another absolute value on $E$ extending $F$.\\
+	We'll show that $\O_E \coloneqq  \left\{ \alpha \in E: N_{E|F} ( \alpha) \in \O_p \right\} \subset \O_E'$.\\
+	Suppose not, take $\alpha\in \O_E \setminus \O_{E}'$, thus $\alpha ^{-1}\in p'_E$.\\
+	Let $f$ be the minimal polynomial of $\alpha$, $f= x^{d}+ a_{d-1} x^{d-1}+ \ldots$ , $f( \alpha) =0\implies 1 + a_{d-1} \alpha ^{-1}+ \ldots a_0 \alpha ^{-d}=0\in 1+ \O_F p_E' = 1 + p_{E} ' \not\ni 0$.\\
+	Thus $\O_E \subset \O_{E}'$.\\
+	Thus $|\alpha|_E \leq 1 \implies |\alpha|_E' \leq 1$.\\
+	Hence, if both norms were inequivalent, there would exist $\alpha\in E$ with $|\alpha| \leq \frac{1}{100}, |\alpha|' \geq 100$, which is impossible.
+\end{enumerate}
+It now suffices to show that $E$ is a complete valued field.\\
+Fact: If $F$ is a complete valued field, $V $ is a finite dimensional vector space over $F$, then any two norms on $V$ are equivalent.\\
+We use this with $|\cdot|_E$ and a norm coming from a linear isomorphism with $F^{[E:F]}$ 	
+\end{proof}
+We now prove the classification of local fields
+\begin{proof}
+Fact: On $ \mathbb{Q}$, the non-archimedean absolute values are $|\cdot|_p$ (up to equivalence)\\
+Take $F$ a non-archimedean local field and suppose $ \mathbb{Q}\subset F$.\\
+We know $|\cdot|_{\mathbb{Q}} = |\cdot|_p$ for some $p$ and thus $ \mathbb{Q}_p \subset F$.\\
+Local compactness implies that $F / \mathbb{Q}_p < \infty $.\\
+Assume $char F = p >0$, thus $ \mathbb{F}_p \subset F$, take $t\in F$ with $|t| <1$.\\
+We claim that $t$ is transcendental, if not $\exists N $ such that $t^{N}=1\implies |t|=1$.\\
+Thus $ \mathbb{F}_p ( ( t) ) \subset F \implies F / \mathbb{F}_p( ( t) )  < \infty $.
+\end{proof}
+\begin{thm}
+	Let $F$ be a non-archimedean local field and $\omega\in F^{\times}$ a uniformizer for $ \O$.\\
+	Then $\O^{\times}\times \omega^{ \mathbb{Z}} \to F^{\times}$ is an isomorphism.\\
+	Consider $1 \to \O^{\times} \to F^{\times}\to \mathbb{Z}\to 0$, this ses splits with $s: \mathbb{Z}\to F^{\times}$ sending $n$ to $\omega^{n}$.
+\end{thm}
+\begin{thm}
+	Let $F$ be a non-archimedean local field, then $\O^{\times} \subset F^{\times}$ is compact open and $F^{\times}$ is locally compact.
+\end{thm}
+\begin{proof}
+Look at $F^{\times}\to \left\{ ( a,b) : ab =1 \right\} \subset F^{2}$ sending $a\to ( a, \frac{1}{a}) $.\\
+We get everything just by topological considerations.
+\end{proof}
+Recall $U^{n}= 0$ if $n=0$ and $1+ p^{n}$ if $n \geq 1$.\\
+Then $\O^{\times}= \bigcup_{a \mod p\neq 0} a+ p$.\\
+All these $p$ are open compact and thus $\O^{\times}$ is too.\\
+Take $\alpha\in F^{\times}$, then $\alpha \O^{\times}$ is a compact open neighborhood of $\alpha$.
+\begin{lemma}
+Let $F$ be a non-archimedean local field.\\
+The maps $x\to x^{m}$ with $m$ an integers sends $U^{m}\to U^{n+ v( m) }$ and induces an isomorphism for $m$ large enough ( depending on $m$) 
+\end{lemma}
+\begin{proof}
+Take $a\in U^{n}, a= 1 + \omega^{n} b$, then $a^{m}= 1+ m \omega^{n}b + \omega^{2n}c$ for some $c\in \O$.\\
+\begin{align*}
+= 1 + \omega^{v( m)} \omega^{n}b + \omega^{2n}c \in 1+ \omega^{v( m) +m}\O
+\end{align*}
+for $n \geq v( M) $.\\
+We show injectivity.\\
+There exist finitely many $n$-th roots of unity in $F$.\\
+For $n >>1$, $U^{n}\ni $ an $m$-th root of unity $\neq 1$ \\
+To show surjectivity, take $a \in \O^{\times}$, we want to find $x\in \O$ such that 
+\[ 
+	( 1+ x \omega^{n})^{m} = 1+ a \omega^{n + v( m) }
+\]
+Thus $1+ b \omega^{v( m)}x \omega^{n}+ \omega^{2n} f( x) = 1 + a \omega^{n + v( m) }$ where $m= b \omega^{v( m) }$.\\
+$x+ \omega ^{n -v( m) }f( x) =a$ when $n > v( m) $.\\
+Modulo $\omega$, this becomes $x =a$.\\
+By Hensel, this lifts to a solution $x\in \O$ because $( x-a) ' =1 \neq 0$.
+\end{proof}
+\begin{crly}
+	Let $F$ be non-archimedean local, then $( F^{\times})^{m} \subset F^{\times}$ is an open subgroup.
+	\[ 
+	\bigcap_{m}  ( F^{\times})^{m}= \left\{ 1 \right\} 
+	\]
+\end{crly}
+\begin{proof}
+	It suffices to show $1\in(  F^{\times} )^{m}$ has an open neighborhood, indeed, take $U^{m}$ a large enough $n.$\\
+	For the second part, take $a\in \bigcap_m ( F^{\times})^{m}$, $v( a) \in m \mathbb{Z}\forall m\implies v( a) =0$ and we know that $a\in U^{n}$ for all $n$.\\
+	Thus $a-1\in \bigcap_i p^{i} =0$ 
+\end{proof}
+
+
+
+
+\end{document}	

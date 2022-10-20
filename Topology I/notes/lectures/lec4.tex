@@ -1,0 +1,102 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Wed 19 Oct}{Homology Theories}
+\begin{lemma}
+Homology defines a functor $Ch\to gr\ab$ 
+\end{lemma}
+\begin{proof}[Sketch]
+	Let $f:( C_\bullet, d_\bullet) \to ( C'_{\bullet} , d'_{\bullet} ) $, then $H_n( f) = f_\ast$ sending $x\in \ker( d_n) / \im ( d_{n+1} )  $ to $[f( x) ]$ 
+\end{proof}
+\begin{exemple}
+Let's compute the singular homology of the point.\\
+Clearly $S_\ast = \mathbb{Z}$ and the maps induced by restriction are the identity.\\
+Hence, the boundary maps will be
+\[ 
+	\ldots \xto{\id} \mathbb{Z}\xto{0} \xto\id \mathbb{Z} \xto{0} \mathbb{Z}
+\]
+Thus $\forall n >0$, we get $H_n ( pt) = 0$ and $H_0 ( pt) = \mathbb{Z}$.
+\end{exemple}
+Now we want to define homology for pairs.\\
+Let $A \subset X$ be a pair of spaces.\\
+We want to associate a singular chain complex $( S_\bullet( X,A) , \delta_{\bullet} ) $.\\
+More generally, any continuous map $f:X\to Y$ induces $Sing_n( X) \to Sing_n( Y) $ by postcomposition.\\
+Thus we get a functor $Sing_n( -) : \top \to \Set$.\\
+This in turn defines a chain map by extending $S_n f$ linearly to $S_n X$.\\
+This defines a chain map $C_n X \to C_n Y$ since
+\[ 
+\sigma\in S_n X \to f\circ \sigma \to \sum_{i=0}^{ n}( -1)^{i}( f\circ \sigma) \circ d_i
+\]
+and
+
+\[ 
+\sigma\in S_n X \to \sum_{i=0}^{ n}( -1)^{i}\sigma\circ d^{i}\to \sum_{i=0}^{ n} ( -1)^{i}( f\circ\sigma\circ d_i) 
+\]
+coincide.\\
+For an inclusion of subspaces $A \subset X$, we get an induced map $S_\bullet( i) : ( S_\bullet A,\delta_\bullet) \to ( S_\bullet X, \delta_\bullet)$ which is levelwise injective.\\
+\begin{defn}[Singular chain complex of a pair]
+	The singular chain complex of a pair is defined to be the quotient chain complex $S_\bullet X /S_\bullet A$.\\
+	Then the singular homology of the pair $( X,A) $ is the homology of this chain complex.
+\end{defn}
+For any pair $( X,A) $ there is a short exact sequence of chain complexes
+\[ 
+0 \to ( S_\bullet A,\delta_\bullet) \to ( S_\bullet X,\delta_\bullet) \to ( S_\bullet( X,A) ,\delta_\bullet) \to 0
+\]
+(ie. levelwise short exact)\\
+What about coefficient groups $\neq \mathbb{Z}$.\\
+\begin{defn}
+	Given a pair of spaces $( X,A) $ and $G$ an abelian group $G$, define the singular chain complex of $( X,A) $ with coefficient in $G$ as follows
+	\[ 
+	S_n( X,A; G) = S_n( X,A) \otimes_{\mathbb{Z}} G
+	\]
+	
+with the natural induced differentials.
+The singular homology of $( X,A) $ with coefficients in $G$ is the homology of this new chain complex.
+\end{defn}
+\begin{propo}
+For any short exact sequence of chain complexes $0 \to C_\bullet \to D_\bullet \to E_\bullet \to 0$, we get a long exact sequence of homology groups
+\[ 
+\ldots \to H_n C_\bullet \to H_n D_\bullet \to H_n E_\bullet \to H_{n-1} C_\bullet \to  \ldots
+\]
+which is natural in short exact sequences of chain complexesj;w
+\end{propo}
+\begin{proof}
+The definition of the map $\del_n:H_nE \to H_{n-1} C$ is a standard diagram chase.\\
+We then prove that:
+\begin{enumerate}
+\item $\gamma$ is in the kernel of $d_{n-1} ^{C}:C_{n-1} \to C_{n-2} $ 
+	\[ 
+	f_{n-2} d_{n-1}^{C}\gamma = d_{n-1}^{D}f_{n-1} \gamma =0
+	\]
+	as $ f_{n-2}  $ is injective, $d_{n-1} ^{C}\gamma=0$ 
+\item The choice of $\beta$ is inddependent on the choice of $\gamma$.\\
+	Suppose $\beta'$ is also such that $g_n\beta= g_n \beta'$.\\
+	We want to show that $\gamma-\gamma'$ is in the image of $d_n^{C}$.\\
+	As $g_n( \beta-\beta') =0 \exists \tilde\gamma: f_n \tilde\gamma = \beta-\beta'$ \\
+	$f_{n-1} d_n^{C}\tilde\gamma=d_n^{D}f_n\tilde\gamma = d_n^{D}\beta - d_n^{D}\beta'= f_{n-1} ( \gamma-\gamma')$.\\
+	Thus $d_n^{D}\tilde\gamma= \gamma-\gamma'$ 
+\item Independence of the choice of representative $\alpha$.\\
+	We want to show that if $\alpha= d_n^{E}\tilde\alpha$, then $\gamma=0$.\\
+	This again is a standard diagram chase.
+	So we conclude that $\del_n:H_nE\to H_{n-1} C$ is a well defined map, it is easy to check that it is linear.\\
+	It remains to show that the long sequence above is exact, which is part of the homework.
+\end{enumerate}
+\end{proof}
+We want to show that the connecting homomorphisms are natural, namely, for thwo short exact sequences
+\[ 
+0 \to C_\bullet \to D_\bullet \to E_\bullet \to 0
+\]
+\[ 
+0 \to C'_\bullet \to D'_\bullet \to E'_\bullet \to 0
+\]
+with $\phi:C_\bullet \to C_\bullet', \psi,\eta$ etc which make the diagram commute, we get, for every $n$ a commutative diagram 
+\[ 
+	H_nE\xto{\del_n} H_{n-1} C_\bullet \to H_{n-1} C_\bullet' = H_n E \xto{  H_n\eta } H_nE_\bullet' \xto{\del'_{n-1} } H_n C'_\bullet
+\]
+
+
+
+
+
+
+
+\end{document}	
