@@ -1,0 +1,108 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Fri 21 Oct}{Hilbert Spaces}
+\begin{lemma}
+Let $H$  be a hilber space, $e: \mathbb{N}\to H$ an orthonormal basis and $\lambda: \mathbb{N}\to K$, then
+\begin{enumerate}
+\item $ \sum_{i=0}^{ \infty } \lambda_i e_i \iff \sum_i |\lambda_i|^{2} < \infty $ 
+\item If $ \sum_{i=0}^{ \infty }\lambda_i e_i$ converges, then it does not depend on the order
+\item $\forall x , \sum_{i\in \mathbb{N}}^{ }( e_i,x) e_i$ converges.\\
+	Let $M \coloneqq \overline{span( \left\{ e_i \right\} ) }$, then the projection map $p:H \to M$ may be written $Px= \sum_{}^{ } ( e_i,x) e_i$ 
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+\begin{enumerate}
+\item for all $j,k$ big enough, $ | \sum_{i=j+1}^{ k} \lambda_i e_i|^{2} \leq \sum_{i=j+1}^{ k}|\lambda_i|^{2}$ 
+\end{enumerate}
+\end{proof}
+\subsection{Uncountable Orthonormal Systems}
+If $A$ is a set, $v: A\to H,w \in H$.\\
+What does $ \sum_{\alpha\in A}^{ }v_\alpha=w$ mean?\\
+$ \sum_{\alpha\in A}^{ } v_\alpha = w $ if $\exists \beta: \mathbb{N}\to A$ such that $ \sum_{i}^{ }v_{\beta_i} = w $ and $v=0 $ on $A\setminus \beta( \mathbb{N}) $ for any ordering of the sum is one possible definition.\\
+$\forall \epsilon>0$ $\exists T \subset A, \# T < \infty $ such that $\forall S \subset A, \# S < \infty $ such that $T \subset S$ one has $| \sum_{\alpha\in S}^{ }v_\alpha -w| < \epsilon$ 
+\begin{propo}
+Let $H$ be a hilbert space, $e: A\to H$ an orthonormal system.
+\begin{enumerate}
+\item $\forall x\in H$ , the set $A_x = \left\{ \alpha: ( e_\alpha,x) \neq 0 \right\} $ is finite or countable
+\item $\forall x \in H$, $ \sum_{\alpha\in A}^{ } ( e_\alpha,x) e_\alpha$ is well defined
+\end{enumerate}
+\end{propo}
+\begin{defn}
+	Let $H$ be a Hilbert space and $e: A\to H$ an orthonormal system.\\
+	It is a Orthonormal basis if $H = \overline{ span( \left\{ e_\alpha \right\} ) }$
+\end{defn}
+\begin{thm}
+	If $e: A\to H$ is an orthonormal system, the following are equivalent
+	\begin{enumerate}
+	\item $e_\alpha$ is a basis
+	\item $\forall x, x= \sum_{\alpha\in A}^{ }( e_\alpha,x) e_\alpha$ 
+	\item $\forall x,y, ( x,y) = \sum_{\alpha\in A}^{ } ( x,e_\alpha) ( e_\alpha,y) $ 
+	\item $\N { x}^{2} = \sum_{}^{ } |( e_\alpha,x) |^{2}$ 
+	\item $( x,e_\alpha) \forall \alpha \implies x=0$ 
+	\item $A$ is maximal: There is no $B$ with $A \subset B, A \neq B$ and $e: B \to H$ such that the restriction to $A$ is e.
+	\end{enumerate}
+\end{thm}
+\begin{thm}
+	If $H$ is an infinite dimensional Hilbert space, the following are equivalent
+	\begin{enumerate}
+	\item $H$ is separable
+	\item $H$ has a countable orthonormal basis
+	\item $\exists \phi: \ell^{2}( \mathbb{N},K)\to H $ which is a linear isomorphism
+	\end{enumerate}
+\end{thm}
+\subsection{Projections in Banach spaces}
+Is there a Banach space $X$ such that $\exists x,y,z \in X, y  \neq z$ $|x-y| = |x-z|$ and $x- \frac{y+z}{2}| \geq |x-y|$?\\
+Strict inequality is impossible, but we can get equality
+\[ 
+x( t) =0 , y( t) = 
+\begin{cases}
+1, t \leq \frac{1}{2}\\
+\frac{3}{2} -t , t \in ( \frac{1}{2},1] 
+\end{cases}
+\text{ and } z( t) =1
+\]
+\begin{defn}
+	Let $( X, \N{\cdot}) $ be a normed vector space.
+	\begin{enumerate}
+	\item $X$ is strictly convex if 
+		\[ 
+			\N{x} = \N{y} =1 , x\neq y \implies \N{\frac{x+y}{2}} < 1
+		\]
+		
+	\item $X$ is uniformly convex if $\forall \epsilon>0, \exists \delta_{\epsilon} >0$ such that 
+		\[ 
+			\N{x} = \N{y} =1, \N { \frac{x+y}{2}> 1-\delta} 	\implies \N{x-y} < \epsilon
+		\]
+		
+	\end{enumerate}
+\end{defn}
+\begin{thm}
+	Let $X$ be a uniformly convex Banach space, $M \subset X$ a non-empty, convex, closed subset.\\
+	Then $\exists $ a unique map $p:X\to M$ such that $\N{x-Px} = dist( x,M) $.
+\end{thm}
+\begin{proof}
+If $x\in M, px=x$.\\
+If $x\notin M, d \coloneqq dist( x,M) >0$.\\
+For uniqueness, let $y,z\in M, |x-y| = |x-z| =d$, then $ \frac{y+z}{2}\in M$.\\
+Let $v= \frac{y-x}{\N{y-x}}, w = \frac{z-x}{\N { z-x} } $.\\
+If $y \neq z$, then $v\neq w\implies \N {  \frac{v+w}{2}} <1$.\\
+\[ 
+\frac{v+w}{2}= \frac{y-x+z -x}{2d}= \frac{ \frac{y+z}{2}-x}{d}\implies \N {\frac{y+z}{2} -x} < d
+\]
+a contradiction.\\
+To show existence, let $y_i \in M$ be a sequence such that $d_i = \N { x-y_i} \to d$.\\
+\[ 
+\frac{y_i+ y_k}{2}\in M \implies \N { x- \frac{y_i +y_i}{2}} \geq d \forall i,k 
+\]
+by convexity.\\
+Now let $v= \frac{y_i-x}{d}, w = \frac{y_k -x}{d_2}$, then
+\[ 
+\frac{v+w}{2} = \frac{y_i -x}{2d }+ \frac{y_k -x}{2 d_k}= \frac{y_i -x}{2d}+ \frac{y_k -x}{2d} + ( y_i -x) \left( \frac{1}{2d_i} - \frac{1}{2d}+ ( y_k -x) ( \frac{1}{2d_k}- \frac{1}{2d}) \right) 
+\]
+Thus $\lim_{i ,k \to \infty } \N {  \frac{v_i+w_k}{2}} \geq 1$.\\
+We conclude by uniform convexity.
+\end{proof}
+
+
+
+\end{document}	

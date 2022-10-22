@@ -1,0 +1,147 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Fri 21 Oct}{locally ringed spaces, (affine) Schemes (!)}
+\begin{crly}
+A sequence of sheaves is exact if and only if it is exact on all stalks.
+\end{crly}
+\begin{proof}
+If $\ker( \phi_{2,x} ) = \im ( \phi_{1,x} ) \forall x \in X$, thus $( \phi_{2,x} \circ\phi_{1,x} ) = ( \phi_2\circ\phi_1)_{x} $.\\
+Thus $\phi_2\circ\phi_1=0$ because the hom sheaf is a sheaf.\\
+Thus $\phi_1$ factors as $\F_1\to \im \phi_1\to \ker\phi_2\to \F_2$ as $\psi_x$ is an isomorphism, $\psi$ is an isomorphism.
+\end{proof}
+\begin{crly}
+Let $\phi:\F\to \G$ be a morphism of sheaves, then $\im \phi = \ker ( \G to \coker \phi) $ 
+\end{crly}
+\begin{crly}
+$Sh( X) $ is an abelian category.
+\end{crly}
+\subsection{Direct and inverse image, ringed spaces}
+\begin{defn}
+	Let $f:X\to Y$ be a continuous map.\\
+We define the direct image of $\F$ by $f$ on $Y$ defined by
+\[ 
+f_{\ast} \F( U) = \F( f^{-1}( U) ) 
+\]
+
+\end{defn}
+
+We can check that $f_{\ast} \F$ is a sheaf with restriction maps induced by $\F$.\\
+If $\phi:\F\to \G$ is a morphism of sheaves on $X$, then the $( f_{\ast}\phi )( X) =\phi( f^{-1}( V) ) \F( f^{-1}( V) ) \to \G( f^{-1}V)  $ define a morphism of sheaves.\\
+Thus we get a functor $f_{\ast} : Sh( X) \to Sh( Y) $.\\
+\begin{defn}[inverse image]
+	Let $f:X\to Y$ be a continuous map and let $\G$ be a sheaf on $Y$.\\
+	The inverse image of $\G$ along $f$ is the sheafification of the presheaf 
+	\[ 
+	f^{-1,pre}( \G) 
+	\]
+	defined by 
+	\[ 
+	f^{-1,pre}( \G) ( U) = \colim_{f( U) \subset V} \G( V) 
+	\]
+	
+\end{defn}
+We can again check that the if $\phi:\F\to \G$ is a morphism of sheaves on $Y$, we define $f^{-1}\phi :\colim \F( V) \to \colim \G( V) $ using the maps induced by $\phi$.\\
+Thus we get a functor $Sh( Y) \to Sh( X) $.\\
+\begin{lemma}
+Let $f:X\to Y$ be a continuous map, $\F$ a sheaf on $X$ and $\G$ a sheaf on $Y$.\\
+\begin{enumerate}
+\item $\forall y \in Y$ there is a natural isomorphism
+	\[ 
+		( f_\ast\F)_y \simeq \colim_{y \in V\subset Y} \F( f^{-1}( V) ) 
+	\]
+
+In particular $forall x \in X$ there is a natural map $( f_{\ast} \F)_{f( x) \to \F_x} $
+\item $\forall x \in X$ there is a natural isomorphism $( f^{-1}\G)_x \simeq \G_{f( x) } $ 
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+The isomorphisms are immediate from the definition.\\
+The morphism $( f_\ast\F) _{f( x) } \to \F_x$ is given by
+\[ 
+	( f_\ast \F)_{f( x) } = \colim \F( f^{-1}( V) ) = \colim_{x\in f^{-1 }( V) } \F( f^{-1}( V) ) \to \colim_{x\in U}  \F(  U) = \F_x
+\]
+
+\end{proof}
+\begin{propo}
+If $f:X\to Y$ is a continuous map, then $f_\ast: Sh( X) \to Sh( Y) $ is right-adjoint to $f^{-1}:Sh( Y) \to Sh( X) $ 
+\end{propo}
+\begin{crly}
+$f^{-1}: Sh( Y) \to Sh( X) $ is exact
+\end{crly}
+\begin{proof}
+Let $0 \to \G_1 \to \G_2 \to \G_3 \to 0$ be exact in $Sh( Y) $.\\
+Thus $\forall y \in Y, 0 \to \G_{1,y} \to \G_{2,y} \to \G_{3,y} \to 0$ is exact.\\
+In particular it is exact at $f( x) \forall x \in X$ and thus the associated inverse image sequence is exact.
+\end{proof}
+\begin{crly}
+$f_{\ast} : Sh(X) \to Sh( Y) $ is left-exact.
+\end{crly}
+\begin{proof}
+Let $0 \to \F_1 \to \F_2 \to \F_3 \to 0$ be exact in $Sh( X) $.\\
+Recall that the section functor is left-exact, thus $0 \to \F_1( U) \to \F_2( U) \to \F_3( U) $ is exact $\forall U \subset X$.\\
+Thus $0 \to ( f_{\ast} \F_1)_y  \to ( f_{\ast} \F_2)_y \to ( f_{\ast} \F_3)_y $ is exact $\forall y \in Y$ and thus $0 \to f_\ast\F_1\to f_\ast \F_2 \to f_\ast \F_3$ is exact.
+\end{proof}
+\begin{exemple}
+$f_\ast$ is usually not right-exact.\\
+Eg, if $f:X\to \left\{ \ast \right\} $ and $\F$ is a sheaf on $X$, then $( f_\ast \F) ( \emptyset) =0$ and $( f_\ast \F) ( \left\{ \ast \right\} ) = \F( X) $ and taking sections is not exact.
+\end{exemple}
+\begin{defn}[Ringed space]
+	A ringed space is a pair $( X, \O_X) $ where $X$ is a topological space and $\O_X$ is a sheaf of rings on $X$.\\
+	A morphism of ringed spaces $( X,\O_X) \to ( Y,\O_Y) $ is a pair $( f,f^{\sharp}) $ where $f:X\to Y$ is a continous map and $f^{\sharp}$ is a morphism $\O_Y \to f_\ast \O_X$.
+\end{defn}
+\begin{rmq}
+Ringed spaces form a category, if $( f,f^{\sharp}) : ( X,\O_X) \to ( Y,\O_Y) , ( g,g^{\sharp}) :( Y,\O_Y) \to ( Z,\O_Z) $ define their composition to be $( g\circ f , g_{\ast} ( f^{\sharp}\circ g^{\sharp}) ) $
+\end{rmq}
+\begin{exemple}
+\begin{enumerate}
+\item For every ring $A$, $( \spec A, \O_{\spec A} ) $ is a ringed space.
+\item For any field $K$ and any topological space $X$, define a sheaf $Fun_{X,K} ( U) = \left\{ s: U \to K \right\} $.\\
+	There is a functor $\top \to ( \text{ Ringed spaces } ) $ sending $X\mapsto ( X, Fun_{X,K} ) $ where for $f:X\to Y$ $f^{\sharp}$ is the pullback (precomposition).
+\item  $( X,C^{0}_X) $ is a ringed space
+\end{enumerate}
+\end{exemple}
+Observe that for many of these examples of ringed spaces, the stalks $\O_{X,x} $ are local rings.
+\begin{defn}[Morphism of local rings]
+	A morphism of local rings $\phi:A\to B$ with maximal ideals $m_A$ and $m_B$ is called local if $m_A= \phi^{-1}( m_B) $ 
+\end{defn}
+\begin{exemple}
+\begin{enumerate}
+\item For all ring homomorphism $\phi: A\to B$ and all $q\in \spec B$ the induced map $A_{\phi^{-1}( q) } \to B_q$ is local.
+\item A ring homomorphism $\phi: A\to K$ from a local ring $A$ to a field iff $m_A= \ker\phi$ 
+\end{enumerate}
+\end{exemple}
+\begin{defn}[Locally ringed space]
+	A locally ringed space is a ringed space $ ( X,\O_X) $ such that $\O_{X,x} $ is local $\forall x\in X$.\\
+	A morphism of locally ringed spaces $( f,f^{\sharp}) : ( X,\O_X) \to ( Y,\O_Y) $  is a morphism of ringed spaces such that 
+	\[ 
+		f_x^{\sharp}: \O_{Y,f( x) } \xto{f^{\sharp}_x} ( f_{\ast} \O_X)_{f( x) } \to \O_{X,x} 
+	\]
+	is local.
+\end{defn}
+\begin{rmq}
+The category of locally ringed spaces is a subcategory of the category of ringed spaces
+\end{rmq}
+\begin{defn}[Affine Scheme]
+	An affine scheme is a locally ringed space $( X,\O_X) $ such that $X= \spec A$ and $\O_X$ is the structure sheaf.
+\end{defn}
+\begin{defn}[Scheme]
+	A scheme is a locally ringed space $( X,\O_X) $ such that there exists an open cover $X= \bigcup_{i \in I} U_i$ such that each $( U_i, \O_X|_{U_i} ) $ is an affine scheme.\\
+	A morphism of schemes is a morphism of the underlying ringed spaces.
+\end{defn}
+\begin{exemple}
+\begin{enumerate}
+\item If $( X,\O_X) $ is a scheme and $U \subset X$ is open, then $( U,\O_X|_U) $ is not necessarily a scheme (even if $X$ is affine).
+\item If $( X,\O_X) $ is a scheme and $X= \left\{ \ast \right\} $, then $X$ is affine.\\
+Then $\spec A = \left\{ \ast \right\} $ iff every $a\in A$ is either a unit or nilpotent.
+\end{enumerate}
+
+\end{exemple}
+
+
+
+		
+
+
+
+
+\end{document}	
