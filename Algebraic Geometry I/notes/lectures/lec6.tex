@@ -1,0 +1,181 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{6}{Fri 28 Oct}{Topological properties}
+\begin{rmq}
+	$\spec R\times S= \spec R \coprod \spec S$ \underline{but} 
+	$\spec \prod_i R_i\not\simeq \coprod_i \spec R_i$ for infinite products
+\end{rmq}
+\begin{lemma}
+Affine schemes are quasi-compact and quasi-separated.
+\end{lemma}
+\begin{proof}
+Let $X= \spec A$ be an affine scheme.\\
+Quasi-compactness has already been proven.\\
+If $U \subset X$ is open and qc., then $U = \bigcup_{i \in I_U} D( a_i), a_i \in A $ and $I_U $ finite.\\
+For $U_1,U_2 \subset X$ qc. open, then
+\[ 
+U_1\cap U_2 = \bigcup_{i \in I_{U_1} , j \in I_{U_2} } D( a_1) \cap D( a_2) = \bigcup D( a_1a_2) 
+\]
+Check that a finite union of qc spaces is qc
+\end{proof}
+\begin{rmq}
+Let $X$ be a topological space, then $\forall $ subsets $V \subset X$ and $U \subset X$, then
+\[ 
+U\cap V \neq \emptyset \iff U \cap \overline{V} \neq \emptyset
+\]
+Thus $V$ is irreducible iff it's closure is.\\
+
+If $X$ is irreducible, then every non-empty open is dense.
+\end{rmq}
+\subsection{Scheme-Theoretic Properties}
+\begin{defn}[Open Subscheme]
+	An open subscheme of a scheme $( X,\O_X) $ is a pair $( U, \O_U) $ with $U$ open in $X$ and $\O_U \coloneqq  \O_X|_U$ 
+\end{defn}
+If $P$ is a property of rings, when do we say that $( X,\O_X) $ satisfies $P$?\\
+\begin{enumerate}
+	\item $\forall U \subset X, \O_X( U) $ satisfies $P$ (usually too strong) 
+	\item $\forall U \subset X$ open and affine, $\O_X( U) $ satisfies $P$ 
+	\item $\exists$ an open affine cover $U = \bigcup U_i$ such that each $\O_X( U_i) $ satisfies $P$ 
+	\item $\forall  x\in X\exists x \in U$ open affine such that $\O_X( U) $ satisfies $P$.
+	\item $\forall x \in X, \O_{X,x} $ satisfies $P$.
+\end{enumerate}
+Observe that $1 \implies 2\implies 3 \iff 4$.\\
+\begin{lemma}
+For $P=$"reduced ring", then all 5 are equivalent.
+\end{lemma}
+\begin{proof}
+From commutative algebra, we know that a ring $A$ is reduced $\iff A_p$ is reduced $\forall p \in \spec A$.\\
+This implies that $2\iff 3 \iff 4 \iff 5$.\\
+Let's show $2 \implies 1$.\\
+Let $U \subset X$ open and $s\in \O_X( U) $ such that $s^{n}=0$, then $s^{n}|_V = 0 \forall V \subset U$ affine.\\
+Thus, $s|_V=0 \forall V \subset U$ open affine and as $\O_X$ is a sheaf $s=0$.
+\end{proof}
+\begin{defn}[Reduced Scheme]
+	A scheme $( X,\O_X) $ is called reduced if $\O_X( U) $ is reduced $\forall U \subset X$ open.
+\end{defn}
+\begin{defn}
+	Let $P$ be a property of rings or of open affines $\spec A \hookrightarrow X$ of a scheme $X$ 
+	\begin{itemize}
+	\item $P$ is called affine-local if $\forall a_1,\ldots,a_n \in A$ such $( a_1,\ldots, a_n) = A$.\\
+		A satisfies $P$ every $A_{a_i} $ satisfies $P$ 
+	\item $P$ is called stalk-local if $A$ satisfies $P$ $\iff$ $A_p$ satisfies $P\forall p \in \spec A$.
+	\end{itemize}
+\end{defn}
+\begin{rmq}
+Being stalk-local is stronger than being affine local.\\
+This is becauses $A\to A_a$ induces $( A_a)_{p A_a} \simeq A_p \forall p \in D( a) $ 
+\end{rmq}
+\begin{exemple}
+\begin{enumerate}
+\item Reduced is stalk-local
+\item Normal
+\item regular
+\item Cohen-Macaulay
+\end{enumerate}
+\end{exemple}
+\begin{exemple}
+\begin{enumerate}
+\item Integrality is not affine-local (consider $A= k\times k$ ) 
+\item Factorial is not affine-local
+\item Noetherian is not stalk-local (consider $A= \prod_{i} \mathbb{F}_2$ ) 
+\end{enumerate}
+\end{exemple}
+\begin{lemma}
+Being Noetherian is affine-local.
+\end{lemma}
+\subsection*{Why do we care?}
+For affine-local properties, $2$ and $4$ of our list are equivalent.
+\begin{proof}
+If $A$ is noetherian, then any quotient and any localization is.\\
+Assume $( a_1,\ldots,a_n) = A$ and $A_{a_i} $ are Noetherian.\\
+Let $\phi_i:A\to A_{a_i} $ be the localization maps.\\
+Claim: $\forall$ ideals $I \subset A$ , $I = \cap \phi_i ^{-1}( \phi_i( I) A_{a_i} ) $.\\
+One inclusion is clear.\\
+Let $b \in \cap \phi_i^{-1}( \phi_i( I) A_{a_i} ) $, thus there exists $N >0$ and $b_i \in I$ such that $ b= \frac{b_i}{a_i ^{N}}\in A_{a_i} $.\\
+Thus there exists an $M>0$ such that $a_i^{M}( a_i^{N}b - b_i) = 0$ in $A$.\\
+Set $k= M+N$, note that $1= ( a_1^{k},\ldots,a_n^{k}) $.\\
+We can write $1= \sum_{i=1}^{ n} c_i a_i^{k}$ for some $c_i \in A$.\\
+Thus $b = \sum c_i a_i^{k}b= \sum c_i a_i^{M}b_i\in I$.\\
+Let $I_1 \subset \ldots \subset I_n \subset $ be an ascending chain of ideals in $A$, then we get an ascending chain of ideals $\phi_1( I_1) A_{a_i} \subset \ldots \subset \phi_i( I_n) A_{a_i} $.\\
+This becomes constant because $A_{a_i} $ is noetherian and $\exists N >0$ such that $\phi_i( I_k) A_{a_i} = \phi_i ( I_N) A_{a_i} \forall kggN$ 
+\end{proof}
+\begin{lemma}
+Let $P$ be an affine-local property of rings. Let $( X,\O_X) $ be a scheme, then the following are equivalent.
+\begin{enumerate}
+\item Every open affine $\spec A \hookrightarrow X$ satisfies $P$ 
+\item $\exists$ an open affine cover $X= \cup \spec A_i$ such that each $\spec A_i \hookrightarrow X$ satisfies $P$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+$1\implies 2$ is clear.\\
+$2\implies 1$.\\
+Let $\spec A \hookrightarrow  X$ open and affine.\\
+Write $\spec A = \cup \spec A_{a_i} $ with $a_i \in A$ such that $A_{a_i} \simeq ( A_i)_{b_i} $ for some $b_i \in A_i$.\\
+$\spec A_i \hookrightarrow X$ satisfies $P$, implies $( \spec(  A_i ) _{b_i}) \hookrightarrow X $ satisfies $P$ implies $\spec A_{a_i} \hookrightarrow X$ satisfies $P$ implies $\spec A \hookrightarrow X$ satisfies $P$
+\end{proof}
+\begin{lemma}
+Let $\spec A, \spec B \subset X$ be open affines, then for every point $x\in \spec A \cap \spec B$ there exist $a\in A$ and $b \in B$ such that $A_a \simeq B_b$ such that $x \in D( a) \subset \spec A$ and $x\in D( b) \subset \spec B$ and the isomorphism $\spec A_a \simeq \spec B_b$ commutes with the inclusions to $X$.\\
+\end{lemma}
+\begin{proof}
+$\spec A \cap \spec B \subset \spec A$ is open.\\
+Thus, there exists $a\in A$ with $x\in D( a) \subset \spec A \cap \spec B$.\\
+We can assume wlog that $\spec A \to X $ factors throguh $\spec B$.\\
+Write $\phi: B \to A$ for the induced map of rings.\\
+Since $\spec A \subset \spec B$ is open $\exists b \in B$ and $B\to A \to B_b$ is just localization of $B$ at $b$.\\
+THen $A\to B_b$ satisfies the universal property of $A\to A_{\phi( b) } $.\\
+So we get a commutative square $B\to A \to A_{\phi( b) } $ and $B\to B_b \to A_{\phi( b) } $ and we get an isomorphism $B_b \simeq A_{\phi( b) } $.
+\end{proof}
+\begin{defn}
+	Let $P$ be an affine-local property of rings.\\
+	A scheme $( X,\O_X) $ is called locally $P$ if $\O_X( U) $ satisfies $P\forall U \subset X$ open affine.
+\end{defn}
+\begin{defn}[Noetherian scheme]
+A scheme $( X,\O_X) $ is called Noetherian if it is locally Noetherian and qc.	
+\end{defn}
+\begin{defn}[Integral scheme]
+A scheme $( X,\O_X) $ is called integral if $\O_X( U) $ is an integral domain $\forall U \subset X$ open and non-empty.	
+\end{defn}
+\begin{lemma}
+For a scheme $( X,\O_X) $, the following are equivalent.
+\begin{enumerate}
+\item $X$ is integral
+\item $X$ is reduced and irreducible.
+\item $\forall U \subset X$ open affine, $\O_X( U) $ is integral.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+$1\implies 3$ is clear.\\
+$3\implies 2$.\\
+Reduced is clear.\\
+Let $U_1,U_2 \subset X$ open with $U_1 \cap U_2= \emptyset$.\\
+Wlog, the $U_i$ are affine.\\
+Then $\O_X( U_1 \cup U_2)= \O_X( U_1) \times \O_X( U_2)  $.\\
+Thus $\O_X( U_1) =0 $ or $\O_X( U_2)= 0 $ which implies $U_1$ or $U_2= \emptyset$.\\
+$2\implies 1$\\
+Let $U \subset X$ be open.\\
+Assume $\exists a,b \in \O_X( U) $ such that $ab = 0$.\\
+Let $U_a = \left\{ x\in U | a_x \notin m_x \right\} $ and similarly $U_b$.\\
+Note that $U_a \cap U_b = \emptyset$ since $\forall x \in U_a \cap U_b, a_x$ and $b_x$ are units.\\
+Thus $U_a= \emptyset $ or $U_b = \emptyset$.\\
+If $U_a = \emptyset \forall \spec A \subset U \forall p \in \spec A$ 
+\[ 
+	( a|_{\spec A} ) _{p} \in p A_p
+\]
+thus $a|_{\spec A} \in p \forall p \in \spec A$.\\
+Thus $a|_{\spec A} $ is nilpotent.\\
+But since $X$ is reduced, $a|_{\spec A} =0$.\\
+Covering $U$ by affines, $a= 0$ (as $A$ was arbitrary).
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

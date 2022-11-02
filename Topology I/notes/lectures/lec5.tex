@@ -1,0 +1,67 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Mon 24 Oct}{General results about singular homology}
+\begin{propo}
+Relative singular homology with coefficients in an abelian group $G$ defines a functor $H_\ast( -,-;G) :Top^{( 2) }\to gr\ab$ and connecting homomorphisms  $\del_n:H_n( X,A,G) \to H_{n-1} ( A;G) $ such that the LES for homology theories is satisfied.
+\end{propo}
+\begin{proof}
+$H_n( X,A;G) = H_n ( \faktor{S_n X}{S_n A}\otimes G, \overline{\delta_n}) $.\\
+Let $f:( X,A) \to ( Y,B) $ be a map of pairs of spaces.\\
+We have already shown that taking homology is functorial.\\
+We still need to show that $\top^{( 2) }\to Ch$ mapping $( X,A) \mapsto ( \faktor{S_\ast ( X) }{S_\ast ( A) },\delta_\ast) $ is a functor.\\
+Recall that $- \otimes G$ is a functor from chain complexes to chain complexes.\\
+We get a map of short exact sequences
+\begin{align*}
+0 \to S_\ast A \to S_\ast X \to \faktor{S_\ast X}{S_\ast A}\to 0\\
+\intertext{to}
+0 \to S_\ast B \to S_\ast Y \to \faktor{S_\ast Y}{S_\ast B}\to 0
+\end{align*}
+induced by $f$, where the map from $ \faktor{S_\ast X}{S_\ast A}\to \faktor{S_\ast Y}{S_\ast B}$ is induced by the universal property.\\
+This map of chain complexes is clearly functorial, by definition of the $f_\ast : S_\ast X\to S_\ast Y$.\\
+\end{proof}
+\begin{rmq}
+	In general, tensoring with $G$ does not preserve exact sequences \underline{but} it does preserve split short exact sequences.
+\end{rmq}
+Thus, we want to show that, for eveyr $n$, $0 \to S_n A \to S_n X\to \faktor{S_n X}{S_n A}\to 0$ is split short exact.\\
+Notice that $Sing_n ( X) = \left\{  \sigma: \Delta^{n} \to A \to X\right\}\coprod \left\{ \sigma: \Delta^{n}\to X| \im \sigma \not \subset A \right\}  $.\\
+Thus it is clear that the short exact sequence above is split.\\
+Hence, after tensoring with $G$, we still obtain a map of short exact sequences as above, thus we a map of  long exact sequences in homology of the form
+\begin{align*}
+\ldots \to H_n A \to H_n X \to H_n ( X,A) \xto{\del_n^{( X,A) }} \to H_{n-1} A \to H_{n-1} X\to \ldots\\
+\ldots \to H_n B \to H_n Y \to H_n ( Y,B) \xto{\del_n^{( Y,B) }}  H_{n-1} B \to H_{n-1} Y\to \ldots\\
+\end{align*}
+Where the vertical maps are all induced by $f_\ast$, (here $H_n$ is homology with coefficients in $G$) \\
+
+We now want to show that singular homology is homotopy invariant, namely, if $f,g: ( X,A) \to ( Y,B) $ are homotopic maps of pairs, ie. $\exists $ a continuous map $H:X\otimes [ 0,1] \to Y$ such that the restriction to $A\times [ 0,1] $ is contained in $B$ which restricts to $f$ (resp. $g$ ) on $X\times 0$ (resp. $X\times 1$ ).\\
+Then, we want to show that $H_n f = H_ng :H_n ( X,A;G) \to H_n ( Y,B;G) $ coincide.
+\begin{defn}[Homotopic chain maps]
+	Two chain maps $\phi,\psi: ( C_\bullet, d_\bullet) \to ( C_{\bullet}', d_\bullet') $ are chain homotopic if there exists a family of linear maps $h_n: C_n \to C_{n+1}'\forall n \geq 0 $ such that 
+	\[ 
+	\phi_n- \psi_n =d_{n-1} 'h_n + h_{n-1}  d'_n : C_n \to C_n'
+	\]
+	The family $h_n$ is then called a chain homotopy.
+	
+\end{defn}
+\begin{propo}
+Given two homotopic chain maps $\phi,\psi: ( C_\bullet,d_\bullet) \to ( C_\bullet', d_\bullet')$, the induced maps on homology coincide.
+\end{propo}
+\begin{proof}
+	Pich $[x] \in H_n C$, we want to compar $[\phi( x) ] $ and $ [ \psi( x) ] $, we need to show that $\phi( x) - \psi( x) \in \im d_{n+1}'= [ d'h( x) + hd( x) ] $.\\
+	As $x\in \ker d, hd( x) =0 $ and $d'h( x) \in \im d_{n+1}'$ 
+\end{proof}
+So now we want to show that homotopic maps of pairs induce homotopic maps of chain complexes.\\
+The key ideay will be to notice that, in general $\Delta^{n}\times [ 0,1] $ is not a simplex in general but it can be decomposed as a union of $n+1$ ($n+1$) simplices.\\
+
+We can consider $\Delta^{n}\times [ 0,1] \subset \mathbb{R}^{n+1}\times \mathbb{R}= \mathbb{R}^{n+2}$.\\
+Notice that any convex hull of $n+2$ linearly independent vectors in $ \mathbb{R}^{n+2}$ is homeomorphic to the $n+1$ simplex which is compatible with the ordering of the vertices.\\
+FOr $i \in \left\{ 0,n \right\} $, consider $\tau_i = conv( ( e_0,0) , ( e_1,0) ,\ldots, ( e_i, 0) , ( e_{i+1} ,1) ,\ldots, ( e_n,0) ) $.\\
+We want to build a map $S_n ( X) \to S_{n+1} ( Y) $, we do this by noticing that a map $\sigma: \Delta^{n}\to X$ induces $\Delta^{n}\times [ 0,1] \xto{\sigma\times \id} \to X \times [ 0,1] \xto{H} Y$.\\
+And thus $\tau_i \subset \Delta^{n}\times [ 0,1] \to  X\times [ 0,1] \to Y$ gives an $n+1$ simplex in $Y$.\\
+The claim we will prove next time is that this induces a chain homotopy $S_\ast f, S_\ast g$ 
+
+
+
+
+
+
+\end{document}	

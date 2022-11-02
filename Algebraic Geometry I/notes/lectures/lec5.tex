@@ -1,0 +1,127 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Mon 24 Oct}{Schemes}
+\begin{rmq}
+By abuse of notation, we write $X$ is a scheme with $\O_X$ implicit.
+\end{rmq}
+\begin{lemma}
+Let $X$ be a topological space with basiis for the topology $\left\{ v_i \right\}_{i \in I} $.\\
+Let $\F$ and $\G$ be sheaves on $X$.\\
+For any collection of morphisms $\phi_i: \F( V_i) \to \G( V_i) $ such that $\rho_{ij} \circ\phi_i= \phi_j$, then $\exists!\phi:\F\to \G$ which restricts to $\phi_i$ on the $V_i$.
+\end{lemma}
+\begin{propo}
+Let $( X,\O_X) $ be a locally ringed space and $A$ a ring, then the map $\hom( ( X,\O_X) , ( \spec A, \O_{\spec A} ) ) \to \hom( A,\O_X( X) ) $ which maps $( f,f^{\sharp}) \to f^{\sharp}( \spec A) $ is a natural bijection.\\
+\end{propo}
+In particular, for all locally ringed spaces $( X,\O_X) $, there is a natural affinization morphism $aff_X: X\to \spec \O_X ( X) $ 
+\begin{crly}
+Every morphism of locally ringed spaces $( X,\O_X) \to \spec A$ factors uniquely through $aff_X$.
+\end{crly}
+\begin{crly}
+A locally ringed space is an affine scheme iff the affinization is an isomorphism.
+\end{crly}
+\begin{crly}
+The functor 
+\[ 
+	( affSch) \to ( Ring)^{op}
+\]
+mapping $( X,\O_X) \to \O_X( X) $ is an equivalence of categories.
+\end{crly}
+\begin{proof}
+Fully faithful is the proposition above.\\
+Essential surjectiveness is immediate as for any ring, we can look at $( \spec A, \O_{\spec A} ) $ as $\O_{\spec A} ( \spec A) = A$.
+\end{proof}
+We now prove the statement
+\begin{proof}
+We use that there exists a natural isomorphism $\O_{\spec A} ( D( a) ) \simeq A_a$.\\
+Naturality follows from functoriality of $f^{\sharp}( -) $.\\
+We have to construct an inverse, let $\phi: A\to \O_X( X) $ be a ring homomorphism, we need to define $( f,f^{\sharp}) : ( X,\O_X) \to ( \spec A, \O_{\spec A} ) $.\\
+We map $x\mapsto \ker ( A \xto\phi \O_X( X) \to \faktor{\O_{X,x} }{m_x}) $.\\
+We claim that $f$ is continuous.\\
+It suffices to show that $X_{\phi( a) } = f^{-1}( D( a) ) = \left\{ x\in X | \phi( a)_x \notin m_x \right\} \subset X$ is open.\\
+Take $x\in X_{\phi( a) }$, then $\phi( a) _x\notin m_x \implies \phi( a) _x \in \O_{X,x} ^{\times} $.\\
+Thus $\exists x \in V \subset X$ and $b \in \O_X( V) $ such that $\phi( a) |_V b = 1 \in \O_X( V) $.\\
+Thus $\phi( a) _y b_y =1 \forall y \in V\implies \phi( A) _y \notin m_y \implies V \subset X_{\phi( a) } \implies X_{\phi( a) } $ is open.\\
+To define $f^{\sharp}$, observe that $\forall a \in A, \phi( a) |_{X_{\phi( a) } } \in \O_X( X_{\phi( a) } ) $ is a unit in every stalk, hence a unit.\\
+Thus there is a unique morphism such that $ A \xto\phi \O_X( X) \to \O_X( X_{\phi( a) } ) = A \to A_a \xto{\exists!f^{\sharp}( D( a) ) } \O_X( X_{\phi( a) } )  $ so we get a morphism $f^{\sharp}: \O_{\spec A} \to f_\ast \O_X$.\\
+We still have to show that this map is a morphism of locally ringed spaces.\\
+We claim that $\forall x \in X$, the map $f^{\sharp}_x : A_{f( x) } \to \O_{X,x} $ is a local homomorphism.\\
+The diagram induces a commutative diagram 
+\[ 
+	A\xto \phi \to \O_X( X) \xto{ \pi_2 } \O_{X,x} = A \xto { \pi_1 } A_{f( x) } \xto{f_x^{\sharp}} \O_{X,x} 
+\]
+Note that $p_1^{-1}( f_x^{\sharp,-1}( m_x) ) = \pi_1^{-1}\circ \pi_2^{-1}( m_x) = f( x) $ by definition.\\
+Thus $f_x^{\sharp,-1}( m_x) = f( x) A_{f( x) } $.\\
+Now, we need to show that this construction is in fact an inverse.\\
+By construction, if $( f,f^{\sharp}) $ comes from $\phi$, then $\phi= f^{\sharp}( \spec A) $.\\
+Conversely, let $( f,f^{\sharp}) : X\to \spec A$ be a morphism and let $( f',f'^{\sharp}) :X\to \spec A$ be associated to $f^{\sharp}( \spec A) $.\\
+We need to show that $( f,f^{\sharp}) = ( f',f'^{\sharp}) $.\\
+ $\forall x \in X,\exists$ a commutative diagram
+	\[ 
+		A \xto{f^{\sharp}( \spec A)} \O_X( X) \to \O_{X,x} = A \to A_{f( x) } \to O_{X,x} 
+	\]
+	
+As $f_x^{\sharp}$ and $f_x'^{\sharp}$ are local, $f( x) = f'( x) $.
+Now, $\forall a \in A$, there is a commutative diagram
+\[ 
+	A\xto { f^{\sharp}( \spec A) } \O_X( X) \to \O_X( X_{f^{\sharp}( \spec A) }) = A \to A_a \xto{\exists! f^{\sharp}( D( a) )} = f'^{\sharp}( D( a) ) \to \O_X( X_{f^{\sharp}( \spec A),a} ) 
+\]
+
+\end{proof}
+\begin{exemple}
+For every locally ringed space $( X,\O_X) $, there exists a unique morphism $ ( X,\O_X) \to ( \spec \mathbb{Z}, \O_{ \spec \mathbb{Z}} )  $ because $ \exists ! \mathbb{Z}\to \O_X( X) $.\\
+If $( X,\O_X) $ is a locally ringed space such that each $\O_X( U) $ has characteristic $p >0$, then $\exists ! $ morphism $( X,\O_X) \to ( \spec \mathbb{F}_p, \O_{\spec \mathbb{F}_p} ) $.\\
+\end{exemple}
+\begin{defn}[Scheme over another scheme]
+	Let $S$  be a sscheme. The category of schemes over $S$, $Sch/S$ is the category whose objects are morphisms $X\to S$ and morphisms are commutative triangles.
+\end{defn}
+\begin{exemple}
+Let $K$ be a field.\\
+The affine $n$-space over $k$ is denoted $ \mathbb{A}^{n}_k$ is $\spec k[x_1,\ldots, x_n]$.\\
+If $k$ is algebraically closed, then 
+\[ 
+	k^{n}\simeq \spec_{max}  k[x_1,\ldots,x_n]\simeq \mathbb{A}^{n}_k \simeq \hom_{k-alg} ( k[x_1,\ldots,x_n],k) 
+\]
+If $\phi:A\to B$ is a surjective ring homomorphism, then the induced map on spectra $\spec B\to \spec A$ is a homeomorphism onto $V( I) $ where $I = \ker\phi$.\\
+In particular, if $I \subset K[x_1,\ldots,x_n]$, $k= \overline{k}$ is an ideal, then $V( I) = \left\{ ( a_1,\ldots,a_n) \in k^{n}| f( a_1,\ldots,a_n) =0 \forall f \in I \right\} $ is the image of $\spec_{max} \faktor{k[x_1,\ldots,x_n]}{I}\to \spec_{max}  k[x_1,\ldots,x_n] \simeq k^{n}$. \\
+\end{exemple}
+\begin{exemple}[glueing two schemes]
+	If $X_1,X_2$ are two schemes and $U_i \subset X_i$ are open subsets,
+	\[ 
+		( \phi,\phi^{\sharp}) : ( U_1,\O_X|_{U_i} ) \simeq ( U_2,\O_X|_{U_2} ) 
+	\]
+	is an isomorphism.\\
+	We define the scheme $( X,\O_X) $ by glueing $X_1$ and $X_2$ over $U_1$  as follows.\\
+	As a set, $X= \faktor{X_1\coprod X_2}{\sim}$ where $x_1\sim \phi( x_1) $.\\
+	Note, there are natural maps $\pi_i: X_i\to X$.\\
+	We say that a subset $U \subset X$ is open $\iff \pi_i^{-1}( U) \subset X_i$ open for $i=1,2$.\\
+	We define the structure sheaf as $\O_X( U) = \ker ( \O_{X_1}(\pi_1^{-1}( U)) \oplus \O_{X_2}( \pi_2^{-1}( U) ) \to \O_{X_1} ( \pi_1^{-1}( U) \cap U_1)  ) $.\\
+	Then $X$ is a scheme.
+\end{exemple}
+\begin{exemple}[Explicit example of glueing]
+Take $X_1= X_2 = \mathbb{A}_K^{1}$ and $U_1= U_2 = \mathbb{A}^{1}_K \setminus 0$.\\
+Notice that $U \simeq \spec k[x,x^{-1}]$.
+\begin{enumerate}
+\item Taking the glueing map $\phi= \id$, we get a line with two origins.
+\item Taking $\phi^{\sharp}( U_2) : x \mapsto \frac{1}{x}$, we get the projective line $ \mathbb{P}^{1}_k $.\\
+	The $k$-rational points of this scheme are in correspondence with lines in $k^{2}$, namely
+	\[ 
+	P_k^{1}( k) \simeq \faktor{k^{2}\setminus \left\{ 0 \right\} }{k^{\times}}.
+	\]
+\end{enumerate}
+\end{exemple}
+\section{Properties of schemes}
+\subsection{Topological properties}
+\begin{defn}
+	A scheme $( X,\O_X) $ is called 
+	\begin{enumerate}
+	\item connected if $X$ is
+	\item irreducible if $\forall U_1,U_2$ open non empty their intersection is non-empty.
+	\item quasi-compact if $X$ is.\footnote{All affine schemes are quasi-compact, but $ \mathbb{A}^{ \infty }_k\setminus 0$ is not quasi-compact}
+	\item quasi-separated if $X$ is, ie. $\forall U_1,U_2$ open and quasi-compact, their intersection is quasi-compact.
+	\end{enumerate}
+\end{defn}
+
+
+
+
+\end{document}	

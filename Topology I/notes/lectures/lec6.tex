@@ -1,0 +1,47 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{6}{Wed 26 Oct}{Homotopy invariance}
+If $f,g:X\to Y$ are homotopic maps, then we construct a map $h_nS_n X\to S_{n+1} Y$ by defining it
+\[ 
+h_n( \sigma) = \sum_{i=0}^{ n} ( -1)^{i}H( \sigma\times \id) \circ \tau_i
+\]
+We want to show this is a chain homotopy, ie $S_n g -S_n f = hd + dh$.\\
+Notice that $\tau_i \circ d^{i+1}= \tau_{i+1} \circ d^{i+1}$, $\tau_0\circ d^{0}= $ inclusion of $\Delta^{n}\times \left\{ 1 \right\} $ and $ \tau_n \circ d^{n}=$ inclusion of $\Delta^{n}\times \left\{ 0 \right\} $.\\
+We need to analyze
+\begin{align*}
+h_{n-1} \delta_n ( \sigma) + \delta_{n+1} h_n( \sigma) &= h_{n+1} (  \sum_{j=0}^{ n}( -1)^{i}\sigma\circ d^{j}) + \delta_{n+1} ( \sum_{i=0}^{ n}( -1)^{i}H( \sigma\times \id) \circ \tau_i) \\
+						       &=  \sum_{j=0}^{ n}( -1)^{i}h_{n+1}(  \sigma\circ d^{j}) + \sum_{k=0}^{ n+1} ( -1)^{k} \sum_{i=0}^{ n}( -1)^{i}H( \sigma\times \id) \tau_i \circ d^{k}\\
+						       &=  \sum_{j=0}^{ n}( -1)^{i}h_{n+1}(  \sigma\circ d^{j}) + \sum_{k=0, k \neq \left\{ i,i+1 \right\} }^{ n+1}  \sum_{i=0}^{ n} ( -1)^{i+k}H( \sigma\times \id) \tau_i \circ d^{k}+ g( \sigma) - f( \sigma) \\
+\end{align*}
+Notice that $h_{n-1} ( \sigma\circ d^{k}) = \sum_{i=0}^{ k-1}( -1)^{i}H( \sigma\times \id )( \tau_i \circ d^{k+1}) + \sum_{i=k+1}^{ n} ( -1)^{i+1}( \sigma\times \id) ( \tau_i \circ d^{k})  $.\\
+Putting everythink together yields
+\begin{align*}
+						       &= \sum_{j=0}^{ n}( -1)^{j}( \sum_{i=0}^{ j-1}) ( -1)^{j}H( \sigma\times \id) ( \tau_i \circ d^{j+1}) \\
+						       &+ \sum_{i=j-1}^{ n} ( -1)^{j+1}H( \sigma\times \id) ( \tau_i \circ d^{j}) \sum_{k=0, k \neq \left\{ i,i+1 \right\} }^{ n+1}  \sum_{i=0}^{ n} ( -1)^{i+k}H( \sigma\times \id) \tau_i \circ d^{k}\\
+						       &+ g( \sigma) - f( \sigma) \\
+\end{align*}
+The rest of the proof is cursed and I won't write it down, Diecks Book seems to have a complete proof.\\
+We still have to show that $H_n$ respects homotopy of pairs
+\begin{propo}
+The functor $H_\ast( -,-;G) \to \ab$ is homotopy invariant
+\end{propo}
+\begin{proof}
+Let $f,g:( X,A) \to ( Y,B) $ be given homotopic maps via $H:X\times [ 0,1] \to Y$.\\
+This gives us chain homotopies $( f|_A) _\ast$ to $( g|_A)_\ast$.\\
+$f_\ast,g_\ast$ induce maps $ \faktor{S_\ast X}{S_\ast A} \to \faktor{S_\ast Y}{S_\ast B}$ and the chain homotopies between $f_\ast$ and $g_\ast$ induce the same chain homotopies between these chain maps.\\
+Moreover, tensoring with $G$ maps chain homotopies to chain homotopies.
+\end{proof}
+\subsection{Excision}
+\begin{propo}
+$H_\ast( -,-;G) $ satisfies the excision axiom.
+\end{propo}
+\begin{proof}
+Consider the cover $X= ( X\setminus B)^{\circ}\cup A^{\circ}$ and write $U = \left\{ X\setminus B, A \right\} $ \\
+Let $S_n^{U}( X) =  \mathbb{Z} \eng{\sigma:\Delta^{n}\to X | \im\sigma \subset X\setminus B \text{ or } A } \subset S_n( X) $ 
+\end{proof}
+
+
+		
+	
+
+\end{document}	

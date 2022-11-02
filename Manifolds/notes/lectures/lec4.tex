@@ -1,0 +1,68 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Mon 24 Oct}{Tangent Space}
+We prove that the dimension of the tangent space is the dimension of the manifold.
+\begin{proof}
+Without loss of generality, suppose $\phi$ is a chart centered at $p$.\\
+Let $X\in T_p M, f \in C^{ \infty }( U) $, writing $f= f( p) + \sum f_j x_j$, we get
+\begin{align*}
+	Xf &= \sum_{j}^{ } x_j( p) Xf_j + f_j ( p) X x_j\\
+&= \sum_{j}^{ } f_j( p) Xx_j\\
+&= \sum_{j}^{ } Xx_j \frac{\del}{\del x_j}|_p f
+\end{align*}
+Thus $X$ is a linear combination of $ \frac{\del}{\del x_j}$.\\
+Since $ \frac{\del}{\del x_j} x_i = \delta_{ij} $, these must be linearly independent.
+\end{proof}
+\begin{exemple}
+\begin{enumerate}
+\item $ \mathbb{R}^n$, the vectors $ \frac{\del}{\del x_i}|_p$ form a basis of $T_p \mathbb{R}^n$.
+\item Polar Coordinatesin $ \mathbb{R}^{3}$.\\
+	Let $\phi: [ 0, \infty ) \times ( 0,2\pi)\times ( 0, \pi)  \to U \subset \mathbb{R}^{3} $ 
+	Mapping $( r,\varphi,\theta)\mapsto ( x \cos\varphi\sin \theta,r\sin\varphi\sin\theta,r \cos\theta)  $.\\
+	Now $ \frac{\del}{\del r} |_p f = \frac{\del}{\del r} ( f\circ\phi) ( r,\varphi,\theta) = ...$ 
+\item If $x_1,\ldots,x_n$ and $y_1,\ldots, y_n$ are two coordinate systems named $\phi$ and $\psi$.
+	\begin{align*}
+	\frac{\del}{\del x_i}|_p f  &= \frac{\del}{\del x_i}|_p ( f\circ\psi^{-1}\circ\psi) ( p) \\
+	&= \del_i ( f\circ\psi^{-1}\circ\psi\circ\phi^{-1}) ( \phi( p) ) \\
+	&= \sum_{j=1}^{ m} \del_j ( f\circ\psi^{-1}) ( \psi( p) )  \frac{\del \psi_j\circ \phi^{-1}}{\del x_i}( \phi( p) ) \\
+	&= \sum_{j=1}^{ m} \frac{\del y_j}{\del x_i} \frac{\del}{\del y_j}|_p f
+	\end{align*}
+	
+\end{enumerate}
+\end{exemple}
+\begin{defn}[Tangent Map]
+	Let $f:M\to N$ be a smooth map.\\
+	For $p\in M$, we define $T_p f: T_p M\to T_{f( p) } M$.\\
+	For $\phi\in C^{ \infty }N$, then
+	\[ 
+	T_p f ( X) \phi = X( \phi\circ f) 
+	\]
+\end{defn}
+It is clear that this map is linear.
+\begin{rmq}
+\begin{enumerate}
+\item Convince yourself that in charts, this is nothing but the derivative (Jacobi matrix) 
+\item If $ M\xto g N \xto f Z$, then $T_{p} ( f\circ g ) = T_{g( p) }  ( f) \circ T_{ p} (g ) $ 
+\item If $( U,\phi) $ is a chart, then the tangent map $T_p \phi: T_p M \to T_{\phi( p) } \mathbb{R}^{m} $ \\
+	If $\psi$ is a second chart around $p$, then $T_p \psi= T_p( \psi\circ\phi^{-1}\circ\phi) = D_{\phi( p) } ( \psi\circ\phi^{-1}) \circ T_p \phi$ 
+\end{enumerate}
+\end{rmq}
+\subsection*{Physicists approach to the tangent space}
+A tangent vector is a family $( \xi^{\phi}), \xi^{\phi}\in \mathbb{R}^n$ where $\phi$ runs through all charts such that $ \xi^{\psi}= D_{\phi( p) } ( \psi\circ\phi^{-1}) ( \xi^{\phi}) $.
+\section{Local Properties of smooth maps and submanifolds}
+We assume all manifolds have constant dimension.
+\begin{defn}
+	Let $M$ and $N$ of respective dimension $m$ and $n$.\\
+	Let $f:M\to N$ be a smooth map, then
+	\begin{itemize}
+	\item $p\in M$ is called critical for $f$ if the rank of $T_p f$ is less that $n = \dim N$ 
+	\item $q\in N$ is a regular value of $f$ if $\forall p \in f^{-1}( q) $, $rank T_p f =n$ 
+		Notice that if $q\notin f( M) $, then $q$ is regular.
+	\item $f$ is a submersion if $\forall p \in M$, $rank T_p f =n$.
+	\item $f$ is called an immersion if $\forall p\in M$, $rank T_p f = M$.
+	\item $f$ is called a subimmersion if $p \mapsto rank T_p M$ is constant.
+	\end{itemize}
+	
+\end{defn}
+	
+\end{document}	

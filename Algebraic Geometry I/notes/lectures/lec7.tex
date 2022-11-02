@@ -1,0 +1,139 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Mon 31 Oct}{Open and Closed Subschemes}
+\section{Open and closed subschemes and immersions}
+\begin{defn}[Open Subscheme]
+	An open subscheme of a scheme $( X,\O_X) $ is a pair $( U, \O_U) $, with $U \subset X$ open and $\O_U= \O_X|_U$.
+\end{defn}
+\begin{lemma}
+If $A$ is a ring and $a\in A$, then there is an isomorphism of locally ringed spaces $ ( \spec A_a, \O_{\spec A_a} ) \simeq ( D( a) , \O_{\spec A} |_{D( a) } ) $.\\
+In particular, open subschemes of schemes are schemes.
+\end{lemma}
+\begin{proof}
+From commutative algebra, localization $A\to A_a$ induces a homeomorphism $\spec A_a\to D( a) \subset \spec A$.\\
+On sheaves, we want to give morphisms $\O_{\spec A} |_{D( a) } ( U) \to \O_{\spec A_{a} }( f^{-1}( U) ) $.\\
+If $s: U \to \coprod_{p \in U} A_p \to ( f^{-1}( U) \to U \xto{s} \coprod_{p \in U} A_p \to \coprod_{p \in U} ( A_a)_{p A_a}) $, using $A_p \simeq ( A_a) _{p A_a} $.
+\end{proof}
+Note that, if $i:U\to X$ is the inclusion of an open, then $( i,i^{\sharp}) :( U,\O_U) \to ( X,\O_X) $ with
+\[ 
+	i^{\sharp}( V) : \O_X( V) \xto{\rho_{V,V\cap U} }\O_X( V\cap U) = i_\ast\O_U( V) 
+\]
+is a morphism of schemes.\\
+\begin{rmq}
+If $i:U\to X$ is an inclusion of an open, then there are in general many sheaves of rings $\F$ on $U$ such that $\exists i^{\sharp}$ such that $( i,i^{\sharp}) :( U,\F) \to ( X,\O_X) $ is a morphism of schemes.
+\end{rmq}
+FOr example, if $X= \spec k$, $U = \spec \faktor{k[x]}{x^{2}}$then $k \subset \faktor{k[x]}{x^{2}}$  induces a morphism $( f,f^{\sharp}) : U \to X$ such that $f= \id_X$.
+\begin{defn}[Open immersion]
+	An open immersion (or open embedding) is a morphism of schemes $( f,f^{\sharp}) : ( X,\O_X) \to ( Y,\O_Y) $ such that $f$ is a homeomorphism onto an open subset $U \subset Y$ $\O_Y|U \simeq ( f_\ast\O_X )|_U$.
+\end{defn}
+\begin{exemple}
+Let $k$ be a fieldand let $\iota:\spec k \to X= \mathbb{A}^{n}$ be the closed point corresponding to $0$.\\
+Then
+\begin{align*}
+	( \O_X) |_{\spec k} ( \spec k) &= ( i^{-1} \O_X) ( \spec k) \\
+	&= \colim_{0 \in U \subset \mathbb{A}^{n}}  \O_X( U) = \O_{X,0} = k [ x_1,\ldots,x_n] _{( x_1,\ldots,x_n) } 
+\end{align*}
+But $\spec k[x_i]_{( x_1,\ldots,x_n) } $ has more than one point.\\
+Thus, $( \spec k, ( \O_X) |_{\spec k} ) $ is not a scheme.
+\end{exemple}
+Observe: If $Z \subset \spec A$ is a closed subset, then $Z = V( I) $ for some ideal $I$.\\
+Then the map $\spec \faktor{A}{I}\to \spec A$ induced by the quotient map is a homeomorphism onto $V( I) $ and this gives a scheme structure on $Z$ (which depends on $I$ !).\\
+\begin{defn}[Ideal sheaves]
+	Let $( X,\O_X) $ be a scheme, then
+	\begin{enumerate}
+	\item An ideal sheaf on $( X,\O_X) $ is a subsheaf $ \mathcal{I} \subset \O_X$ such that $ \mathcal{I}( U) \subset \O_X( U) $ is an ideal for all $U \subset X$ is open.
+	\item For an ideal sheaf $ \mathcal{I} \subset \O_X$, the quotient sheaf $ \faktor{\O_X}{ \mathcal{I}}$ is the cokernel sheaf of the inclusion, namely, the sheafification of the sheaf $U \mapsto \faktor{\O_X( U) }{ \mathcal{I}( U) }$.
+	\end{enumerate}
+	
+\end{defn}
+\begin{defn}[Closed Subsceme]
+	Let $( X,\O_X) $ be a scheme, then a closed subscheme of $( X,\O_X) $ consists of a subset $Z \subset X$ and an ideal sheaf $ \mathcal{I} \subset \O_X$ such that
+	\begin{enumerate}
+		\item $Z= \left\{ x \in X| (  \faktor{\O_X}{ \mathcal{I}})_x \neq 0  \right\} $ 
+		\item $ ( Z, ( \faktor{\O_X}{I})|_Z ) $ is a scheme
+	\end{enumerate}
+\end{defn}
+\begin{rmq}
+By 1, $Z$ is closed, indeed, for $1 \in ( \faktor{\O_X}{( X) }) $, we have 
+\[ 
+\left\{ x\in X| ( \faktor{\O_X}{ \mathcal{I}})_x \neq 0  \right\} = \supp 1 
+\]
+
+\end{rmq}
+\begin{rmq}
+The morphism $ \faktor{\O_X}{ \mathcal{I}}\to i_\ast(  ( \faktor{\O_X}{ \mathcal{I}})|_Z ) $ is an isomorphism.\\
+\end{rmq}
+If $Z \subset X$ is a closed subscheme determined by $ \mathcal{I}$, then $( i,i^{\sharp}) : ( Z,\O_Z) \to ( X,\O_X) $ where $i : Z\to X$ 	is the inclusion and $ i^{\sharp}: \O_X\to \faktor{\O_X}{ \mathcal{I}}= i_\ast\O_Z$ is a morphism of schemes.
+\begin{exemple}
+Condition $2$ in the definition of closed subscheme is not automatic, even if $X$ is affine.
+\end{exemple}
+\begin{defn}[Closed immersion]
+	A closed immersion (or closed embedding) is a morphism of schemes $( f,f^{\sharp}) : X\to Y$ such that $f$ is a homeomorphism onto a closed subset and $f^{\sharp}: \O_Y \to f_\ast ( \O_X) $ is surjective on stalks.
+\end{defn}
+\begin{rmq}
+The morphism $( i,i^{\sharp}) $ of the inclusion of closed subscheme is a closed immersion.\\
+%Conversely, if $( f,f^{\sharp})$ is a closed immersion, then $\ker f^{\sharp}$ determines a closed subscheme $Z \subset X$ such that $( f,f^{\sharp}) $ factors through an isomorphism $( X,\O_X) \to ( Z,\O_Z) $ 
+\end{rmq}
+\begin{exemple}
+If $A$ is a ring and $ I \subset A$ is an ideal, then the morphism $\spec \faktor{A}{I}\to \spec A$ is a closed immersion.\\
+
+Indeed, by CA, this is a homeomorphism onto $V( I) $.\\
+The map $f^{\sharp}: \O_{\spec A} \to \O_{ \spec A /I} $ is surjective because $f^{\sharp_p}: A_p \to ( \faktor{A}{I})_{p \\faktor{A}{I}} $, which is the localization of a surjective map.
+\end{exemple}
+From now on, $V( I) \subset \spec A$ for the closed subscheme determined by $I$.
+\begin{propo}
+If $X = \spec A$ is affine, then the map $I \to V( I) $ is a bijection between ideals of $A$ and closed subschemes.
+\end{propo}
+\begin{proof}
+Let $Z \subset X$ be a closed subscheme determined by $ \mathcal{I}$.\\
+Let $I_Z = \ker ( \O_X( X) \to \O_Z( Z) ) $.\\
+Note, if $Z=V( I)$ for some ideal, then $I = I_Z$.\\
+So we have to show that $Z= V( I_Z) $.\\
+The morphism $\phi: \O_X( X) \to \O_Z( Z) $ factors through $ \faktor{\O_X( X) }{I_Z}= \faktor{A}{I_Z}$	so $\iota: Z \to X$ factors through $V( I_Z) $.\\
+Replace $A$ by $ \faktor{A}{I_Z}$, we may assume $\phi$  is injective and we have to show that $\phi$ is an isomorphism. 
+\subsubsection*{Claim 1}
+$\forall U \subset Z$ open affine and $s\in A$, we have $D( s) \cap U = D( \phi( s) |_U) \subset U$ and $V( S) \cap U= V( \phi( s) |_U) \subset U$.\\
+It suffices to prove the first equality.\\
+$\forall p \in Z$, the following diagram commutes
+\[ 
+	A\xto{\phi} \O_Z( Z) \to \O_{Z,p} 
+\]
+and $A \to A_p \xto{\iota_p^{\sharp}} \O_{Z,p} $ and $i^{\sharp}_p$ is local.\\
+Now
+\begin{align*}
+D( \phi( s) |_U) = \left\{ p \in U | \phi( s)_p \notin m_p \subset \O_{Z,p}  \right\} = \left\{ p\in U|i_p^{\sharp}( s_p) \notin m_p \subset \O_{Z,p}  \right\} \\
+= \left\{ p\in U | s_p \notin m_p \subset A_p \right\} = D( s) \cap U
+\end{align*}
+\subsubsection*{Claim 2}
+We show $Z \to X$ is surjective.
+Since $Z$ is closed in $X$, it suffices to show that $\forall s \in A$ such that $Z \subset V( s) $, we have $V( s) = X$.\\
+Choose such an $s\in A$.\\
+As closed subspaces of qc. spaces are qc.\\
+We can cover $Z$ by finitely many open affines $U_i$.\\
+By claim $1$, $U_i \subset V( \phi( s) |_{U_i} ) \subset U_i$.\\
+Thus $\phi( s) |_{U_i} \in p\forall p \in \spec \O_Z( U_i) $, thus $\phi( s) |_{U_i} $ is nilpotent.\\
+Thus, there exists $n_i>1$ such that $( \phi( s) |_{U_i} )^{n_i}= 0$.\\
+And there exists $N$ such that $\phi( s)^{N}= \phi( s^{N}) =0$ in $\O_Z( Z) $.\\
+Thus $s^{N}=0$ as $\phi$ is injective by hypothesis, thus $V( s) = X$.
+\subsubsection*{Claim 3.}
+$i^{\sharp}$ is an isomorphism.\\
+Since $Z \to X$ is a closed subscheme, $i^{\sharp}$ is surjective on stalks and thus surjective.\\
+To show injectivity, it suffices to show that $\forall a \in A$ such that $i_p^{\sharp}( \frac{a}{1}) =0 \implies \frac{a}{1}=0 \in A_p$.\\
+Since $i_p^{\sharp}( \frac{a}{1}) =0$, $\exists p \in U \subset Z$ open affine such that $\phi( a) |_U=0$.\\
+Choose a finite open affine cover, $Z= U \cup \bigcup_{i=1}^{n}U_i$.\\
+Choose $s\in A$ such that $p \in D( s) \subset U \subset X$.\\
+Then $\phi( sa) |_{U} =0$, thus $\phi( sa) |_{D( s) \cap U_i } =0= \phi( sa) |_{D( \phi( s) |_{U_i} ) } $.\\
+Thus, there exists $N>0$ such that $\phi( sa) |_{U_i} \cdot ( \phi( s) |_{U_i} ) ^{N}= 0 \in \O_Z( U_i) $.\\
+Thus $\phi( s^{N+1}a ) |_{U_i} =0$, thus $\phi( s^{N+1}a) =0 \implies s^{N+1}a = 0 \in A$ which implies $\frac{a}{1}=0$ in $A_p$.
+
+	
+\end{proof}
+
+
+
+
+
+
+
+
+\end{document}	

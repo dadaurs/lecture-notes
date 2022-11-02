@@ -1,0 +1,166 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Wed 26 Oct}{differentials}
+\begin{defn}[Submanifold]
+Let $M^{m}$ be a smooth manifold, $N$ a subset.\\
+$N$ is called a submanifold if for each chart $( U,\phi) $ of $N$, $\phi( N \cap U) \subset \mathbb{R}^{m}$ is a submanifold.\\
+Equivalently, for each $p\in N$ there is a chart $( U,\phi) $ of $M$ centered at $p$ such that $\phi( U\cap N) = \phi( U) \cap \mathbb{R}^n\times \left\{ 0 \right\} $.
+\end{defn}
+Clearly, submanifolds are smooth manifolds.\\
+Suppose $N^{n} \subset M^{m}$ is a submanifold, then the inclusion map $i: N^{n}\to M^{m}$ is an immersion.
+\begin{defn}
+	$f\in C^{ \infty }( N,M) $ is called an embedding if
+	\begin{itemize}
+	\item $f$ is an injective immersion
+	\item $f: N\to f( N) $ is a homeomorphism when $f( N) $ has the relative topology.
+	\end{itemize}
+\end{defn}
+The range of an embedding is a submanifold.
+\begin{thm}
+	Let $M^{m},N^{n}$ be $C^{ \infty }$ manifolds and $f:M\to N$ be a subimmersion (smooth map with constant rank), then
+	\begin{enumerate}
+	\item For $q\in N$, the inverse image $f^{-1}( q) $ is a submanifold of dimension $m-k $ 
+	\item For $p \in M, q= f( p) $, there exist neighborhoods $U$ of $p$ and $V$ of $q$ such that $S= f( U) \cap V$ of dimension $k$.
+	\end{enumerate}
+\end{thm}
+\begin{crly}
+If $f:M^{m}\to N^{n}$ is a smooth map, then for each regular value $q: f^{-1}( q) $ is a submanifold of dimension $m-n$.
+\end{crly}
+\begin{proof}
+There is an open neighborhood $U \subset M$ of $f^{-1 } ( q) $ on which the rank is constant.\\
+Now, we can apply the theorem.
+\end{proof}
+To prove the embedding theorem, we use the rank theorem to get charts $\phi, \psi$ such that $\phi\circ f \circ \psi^{-1}( x_1,\ldots,x_p) = ( x_1,\ldots,x_r,  0) $.\\
+For this map, the two claims are trivial (linear algebra statements).\\
+The statements are clearly invariant under diffeomorphisms.
+\section{Morse-Sard Theorem}
+\begin{defn}[Null set]
+	A subset $A \subset M$ is a null set if for any chart $( U,\phi) $ of $M$, $\phi( U\cap A) $ is a Lebesgue null set in $ \mathbb{R}^m$.
+\end{defn}
+\begin{rmq}
+This is well defined because
+\begin{enumerate}
+\item $A$ can be covered by countably many charts
+\item Diffeomorphisms of open subsets of $ \mathbb{R}^n$ map null sets to null sets.
+\end{enumerate}
+\end{rmq}
+\begin{rmq}
+\begin{enumerate}
+\item $\forall p \in M \left\{ p \right\} $ is a null set, if $\dim M >0$ 
+\item countable unions of null sets are null sets
+\item If $A$ is a null set, then $ A^{\circ}$ is empty, equivalently, $M\setminus A$ is dense.
+\end{enumerate}
+\end{rmq}
+\begin{thm}[Morse-Sard theorem]
+	If $M^{m},N^{n}$ are smooth manifolds, $n \geq 1$.\\
+	Let $f:M^{m}\to N^{n}$ be smooth and $C_f= \left\{ p\in M | rank T_p f < M \right\} $.\\
+	Then $f( C_f) $ is a null set in $N$.
+\end{thm}
+\begin{proof}
+Wlog $M= \mathbb{R}^{m}, N = \mathbb{R}^{n}$.\\
+By induction, if $m=0$, then $range( f) $ is at most countable, thus a null set.\\
+Assume $m \geq 1$ and that the claim was proved for all dimensions less than $m$.\\
+Now, let $ C_l = \left\{ x\in M |\forall |\alpha| \leq  l \del^{\alpha}f( x) =0 \right\} \subset C_f$.\\
+Now we show that $f( C_f\setminus C_1) $ is a null set, $f( C_{l+1} \setminus C_l) $ is a null set and $f( C_l) $ is a null set for $l$ large enough.\\
+\subsection*{$C_f\setminus C_1$ is a null set}
+Fix $\xi\in C_f \setminus C_1$.\\
+Thus, $\exists i,j$  $ \frac{\del f_i}{\del x_j}( \xi) \neq 0$ wlog, $i=j =1$ \\
+Let $h( x) = ( f_1( x) , x_2,\ldots,x_m), m \geq 2$ and $f_1( x)$ if $m=1$.\\
+Let $g= f\circ h^{-1}: V\to V'$, we find $g( t,x) = ( t, \tilde g ( t,x) ) $.\\
+Wlog $V' = I \times W$, $( t,x) $ is critical for $g\iff x$ is critical for $\tilde g ( t,\cdot) $.\\
+$g( t,x) = f( h^{-1}( t,x) ) $ is a critical value for $f$.\\
+Now, $\lambda^{n}( f( C_f \cap V) ) = \lambda^{n}(  \left\{ g( t,x) | ( t,x), x \text{ critical for $\tilde g ( t,\cdot) $  }  \right\} )$.
+\begin{align*}
+&= \lambda^{n}(  \left\{ ( t,y) \in I\times \mathbb{R}^{n-1}| t \in I \text{ and } y = \tilde g ( t,x) \text{ critical value of } f\circ \tilde g  \right\} ) \\
+&= \int_I \lambda^{n-1}( \left\{ y \in \mathbb{R}^{n-1}| y \text{ critical value of } \tilde g ( t,\cdot)  \right\} ) 
+\end{align*}
+By induction hypothesis, the integrand is 0.\\
+We now show that $\forall l \geq 1, f( C_l \setminus C_{l+1} ) $ is a null set, the proof is similar so we omit it.\\
+Let $W$ be a cube of side length $d$ in $ \mathbb{R}^{m}$.\\
+Let $x\in C_k \cap W, y \in W$.\\
+Taylor formula implies that $|f( y) - f( x) | \leq L |x-y|^{k+1}$.\\
+Subdivide $W$ into $r^{m}$ cubes $W_j$ of side length $\frac{d}{r}$.\\
+If $x\in C_k \cap W_j, y \in W_j, |x-y| \leq \sqrt{m}  \frac{d}{r}$.\\
+Then $ | f( x) - f( y) | \leq  L (  \frac{ \sqrt{m} d}{r})^{k+1}$.\\
+Thus $f( C_k \cap W_j) $ lies in a cube of side length $2 L ( \frac{\sqrt{m} d}{r})^{k+1}$.
+\begin{align*}
+	\lambda^{n}( f( C_k \cap W) ) &\leq  r^{m} \lambda^{n}( f( C_k \cap W_{j,max} ) ) \\
+				      & \leq r^{m} \left\{ 2 L (  \frac{\sqrt{m} d}{r})^{k+1} \right\}^{n}\\
+				      &= r^{m- n ( k+1) }\cdot c
+\end{align*}
+This goes to 0 if $k \geq \frac{m}{n}$.
+\end{proof}
+\subsection{Applications of Morse-Sard}
+\begin{enumerate}
+\item If $\dim M < \dim N$, then every point is critical and thus the image of $f$ is a null set, thus, there are no smooth space filling curves.
+\item \underline{Embedding}\\
+	\begin{thm}[Whitney]
+		If $M^{m}$ is a smooth manifold, then there is an embedding $f: M^{m}\to \mathbb{R}^{2m}$.
+	\end{thm}
+	We prove this for $M$ compact and $2m+1$ instead of $2m$.
+	\begin{proof}
+	Strategy:
+	\begin{enumerate}
+	\item There is an embedding into some $\mathbb{R}^{N}$ for some $N \in \mathbb{N}$, so now we suppose $M \subset \mathbb{R}^n$.
+	\item If $N \geq 2m+1$, we find a $w$ such that the projection onto the hyperplane$ \eng{\omega}^{\perp}$ is an embedding. We will exploit that if $M$ is compact, every injective immersion is an embedding.
+	\end{enumerate}
+We first prove that injective immersions of compact spaces are embeddings, this is just a topology fact.\\
+Now, we construct the embedding.\\
+Choose charts  $ ( U_j, \phi_j)_{j \in \mathbb{N}} $ with $range( \phi_j) = B( 0,3) $ and such that $M = \bigcup_{j=1}^{ \infty }\phi_j^{-1}( B( 0,1) ) $.\\
+These form an open cover so, by compactness, $M = \bigcup_{j=1}^{r}\phi_j^{-1 }( B( 0,1) ) $.\\
+Pick $g\in C^{ \infty }( \mathbb{R}^m) $ such that
+\[ 
+g( x) = 
+\begin{cases}
+1 |x| \leq \frac{4}{3}\\
+0, |x| \geq \frac{5}{3}
+\end{cases}
+\]
+Now, let
+\[ 
+f_j( p) = 
+\begin{cases}
+g( \phi_j( p) ) \phi_j( p), p \in \phi_j\\
+0 \text{ otherwise } 
+\end{cases}
+\]
+This is a smooth and furthermore
+\[ 
+f_j|_{\phi^{-1}( B( 0,1) ) } = \phi_j|_{\phi_j^{-1}( B( 0,1) ) } 
+\]
+so $f_j$ is an immersion.\\
+Now, let $ F= ( f_1,\ldots,f_r, g\circ\phi_1, \ldots, g\circ\phi_r) : M\to \mathbb{R}^{ ( m+1) r}$, this is an injective immersion, hence an embedding.\\
+Now, we have $M \subset \mathbb{R}^{N}$ a submanifold, $w\in S^{n-1}, \pi_w( x) = x - \eng{x,w} w$ is linear.\\
+When is $\pi_w|_{M^{m}} $ an injective immersion?\\
+$\pi_w( p) = \pi_w( q) \iff p-q || w$.\\
+Now, we map $\phi: M\times M \setminus \left\{ ( p,p) |p \in M  \right\} \to S^{N-1}$ mapping $( p,q)\mapsto \frac{p-q}{|p-q|} $.\\
+Now $p-q || W \iff \frac{q-p}{|q-p|}\in range( \phi) $.\\
+As long as $2m < N-1$ Sard's theorem implies that $range( \phi) $ is a null set.\\
+$\pi_w$ is an immersion if $\forall p \in M \forall v \in T_p M \setminus \left\{ 0 \right\} \pi_w( v) \neq 0$.\\
+So now, we introduce $\sigma: TM \setminus \left\{ 0_p \in T_p M | p \in M \right\}, v \mapsto \frac{v}{|v|} $, where $TM$ is the tangent bundle.\\
+Now, $\pi_w$ is an immersion iff $\forall p \in M \forall w \in T_p M \pm w \notin range \sigma $.\\
+Thus, $\forall w \in S^{N+1}\setminus A, \pi_w:M\to \mathbb{R}^{N-1}$ is an embedding.
+
+	\end{proof}
+	
+\end{enumerate}
+\section{Vector Fields and dynamical systems}
+If $( U,\phi) $ is a chart of $M$, then $v\in T_pM$ may be written as $v= \sum_{j=1}^{ m}v_j \frac{\del}{\del x_j}|_p$.
+\begin{defn}[Smooth Vector field]
+	A smooth vector field on $M$ is a map $X: M\to TM = \coprod_{p \in M} T_p M$ such that
+	\begin{enumerate}
+	\item $\forall p, X( p) \in T_p M$ 
+	\item For each chart $( U,\phi) , X|_U = \sum_{}^{ } X_j^{\phi} \frac{\del}{\del x_j}$ with $X_j^{\phi}$ smooth.
+	\end{enumerate}
+\end{defn}
+\begin{defn}[Integral Curve]
+	An integral curve to a vector field $X$ is a smooth curve $c: I \to M$ such that
+	\[ 
+		\dot{c} ( t) = X( c( t) ) 
+	\]
+	
+\end{defn}
+
+
+
+\end{document}	

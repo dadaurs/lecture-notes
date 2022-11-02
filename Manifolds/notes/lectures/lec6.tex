@@ -1,0 +1,102 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{6}{Wed 02 Nov}{vector fields}
+\begin{thm}[Flow-Box Theorem]
+	If $M^{m}$ is a smooth manifold and $X$ a vector field.\\
+	Then for $p \in M$, there exists an open neighborhood $U \ni p$ and a smooth map
+	\[ 
+	F: ( -\epsilon,\epsilon) \times U \to M
+	\]
+	such that
+	\begin{itemize}
+	\item $F( 0,x) =x$ 
+	\item $\del_tF( t,x) = X( F( t,x) )$
+	\end{itemize}
+$F$ is the local flow of the vector field.	
+\end{thm}
+\begin{proof}
+Since the theorem is local, wlog, $M= V \subset \mathbb{R}^n$.\\
+There is a smooth map $f: \overline{B( y_0, r) }\to \mathbb{R}^{m}$.\\
+$f$ is Lipschitz.\\
+For $y \in B( y_0, r) $ let $F( t,y) $ be the maximal solution of the IVP $\del_t F( t,y) = f(F( t,y) ), F( 0,y) = y$ and $a( y) < t < b( y) $.\\
+Now, we recall
+\begin{lemma}[Gronwall's lemma]
+	If $[a,b] \subset \mathbb{R}, f,g:[a,b] \to \mathbb{R}_+$.\\
+	Assume
+	\[ 
+	f( t) \leq C + \int_{ a }^{ t } f( s) g( s) ds
+	\]
+	Then 
+	\[ 
+	f( t) \leq  C e^{ \int_{ a }^{ t }g( s) ds} 
+	\]
+	
+	
+\end{lemma}
+To prove this, let
+\[ 
+\tilde f ( t) = C+ \int_{ a }^{ t }f( s) g( s) ds \geq f( t) 
+\]
+and $h( t) = \tilde f ( t) e^{- \int_{ a }^{ t }g( s) ds} $.\\
+Then
+\[ 
+h'( t) = ( f( t) - \tilde f( t) ) g( t) e^{- \int_{ a }^{ t }g( s) ds}  \leq 0
+\]
+Note that $h$ is decreasing and as $h( a) =0$, $h'( t) \leq C$ for $t \geq a$.\\
+Thus $f( t) \leq \tilde f ( t) = h( t) e^{ \int_{ a }^{ t }g( s) ds} \leq  C e^{ \int_{ a }^{ t }g( s) ds} $.
+\begin{enumerate}
+\item We want to estimate $b( y) $ from below
+	\[ 
+	F( t,y) = y+ \int_{ 0 }^{ t } f( F( s,y) ) ds
+	\]
+	For $|t| \leq 1$
+	\begin{align*}
+		|F( t,y) - y_0| &= |y-y_0 +t f( y_0) + \int_{ 0 }^{ t } f( F( s,y) ) -f ( y_0)  dy  |\\
+		& \leq |y-y_0| + |f( y_0) | + \int_{ 0 }^{ t }|f( F( s,y) ) - f( y_0) | dy\\
+		& \leq  |y-y_0| + |f( y_0) | + L \int_{ 0 }^{ t } L |F( s,y) - y_0|ds
+	\end{align*}
+Applying Gronwall with $g=L, f= |F( \cdot,y) -y_0|$, we get
+\[ 
+|F( t,y) -y_0| \leq ( |y-y_0| + |f( y_0) |) e^{L |t|} 
+\]
+For $c$ small enough, we have that for $|t|< c$ $F$ is well defined on $( -c,c) \times \overline{B( y_0, \frac{r}{2}) }$.
+\item Continuity.\\
+	Fix $\rho < r, \epsilon>0$ on $( -\epsilon,\epsilon) \times \overline{B( y_0, \rho) }$.\\
+	Consider $|F( t,y) - F( t, \overline{y})| $, we get
+	\begin{align*}
+		|F( t,y) - F( t,\overline{y}) | &\leq  |y-\overline{y}| + \int_{ 0 }^{ |t| }|f( F( s,y) ) - f( F( s,\overline{y}) ) | ds\\
+						& \leq  |y-\overline{y}| + \int_{ 0 }^{ |t| } L |F( s,y) - F( s, \overline{y}) | ds	
+	\end{align*}
+	Gronwall implies that
+	\[ 
+	|F( t,y) - F( t,\overline{y}) | \leq  |y-\overline{y}| e^{L |t|} 
+	\]
+	Continuity along $t_0$ follows from
+	\[ 
+	|F( t,y) - F( t_0,\overline{y}) | l | F( t,y) - F( t, \overline{y}) | + |F( t,\overline{y}) - F( t_0,\overline{y}) |	
+	\]
+	and both terms are bounded.
+\item $F$ is continuously differentiables.\\
+	We wont check the higher derivatives.\\
+	It is clear that $\del_t F$ is continuous as $\del_t F = f( F) $.\\
+	To check differentiability wrt to $y$, we formally compute
+	\[ 
+	\del_t D_2F( t,y) = Df( F( t,y) ) \cdot D_2F( t,y) 
+	\]
+This is a linear system of $m^{2}$ equations.\\
+Furthermore, $D_2 F( 0,y) = I_m $.\\
+Let $\Phi: ( -\epsilon,\epsilon) \times B( y_0, \rho) \to M( m, \mathbb{R}) $ be the unique solution of
+\[ 
+\begin{cases}
+\del_t \Phi( t,y) = Df( F( t,y) ) \Phi( t,y) \\
+\Phi( 0,y) = I_m
+\end{cases}
+\]
+One shows that $\Phi$ is continuous in the same way as for $F$.\\
+One then checks that $F( t,y) $ is differentiable wrt the $y$-variables...
+	
+\end{enumerate}
+
+\end{proof}
+
+\end{document}	

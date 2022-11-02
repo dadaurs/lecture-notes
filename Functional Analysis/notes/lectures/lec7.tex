@@ -1,0 +1,126 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Wed 02 Nov}{convolutions and Hausdorff measures}
+\begin{thm}
+	Let $p \in [ 1, \infty ) $, $\Omega \subset \mathbb{R}^n$ open, then $C^{ \infty }_c ( \Omega, \mathbb{K}) $ is dense in $L^{p}( \Omega, \mathbb{K}) $.\\
+\end{thm}
+\subsection{Convolutions}
+Let $f,g \in L^{1}(  \mathbb{R}^{n}) $, $( f\ast g) ( x) = \int_{ \mathbb{R}^n }^{  } f( x-y) g( y) dy$ 
+\begin{lemma}
+Let $\eta\in L^{1}( \mathbb{R}^n) $, for $r>0$, let $\eta_r( x) = \frac{1}{r^{n}}\eta( \frac{x}{r}) $.\\
+Then
+\begin{itemize}
+\item $\eta_r\in L^{1}, \N { \eta_r}_1 = \N { \eta}_1$.
+\item If $f\in L^{p}( \mathbb{R}^n) $, then $ \N { \eta_r \ast f}_p \leq  \N { \eta_r}_{1} \N{f}_p$ 
+\item If $p< \infty , \eta \geq 0$, $\N { \eta}_1 =1$, then $f\ast \eta_r \to f$ in $L^{p}(  \mathbb{R}^n) $ 
+\item If $\eta \in C^{ \infty }$, then $\eta_r \ast f \in C^{ \infty }$, $\del^{\alpha}( \eta_r \ast f) = ( \del^{\alpha} \eta_r) \ast f$ 
+\item If $\eta\in C_c( \mathbb{R}^n) $, $ f \in L^{1}_{loc} ( \mathbb{R}^m) $, then $\eta_r \ast f\in C^{0}$.\\
+	If $s$ 
+\end{itemize}
+\end{lemma}
+\begin{lemma}
+If $ \int_\omega \phi f d \mathcal{L}^{n}=0 \forall \phi \in C^{ \infty }_c$, then $f=0$.
+\end{lemma}
+\begin{lemma}
+Let $p \in [ 1, \infty ] $ $\Omega$ open and $f_j \to f$ in $L^{p}( \Omega) $, then $\forall \phi \in C^_c( \Omega) $
+\[ 
+\int_{ \Omega }^{  } f_j \phi dx \to \int_\omega f \phi dx
+\]
+\end{lemma}
+\subsection{Hausdorff Measures}
+\begin{defn}
+	Let $( X,d) $ be a metric space, $\delta>0$ and $s \in [ 0, \infty ) $.\\
+	Define
+	\[ 
+		\mathcal{H}_\delta^{s}: P( X) \to [ 0, \infty  ], \mathcal{H}_\delta^{s}( E) = \frac{\omega_s}{2^{2}}\inf \left\{ \sum_{  h \in \mathbb{N} } ( diam F_h)^s: E \subset \bigcup_{h \in \mathbb{N}} F_h, diam F_h \leq \delta \right\} 
+	\]
+Where $\omega_s = \frac{\pi^{\frac{s}{2}}}{\Gamma( 1+ \frac{s}{2}) }$.\\
+Then
+\[ 
+\mathcal{H}^{s}( E) = \lim_{\delta\to 0} H_\delta^{s}( E) 
+\]
+
+	
+\end{defn}
+\begin{lemma}
+All Borel sets are $ \mathcal{H}^{s}$-measurable and $( X,B, \mathcal{H}^{s}|_B) $ is a measure space.
+\end{lemma}
+\begin{thm}
+	\[ 
+	\mathcal{H}^{n}|_{m^{n}} = \mathcal{L}^{n}
+	\]
+	
+\end{thm}
+\begin{thm}
+	For any $E \subset X$, there is a number $s_E \in [ 0, \infty ] $ such that 
+	\[ 
+	\mathcal{H}^{s}( E) = \infty \forall s \in [ 0, s_E)
+	\]
+	and 
+	\[ 
+		\mathcal{H}^{s}( E) =0 \forall s \in ( s_E, \infty ]
+	\]
+	
+\end{thm}
+\begin{defn}[Hausdorff Dimension]
+	\[ 
+	dim_{H} ( E) = \coloneqq s_E
+	\]
+	
+\end{defn}
+\begin{exemple}
+\[ 
+\dim_H ( B( 0,1) ) = n-1
+\]
+
+\end{exemple}
+\begin{thm}
+	If $U \subset \mathbb{R}^{k}$ and $ \psi \in C^{1}( U, \mathbb{R}^n) $ an injective immersion, then $\psi( U) $ is $ \mathcal{H}^{k}$ measurable, $ \mathcal{H}^{k}|_{\psi( U) } $ is $\sigma$-finite and
+	\[ 
+	\mathcal{H}^{k}( \psi( U) ) = \int_U ( \det D\psi^{T}D\psi)^{\frac{1}{2}}d \mathcal{L}^{k}	
+	\]
+	
+\end{thm}
+\section{Sobolev Spaces}
+Let $\Omega \subset \mathbb{R}^n$ open, $f\in L^{p}( \Omega) $.\\
+DOes it have a "derivative" in $L^{p}$ ?\\
+Notice that
+\[ 
+\int_{ \Omega }^{  } f \del_i \phi d \mathcal{L}^{n}= - \int_{ \Omega }^{  } ( \del_i f) \phi d \mathcal{L}^{n} + \int_{ \del \Omega }^{  } f \phi \nu_i d \mathcal{H}^{n-1}
+\]
+if $f,\phi \in C^{1}(  \mathbb{R}^n) $, $\Omega$ bounded, $\mathcal{H}^{n-1}( \del \Omega \setminus \del_r \Omega) =0$ 
+
+Morally, the last term is 0, because $\del \Omega$ is a null-set.
+\begin{defn}
+	Let $\Omega \subset \mathbb{R}^n$ open, $f \in L^{1}_{loc} ( \Omega) $.\\
+	$f$ is weakly differentiable if $\exists g \in L^{1}_{loc} ( \Omega, \mathbb{R}^n) $ 
+	\[ 
+	\int_\omega f \del_i \phi d \mathcal{L}^{n}= - \int_{ \Omega }^{  }g_i \phi d \mathcal{L}^{n}\forall \phi \in C^{1}_c( \Omega) 
+	\]
+$f$ is $k$-times weakly differentiable if $\forall \alpha\in \mathbb{N}^{n}, |\alpha| \leq k$, $\exists g_\alpha \iin L^{1}_{loc} $ such that
+\[ 
+\int_{ \Omega }^{  } f D^{\alpha}\phi d \mathcal{L}^{n}= ( -1)^{|\alpha|} \int_{ \Omega }^{  }g_\alpha \phi d \mathcal{L}^{n}
+\]
+We write $g_\alpha = D^{\alpha} f$ 
+
+\end{defn}
+\begin{rmq}
+If $f\in C^{k}( \Omega) $, then it is $k$-times weakly differentiable and the derivatives are the classical ones.
+\end{rmq}
+\begin{exemple}
+If $\Omega= \mathbb{R}$, then $f( x) = |x|$ has a weak derivative.\\
+Let $g( x) $ be the step function, we want to show that for $\phi \in C^{1}_c ( \mathbb{R}) $, we want to show that
+\[ 
+\int_{ \mathbb{R} }^{  } |x| \phi'( x) dx = - \int_{ 0 }^{  \infty  } \phi( x) dx + \int_{ - \infty  }^{0  } \phi( x) dx
+\]
+Notice that 
+\[ 
+\int_{ 0 }^{ \infty  }\phi( x) dx = x\phi( x) |_0^{ \infty }- \int_{ 0 }^{  \infty  } x\phi'( x) dx
+\]
+The first term is 0 and so the equality holds.
+
+\end{exemple}
+
+
+
+\end{document}	

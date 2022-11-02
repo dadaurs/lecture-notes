@@ -1,0 +1,56 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Mon 31 Oct}{group cohomology}
+We'll write $A_q= \hom_G( X_q, A) $.\\
+Recall $A_q = A_{-q-1} \simeq \left\{ x: G\times \ldots \times G\to A \right\} $.\\
+The maps $\del_q$ are given by
+\begin{itemize}
+\item $\del_0x = N_Gx$ for $x\in A_{-1} = A$ 
+\item $ [ \del_1 x] ( \sigma) = \sigma x -x$ 
+\item $\del_{-1} x = \sum_{\sigma \in G} ( \sigma^{-1}x( \sigma) - x( \sigma) ) \in A$ 
+\item For $q \geq 1$,
+	\[ 
+	\del_q x ( \sigma_1,\ldots,\sigma_q) = \sigma_1 x( \sigma_2,\ldots,\sigma_q) + \sum_{i=1}^{ q-1}( -1)^{i} x( \sigma_1,\ldots,\sigma_i\sigma_{i+1} ,\ldots,\sigma_q) + ( -1)^{q}x( \sigma_1,\ldots,\sigma_{q-1} ) 
+	\]
+
+\item And
+	\[ 
+	\del_{-q-1} x ( \sigma_1,\ldots,\sigma_q) = \sum_{\sigma \in G} [ \sigma^{-1}x( \sigma, \sigma_1,\ldots, \sigma_q) + \sum_{i=1}^{ q}( -1)^{i}x( \sigma_1,\ldots,\sigma_{i-1} ,\sigma_i\sigma) + \ldots] 
+	\]
+					
+\end{itemize}
+In low degree, we can compute these groups
+\begin{enumerate}
+\item 
+	\[ 
+		H^{-1}( G,A) = \faktor{\ker \del_0}{\im \del_{-1} }= \faktor{{}_{N_G} A}{I_G A}
+	\]
+
+\item 
+	\[ 
+	H^{0}( G,A) = \frac{\ker \del_1}{\im \del_0}= \faktor{ A^{G}}{N_G A}
+	\]
+	
+
+\item Looking at $1$-cocycles, we see that they are maps $x:G\to A$ with 
+	\[ 
+	\del_2 x =0 \iff x( \sigma\tau) = \sigma x( \tau) + x( \sigma) 
+	\]
+If $G$ operates trivialy on $A$, then these are just $\hom( G,A) = H^{1}( G,A) $.\\
+In particular, if $A= \faktor{\mathbb{Q}}{\mathbb{Z}}= \hom( G, \faktor{\mathbb{Q}}{\mathbb{Z}})=\chi( G)  $ is the "character group".
+\end{enumerate}
+In general, given an exact sequence $0\to A\to B \to C \to 0$, then $0 \to A^{G}\to B^{G}\to C^{G}\xto\delta H^{1}( G,A) $ is exact.\\
+The group $H^{2}( G,A) $ has the following interpretation, extensions $\hat{G}$  of a $G$ module $A$ by $G$ are uniquely determined by a $G$-module structure on $A$ and a class $x( \sigma,\tau)$ of "factor systems".\\
+These factor systems are uniquely determined by elements in $H^{2}( G,A) $.\\
+We have interpretations of $q=-1,0,1,2$, later we will see what $q=-2$ does (under some mild assumptions).
+\subsection{The exact sequence of Cohomology}
+Given $A,B$ two $G$-modules and $f:A\to B$ some $G$-hom, then this induces a map $ \overline{f_q}: H^{q}( G,A) \to H^{q}( G,B) $ sending $[c] \to [ f_q c] $.\\
+We observe that $f_\bullet$ is indeed a chain-map.
+\begin{thm}
+	Let $0 \to A \to B \to C \to 0$ be exact.\\
+	Then there is a canonical homomorphism $\delta_q: H^{q}( G,C) \to H^{q+1}( G,A) $ 
+\end{thm}
+
+
+
+\end{document}	

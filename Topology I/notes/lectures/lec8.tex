@@ -1,0 +1,30 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Wed 02 Nov}{still excision}
+\begin{lemma}
+The map of chain complexes $S^{U}( X) \to S( X) $ is a quasi-isomorphism
+\end{lemma}
+\begin{proof}
+Let $ \sum_{k}^{ } a_k \sigma_k\in S_N X $ be in the kernel of $\delta_n$, ie. $ [ \sum_k a_k \sigma_k] $ representes an element in $H_n( X) $.\\
+To see surjectivity, notice that
+\[ 
+Sd( \sum_k a_k \sigma_k) = \sum_k a_k\sigma_k - h( \delta( \sum a_k \sigma_k) ) - \delta h( \sum a_k \sigma_) 
+\]
+The middle term is 0 by our hypothesis, and we see that $Sd( \sum_k a_k\sigma_k) $ is representing the same element in homology.\\
+We can apply $Sd$ arbitrarily many times and hence $Sd^{l}( \sum_k a_k\sigma_k) $ is too.
+
+Now, for every $k$, $\sigma_k^{-1}A^{\circ}, \sigma_k^{-1}( X\setminus \overline{B}) $ forms an open covering of $\Delta_n$.\\
+There exists a Lebesgue Number $\epsilon_k>0$ for this open cover.\\
+There is an $l_k \in \mathbb{N}$ such that $( \frac{n}{n+1})^{l_k}< \frac{\epsilon_k}{ \sqrt{2} }$.\\
+Now, for any simplex $\tau$ in the barycentric subdivision of $\Delta_n$  $diam \tau \leq \epsilon$.\\
+Now $( \sigma_k)_\ast ( \tau)  \subset X\setminus \overline{B}$ or $ \subset A^{\circ}$.\\
+Setting $l= \max_k l^{_k}$, we see that $Sd^{l}( \sum a_k \sigma_k) $ is a preimage for $\sum a_k \sigma_k$.\\
+For injectivity, let $\sum a_k \sigma_k$ be an element of $S^{U}_\bullet X$ in $\ker \delta$ which is in the image of $\delta$.\\
+Let $\sum b_j \sigma_j $ be such that $\delta( \sum b_j \tau_j ) = \sum a_k \sigma_k $.\\
+There exists an $m$ such that $Sd^{m}( \sum b_j \tau_j )\in S^{U}X $, now $\delta Sd^{m}( \sum b_j \tau_j ) = Sd^{m}( \sum a_k \sigma_k ) $.\\
+Thus, $\sum a_k \sigma_k$ is a boundary.\\
+This concludes the proof.
+\end{proof}
+We can now use that a quasi-isomorphism of complexes of free abelian groups has a homotopy inverse.
+
+\end{document}	

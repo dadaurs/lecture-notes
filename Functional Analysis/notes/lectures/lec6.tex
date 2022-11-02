@@ -1,0 +1,141 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{6}{Fri 28 Oct}{Lp spaces}
+\section{$L^{p}$ spaces}
+\subsection{Measure spaces}
+\begin{defn}
+	Let $X$ be a non-empty set
+	\begin{itemize}
+	\item A subset $\tau \subset P( X) $ is called a $\sigma$-algebra on $X$ if
+	\item $\emptyset \in \tau$ 
+	\item $A\in \tau \implies X\setminus A \in \tau$ 
+	\item $\forall A_i \in \tau \implies \bigcup A_i \in \tau$ 
+	\end{itemize}
+\end{defn}
+If $( X,\tau) $ is a topological space, the borel $\sigma$-algebra is the smallest $\sigma$-algebra containing $\tau$.
+\begin{defn}[Meausre space]
+	A map $\mu :\tau \to [ 0, \infty ]  $ is called a measure $\mu$ if
+	\begin{itemize}
+	\item $\mu( \emptyset) =0$ 
+	\item $\mu$ is $\sigma$ additive, namely, if $A_k$ are such that $A_k \cap A_l= \emptyset \forall k\neq l$, then
+		\[ 
+		\mu( \bigcup A_k) = \sum_{k}^{ } \mu( A_k) 
+		\]
+	
+	\item $( X,\tau,\mu) $ is complete if for any null set $A$ if
+		\[ 
+		B \subset A\implies B \in \tau
+		\]
+		(in particular, $B$ is also a null-set) 
+	\item $\mu$ is $\sigma$-finite if there is $A_k \in \tau$ such that $\mu( A_k) < \infty \forall k $ and $X= \bigcup A_k$
+	\item A property holds almost everywhere if $\exists N$ a null set such that $P$ holds on $X\setminus N$.
+	\item For $E \subset A$ one defines the restricted measure
+		\[ 
+			( \mu|_E) ( A) = \mu( E\cap A) 
+		\]
+		
+	\item $\L^{d}$ denotes the Lebesgue measure on $ \mathbb{R}^{d}$ and $\mu^{d}$ denotes the lebesgue measurable sets.
+	\end{itemize}
+\end{defn}
+\begin{rmq}
+\begin{itemize}
+\item $ ( \mathbb{R}^{d}, \L^{d}) $ is a complete measure space, $\L^{d}$ is $\sigma$-finite.
+\item $B( \mathbb{R}^{d}) \subsetneq \mu^{d} \subsetneq P( \mathbb{R}^{d})  $ 
+\end{itemize}
+\end{rmq}
+In the following, $( X,\tau, \mu) $ is complete and $\sigma$-finite.
+\subsection{Measurable functions and integrals}
+\begin{defn}
+	Let $( X,\tau,\mu) $ be a measure space and $( Y,\tau') $ a topological space.\\
+	A function $f:X\to Y$ is called measurable if $f^{-1}( U) \in \tau\forall U\in \tau'$
+\end{defn}
+\begin{rmq}
+\begin{itemize}
+\item $f$ is measurable $\iff f^{-1}( A) \in \tau\forall A \in B( Y) $ 
+\item $f:X\to [ - \infty , \infty ] $ is measurable $\iff f^{-1}( ( a, \infty ] ) \forall t \in \mathbb{R} \iff f^{-1}( [ a, \infty ] \forall t \in \mathbb{R}) $ 
+\item $f:X\to \mathbb{C}$ is measurable iff $\re f,\im f$ are measurable.
+\item $f:X\to \mathbb{R}^{d}$ is measurable iff every projection is measurable.
+\end{itemize}
+\end{rmq}
+\begin{defn}[Integral]
+	Let $( X,\tau,\mu) $ be a measure space.\\
+	\begin{itemize}
+	\item A function $f:X\to [ 0, \infty ] $ is simple if $\exists \lambda: \mathbb{N}\to [ 0, \infty ] $ and $E: \mathbb{N}\to \tau$ such that $f= \sum_{n\in \mathbb{N}}^{ } \lambda_n \xi_{E_n} $ 
+	\item If $f$ is simple, define
+		\[ 
+		\int_X f d\mu = \sum_{n\in \mathbb{N}}^{ }\lambda_n \mu( E_n) \in [ 0, \infty ] 
+		\]
+		
+	\item For a measurable function $f:X\to [ 0, \infty ]$, define
+		\[ 
+		\int_{ X }^{  } f d\mu = \sup_{\phi \leq f, \phi \text{ simple } } \int_{ X }^{  }\phi d\mu \in [ 0, \infty ] 
+		\]
+	\end{itemize}
+\end{defn}
+\begin{rmq}
+\begin{itemize}
+\item The integral of a simple function is well-defined ( ie. independent of the $\lambda_i$ and $E_i$ ) and is monotone.
+\item One can show $ \int_{ X }^{  }f d\mu = \int_{ ( 0, \infty )  }^{  } \mu( f^{-1}( ( t, \infty ]  ) ) d \L^{1}( t)$
+\end{itemize}
+\end{rmq}
+\begin{rmq}
+We'll write $dx$ or $dx^{d}$ for $\L^{1}$ or $\L^{d}$ respectively
+\end{rmq}
+\begin{defn}
+	Let $( X,\tau,\mu) $ be a measure space, $( Y,\tau') $ a topological space, $f:X\to Y$ a measurable funcition
+	\begin{itemize}
+	\item If $Y = [ 0, \infty ] $, the function is integrable if $ \int_{ X }^{  } f d\mu< \infty $ 
+	\item Consider $Y = [ - \infty , \infty ] $, the function $f$ is integrable if it's positive and negative parts are integrable.\\
+In this case, we define $ \int_{ X }^{  }f d\mu = \int_{ X }^{  } f_+ d\mu - \int_{ X }^{  }f_- d\mu$.
+\item A complex valued function is integrable if it's real and imaginary parts are.
+\item A function valued in $ \mathbb{R}^{d}$ is integrable if it's components are.
+	\end{itemize}
+\end{defn}
+\begin{rmq}
+$f$ is integrable $\iff$  $f$ is measurable and $|f|$ is integrable.
+\end{rmq}
+\subsection{The spaces $L_p$ and $L^{p}$ }
+\begin{defn}
+	Let $( X,\tau,\mu) $ be a measure space.
+	\begin{itemize}
+	\item Let $f:X\to \mathbb{K}$ be a measurable function, we define
+		\[ 
+			\N{f}_p = \N{f}_{L^{p}} = 
+			\begin{cases}
+				( \int_{ X }^{  }|f|^{p}d\mu)^{\frac{1}{p}} \text{ if } p< \infty \\
+				\esssup_x |f| = \inf \left\{ M \in [ 0, \infty ] : f<M \text{ a.e. }  \right\} 
+			\end{cases}
+			
+		\]
+	
+	\item For $p \in [ 1, \infty ] $ 
+		\[ 
+		L_p( X, \mathbb{K}) = L_p( X,\mu, \mathbb{K})= \left\{ f:X\to \mathbb{K}: \N { f}_p < \infty  \right\}  
+		\]
+	
+	\item We denote $L^{p}$ the space $L_p$ modded out by functions which are equal a.e.
+	\end{itemize}
+	
+\end{defn}
+\begin{thm}
+	Let $p\in [ 1, \infty ] $ 
+	\begin{itemize}
+		\item $\N{\cdot}_p$ is a semi-norm on $L_p$ and a norm on $L^{p}$ 
+		\item $L^{p }( X, \mathbb{K}) $ is a Banach space (Fischer-Riesz )  
+		\item $L^{2}( X, \mathbb{K}) $ is a Hilbert space with scala product
+			\[ 
+				( f,g) = \int_{ X }^{  } \overline{f}g d\mu
+			\]
+			
+	\end{itemize}
+	
+\end{thm}
+\begin{lemma}
+The space $L^{p}( X, \mathbb{K}) $ is uniformly convex.
+\end{lemma}
+
+
+
+
+
+\end{document}	

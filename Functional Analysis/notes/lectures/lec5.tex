@@ -1,0 +1,117 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{5}{Wed 26 Oct}{Examples of function spaces}
+\section{Function Spaces}
+\begin{defn}
+	Let $( X,p) $ be a normed space and $T\neq \emptyset$ a set, then the set 
+	\[ 
+	B( T,X) = \left\{ f:T\to X : \sup_{t\in T} \N { f( t) } _X < \infty \right\} 
+	\]
+	is the set of bounded functions on $T$.
+\end{defn}
+\begin{lemma}
+$B( T,X) $ is a normed space, it is complete if $X$ is complete.
+\end{lemma}
+\begin{lemma}
+If $( T,\tau) $ is a topological space, then $C_b( T,X) = C^{0}( T,X) \cap B( T,X) $ is a closed linear subspace of $B$.\\
+\end{lemma}
+\begin{rmq}
+$C^{0}( T,X) $ is a metric space but not a normed space.\\
+We can still metrize uniform convergence by letting
+\[ 
+d( f,g) =\min (\N { f-g} _{ \infty } , 1) 
+\]
+\end{rmq}
+\begin{lemma}
+The continuous image of a compact set is compact.\\
+If $f \in C^{0}( T,X) $ , $K \subset T$ compact and $X$ is normed, then $f( K) $ is bounded.\\
+If $X= \mathbb{R}, K \neq \emptyset,f( K) $ has a maximum and minimum.
+\end{lemma}
+Now, let $K \subset T$ be compact and $\mathbb{K}= \mathbb{R}, \mathbb{C}$.\\
+Consider $C^{0}( K, \mathbb{K}) $ 
+\begin{defn}
+	A set $\mathbb{A} \subset C^{0}( K, \mathbb{K}) $ is a subalgebra of $C^{0}$ if it is a linear subspace and closed under multiplication.\\
+	It separates points if $\forall a,b \in K \exists f \in \mathbb{A}$ such that $f( a) \neq f( b) $.
+\end{defn}
+\begin{thm}[Stone-Weierstrass]
+	If $ \mathbb{A}\subset C^{0}( K, \mathbb{R}) $ is a subalgebra that separates points, then either $ \overline{ \mathbb{A}}= C^{0}$ or $\exists x_0 \in K$ such that
+	\[ 
+		\overline{ \mathbb{A}} = \left\{ f\in C^{0}: f( x_0) =0 \right\} 
+	\]
+	
+\end{thm}
+\begin{lemma}
+If $ \overline{\mathbb{A}}$ is a subalgebra, then $f \in \overline{\mathbb{A}}\implies |f|\in \overline{\mathbb{A}}$, then $ \min( f,g) , \max( f,g) \in \overline{\mathbb{A}}$.
+\end{lemma}
+
+The proof of this is an exercise.
+\begin{lemma}
+Assum $\forall x \in K \exists g \in \mathbb{A}$ such that $g( x) \neq 0$.\\
+$\forall a,b \in K, \forall \lambda,\mu\in \mathbb{K},\exists g \in \mathbb{A}$ such that $g(a) =\lambda, g( b) = \mu$.
+\end{lemma}
+\begin{proof}
+Let $h \in \mathbb{A}$ be such that $h( a) = h( b) $.\\
+Let $g( x) = \alpha h( x) + \beta h^{2}( x) $, solving for $g( \alpha) = \lambda$ and $g( \beta) = \mu$, we get a linear system with determinant $h( a) h^{2}( b) - h^{2}( b) h( a) = h( a) h( b) ( h( b) -h( a) ) $ \\
+Suppose $h( a) = 0$, consider $g_a\in \mathbb{A} $ such that $g_a( a) \neq 0$ and let $G( x) = \alpha g_\alpha( x) + \beta h( a) $, again solving $G(a	) = \lambda, G( b) = \mu  $, we get a linear system with non-zero determinant.
+\end{proof}
+We can now prove the Stone-Weierstrass theorem.
+\begin{proof}
+Fix $ f\in C^{0}$.\\
+Pick $a \in K$ such that $\exists g \in \mathbb{A}, g( a) \neq 0$, then $g( x) \frac{f( a) }{g( a) }\in \mathbb{A} $ and is equal to $f$ at $a$.\\
+Assume $\forall a \in \mathbb{K} \exists g_a \in \mathbb{A}$ such that $g_a( a) \neq 0$.\\
+Fix $F\in C^{0}( K) $ and $\epsilon>0$.\\
+We need to show that $\exists f\in \overline{\mathbb{A}}$ such that $ \N { F- f}_{ \infty } < \epsilon$.\\
+\begin{enumerate}
+\item $\forall a \in K \exists f_a \in \overline{\mathbb{A}}$ such that $F( a) = f_a( a) $ and $F( y)  < f_a ( y) +\epsilon$.\\
+	We prove this later on.
+\item Given 1, notice that $\forall a \in K$, let $V_a = \left\{ y \in K, f_a( y) < F( y) + \epsilon  \right\} $.\\
+	Then for everry $\alpha \in V_a$, $V_a$ is open and $K= \cup V_a$ and we can refine this to a finite cover.\\
+	Let $g= \min \left\{ f_{a_1} ,\ldots, f_{a_n}   \right\} $.\\
+	Then $g \geq F-\epsilon; g \leq  f_a \leq  F+ \epsilon$ on $V_{a_i} \implies |F-g | \leq \epsilon$ 
+\end{enumerate}
+Now, we prove step 1.\\
+Fix $a\in K$.\\
+$\forall b \neq a \exists f_{ab} \in \overline{\mathbb{A}}$ such that $f_{ab} ( a) = F( a) , f_{ab} ( b) = F( b) $.\\
+Let $V_{ab} = \left\{ y \in K: F( y) < f_{ab} ( y) + \epsilon \right\} $.\\
+Let $b_1, \ldots b_M$ be such that $K = \bigcup_{i=1}^{M} V_{ab_i} $.\\
+Let $f_a= \max \left\{ f_{ab_1},\ldots, f_{ab_M}   \right\} \in \overline{\mathbb{A}}$.\\
+Then $f_a > F - \epsilon$ on $K$.\\
+
+Assume now $\exists x_0$ such that $f\in \mathbb{A}\implies f( x_0) =0$.\\
+Let $ \tilde{ \mathbb{A}} = \mathbb{A}+ \mathbb{R}$, then $ \overline{\tilde{\mathbb{A}}}= C^{0}$.\\
+Let $F\in C^{0}, F( x_0) =0$, then $\exists f_\epsilon \in \mathbb{A}, \lambda_\epsilon \in \mathbb{R}$ such that $| f_\epsilon + \lambda_\epsilon - F|_{ \infty } < \epsilon$.\\
+
+But $F( x_0) = f_\epsilon( x_0) = 0 \implies |\lambda_\epsilon| < \epsilon\implies | f_\epsilon - F|_{ \infty } < 2 \epsilon$ 
+\end{proof}
+\begin{thm}
+	If $ \mathbb{A} \subset C^{0}( K, \mathbb{C}) $ is a subalgebra, separates points and $f\in \mathbb{A}\implies \overline{f} \in \mathbb{A}$.\\
+	Then either $ \overline{\mathbb{A}}= C^{0}$ or $ \overline{\mathbb{A}}= C^{0}\cap \left\{ f( x_0) =0 \right\}.$ 
+\end{thm}
+\begin{proof}
+$ \mathbb{A}_{ \mathbb{R}} = \mathbb{A}\cap C^{0}( K, \mathbb{R}), f \in \mathbb{A}\implies \re f, \im f \in \mathbb{A}_{ \mathbb{R}} $.
+\end{proof}
+\begin{defn}
+If $\Omega \subset \mathbb{R}^{d}$ is open, then $C^{k}( \Omega, \mathbb{K})= \left\{ f : \Omega\to \mathbb{C}| f \text{ k-times continuously differentiable. }  \right\}  $.\\
+We define $C^{k}(  \overline{\Omega}, \mathbb{K})= \left\{ f \in C^{k}( \Omega, \mathbb{K})| f \text{ continuously extends to the boundary. }   \right\}  $ 
+\end{defn}
+\begin{lemma}
+$ C^{k}_b = \left\{ f \in C^{k}: D^{\alpha}f \in B \forall |\alpha| \leq k \right\} $ is a Banach space.
+\end{lemma}
+\begin{defn}[Hoelder Continuity]
+	Let $f: \Omega\to \mathbb{K}$, $\alpha \in ( 0,1] $ , then
+	\[ 
+		[ f]_{\alpha} = \sup _{x,y \in \Omega, x\neq y} \frac{|f( x) - f(y )| }{|x-y|^{\alpha}}
+	\]
+	\[ 
+	C^{k,\alpha}= \left\{ f \in C^{k}: D^{\beta}f \in C^{\alpha }\forall |\beta| \leq k \right\} 
+	\]
+	
+\end{defn}
+
+
+
+
+
+
+
+\end{document}	

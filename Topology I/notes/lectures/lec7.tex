@@ -1,0 +1,85 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Mon 31 Oct}{Excision }
+\begin{proof}
+We want to show that $H_n( S_\bullet^{U}( X) ,\delta_\bullet) \to H_n( X) $ is an isomorphism.\\
+A chain map inducing isomorphisms on all homology groups is also called a quasi-isomorphism.\\
+We'll use barycentric subdivision to make our simplices smaller.\\
+First, let's recall the lebesgue lemma
+\begin{lemma}
+Let $K$ be a compact metric space and $( U_i)_{i \in I} $ an open cover of $K$.\\
+Then, there is an $\epsilon>0$ s.t. any $\epsilon$-ball around any point in $K$ is contained in a single open set $U_i$.
+\end{lemma}
+To prove this, for every $x\in K$, we choose $\delta( x) >0$ such that the $\delta( x) $ ball around $x$ is contained in a $U_i$ of the cover.\\
+Now, we look at $ \left\{ B_{ \frac{\delta( x) }{2}} ( x)  \right\}_{x\in K} $, this is an open cover of $K$, so there is a finite subcover $ B_{ \frac{\delta( x_i) }{2}} ( x_i) $.\\
+Set $\epsilon = \min_j \frac{\delta( x_j) }{2}$.\\
+Given any $x\in K$, we want to show that $B_{\epsilon} ( x) $ is completely contained in some $U_i$.\\
+We can find $x_l$ such that $d( x,x_l) < \frac{\delta( x_l) }{2}$, let $y\in B_\epsilon( x) $  then $\delta( x_l,y)	\leq  \frac{\delta( x_l) }{2} + \epsilon \leq  \delta( x_l)  $ \\
+
+We can apply the Lebesgue lemma to the open cover $ \left\{ \sigma^{-1}( X\setminus \overline{B}) , \sigma^{-1}( A^{\circ})  \right\} $ is an open cover of compact metric spaces $\Delta^{n}$.\\
+Thus, there exists $\epsilon>0$ such that  any open $\epsilon-$ball in $\Delta^{n}$ is mapped by $\sigma$ either to $X\setminus B$ or to $A$.\\
+We'll now prove the following proposition
+\begin{propo}
+There is a chain map (called the Barycentric subdivision)  $Sd: S_\bullet X\to S_{\bullet} X$
+which is
+\begin{itemize}
+\item Natural in $X$ 
+\item Chain homotopic to the the identity
+\item If $X= \Delta^{n}$, then any summand $\tau$ of $Sd( \sigma) $ for $\sigma: \Delta^{k}\to \Delta^{n}$ has the following property
+	\[ 
+	diam( \im\tau) \leq  \frac{k}{k+1}diam ( \im \sigma) 
+	\]
+	
+\end{itemize}
+\end{propo}
+Let $v_0,\ldots,v_n \in \mathbb{R}^{N}$, then their barycenter is $ \frac{v_0+ \ldots+v_n}{n+1}$.\\
+We will consider the following auxiliary "cone" map.\\
+For any $\tau: \Delta^{k}\to \Delta^{n}$ and $b$ the barycenter of $\Delta^{n}$, define $\rho_b( \tau) : \Delta^{k+1}\to \Delta^{n}$ by
+\[ 
+\rho_b( t_0,\ldots, t_{k+1} ) \mapsto
+\begin{cases}
+t_0 b + \tau(\frac{1}{1-t_0}( t_1,\ldots, t_{k+1} )  )( 1-t_0)  \\
+b \text{ if } t_0 =1
+\end{cases}
+\]
+This is indeed continuous.\\
+\subsection*{ What is the relation of the cone construction and the boundary of a simplex? }
+\begin{align*}
+	\delta_{k+1} \rho_b( \tau) &= \sum_{j=0}^{ k+1}( -1)^{j} \rho_b( \tau) \circ d^{j}\\
+	&= \tau + \sum_{j'=0}^{ k} ( -1)^{j'+1}\rho_b( \tau\circ d^{j}) \\
+	&= \tau - \rho_b( \delta_k\tau) 
+\end{align*}
+So we obtain a linear map $\rho_b: S_k( \Delat^{n}) \mapsto S_{k+1} ( \Delta^{n}) $ with the property 
+\[ 
+\delta_{k+1} \rho = \id - \rho_b\circ\delta_k
+\]
+We define a map $Sd: S_n( X) \to S_n X$.\\
+For $n=0, Sd_0= \id_{S_0 X} $.\\
+Given some $n>0$ and $\sigma: \Delta^{n}\to X$, define 
+\[ 
+Sd( \sigma) = \sigma_\ast( \rho_b Sd( \delta_n i_n) ) 
+\]
+where $i_n$ is the identity of the $\Delta^{n}$ simplex, considered as an element of $Sing_n( \Delta^{n}) $
+
+We claim that $Sd$ is a chain map.\\
+Given $\sigma: \Delta^{n}\to X$, we want to compute
+\[ 
+\delta_n Sd \sigma = \delta_n \sigma_\ast( \rho_b Sd( \delta_n i_n) ) 
+\]
+We can switch $\delta_n$ and $\sigma_\ast$ since $\sigma_\ast$ is post composition and $\delta_n$ is precomposition.
+\begin{align*}
+&= \sigma_\ast ( \delta_n \rho_b Sd( \delta_n i_n) ) \\
+&= \sigma_\ast( Sd( \delta_n i_n) - \rho_b( \delta_{n-1} Sd( \delta_n i_n) ) ) \\
+\intertext{Notice that}
+ \delta_{n-1} Sd( \delta_n i_n) &= Sd( \delta_{n-1} \delta_n i_n) =0
+ \intertext{Thus}
+ \dleta_n Sd( \sigma) = \sigma_\ast Sd( \delta_n i_n) = Sd( \delta_n \sigma)
+\end{align*}
+For naturality, if $f:X\to Y$ is a map of topological spaces, one can explicitly check that $Sd \circ f_\ast= f_\ast\circ Sd $ 
+
+
+
+\end{proof}
+
+
+\end{document}	
