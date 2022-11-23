@@ -1,0 +1,40 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{7}{Mon 07 Nov}{dynamical systems}
+\begin{thm}
+	Let $M$ be a smooth manifold, $X\in \Gamma( TM) $ and $p\in M$.\\
+	Then there exists $- \infty \leq a_p <0 < b_p \leq \infty $ and an integral curve $c:( a_p,b_p) \to M$ with $c( 0) =p$ and $c'( t) = X( c( t) ) $ such that $a_p$ and $b_p$ are maximal in the following sense.\\
+	If $\tilde c: I\to M$ is an integral curve for $X$ with $\tilde c ( 0) =p$, then $I \subset ( a_p,b_p) $ and $\tilde c = c |_{I} $.\\
+	So $c$ is the maximal integral curve for $X$ through $p$.
+\end{thm}
+\begin{proof}
+Let $I_1,I_2$ be open intervals $0 \in I_1\cap I_2$ and $c_j:I_j\to M$ integral curves through $p$.\\
+Let $A= \left\{ t\in I_1\cap I_2| c_1( t) = c_2( t)  \right\}$.\\
+$A$ is closed and non-empty.\\
+To see that $A$ is open, let $t_0\in A$, then by Flow-box, there is a unique solution in a small interval around $t_0$.\\
+As $I_1\cap I_2$ is connected, $A= I_1\cap I_2$.\\
+We can now define $c_1\cup c_2$ in the obvious way.\\
+We can then define $c_{\max} $ in the obvious way.
+\end{proof}
+\begin{defn}
+	Let $M$ be a smooth manifold, $X\in \Gamma( TM) $, then
+	\[ 
+		D( \phi^{X}) = \bigcup_{p \in M} ( a_p,b_p) \times \left\{ p \right\} \subset \mathbb{R}\times M
+	\]
+	such that $t\mapsto \phi_t^{X}( p) $ is the maximal integral curve through $p$.\\
+	This $\phi^{X}$ is the flow of $X$.
+\end{defn}
+\begin{thm}
+	Let $M$ be a smooth manifold, $A=D( \phi^{X} )$ the flow of $X$.\\
+	Then $A$ is open in $\mathbb{R}\times M, \left\{ 0 \right\} \times M \subset A, \phi^{X}$  is $ C^{ \infty }$.\\
+	For $t\in \mathbb{R}, D( \phi_t) $ is open in $M$ and $M = \bigcup_{t >0} D( \phi_t) $\\
+	$\phi_t:D( \phi_t) \to D( \phi_{-t} ) $ is a diffeomorphism\\
+	$\phi_{s} \circ\phi_t \subset \phi_{s+t} $ 
+\end{thm}
+\begin{defn}[Integrable Vector Field]
+	$X$ is called integrable if $D( \phi^{X}) = \mathbb{R}\times M$.
+\end{defn}
+There are non-integrable vector fields, however, if $X$ is compactly supported, then it is integrable.
+				
+
+\end{document}	

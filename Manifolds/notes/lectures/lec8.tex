@@ -1,0 +1,102 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Wed 09 Nov}{dynamical systems associated to a vector field}
+\begin{propo}
+If $X\in \Gamma( TM) $ is compactly supported then the flow $\phi^{X}$ of $X$ is defined on $ \mathbb{R}\times M$.
+\end{propo}
+In particular, if $M$ is compact, every vector field is compactly supported.
+\begin{proof}
+Set $K=\supp X$.\\
+$\forall p \in U \exists U_p \ni p \exists \epsilon>0 ( -\epsilon,\epsilon) \times U_p \in D( \phi^{X}) $.\\
+$K \subset \bigcup_{j=1}^{N}U_{p_j} $.\\
+Take $\epsilon = \min \left\{ \epsilon_{p_j}  \right\} $.\\
+Then $( -\epsilon,\epsilon) \times U \subset D( \phi^{X}) $.\\
+If $p \notin K, \phi_t( p) =p\forall t$.\\
+For $t>0 $ choose $n>0$ such that $\frac{t}{n}< \epsilon$, put $\phi_t^{X}= ( \phi_{\frac{t}{n}} )^{n}$.
+\end{proof}
+\begin{propo}
+Let $X\in \Gamma( TM) ,p \in M, X_p \neq 0$.\\
+Then there exists a chart $( U,\phi) $ centered at $p$ such that $\frac{\del}{\del x_1}= X|_U$.
+\end{propo}
+\begin{proof}
+Choose a chart $\psi$ centered at $p$ such that $T_p\psi [ X_p] = e_1$.\\
+Fix $\epsilon>0, \delta>0$ such that $( -\epsilon,\epsilon) \times \psi^{-1}(  \overline{B( 0,\delta) }) \subset D( \phi^{X}) $.\\
+For $|t|<\epsilon, y \in \mathbb{R}^{m-1},|y|< \delta$ 
+\[ 
+\sigma( t,y) = \phi_t^{X}( \psi^{-1}( 0,y) ) 
+\]
+We claim that
+\[ 
+D( \psi\circ \sigma) ( 0,0) =
+\begin{pmatrix}
+	1 & \ast\\
+	0 & \id_{n-1} 
+\end{pmatrix} 
+\]
+There is a neigborhood on which $\sigma$ is a diffeo, hence $\sigma^{-1}$ is a chart centered at $p$ .
+\end{proof}
+Note that the Schwartz theorem implies $ \frac{\del^{2}}{\del x_i\del x_j}= \frac{\del ^{2}}{\del x_j \del x_i}$.
+\begin{exemple}
+$X= f \frac{\del}{\del x}, Y = g \frac{\del}{\del y}$ 
+\[ 
+XY ( \phi) = f \del_x g \del_y \phi + fg \frac{\del^{2}\phi}{\del x\del y}
+\]
+\[ 
+YX( \phi) = g \del_y f \del_x \phi + fg \frac{\del ^{2}\phi}{\del x\del y}
+\]
+Hence $( XY-YX) ( \phi) = f \del_x g \del_y \phi - g \del_y \del_x\phi$ 
+\end{exemple}
+\begin{defn}[Lie Bracket]
+	For $X,Y \in \Gamma( TM) $ and $f$ smooth, put $ [ X,Y] f = X( Yf) - Y( Xf) $.
+\end{defn}
+\begin{thm}
+	$[X,Y]\in \Gamma( TM) $ is a vector field and $\Gamma( TM) $ together with these operations is a Lie algebra.
+\end{thm}
+Given $\phi:M\to N$ a diffeomorphism, there is an induced map $\phi_\ast:\Gamma( TM) \to\Gamma( TN) $ defined by $\phi_\ast X ( q) = T_{\phi^{-1}( q)} \phi\left[X\left( \phi^{-1}( q) \right)\right]$.\\
+
+\begin{defn}[related vector fields]
+	If $\phi:M\to N$ is smooth, $X\in \Gamma( TM) ,Y \in \Gamma( TN) $ are $\phi$-related if $T\phi\circ X = Y\circ\phi$ 
+	\[ 
+	\forall p \in M T_p\phi [ X( p) ] = Y( \phi( p) ) 
+	\]
+
+\end{defn}
+\begin{propo}
+Let $X_j \in \Gamma( TM) , Y_j \in \Gamma( TN) ,j =1,2$ with $X_j \sim_\phi Y_j$, then $ [ X_1,X_2] \sim_\phi [ Y_1,Y_2] $.
+\end{propo}
+\begin{lemma}
+$X\in \Gamma( TM) ,\phi$ the flow of $X$.\\
+If $f\in C^{ \infty }( M) $ then 
+\[ 
+\frac{d}{dt}\phi_t^{\ast}f = \phi_t^{\ast}( Xf) 
+\]
+If $Y \in \Gamma( TM) $, then
+\[ 
+\frac{d}{dt}\phi_t^{\ast}Y= \phi_t^{\ast}( [ X,Y] ) 
+\]
+
+\end{lemma}
+\begin{proof}
+\begin{enumerate}
+\item $p\in D( \phi_{t_0} ) $ 
+	\[ 
+		\frac{d}{dt}|_{t_0} \phi_t^{\ast} f ( p) = \frac{d}{dt}|_{t_0} f( \phi_t( p) ) 	= X|_{\phi_{t_0} ( p) } f = ( Xf) ( \phi_{t_0} ( p) ) = \phi_{t_0}^{\ast}( Xf)
+	\]
+	
+\end{enumerate}
+\end{proof}
+\begin{thm}
+	If $X,Y\in \Gamma( TM) $, then the following are equivalent
+	\begin{enumerate}
+	\item $ [ X,Y] =0$ 
+	\item $\forall t  $ small enough $\phi_t^{\ast}Y = Y$ 
+	\item $\forall s$ small enough $\psi_s^{\ast} X = X$ 
+	\item $\psi_s \circ\phi_t = \phi_t\circ\psi_s$ 
+	\end{enumerate}
+\end{thm}
+\begin{thm}
+If $X_1,\ldots,X_k\in \Gamma( TM) $ such that $\forall p X_1( p) ,\ldots,X_k( p)  $ linearly independent such that $\forall i,j [ X_i,X_j] =0$.\\
+Then $\forall p \in M$ there exists a chart centered at $p$, $( U,\phi) $, such that $X_j|_{U} = \frac{\del}{\del x_j}$.
+\end{thm}
+
+\end{document}	

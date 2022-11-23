@@ -1,0 +1,101 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Wed 09 Nov}{Sobolev spaces}
+\begin{lemma}
+Let $\Omega \subset \mathbb{R}^n$ open, $p \in [ 1, \infty ) $, $f \in W^{k,p}( \Omega) $.\\
+Choose $V \subset \Omega$ open such that $dist( V, \del\Omega) > 0$.\\
+Then $\exists f_j \in C^{ \infty }( V) \cap W^{k,p}( V) $ such that $f_j \to f$ in $W^{k,p}( V) $ 
+\end{lemma}
+\begin{proof}
+Let $\epsilon < dist( V,\del \Omega) $ and let $\eta_{\epsilon} \in C^{ \infty }_c( B_\epsilon) $ a mollifier.\\
+Let $f_\epsilon = ( f\chi_{\Omega} ) \ast \eta_{\epsilon} \in C^{ \infty }( \mathbb{R}^m) $.\\
+Then 
+\[ 
+\N { f_\epsilon - f}_{L^{p}( V) } = \N { f_\epsilon - ( f\chi_{\Omega} )}_{L^{p}( V) } \to 0
+\]
+If $x\in V$ , $D^{\alpha}f_{\epsilon} ( x) = \int_{ B_{\epsilon} ( x)  }^{  } D^{\alpha}\eta_\epsilon( x-y ) f( y) \chi_{\Omega} ( y) dy$.\\
+This last term is $( \eta_\epsilon \ast D^{\alpha}f) ( x) $ 
+\end{proof}
+\begin{defn}
+	Let $A \subset \mathbb{R}^n, I$ an index set.\\
+	Let $V_i$ be an open cover.\\
+	The family is an open cover if $\forall x \in \bigcup_{i \in I} V_i\exists \epsilon>0$ such that $ \left\{ i \in I : V_i \cap B_\epsilon( x) \neq \emptyset \right\} $ is finite.\\
+	A partition of unity for $A$ with respect to $ \left\{ V_i \right\} $ is a family $\theta_i \in C^{ \infty }_c( V_i, [ 0, \infty ) ) $ such that $\sum_i \theta_i( x) =1\forall x \in A$.
+\end{defn}
+\begin{lemma}
+If $K \subset V \subset X$ , $K$ compact, $V$ open, $X$ a metric space, then there exists $\phi \in C^{0}_c( V,[0,1) $ such that $\phi=1$ on $K$.
+\end{lemma}
+\begin{proof}
+Take $\phi( x) = \min( 1- \frac{2}{\delta}dist( x,K) ,0 ) $, in the case $X $ is a subset of $ \mathbb{R}^n$, we can mollify to get a smooth partition of unity.
+\end{proof}
+We now prove that any finite cover of a compact set has a subordinate partition of unity.
+\begin{proof}
+$K\cap \del V_i$ is compact, disjoint from $V_i$ such that $K\cap \del V_i \subset \bigcup_{j \neq i} V_j$.\\
+Let $\delta_i>0$ such that $ B_{2\delta_i} ( K\cap \del V_i) \subset \bigcup_{j \neq i} V_j$.\\
+Then, let $K_i = K \cap ( V_i \setminus B_{\delta_i( K\cap \del V_i) } ) $ is compact.\\
+There exists $ \hat{\theta_i}\in C^{ \infty }_c( V_i) , \hat{\theta_i}=1$ on $K_i$ .\\
+We know that $\sum \hat{\theta_i}= 1$ on $K$ and let $\theta_i = \frac{ \hat{\theta_i}}{h( \sum \hat{\theta_j}) }$ for $h$ some smooth function which is  the identity on $[1, \infty ]$ and constantly greater than $\frac{1}{2}$ on $ [  - \infty , 1] $ 
+\end{proof}
+\begin{lemma}
+Let $\Omega \subset \mathbb{R}^n$ open, $K_j \subset U_j \subset \overline{U_j}\subset \Omega, j \in \mathbb{N}$ such that $K_j, \overline{U_j}$ compact, $ \left\{ U_i \right\}_{i \in \mathbb{N}} $ a locally finite open cover of $\Omega$, $K_j \cap K_i = \emptyset$.\\
+Then there exists a partition of unity $\theta_i \in C^{ \infty }_c ( U_j, [ 0,1] ) $ with $\theta_j = 1 $ on $K_j$.
+\end{lemma}
+\begin{proof}
+	Let $V_j = U+j \setminus \bigcup_{i \neq j} K_i$.\\
+	$K_j \subset V_j$ and $V_j$ is an open cover of $\Omega$.\\
+	We claim that there exist $W_j$ open such that $ \overline{W_i}$ compact, $ \overline{W_i}\subset V_j, \Omega = \bigcup_{j <m} W_j \cup \bigcup_{i \geq m} V_i \forall m$.\\
+	TO show this, notice that
+	\[ 
+	\del V_m \subset \overline{V_m} \subset \overline{U_m} \subset \Omega = \bigcup_{j < m} W_j \cup \bigcup_{j \geq m} V_j 
+	\]
+Thus there exists $\delta_m >0 $ such that $( \del V_m) _{\delta_m} \subset \bigcup_{j <m} W_j \cup \bigcup_{i >m } V_i$.\\
+Now, we let $W_m = V_m \setminus ( \del V_m)_{\delta_m} $.\\
+Pick $ \hat{\theta_i}$ smooth such that $ \hat{\theta_i}=1$ on $\overline{W_j}$ and $\theta_j$ as above.
+\end{proof}
+\begin{thm}[Meyers-Serrier]
+	Let $\Omega \subset \mathbb{R}^{d}$ open, $p \in [ 1, \infty ) $, $K \subset \mathbb{N}_0$, then $C^{ \infty }( \Omega) \cap W^{k,p}( \Omega) $ is dense in $W^{k,p}( \Omega) $.
+\end{thm}
+\begin{proof}
+Let $f\in W^{k,p}( \Omega) , \epsilon>0$.\\
+For $h,l \in \mathbb{N}$ 
+\[ 
+U_{l,h} = \left\{ x\in \Omega: l < |x| < l+2; \frac{1}{2^{h}}< dist( x,\del\Omega) < \frac{1}{2^{h-2}} \right\} 
+\]
+There is an open cover $\Omega = \bigcup_n U_n$ which is locally finite ( $n$ runs over all pairs of indices)\\
+The $\overline{U_n}$ are compact.\\
+There exist $\theta_n \in C^{ \infty }_c( U_n) , \sum \theta_n =1$.\\
+We can choose $f_n \in C^{ \infty }( U_n) $ such that $\N { f_n -f}_{W^{k,p}( U_n) }  $.\\
+Let $f_\epsilon = \sum_n \theta_n f_n \in C^{ \infty }( \Omega) $.\\
+We want to show that
+\begin{align*}
+\N { f_\epsilon - f }_{k,p}  < \epsilon
+\intertext{We can write}
+f_\epsilon - f = f_\epsilon - f \sum_n \theta_n = \sum_n ( f_n -f) \theta_n
+\intertext{The $L^{p}$ norm of the difference is bounded by}
+\sum_n \N { ( f_n -f )\theta_n}  \leq \sum_n \N { f_n - f}_{L^{p}( U_n) } \leq \sum_n \delta_n
+\intertext{For the $\alpha$-th derivatives, we get}
+D^{\alpha}( f_\epsilon - f) = \sum_n D^{\alpha}( ( f_n -f) \theta_n) = \sum_n \sum_{0 \leq \beta \leq \alpha} \binom { \alpha} { \beta} D^{\alpha-\beta}( f_n -f) D^{\beta}( \theta_n) 
+\intertext{Taking $L^{p}$ norms on both sides and choosing $\delta_n$ appropriately, everything converges}
+\end{align*}
+\end{proof}
+\begin{lemma}
+Let $\Omega \subset \mathbb{R}^n $ open, $p,q \in [ 1, \infty ] $, $\frac{1}{p}+ \frac{1}{q}=1$ , $f\in W^{k,p}, g \in W^{k,q}\implies fg \in W^{k,1}$ with the usual product rule.
+\end{lemma}
+\begin{lemma}
+Let $\Omega$ open, $p \in [ 1, \infty ) $, $g\in W^{1,p}, f \in C^{1}\cap Lip$, then $f\circ g \in W^{1,p}_{loc} $ if $f( 0) =0 $ or $|\Omega|< \infty $, then $f\circ g \in W^{1,p}$.
+\end{lemma}
+\begin{crly}
+$f\in W^{1,p}\implies f_+,f_-, |f| \in W^{1,p}$.
+\end{crly}
+
+
+
+
+	
+
+
+
+
+
+
+\end{document}	

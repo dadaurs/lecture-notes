@@ -1,0 +1,51 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Mon 07 Nov}{maps in cohomology}
+\begin{thm}
+	Let $A$ be a $G$-module, $H \subset G$ normal, then
+	\[ 
+		0\to H^{1}( \faktor{G}{H},A^{H}) \xto{inf} H^{1}( G,A) \xto{res} H^{1}( H,A) 
+	\]
+	
+\end{thm}
+\begin{proof}
+If $x: \faktor{G}{H}\to A^{H}$ is a 1-cocyle, assume $inf( x) =\sigma a -a$  is a coboundary.\\
+But then $( \sigma\tau a -a = \sigma a -a\forall \tau \in H) $ thus $a\in A^{H}$.\\
+We check exactness at $H^{1}( G,A) $.\\
+It is clear that $res \circ inf=0$.\\
+For the other inclusion, if $x:G\to A$ is a 1-cocycle such that $x( \tau) = \tau a -a$ with $a\in A$ for all $\tau \in H$.\\
+Let $p:G\to A$ be defined by sending $\sigma\mapsto \sigma a - a $.\\
+Put $x'=x-p$ and observe $x'( \tau) =0$ for $\tau \in H, [ x] = [ x'] \in H^{1}( G,A) $.\\
+Compute $x'( \sigma\tau) = x'( \sigma) + \sigma x'( \tau) = x'( \sigma)  $ and $x'( \tau\sigma) = x'( \tau) + \tau x'( \sigma) $.\\
+So we define $y: \faktor{G}{H}\to A$ by $y( \sigma H) = x'( \sigma) $  
+\end{proof}
+\begin{thm}
+	Let $A$ be a  $G$-module and $H \subset G$ normal.\\
+	Suppose $H^{1}( H,A) =0$ for $i=1,\ldots,q-1$, then
+	\[ 
+		0\to H^{q}( \faktor{G}{H},A^{H}) \xto{inf} H^{q}( G,A) \xto{res} H^{q}( H,A)  
+	\]
+	is exact.
+\end{thm}
+\begin{proof}
+By induction on $q$ , the case $q=1$ follows from the above.\\
+Consider
+\[ 
+	0\to A \to \mathbb{Z}[G]\otimes A \to J_G\otimes A \to 0
+\]
+We have that $0\to A^{H}\to B^{H}\to C^{H}\to 0$ is exact because $H^{1}( H,A) =0$.\\
+We get a map of diagrams induced by connecting homomorphisms from
+\[ 
+0\to H^{q-1}(  \faktor{G}{H}, C^{H}) \to H^{q-1}( G,C) \to H^{q-1}( H,C)  
+\]
+to
+\[ 
+0 \to H^{q}(  \faktor{G}{H}, A^{H})\to  
+\]
+
+
+
+\end{proof}
+
+	
+\end{document}	

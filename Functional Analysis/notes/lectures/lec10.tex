@@ -1,0 +1,133 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Wed 16 Nov}{Bounded subsets of Lp}
+Let $\mathcal{F} \subset L^{p}( \mathbb{R}^n) $, is $ \mathcal{F}$ totally bounded? precompact?\\
+Recall that $ \mathcal{F} \subset C^{0}( \mathbb{R}^n) $ is equicontinuous if $\forall \epsilon>0 \exists \delta>0 $ such that $\forall f \in \mathcal{F}\forall x \in \mathbb{R}^n\forall z \in \mathbb{R}^n, |z|<s |f( x)- f( x+z) | < \epsilon$.\\
+This is the same as
+\[ 
+\forall f \in \mathcal{F}, \forall z \in B_\delta, \N { f( x) - f ( x+z) } _{C^{0}( \mathbb{R}^n) } < \epsilon
+\]
+Which is the same as
+\[ 
+\forall \epsilon>0 \exists \delta>0 : \sup_{f \in \mathcal{F}} \sup_{z\in B_\delta} \N { f - f ( \cdot + z) } _{C^{0}} \leq  \epsilon
+\]
+Again, this is equivalent to saying that
+\[ 
+\lim_{\delta \to 0} \sup_{f \in \mathcal{F}} \sup_{z \in B_\delta} \N { f - f ( \cdot + z) } _{C^{0}} =0
+\]
+Here, we can replace the $C^{0}$ norm with the $L^{p}$ norm.
+\begin{lemma}
+Let $f \in L^{p}( \mathbb{R}^n) , p \in [ 1, \infty ) $.\\
+Then $ \lim_{h \to 0} \ { f - f( \cdot - h) } _{L^{p}( \mathbb{R}^n) } = 0$ 
+\end{lemma}
+\begin{proof}
+If $f \in C^{0}_c ( \mathbb{R}^n) $, then it is true, because $f( \cdot +h) \to f$ uniformly.\\
+If $f \in L^{p}( \mathbb{R}^n), \forall \epsilon \exists f_\epsilon \in C^{0}_c, \N { f-f_\epsilon}_{L^{p}} < \epsilon $.\\
+Thus
+\[ 
+\limsup \N { f - f ( \cdot + h) } _{L^{p}} \leq \limsup \N { f-f_\epsilon} + \N { f_\epsilon - f_\epsilon( \cdot +h) }_{L^{p}} + \N { f_\epsilon( \cdot +h) - f( \cdot + h) } 
+\]
+and each term converges to 0.\\
+
+\end{proof}
+\begin{thm}[Frechet-Kolmogorov-Riesz]
+	
+Take $p \in [ 1, \infty ) $, $\mathcal{F} \subset L^{p}( \mathbb{R}^n) $ is totally bounded iff
+\begin{enumerate}
+\item it is bounded: $\sup_{f\in \mathcal{F}} \N { f}_{L^{p}} < \infty $.
+\item $L^{p}$ equicontinuity: $\lim_{h \to 0} \sup_{f \in \mathcal{F}} \N { f - f( \cdot +h) }=0 $ 
+\item it is "tight": $\lim_{r \to 0} \sup_{f \in \mathcal{F}} \int_{ \mathbb{R}^n\setminus B_R }^{  }|f|^{p}dx$ 
+\end{enumerate}
+\end{thm}
+\begin{proof}
+$\implies$\\
+Let $\mathcal{F}$ be totally bounded
+\[ 
+\forall\epsilon>0\exists f_1,\ldots,f_N \in \mathcal{F} \text{ such that } \mathcal{F} \subset \bigcup_{i=1}^{N}B_\epsilon( f_i) 
+\]
+\begin{enumerate}
+\item $\N { f} _{L^{p}} \leq \epsilon + \max_i \N { f_i}_{L^{p}} $ 
+\item 
+	\[ 
+	\limsup_{h \to 0} \sup_{f \in \mathcal{F}} \N { f- f( \cdot +h) }_p \leq \lim_{h \to 0} \sup_{f \in \mathcal{F}} \in_{i \in [ N] } 2 \N { f-f_i}_{L^{p}} + \N { f_i - f_i( \cdot +h) } \leq  2\epsilon
+	\]
+
+\item 
+	\[ 
+		\limsup_{R \to \infty } \sup_{f \in \mathcal{F}} \N { f} _{L^{p}( \mathbb{R}^n\setminus B_R) } ^{p} \leq \limsup_{R\to \infty } \max_i ( \epsilon+ \N { f_i}_{L^{p}( \mathbb{R}^n\setminus B_R) } ) ^{p}= \epsilon^{p}
+	\]
+\end{enumerate}
+\end{proof}
+To show the other direction, we first show a lemma
+\begin{lemma}
+Let $p \in [ 1, \infty ) $, $f \in L^{p}( \mathbb{R}^n) , \eta \in L^{p}( \mathbb{R}^n, [ 0, \infty ) ), \supp \eta \subset B_r, \int_{ \mathbb{R}^n }^{  } \eta dx =1$.\\
+Then
+\[ 
+\N { \eta\ast f - f }_{L^{p}( \mathbb{R}^n) } \leq  \sup_{|h| < r} \N { f- f( \cdot +h) }_{L^{p}( \mathbb{R}^n) } 
+\]
+
+\end{lemma}
+\begin{proof}
+If $p=1$
+\[ 
+\int_{  }^{  }| \int_{  }^{  } \eta_r( X-y) ( f( y) - f( x) ) dy| dx \leq \sup_{|h|<r} \int_{  }^{  }|f( x) - f( x+h) | dx
+\]
+For $p>1$ 
+\begin{align*}
+	\int_{  }^{  } | \int_{  }^{  }\eta_r( z) f( x-z) dz - f( x) |^{p} dx &= \int_{  }^{  }| \int_{  }^{  }\eta_r( z) ( f( x-z) - f( x) ) dz|^{p} dx\\
+	& \leq  \int_{  }^{  }( \int \eta_r( z) |f( x-z)- f( x) | dz )^{p} dx\\
+	&\leq \int_{  }^{  }( \int \eta_r( z) |f( x-z) - f( x) |^{p}dz) dx\\
+	& \leq \int_{  }^{  }\eta_r( z) dz \sup_{|h|< r} \int_{  }^{  }|f( x) - f( x+h) |^{p}dx
+\end{align*}
+\end{proof}
+Let's show the other implication
+\begin{proof}
+$\impliedby$ \\
+Fix $\epsilon>0$, let $R_\epsilon>0$ such that  $\N { f} _{L^{p}( \mathbb{R}^n\setminus B_{R_\epsilon} ) } < \epsilon \forall  f \in \mathcal{F}$.\\
+Set $R= R_\epsilon +1$.\\
+Pick $\delta \in ( 0,1) $ and $\eta_\delta\in C^{ \infty }_c( B_\delta, [ 0, \infty )  ),\int\eta_\delta =1 $.\\
+Let $f_{\delta,R} = ( f\xi_{B_R} ) \ast \eta_\delta\in C^{ \infty }_c( B_{R} ) \forall f\in \mathcal{F}$.\\
+Call this set $G_{\delta,R} $, we want to show it is $C^{0}$ equicontinuous.
+\[ 
+	| D( ( f\xi_{B_R} )\ast \eta_\delta ) = | D\eta_\delta \ast ( f\xi_{B_R} ) |\leq  \N { D \eta_\delt_{L^{p'} }} \N { f}_{L^{p}}  
+\]
+Which implies that $\sup_{x\in \mathbb{R}^n} \sup_{f \in \mathcal{F}} |Df_{\delta,R} |( x) < \infty $.\\
+By Ascoli-Arzela, $\exists f_1,\ldots,f_N$ such that $G_{\delta,R} \subset \bigcup_{i=1}^{N}B_\epsilon^{C^{0}}( f_i) $.\\
+Claim: $\forall \epsilon\exists \delta$ such that $ \mathcal{F} \subset \bigcup_{i=1} ^{N}B_{3\epsilon}^{L^{p}}( f_i) $.\\
+$\forall f, \exists i$ such that $\N { f_{\delta,R} -f_i}_{\sup} < \hat{\epsilon}$.\\
+Now
+\[ 
+\N { f_{\delta,R} - f\xi_R} \leq \sup_{|h|< \delta} \N { f\xi_R - ( f\xi_R)  ( \cdot +h) }_{L^{p}} 
+\]
+\end{proof}
+\begin{lemma}
+One can show that for $p \in [ 1, \infty ) $, $f \in W^{1,p}( \mathbb{R}^n) $, then 
+\[ 
+\N { f- f( \cdot +h) } \leq  |h| \N { \nabla f}_p
+\]
+
+\end{lemma}
+\begin{lemma}
+$p \in [ 1, \infty ) $, $k \geq 1, \Omega \subset \mathbb{R}^n$ open.\\
+For $f\in W^{k,p}_0( \Omega) , Ef : \mathbb{R}^n\to \mathbb{R}$ , $Ef = f \chi_{\Omega} $.\\
+Then $Ef \in W^{k,p}( \mathbb{R}^n) , D^{\alpha}Ef = E D^{\alpha }f$.
+\end{lemma}
+\begin{propo}[Rellich]
+Let $k \geq 1, p \in [ 1, \infty ), \mathcal{F} \subset W^{K,p}( \mathbb{R}^n)$ bounded and tight, ie.
+\[ 
+\lim_{R \to  + \infty} \sup_{f \in \mathcal{F}} \sum_{|\alpha| \leq K} \N { D^{\alpha}f}_{L^{p}( \mathbb{R}^n\setminus B_R) } =0
+\]
+Then $\mathcal{F}$ is precompact in $W^{k-1,p}( \mathbb{R}^n)$.\\
+If $\Omega$ is bounded, open, $ \mathcal{F}\subset W^{k,p}_0 ( \Omega) $ then if $ \mathcal{F}$ is bounded, $ \mathcal{F}$ is precompact in $W^{k-1,p}( \Omega) $.
+\end{propo}
+
+
+
+
+
+
+
+
+
+
+\end{document}	

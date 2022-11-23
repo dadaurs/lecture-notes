@@ -1,0 +1,103 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Thu 17 Nov}{herbrand quotients}
+\begin{thm}
+	If $G$ is cyclic of order $n$.\\
+	If $A$ is finite, then $q_{f,g} ( A) =1$.\\
+	If $A$ is a submodule of $B$ with finite index, then $h( B)= h( A)  $.
+\end{thm}
+\begin{proof}
+If $f:A\to A$, then
+\[ 
+\# A = \# \ker f \# \im f = \# \ker g \# \im g
+\]
+for finite $A$.
+\end{proof}
+\begin{lemma}
+Let $f,g$ be commuting endomorphisms of $A$, then
+\[ 
+q_{0, g\circ f} = q_{0,g} ( A) q_{0,f} ( A) 
+\]
+\end{lemma}
+\begin{thm}
+	Let $G$ be a cyclic group of order $p$ and let $A$ be a $G$-module.\\
+	Suppose that $q_{0,p} ( A) $ is defined, then $q_{0,p} ( A^{G}) $ and $h( A) $ are defined and
+	\[ 
+	h( A) ^{p-1}= \frac{q_{0,p} ( A^{G}) ^{p}}{q_{0,p} ( A) }
+	\]
+\end{thm}
+\begin{proof}
+Let $\sigma$ be a generator of $G$ and $D= \sigma-1$, then $0 \to A^{G}\to A \xto D I_G A \to 0$ is exact.\\
+We have $q_{0,p} ( A) = q_{0,p} ( A^{G}) q_{0,p} ( I_G A) $.\\
+We have to compute $q_{0,p} ( I_G A) $.\\
+Recall that $\mathbb{Z} N_G = \mathbb{Z} \sum_{i=0} ^{p-1}\sigma^{i}$ annihilates $I_G A$.\\
+Thus, we can view $I_G A$ as a $ \mathbb{Z}[G] / \mathbb{Z}N_G$-module.\\
+But we have ring isomorphisms
+\[ 
+	\mathbb{Z}[G] / \mathbb{Z}N_G \simeq \mathbb{Z}[x] / ( 1+x+\ldots + x^{p-1}) \simeq \mathbb{Z}[\zeta]
+\]
+In $ \mathbb{Z}[\zeta]$, we know that $p = ( \zeta-1)^{p-1}\cdot e  $ for a unit $e \in \mathbb{Z}[\zeta]^{\times}$ and $p = ( \sigma-1)^{p-1}\cdot \epsilon $ for a unit $\epsilon \in \mathbb{Z}[G]/ \mathbb{Z}N_G$.\\
+In particular multiplication by $\epsilon$ is an automorphism of $I_G A$ and $q_{0,\epsilon} ( I_G A) =1$.\\
+We have
+\[ 
+q_{0,p} ( I_G A) = q_{0, D^{p-1}} ( I_G A) q_{0,\epsilon } ( I_G A) = q_{0,D} ( I_G A) ^{p-1}
+\]
+
+\end{proof}
+\begin{thm}[Chevalley]
+	Let $G$ be a cyclic group of order $p$ and let $A$ be a $G$-module, then
+	\[ 
+	h( A) = p^{ \frac{p\beta-\alpha}{p-1}}
+	\]
+	where $\alpha$ is the rank of $A$ and $\beta$ is the rank of $A^{G}$.
+\end{thm}
+\begin{proof}
+Write $A= A_0\oplus A_1$ where $A_1$ is torsion free.\\
+Then $rank A= rank A_1 = \alpha$ and $A^{G}= A_0^{G}\oplus A_1^{G}$, thus $rank A^{G}= rank A_1^{G}= \beta$.\\
+We get 
+\[ 
+h( A) ^{p-1}= h( A_1) ^{p-1}= \frac{q_{0,p} ( A_1^{G}) ^{p}}{q_{0,p} ( A_1) }= p^{p\beta-\alpha}
+\]
+
+\end{proof}
+
+\subsection{A theorem of Tate}
+$G$ no longer is necessarily is cyclic.
+\begin{thm}
+	Let $A$ be a $G$-module.\\
+	Suppose there is $q_0 \in \mathbb{Z}$ such that
+	\[ 
+	H^{q_0}( H, A) = H^{q_0+1}( H,A) =0
+	\]
+	for all subgroups $H \subset G$.\\
+	Then $A$ has trivial cohomology.
+\end{thm}
+\begin{rmq}
+This is clear for $G$ cyclic.
+\end{rmq}
+\begin{proof}
+We can assume $q_0=1$ by dimension shifting.\\
+We need to show that if $H_1( H,A) = H^{2}( H,A) =0$ then $H^{0}( H,A) = H^{3}( H,A) =0$.\\
+We prove this by induction on $\# G$.\\
+If $\# G=1$ there is nothing to prove.\\
+By induction hypothesis, we can assume $H^{0}( H,A) = H^{3}( H,A) =0$ for all proper subgroups $H \subsetneq G$.\\
+We can assume that $G$ is a $p$-group.\\
+There is a normal subgroup $H \subset G$ such that $G /H$ is cyclic of power $p$.\\
+By induction hypothesis, we have $H^{i}( H,A) =0$ for $i=0,1,2,3$.\\
+Now, we know that
+\[ 
+	0 \to H^{q}( G /H , A^{H}) \xto{inf} H^{q}( G,A) \xto{res} H^{q}( H,A) 
+\]
+In our case, $H^{q}( H,A) =0$ hence inflation is an isomorphism.\\
+Now, $H^{1}( G,A) =0\implies H^{1}( G /H, A^{H}) =0 \implies H^{3}( G /H, A^{H}) =0\implies H^{3}( G,A) =0$ because $G /H$ is cyclic.\\
+Similarly, $H^{2}( G,A) =0 \implies H^{2}( G /H, A^{H}) \implies H^{0}( G /H, A^{H}) =0$.\\
+We conclude by observing that
+\[ 
+A^{G}= N_{G |H} A^{H}= N_{G|H} N_H A= N_G A
+\]
+
+\end{proof}
+
+
+
+\end{document}	

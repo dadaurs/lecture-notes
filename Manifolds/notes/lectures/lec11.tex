@@ -1,0 +1,25 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Mon 21 Nov}{Bundles}
+\begin{defn}[section]
+	If $E\xto \pi M$ is a vector bundle, a section of $E$ is a smooth map $f:M\to E$ such that $\pi\circ f = \id_M$.
+\end{defn}
+$\Gamma( E) $ is the set of all smooth sections of $E$.\\
+Vector fields are just smooth sections of the tangent bundle.\\
+A vector bundle $E\to M$ is triviall iff there exist sections $s_1,\ldots,s_N$ such that $\forall p, s_1( p),\ldots,s_N( p) $ is a base of the fiber over $p$.\\
+\begin{propo}
+Let $E,F\to M$ be vector bundles and $\phi:E\to F$  a surjective bundle homomorphism, then there exists a map $j:F\to E$ such that $\phi\circ j = \id$.\\
+\end{propo}
+\begin{proof}
+First, we show that $\phi$ has local sections.\\
+Fix $p\in M$, choose a local fram $s_1,\ldots,s_n:U\t E$.\\
+Making $U$ smaller if necessary, $\phi\circ s_1,\ldots,\phi\circ s_r$ is a frame for $F|U$.\\
+For $q\in U$ and $v\in F_q$, there are unique $\xi_1,\ldots,\xi_r\in \mathbb{R}$ such that $v= \sum \xi_j \circ\phi( s_j( q) ) $ with $\xi_1,\ldots,\xi_r$ smooth on $U$.
+Then
+\[ 
+j( v) = \sum \xi_j s_j( q) 
+\]
+To glue these local sections together, we choose a partition of unity $f_\alpha$  subordinate to an open cover $( U_\alpha) $ and construct the section as $\sum j_\alpha f_\alpha$
+\end{proof}
+
+\end{document}	

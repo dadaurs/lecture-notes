@@ -1,0 +1,33 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Mon 14 Nov}{Vector Bundles}
+\section{Vector Bundles}
+\begin{defn}[Vector Bundle]
+	A smooth real vector bundle over a smooth manifold $M^{m}$ is a triple $( E,\pi,M) $ with the following properties
+	\begin{enumerate}
+	\item $E,M$ are smooth manifolds, $E$ is called total space and $M$ is called the base space
+	\item $\pi:E\to M$ is a surjective submersion
+	\item For each $p\in M$, the fiber is a real vector space.
+	\item $\forall p \in M \exists U \ni p$ open and a diffeomorphism $\phi_U: E|_U = \pi^{-1}( U) \to U \times \mathbb{R}^n$ such that for each $q\in U: \phi_U|_{E_q}: E_q \to \mathbb{R}^n $ is a linear isomorphism.
+	\end{enumerate}
+\end{defn}
+\begin{rmq}
+$\dim E_p = rang( E_p) $ is a locally constant function.\\
+If $M$ is connected, it is constant and it is called the rank of the bundle.\\
+A system $ ( \phi_\alpha) $ of bundle charts is a bundle atlas if $\bigcup_\alpha U_\alpha = M$.\\
+A bundle is called trivial if there exists a global bundle chart.
+\end{rmq}
+\begin{exemple}
+Every complex vector bundle over $S^{1}$ is trivial.\\
+Let
+\[ 
+E= \left\{ z,w \in \mathbb{C}^{2}| |z|=1, \frac{w^{2}}{z} \geq 0 \right\} 
+\]
+with the obvious projection to $S^{1}$.\\
+$E$ is a submanifold:\\
+Fix $z_0\in S^{1}$, choose smooth sqrt function $\xi: S^{1}- z_0 \to S^{1}$ 
+\end{exemple}
+
+
+\end{document}	
+

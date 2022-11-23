@@ -1,0 +1,60 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Wed 16 Nov}{how much of a homology theory is determined by the axioms?}
+\begin{crly}
+Let $D$ be the pushout of $C\leftarrow A \to B$ and $Z$ a locally compact space, then $D\times Z$ is the pushout of $C\times Z \leftarrow A \times Z \to B\times Z$.
+\end{crly}
+\begin{propo}
+Pushouts of NDR are NDR.
+\end{propo}
+\begin{proof}
+Let $( X,A) $ be a NDR and let $Y$ be the pushout of $A\leftarrow A \to B$.\\
+Let $V$ be a neighborhood of $A$ and $r:V\to A$ be a retraction and $H:V\times [ 0,1] \to V$ with $H_0= \id, H_1= \iota\circ r$ and which fixes $A$.\\
+Take the pushout $W$ of $V\leftarrow A \to B$, we get and induced map to $Y$ which is an ebedding and $W$ is a neighborhood of $B $ in $Y$.\\
+Universal properties give a retract $s:W\to B$.\\
+To check this is a NDR, we use the above proposition to get an induced map $W\times [ 0,1] \to W$, this turns out to be the desired homotopy.
+\end{proof}
+\begin{rmq}
+$W$ can be chosen as a pushout of $V\leftarrow A \to B$.
+\end{rmq}
+Now, we want to show that for $A\to X$ a NDR and $h_\ast$ an ordinary homology theory, the map $X\to X /A$ induces isomorphisms on homology.
+\begin{proof}
+Let $V$ be the neighborhood of $A$, there are maps induced by inclusion
+\[ 
+h_n( X,A) \to h_n( X,V) \xleftarrow\simeq h_n( X\setminus A, V\setminus A) 
+\]
+The quotient map induces maps to
+\[ 
+h_n( X /A, A /A) \to h_n( X /A, V /A) \leftarrow h_n( ( X\setminus A) / A, ( V\setminus A) /A) 
+\]
+We show $h_n( X,A) \to h_n( X,V) $ is an isomorphism.\\
+Compare the LES of
+\[ 
+h_n( A) \to h_{n} X \to h_n( X,A) \to h_{n-1} A \to h_{n-1} X
+\]
+and
+\[ 
+h_n( V) \to h_n X \to h_n( X,V) \to h_{n-1} V\to h_{n-1} X
+\]
+the inclusions induces isomorphisms on all groups except $h_n( X,A) \to h_n( X,V) $ and we conclude by the five lemma.
+We can also show that the maps $h_n( X /A, A/A) \to h_n( X /A, V /A) $ are isomorphisms by notice that $ A/ A\to V /A$ is a NDR.
+\end{proof}
+We now want to identify nice spaces on which $h_\ast X$ is already determined by it's coefficient group.
+\begin{defn}[CW complexes]
+	Let $( X,A) $ be a pair of spaces.\\
+	The pair $( X,A) $ together with a filtration $X_{-1} = A \subset X_0 \subset X_1 \subset \ldots \subset X_n \subset \ldots \subset  \subset X$ is a relative CW-complex if
+	\begin{enumerate}
+	\item There exist pushout diagrams $\forall n \geq 0$ such that $X_n$ is the pushout of
+		\[ 
+			\coprod_{i \in I_n} D_n	\xleftarrow { \Phi_i} \coprod_{i \in I_n} S^{n-1}\xto{\phi_i} X_{n-1} 
+		\]
+The $\phi_i$ are called attaching maps and $\Phi_i$ are the "characteristic maps".
+\item $X\simeq \colim_{n \in \mathbb{N}} X_n$ where $X$ carries the weak topology.\\
+	If $A= \emptyset$, $X$ together with a filtration is called a CW-complex.
+	\end{enumerate}
+	
+\end{defn}
+
+
+
+\end{document}	

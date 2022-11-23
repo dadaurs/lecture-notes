@@ -1,0 +1,122 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Mon 21 Nov}{criterion for quasi-coherence and graded rings}
+\begin{proof}
+$1\implies 2$ is clear.\\
+$2\implies 3$ Choose a presentation $A_i^{\oplus I_i}\to A_i^{\oplus J_i}\to M_i \to 0$.\\
+Taking $\widetilde{\cdot}$, this is the same as $\O_{U_i}^{\oplus I_i}\to \O_{U_i} ^{\oplus J_i}\to \widetilde { M}_i \to 0$.\\
+This is exact as $\widetilde{\cdot}$ preserves exact sequences.\\
+$4\implies 1$ Write $U= \spec A$ and $M = \F( U) $.\\
+We have compatible isomorphisms $M_a\simeq \F( D( a) ) \forall a\in A$.\\
+By some lemma, these glue to an isomorphism $\widetilde M \simeq \F|_U$.\\
+$3\implies 4$ Wlog $X=\spec A$, so $X$ is qc.\\
+Choose finitely many $b_i$ such that $X= \bigcup_{i=1}^{n}D( b_i) $ and exact sequences 
+\[ 
+	\widetilde{A_{b_i} } ^{\oplus I_i} \to \widetilde{A_{b_i} } ^{\oplus J_i} \to \F|_{D( b_i) } 
+\]
+call the first map $\tilde\phi$.\\
+There exists $\phi: A_{b_i}^{\oplus I_i}\to A_{b_i} ^{\oplus J_i}$ inducing $\tilde \phi$.\\
+Thus $\F|_{D( b_i) } = \coker ( \tilde\phi) = \widetilde{\coker\phi}$.\\
+Let $a\in A$.\\
+Since $\F$ is a sheaf, we have a map of exact sequences from
+\[ 
+0 \to \F( X) \to \prod_{i=1}^{n}\F( D( b_i) ) \to \prod_{i,j} \F( D( b_ib_j) ) 
+\]
+to
+\[ 
+0 \to \F( X)_a \to \prod_{i=1}^{n}\F( D( b_i) )_a \to \prod_{i,j} \F( D( b_ib_j) ) 
+\]
+to
+\[ 
+0 \to \F( D( a) ) \to \prod_{i} \F( D( ab_i) ) \to \prod_{i,j}  \F( D( ab_ib_j ) ) 
+\]
+Since $\F|_{D( b_i) } $ is $\widetilde M$ for some $A_{b_i}$-module, $M$, the map $\prod \F( D( b_i) )_a\to \prod_i \F( D( ab_i) ) $ is an isomorphism.\\
+Similarly, the map $\prod_{i,j} \F( D( b_ib_j) )_a\to \prod_{i,j } \F( D( ab_ib_j) )  $ is an isomorphism.\\
+By the five-lemma, the map $\F( X)_a\to \F( D( a) ) $ is an isomorphism.
+\end{proof}
+\begin{crly}
+Let $X= \spec A$.\\
+Then $\widetilde{-}: A-mod \to Mod( X,\O_X) $ induces an equivalence between $A-mod$ and $QCoh( X,\O_X) $ 
+\end{crly}
+\begin{rmq}
+Let $X=\spec A$ 
+\begin{enumerate}
+\item If $\widetilde M \in Coh( X,\O_X) $, then $M$ is finitely generated.\\
+\item If $A$ is Noetherian and $M$ is a f.g. $M$-module, then $\widetilde{M} \in Coh( X,\O_X) $.
+\end{enumerate}
+\end{rmq}
+Moreover, if $X$ is a locally Noetherian schemen and $\F \in Mod( X,\O_X) $, then the following are equivalent
+\[ 
+	\F \in Coh( X,\O_X) \iff \forall U \subset X \text{ open affine there is a f.g. $A$-module $M$ such that $ \widetilde{M} \simeq \F|_U$  } 
+\]
+
+\begin{crly}
+If $( X,\O_X) $ is a scheme, then $QCoh( X,\O_X) $ is abelian
+\end{crly}
+\begin{proof}[Sketch]
+If $X$ is affine, this is clear using the equivalence of categories.\\
+If not, we need to check that kernels,cokernels, finite direct sums of qcoh sheaves are qcoh.\\
+As all these conditions are local, wee conclude.
+\end{proof}
+\begin{propo}
+Let $\phi:A\to B$ be a morphism of rings and let $f:X= \spec B \to \spec A=Y$ be the induced map on spectra.\\
+Let $\F= \widetilde{M}\in QCoh( X,\O_X), \G = \widetilde{N} \in QCoh( Y,\O_Y)  $, then there is a natural isomorphism
+\[ 
+	f_\ast \widetilde M = ( \widetilde{{ }_A M}) 
+\]
+and
+\[ 
+f^{\ast}\widetilde N = \widetilde { ( N\otimes_A B) } 
+\]
+In particular, $f_\ast \F$ is qcoh and $f^{\ast}\G$ is too.
+
+\end{propo}
+\begin{proof}
+Take $a\in A$, we have
+\begin{align*}
+	( f_\ast \tilde M) ( D( a) ) &= \widetilde{M} ( D( \phi( a) ) ) \\
+	&= M_{\phi( A) } \\
+	&= ( { }_A M)_a\\
+	&= \widetilde{( { }_A M) } ( D( a) ) 
+\end{align*}
+These morphisms glue to a natural isomorphism $f_\ast \widetilde M \simeq \widetilde{( { }_A M)}  $.\\
+We have a chain of natural isomorphisms $\hom_{\O_X} ( f^{\ast}\widetilde N , \F) \simeq \hom_{\O_Y} ( \widetilde N, f_\ast \F) \simeq \hom_{\O_YY} ( \widetilde N, \widetilde{( { }_A M )} )\simeq \hom_A ( N, { }_A M) \simeq \hom_B( N\otimes_A B ,M) \simeq \hom_{\O_X} ( \widetilde{N\otimes_A B}, \F)  $.\\
+By the Yoneda lemma, this implies that $f^{\ast}\widetilde{N} \simeq \widetilde{N\otimes_A B}$.
+\end{proof}
+\begin{propo}
+Let $f:X\to Y$ be a morphism of schemes.\\
+Then,
+\begin{enumerate}
+\item $\forall \G \in QCoh( Y,\O_Y) , f^{\ast }\G\in \QCoh( X,\O_X) $ 
+\item If $X$ is locally noetherian, then  $\forall \G \in Coh( Y,\O_Y) , f^{\ast }\G \in Coh( X,\O_X) $
+\item If $f$ is qc. and qs. $\forall \F \in QCoh( X,\O_X), f_\ast \F \in QCoh( Y,\O_Y) $ 
+\item If $f$ is proper and $Y$ is locally Noetherian, then $\forall F\in Coh( X,\O_X), f_\ast \F \in Coh( Y,\O_Y) $ 
+\end{enumerate}
+\end{propo}
+\begin{proof}
+Wlog. $Y= \spec A$ affine since quasi-coherence is local.\\
+For 1 and 2, cover $X$ by open affines and assume wlog that $X$ is affine.\\
+Then $f^{\ast} \widetilde{M} = \widetilde{( M\otimes_A B)}$.\\
+Since $f$ is qc., $X= \bigcup_{i=1}^{n}U_i$ with $U_i = \spec B_i$.\\
+Since $f$ is qs, we can write $U_{i} \cap U_j= \bigcup_{k} U_{ij k} $ with $U_{ij k} = \spec B_{ij k} $.\\
+Since $\F$ is a sheaf, we have an exact sequence
+\[ 
+0\to f_\ast \F \to \prod_{i=1}^{n}( f|_{U_i} )_\ast ( \F|_{U_i} ) \to \prod_{ij} \prod_k ( f|_{U_{i j k} })_\ast ( \F|_{U_{i j k} } ) 
+\]
+This is exact as for every $V \subset Y$ open, giving $s\in f_\ast \F( V) = \F( f^{-1}( V) ) $ which is the same as giving $s_i \in \F( f^{-1}( V)\cap U_i ) = \F( f|_{U_i} ^{-1}( V) ) = (  ( f|_{U_i} )_\ast ( \F|_{U_i} ) ) ( V)  $ such that the $s_i$ agree on intersections.
+\end{proof}
+\begin{propo}
+Let $( X,\O_X) $ be a scheme and $\mathcal{I} \subset \O_X$ a sheaf of ideals.\\
+Let $Z= \supp( \O_X /\mathcal{I}) = \left\{ x\in X | ( \O_X /\mathcal{I})_x \neq 0 \right\} $ and $\O_Z = ( \O_X /I) |_Z$.\\
+Then $( Z,\O_Z) $ is a scheme iff $\mathcal{I}$ is quasi-coherent.\\
+$Z$ is ascheme and $\mathcal{I}$ is quasi-coherent are local on $X$, so wlog $X= \spec A$.\\
+If $\mathcal{I}$ is qcoh., then $\mathcal{I}= \widetilde{I}$ for some ideal $I \subset A$.
+\end{propo}
+
+
+
+	
+
+
+
+\end{document}	

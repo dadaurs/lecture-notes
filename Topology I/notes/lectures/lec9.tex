@@ -1,0 +1,42 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Mon 07 Nov}{Conclusion of Excision}
+We proved last week that $S_\ast^{ \left\{ X\setminus B, A \right\} X \to S_\ast X}$ is in fact a quasi-isomorphism.\\
+In homework, we proved that any quasi-isomorphism between chain complexes of levelwise free abelian groups is a chain homotopy.\\
+With this, we can now prove excision
+\begin{proof}
+There are maps between the two following SES
+\[ 
+0 \to S_\ast( A\setminus B) \to S_\ast( X\setminus B) \to S_\ast( X\setminus B, A \setminus B) \to 0
+\]
+\[ 
+0 \to S_\ast(B) \to S_\ast( X) \to S_\ast( X, B) \to 0
+\]
+which are induced by inclusion.\\
+There are maps $S_\ast A \to S_\ast^{U}X$ and $S_\ast( X\setminus B) \to S_\ast^{U}( X) $ and a quotient map $S_\ast^{U}X \to S_\ast( X\setminus B,A\setminus B) $.\\
+As the map of chain complexes is a quasi-isomorphism, they are all chain homotopic and thus tensoring with $G$ preserves the quasi-isomorphism.\\
+Applying the LES in homology, we get maps between the two following short exact sequences
+\[ 
+	H_n( A;G) \to H_n( S_\ast^{ \left\{ X\setminus B, A \right\} }( X) \otimes G)  \to H_n( X\setminus B, A\setminus B;G) \xto{\del} H_{n-1} ( A;G) \to H_{n-1} ( S_\ast^{ \left\{ X\setminus B,A \right\} } ( X)\otimes G) 
+\]
+\[ 
+	H_n( A;G) \to H_n( X;G) \to H_n( X,A;G) \xto{\del} H_{n-1} ( A;G) \to H_{n-1} ( X;G) 
+\]
+Now, applying the five lemma, we see that $H_n( X\setminus B, A\setminus B;G) \simeq H_n( X,A;G) $ 
+\end{proof}
+It remains to show additivity.\\
+Let $\left\{( X_i,A_i) \right\}_{i \in I} $ be a family, we need to show that the inclusions induce a map
+\[ 
+\bigoplus_{i\in I} H_n( X_i,A_i) \to H_n \left( \coprod_{i\in I} X_i, \coprod_{i \in I} A_i\right) 
+\]
+Notice that the homology functor $H_n: Ch_{ \geq 0} \to gr\ab$ commutes with arbitrary direct sums.\\
+Furthermore, from the definition, it is clear that $S_n( \coprod_i X_i,\coprod_i A_i;G) \simeq \bigoplus_i S_n( X_i,A_i;G) $.\\
+It is easy to check that $H_n( pt; \mathbb{Z}) = 0$ for all $ n \neq 0$, tensoring the chain complex (of singular chains of a point)
+\[ 
+	\ldots \xto{\id} \mathbb{Z}\xto{0} \mathbb{Z} \xto { \id} \mathbb{Z}\ldots
+\]
+with $G$, it is clear that $H_n( pt; G) =0\forall n \geq 1$ and $H_0( pt, G) = G$ 
+
+
+		
+\end{document}	

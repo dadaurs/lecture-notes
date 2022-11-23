@@ -1,0 +1,117 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Mon 14 Nov}{stuff}
+\begin{proof}
+Consider
+\[ 
+0 \to A \xto i A \otimes \mathbb{Z} [ G] \to A'' \to 0
+\]
+and
+\[ 
+	0 \to A \otimes B \xto{i'} A' \otimes B \to A'' \otimes B \to 0
+\]
+two exact sequences.\\
+Note $H^{1}( G, A' ) = 0$, so $i( a_1) = \del a_0'$.\\
+Put $a_0'' = j( a_0') $.\\
+By definition of $\delta$ we have $[a_1] = \delta( a_0'') $.\\
+Now we can compute
+\begin{align*}
+[ a_1] \cup [ b_{-1} ] &= \delta [ a_0''] \cup [ b_{-1} ] \\
+&= \delta ( [ a_0''] \cup b_{-1} ) \\
+&= \delta ( [ a_0'' \otimes b_{-1} ] ) \\
+&= [ \del_0 ( a_0' \otimes b_{-1} ) ] \\
+&= [ N_G ( a_0' \otimes b_{-1} ) ] \\
+&= [ \sum_{\tau \in G} a_1( \tau) \otimes \tau b_{-1} ] + [ a_0' \otimes N_G b_{-1} ] 	
+\end{align*}
+\end{proof}
+\begin{lemma}
+\[ 
+[ a_1] \cup [ \sigma] = [ z_{-1} ] \in H^{-1}( G,A) 
+\]
+We can take $z_{-1} = a_1( \sigma) $ 
+\end{lemma}
+\begin{proof}
+There is an isomorphism $H^{-1}( G,A) \simeq H^{0}( G,A\otimes I_G) $.\\
+It suffices to show that $\delta( [ a_1] \cup [ \sigma] ) = \delta ( [ a_1( \sigma) ] ) $.\\
+First, note that $\delta [ a_1( \sigma) ] = [ x_0] $ for $x_0  = \sum_{\tau \in G} \tau a_1( \sigma) \otimes \tau$.\\
+Recall that we have $\delta [ \sigma] = [ \sigma-1] \in H^{-1}( G,I_G ) $, so
+\[ 
+\delta( [ a_1] \cup [ \sigma] ) = ( [ a_1] \cup \delta [ \sigma] ) = - [ a_1 ] \cup [ \sigma-1] = [ y_0]
+\]
+We will use that $a_1$ is a crossed homomorphism, we get
+\begin{align*}
+	y_0 &= - \sum _{\tau \in G} a_1( \tau) \otimes \tau( \sigma-1)\\
+	    &= \sum_{\tau \in G} a_1( \tau) \otimes \tau- \sum_{\tau \in G} a_1( \tau) \otimes \tau \sigma\\
+	    &= \sum_{\tau \in G} a_1( \tau ) \otimes \tau - \sum_{\tau in G} a_1( \tau\sigma) \otimes\tau\sigma + \sum_{\tau \in G} \tau a_1( \sigma) \otimes \tau\sigma\\
+	    &= \sum_{\tau \in G}^{ } \tau a_1( \sigma) \otimes \tau\sigma
+\end{align*}
+where we used that $a_1( \tau) = a_1( \tau\sigma) - \tau a_1( \sigma) $.\\
+Finally, we can look at
+\[ 
+y_0 - x_0 = \sum_{\tau \in G}^{ } ( \tau a_1( \sigma) \otimes \tau( \sigma-1) ) = N_G( a_1( \sigma) \otimes ( \sigma-1) ) 
+\]
+hence $[x_1] = [ y_0] $ 
+\end{proof}
+\begin{thm}
+	\[ 
+	[ a_2] \cup [ \sigma] = \left[ \sum_{\tau \in G}^{ } a_2( \tau,\sigma) \right] \in H^{0}( G,A) 
+	\]
+\end{thm}
+\begin{proof}
+	As before, $A' = \mathbb{Z}[G] \otimes A$ and $0 \to A \to A'\to A'' \to 0$ exact.\\
+	Then $a_2= \del a_1', a_2( \tau,\sigma) = \tau a_1'( \sigma) - a_1'( \tau\sigma) + a_1'( \tau) $.\\
+	Then $[a_2] \cup [ \sigma] = \delta( [ a_1''] \cup [ \sigma] ) = \left[ \sum_\tau \tau a_1'( \sigma)  \right] = \left[ \sum_{\tau \in G}^{ } a_2( \tau,\sigma) \right] + \left[ \sum_{\tau \in G}^{ } a_1'( \tau,\sigma) - \sum_{\tau \in G}^{ }a_1'( \tau) \right] $ 
+\end{proof}
+\subsection{Cohomology of (finite) cyclic groups}
+Let $G$ be a cyclic group of order $n$ with generator $\sigma$.\\
+Now $\mathbb{Z}[G]= \bigoplus_{i=0}^{n-1} \mathbb{Z}\sigma^{i} $, $N_G = 1 +\sigma + \ldots + \sigma^{n-1}$ and
+\[ 
+\sigma^{k}-1 = ( \sigma-1) ( \sigma^{k-1}+ \ldots + \sigma + 1)
+\]
+In particular $I_G = \mathbb{Z}[G] ( \sigma-1) = ( \sigma-1) \mathbb{Z}[G]$ is a principal ideal.
+\begin{thm}[Cohomology of cyclic groups]
+	In the situation before, $H^{q}( G,A )\simeq H^{q+2}( G,A)  $.
+\end{thm}
+\begin{proof}
+It suffices to prove the result for $q=-1$ and then it follows by dimension shifting as
+\[ 
+	H^{q}( G,A) \simeq H^{-1}( G,A^{q+1}) \simeq H^{1}( G,A^{q+1}) \simeq H^{q+2} ( G,A) 
+\]
+Let $Z_1$ be the set of $1$-cocycles. These are crossed homomorphisms 
+\[ 
+x( \sigma^{k}) = \sigma x( \sigma^{k-1}) + x( \sigma) = \ldots = \sum_{i=0}^{ k-1}\sigma^{i}x( \sigma) 
+\]
+Observe that $x$ is fully determined by its value on $\sigma$.\\
+Compute $N_G x( \sigma) = x( \sigma^{n}) = x( 1) =0$, hence $x( \sigma) \in { }_{N_G} A$.\\
+We can define $Z_1\to Z_{-1} = { } _{N_G} A$ sending $x\to x( \sigma) $, this is an isomorphism.\\
+Since it respects coboundaries, it descends to an isomorphism of cohomology groups.\\
+If $x\in R_1$, $x( \sigma^{k}) = \sigma^{k}a-a$ for some $a\in A$, $\iff x( \sigma) \in I_G A = R_{-1} $.  
+\end{proof}
+Given an exact sequence $0 \to A \to B \to C \to 0$ of $G$-modules
+\[ 
+	H^{-1}( G,A) \to H^{-1}( G,B) \to H^{-1}( G,C) \xto{\delta} H^{0}( G,A) \to H^{0}( G,B) \to H_0( G,C) \to H^{1}( G,A) \simeq H^{-1}( G,A) 
+\]
+\begin{defn}[Herbrand quotient]
+	Let $A$ be an abelian group and $f,g$ two endomorphisms of $A$ such that $f\circ g = g\circ f = 0$.\\
+	Then the Herbrand quotient is defined by
+	\[ 
+		q_{f,g} ( A) = \frac{[\ker f : \im g]}{[\ker g: \im f]}
+	\]
+	
+\end{defn}
+An important special case of this is $f= D = \sigma-1,g= N = 1+ \sigma + \ldots + \sigma^{n-1}$ with $A$ a $G$-module.\\
+Clearly, $D\circ N = N \circ D =0$, then $q_{D,N} ( A)= \frac{\# H^{0}( G,A) }{\# H^{-1}( G,A) }$.\\
+If the context is clear, we write $q_{D,N} ( A) =h( A) $.\\
+\begin{thm}
+	Let $G$ be a cyclic group and $0\to A \to B\to C \to 0$ be an exact sequence of $G$-modules, then $h( B) = h( A) h( C) $.
+\end{thm}
+\begin{proof}
+Look at the exact hexagon and call the maps $f_1,f_2,f_3,f_4,f_5,f_6$.\\
+Define $F_i = \# \im f_i$.\\
+And now, ``combinatorics''...
+\end{proof}
+
+
+
+
+\end{document}	

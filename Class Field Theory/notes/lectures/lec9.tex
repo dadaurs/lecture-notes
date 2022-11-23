@@ -1,0 +1,174 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Thu 10 Nov}{stuff}
+Recall $H^{q}( G,A) $ are torsion groups, so there is a decomposiiton $\bigoplus_p H^{q}( G,A)_p$.
+\begin{thm}
+Let $A$ be a $G$-module and $G_p$ a $p$-Sylow subgroup of $G$, then 
+\[ 
+Res_q H^{q}( G,A)_p \to H^{q}( G_p,A) 
+\]
+is injective and $Cores_q:H^{q}( G_p,A) \to H^{q}( G,A)_p$ is surjective.
+\end{thm}
+\begin{proof}
+	$[G:G_p]$ is coprime to $p$, so 
+	\[ 
+		H^{q}( G,A) _p \xto{cores\circ Res} H^{q}( G,A)_p
+	\]
+	is an automorphism as $coRes\circ Res$ is just multiplication by $[G:G_p]$.\\
+	So restriction is injective.\\
+	Orders of elements in $H^{q}( G_p,A) $ are powers of $p$ so $cores( H^{q}( G_p,A) ) \subset H^{q}( G,A) _p$.\\
+	Surjectivity follows as above.
+\end{proof}
+\begin{crly}
+Let $G_p$ be a $p$-Sylow group for $G$.\\
+Suppose that $H^{q}( G_p,A) =0$, then $H^{q}( G,A) =0$.
+\end{crly}
+\begin{proof}
+Because $Res: H^{q}( G,A) \to H^{q}( G_p,A) $ is injective.
+\end{proof}
+\begin{defn}
+	Let $G$ be a finite group, $H \subset G$ a subgroup. Then a $G$-module $A$ is called $ \faktor{G}{H}$-induced if it has a representation
+	\[ 
+	A= \bigoplus_{\sigma \in \faktor{G}{H}} \sigma D 
+	\]
+	where $D \subset A$ is an $H$-module.
+\end{defn}
+\begin{thm}[Shapiro's lemma]
+	Suppose $A= \bigoplus_{\sigma \in \faktor{G}{H}} \sigma D $ is $ \faktor{G}{H}$-induced, then
+	\[ 
+	H^{q}( G,A) = H^{q}( H,D) 
+	\]
+\end{thm}
+\begin{proof}
+Write $ \faktor{G}{H}= \left\{ [ \sigma_1] ,\ldots, [ \sigma_m]  \right\} $.\\
+For $q=0$, we consider the map 
+\[ 
+	\faktor{ A^{G}}{N_G A} \xto{Res} \faktor{A^{H}}{N_H A}\xto{\pi} \faktor{D^{H}}{N_H D}
+\]
+where $\pi$ is induced by the projection onto $[e] D$.\\
+This is an isomorphism with inverse sending $\nu: d+ N_H D \mapsto \sum_{i=1}^{ m}\sigma_i d + N_G A$.\\
+One verifies that $\pi \circ Res \circ \nu = \id = \nu \circ \pi \circ Res$.\\
+For the general case, we want to shift dimensions 
+\[ 
+A^{q}=
+\begin{cases}
+J_G \otimes\ldots \otimes J_G \otimes A \text{ if } q \geq 0\\
+I_G \otimes \ldots \otimes I_G \otimes A \text{ if } q<0
+\end{cases}
+\]
+,
+\[ 
+D^{q}_\ast = 
+\begin{cases}
+J_G\otimes\ldots\otimes J_G \otimes D \text{ if } q \geq 0\\
+I_G \otimes \ldots \otimes I_G \otimes D \text{ if } q<0
+\end{cases}
+\]
+and
+\[ 
+D^{q} = 
+\begin{cases}
+J_H\otimes\ldots\otimes J_H \otimes D \text{ if } q \geq 0\\
+I_H \otimes \ldots \otimes I_H \otimes D \text{ if } q<0
+\end{cases}
+\]
+Note $A^[]{q}= \bigoplus_{i=1}^{m}\sigma_i D_\ast^{q}$.\\
+Compute that 
+\begin{align*}
+	J_G & = J_H \oplus K_1 \text{ for } K_1 = \bigoplus_{\tau\in H} \tau\left( \sum_{i=2}^{ m} \mathbb{Z}\sigma_i\right) \\
+I_G &= I_H \oplus K_{-1} \text{ for } K_{-1} = \bigoplus_{\tau \in H} \tau\left( \sum_{i=2}^{ m} \mathbb{Z}( \sigma_i -1) \right) 
+\end{align*}
+So $D_\ast^{q}= D^{q}\oplus C^{q}$ where $C^{q}$ is $H$-induced.\\
+We get the diagram
+\[ 
+	H^{0}( G, A^{q}) \xto{Res_0} H^{0}( H,A^{q}) \xto{\pi} H^{0}( H, D_\ast^{q}) \xto{p} H^{0}( H, D^{q}) 
+\]
+and then something happens...
+\end{proof}
+\subsection{The cup-product}
+Let $A,B$ be $G$-modules, there is a map
+\[ 
+A^{G}\times B^{G}\to ( A\otimes B) ^{G}
+\]
+and $N_G A\times N_G B\to N_G( A\otimes B) $.\\
+We get an induced map 
+\[ 
+	H^{0}( G,A) \times H^{0}( G,B) \xto{\cup} H^{0}( G,A\otimes B) 
+\]
+We call this the cup product.
+\begin{defn}
+	There is a unique family of billinear maps 
+	\[ 
+	\cup:H^{p}( G,A) \times H^{q}( G,B) \to H^{p+q}( G,A\otimes B) 
+	\]
+called the cup product, satisfying
+\begin{enumerate}
+\item For $p=q=0$ it is the cup product defined above
+\item $H^{p}( G,A'') \times H^{q}( G,B) \to H^{p+q}( G, A''\otimes B) \xto{\delta} H^{p+q+1}( G,A\otimes B) $ and
+	\[ 
+		H^{p}( G,A^{H}) \times H^{q}( G,B) \xto{( \delta,1) } H^{p+1}( G,A) \times H^{q}( G,B) \xto{\cup} H^{p+q+1}( G,A\otimes B) 	
+	\]
+	where 
+	\[ 
+	0\to A \to A' \to A'' \to 0	
+	\]
+	is exact and
+	\[ 
+	0 \to A\otimes B \to A'\otimes B \to A''\otimes B \to 0
+	\]
+	is too
+
+\item If $0 \to B \to B' \to B''\to 0$ and $0 \to A\otimes B \to A\otimes B' \to A \otimes B'' \to 0$ is exact, then
+	\[ 
+		H^{p}( G,A) \times H^{q}( G,B'') \xto{\cup} H^{p+q}( G, A \otimes B'') \xto{ ( -1)^{p}\delta} H^{p+q+1}( G,A\otimes B) 
+	\]
+	and
+	\[ 
+		H^{p}( G,A) \times H^{q}( G,B'') \xto{( 1,\delta) } H^{p }( G,A) \times H^{q+1}( G, B) \xto{\cup} H^{p+q+1}( G,A\otimes B) 
+	\]
+\end{enumerate}
+\end{defn}
+\begin{proof}[Existence of the cup product]
+Nope.
+\end{proof}
+\begin{thm}
+	Let $f:A\to A', g:B\to B'$, we have
+	\[ 
+		\overline{f}[a] \cup \overline{g}[b] = \overline{f\otimes g}( [ a] \cup [ b] ) 
+	\]
+	
+\end{thm}
+\begin{thm}
+Let $A,B$ be $G$-modules, $H \subset G$ a subgroup.\\
+If $[a] \in H^{p}( G,A) , [ b] \in H^{q}( G,B) , [ c] \in H^{q}( H,B) $, then
+\[ 
+Res(  [ a] \cup [ b]) = ( Res [ a] ) \cup ( Res [ b] ) 
+\]
+and
+\[ 
+Cores(  Res [ a] \cup [ c] ) = [ a] \cup cores [ c] 
+\]
+
+\end{thm}
+\begin{thm}
+	Take $ [ a] \in H^{p}( G,A) , [ b] \in H^{q}( G,B) , [ c] \in H^{r}( G,C)  $.\\
+	Then
+	\begin{itemize}
+	\item $ ( [ a] \cup [ b] ) \cup [ c] = [ a] \cup ( [ b] \cup [ c] ) $ 
+	\item $ [ a] \cup [ b] = ( -1)^{pq} [ b] \cup [ a] $ 
+	\end{itemize}
+\end{thm}
+\begin{lemma}
+	$[a_1] \cup [ b_{-1} ] \in H^{0}( G, A\otimes B) $ is given by
+	\[ 
+	\sum_{\tau \in G} a_1( \tau) \otimes \tau b_{-1} 
+	\]
+	
+\end{lemma}
+
+
+
+
+
+
+\end{document}	

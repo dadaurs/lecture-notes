@@ -1,0 +1,54 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Mon 21 Nov}{Tate's theorem}
+\begin{thm}
+	Let $a$ be a $G$-module and assume that for each subgroup $H \subset G$, we have
+	\begin{enumerate}
+	\item $H^{-1}( H,A) =0$ 
+	\item $H^{0}( H,A) $ is cyclic of order $\# H$ 
+	\end{enumerate}
+	Let $[a_0] $ be a generator of $H^{0}(G,A)$, then $[a_0] \cup \cdot$ is an isomorphism for all $q\in \mathbb{Z}$.
+\end{thm}
+\begin{proof}
+	The inclusion $i:A \to A\oplus \mathbb{Z}[G]$ induces an isomorphism $\overline{i}: H^{q}( H,A) \to H^{q}( H,B) $ because $0 \to A \to A \oplus \mathbb{Z}[G] \to \mathbb{Z}[G] \to 0$ is exact and the last term has trivial cohomologgy.\\
+	Consider $f:\mathbb{Z}\to B$ sending $n \to a_0\cdot n+ N_G N$.\\
+	This map induces a homomorphism $\overline{f}: H^{q}( H, \mathbb{Z}) \to H^{q}( H,B) $ which fits into the diagram $H^{q}( G, \mathbb{Z}) \xto{ [ a_0] \cup} H^{q}( G,A )\to H^{q}( G,B)  $ which is equal to the map $\overline{f}$.\\
+	To see that the compositions do agree, notice that for $q=0$, we have that $z_q\in \mathbb{Z}$ gets sent to $ [ a_0\otimes z_q] = [ z_q a_0] $ which gets sent to $ bq a_0 + N_G A $.\\
+	It now suffices to show that $\overline{f}$ is an isomorphism.\\
+	Look at 
+	\[ 
+	0 \to \mathbb{Z}\xto f B \to C \to 0
+	\]
+	The corresponding long exact sequence of cohomology groupsthen is
+	\[ 
+		H^{-1}( H,B) \to H^{-1}( H,C) \xto{\delta} H^{0}( H,Z) \xto{ \overline{f}} H^{0}( H,B) \to H^{0}( H,C) \to H^{1}( H, \mathbb{Z}) 
+	\]
+We know that $H^{-1}( H,B) = H^{1}( H, \mathbb{Z}) =0$ and we want to show that $H^{-1}( H,C) = H^{0}( H,C) =0$.\\
+We want to show that $H^{q}( H,C) =0\forall q $, as this will show that $\overline{f}$ is an isomorphism.\\
+We show that $\overline{f}_0$ is an isomorphism, this follows as it sends $z_0 \in H^{0}( H, \mathbb{Z}) $ to $a_0 z_0$ which is a generator.
+\end{proof}
+\begin{thm}[of Tate]
+	Let $A$ be a $G$-module such that
+	\begin{enumerate}
+	\item $H^{1}( H,A) =0$ 
+	\item $H^{2}( H,A) $ is cyclic of order $\# H$	
+	\end{enumerate}
+	for all $H \subset G$.\\
+	Then the map $[a_2] \cup -: H^{q}( G, \mathbb{Z}) \to H^{q+2}( G,A) $ is an isomorphism when $[a_2]$ is a generator of $H^{2}( G,A) $.\\
+	Additionally, $Res [ a_2] $ generates $H^{2}( H,A) $  and therefore
+	\[ 
+	Res [ a_2] \cup - : H^{q}( H, \mathbb{Z}) \to H^{q+2}( H,A) 
+	\]
+	are also isomorphisms.
+\end{thm}
+\begin{proof}
+We dimension shift to reduce to the theorem above.\\
+\[ 
+\delta^{2}: H^{q}( A^{2}) \to H^{q+2}( H,A) 
+\]
+By assumption, $H^{-1}( H,A^{^{2}}) =0$ and $H^{0}( H,A^{2}) $ is cyclic of order $\# H$.\\
+Furthermore, $\delta^{2}^{-1}[a_2]$ is a generator of $H^{0}( G,A^{2}) $ and we know that it is $[a_2]$ by the construction of the cup product.
+\end{proof}
+
+
+\end{document}	

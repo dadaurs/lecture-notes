@@ -1,0 +1,127 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Mon 14 Nov}{geometric meaning of separated and proper morphisms}
+\section{Valuative Criteria}
+\begin{defn}[Specializations]
+Let $X$ be a topological space
+\begin{enumerate}
+	\item $x,x'\in X$. If $x' \in\overline{ \left\{ x \right\}} $ we say that $x$ specializes to $x'$ ( or $x'$ is a specialization ) or $x'$ generalizes to $x$.
+	\item A subset $V\subset X$ is called closed under specialization if it contains all the specializations of all it's points.
+\end{enumerate}
+\end{defn}
+\begin{rmq}
+Closed subsets are closed under specialization (the converse is not true in general)
+\end{rmq}
+\begin{defn}[Relative specialization]
+Let $f:X\to Y$ be a continuous map.\\
+We say that specializations lift along $f$ if $\forall x\in X$ and any specialization $y$ of $ f( x) $ in $Y$, there exists $x' \in X$ mapping to the specialization such that $x'$ specializes to $x$.
+\end{defn}
+\begin{rmq}
+Both concepts are stable under composition and local on the target.
+\end{rmq}
+\begin{exemple}
+Let $K$ be an alg. closed field, let $X$ be the affine line with two origins over $K$.
+\begin{enumerate}
+\item Look at the morphism $f:\mathbb{A}^{1}\to X$ mapping to the upper origin.\\
+	The generic point corresponding to the upper point of $X$ lifts along $f$, but the other generic point does not.
+
+\item The map $g: X\to \mathbb{A}^{1}$ lifts the generic point of $\mathbb{A}^{1}$ non-uniquely.
+\end{enumerate}
+\end{exemple}
+\begin{lemma}
+Let $f:X\to Y$ be a quasi-compact morphism. Then $f$ is closed if and only if specializations lift along $f$.
+\end{lemma}
+\begin{proof}
+If $f$ is closed, let $x\in X$ and $f( x) \simto y'$.\\
+Then $y' \in \overline{\left\{ f( x)  \right\} = \overline{ \left\{ f(  \overline{\left\{ x \right\} })  \right\} }}= f(  \left\{ \overline{x} \right\} ) $.\\
+So $\exists x' \in \overline{\left\{ x \right\} }$ such that $f( x') = y'$.\\
+Conversely, assume specializations lift.\\
+Let $Z \subset X$ be closed, equipped with the reduced induced scheme structure.\\
+As $\im ( X\to Y) = \im( Z\to X \to Y) $, we may assume wlog that $Z= X$.\\
+Then $f( X) $ is stable under specialization.\\
+We have to show $f( X) $ is closed.\\
+Closed, qc, liftability of specializations are LOCT so wlog $Y$ is affine.\\
+Since $f$ is qc. $\exists$ a surjection $\coprod \spec A_i \to X$ where the disjoint union is affine.\\
+But $\coprod \spec A_i \simeq \spec ( \prod A_i) $, so we can assume that $X$ is affine.\\
+We have reduced to a commutative algebra claim:\\
+Let $\phi: A\to B$ be a morphism of rings. If the image $T$ of $\spec B \to \spec A$ is closed under specializations, then it is closed.\\
+Wlog, $\phi$ is injective.\\
+Recall $p \in \spec A$ is called minimal if it is minimal wrt inclusion.\\
+Every $p'\in \spec A$ is a specialization of a minimal prime.\\
+So it suffices to show that $T$ contains all minimal primes of $A$.\\
+Let $p \in \spec A$ be a minimal prime, consider the fiber product $\spec B_p = \spec A_p \times_{\spec A} \spec B$.\\
+Since localiztion is exact, if $A \to B$ is an inclusion, $A_p \to B_p$ is too, so $p$ has a preimage in $B$.\\
+Hence $T= \spec A$ 
+\end{proof}
+\begin{defn}[Valuation Rings]
+	Let $A$ be a local integral domain with maximal ideal $m_A$ contained in a field $K$ 
+	\begin{enumerate}
+	\item If $B \subset K$ is a local ring with maximal ideal $m_B$, we say that $B$ dominates $A$ if $A \subset B$ and $m_B\cap A = m_A$ 
+	\item The ring $A$ is a valuation ring if it is maximal w.r.t. domination
+	\item The ring $A$ is called discrete valuation ring if it is a Noetherian valuation ring.
+	\end{enumerate}
+\end{defn}
+\begin{lemma}
+Let $A \subset K$ be a local subring, then $A$ is dominated by a valuation ring with fraction field $K$.
+\end{lemma}
+\begin{proof}
+Apply Zorn's lemma to the appropriate set $M= \left\{ A_k \subset K, A_i \text{ local }, A_i \text{ dominated by $A$  }   \right\} $.\\
+Let $ \left\{ A_i \right\} _{i \in I} $ be a totally ordered subset of $M$.\\
+Let $B = \bigcup_i A_i, m_B = \bigcup_i m_{A_i} $.\\
+$B$ is a ring, $m_B \subset B$ is an ideal with $m_B \cap A_i = m_{A_i} $.\\
+$b \in B$ is a unit $\iff \exists c \in B$ such that $bc = 1 \iff \exists i \in I, bc = 1\in A_i\iff \exists i \text{ such that } b \in A_i \setminus m_{A_i}\iff b \notin m_B $.\\
+$B \in M$ and dominates all $A_i$.\\
+So $M$ has a maximal element.
+\end{proof}
+\begin{lemma}
+Let $X$ be a scheme and let $x,x' \in X$ with $x\to x'$.\\
+Then there exists a valuation ring $A$ and a morphism $f: \spec A \to X$ such that $f( \eta_A) , f( m_A) = x'$.\\
+More precisely, given a field extension $g: k( x) \to K$, we may assume $A$ has fraction field $K$.
+\end{lemma}
+\begin{proof}
+Since $x' \in \overline{ \left\{ x \right\} }$, we have $\O_{X,x'} \to k( x) \xto g K$.\\
+By the lemma above, there is a valuation ring $A$ with fraction field $K$ dominating $\phi( \O_{X,x'} ) $.\\
+This map induces $\spec A \to X$ with the desired properties.
+\end{proof}
+\begin{defn}
+	Let $f:X\to Y$ be a morphism of schemes.\\
+	We say that $f$ satisfies the existence part of the valuative criterion if for every commutative diagram of solid arrows $\spec A \to Y \leftarrow X$ commuting with $A \leftarrow \spec K \to X$ where $A$ is a valuation ring with field of fractions $K$, there is a lift $\spec A \to X$ making the diagram commute.\\
+	$f$ satisfies the uniquenes part of the valuative criterion  if there is at most one such map.
+\end{defn}
+\begin{thm}[Valuative criterion]
+	Lt $f:X\to Y$ be a morphism of schemes, TFAE
+	\begin{enumerate}
+	\item Specializations lift along any base change
+	\item $f$ satisfies the existence part of the valuative criterion.
+	\end{enumerate}
+\end{thm}
+\begin{proof}
+$1\implies 2$ \\
+Wlog $Y = \spec A$.\\
+Let $x\in X$ be the image of $g$.\\
+As specializations lift, $\exists x' \in X$ such that $x\to x'$ and $f( x' ) = m_A$.\\
+We get a diagram of rings $A\to K \xleftarrow{g_{x'}^{\sharp} } \O_{X,x'} \xleftarrow{f_{x'}^{\sharp}} A$ commuting with $A\to K$.\\
+Since $f_{x'}^{\sharp}$ is local, $g_{x'} ^{\sharp}( \O_{X,x'} ) $ dominates $A$, hence $g_{x'} ^{\sharp}( \O_{X,x'} ) = A$.\\
+We get a dotted arrow $\O_{X,x'} \to A$.\\
+$2\implies 1$ \\
+Let $Y' \to Y$ be any morphism, then there is a lift $\spec A \to X_{Y'} $ by universal property of the fiber product.\\
+So it suffcies to show that specializations lift along $f$.\\
+Let $x\in X$ and $f( x) \to y'$.\\
+Let $K = k( x) $ and consider $g: k( f( x) ) \to k( x) $ induced by $f$.\\
+By the lemma, we get a lift $\spec A \to X$ and the image of $m_A$ precisely is the preimage of the specialization.
+\end{proof}
+Now
+\begin{enumerate}
+\item If $f:X\to Y$ is qc. \\
+	$f$ universally closed $\iff$ $f$ satisfies existence in valuative criterion
+\item $f:X\to Y$ is qs\\
+	$f$ is separated $\iff f$ satisfies uniqueness in the valuative criterion
+\item $f:X\to Y$ is qs and of finite type\\
+	$f$ is proper $\iff f$ satisfes existence and uniqueness in valuative criterion.
+\end{enumerate}
+
+
+
+
+
+\end{document}	

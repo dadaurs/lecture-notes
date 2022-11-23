@@ -1,0 +1,164 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Fri 04 Nov}{weak derivatives}
+\begin{rmq}
+The definition of weak derivative is equivalent to
+\[ 
+\int_{ \Omega }^{  } f \del_i \phi dx = - \int_{ \Omega }^{  } g_i \phi dx \forall C^{1}_c( \Omega) 
+\]
+similarly, replace $ C^{ \infty }_c( \Omega) $ by $C^{k}_c( \Omega) $.\\
+Indeed, let $\phi \in C^{1}_c( \Omega) $, then for $\epsilon< dist( \del\Omega, \supp \phi) $ we have that $\eta_\epsilon \ast \phi \in C^{ \infty }_c( \Omega) $ and it converges to $\phi$  in $C^{1}$.
+\end{rmq}
+\subsection{Definition of $W^{k,p}, W^{k,p}_0$ }
+\begin{defn}[Sobolev space]
+	Let $\Omega \subset \mathbb{R}^{d}$ open, $1 \leq p \leq  \infty , k \in \mathbb{N}\setminus \left\{ 0 \right\} $.\\
+	The Sobolev space $W^{k,p}( \Omega) = \left\{ f\in L^{p}( \Omega) | f \text{ $k$-times weakly differentiable and } \del^{\alpha}f \in L^{p}( \Omega) \forall |\alpha| \leq k \right\} $.\\
+	The norm is defined as
+	\[ 
+	\N { \cdot} _{W^{k,p}( \Omega) } = \N { \cdot} _{k,p} = \left( \sum_{0 \leq |\alpha| \leq k}^{ }\N { \del^{\alpha}f}_{L^{p}} ^{p}\right)^{\frac{1}{p}}
+	\]
+	
+\end{defn}
+\begin{thm}[Sobolev spaces are banach spaces]
+	Let $\Omega \subset \mathbb{R}^{d}$ open, $1 \leq p \leq \infty $, $k \in \mathbb{N}\setminus 0$.\\
+	Then
+	\begin{itemize}
+	\item $ \left( W^{k,p}( \Omega) , \N { \cdot} _{W^{k,p}( \Omega) } \right) $ is Banach
+	\item $H^{k}( \Omega) = W^{k,2}( \Omega) $ is a Hilbert space with inner product
+		\[ 
+			( f,g)_{H^{k}( \Omega) } = \sum_{k \leq |\alpha|} ( \del^{\alpha}f, \del^{\alpha}g)_{L^{2}( \Omega) } 
+		\]
+		
+	\end{itemize}
+\end{thm}
+\begin{proof}
+	It is clear tht $\N{\cdot}_{k,p} $ is a norm and that $( \cdot,\cdot) _{H^{2}} $ is a scalar product and that for $p=2$, they are compatible.\\
+	We prove completeness.\\
+	LLet $( f_j)_j \subset W^{k,p}( \Omega) $ be Cauchy, then for any multi-index $\alpha$ with $|\alpha| \leq k$, the sequence
+	\[ 
+		( \del^{\alpha}f_j)_j 
+	\]
+	is also Cauchy in $L^{p}$, so there is $g^{( \alpha) }\in L^{p}$ such that 
+	\[ 
+	\lim_j \del^{\alpha} f_j = g^{\alpha}
+	\]
+	in $L^{p}$.\\
+	In particular, $f_j \xto{L^{p}} g^{( 0) }$ \\
+	We want to show that $g^{( 0) }$ is weakly differentiable ($k$ times) and $\del^{\alpha}g^{( 0) }= g^{( \alpha) }$.\\
+	Let $\phi \in C^{ \infty }_c( \Omega) $, then
+	\[ 
+	\int_{ \Omega }^{  } g^{( 0) }\del^{\alpha}\phi dx = \lim_j \int_{ \Omega }^{  }f_j \del^{\alpha}\phi dx = ( -1) ^{|\alpha|} \int_{ \Omega }^{  } \del^{\alpha}f_j \phi dx = ( -1) ^{|\alpha|} \int_{ \Omega }^{  } g^{( \alpha) }\phi dx
+	\]
+\end{proof}
+\begin{defn}
+	For $1 \leq p < \infty $ and $\Omega \subset \mathbb{R}^{d}$ open, define 
+	\[ 
+	W^{k,p}_0( \Omega)  = \left\{ f \in W^{k,p}( \Omega) : ( f_j) \subset C^{ \infty }_c( \Omega) \text{ s.t. } f_j \to f \text{ in } W^{k,p}  \right\} 
+	\]
+	We define $H^{k}_0- W^{k,2}_0 ( \Omega) $.\\
+	For $p= \infty $, the definition is different.
+
+\end{defn}
+\begin{rmq}
+\[ 
+W^{k,p}_0 = \text{ soboolev functions with zero boundary values } 
+\]
+If $\Omega= \mathbb{R}^{d}: W^{k,p}( \mathbb{R}^{d}) = W^{k,p}_0( \mathbb{R}^{d}) $ 
+\end{rmq}
+\begin{lemma}
+$W^{k,p}_0$ is a closed linear subspace of $W^{k,p}$ and hence is a Banach space.
+\end{lemma}
+\begin{proof}
+Take a diagonal sequence.\\
+Let $( f_j)_j \subset W^{k,p}_0$ be Cauchy, then it converges to some $f^{\ast}$ in $W^{k,p}$.\\
+Let $( f_{j,l} )_l \in C^{ \infty }_c ( \Omega) $ such that $f_{j,l} \to f_j$ in $W^{k,p}$.\\
+Let $l= l( j) \in \mathbb{N}$ such that $ \N{f_{j,l( j)} - f_j}_{k,p} \leq  \frac{1}{j}$.\\
+Consider $g_j = f_{j,l( j) }  $ 
+\end{proof}
+\begin{lemma}[Product rule]
+	Let $\Omega \subset \mathbb{R}^{d}$ open, $p \in [ 1, \infty ], k \in \mathbb{N}\setminus \left\{ 0 \right\}$.
+	\begin{itemize}
+	\item If $f\in L^{1}_{loc} ( \Omega) $ is weakly differentiable, $g \in C^{1}( \Omega) $, then $fg \in L^{1}_{loc} ( \Omega) $ is also weakly differentiable and 
+		\[ 
+		\nabla( fg) = ( \nabla f) g + f ( \nabla g) 
+		\]
+
+	\item If $f\in W^{1,p}( \Omega) , g \in C^{1}_c( \Omega) \implies gf \in W^{1,p}( \Omega) $.
+	\item If $f \in W^{k,p}( \Omega) , g \in C^{k}_c( \Omega) \implies gf \in W^{k,p}( \Omega) $ and 
+		\[ 
+			\del^{\alpha}( fg) = \sum_{\beta \leq \alpha}^{ } \binom{\alpha}{\beta} \del^{\beta}f \del^{\alpha-\beta}g
+		\]
+		where $\beta \leq \alpha$ iff $\beta_i \leq \alpha_i\forall i$ and $ \binom{\alpha}{\beta} = \prod_i \binom{\alpha_i}{\beta_i}$.
+	\end{itemize}
+\end{lemma}
+\begin{rmq}
+If $f \in W^{k,p}( \Omega) $ and $g\in C^{ \infty }_c( \Omega) \implies fg \in W^{k,p}_0( \Omega) $.
+\end{rmq}
+\begin{proof}
+We prove the first statement as the second is a direct consequence and the third follows by induction.\\
+SInce $f \in L^{1}_{loc} , g \in C^{0}\implies fg \in L^{1}_{loc} $.\\
+Analogously $( \del_i f ) g \in L^{1}_{loc} $ and $f ( \del_i g) \in L^{1}_{loc}  $.\\
+Let $\phi \in C^{ \infty }_c ( \Omega) $, then
+\[ 
+\int_{ \Omega }^{  } ( \del_i \phi)  fg dx = \int_{ \Omega }^{  } [  ( \del_i \phi) g ] f dx =- \int_{ \Omega }^{  } \phi ( \del_i g ) f dx + \int_{ \Omega }^{  } [  \del_i( \phi g) ] f
+\]
+Since $\phi g \in C^{1}_c( \Omega) $, we can apply the definition of weak derivative and insert it above.
+
+\end{proof}
+\subsection{Sobolev functions in $1$ dimension}
+In $I = ( a,b) \subset \mathbb{R}$ open, bounded interval.
+\begin{thm}
+	\begin{itemize}
+	\item $f\in W^{1,1}( I) \implies \exists c \in \mathbb{R}$ such that
+		\[ 
+		\tilde f ( x) = c + \int_{ a }^{ x } f'( t) dt \forall x \in [ a,b] 
+		\]
+		then $\tilde f  \in [ f] $.\\
+		Note that $\tilde f \in C( [ a,b] ) $ and is weakly differeitbale with derivative $\tilde f ' = f'$ a.e.
+
+	\item If $f \in W^{1,p}( I) $ with $1< p \leq  \infty $, then $\tilde f \in C^{0,\alphaa}( \overline{I}) $ with $\alpha = 1- \frac{1}{p}$ and
+		\[ 
+		[ \tilde f] _{\alpha}  \leq  \N { f'} _{L^{p}} 
+		\]
+
+	\item Let $g \in L^{1}( I) , c \in \mathbb{R}$. Define $f( x) = c + \int_{ a }^{ x } g( t) dt$.\\
+		Then $f\in W^{1,1}( I) $ and $f' =g $ a.e.
+	\end{itemize}
+\end{thm}
+\begin{lemma}
+Let $ p \in [ 1, \infty ) $, then $f \in W^{1,p}_0( I) \implies \tilde f ( a) = \tilde f ( b) =0$.\\
+where $\tilde f $ is the absolute continuous representative of $f$.\\
+Since $f\in W^{1,p}_0( I) $, there is $( f_n)_n \subset C^{ \infty }_c ( I) $ such that $ \N { f_n -f }_{W^{1,p}( I) } \to 0$ and $\tilde f = f $ a.e. $\implies \N{f_n - \tilde f }_{W^{1,p}} \to 0$.\\
+$f_n( x) = \int_{ a }^{ x }f_{n'} ( t)  dt\forall x \in [ a,b] $.\\
+Extract a subsequence s.t. $f_n \to \tilde f $ a.e.\\
+At the same time, $f_n'\to f'$ in $L^{1}$, thus the integral above converges for a.e. $x$.\\
+Thus, for a.e. $x\in \overline{I}$, we have 
+\[ 
+f( x) = \int_{ a }^{ x } f'( t) dt
+\]
+As both sides are continuous, this holds for all $x\in \overline{I}$.
+\end{lemma}
+\subsection{Partitions of unity and Meyers-Serrier theorem}
+\begin{thm}
+	Let $p \in [ 1, \infty ) , k \in \mathbb{N}\setminus 0$, then $ C^{ \infty }( \mathbb{R}) \cap W^{k,p}( \mathbb{R}^{n}) $ is dense in $W^{k,p}( \mathbb{R}^{n}) $ 
+\end{thm}
+\begin{proof}
+For $k=0, W^{0,p}( \mathbb{R}^{d}) =L^{p}( \mathbb{R}^{d})$, then $C^{ \infty }_c ( \mathbb{R}^{d}) $ is dense..\\
+For $k \geq 1$, let $f \in W^{k,p}(  \mathbb{R}^{d}) $ and let $\eta_\epsilon\in C^{ \infty }_c( B_{\epsilon} ) $ an approximation to unity.\\
+Define $f_\epsilon = \eta_\epsilon \ast f$.\\
+Then $f_\epsilon \to f$ in $L^{p}$.\\
+We claim $\del^{\alpha}f_\epsilon = ( \del^{\alpha} f ) \ast \eta_\epsilon$ for all $|\alpha| \leq k$ 
+\begin{align*}
+\del^{\alpha}f_\epsilon( x)  &= \int_{ \mathbb{R}^{d} }^{  } \left[ \del_x^{\alpha}\eta_\epsilon ( x-y) \right] f( y) dy\\
+&= ( -1)^{|\alpha|} \int_{ \mathbb{R}^{d} }^{  } \left[ \del_y^{\alpha}\eta_\epsilon ( x-y) \right] f( y) dy\\
+&= \int_{  \mathbb{R}^{d}}^{  } \eta_\epsilon ( x-y) \del^{\alpha}f( y) dy
+\end{align*}
+From a theorem, we know that $\del^{\alpha}f \ast \eta_\epsilon \xto{L^{p}} \del^{\alpha}f$ 
+\end{proof}
+
+
+
+
+
+
+\end{document}	

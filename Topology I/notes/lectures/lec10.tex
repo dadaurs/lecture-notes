@@ -1,0 +1,67 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Wed 09 Nov}{computations}
+\subsection*{$ h_n( D^{k},S^{k-1}) $ }
+
+\begin{exemple}
+We know that 
+\[ 
+h_n( D^{k},S^{k-1}) = 
+\begin{cases}
+	h_0( pt) , n =k \\
+	0 \text{ else } 
+\end{cases}
+\]
+for any ordinary homology theory.\\
+This is almost $h_n S^{k}$ but $S^{k}$ is the collapse $ D^{k} /S^{k-1}$.
+\end{exemple}
+\begin{exemple}
+	Consider $D^{k}\setminus 0 \to D^{k}$.\\
+	Using homotopy equivalence, we get
+	\[ 
+	h_n( D^{k}) \to h_n( D^{k},D^{k}\setminus \left\{ 0 \right\} ) \to h_{n-1} ( D^{k}\setminus 0) \to h_{n-1} ( D^{k}) 
+	\]
+	Thus 
+	\[ 
+	h_n ( D^{k},D^{k}\setminus 0) =
+	\begin{cases}
+	h_0( pt) \text{ if } n=k\\
+	0
+	\end{cases}
+	\]
+	Compare this to the quotient $D^{k} / D^{k}\setminus 0$ which has two points, with exactly one of them being open.\\
+	This is called the Sierpinski space $ \mathcal{S}$, call it's points $a$ and $b$ with $a$ open.\\
+	Notice that there is a bijection between continuous maps $X\to \mathcal{S} \leftrightarrow \left\{ U \subset X \text{ open }  \right\} $.\\
+	We claim that $\mathcal{S}$ 	is contractible, there is a unique map $\mathcal{S}\to pt$ and we define a map $pt \to a$.\\
+	We define the map $\mathcal{S}\times [ 0,1] \to \mathcal{S}$ to be the one induced by the open set $ \left\{ a \right\} \times [ 0,1] \cup \left\{ a,b \right\} \times [ 0,1) $.\\
+	Thus, in this case relative homology and homology of the quotient don't agree.
+\end{exemple}
+Our next goal will be to make the difference between these pairs of spaces precise.
+\begin{defn}
+	A subspace $A \subset X	$ is called neighborhood deformation retract (NDR)  if $A \subset X$ is closed and there is a neighborhood $A \subset V \subset X$ such that $A$ is a deformation retract of $V$.\\
+	Ie. there exists a continuous map $r:V\to A$ such that $r|_A= \id_A$ and there exists a continuous map $H:V\times [ 0,1] \to V$ such that $H_0= \id_V$, $H_1= \iota\circ r$ and $A$ is fixed by $H$ .
+\end{defn}
+\begin{exemple}
+$S^{k-1}\to D^{k}$ is a NDR, choosing $r: D^{k}\setminus 0 \to S^{k-1}$ sending $x\mapsto \frac{x}{\N x}$ with the obvious homotopy.
+\end{exemple}
+\begin{exemple}
+$D^{k}\setminus 0 \to D^{k}$ is not closed so in particular not a NDR.\\
+A slightly more elaborate example is $ A= \left\{ \frac{1}{n}| n \in \mathbb{N} \right\} \cup 0 \subset \mathbb{R}$.\\
+This is a closed subset but not a deformation retract as $V \xto r A$ can no be both continuous and the identity on $A$ for any neighborhood $V$ of $A$ in $X= \mathbb{R}$.
+\end{exemple}
+\begin{thm}
+Let $A \subset X$ be a NDR and let $( h_\ast,\del_\ast) $ be any ordinary homology theory.\\
+Then the quotient map $q:X\to \faktor{X}{A}$ induces isomorphisms
+\[ 
+h_n( X,A) \to h_n( \faktor{X}{A}, \faktor{A}{A}) \forall n
+\]
+\end{thm}
+\subsection{Pushouts of topological spaces}
+\begin{propo}
+Given $C \leftarrow A \rightarrow B$, it can always be completed to a pushout.
+\end{propo}
+
+
+
+
+\end{document}	

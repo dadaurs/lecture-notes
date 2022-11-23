@@ -1,0 +1,129 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Fri 18 Nov}{quasi-coherent sheaves}
+\section{Quasi-coherent sheaves}
+Recall that affine schemes are equivalent to rings, what about modules?
+\begin{defn}
+	Let $( X,\O_X) $ be a ringed space
+	\begin{enumerate}
+	\item A presheaf of $\O_X$ modules is a presheaf $ \mathcal{F}$ on $X$ such that
+		\begin{enumerate}
+		\item $\forall U \subset X$ open, $ \mathcal{F}( U) $ is an $\O_X( U)$-module
+		\item $\forall V \subset U \subset X$ open, the restriction map $ \mathcal{F}( U) \to \mathcal{F}( V)  $ is an $\O_X( U) $ module homeomorphism, where $\F( V) $ is considered a $\O_X( U) $ module via the restriction map.
+		\end{enumerate}
+
+	\item A morphism of presheaves of $\O_X$-modules is a morphism of presheaves $\phi:\F \to \G$ such that $\forall U \subset X$ open, $\phi( U) : \F( U) \to \G( U) $ is an $\O_X( U) $-module homomorphism.
+	\item For two sheaves of $\O_X$-modules, the presheaf  $\hom_{\O_X} ( \mathcal{F}, \G) $ is an $\O_X$-module, called the hom-sheaf.
+	\item The category of $\O_X$-modules is denoted by $Mod( X,\O_X) $.
+	\end{enumerate}
+\end{defn}
+\begin{rmq}
+There is a forgetful functor $Mod( X,\O_X) \to Sh( X) $.\\
+The sheafification of a presheaf of $\O_X$-modules is an $\O_X$ module.\\
+$Mod( X,\O_X) $ is an abelian category
+\end{rmq}
+\begin{defn}
+	Let $\F,\G$ be $\O_X$-modules. The tensor product $\F \otimes_{\O_X} \G$ is the sheafification of the presheaf $ U \mapsto \F( U) \otimes_{\O_X( U)} \G( U) $.
+\end{defn}
+If $A\to B$ is a ring homomorphism, there is a restriction of scalars functor ${}_A-: Mod( B) \to Mod( A)  $ and extension of scalars $- \otimes_A B: Mod A \to Mod( B) $, we can do the same for morphisms of sheaves of rings.
+\begin{defn}
+	Let $f: X\to Y$ be a morphism of ringed spaces
+	\begin{enumerate}
+		\item The direct image functor $f_\ast: Mod ( X,\O_X) \to Mod( Y,\O_Y) $ is the composition $Mod( X,\O_X) \xto{f_\ast} Mod( Y, f_\ast \O_X) \xto{{}_{\O_Y} -} Mod( Y,\O_Y) $.
+		\item The inverse image functor 
+			\[ 
+			f^{\ast}: Mod( Y,\O_Y) \to Mod( X,\O_X) 
+			\]
+			is the composition $Mod( Y,\O_Y) \xto{f^{-1}} Mod( X, f^{-1}\O_Y) \xto{ - \otimes_{f^{-1}\O_Y} \O_X} Mod( X,\O_X) $.
+	\end{enumerate}
+\end{defn}
+\begin{defn}
+	Let $( X,\O_X) $ be a ringed space.\\
+	A sheaf of $\O_X$-modules is 
+	\begin{enumerate}
+	\item free if $ \mathcal{F}= \O_X ^{\oplus I}$ for some set $I$ 
+	\item locally free if $\exists $ an open cover $\bigcup U_i$ such that each $\F|_{U_i} $ is free.
+	\item locally free of finite rank if $\exists$ an open cover $X= \bigcup U_i$ such that $ \mathcal{F}|_{U_i} \simeq \O_{U_i}^{\oplus r_i}$ for all $i \in I$ and some $r_i \in \mathbb{N}$
+	\item invertible (or line bundle) if its locally free of rank $1$.
+	\end{enumerate}
+\end{defn}
+\begin{defn}
+	Let $( X,\O_X) $ be a ringed space.\\
+	A sheaf of $\O_X$-modules is called 
+	\begin{enumerate}
+	\item quasi-coherent if there exists an open cover $X= \bigcup U_i$ such that each $ \F|_{U_i} $ appears in an exact sequence
+		\[ 
+		\O_{U_i} ^{\oplus I_i}\to \O_{U_i} ^{\oplus J_i}\to \F|_{U_i} \to 0
+		\]
+	
+	\item coherent if
+		\begin{itemize}
+		\item there exists an open cover $X= \bigcup U_i$ and $n_i \in \mathbb{N}$ and a surjection 
+			\[ 
+			\O|_{U_i}^{\oplus n_i} \to \F|_{U_i} \to 0
+			\]
+			
+		\item $\forall U \subset X$ open, $n \in \mathbb{N}$ and all surjections
+			\[ 
+			\phi: \O_U^{\oplus n}\to \F|_U
+			\]
+			$\ker \phi$ satisfies $a$.
+		\end{itemize}
+	\end{enumerate}
+\end{defn}
+We get categories $Coh( X,\O_X) $ and $QCoh( X,\O_X) $ of coherent and quasi-coherent sheaves.\\
+In general, $QCoh$ is not abelian, though for schemes it is.
+\begin{defn}
+	Let $X= \spec A$ be an affine scheme.\\
+	Let $M$ be an $A$-module.\\
+	The sheaf of $\O_X$-modules associated to $M$ is $ \tilde M: U\mapsto \left\{ s: U \to \coprod M_p | s \text{ satisfies i) and ii) }  \right\} $ 
+	\begin{enumerate}
+	\item $\forall p \in U, s( p) \in M_p$ 
+	\item $\forall p \in U\exists m \in M, a \in A$ and $V \subset U$ open such that
+		\[ 
+		p \in V \subset D( a) \text{ such that  } s( q) = \frac{m}{a}\in M_q \forall q \in V
+		\]
+		
+	\end{enumerate}
+\end{defn}
+As in the affine case, we get that 
+\begin{propo}
+Let $X= \spec A$ and $M$ an $A$-module
+\begin{enumerate}
+\item $\forall a \in A$, there exist natural isomorphisms
+	\[ 
+	\phi_A: M_a \to \tilde M ( D( a) ) 
+	\]
+	and these isomorphisms commute with the localization maps $M_a \to M_b$.
+\item $\forall p \in \spec A$, there exist natural isomorphisms $\phi_p: M_p \to \tilde M _p$ which are also natural wrt the maps $M_a\to M_p$ $\forall a \in A\setminus p$ 
+\end{enumerate}
+\end{propo}
+We get a functor $A-mod \to Mod( X,\O_X)$ if $X= \spec A$ where the maps are induced by postcomposition with the obvious map $\coprod M_p \to \coprod N_p$.
+\begin{lemma}
+Let $X= \spec A\forall A$-modules $M,N$, the maps $\hom( M,N) \leftrightarrow \hom( \tilde M,\tilde N) $ sending $\phi:M\to N $ to $\tilde \phi$ and $f:\tilde M \to \tilde N$ to $f( X) $ are mutually inverse.
+\end{lemma}
+The proof of this will follow from an exercise.
+\begin{proof}
+Let $X= \spec A$ be an affine scheme
+\begin{enumerate}
+\item A sequence of modules $0\to M_1\to M_2\to M_3\to 0$ is exact iff the associated sequence of sheaves is exact
+\item If $\phi:M \to N$ is a morphism of $A$-modules, then $\widetilde{\ker\phi}= \ker ( \tilde\phi) $ and similarly for the cokernel.
+\item If $ \left\{ M_i \right\} $ is a family of $A$-modules, then $\bigoplus \tilde{M_i}= \widetilde{\bigoplus M_i}$.
+\item If $ \left\{ M_i \right\}, \left\{ \phi_{ij}  \right\}  $ is a directed system, then direct limits commute with $\tilde\cdot$ 
+\end{enumerate}
+\end{proof}
+\begin{thm}[Criterion for quasi-coherence]
+	Let $X$ be a scheme and $\F$ an $\O_X$ module, then the following are equivalent
+	\begin{enumerate}
+	\item $\forall \spec A \subset X$ open affine, $\F|_{\spec A} \simeq \tilde M$ for some $A$-module $M$.
+	\item The same for some cover
+	\item $\F$ is quasi-coherent
+	\item $\forall \spec A = U \subset X$ open affine and every $a\in A$, the natural map $F( U) _a \to \F( D( a) ) $ is an isomorphism.
+	\end{enumerate}
+	
+\end{thm}
+
+
+
+
+\end{document}	

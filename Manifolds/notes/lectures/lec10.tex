@@ -1,0 +1,44 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{10}{Wed 16 Nov}{Vector Bundles}
+\subsection{Construction of vector bundles from local data}
+Let $( E,\pi,M) $ be a vector bundle and $( U_\alpha,\phi_\alpha) $ a bundle atlas.
+We get isomorphisms
+\[ 
+U_\alpha\times U_\beta \times \mathbb{R}^N	E|_{U_\alpha\times U_\beta} \xto{\phi_\alpha} U_\alpha\cap U_\beta \times \mathbb{R}^N
+\]
+which commute with the projection maps to $U_\alpha\cap U_\beta$.\\
+We see that $\phi_{\alpha\beta} = \phi_\alpha \circ \phi_\beta^{-1}$ satisfies $\phi_{\alpha\beta} ( q,v) = ( q, g_{\alpha\beta} ( q) v) $.\\
+Here $g_{\alpha\beta}: U_\alpha\cap U_\beta \to GL( N, \mathbb{R}) $ is a smooth function.\\
+Notice that
+\begin{enumerate}
+\item $g_{\alpha\beta} g_{\beta\gamma} = g_{\alpha\gamma} $ over $U_{\alpha\beta\gamma} $.
+\item $g_{\alpha\alpha} = \id_N$ 
+\item $g_{\alpha\beta}^{-1}= g_{\beta\alpha} $.
+\end{enumerate}
+\begin{defn}
+	Let $M$ be a manifold, $( U_\alpha) $ an open cover and $G$ a linear lie group (smooth subgroup of $GL( N, \mathbb{R}) $ ).\\
+	A family of maps $g_{\alpha\beta} : U_{\alpha\beta} \to G$ is called a cocycle with values in $G$ if it satisfies the cocycle conditions.
+\end{defn}
+\subsection*{Pre-vector bundles}
+We let $E= \bigcup_{\alpha} \left\{ \alpha \right\} \times U_\alpha\times \mathbb{R}^N /\sim$ where $( \alpha,p,v) \sim ( \beta,q, w) \iff p=q$ and $v= g_{\alpha\beta} ( p) w$.\\
+One can check this is an equivalence relation and we have a projection map $\pi:E\to M$ sending $[\alpha,p,v] \to ( p,v) $.
+\begin{defn}[Bundle Isomorphism]
+	Let $E,F$ be vector bundles over $M$.\\
+	Let $\Phi: E \to F$ is a bundle homomorphism if it is base point preserving and fiberwise linear.
+\end{defn}
+\begin{thm}
+	Let $( E,\pi,M, \mathcal{A}) $ be a pre-vector bundle. Then there exists a unique topology and $C^{ \infty }$ structure on $E$ such that $( E,\pi,M) $ is a vector bundle.\\
+	Let $g_{\alpha\beta} : U_{\alpha\beta} \to G \subset GL( N, \mathbb{R}) $ be a $G$-cocyle, $( U_\alpha) $ and open cover.\\
+	Then there exists a unique (up to isom.) vector bundle $E$ with an atlas $( \phi_\alpha) $ such that $g_{\alpha\beta} $ is the cocycle of the atlas $\phi_\alpha$.
+\end{thm}
+\begin{defn}[Tangent Bundle]
+	Define the tangent bundle, as a set, $TM = \bigcup_{p \in M} \left\{ p \right\} \times T_p M$.\\
+	Let $( U_\alpha,\phi_\alpha )$ be an atlas for $M$.\\
+	Define a bundle atlas $\psi_\alpha: TU_{\alpha} = \pi^{-1}( U_\alpha) \to U_\alpha\times \mathbb{R}^m$ sending $( p,v) \to ( \phi_\alpha( p) ,T_p\phi_\alpha v) $
+\end{defn}
+
+
+
+
+\end{document}	

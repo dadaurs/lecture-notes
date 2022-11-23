@@ -1,0 +1,157 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{8}{Fri 04 Nov}{Fiber Products}
+\begin{crly}
+Closed subschemes of affine schemes are affine.\\
+Moreover, if $\phi: A \to B$ is a morphism of rings, then $\phi$ is surjective iff $\spec \phi$ is a closed immersion.
+\end{crly}
+\begin{rmq}
+For all closed subsets $Z \subset X$ of a scheme $X$, there is an ideal sheaf $ \mathcal{I}$ on $X$ making $Z$ into a closed subscheme.\\
+To prove this, if $U \subset X$ is affine, then $Z\cap U$ is closed in $U$ hence $Z\cap U = V( I) $ for some ideal in $\O_X( U) $.\\
+Then you take radicals and glue them together on a cover of $Z$.\\
+This structure is called the reduced induced scheme structure on $Z$.
+\end{rmq}
+\subsection{Fiber Products}
+\begin{defn}[Fiber product]
+	Let $C$ be a category, given two morphism $\pi_X : X\to S$ and $\pi_Y :Y \to S$, the fiber product $X\times_S Y$ of $X$ and $Y$ over $S$ is an object together with morphisms $p_x$ to $X$ and $p_y$ to $Y$ which is universal.
+\end{defn}
+\begin{rmq}
+Alternatives names sometimes are fibre product, fibered produc or pullback.\\
+Fiber products are unique up to unique isomorphism.\\
+If $S$ is terminal in $C$, then the fiber product is just the product.
+\end{rmq}
+\begin{rmq}
+If a square is a fiber product, we call the diagram cartesian.
+\end{rmq}
+\begin{lemma}
+Assume all fiber products exist.\\
+Let "commutative thingy".\\
+Then
+\[ 
+	( X_1\times_{S_1} Y_1) \times_{X_0\times_{S_0} Y_0} ( X_2 \times_{S_2} Y_2) = ( X_1\times_{X_0} X_2) \times _{S_1\times_{S_0} S_2} ( Y_1\times_{Y_0} Y_2) 
+\]
+
+\end{lemma}
+\begin{crly}
+	\begin{itemize}
+	\item If $C$ admits fiber products, then $X\times_S Y = Y \times_S X$
+	\item A composition of two pullback squares is a pullback
+	\item For a zigzag $X\to S, Y \to S, Y\to T, Y\to Z$,
+		\[ 
+			( X\times _S Y) \times _T Z = X\times_S( Y\times_T Z) 
+		\]
+		
+	\item For maps $X\to S \to T$ and $Y \to S$ 
+		\[ 
+		X\times_S Y \to X\times_T Y \to S\times_T S
+		\]
+		and
+	\[ 
+	X\times_S Y \to S \to S\times_T S
+	\]
+		is a pullback.	
+	\end{itemize}
+\end{crly}
+\begin{exemple}
+\begin{enumerate}
+\item If $\pi_X:X\to S, \pi_Y:Y\to S$ are in $ ( Set) $, then $X\times_S Y = \left\{ ( x,y) | \pi_X( x) = \pi_Y( y)  \right\} \subset X\times Y$ together with the two projections.
+\item If $X$ and $Y$ are groups (or rings) and $\pi_X,\pi_Y$ are homomorphisms as above, then $X\times_S Y$ is, as a set, the fiber product of the underlying sets, with the obvious groups (resp. ring) structures.
+\end{enumerate}
+\end{exemple}
+\subsection*{Goal for today}
+\begin{thm}[Fiber products of schemes exist]
+	Fiber products exist in $( Sch) $ and also in  $( Sch/S) $ 
+\end{thm}
+\subsection*{Why do we care?}
+Allows us to talk about fibers, graphs, diagonals...\\
+Recall that every point $y \in Y$ of a scheme $Y$ has a natrual scheme structure given by the residue field $ \faktor{\O_{Y,y} }{\m_y}= k( y) $ 
+\begin{defn}[Fibers]
+	Let $f:X\to Y$ be a morphism of schemes over $S$.\\
+	\begin{enumerate}
+	\item For any $y \in Y$, let $k( y) $ be the residue field, then the fiber of $f$ over $y$ 
+		\[ 
+		f^{-1}( y) = X_y = X\times_Y \spec k( y) 
+		\]
+	
+	\item The geometric fiber of $f$ over $Y$ is
+		\[ 
+		X_{ \overline{y}} = X\times_Y \spec \overline{k( y) } 
+		\]
+
+	\item a closed fiber is a fiber over a closed point
+	\item For all integral schemes $Y$, there is a unique point $\eta\in Y$ such that $ \overline{ \left\{ \eta \right\} }= Y$/\\
+		This is called the generic point of $Y$.\\
+		The fiber over the generic point is called the generic fiber of $f$.
+	\item The morphism 
+		\[ 
+		\Gamma_f \coloneqq ( \id,f) : X\to X\times_S Y
+		\]
+		is called the graph of $f$.
+	\item The morphism
+		\[ 
+		\Delta_{X /Y} = \Gamma_{\id_X} : X\to X\times_Y X
+		\]
+		is called the diagonal of $X$ over $Y$.
+	\end{enumerate}
+\end{defn}
+\begin{propo}
+If $X= \spec A, Y = \spec B, S= \spec C$ and $\pi_X: X\to S,\pi_Y:Y\to S$ are morphisms of schemes then $X\times_S Y$ exists in $( Sch) $ and is given by $\spec ( A\otimes_C B) $ together with the maps induced by the natural maps $A \to A\otimes_C B, B \to A\otimes_C B$ 
+\end{propo}
+\begin{propo}
+We use the universal property of $A\otimes_C B$ and the equivalence of categories to show that it is a pullback in the category of affine schemes.\\
+For $Z$ a scheme, there is a map from the affinization of $Z$ to $\spec B$ and $\spec A$ which then induce a map $aff Z\to \spec A \otimes_C B$.
+\end{propo}
+\begin{exemple}
+	\begin{enumerate}
+	\item If $X= Y = \mathbb{A}^{1}_k$, the fiber product over $\spec k$, then $X\times_{\spec K} Y= \mathbb{A}^{2}_k$.
+	\item If $X-Y = \spec \mathbb{C}$ and $S= \spec \mathbb{R}$, then
+		\[ 
+			X\times_S Y = \spec \mathbb{C}\otimes_{ \mathbb{R}} \mathbb{C}= \spec \faktor{ \mathbb{C}[x]}{( x^{2}+1) } = \spec ( \mathbb{C}\times \mathbb{C}) 
+		\]
+Note that $X\times_S Y$ has two points but $X,Y,S$ each have only one.
+\item Take $X= \spec k [ x,y,z] / ( z^{2}-x) , Y = \spec k[z]$, let $f: X\to Y$ induced by mapping $z \to z$.\\
+	Let $\lambda\in Y$ be the point corresponding to $( z-\lambda) $, then
+	\[ 
+		f^{-1}( \lambda) = \spec k[x,y,z] /( z^{2}-xy) \otimes_{k[z]} k[z] / ( z-\lambda) = \spec k[x,y] / ( \lambda^{2} -xy) 
+	\]
+	\[ 
+= 
+\begin{cases}
+\mathbb{A}^{1}\setminus 0 \text{ if } x=0\\
+V( xy) \subset \mathbb{A}^{2} \text{ if } \lambda=0
+\end{cases}
+	\]
+
+\item If we take a non-rational point in the above example, say $\lambda= ( z^{2}+1) $, then 
+	\[ 
+		f^{-1}( y) = \spec \mathbb{R}[x,y,z] / ( -1-xy, z^{2}+1) = \spec \mathbb{C}[x,y] / ( -1-xy) 
+	\]
+	
+	\end{enumerate}
+\end{exemple}
+We now start the proof that fiber products exist.
+\begin{proof}
+	\subsection*{Claim 1}
+If $X\times_S Y$ exists and $U \subset X$ open, then the open subscheme
+$p_x^{-1}( U) \subset X\times_S Y$ is a fiber product of $U$ and $Y$ over $S$.\\
+For $Z$ a scheme and two commuting maps $Z\to X\times_S Y$ and $Z\to U$, there is a map on the topological level $Z\to p_X^{-1}( U) $ and it also exists on the level of schemes.
+\subsection*{Claim 2}
+If $X= \bigcup U_i$ is an open cover such that $U_i \times_S Y$ exists $\forall i \in I$, then $X\times_S Y$ exists.\\
+We postpone the proof of this until monday.\\
+
+Now, if $S$ is affine, consider the open affine covers $X= \bigcup_i U_i , Y = \bigcup V_i$, then $U_i \times_S V_j$ exists $\forall i,j$, thus $U_i \times_S Y$ exists $\forall i$ and thus $X\times_S Y$ exists.\\
+
+If $S$ is not affine, let $S= \bigcup_i W_i$ be an open affine cover.\\
+Set $U_i = \pi_X^{-1}( W_i) , V_i = \pi_Y^{-1}( W_i) $.\\
+Now, $U_i \times_{W_i} V_i$ exists and now $U_i \times_{W_i} V_i = U_i \times_S Y$ by one of the identities.
+\end{proof}
+
+
+
+
+
+
+	
+
+
+\end{document}	

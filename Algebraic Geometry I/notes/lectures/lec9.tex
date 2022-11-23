@@ -1,0 +1,128 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{9}{Mon 07 Nov}{fiber products exist}
+We finish the proof by showing that if $X= \bigcup_{i \in I} U_i$ is an open cover such that each $U_i \times_S Y$ exists, then $X\times_S Y$ exists.
+\begin{proof}
+We know that $p_{U_i} ^{-1}( U_i\cap U_j) \simeq ( U_i \cap U_j) \times_S Y \simeq p_{U_j}^{-1}( U_i\cap U_j) $ via unique isomorphisms compatible with the projections.\\
+There is a unique scheme $T$ with maps to $Y$ and $X$ such that $p_X^{-1}( U_i) \simeq U_i \times_S Y$.\\
+We claim that $T$ is $X\times_S Y$.\\
+Let $Z$ be a scheme with morphisms $Z\xto { f_X}  X$ and $Z\xto{f_y} Y$ which commutes with projections to $S$.\\
+Let $V_i= f_X^{-1}( U_i) $, we get unique morphisms $V_i \to U_i\times_S Y \to T$ which is unique if $p_X \circ f_i = p_Y \circ f_i$.\\
+By claim $1$, $f_i$ and $f_j$ coincide on $U_{i} \cap V_j$ thus they glue to a unique morphism $f:Z\to T$ 
+\end{proof}
+\begin{crly}
+Let $\pi_X:X\to S,\pi_Y:Y\to S$ be a diagram of schemes, let $S= \bigcup_i W_i, U_i = \pi_X^{-1}( W_i) , V_i = \pi_y^{-1}( W_i) $ and $U_i = \bigcup_j U_{ij} , V_i = \bigcup_{j} V_{ij} $ be open covers.\\
+Then $X\times_S Y = \bigcup_{i \in I} \bigcup_{j,k} U_{ij} \times_{W_i} V_{ik} $ is an open cover.
+\end{crly}
+\begin{propo}
+Let $f:X\to Y$ be a morphism of schemes.\\
+Then for every $y \in Y$, the map $g:f^{-1}( y) \to X$ is a homeomorphism onto the set-theoretic fiber $f_{set}^{-1}( y) $.
+\end{propo}
+\begin{proof}
+Without loss of generality, $Y$ is affine.\\
+We can also assume that $X$ is affine, because if $X= \bigcup_i U_i$ is an open cover and each $g|_{g^{-1}( U_i) } : g^{-1}( U_i) \to U_i$ is a homeomorphism onto $f_{set}^{-1}( y) \cap U_i$, then $g$ is a homeomorphism onto $f_{set} ^{-1}( y) $.\\\\
+So let $X= \spec B, Y = \spec B, y = p \in \spec A$, then we claim that $B\otimes_A k( y) \simeq \faktor{S^{-1}B}{p S^{-1}B} $.\\
+Furthermore, the isomorphism is compatible with the maps from $B$ and $k( y) = \faktor{A_p }{p A_p}$ where $S= \im ( A\setminus p \to B) $.\\
+To prove this, we check that $ \faktor{S^{-1}B}{p S^{-1}B}$ satisfies the universal property of $B \otimes_A k( y) $.\\
+Let $C$ be a ring with morphisms $ \faktor{A_p}{p A_p}\xto{f_A} C$ and $B \xto{f_B} C$ compatible with the morphisms from $A$ $\pi_A,\pi_B$.\\
+Notice that $\pi_A( A\setminus p) \subset ( \faktor{A_p}{pA_p})^{\times} $ and sends $\pi_A( p) =0$.\\
+Thus $f_B( S) \subset C^{\times}, f_B( pB) =0$.\\
+Thus there exists a unique $f: \faktor{S^{-1}B}{p S^{-1}B}\to C$ such that $f\circ p_B = f_B$.\\
+Thus
+\[ 
+f\circ\pi_A = f\circp_B \circ \pi_B = f_A\circ \pi_A
+\]
+As $\pi_A$ is an epimorphism, $f\circ p_A = f_A $.\\
+
+We now have to check $\spec \faktor{S^{-1}B}{p S^{-1}B}\to \spec B$ is a homeomorphism onto $f_{set}^{-1}( y) $.\\
+
+We know it's a homeomorphism onto it's image by general commutative algebra.\\
+THe image is $ \left\{ q\in \spec B| S\cap q=\emptyset, pS^{-1}B \subset q S^{-1}B  \right\} $.\\
+But this is just the set-theoretic fiber.
+\end{proof}
+\section{Properties of Morphisms}
+\subsection{Properties of properties of morphisms}
+\begin{rmq}
+If $f:X\to Y$ and $g:Y; \to Y$ are morphisms of schemes, let $X_{Y'} = X\times_Y Y'$.\\
+Then we call $f_{y'} : X_{Y'} \to Y'$ the base change of $f$ along $g$.
+\end{rmq}
+\begin{rmq}
+In the following, whenever we say $P$ is a property of morphisms of schemes, we assume that $P$ is satisfied by isomorphisms.
+\end{rmq}
+\begin{defn}
+	Let $P$ be a property of morphisms of schemes, we say that $P$ satisfies 
+	\begin{enumerate}
+	\item ( COMP) : $P$ is stable under composition
+	\item ( CANC) : if $g\circ f$ satisfies $P$, then $f$ does
+	\item ( BC): if it is stable under base change that is $\forall f : X\to Y, g:Y' \to Y$ such that $f$ satisfies $P$, also $f_{Y'} $ satisfies $P$.
+	\item ( LOCT) : If it local on the target, ie. if $\forall f:X\to Y$ and $\forall $ open covers $Y= \bigcup V_{I} $ f satisfies $P \iff f_{V_i} $ satisfies $P\forall i \in I$ 
+	\item ( LOCS): If it is local on the source ie. if $\forall f:X\to Y$ and $\forall$ open covers $X= \bigcup_{i} U_i$ $f$ satisfies $P\iff f|_{U_i}$ satisfies $P$.
+	\end{enumerate}
+\end{defn}
+\begin{defn}
+Let $P$ be a property of morphisms of schemes, then a morphism $f:X\to Y$ is called universally $P$ if $\forall Y'\to Y, f_{Y'} $ satisfies $P$.
+\end{defn}
+\begin{lemma}
+	Let $f:X\to Y$ be a morphism of schemes over $S$, then the diagram $X\xto{\Gamma_f} X\times_S Y$ over $Y \to Y\times_S Y$ is cartesian.
+\end{lemma}
+\begin{proof}
+This is a special case of the "magic square" with the isomorphism $X\to X\times_Y Y $ 
+\end{proof}
+\begin{defn}
+	Let $P$ be a property of morphisms of schemes, then we say that $f:X\to Y$ satisfies $\Delta_P$ if $\Delta_{X /Y} $ satisfies $P$.
+\end{defn}
+\begin{lemma}
+The following hold
+\begin{enumerate}
+\item If $P$ satisfies ( BC), then $\Delta_p$ satisfies ( BC) 
+\item If $P$ satisfies ( BC) and ( COMP), then $\Delta_P$ satisfies ( COMP).
+\item If $P$ satisfies ( LOCT), then $\Delta_P$ satisfies ( LOCT)
+\item If $P$ satisfies ( BC) ,( COMP) and $f,g:X\to Z$ satisfy $P$ as morphisms of schemes over $S$ and $X\to S, Z\to S$ satisfy $\Delta_p$, then $( f,g) :X\to Y\times_S Z$ satisfy $P$ 
+\end{enumerate}
+\end{lemma}
+\begin{lemma}
+Let $P$ be a property of morphisms of schemes.\\
+Assume that $P$ satisfies stability under base change and composition.\\
+Let $f:X\to Y, g:X'\to Y'$ be morphisms of schemes over $S$ satisfying $P$, then the product $f\times_S g$ satisfies $P$.
+\end{lemma}
+\begin{proof}
+There are maps
+\[ 
+	X\times_S X' \xto{\id\times_S g} X\times_S Y' \xto{f\times_S \id} Y \times_S Y'
+\]
+which compose to $f\times_S g$.\\
+But both maps are base changes and thus $f\times_S g$ satisfy $P$.
+\end{proof}
+\begin{thm}[Cancellation Theorem]
+	Let $P$ be a property of morphisms of schemes and $P$ satisfies stability under composition and base change.\\
+	Let $f:X\to Y, g:Y\to Z$ two morphisms such that $g\circ f$ satisfies $P$ and $\Delta_{Y /Z} $ satisfies $P$ then $f$ satisfies $P$.
+\end{thm}
+\begin{proof}
+Write $f$ as the composition
+\[ 
+	X\xto{( \id,f) } X\times_Z Y \to Y
+\]
+But $( \id,f) $ is a base change of the diagonal and $p_y$ is a base change of $g\circ f$.
+
+\end{proof}
+\subsection{Topological properties}
+\begin{defn}
+	A morphism $( f,f^{\sharp}) :( X,\O_X) \to ( Y,\O_Y) $ of schemes
+	\begin{enumerate}
+	\item is injective, surjective, bijective if $f$ is.
+	\item is open, resp. closed if $f$ is.
+	\item quasi-compact if $f^{-1}( V)$ is quasi-compact for all open quasi-compact $V \subset Y$.
+	\item quasi-separated if $\Delta_{X /Y} $ is quasi-compact.
+	\item has finite fibers if $f^{-1}( y) $ is finite as a set.
+	\end{enumerate}
+	
+\end{defn}
+
+
+
+
+
+
+
+
+\end{document}	
