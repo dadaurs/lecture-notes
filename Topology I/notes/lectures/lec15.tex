@@ -1,0 +1,10 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{15}{Mon 28 Nov}{calculation of homology on CW complexes}
+Choose pushouts $\coprod_{i\in I_n} D^n \rightarrow \coprod_{i \in I_n} S^{n-1}\to X_{n-1} $ for every $X_n$, an isomorphism $h_k S^{k}\to G$ and collapsing map isomorphisms $k_n: D^{n}/S^{n-1}\to S^{n}$.\\
+The differential maps $h_n( X_n,X_{n-1} ) $ can be computed componentwise via 
+\[ 
+	h_n( D^{n},S^{n-1}) \xto{inclusion into i_0} \bigoplus_{i \in I_n} h_n( D^{n},S^{n-1}) \to h_n( \coprod D^{n},\coprod S^{n-1}) \to h_n( X_n,X_{n-1} ) \to h_{n-1} ( X_{n-1} ,X_{n-2} ) \to h_{n-1} ( \coprod D^{n-1},\coprod S^{n-2}) \xto{projection onto j_0	 } h_{n-1} ( D^{n-1}, S^{n-2}) 
+\]
+These maps are called $d( i_0,j_0) $ and are induced on homology via the maps $S^{n-1}\xto{m( i_0,j_0) }S^{n-1}$ defined in such a way to commute with the inclusions to the $X_n$.
+\end{document}	

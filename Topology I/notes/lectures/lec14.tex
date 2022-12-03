@@ -1,5 +1,19 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \lecture{14}{Wed 23 Nov}{dimension of cw-complexes}
+If $X$ is a CW-complex, then the dimension of $n$ is the largest $n$ such that $X_j$ is constant $\forall j \geq n$.\\
+It turns out that $\dim X \geq n \iff \exists$ an embedding $D^{n}\to X$.
+\begin{exemple}
+$S^{ \infty }= \colim_i S^{i}$ 
+\end{exemple}
+\section{Homology of CW-complexes}
+For a relative CW-complex $( X,A) $, we want to define $H_\ast^{cell}( X,A) $, the cellular homology of $( X,A) $.
+\begin{defn}[Cellular chain complex]
+	The cellular chain complex of a relative CW-complex $( X,A) $ with repsect to an ordinary homology theory $( h_\ast,\del_\ast) $ is defined as $C_n( X,A) = h_n( X_n,X_{n-1} )\forall n \geq 0 $.\\
+	The maps of the complex are given by $incl_\ast \circ \del$, one can check that this is in fact a chain complex.
+\end{defn}
+We want to give a different description of the cellylar chain complex which lends itself to computations.\\
+Notice that $h_n( X_n,X_{n-1} ) = h_n( X_n /X_{n-1} )\simeq h_n( \vee_{i\in I_n} S^{n}, pt)  $.\\
+To give a better characterisation of the differentials, choose pushouts $\coprod_i D^{n} \rightarrow \coprod_i S^{n-1}\to X_{n-1} $ for every $n$, then the differentials $\bigoplus_{i \in I_n} G \to \bigoplus_{j \in I_{n-1} } G$ are induced by the maps $G_{i_0} \to G_{j_0} $ which in turn are induced on the $n-1$st  homology by the continuous maps $S^{n-1}\xto{\phi_{i_0} } X_{n-1} \to X_{n-1} /X_{n-2} \to \vee S^{n-1}\to S^{n-1} $ where the last map collapses the $j_0$ component.
 
 \end{document}	

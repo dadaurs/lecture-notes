@@ -1,0 +1,60 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{16}{Wed 30 Nov}{Cellular homology coincides with it's ordinary homology theory}
+\begin{thm}
+	Given an ordinary homology theory $( h_\ast,\del_\ast) $ and a relative CW-complex $( X,A) $ such that either $h_\ast=H_\ast^{sing}$ or $( X,A) $ is finite dimensional then
+	\[ 
+	H_k^{cell}( X,A) \simeq h_k( X,A) 
+	\]
+	
+\end{thm}
+\begin{lemma}
+\begin{enumerate}
+\item $h_k( X_{n+1} ,X_n) =0$ if $k\neq n+1$ 
+\item $h_k( X_n,A) =0 $ if $k>0$ 
+\item If $k \leq l \leq n$,  $h_k( X_n,X_l) \to h_k( X_{n+1} ,X_l) $ is an isomorphism.
+\end{enumerate}
+
+\end{lemma}
+\begin{proof}
+	\begin{enumerate}
+	\item As $X_n \subset X_{n+1} $ is a NDR, the map $h_k( X_{n+1} ,X_n) \to h_k ( X_{n+1} /X_n, X_n/X_n) \simeq h_k ( \bigvee_{i \in I_{n+1} S^{n+1},pt} ) =0$ 
+	\item By induction, for $n=-1$, $h_k( A,A) =0$, for $n=0, h_k( X_0,A) = h_k( A\coprod_{i\in I_0} pt, A) = 0$.\\
+		For the induction step, consider the LES of the triple
+		\[ 
+		h_k( X_{n-1} ,A) \to h_k( X_n,A) \to h_k( X_n,X_{n-1} ) 
+		\]
+		The leftmost and rightmost terms are 0
+	\item By induction, the case $n=l$ 
+		\[ 
+		0=h_k( X_l,X_l) \to h_k( X_{l+1} , X_l) =0
+		\]
+		For the induction step, $h_k( X_n,X_l )\xto{\sim}  h_k( X_{n+1} ,X_l) \to h_k( X_{n+2} , X_l) $ 	
+		
+		The LES for the triple $( X_{n+2} ,X_n,X_l) $ looks like
+		\[ 
+		h_{k+1} ( X_{n+2} ,X_n) \to h_k(  X_n,X_l) \to h_k( X_{n+2} ,X_l) \to h_k( X_{n+2} ,X_n) 
+		\]
+		The LES of the triple $( X_{n+2} ,X_{n+1} ,X_n) $ 
+		\[ 
+		0=h_k( X_{n+1} ,X_n) \to h_k( X_{n+2} ,X_n) \to h_k( X_{n+2} ,X_{n+1} ) =0
+		\]
+		Hence $h_k( X_{n+2} ,X_n) =0$.\\
+		Thus, the rightmost and leftmost terms in the sequence
+		\[ 
+		h_{k+1} ( X_{n+2} ,X_n) \to h_k(  X_n,X_l) \to h_k( X_{n+2} ,X_l) \to h_k( X_{n+2} ,X_n) 
+		\]
+		vanish and we get the desired isomorphism.
+	\end{enumerate}
+\end{proof}
+We can now prove that homology and cellular homology coincide on nice enough CW-complexes.
+\begin{proof}
+Recall that the cellular homology was defined as the homology of
+\[ 
+	h_{k+1} ( X_{k+1} ,X_k) \xto{\del} h_k( X_k,X_{k-1} ) \xto{\del} h_{k-1} ( X_{k-1} ,X_{k-2} )
+\]
+
+\end{proof}
+
+
+\end{document}	
