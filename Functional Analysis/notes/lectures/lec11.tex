@@ -1,0 +1,123 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{11}{Wed 23 Nov}{Compact Operators}
+\section{Compact Operators}
+\begin{defn}
+	Let $X,Y$ be normed spaces, $T\in L( X,Y) $.\\
+	$T$ has finite rank if $\dim T( X) < \infty $
+\end{defn}
+\begin{lemma}
+Let $X,Y$ be normed spaces, $T:X\to Y$ linear and $\dim X < \infty $ .\\
+Then $T$ has finite rank and $\dim T( X) \leq \dim X$ 
+\end{lemma}
+\begin{defn}
+	Let $X,Y$ be normed vector spaces, $T\in L( X,Y) $ is compact if $\forall A \subset X,A $ bounded, $\overline{T( A) }$ is compact in $Y$.\\
+	We let $K( X,Y) $ be the set of compact operators.
+\end{defn}
+\begin{lemma}
+$T$ compact $\iff \overline{T( B_1( 0) ) }$ is compact.
+\end{lemma}
+\begin{thm}[Closure theorem]
+	Let $X,Y,Z$ be Banach spaces
+	\begin{enumerate}
+	\item $K( X,Y) \subset L( X,Y) $ is closed
+	\item If $T\in K( X,Y)  , S\in L( Y,Z) \implies ST \in K( Y,Z) $ 
+	\item If $T\in L( X,Y) , S \in K( Y,Z) \implies ST \in K( X,Z) $ 
+	\item If $Y$ is Hilbert, then $K( X,Y) $ is the closure of the set of finite-rank operators.
+	\end{enumerate}
+\end{thm}
+\begin{proof}
+\begin{enumerate}
+\item If $T_j$ is a sequence of compact operators and $T_j \to T$ in the operator norm, then $T$ is compact.\\
+	Let $\epsilon>0$, pick $j$ such that $\N { T_j - T}_{op} < \frac{\epsilon}{2}$, let $y_1,\ldots,y_N\in Y$ such that $T_j ( B_1) \subset \bigcup_{i=1}^{n}B_{\frac{\epsilon}{2}} ( Y_i)  $.\\
+	We claim that $T( B_1) \subset  \bigcup_{i=1}^{N} B_{\epsilon} ( Y_i) $.\\
+	If $x\in B_1$, then $\exists j: T_j x \in B_i ( Y_i) $, then
+	\[ 
+	\N { Tx -T_j x} \leq \frac{\epsilon}{2}
+	\]
+	Thus $Tx \in B_{\epsilon} ( Y_i) $ 
+\item Image of compact sets is compact
+\item $L( B_1)  $ is bounded
+\item $\forall \epsilon>0$, there are $y_1,\ldots,y_{N_{\epsilon} } \in Y$ such that $T(  \overline{B_1}) \subset \bigcup B_\epsilon( y_i) $.\\
+	Let $Y_\epsilon = span(y_1,\ldots,y_{N_\epsilon} ) $ and define $T_\epsilon = P_{Y_\epsilon} T$ and 
+	\[ 
+	\N { T_\epsilon - T} = \sup | P_{Y_\epsilon} T x - Tx| < 2\epsilon
+	\]
+\end{enumerate}
+\end{proof}
+\subsection{Hahn-Banach}
+\begin{thm}
+	Let $X$ be a real vector space.\\
+	Suppose
+	\begin{enumerate}
+	\item $q: X\to \mathbb{R}$ is sublinear, ie.
+		\begin{itemize}
+		\item $q( \lambda x ) = \lambda q( x) \forall \lambda \geq 0$ 
+		\item $q( x+y) \leq  q( x) + q( y) $ 
+		\end{itemize}
+		
+	
+	\item $M \subset X$ a subspace
+	\item $L: M \to \mathbb{R}$ linear such that $L( x) \leq q( x) \forall x \in M$ 
+	\end{enumerate}
+	Then there is an extension $T:X\to \mathbb{R}$ such that $T \leq q$ on $X$
+\end{thm}
+\begin{proof}
+	We first show that, for $X$ a real vector space, $q:X\to \mathbb{R}$ sublinear, $M \subset X$ a subspace and $M\neq X$, $L:M\to \mathbb{R}$ linear and $L \leq q$, then for any $z\in X\setminus M$, there is an extension of $L$ to $N=M+ \mathbb{R}z$.\\
+	We prove this.\\
+	For any $\alpha \in \mathbb{R}$ set $Tz= \alpha$.\\
+	For any $y \in N$, there is a unique $m \in M, t \in \mathbb{R}$ such that $y= m+tz$, then
+	\[ 
+	Ty = Tm + t Tz = Lm + t\alpha
+	\]
+	Then $T:N \to \mathbb{R}$ is linear and extends $L$.\\
+	It remains to show that $\exists \alpha$ such that $Ty \leq q( y) \forall y \in N$.\\
+	This is the same thing as
+	\[ 
+	Lm + t \alpha \leq  q( m+t z ) 
+	\]
+	For $m=0$, if $t>0$, $t\alpha \leq t q( z) $, if $t<0, t\alpha \leq  -t q( -z) $ and we get the two conditions $\alpha \leq q( z) $ and $\alpha \leq -q( -z) $.\\
+	We can find such and $\alpha$  iff $-q( -z) \leq q( z) \iff 0 \leq q( z-z) \leq q( z) + q( -z) $ which is always the case.\\
+	Now $\forall m \in M\forall t >0$, we need $\forall m \in M \forall t>0\alpha \leq  \frac{q( m+tz) -Lm}{t}$ and $\forall m \in M, \forall t <0\alpha \geq \frac{q( m+tz) -Lm}{t}$, so we need to show that $\forall m.n$ $\forall s<0<t$ one has
+	\begin{align*}
+		\frac{q( n+sz) -Ln}{s} &\leq \frac{q( m+tz) - Lm}{t}\\
+		tq( n+ sz) - tLn &\geq  s q( m+tz) - sLm\\
+		t q( n+st) - s q( m+tz) &\geq L( tn-sm) \\
+		q( tn+ t sz ) + q ( |s|m +t |s|z) &\geq L( tn-sm) 
+\intertext{But}
+		q( tn+ t sz ) + q ( |s|m +t |s|z) & \geq  q( tn + tsz + |s|m + t|s|z) \\
+		&= q( tn-sm) 
+	\end{align*}
+	But the final term is larger than $L( tn-sm) $ by assumption.
+\end{proof}
+\begin{thm}
+	Let $X$ be a vector space over $\mathbb{K}= \left\{ \mathbb{R},\mathbb{C} \right\} $.\\
+	\begin{enumerate}
+	\item Let $q:X\to [ 0, \infty )$ is a seminorm
+	\item $M \subset X$ a subspace
+	\item $L:M \to \mathbb{K}$ linear and $|L| \leq q$ 
+	\end{enumerate}
+	Then there is an extension of $L$. 
+\end{thm}
+\begin{proof}
+	In the real case, by the theorem above, there is an extension $T$, with $T \leq q\forall x \in X$.\\
+	Then $T( -x) \leq  q( -x) \implies - T( x) \leq  q( x) \implies |T( x) | \leq q( x) $.\\
+	What about $\mathbb{C}$?\\
+	Let $L:X\to \mathbb{C}$, $S= Re L, S:X\to \mathbb{R}$ is $ \mathbb{R}$-linear.\\
+	Notice that $L( ix) = i Lx$ and hence
+	\[ 
+	L( x) = Re L( x) + i im L( x) = S( x) - i S( ix) 
+	\]
+\end{proof}
+\begin{lemma}
+Let $X$ be a $ \mathbb{C}$-vector space.\\
+Let $T: X \to \mathbb{C}$ a function.\\
+$T$ is linear iff $\exists S:X\to \mathbb{R}$ $ \mathbb{R}$-linear such that $T( x) = S( x) - i S( ix) \forall x \in X$.\\
+Then $S( x) = Re T( x) $ 
+\end{lemma}
+
+
+
+
+
+\end{document}	

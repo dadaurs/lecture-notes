@@ -1,0 +1,20 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{12}{Wed 23 Nov}{something}
+\begin{propo}[Swan's lemma]
+Let $E\xto \pi M$ be a vector bundle over a compact manifold.\\
+Then there exists $r>>0$ and a bundle epimorphism $\phi: M\times \mathbb{R}^{r}\to E$
+\end{propo}
+\begin{proof}
+$M$ compact implies there exists a finite cover of $M$ by charts and thus a finite bundle atlas $( U_i,\phi_i) $.\\
+Let $\rho_i$ be a subordinated partition of unity, wlog. $rk E = N$.\\
+Let $s_j^{i}( p) = \rho_j ( p) \phi_j^{-1}( p,e_i) $ in $U_j$ and $0$ outside.\\
+The collection of all these $s_j^{i}$ generates $\Gamma( E) $ and we get a surjective map
+\[ 
+\Phi:M\times \mathbb{R}^{r}\to E, ( p,\xi) \mapsto \sum_{i,j} \rho_j^{i}s_j^{i}( p) 
+\]
+
+\end{proof}
+
+
+\end{document}	

@@ -1,0 +1,89 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{15}{Thu 01 Dec}{Local class field theory}
+\section{Local Class Field Theory}
+We start with unramified extensions.\\
+\begin{itemize}
+\item $F$ is a non-archimedean local field
+\item $E/F$ is a unramified extension of degree $n$ 
+\item For unramified extensions, $\gal( E |F) \simeq \gal( k_E|k_F) $.
+\end{itemize}
+\begin{thm}
+	Let $E |F$ be a  finite unramified extension of local non-archimedean fields, then
+	\[ 
+	H^{q}( \gal ( E|F) , \O_E^{\times}) =1 \forall q \in \mathbb{Z}
+	\]
+	
+\end{thm}
+\begin{proof}
+Consider the exact sequence
+\[ 
+1\to U_E^{1}\to \O_E^{\times}\to k_E^{\times}\to 1
+\]
+Since $H^{q}( \gal( E|F) , k_E^{\times}) =1$, we get an isomorphism $H^{q}( \gal( E|F) , \O_E^{\times}) \to H^{q}( \gal( E|F) , U^{1}_E) $.\\
+Now we want to show that $H^{q}( \gal,U^{1}) \simeq H^{q}( \gal, U^{n}) \forall n$.\\
+Note that because $E|F$ is unramified, we can use $\varpi_E= \varpi_F = \varpi$.\\
+There is an isomorphism $1+ a \varpi^{n-1}\to a \mod p_E$ giving an exact sequence 
+\[ 
+1\to 1+ p_E^{n}\to 1+ p_E^{n-1}\to k_E\to 1
+\]
+Recall $H^{q}( \gal, k_E) =1$, so we get an isomorphism $H^{q}( \gal, U^{n}_E) \xto{\sim} H^{q}( \gal, \O_E^{\times}) $.\\
+There also are isomorphisms, for $n$ sufficiently large, $H^{q}( \gal, U_E^{n}) \to H^{q}( \gal, U^{n+v( t) }) \to H^{q}( \gal,\O_E^{\times})  $.\\
+For $t$ large enough, the map $H^{q}( \gal, \O_E^{\times}) \to H^{q}( \gal, \O_E^{\times}) $ is the $0$ map, but all other maps are bijective.
+\end{proof}
+Our next goal is to show that unramified extensions of $F$ form a class formation.\\
+Axiom 1 is not a  problem by theorem 90.\\
+To show axiom 2, look at the exact sequence
+\[ 
+1\to \O_E^{\times}\to E^{\times}\to \mathbb{Z}\to 0
+\]
+By the theorem above, we get an isomorphism
+\[ 
+	H^{2}( \gal, E^{\times}) \xto{\sim} H^{2}( \gal, \mathbb{Z}) 
+\]
+Recall that $ \mathbb{Q}$ is cohomologically trivial and thus $H^{2}( \gal, \mathbb{Z}) \to \chi( \gal) $.\\
+For every character $\chi$, we have $\chi( \phi_{E|F} ) \in \frac{1}{[E:F]}\mathbb{Z} /\mathbb{Z}$.\\
+We call the map $\phi$ the evaluation at the frobenius map.
+\begin{defn}
+	Let $E|F$ be an unramified extension, we define
+	\[ 
+		inv_{E|F} :H^{2}( \gal, E^{\times}) \to \frac{1}{[E:F]} \mathbb{Z} / \mathbb{Z}
+	\]
+	by $inv_{E|F} = \phi\circ\del^{-1}\circ \overline{v_E}$.
+	
+\end{defn}
+\begin{thm}
+Let $K_0$ be a fixed non-archimedean local field and let $T$ be the maximal unramified extension, then the formation $( \gal( T|K_0) , T^{\times}) $ is a class formation.
+\end{thm}
+We turn to the general situation
+\begin{enumerate}
+\item $K_0$ is a fixed non-archimedean local field
+\item $G= \gal( \overline{K_0} |K_0) $ 
+\end{enumerate}
+We want to show that $( G, \overline{K_0}^{\times}) $ is a class formation.
+\begin{lemma}
+For every finite normal extension, we have
+\[ 
+\# H^{2}( E|F) | [ E:F] 
+\]
+with equality if $\gal( E|F) $ is cyclic of prime degree.	
+\end{lemma}
+\begin{proof}
+We first assume $\gal( E|F) $ is cyclic of prime degree.\\
+We claim that
+\[ 
+h( E^{\times}) = \frac{\# H^{2}( E|F) }{\# H^{1}( E|F) }= \# H^{2}( E|F) = p
+\]
+Recall that
+\[ 
+h( E^{\times}) ^{p-1}= \frac{q_{0,p} ( F^{\times})^{p}}{q_{0,p} ( E^{\times}) }
+\]
+We compute that
+\[ 
+q_{0,p} ( E^{\times}) = \frac{[E^{\times}: ( E^{\times})^{p}}{\# E_p}= p q_E^{-v_E( p) }
+\]
+
+\end{proof}
+
+
+\end{document}	

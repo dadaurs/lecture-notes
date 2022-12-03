@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{15}{Fri 02 Dec}{main theorem of elimination theory}
+\begin{rmq}
+	We proved that $\pi: \proj A_0[x_0,\ldots,x_n] \to \spec A_0$ is closed $\forall $ rings $A_0$.\\
+	In particular, given homogeneous polynomials $f_1,\ldots,f_n\in A_0[x_0,\ldots,x_n]$.\\
+	In particular, there exists an ideal $I \subset A_0$ such that $\phi: A_0\to K$ where $K$ is a field with induced map $\phi': A_0[x_0,\ldots,x_n] \to K[x_0,\ldots,x_n] $, then $\phi'( f_1) ,\ldots,\phi'( f_m) $ have a common solution in $\overline{K}$ (ie., the fiber $V_+( f_1,\ldots,f_n)\to \spec A_0 $ over the $K$-rational point corresponding to $\phi$ is non-empty. ) 	if and only if $\phi( I) =0$ (ie. the $K$-rational point corresponding to $\phi$ factors through $V( I) $ ) 
+\end{rmq}
+\section{Quasi-Coherent sheaves on $\proj A$ }
+Let $A$ be a graded ring, $X= \proj A, \phi:M\to N$ is a morphism of graded $A$-modules.\\
+$\forall a \in A$ homogeneous, we get compatible maps $M_{( a) } \to N_{( a) } $ which glue to a morphism $\tilde\phi: \widetilde M \to \widetilde N$.\\
+Note that $\widetilde { \cdot} $ is exact but not an equivalence of categories
+\begin{exemple}
+Let $A$ be a graded ring, $M= \bigoplus M_d$ , $N= \bigoplus N_d$ such that $\exists n>0$ such that $M_d= N_d \forall d>n$ , the resulting qcoh. sheaves are isomorphic.
+\end{exemple}
+However
+\begin{propo}
+Let $A= A_0 [ x_0,\ldots,x_n] $ be the standard graded polynomial ring.\\
+Then $\exists$ a natural isomorphism $A_d \simeq \Gamma( \proj A, \O_{\proj A} ( d) ) $ 
+\end{propo}
+\begin{defn}
+	Let $A$ be a graded ring, $X= \proj A$, $\F$ a qcoh. sheaf, then 
+	\begin{enumerate}
+	\item The $n$-th twist of $\F$ is $\F_n = \F \otimes_{\O_X} \O_X( n) $ 
+	\item The graded module associated to the sheaf $\F$ is
+		\[ 
+		\Gamma_\ast ( \F) = \bigoplus_{d\in \mathbb{Z}} \Gamma( X,\F( d) ) 
+		\]
+		
+	\end{enumerate}
+	
+\end{defn}
+We still have to check how $\Gamma_\ast( \F) $ become an $A$-module?\\
+What is the relation between 
+\[ 
+	\widetilde{M}( n) \text{ and } \widetilde{M( n) }
+\]
+\begin{defn}
+	Let $M,N$ be graded $A$-modules, then $M\otimes_A N$ becomes a graded module by setting
+	\[ 
+		( M\otimes_A N)_d = \bigoplus_{d_1+d_2 = d} ( M_{d_1} \otimes_\mathbb{Z}N_{d_2} ) / ( ma\oplus n - m \oplus an|a+v+w =d,m  ) 
+	\]
+\end{defn}
+\begin{rmq}
+This satisfies the universal property of the tensor product in the category of graded rings.
+\end{rmq}
+\begin{exemple}
+\[ 
+	( M\otimes_A A( n) )_d = M_{d+n} 
+\]
+\end{exemple}
+\begin{lemma}
+Let $A$ be a graded ring and $M,N$ garded $A$-modules, $X= \proj A$.\\
+Then, there is a natural morphism
+\[ 
+	\widetilde{M}\otimes_{\O_X} \widetilde{N} \to \widetilde{M\otimes_A N}
+\]
+
+\end{lemma}
+
+
+
+\end{document}	

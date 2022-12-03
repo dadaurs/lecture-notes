@@ -1,0 +1,55 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{14}{Mon 28 Nov}{Class Formations (or something)}
+\begin{thm}[General Law of Reciprocity] 
+	For every normal extension $L|K$, we get an isomorphism
+	\[ 
+	\theta_{L|K} : G_{L|K}^{\ab}\simeq H^{-2}( G_{L|K} , \mathbb{Z}) \to H^{0}( L|K) = \faktor{A_K}{N_{L|K} A_L}	
+	\]
+	This isomorphism is also called the Nakayma map.
+\end{thm}
+Recall that we have
+\[ 
+\theta_{L|K} ( \sigma G_{L|K}') = \left[ \prod_{\tau \in G_{L|K} } u( \tau,\sigma) \right] \cdot N_{L|K} A_L
+\]
+for $[u] = u_{L|K} \in H^{2}( L|K) $.\\
+The inverse isomorphism is called the reciprocity.\\
+We define the norm residue symbol by lifting $\theta_{L|K}^{-1}$ to $A_k $ and we get an exact sequence
+\[ 
+	1\to N_{L|K} A_L \to A_k \xto{( \ast,L|K) } G_{L|K}^{\ab}\to 1
+\]
+Ie., an element $a\in A_K$ is a norm from $L$ iff $( A,L|K) =1$.
+\begin{lemma}
+	Let $L|K$ be a normal extension, take $a\in A_k$ and set $[a] = a N_{L|K} A_L\in H^{0}( L|K) $, then
+	\[ 
+		\chi( ( a,L|K) ) = inv_{L|K} ( [ a] \cup \delta \chi) \in \frac{1}{[L:K]} \mathbb{Z} /\mathbb{Z}
+	\]
+	for every character $\chi\in \chi( G_{L|K}^{\ab}) = H^{1}( G_{L|K} , \mathbb{Q}/\mathbb{Z}) $.
+\end{lemma}
+\begin{thm}
+	Let $N \supset L \supset K$ a normal tower, then $\pi\circ( ,N|K)= ( , L|K)  $ where $\pi:G_{N|K}^{\ab}\to G_{L|K}^{\ab}$.
+	
+\end{thm}
+\begin{defn}[Norm group]
+	A subgroup $I \subset A_k$ is called a normm group if there is a normal extension $L|K$ so that $I= N_{L|K} A_L$.
+\end{defn}
+\begin{thm}
+		Let $L|K$ be a normal extension and let $L^{\ab}$ be the maximal abelian extension of $K$ contained in $L$.\\
+		Then $N_{L|K} A_L= N_{L^{\ab}|K} A_{L^{\ab}} $.
+\end{thm}
+\begin{proof}
+\[ 
+A_K /N_{L|K} A_L\simeq G_{L|K} ^{\ab}\simeq G_{L^{\ab}|K} \simeq A_K /N_{L^{\ab}|K} A_{L^{\ab}} 
+\]
+
+\end{proof}
+\begin{crly}
+	The index $[A_K:N_{L|K} A_L] $ divides $[L|K]$ with equality if and only if $L|K$ is abelian.
+\end{crly}
+\begin{thm}
+The map $L\mapsto I_L= N_{L|K} A_L$ gives an inclusion reversing isomorphism between abelain extensions $L|K$ and norm groups in $A_K$.
+\end{thm}
+
+
+
+\end{document}	

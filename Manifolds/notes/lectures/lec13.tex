@@ -1,0 +1,23 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{13}{Mon 28 Nov}{Linear Lie groups}
+\section{Lie Groups/Lie Algebras}
+\begin{defn}
+	A linear Lie group is a subgroup of $GL_n( \mathbb{C}) $ 
+\end{defn}
+\begin{defn}[Lie Algebra]
+	The Lie Algebra associated to a linear Lie group $G$ is the set of all $A\in M_n( \mathbb{C}) $ such that $\forall t, \exp( tA) \in G$.\\
+	We denote this $LA( G) $.
+\end{defn}
+\begin{thm}
+	Let $G$ be a linear lie group.\\
+	There are canonical bijections between the following sets
+	\begin{enumerate}
+	\item $LA( G) $ 
+	\item The set of all group homomorphisms from $ \mathbb{R}\to G$ 
+	\item Tangent space $ T_{1} G$ 
+	\item The set of left-invariant vector fields on $G$ ie. $\forall g,h \in G, X( hg) = T_g( h\cdot -) X( g) $ 
+	\end{enumerate}
+	
+\end{thm}
+\end{document}	
