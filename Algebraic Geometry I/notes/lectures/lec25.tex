@@ -1,0 +1,47 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{25}{Mon 23 Jan}{hypersurfaces}
+\begin{crly}
+Let $k$ be a field, then $\omega_{ \mathbb{P}^{n}/k} \simeq \O_{\mathbb{P}^{n}_k} ( -n-1) $ 
+\end{crly}
+\begin{propo}
+Let $D$ be a smooth effective Cartier divisor on a smooth scheme of f.t. over a perfect field $k$.\\
+Then $\omega_D = ( \omega_X \otimes_{\O_X} \O_X( D)  )|_D$ 
+\end{propo}
+
+\section{Curves and function fields}
+\begin{defn}[Varieties]
+	Let $k$ be a field.
+	\begin{itemize}
+	\item A variety over $k$ is a geometrically integral separated scheme of f.t. over $k$.
+	\item A variety $X$ is called complete if $X$ is proper.
+	\item A curve is a variety of dimension 1
+	\end{itemize}
+\end{defn}
+\begin{lemma}
+A curve $X$ over $k$  is regular iff it is normal.\\
+If $X$ is normal, then $\O_{X,x} $ is a DVR $\forall x \in X$ closed.
+\end{lemma}
+\begin{thm}
+	There is an equivalence of categories
+	\[ 
+	\left\{ \text{ regular complete curves } /k \right\} \leftrightarrow \left\{ \text{ f.g. field extensions $K /k$ of $ trdeg K /k =1$  }  \right\} 
+	\]
+	where morphisms on the left are dominant morphisms.
+\end{thm}
+\begin{lemma}
+Let $A$ be an integral domain, f.g. over a field $k$.\\
+Let $K = Frac A$ and $K \subset L$ a finite extension.\\
+Then, the integral closure $B$ of $A$ in $L$ is f.g. as $A$-module, f.g. as $k$-algebra, normal and has $Frac B = L$.
+\end{lemma}
+\begin{lemma}
+Let $f:X\to Y$ be a finite morphism of Noetherian schemes and $\mathcal{L}$ is an ample invertible sheaf on $Y$,, then $f^{\ast} \mathcal{L}$ is ample.
+\end{lemma}
+\begin{crly}
+Every regular complete curve $X$ over a field $k$ is projective.
+\end{crly}
+
+
+
+
+\end{document}	

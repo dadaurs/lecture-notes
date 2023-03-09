@@ -1,0 +1,72 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{17}{Thu 08 Dec}{What is this good for?}
+\begin{crly}[Local Kronecker-Weber Theorem]
+Every finite abelian extension of $ L|\mathbb{Q}_p$ is contained in a cyclotomic extension $ \mathbb{Q}_p( \mu_n) $ where $\mu_n$ are the $n$-th roots of unity.
+\end{crly}
+\begin{proof}
+	We find $n,f$ such that $U^{( n) }_{\mathbb{Q}_p} \times \eng{p^{f}} \subset N_{L| \mathbb{Q}_p} L^{\times}$ 
+\end{proof}
+\begin{thm}[Kronecker-Weber]
+Every finite abelian extension of $ \mathbb{Q}$ is contained in a cyclotoimic extension $ \mathbb{Q}( \mu_n) $.
+\end{thm}
+\begin{proof}[Sketch]
+We use that $ \mathbb{Q}$ has no unramified extensions.\\
+Let $S$ be the set of all primes $p$ that ramify in $L$.\\
+For $p\in S$, we take $ \beta| ( p)_L$ with $\beta\in \spec \O_L$, we get the abelian extension $L_{\beta} | \mathbb{Q}_p$.\\
+We apply the local Kronecker-Weber-theorem $ \mathbb{Q}_p \subset L_{\beta} \subset \mathbb{Q}_p( \mu_{n_p} ) $ for some $n_p \in \mathbb{N}$ and $ n_p = p^{e_p}\tilde{n_p}, ( p, \tilde{n_p}) =1$.\\
+Define $n= \prod_{p \in S} p^{e_p}$ and $M= L( \mu_n) $.\\
+We claim that $M= \mathbb{Q}( \mu_n) $.\\
+$\supset$ is trivial.\\
+For the other inclusion, take $ \tilde\beta | \beta | p$, then $ \mathbb{Q}_p \subset L_\beta \subset M_{\tilde\beta} $.\\
+We now use that
+\begin{itemize}
+\item $M| \mathbb{Q}$ is abelian
+\item if $p$ ramifies in $M$, then $p \in S$
+\item $F( \mu_n) |F \implies ( F( \mu_n) )_{\beta} = F_p( \mu_n) $ 	
+\end{itemize}
+We write
+\[ 
+M_{\tilde\beta} = L_\beta( \mu_n) = \mathbb{Q}_p( \mu_{p^{e_p}} ) \mathbb{Q}_p( \mu_{n'} ) 
+\]
+for some $n'$ with $( n',p) =1$.\\
+The inertia group $I_{\tilde\beta} $ of $M_{\tilde\beta} $ of $M_{\tilde\beta} | \mathbb{Q}_p$ is isomorphic to $ \gal( \mathbb{Q}_p( \mu_{p^{e_p}} ) | \mathbb{Q}_p) $.
+\end{proof}
+\subsection*{How many abelian extensions of $ \mathbb{Q}_p$ with degree $p$ are there?}
+\begin{thm}
+	Let $p$ be odd, then the answer is $p+1$.
+\end{thm}
+\begin{proof}
+We need to count subgroups of $\mathbb{Q}_p^{\times}$ with index $p$.\\
+From the structure theorem, $ \mathbb{Q}_p^{\times}= \mathbb{Z}\times \mathbb{Z}_p^{\times}= \mathbb{Z}\times \faktor{\mathbb{Z}}{( p-1) \mathbb{Z}}\times \mathbb{Z}_p$.\\
+Each of the groups we are interested in contains $ ( \mathbb{Q}_p^{\times})^{p}$, so we need to find index $p$ subgroups of $ \faktor{\mathbb{Q}_p^{\times}}{( \mathbb{Q}_p^{\times})^{p}} \simeq \faktor{\mathbb{Z}}{p \mathbb{Z}}^{2}	$.
+\end{proof}
+Local class field theory can be used to construct the Hilbert Symbol
+\begin{itemize}
+\item $F$  a non-archimedean local field containing the $n$-th roots of unity
+\item Let $L$ be the maximal abelian extension with exponent $n$, this is the class field of $( F^{\times})^{n}= N_{L|F} L^{\times}$.
+\end{itemize}
+There is a pairing $\gal( L|F) \times \chi( \gal( L|F) ) \to \mu_n$ sending $( \sigma,\chi) \to \chi( \sigma) $.\\
+Using the isomorphisms $ \gal( L|F) \simeq\chi( \gal( L|F) ) \simeq F^{\times} /( F^{\times})^{n}$.\\
+The Hilbert symbol is defined by
+\[ 
+	( \frac{\cdot,\cdot}{p_F}) : \faktor{F^{\times}}{( F^{\times})^{n}}^{2} \to \mu_n
+\]
+\begin{lemma}
+For $a,b \in F^{\times}$, we have
+\[ 
+	( \frac{a,b}{p_F}) \cdot b^{\frac{1}{n}} = ( a, F( b^{\frac{1}{n}}) |F) b^{\frac{1}{n}}
+\]
+
+\end{lemma}
+\begin{proof}
+$a\in \faktor{F^{\times}}{F^{\times n}}$, then $\sigma_a = ( a, L|F)  $ and  $b \mapsto \chi_b$ with $\chi_b( \tau) \frac{\tau( b^{\frac{1}{n}}) }{b^{\frac{1}{n}}}$.\\
+By definition, $ ( \frac{a,b}{p_F}) =\chi_b( \sigma_a) = \frac{( a, L|F) ( b^{\frac{1}{n}}) }{b^{\frac{1}{n}}}$ 	
+\end{proof}
+
+	
+
+
+
+
+\end{document}	

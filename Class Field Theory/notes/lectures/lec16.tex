@@ -1,0 +1,92 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{16}{Mon 05 Dec}{extensions of local fields form a class formation}
+\begin{lemma}
+Consider the situation $E\supset F\supset E'$ with $F|E'$ unramified and let $N= EE'$.\\
+Suppose $[c] \in H^{2}( E'|F) \subset H^{2}( M|F) $, then 
+\[ 
+Res_E( [ c] ) \in H^{2}( N|E) \subset H^{2}( M|E) 
+\]
+and
+\[ 
+inv_{N|E} ( Res_E [ c] ) = [ E:F] inv_{E'|F} ( [ c] ) 
+\]
+
+\end{lemma}
+\begin{thm}
+Let $E|F$ be a normal extension and let $E'|F$ be an unramified extension such that 
+\[ 
+[ E:F] = [ E':F] 
+\]
+Then 
+\[ 
+H^{2}( E|F) = H^{2}( E'|F) \subset H^{2}( |F) 
+\]
+
+Here equal means that the image of $H^{2}( E|F) $ and $H^{2}( E'|F) $ in $H^{2}( N|F) $ under the inflation maps coincide (here $N= EE'$ ) 
+
+\end{thm}
+\begin{proof}
+	Let $N= EE'$ 
+It suffices to show that $H^{2}( E'|F) \subset H^{2}( E|F) $.\\
+This is because $\# H^{2}( E'|F) = [ E':F] = [ E:F] $ and $\# H^{2}( E|F) | [ E:F] $.\\
+Let $Res: H^{2}( N|F) \to H^{2}( N|E)  $ be the restriction map, let $[c] \in H^{2}( E'|F) $, by exactness of the inflation/restriction sequence, it suffices to show that $Res [ c] =0$.\\
+Because the invariance map is an isomorphism for unramified extensions, it suffices to show that $inv Res [ c] =0 \iff [ E:F] inv_{E'|F} [ c] =0$.\\
+But $[E':F] = [ E:F] $ and hence the last term is 0.
+\end{proof}
+\begin{defn}
+	Let $E|F$ be a normal extension and let $E'|F$ be the unramified extension of same degree, we define
+	\[ 
+		inv_{E|F} : H^{2}( E|F) =H^{2}( E'|F) \to \frac{1}{[E:F]} \mathbb{Z} /\mathbb{Z}
+	\]
+	
+\end{defn}
+\begin{thm}
+	The formation $( G, \overline{K_0}^{\times}) $ 	is a class formation.
+\end{thm}
+\subsection{Main theoremes of abstract CFT in the context of local CFT}
+\begin{enumerate}
+\item $ u_{E|F} \cup \cdot : H^{q}( G_{E|F} , \mathbb{Z}) \to H^{q+E}( E|F) $ for $E|F$ normal and $q\in \mathbb{Z}$ 
+\item Local Reciprocity
+	\[ 
+	G_{E|F}^{\ab}\simeq  F^{\times} / N_{E|F} E^{\times}
+	\]
+	and the inverse isomorphsim gives the exact sequence
+	\[ 
+		1\to N_{E|F} E^{\times} \to F^{\times} \xto{ ( \cdot,E|F) } G_{E|F}^{\ab}\to 1
+	\]
+	
+\item The norm residue symbol is compatible with essentially all natural operations
+\item Dual characterisation of $ ( \cdot, E|F) $ 
+\end{enumerate}
+\begin{thm}
+	Let $E|F$ be a finite abelian extension, then the norm residue symbol maps 
+	\begin{itemize}
+	\item The unit group $\O_F^{\times}$ onto the inertia group
+	\item The group $1+ p_F = U^{1}_F$ onto the ramification group.
+	\end{itemize}
+\end{thm}
+The fixed field $E_T$ of $I$ the inertia group   (called the inertia field) is the maximal unramified subextension $F \subset E_T \subset E$  and $f= [ E_T:F]$ and $R$ is the unique $p$-SYlow subgroup of $I$.
+\begin{proof}
+Take $a\in \O_F^{\times}$ 
+\end{proof}
+\begin{thm}[Existence theorem]
+	The norm groups are the open subgroups of finite index in $F^{\times}$.
+\end{thm}
+\begin{proof}[For characteristic 0]
+By reciprocity, norm groups $I_E$ are of finite index becuase $F^{\times} /I_E\simeq G_{E|F}^{\ab}$ and the galois group is finite.\\
+They contain $( F^{\times})^{m}$ for some large $m$.\\
+Take $I \subset F^{\times}$ open and of finite index (say $m$), thus $( F^{\times})^{m}\subset I$.\\
+It suffices to show that $( F^{\times})^{m}$ is a norm group.
+\begin{enumerate}
+\item If $F$ contains all $m$-th roots of unity.\\
+	Take $a\in F^{\times}$ and let $L_a = F( a^{\frac{1}{m}} ) $ and $L= \bigcup_{a\in F^{\times}} L_a$, hence $L|F$ is a finite abelian extension.\\
+	We claim that $I_L = N_{E|F} L^{\times}= F^{\times m}$ 
+\end{enumerate}
+
+\end{proof}
+
+
+
+
+\end{document}

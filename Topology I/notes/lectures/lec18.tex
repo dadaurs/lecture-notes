@@ -1,0 +1,59 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{18}{Mon 12 Dec}{homotopy theory}
+Consider a pointed pair of topological spaces $( X,A, a_0) $, ie. $a_0\in A \subset X$.\\
+\begin{defn}[Homotopy group]
+	The $n$-th homotopy group of a pointed space $( X,x_0) $ 
+	\[ 
+	\pi_n( X,x_0) = \left\{ \text{ cont. maps $( S^{n},e_1) \to ( X,x_0) $  }  \right\} / \text{ base point preserving homotopy } 
+	\]
+Alternatively, one could define
+\[ 
+\pi_n( X,x_0) = \left\{ \text{ cont maps } ( D^{n},S^{n-1}) \to ( X,x_0)   \right\} / \text{ homotopy of pairs. } 
+\]
+
+\end{defn}
+\begin{defn}[Relative homotopy groups]
+	The $n$-th relative homotopy group of a pointed pair of topological spaces $ ( X, A,a_0) $ is a 
+	\[ 
+	\pi_n( X,A,x_0) = \left\{ ( D^{n},S^{n-1}, a_0)\to ( X,A,a_0)   \right\} / \text{ homotopy of triples } 
+	\]
+	
+\end{defn}
+\subsection{Group structure on $\pi_n( X,A,a_0) $ }
+We let $J^{n-1}= \del [ 0,1]^{n}\setminus [ 0,1]^{n-1}\times \left\{ 1 \right\} \subset \del [ 0,1]^{n}$.\\
+It is clear that $\pi_n( X,A,x_0) \simeq \left\{ ( [ 0,1]^{n}, J^{n-1}, x_0)\to ( X,A,x_0)   \right\} / \text{ homotopy of pairs } $ 
+Given two maps $f,g: [ 0,1]^{n}\to X$ (of pairs) , we want to define their concatenation.\\
+\begin{defn}
+	For any two $f,g : [ 0,1]^{n}\to X$ representing elements in $\pi_n( X,A,a_0) $ for $1 \leq i \leq n-1$ ( $n \geq 2$ ), we define
+	\[ 
+	[ f+_i g] \in \pi_n( X,A,a_0) 
+	\]
+as represented by the map
+\[ 
+	( t_1,\ldots,t_n) \mapsto
+	\begin{cases}
+	f( t_1,\ldots, 2t_i, \ldots,t_n) \\
+	g( t_1,\ldots, 2t_i -1, t_n) 
+	\end{cases}
+\]
+\end{defn}
+\begin{lemma}
+Any $+_i$ is a well defined binary operation $\pi_n( X,A,a_0) $ and all of them are defining group structures on $\pi_n( X,A,a_0) $ 
+\end{lemma}
+\begin{propo}
+For $n \geq 3$, all the binary operations $+_i$ coincide and are abelian.\\
+In the non-relative case, $\pi_2( X,x_0) $ is also abelian.
+\end{propo}
+\begin{lemma}
+Let $S$ be a set with two binary operations $\ast_1,\ast_2: S\times S \to S$ unital with two-sided units $ e_1, e_2$ satisfying 
+\[ 
+	( a\ast_1 b) \ast_2 ( c\ast_1 d) = ( a\ast_2 b) \ast_1 ( c\ast_2 b) 
+\]
+for all $a,b,c,d\in S$.\\
+Then the two units coincide, $\ast_1= \ast_2$  are commutative and associative.
+
+\end{lemma}
+
+
+\end{document}	

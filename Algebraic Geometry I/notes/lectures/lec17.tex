@@ -1,0 +1,161 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{17}{Fri 09 Dec}{criterion for morphisms to projective space being closed immersions}
+We say that $ ( \mathcal{L}, s_0,\ldots,s_n) $ and $ ( \mathcal{M},t_0,\ldots,t_n) $ are isomorphic if there exists an isomorphism $\phi: \mathcal{L}\to \mathcal{M}$ such that $\phi( x) ( s_i) = t_i \forall i$ 
+\begin{thm}
+	Let $X$  be a scheme over $\spec A$, then the association
+	\[ 
+	\theta: ( f:X\to \mathbb{P}^{n}_A) \mapsto ( f^{\ast}\O( 1) ,f^{\ast}x_0,\ldots,f^{\ast}x_n) 
+	\]
+	is a natural bijection between $\hom( X, \mathbb{P}^{n}_A) $ and the set of isomorphism classes of $( n+2) $ tuples $ ( \mathcal{L},s_0,\ldots,s_n) $ where $ \mathcal{L}$ is invertible and the $s_i\in \Gamma( X, \mathcal{L}) $ generate $ \mathcal{L}$.
+\end{thm}
+\begin{proof}
+Let $f:X\to \mathbb{P}^{n}_A$ be any morphism, then let $X_i = \left\{ x\in X| ( f^{\ast}( x_i) ) \notin \m_x f^{\ast}\O_{\mathbb{P}^{n}} ( 1)_x \right\} = \left\{ x\in X| ( x_i)_{f( x) } \notin \m_{f( x) } \O_{\mathbb{P}^{n}} ( 1)_{f( x) } 	 \right\} = f^{-1}\left\{ D_+( x_i) \right\}  $.\\
+The induced map $f_i : X_i \to D_+( x_i) $ is determined by a morphism of rings 
+\[ 
+	A[ \frac{x_0}{x_i},\ldots, \frac{x_n}{x_i}] \mapsto \Gamma( X_i,\O_{X_i} ) 
+\]
+sending $\frac{x_j}{x_i} \mapsto s_{ji} $.\\
+By naturality of the pullback of sections
+\[ 
+	A[x_0,\ldots,x_n]_{( x_i) } \xto{\sim} \Gamma( D_+( x_i) ,\O_{\mathbb{P}^{n}} ) \to \Gamma( X_i, \O_{X_i} ) 
+\]
+the trivialisations of the first twist commute with the maps
+\[ 
+	A[x_0,\ldots,x_n] ( 1) _{( x_i) } \xto{\sim} \Gamma( D_+( x_i) ,\O_{\mathbb{P}^{n}} ( 1) ) \xto{f^{\ast}} \Gamma( X_i, f^{\ast}\O_{ \mathbb{P}^{n}}( 1)  ) 
+\]
+So we can write $ s_{ji} = ( f^{\ast}x_j) |_{D_+( x_i) } ( f^{\ast}x_i) |_{D_+( x_i) }^{-1}$.\\
+So the $s_{ji} $ is uniquely determined by the isomorphism class of $ ( f^{\ast}\O_{\mathbb{P}^{n}}( 1) , f^{\ast}x_0,\ldots) $.\\
+Let's show this association is surjective.\\
+Let $ ( \mathcal{L}, s_0,\ldots,s_n) $ be as in the statement, set
+\[ 
+X_{s_i} = \left\{ x\in X|( s_i)_x \notin \m_x \mathcal{L}_x \right\} 
+\]
+and define $f_i :X_{s_i}\to \mathbb{P}^{n}_A $ to be the map associated to the map of rings
+\[ 
+	A[\frac{x_0}{x_i},\ldots] \to \Gamma( X_{s_i} , \O_{X_{s_i} } ) ; \frac{x_j}{x_i}\mapsto s_j|_{X_{s_i} } \cdot ( s_i) |_{X_{s_i} }^{-1}
+\]
+The $f_i$ coincide on $X_{s_i} \cap X_{s_j} $ and we get a map $f:X\to \mathbb{P}^{n}_A$.\\
+Using an exercise, one can show that there is an isomorphism $\phi: f^{\ast}\O_{\mathbb{P}^{n}} ( 1)  \to \mathcal{L}$ sending $f^{\ast}x_i \mapsto s_i$
+\end{proof}
+\begin{rmq}
+By the Yoneda lemma, this theorem fully characterises $ \mathbb{P}^{n}_A$ 
+\end{rmq}
+\begin{rmq}
+If $X= \spec k$ in this theorem, we get that 
+\[ 
+\mathbb{P}^{n}_A( k) = \left\{ \text{ 1-dimensional quotients of} \faktor{k^{n+1}}{k^{\times}} \right\} 
+\]
+\end{rmq}
+
+\begin{rmq}
+The morphism $f:X\to \mathbb{P}^{n}$ associated to $ ( \mathcal{L}, s_0,\ldots,s_n) $ factors through $V_+( I) \subset \mathbb{P}^{n}_A$ ( $I$ saturated homogeneous).\\
+This factors iff $g( s_0,\ldots,s_n) =0 \forall g \in I$.\\
+In particular, $f( X) $ is contained in a hyperplane, ie. in $V_+( g) $ for some homogeneous polynomial $g\in A[x_0,\ldots,x_n]( 1) $ iff the $s_i$ are $A$-linearly dependent.
+\end{rmq}
+\begin{rmq}
+If the $s_i$ do not globally generate $ \mathcal{L}$, we still get a morphism $X\supsetneq \bigcup X_{s_i} \to \mathbb{P}^{n}_A$.
+\end{rmq}
+\begin{rmq}
+	If $A=k$ is a field and we replace the $s_i$ by $t_i$ with $ \eng{s_0,\ldots,s_n} = \eng{t_0,\ldots,t_n}$ then the induced morphisms differ by an automorphism of $ \mathbb{P}^{n}$.
+\end{rmq}
+\begin{rmq}
+If $A= k$ is a field, then the morphism $X\to \mathbb{P}^{n}_k$ induced by $s_0,\ldots,s_n$ is given on $k$-rational points by $x\mapsto [ s_0( x) :\ldots:s_n( x) ] $ where $s_i( x) $ is the image of $s_i$ in $ \mathcal{L}_x /\m_x \mathcal{L}_x$ 
+\end{rmq}
+\begin{propo}
+The morphism $f:X\to \mathbb{P}^{n}_A$ induced $ ( \mathcal{L},s_0,\ldots,s_n) $ is a closed immersion iff
+\begin{enumerate}
+\item $X_{s_i} $ is affine
+\item The maps $ A[\frac{x_0}{x_i},\ldots, \frac{x_n}{x_i}] \to\Gamma( X_{s_j} , \O_{X_{s_j} } ) $ sending $\frac{x_j }{x_i}\mapsto s_j |_{X_{s_i} } $  is surjective
+\end{enumerate}
+\end{propo}
+\begin{proof}
+Recall that $X_{s_i} = f^{-1}( D_+( x_i) ) $.\\
+Being a closed immersion is (LOCT).\\
+$f$ is a closed immersion $\iff f_{D_+( x_i) } $ is a closed immersion $\forall i\iff $ both conditions hold.
+\end{proof}
+There is a better criterion under stronger assumptions.
+\begin{propo}
+Let $X$ be a proper scheme over an algebraically closed field $k$ and let $f:X\to \mathbb{P}^{n}_k$ be induced by $ ( \mathcal{L}, s_0,\ldots,s_n) $.\\
+Suppose that $f_\ast\O_X$ is coherent.\\
+Let $V= \eng{s_0,\ldots,s_n} \subset \Gamma( X, \mathcal{L}) $.\\
+Then $f$ is a closed immersion iff
+\begin{enumerate}
+\item Elements of $V$ separate points, ie. for any two distinct closed points $x,y \in X$ $\exists s\in V$ such that $s_x \in \m_x \mathcal{L}_x$ and $s_y \notin \m_y \mathcal{L}_y$ or vice-versa.
+\item Elements of $V$ separate tangent vectors, ie. for each closed point $x\in X$ the set $ \left\{ s\in V|s_x\in \m_x \mathcal{L}_x \right\} $ spans the $k$-vector space $ \faktor{\m_x \mathcal{L}_x}{\m_x^{2} \mathcal{L}_x}$ 
+\end{enumerate}
+\end{propo}
+\begin{lemma}
+Let $X$ be a scheme locally of finite type over a field $k$.\\
+Let $x\in X$, the following are equivalent
+\begin{enumerate}
+\item $x\in X$ is closed
+\item $k \to k( x) $ is finite
+\item $k \to k( x) $ is algebraic.
+\end{enumerate}
+In particular, if $k= \overline{k}$, then the set of closed points is the set of rational points.
+\end{lemma}
+\begin{proof}
+If $x\in X$ is closed, we find $\spec A \subset X$ open affine such that $x= \m \in \spec A$.\\
+Using the NSS, we get that $k( x) = A /m$ is a finite extension.\\
+The implicaiton finite $\to$ algebraic is clear.\\
+Now, suppose $x\in X$ such that $k \subset k( x) $ is algebraic.\\
+Choose $x\in \spec A \subset X$.\\
+So $x= p $ for some prime ideal.\\
+Consider
+\[ 
+k \to A \to A /p \to \to \frac ( A /p) = k( x) 
+\]
+$k( x)|k  $ is algebraic implies that $ A/p$ is integral over $k$ and thus $A /p$ is a field.
+\end{proof}
+\begin{lemma}
+Let $f:X\to Y$ be a closed morphism of schemes locally of f.t. over a field, then $f$ is injective iff it is injective on closed points.
+\end{lemma}
+\begin{proof}
+One direction is obvious.\\
+Let $x,y \in X$ such that $f( x) = f( y) $.\\
+Now
+\[ 
+\overline{f( x) }= \overline{f( y) }= f(  \overline{x}) = f( \overline{y}) 
+\]
+We claim that the set of closed points $ \overline{ \left\{ x \right\} }_{cl} = \overline{\left\{ y \right\} }_{cl} $ are equal.\\
+Take $z\in \overline{\left\{ x \right\} }_{cl} $, then $f( z) \subset f(  \overline{ \left\{ x \right\} }) $, then $f( z) \in f(  \overline{x}) = f( \overline{y}) $.\\
+Thus there is a $v\in \overline{\left\{ y \right\}} $ such that $f( v) = f( z) $.\\
+Because $f( z) $ is closed, $ \overline{ \left\{ v \right\} } \subset f^{-1}( f( z) ) $.\\
+Thus, there exists $w\in \overline{ \left\{ v \right\} }_{cl} \subset  \overline{ \left\{ y \right\} }_{cl} $ such that $f( w) = f( v) = f( z) $ and $w= z$.\\
+hence $ \overline{ \left\{ x \right\} }_{cl} = \overline{ \left\{ y \right\} }_{cl} $.\\
+Now, since $ \overline{ \left\{ x \right\} }_{cl} = \overline{ \left\{ y \right\} }_{cl} $ there is an open affine $\spec A \subset X$ such that $ x= \p \in \spec A, y = \q \in \spec A$.\\
+Now to show the equality, we notice that $ p=\bigcap_{p \subset m} m= \bigcap_{q \subset m} m= q$ because $A$ is Jacobson.
+\end{proof}
+\begin{lemma}
+Let $\phi:A\to B$ be a local homomorphism of Noetherian local rings, assume that 
+\begin{enumerate}
+\item The induced map $ A /m_A \to B /m_B$ is an isomorphism
+\item The induced map $m_A \to m_B /m_{B^{2}} $ is surjective
+\item $B$ is a finitely generated $A$-module
+\end{enumerate}
+Then $\phi$  is surjective.
+\end{lemma}
+\begin{proof}
+Let $I = m_A B \subset B$.\\
+Since $\phi$ is local, $I \subset m_B$.\\
+By the assumption above, $I \to m_B /m_B^{2}$ is surjective.\\
+Thus $m_B = I + m_B^{2}$ and thus $I= m_B$.\\
+We know that $1\in B$ generates $B /m_A B = B/m_B \simeq A /m_A$ as an $A$-module.\\
+$1\in B$ generates $B$ as an $A$-module and thus $\phi$  is surjective.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}	

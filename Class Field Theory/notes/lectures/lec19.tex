@@ -1,0 +1,43 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{19}{Thu 15 Dec}{Global Class Field theory}
+\section{Global Class Field Theory}
+\subsection{Cohomological preparations}
+We study the $G_{L|K} $ cohomology of the modules 
+\[ 
+1\to L^{\times}\to \mathbb{A}_L^{\times}\to \mathbb{C}_L \to 1
+\]
+We study the $G_{L|K} $ cohomology of these module
+\begin{thm}[Everything factors]
+	Let $L|K$ be a normal extension, then
+	\begin{itemize}
+	\item $H^{q}( G_{L|K} , \mathbb{A}_{L, v} ^{\times})= H^{q}( G_{L_w|K_w} , L_w^{\times})  $ for some $w|v$.
+	\item if $v$ is finite and unramified, then
+		\[ 
+		H^{q}( G_{L|K} , \O_{L,v} ^{\times}) =1
+		\]
+		
+	\end{itemize}
+\end{thm}
+\begin{proof}
+We write
+\[ 
+\mathbb{A}_{L,v}^{\times}= \prod_{\sigma \in G /G_w} L_{\sigma w }^{\times}= \prod_{\sigma \in G /G_w} \sigma( L_w^{\times}) 
+\]
+By shapiro's lemma
+\[ 
+H^{q}( G_{L|K} , \mathbb{A}_{L,v}^{\times}) = H^{q}( G_w, L_w^{\times}) 
+\]
+\end{proof}
+\begin{crly}
+\[ 
+	H^{q}( G_{L|K} , \mathbb{A}_L^{\times,\overline{S}}) = \prod_{v\in S} H^{q}( G_w, L_w^{\times}) 
+\]
+and
+\[ 
+H^{q}( G_{L|K} , \mathbb{A}_L^{\times}) = \bigoplus_v H^{q}( G_w, L_w^{\times}).
+\]
+\end{crly}
+		
+
+\end{document}	

@@ -1,0 +1,78 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{26}{Fri 27 Jan}{degrees on curves and riemann roch}
+\begin{lemma}
+Let $f:X\to Y$ be a finite morphism of Noetherian schemes, let $ \mathcal{L}$ be an ample invertible sheaf on $Y$, then $f^{\ast}\mathcal{L}$ is ample.
+\end{lemma}
+\subsection{Degrees on curves}
+\begin{lemma}
+Let $f:X\to Y$ be a dominant morphism between complete curves over $k$, then $f$ is finite.
+\end{lemma}
+\begin{defn}[Degree]
+	Let $f:X\to Y$ be a dominant morphism of curves over $k$
+	\begin{enumerate}
+	\item The degree of $f$ is $\deg f = [ K( X) :K( Y) ] $
+	\item $f$ is separable if $K( Y) \subset K( X) $ is separable.
+	\end{enumerate}
+\end{defn}
+\begin{propo}
+Let $f:X\to Y$ be a finite morphism of curves over $k$.\\
+Assume $Y$ is regular, then
+\[ 
+f_\ast \O_X 
+\]
+is locally free of rank $\deg f$.
+\end{propo}
+A uniformizer of a DVR is a generator of the maximal ideal.\\
+Let $f:X\to Y$ be a finite morphism of regular curves over a field $k$.\\
+Let $y \in Y$ be a closed point and $t\in \O_{Y,y} $, then 
+\[ 
+\deg  f= \sum_{f( x) = y} v_X( f^{\sharp}( \varpi_y) ) [ k( x) : k( y) ] 
+\]
+\begin{defn}
+Let $f:X\to Y$ be a finite morphismof regular curves over a field
+\begin{enumerate}
+\item The ramification index of $f$ at a closed point $x\in X$ is defined as $e_f( x) = v_x( f_x^{\sharp}t) $ where $t$ is a uniformizer ov $\O_{Y,f( x) } $ 
+\item A closed point $x\in X$ is called a ramification point if $e_f( x) >1$ 
+\item The inertia degree of $f$ at a closed point $x\in X$ is $ [ k( x) : k( y) ] $.
+\end{enumerate}
+\end{defn}
+It is clear how to pull back $(  \mathcal{L},s )$ along $f:X\to Y$, namely, set $ f^{\ast}(  \mathcal{L},s) = ( f^{\ast }\mathcal{L}, f^{\ast s}) $ 
+\begin{defn}
+	Let $f:X\to Y$ be a finite morphism of regular curves over $k$, let $D= \sum_{p \in Y} a_p p$ be a Weil divisor on $Y$.\\
+	Then the pullback of $D$ along $f$ is $f^{\ast}D = \sum_{p \in Y} \sum_{f( x) =p} a_p e_f( q) f_f( q) q $ 
+\end{defn}
+\begin{defn}
+	Let $D= \sum_{p \in X} a_p p	$ be a Weil divisor on a regular curve $x$.\\
+	The degree of $D $ is $\deg D = \sum_{p \in x} a_p [ k( p) :k] $ 
+\end{defn}
+\begin{propo}
+Let $f:X\to Y$ be a finite morphism of regular curves, let $D$ be a Weil divisor, then $deg ( f^{\ast }D) = \deg  f \deg D$ 
+\end{propo}
+\begin{propo}
+Let $D$ be a principal divisor on a regular complete curve $X$.\\
+Then $\deg D =0$ 
+\end{propo}
+\begin{lemma}
+Let $X$ be a regular complete curve over a field $k$ and $\mathcal{L}$ is an invertible sheaf.\\
+If $\deg ( \mathcal{L}) <0$, then $H^{0}( X, \mathcal{L}) =0$.\\
+\end{lemma}
+In the following, let $h^{0}(  X, \mathcal{L}) = \dim_K H^{0}( X, \mathcal{L}) $, then
+\begin{thm}[Riemann-Roch]
+	Let $X$ be a smooth, complete, geometrically integral curve over a perfect field $k$.\\
+	Let $ \mathcal{L}\in Pic( X) $, then $h^{0}( X, \mathcal{L}) < \infty $ and
+	\[ 
+	h^{0 }( X, \mathcal{L}) - h^{0}( X, \omega_X \otimes \mathcal{L}^{-1}) = \deg \mathcal{L}- h^{0}( X, \omega_X) +1
+	\]
+\end{thm}
+\begin{defn}
+	Let $X$ be as before, then the geometric genus of $X$ is $g( X) = h^{0}( X, \omega_X) $ 
+\end{defn}
+
+
+
+
+
+
+
+\end{document}	

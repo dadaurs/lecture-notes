@@ -1,0 +1,16 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{19}{Wed 14 Dec}{homotopy and covering spaces}
+\begin{lemma}
+Given a covering $p: \tilde X \to X, x_0\in \tilde X$, the map 
+\[ 
+\pi_n ( \tilde X, x_0) \to \pi_n( X, p( x_0) ) 
+\]
+is an isomorphism of abelian groups
+\end{lemma}
+\begin{proof}
+For surjectivity, pick $f: ( S^{n}, e_1) \to ( X, p( x_0) ) $, by the lifting theorem gives a unique lift of $f$, $\overline{f}: S^{n}\to \tilde X$ and this lift is a preimage of $ [ f] \in \pi_n( X, p( x_0) ) $.\\
+For injectivity, we do the same thing with $S^{n}\times [ 0,1] $ 
+\end{proof}
+
+\end{document}	

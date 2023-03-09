@@ -1,0 +1,116 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{16}{Mon 05 Dec}{saturated graded modules}
+\begin{lemma}
+For every $d>0, d|n$ and $a\in A_d$, we have $\O_X( n) |_{D_+( a) } \simeq \O_X|_{D_+( a) } $ and the morphisms
+\[ 
+	\O_X( m) \otimes \O_X( n) \to \O_X(m_n) ; \O_X( n) \otimes \F( m) \to F( m+n); \widetilde M ( n) \to \widetilde{M( n) }
+\]
+restrict to isomorphisms.\\
+
+\end{lemma}
+\begin{proof}
+Multiplication by $a^{\frac{n}{d}}$ defines a graded morphism $M\to M( n) $ which induces an isomorphism $M_{( a) } \to M( n)_{( a) } $\\
+The composition
+\[ 
+	\widetilde{M}|_{D_+( a) } \to \widetilde{M( n) }|_{D_+( a) } \to ( \widetilde{M( n) }\otimes \widetilde{A( m) })|_{D_+( a) } \to \widetilde{M( n+m)}
+\]
+is just multiplication by $a^{m+n /d}$.
+\end{proof}
+\begin{crly}
+Let $A$ be a graded ring generated in degree $1$, let $X= \proj A$, then
+\begin{enumerate}
+\item $\O_X( n) $ is an invertible sheaf $\forall n \in \mathbb{Z}$
+\item There is a natural isomorphism $\O_X( n_1) \otimes \O_X( n_2) \to \O_X( n_1+n_2) \forall n_1,n_2 \in \mathbb{Z}$
+\item There exists a natural isomorphism $\widetilde{M( n) } \xto\sim \widetilde{M}( n) $ 	
+\end{enumerate}
+\end{crly}
+Recall that there is a natural map $M_d \to \Gamma( \proj A \widetilde{M}( d) ) $ and we obtain a natural map $M\to \Gamma_\ast( \widetilde{M}) $.\\
+If this map is an isomorphism, we call the module $M$ saturated.
+\begin{exemple}
+	$A= A_0[x_0,\ldots,x_n]$ is saturated as a graded module over itself.
+\end{exemple}
+\begin{thm}
+	Let $A$ be a graded ring, f.g. in degree 1.\\
+	Let $X= \proj A$, the the functors
+	\[ 
+		\widetilde{( ) }:\left\{ \text{ graded saturated $A$-modules }  \right\} \leftrightarrow QCoh( X,\O_X) : \Gamma_\ast( \cdot) 	
+	\]
+	are essential inverses.
+\end{thm}
+\begin{proof}
+By some lemma, there is a closed immersion $X\to \mathbb{P}^{n}_{A_0} $ and hence $X$ is qcqs.\\
+For any $\F\in QCoh( X,\O_X) $, $a\in A_d, d \geq 1$. Define $\Gamma_\ast( \F)_{( a) } = \left( \bigoplus \Gamma( X,\F( n) ) \right)_{( a) } \to \Gamma( D_+( a) ,\F) $ by sending $ \frac{m}{a^{n}}\to m|_{D_+( a) } \cdot a^{-n}$.\\
+These are compatible with restriction and we get a map $\beta: \widetilde{\Gamma_\ast( F) } \to \F$.\\
+We claim that $\beta$ is an isomorphism.\\
+It suffices to check $\beta( D_+( a) ) $ is bijective $\forall a \in A_1$.\\
+Set $s= \alpha( a) $.\\
+Then
+\[ 
+X_s = \left\{ x\in X| s_x \notin \m_x\O_X( 1)_x \right\} = \bigcup_{b \in A_1} \left\{ x\in D_+( b) | ( \frac{d}{b})_x \notin \m_x \right\} = \bigcup ( D_+( a) \cap D_+( b) ) = D_+(a) 
+\]
+To see surjectivity, let $m' \in \Gamma( D_+( a) ,\F) $, by exercise 47, $\exists n>0$ and $m \in \Gamma( X,\F( n) ) $ such that
+\[ 
+m|_{D_+( a) } = m' \otimes s|_{D_+( a) }^{\otimes n}= a^{n}m'
+\]
+Hence $\beta( D_+( a) ) ( m) = m'$.\\
+To see injectivity, assume $a^{-n}m |_{D_+( a) } =0 \in \Gamma( D_+( a) ,\F) $.\\
+Hence $m|_{D_+( a) } =0\in \Gamma( D_+( a) ,\F( n) ) $.\\
+Now, using an exercise, there exists an $n'>0$ such that $\otimes s^{\otimes n'}=0 \in \Gamma( X,\F( n,n') ) $.\\
+Hence $\frac{m}{a^{n}}=0 \in \Gamma_\ast( \F)_{( a) } $.\\
+
+By definition, we want to show that $\Gamma_\ast( \F) \xto{\alpha} \Gamma_\ast( \widetilde{\Gamma_\ast( \F) }) \xto{\Gamma_\ast( \beta) } \to \Gamma_\ast( \F) $ is the identity.\\
+Thus $\Gamma_\ast( \F) $ is the identity.
+\end{proof}
+\begin{crly}
+Let $A$ be a graded ring, f.g. in degree 1
+\begin{enumerate}
+	\item For every closed subscheme $Z \subset \proj A$ given by an ideal sheaf $\mathcal{I}_Z$, there exists a homogeneous ideal $I_Z \subset A$ such that $ \widetilde{I_Z} = \mathcal{I}_Z$.\\
+		In particular $Z \to \proj A$ is given by the quotient map
+	\item If $A$ is saturated as a module over itself, then $I_Z$ can be chosen to be saturated and then $I_Z$ be the unique saturated homogeneous ideal $I_Z \subset A$ such that $ \mathcal{I}_Z = \widetilde{I_Z}$.
+\end{enumerate}
+\end{crly}
+\section{Morphisms to projective space via invertible sheaves}
+Recall $\hom( X,\spec A) \simeq \hom( A,\O_X( X) ) $ (this is affinization).\\
+In particular, we understand morphisms of schemes to  $\mathbb{A}^{n}_{ \mathbb{Z}} $ which are equivalent to choosing $n$  global sections and if we fix $X\to \spec A$, then
+\[ 
+\hom_{Sch /\spec A} ( X, \mathbb{A}^{n}_{A} ) \simeq \O_X( X)^{n}
+\]
+What about $\hom_{Sch /\spec A} ( X, \mathbb{P}^{n}_A) $?\\
+The answer is similar but we use invertible sheaves.\\
+Recall, if $f:X\to Y$ is a morphism of schemes and $\F\in QCoh( Y,\O_Y) $, then there is a map $\F\to f_\astf^{\ast}\F$.\\
+Taking $\Gamma( Y,-) $, we get a map $f_\ast: \Gamma( Y,\F) \to \Gamma( X,f^{\ast}\F) $ called the pullback oof sections.\\
+Explicitly, $f^{\ast}( s) $ is the image of $s\otimes 1$ under
+\[ 
+\F( Y) \otimes_{f^{-1}\O_Y} \O_X( X) \to ( f^{-1}\F) ( X) \otimes_{f^{-1}\O_Y( X) } \O_X( X) \to f^{\ast }\F( X) 
+\]
+\begin{propo}
+Let $A$ be a ring and let $f:X\to \mathbb{P}^{n}_A$ a morphism of schemes over $\spec A$, then
+\begin{enumerate}
+\item The sheaf $ \mathcal{L}= f^{\ast}\O_{\mathbb{P}^{n}_A} ( 1) $ is invertible
+\item For $s_i = f^{\ast }x_i\in \Gamma( X, \mathcal{L}) $, the germs $( s_i)_x$ generated $ \mathcal{L}_x$ as an $\O_{X,x} $-module $\forall x\in X$.
+\end{enumerate}
+\end{propo}
+\begin{proof}
+Follows from the general fact that the inverse image of an invertible sheaf is invertible (locally $A\otimes_A B\simeq B$ ).\\
+\[ 
+\mathcal{L}_x\simeq \O_{ \mathbb{P}^{n}_A} ( 1)_{f( x) } \otimes \O_{X,x} 	
+\]
+One checks that $( s_i)_x \mapsto ( x_j)_{f( x)} \otimes 1$.
+It suffices to show that the $( x_i)_{f( x) }$ generated $\O_{ \mathbb{P}^{n}( 1) }_{f( x) } $.\\
+But this is clear because multiplication by $x_i$ is an isomorphism on $\O_{ \mathbb{P}^{n}}|_{D_+( x_i) }  \to \O_{ \mathbb{P}^{n}} ( 1)|_{D_+( x_i) }  $ 
+\end{proof}
+\begin{defn}[Globally Generated]
+	Let $\mathcal{L}$ be an invertible sheaf
+	\begin{enumerate}
+	\item A collection $ \left\{ s_i \right\}_{ i \in I} $ of global sections $s_i \in \Gamma( X, \mathcal{L}) $ is said to generated $ \mathcal{L}$ if the induced map $\O_{X}^{\oplus I}\to \F$ is surjective.
+	\item $ \mathcal{L}$ is called (finitely) globally generated if it admits (finitely) many global sections that generated it.
+	\end{enumerate}
+	
+\end{defn}
+
+
+
+
+
+\end{document}	

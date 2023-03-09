@@ -1,0 +1,55 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{23}{Mon 16 Jan}{smoothness and jacobian criterion}
+\subsection{Reminder of field theory}
+\begin{defn}
+	\begin{enumerate}
+	\item $K \subset L$ is said to be finite separable if the extension is finite and if $\forall \alpha \in L$, the minimal polynomial $m_\alpha$ has distinct roots.
+	\item $K$ is perfect if every finite extension is separable.
+	\item $K \subset L$ is f.g. separable if $\exists$ a finite transcendence basis $x_1,\ldots,x_n$ such that $L$ is finite separable over $k( x_1,\ldots,x_n) $.
+	\end{enumerate}
+\end{defn}
+\begin{lemma}
+Assume
+\begin{itemize}
+\item $\O_{X,x} $ Noetherian
+\item $k \subset k( x) $ is f.g. separable
+\end{itemize}
+then the conormal sequence is left-exact and split.\\
+\end{lemma}
+\begin{proof}
+It is enough to show that there is a $\beta: k( x) \to \O_{X,x} $.\\
+If $k( x) /k$ is purely transcendental, we define $\beta: k( x) \to \O_{X,x} $ mapping $x_i $ to some lift.\\
+If $k( x) = k( x_1,\ldots,x_n, y) $ where $y$ has min. pol $P( T) $.\\
+We claim we can replace $\O_{X,x} $ by $ \O_{X,x} /m_x^{2}$ because any derivation of $\O_{X,x} $ factors through $\O_{X,x} / m_x^{2}$.\\
+We map $k( x) \to \O_{X,x} / m_x^{2}$ by sending $x_i$ to some lift and we send $y\to y+b$ where we choose $b$ such that $\beta( P( y) ) =0$.
+\end{proof}
+\begin{lemma}
+Let $k$ be a field, then $\dim k( x) \Omega_{k( x) /k} = trdeg k( x) /k$.
+\end{lemma}
+\begin{crly}[Affine Jacobian Criterion]
+	Let $A= k[x_1,\ldots,x_n] / ( f_1,\ldots,f_m) $, denote by $ \frac{\del f_i}{\del x_j}( x) $ the image of $ \frac{\del f_i}{\del x_j}$ under $\O_{X,x} \to \frac{\O_{X,x} }{m_x}$.\\
+	Define the jacobian matrix at a point $x\in X$ as what you'd expect.\\
+	The cokernel of the Jacobian (seen as a map $k( x) ^{\oplus m}\to k( x) ^{\oplus n}$ ) then is
+	\[ 
+	\coker J_A( x) \simeq \Omega_{A /k} \otimes_A k( x) 
+	\]
+	
+\end{crly}
+\subsection{Regularity vs. smoothness}
+\begin{defn}
+	\begin{itemize}
+	\item A Noetherian scheme $X$ is said to be regular at $x\in X$ if $\O_{X,x} $ is regular.\\
+		It is said to be regular if it is regular everywhere.
+	\item A scheme $X$ over $k$  is smooth at $x$ if $\dim \Omega_{X/k} \otimes k( x) = \dim \O_{X,x} $ 
+	\end{itemize}
+\end{defn}
+\begin{crly}
+If $X$ is of f.t. over a perfect field $K$, then $X$ is regular $\iff$ $X$ is smooth.
+\end{crly}
+
+
+
+
+
+\end{document}	

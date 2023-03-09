@@ -1,0 +1,83 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{17}{Wed 14 Dec}{Tensor fields}
+\subsection{Tensor fields and differential forms}
+\begin{defn}
+	Let $M$ be a smooth manifold, we define
+	\[ 
+	T^{r,s}M = \bigotimes^{r}TM \otimes \bigotimes^{s}T^{\ast}M
+	\]
+	is a vector bundle whose sections are called tensor fields of type $r,s$.
+\end{defn}
+\begin{propo}
+For a section (not necessarily smooth)  $f:M\to T^{r,s}M$, tfae
+\begin{enumerate}
+\item $f\in \Gamma( T^{r,s}M) $ 
+\item For vector fields, $X_{1},\ldots, X_s \in \Gamma( TM) $ and covector fields $\omega_1,\ldots,\omega_r\in \Gamma( T^{\ast}M) $, the function
+	\[ 
+	p \to f( p) ( \omega_1,\ldots,\omega_r, X_1,\ldots,X_s)|_p
+	\]
+	is smooth.
+
+\item For every chart $( U,\phi) $ of $M$, we have
+	\[ 
+	f= \sum f_{j_1,\ldots,j_s}^{i_1,\ldots,i_r} \frac{\del}{\del x_{i_1} }\otimes\ldots\otimes \frac{\del}{\del x_{i_r} } \otimes dx_{j_1} \otimes \ldots\otimes dx_{j_s} 
+	\]
+	and each $f_{j_1,\ldots,j_s}^{i_1,\ldots,i_r}$ is smooth.
+	
+\end{enumerate}
+\end{propo}
+\begin{defn}
+	The sections of the bundle $\Lambda^{p}T^{\ast}M$ are called differential forms.\\
+	We set
+	\[ 
+	\Omega^{p}( M) = \Gamma( \Lambda^{p}T^{\ast}M) 
+	\]
+	
+\end{defn}
+\begin{defn}[Pullback]
+	Let $f:M\to N$ smooth and $\xi \in \Gamma( T^{0,s}N)  $ and put
+	\[ 
+	f^{\ast}\xi|_p ( v_1,\ldots,v_s) = \xi|_{f( p) } ( T_pf( v_1) ,\ldots, T_pf( v_p) ) 
+	\]
+\end{defn}
+\begin{propo}
+If $M\xto f N \xto g Z$, then
+\begin{enumerate}
+\item If $\phi\in C^{ \infty }N $, then $f^{\ast}f = \phi\circ f$ 
+\item $f^{\ast}$ is linear and sends $\Omega^{s }( N) \to \Omega^{s}( M) $ 
+\item $( g\circ f  )^{\ast}= f^{\ast}\circ g^{\ast}$ 
+\item If $f$ is a diffeomorphism, $f^{\ast}$ is too.
+\item $f^{\ast}$ preserves wedge products.
+\end{enumerate}
+\end{propo}
+\begin{thm}
+	Let $M$ be a smooth manifold.\\
+	There exists a unique family of linear maps
+	\[ 
+	d: \Omega( U) \to \Omega( U) 
+	\]
+	for all open subsets $U \subset M$.\\
+with the following properties
+\begin{enumerate}
+\item $d$ is of degree 1, ie. $d: \Omega^{p}( U) \to \Omega^{p+1}( U) $ 
+\item $\omega\in \Omega^{p }( U) , \eta\in \Omega^{q}( U) $, then
+	\[ 
+	d( \omega\wedge \eta) = d \omega\wedge \eta + ( -1)^{p}\omega\wedge d \eta
+\]
+\item For $f\in C^{ \infty }( M) , X \in \Gamma( TM) $ 
+	\[ 
+		\eng{df, X}= Xf
+	\]
+
+\item $d\circ d =0$ 
+\item $d$ is compatible with restrictions.
+	
+	
+\end{enumerate}
+
+\end{thm}
+
+
+
+\end{document}	

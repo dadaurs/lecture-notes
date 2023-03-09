@@ -1,0 +1,134 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{20}{Mon 19 Dec}{principal divisors, class group}
+Throughout, $X$ is integral, Noetherian and $R1$.\\
+\begin{defn}[Principal divisors]
+\begin{enumerate}
+\item A weil divisor $D$ on $X$ is called principal if $D= div ( f) $ for some $f\in K( X)^{\times}$.
+\item Two Weil divisors $D,D'$ on $X$ are called linearly equivalent if $D- D'$ is principal.
+\item The ( Weil divisor) class group $Cl( X)  $ of $X$ is the quotient of $Div( X) $ by the subgroup of principal divisors.
+\end{enumerate}
+\end{defn}
+\begin{lemma}
+Assume $X$ is noetherian, integral, normal and let $s$ be a rational section of an invertible sheaf.\\
+If $v_Z( s) \geq 0\forall Z \subset X$ prime, then $s$ extends uniquely to a global section of $ \mathcal{L}$.
+\end{lemma}
+\begin{propo}
+Let $X$ be an integral, normal, Noetherian scheme, then $div$ is injective.
+\end{propo}
+\begin{proof}
+Assume $div(  \mathcal{L},s) =0$. In particular $v_Z( s) =0\forall Z \subset X$ prime.\\
+By the above, wlog, $s$ is a global section.\\
+Consider $s\times - : \O_X \to \mathcal{L}$.\\
+If this is an iso, then $( \O_X,1) \simeq ( \mathcal{L},s) $.\\
+To check that $s\cdot$ is an iso, we can work locally, ie., we may assume $X= \spec A$ and $ \mathcal{L}= \O_X$ is trivial, $s\in A$.\\
+Since $v_Z( s) =0 \forall Z \subset X$ prime, we have $v_Z( \frac{1}{s}) =0$ 
+\end{proof}
+\begin{defn}
+	Let $D$ be a Weil divisor on $X$, the sheaf asscoiated to $D$ is 
+	\[ 
+	\O_X( D): U \to \left\{ f\in K( X)^{\times}|div|_U f + D|_U \geq 0 \right\} \cup \left\{ 0 \right\} 
+	\]
+	where $div|_U f$ is the principal divisor asscoiated to $f$ considered as a rational function on $U$.
+Note that $1\in K( X) $ is a rational section of $\O_X( D) $.	
+\end{defn}
+This is a sheaf.
+\begin{lemma}
+$\O_X( D) $ is quasi-coherent.
+\end{lemma}
+\begin{proof}
+By a theorem, it suffices to show that for all open affines $\spec A = U \subset X$ open and $a \in A \setminus \left\{ 0 \right\} $, the map
+\[ 
+\rho: \O_X( D) ( U)_a \to \O_X( D) ( D( a) ) 
+\]
+is an isomorphism.
+\end{proof}
+\begin{propo}
+Let $X$ be a normal integral and Noetherian scheme.\\
+Let $ ( \mathcal{L},s) $ be a pair of an invertible sheaf and a rational section $s$.\\
+Then, there exists an isomorphism $\O_X( div( \mathcal{L},s) ) \to \mathcal{L}$ that sends $1$ to $s$.
+\end{propo}
+\begin{proof}
+Let $\emptyset \neq U \subset X$ such that $ s\in \mathcal{L}( U) $.\\
+Let $V \subset X$ be any open, let $t \in\O_X( div(  \mathcal{L},s) ) ( V) \subset K( X) $.\\
+Then $t|_{V\cap U} \in \O_X( div(  \mathcal{L},s) ) ( V) \subset K( X) $ and
+\[ 
+div t + div( s) |_{U\cap V}  \geq 0
+\]
+Then $t|_{U\cap V} $ has no poles, so $t\in \O_X( V\cap U) $.\\
+So $st \in \mathcal{L}( V\cap U) $ which we can extend to $ \mathcal{L}( V) $.\\
+So we get a morphism $\O_X( div( s) ) \to \mathcal{L}$.
+\end{proof}
+\begin{defn}
+	A weil divisord $D$ on $X$ is called locally principal if $\forall x \in X\exists x\in U \subset X$ such that $D|_U$ is principal.
+\end{defn}
+\begin{crly}
+Let $D$ be a locally principal Weil divisor on a normal, integral, Noetherian scheme.\\
+Then $\O_X( D) $ is invertible.
+\end{crly}
+\begin{proof}
+	We have $\O_U( D|_U) = \O_X( D) |_U$.\\
+	If $D|_U$ is principal, then $\O_U( D|_U) \simeq \O_U$ 
+\end{proof}
+\begin{propo}
+Let $X$ be a normal, integral, Noetherian.\\
+Let $D$ be a Weil divisor on $X$ such that $\O_X( D)$ is invertible, then $D= div( \O_X( D),1 ) $, in particular $D$ is locally principal.
+\end{propo}
+\begin{propo}
+If $A$ is a Noetherian integral domain, tfae\\
+$A$ is factorial $\iff$ every height 1 prime in $A$ is principal.
+\end{propo}
+\begin{propo}
+Factorial domains are normal.
+\end{propo}
+\begin{thm}
+	All Noetherian regular local rings are factorial.
+\end{thm}
+
+\begin{defn}[Factorial scheme]
+	A scheme $X$ is called factorial if $\O_{X,x} $ is factorial $\forall x \in X$.
+\end{defn}
+\begin{propo}
+Let $X$ be a factorial, integral, Noetherian scheme, then, every Weil divisor on $X$ is locally principal.\\
+In particular $div$ is an isomorophism and $Pic( X) \sieq Cl( X) $
+\end{propo}
+\begin{proof}
+	Wlog, $X= \spec A, D \subset X$ prime with ideal $p \subset A$.\\
+	Note that $D|_{X\setminus D} = 0$.\\
+	Let $x\in D \subset X$, then $ht( p A_x) =1$ and $A_x$ is factorial and $p A_x= ( f_x) $ for some $f_x \in A_x$.\\
+	In particular, $v_D( f_x) = 1$, so $ div( \O_X, f_x) |_U = D|_U$ for some open neighborhood $x\in U \subset X$ 
+\end{proof}
+\begin{crly}
+If $A$ is factorial, then $Pic( \spec A) = Cl ( \spec A) =0$ 
+\end{crly}
+\begin{exemple}
+\begin{enumerate}
+\item If $A$ is a Dedekind domain, then $Cl( A) $ are fractional ideals mod principal fractional ideals and this is isomorphic to $Pic( \spec A) $ 
+\item If $k$ is a field, then
+	\[ 
+	Pic( \mathbb{A}^{n}_k ) = Cl( \mathbb{A}^{n}_K) =0
+	\]
+\end{enumerate}
+\end{exemple}
+\begin{propo}
+Let $X$ be a normal, integral, Noetherian scheme and $Z \subset X$ is integral and closed, let $U = X \setminus Z$, then
+\begin{enumerate}
+\item The restriction map $Cl( X) \to Cl( U) $ is surjective
+\item If $codim( Z,X) \geq 2$, then $Cl( X) \simeq Cl( U) $ 
+\item If $codim( Z,X) =1$, then there is an exact sequence
+	\[ 
+	\mathbb{Z}\to Cl( X) \to Cl( U) \to 0
+	\]
+	
+\end{enumerate}
+
+\end{propo}
+
+
+
+
+	
+
+
+
+\end{document}	

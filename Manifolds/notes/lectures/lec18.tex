@@ -1,0 +1,32 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{18}{Wed 11 Jan}{Oriented Manifolds}
+\begin{lemma}
+Consider $H^{m}_- \supset U$ open.\\
+Let $\phi:U\to V \subset H^{m}_-$ be a diffeomorphism.\\
+Then for $\p \in \del H_-^{m}$ 
+\[ 
+D\Phi( p) =
+\begin{pmatrix}
+	\frac{\del \phi_1}{\del x_1}( p) & 0 \\
+	\ast & D\Phi|_{\del H_-} ( p) 
+\end{pmatrix} 
+\]
+Then
+\[ 
+\det D\Phi( p) \cdot \det D\Phi|_{\del H_-} ( p) >0
+\]
+
+\end{lemma}
+\begin{crly}
+If $A$ is an oriented atlas of a manifold with boundary $M$, then $\phi|_{\del M} $ is an oriented atlas of $\del M$.
+\end{crly}
+\subsection{Stokes Theorem}
+We assume all manifolds to be oriented.\\
+We can integrate top degree forms: $\omega \in \Omega_c^{m }( M) $.\\
+Choose $\rho_1,\ldots,\rho_k \in C_c^{ \infty }( M) \sum \rho_j |_{\supp \omega} =1$ st. $\supp \rho_j \omega$ 	sits in a chart and we let
+\[ 
+\int_{ M }^{  }\omega = \sum_{j=1}^{k} \int_M \rho_j\omega = \sum_{j=1}^{ k}\int_{ V_j }^{  }( \phi_j^{-1})^{\ast}( \rho_j \omega) 
+\]
+
+\end{document}	

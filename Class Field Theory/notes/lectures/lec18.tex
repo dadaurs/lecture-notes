@@ -1,0 +1,102 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{18}{Mon 12 Dec}{Adeles and Ideles}
+\section{Adeles and Ideles}
+The goal is to find the right module to construct the global class formation.\\
+Let $K$ be a number field.\\
+We call $v_p$ a finite place of $K$.\\
+If $v: K \to \mathbb{R}$ is a real embedding of $K$, we can let $|x|_v = |v( x) |$ and then $K_v = \mathbb{R}$.\\
+We call $v$ a real infinite place.\\
+We can do the same thing for (pairs of)  complex embeddings $v, \overline{v}: K \to \mathbb{C}$  and $|x|_v = |v( x) |^{2}$ and we call these complex infinite places.\\
+These are all the places of $K$.
+\begin{lemma}
+For $x\in K^{\times}$, we have
+\[ 
+\prod_{v} |x|_v = 1 
+\]
+the product is taken over all places.
+\end{lemma}
+From now on, $ \mathcal{S}$ is a finite set of places of $K$ containing $S_{ \infty } = \left\{ v| \infty  \right\} $.\\
+We have the $s$-unis $K^{S}= \left\{ a\in K^{\times}| |a|_v =1\forall v \notin S \right\} $.\\
+In particular, $K^{S_{ \infty } }= \O_K^{\times} \subset \O_K$.\\
+By Dirichlets unit theorem says that this is finitely generated and of rank $\# S_{ \infty } -1$ and in fact $K^{S}$ is finitely generated and of rank $\# S-1$.\\
+To unify notation, we set 
+\[ 
+\O_v
+\begin{cases}
+\O_{k_p} \text{ if  } v=v_p \text{ is finite } \\
+K_v \text{ if } v| \infty 
+\end{cases}
+\]
+and
+\[ 
+U_v^{( n) } =
+\begin{cases}
+U_{k_\beta}^{( n) } \text{ if } v= v_p \text{ is finite } \\
+\mathbb{R}_+ \text{ if $v$ is a real place } \\
+\mathbb{C}^{\times} \text{ if } v \text{ is a complex place } 
+\end{cases}
+\]
+The class group
+\[ 
+\mathcal{C}_K = \faktor{\mathcal{J}_k} { \mathcal{P}_k }
+\]
+Set
+\[ 
+\mathbb{A}^{S}_K= \prod_{v \in S} K_v \times \prod_{v\notin S} \O_v
+\]
+This is a locally compact group with componentwise addition.\\
+The adeles are defined by
+\[ 
+\mathbb{A}_K = \bigcup_{S} \mathbb{A}_K^{S} \subset \prod_v K_v
+\]
+\begin{defn}[Ideles]
+	We define the Ideles by
+	\[ 
+	\mathbb{A}_K^{\times,S}= \prod_{v \in S} K^{\times}_v \times \prod_{v \notin S} \O_v^{\times} \subset \prod_v K_v^{\times}.
+	\]
+This is locally compact wrt the product topology.\\
+	We again set
+	\[ 
+	\mathbb{A}_K^{\times}= \bigcup_S \mathbb{A}_K^{\times,S}
+	\]
+We view $K^{\times}\subset \mathbb{A}_K^{\times}$ by embedding it diagonally.	\\
+The idele class group is 
+\[ 
+\mathbb{C}_K = \faktor{\mathbb{A}_K^{\times}}{K^{\times}}
+\]
+
+\end{defn}
+\begin{thm}
+	THe quotient
+	\[ 
+	\faktor{\mathbb{A}_K^{\times}}{\mathbb{A}_K^{\times, S_{ \infty } }}\simeq \mathcal{J}_K
+	\]
+	and 
+	\[ 
+	\faktor{ \mathbb{A}_K^{\times}}{\mathbb{A}_K^{\times,S_{ \infty } } K^{\times}}\simeq \mathcal{C}_K
+	\]
+	
+\end{thm}
+\begin{thm}
+	We have
+	\[ 
+	\mathbb{A}_K^{\times}= \mathbb{A}_K^{\times,S}\cdot K^{\times}
+	\]
+	and
+	\[ 
+	\mathbb{C}_K^{\times}= \faktor{( \mathbb{A}_K^{\times,S}\cdot K^{\times}) }{K^{\times}}= \mathbb{A}_K^{\times,S} /K^{S}
+	\]
+	for some sufficiently large set $S$.
+\end{thm}
+\begin{rmq}
+\begin{enumerate}
+\item $ |a|_{ \mathbb{A}} = \prod_v |a_v|_v$ 
+\item $ \mathbb{A}_K^{1}= \left\{ a\in \mathbb{A}_K^{\times}| |a|_{\mathbb{A}} =1 \right\} $ 
+\end{enumerate}
+
+\end{rmq}
+
+
+
+\end{document}	

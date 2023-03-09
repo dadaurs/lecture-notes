@@ -1,0 +1,86 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{19}{Fri 16 Dec}{picard group}
+\subsection{Picard groups and divisors}
+We want to study the connection between invertible sheaves on $X$ and closed subschemes of codimension 1.\\
+\begin{defn}[Picard Group]
+	Let $X$ be a scheme, the picard group of $X$ is the group $ Pic( X) $ of isomorphism classes of invertible sheaves on $X$.
+\end{defn}
+The group law is given by the tensor product.\\
+The inverse is given by $ \mathcal{L}^{-1}= \hom_{\O_X} (  \mathcal{L}, \O_X) $.\\
+The neutral element is $\O_X$.\\
+Note that there is a natural map $s\otimes t^{\ast}\mapsto t^{\ast}( s) $ from $ \mathcal{L}\times \mathcal{L}^{-1}\to \O_X$.
+\begin{defn}[Dimension]
+	Let $X$ be a topological space, $A$ a ring, then
+	\begin{itemize}
+	\item The dimension of $X$ is $\dim X= \sup \left\{ n \in \mathbb{N}| \exists \emptyset \subsetneq X_0 \ldots \subsetneq X_n \right\} $ where each $X_i$ is closed and irreducible.
+	\item For $Z \subset X$ closed and irreducible, the codimension of $Z$ in $X$ is $codim( Z,X) = \sup \left\{ n \in \mathbb{N}| \exists Z= Z_0 \subsetneq\ldots \subsetneq Z_n \subset X \right\} $ with each $Z_i$ closed irreducibe.
+	\item For $X= \spec A$, we get the usual notions of krull dimension and height.
+	\end{itemize}
+\end{defn}
+Note that $ht( p) = codim( V( p) , \spec A) $ and $\dim \spec A= \sup ht( p) $.
+\begin{defn}[Regular ring]
+	Let $A$ be a Noetherian local ring with maximal ideal and residue field $k$.\\
+	Then $A$ is regular if $\dim_k m /m^{2} = \dim A$ 	
+\end{defn}
+\begin{propo}
+If $A$ is a Noetherian local ring of dimension 1, then
+\begin{enumerate}
+\item $A$ is regular
+\item $A$ is normal
+\item $A$ is a dvr
+\end{enumerate}
+\end{propo}
+\begin{defn}[Divisor]
+	Let $X$ be a noetherian scheme
+	\begin{itemize}
+	\item A prime divisor on $X$ is an integral closed subscheme of codim. 1 
+	\item A Weil divisor on $X$ is a finite formal sum of prime divisors.
+	\item The group of Weil divisors on $X$ is denoted by $Div( X) $ 
+	\item A weil divissor $D= \sum n_Z Z$ is called effective if $n_Z \geq 0$ for all prime divisors $Z$.
+	\item If $D,D'$ are two weil divisors with $D-D'$ is effective, we write $D \geq D'$.
+	\item The support of a Weil divisor $D= \sum n_Z Z$ is $\supp D = \bigcup_{n_Z \neq 0} Z$ 
+	\item If $U \subset X$ is open, the restriction of a Weil divisor $D$ on $X$ to $U$ is $D|_U = \sum n_Z ( Z\cap U) $.
+	\end{itemize}
+\end{defn}
+Next, we want to associate a Weil divisor to every pair $(  \mathcal{L}, s) $ where $ \mathcal{L}$ is an invertible sheaf and $s$ is a rational section (a section of $ \mathcal{L}$ over some non-empty open).
+\begin{defn}
+	Let $X$ be a Noetherian scheme, we call $X$ regular in codimension 1 if for every $x\in X$ such that $\dim \O_{X,x} =1$, the local ring is regular.
+\end{defn}
+In what follows, we fix $X$ a noetherian integral and (R1) scheme.\\
+For $ ( \mathcal{L},s )$ as above and $Z \subset X$ prime, we can define the valuation $v_Z ( s) $ of $s$ along $z$ as follows.\\
+Let $\eta_Z \in Z$ be the generic point.\\
+Choose $\eta_Z \in V \subset X$ open and an isom $\phi: \mathcal{L}|_V \simeq \O_V$.\\
+Let $s'$ be the image of $s$ under $ \mathcal{L}( U) \to \mathcal{L}( V\cap U) \to \O_V( V\cap U) \to k(X) $.\\
+Then we set $v_Z( s) = v( s') $ where $v$ is the valuation associated to $\O_{X, \eta_Z} \subset k( X) $
+\begin{defn}
+	For $ ( \mathcal{L},s) $ as above, we say thhat $s$ has a root along $Z$ if $v_Z( s) >0$ and has a pole along $Z$ if $v_Z( s) <0$ 
+\end{defn}
+Note $v_Z( s) = v_Z( s|V) \forall \emptyset \neq V \subset U$ and that if there exists and isomorphism $ \phi: \mathcal{L}\to \mathcal{M}$ and $\phi( s) =t$ then $v_Z( s) = v_Z( t) $.\\
+We write $\sim$ for the equivalence relation on the set of pairs $ (  \mathcal{L},s) $ induced by isomos and restrictions.\\
+Note that $ \left\{ (  \mathcal{L},s) / \sim \right\} $ is a group wrt $\otimes$ and there exists a surjective group homomorphism
+\[ 
+ \left\{ ( \mathcal{L},s)  \right\} / \sim \to Pic( X) 
+\]
+with kernel $ \left\{ \O_X,s \right\} / \sim= k( X)^{\times}$.\\
+We would like to define
+\[ 
+div: \left\{ ( \mathcal{L},s)  \right\} /\sim \to Div( X) 
+\]
+sending $ (  \mathcal{L},s) \mapsto \sum v_Z( s) Z$.
+\begin{lemma}
+For $ ( \mathcal{L},s) $ as above, there are only finitely many prime divisors $Z \subset X$ such that $v_Z( s) \neq 0$.
+\begin{proof}
+Let $V \subset X$ open affine, non-empty.\\
+Then $\dim ( X\setminus V) < \dim X$ and $X\setminus V$ has only finitely many irreducible components.\\
+Write $s=\frac{a}{b}$ for $a,b \in A$ and then $v_Z( s) = v_Z(a )- v_Z ( b)   $ so wlog $s\in A$.\\
+Let $Z = V( p) $ with $p \in \spec A$  of ht 1.\\
+Since $s\in A$, $v_Z( s) \geq 0$ and $v_Z( s) >0 \iff s\in p$ and we conclude with Krull PIT.
+\end{proof}
+\end{lemma}
+So we get a map
+\[ 
+div: \left\{ ( \mathcal{L},s)  \right\} / \sim \to Div( X) 
+\]
+is well defined.
+\end{document}	

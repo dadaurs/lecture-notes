@@ -1,0 +1,43 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{24}{Fri 20 Jan}{Canonical sheaf}
+\begin{propo}
+
+
+If $X$ is of finite type over a perfect field $k$, then tfae
+
+\begin{enumerate}
+\item $X /k$ is smooth
+\item $X /k$ is smooth at every closed $x\in X$ 
+\item On every connected component $X_i$ of $X$, $\Omega_{ X /k} $ is locally free of rank $\dim X-i$.
+\end{enumerate}
+\end{propo}
+\begin{crly}[Generically smooth]
+If $X$ is an integral scheme of finite type over a perfect field $k$, then there is a dense open set $U \subset X$ such that $U$ is regular.
+\end{crly}
+\begin{thm}
+	If $X$ is integral smooth of f.t. over a perfect field $k$.\\
+	Let $Z \subset X$ be a  irreducible closed subscheme.\\
+	$Z$ is smooth iff
+	\begin{enumerate}
+	\item $\Omega_{Z /k} $ is locally free.
+	\item The conormal sequence is exact.
+	\end{enumerate}
+\end{thm}
+\begin{thm}[Euler Sequence]
+Let $A$ be a ring, $Y= \spec A$, then there is a SES
+\[ 
+0 \to \Omega_{X /Y} \to \O_X( -1)^{\oplus n+1}\to \O_X \to 0
+\]
+where $X= \mathbb{P}_A^{n}$.
+\end{thm}
+\begin{defn}[Canonical sheaf]
+	Let $X$ be a smooth scheme of f.t. over a perfect field.\\
+	Then the canonical bundle/sheaf is
+	\[ 
+	\omega_X = \Lambda^{\dim X}\Omega_{X /k} 
+	\]
+	
+\end{defn}
+\end{document}	
+
