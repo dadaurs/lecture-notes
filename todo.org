@@ -1,19 +1,42 @@
 #+TITLE: TODO's
-* Random
-*** DONE Read classification of finite fields
-CLOSED: [2022-05-11 Wed 18:04]
-*** DONE submit disopt
-CLOSED: [2022-05-12 Thu 15:44]
-*** DONE Send mail bonn housing
-CLOSED: [2022-05-26 Thu 13:09]
-*** DONE Reask ruru for mettop
-CLOSED: [2022-05-26 Thu 13:09]
+* Reading
+** TODO Model Categories, Hovey
+** TODO Fourier Analysis on Number Fields 
+** TODO Spectral sequences in Vakil/Weibel
 
-* Commutative Algebra, follow page 8 up to chapter 10
-* Vakil, start schemes
-* Manifolds, as far as possible/reasonable
-* Algtop, start chapter on homology
-* funcana, look into it
-* ant & ant, look into it
-* logic, look into it
+* Bachelor's thesis
+** To learn
+
+*** DONE Grassmanians definition in Vakil
+CLOSED: [2023-03-14 Tue 15:04]
+*** DONE Universal exact sequence of the grassmanian (wtf)
+CLOSED: [2023-03-16 Thu 16:59]
+*** TODO Flat schemes, Vakil (Maybe Hartshorne)
+*** DONE Hilbert Scheme of Points/Hilbert Quot scheme (Geometry of schemes)
+CLOSED: [2023-03-16 Thu 16:59]
+*** TODO how an element in CH^1(X) determines an element in H^2(X,Z)
+*** TODO Chern class (Eisenbud)
+*** TODO Schubert class/cells (3264)
+*** TODO deformation theory
+*** TODO do exercise III.6.1
+*** TODO WTF does "no obstructions to deform" mean?
+*** TODO Diagram 1.15
+*** TODO h^0(L, N_{L/X}) = 2n -4 implies F(X) has dimension 2n-4 intuitively, but reference?
+*** DONE geometric intuition for lines of first/second type
+CLOSED: [2023-03-21 Tue 19:02]
+*** TODO What is H^2(F(X),Z)(1) -> tate twists??
+*** TODO page 117, how does this hold "by definition"
+** Blackbox/questions about stuff
+*** Blackbox construction of Quot schemes?
+*** Blackbox fact that families are flat iff they have constant hilbert pol?
+
+*** DONE Prop 1.4 why is there a -1 in the end?
+CLOSED: [2023-03-18 Sat 23:09]
+We are taking relative proj, so the dimension drops...
+*** TODO smoothness follows from what exactly? (Jacobian criterion does not apply in general)
+*** Cor 1.14, how does H^1(L, N_{L/X}) =0 imply smoothness of F(X)? (This somehow relates to the chapter on the local theory, so read it...)
+*** Maximal possible dimension of linear subspace of quadric surface inside P^{n+1} is \floor{n/2}
+If more than n/2 linearly independent equations vanish on V(F), their product divides F...
+*** Understand vanishing of H^q(F(X),O) on page 114 (probably due to serre duality, but how?)
+
 

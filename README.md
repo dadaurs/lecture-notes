@@ -2,18 +2,27 @@
 These are my latex'd lecture notes for different courses from the mathematics bachelor at EPFL.
 They most certainly are full of typos and errors, the only reason this repo is public is so that I can have easy acces to them.
 I am currently doing an exchange year in Bonn and so lecture notes from BA5 were taken there.
-## BA4 (current semester)
-[Algebraic Geometry I](Algebraic&#32;Geometry&#32;I/notes/main.pdf) given by Gebhard Martin during the 2022 winter semester
 
-[Class Field Theory](Class&#32;Field&#32;Theory/notes/main.pdf) given by Edgar Assing during the 2022 winter semester
+## BA6 (current semester)
+[Algebraic Geometry II](Algebraic&#32;Geometry&#32;II/notes/main.pdf) given by Gebhard Martin during the 2023 Summer semester
 
-[Topology I](Topology&#32;I/notes/main.pdf) given by Viktoriya Ozornova during the 2022 winter semester
+[Topology II](Topology&#32;II/notes/main.pdf) given by Jack Davies during the 2023 Summer semester
 
-[Introduction to Manifolds](Manifolds/notes/main.pdf) given by Matthias Lesch during the 2022 winter semester
+[Homological Methods in Commutative Algebra](Homological&#32;Methods&#32;in&#32;Commutative&#32;Algebra/notes/main.pdf) given by Jens Franke during the 2023 Summer semester
 
-[Functional Analysis](Functional&#32;Analysis/notes/main.pdf) given by Sergio Conti during the 2022 winter semester
+[Rigid Analytic Geometry](Rigid&#32;Analytic&#32;Geometry/notes/main.pdf) given by Jens Franke during the 2023 Summer semester
+## BA5
+[Algebraic Geometry I](BA5/Algebraic&#32;Geometry&#32;I/notes/main.pdf) given by Gebhard Martin during the 2022 winter semester
 
-## BA4 (current semester)
+[Class Field Theory](BA5/Class&#32;Field&#32;Theory/notes/main.pdf) given by Edgar Assing during the 2022 winter semester
+
+[Topology I](BA5/Topology&#32;I/notes/main.pdf) given by Viktoriya Ozornova during the 2022 winter semester
+
+[Introduction to Manifolds](BA5/Manifolds/notes/main.pdf) given by Matthias Lesch during the 2022 winter semester
+
+[Functional Analysis](BA5/Functional&#32;Analysis/notes/main.pdf) given by Sergio Conti during the 2022 winter semester
+
+## BA4 
 [Analysis IV](BA4/Analysis&#32;IV/notes/main.pdf) given by Maria Colombo during the 2022 spring semester
 
 [Algebraic Curves](BA4/Algebraic&#32;Curves/notes/main.pdf) given by Dimitri Stelvio Wyss during the 2022 spring semester
