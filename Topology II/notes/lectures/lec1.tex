@@ -1,0 +1,21 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{1}{Wed 05 Apr}{Universal coefficients theorem}
+\section{Cohomology}
+Let $C_\bullet$ be a chain complex and $G\in \Ab$.\\
+Given $[f] \in H^{n}( \hom( C_\bullet,G) ) $ and $[c]\in H_n( C_\bullet) $.\\
+Define $\eng{f,c} = f( c) \in G$ 
+This is in fact well defined.
+\begin{thm}[Universal Coefficients theorem]
+Given a chain complex $C_\bullet$ of free abelian groups and an abelian group $G$, then the map
+\[ 
+H^{n }( \hom( C_\bullet,G) ) \to \hom( H_n( C_\bullet) ,G) 
+\]
+is surjective, with kernel
+\[ 
+K= \Ext(H_{n-1} ( C_\bullet) ,G ) 
+\]
+
+
+\end{thm}
+\end{document}	
