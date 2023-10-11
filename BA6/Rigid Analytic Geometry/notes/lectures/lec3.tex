@@ -1,0 +1,85 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{3}{Wed 19 Apr}{stuff}
+\begin{crly}
+If $X$ is an ordinary topological space, then $X \to X^{\ast}$ iff $X$ is sober.
+\end{crly}
+\begin{exemple}
+Let $F$ be an ordered field. Equip $\mathbb{A}^{1}_F=F$ with it's order topology and the $G_+$-topology forcing the elements of $B= \emptyset\cup \left\{ ( a,b)_F | - \infty \leq a < b \leq \infty \right\} $ to be quasi-compact.\\
+To describe the $\mathbb{A}^{1,\ast}_F $ of van der Put points, let a generalized Dedekind cut of $F$ be a decomposition $F= A \cup B$ such that
+\begin{enumerate}
+	\item $a\in A, \alpha \in ( - \infty , a]_F \implies \alpha\in A $ 
+	\item $b\in B, \beta \in [ b, \infty ) \implies \beta \in B $ 
+	\item $|A\cap B| \leq 1$ 
+\end{enumerate}
+There is a bijection $\mathbb{A}^{1, \ast}_F \leftrightarrow \left\{ \text{ generalized Dedekind cuts }  \right\} $ given by sending a Van der Put point $\xi$ to the cut $F= A \cup B$ with $A= \left\{ a\in F| ( - \infty , a) \notin \xi \right\} $ and $B = \left\{ b \in F |( b, \infty ) \notin \xi \right\} $.\\
+THe inverse sends a cut $F= A \cup B \mapsto \xi = \left\{ ( a,b) |a \notin B, b \notin A\right\} $.\\
+Indeed, if $f\in F\setminus ( A\cup B) $ ( with $\xi$ given), then $( - \infty ,f) $ and $( f, \infty) $ are both $\in \xi$ hence there intersection is empty and still contained in $\xi$, contradicting the fact that $\xi$ is a Van der Put point.\\
+If $a< b$ are elements of $F$ then $\mathbb{A}_F^{1}= ( - \infty ,b) \cup ( a, \infty ) $ is an admissible covering, but $\mathbb{A}^{1}_F\in \xi$ and hence $( - \infty ,b) \in \xi$ or $ ( a, \infty ) $ hence $b \notin A$ or $a\notin B$, hence $ \left\{ a,b \right\} \not \subset A\cap B$ showing that a Van der Put point gives a cut.\\
+We leave out the proof of the remaining properties.\\
+The map $F= \mathbb{A}_F^{1}\to \mathbb{A}_F^{1, \ast}$ sends $f\in F$ to $F= A \cup B$ to the cut with center $f$.\\
+There are also the related ``Neighbouring'' cuts $f_-: ( - \infty , f) \cup [ f, \infty ) $ and $f_+$ defined similarly.\\
+In addition to this, one has a point of $\mathbb{A}^{1\ast}_F$ for each Dedekind cut not belonging to an element of $F$, including the improper cuts $F= \emptyset \cup F$ (giving the point $- \infty $ ) and similarly $F= F\cup \infty$.\\
+One can order $\mathbb{A}_F^{1\ast}$ by $( A,B) \leq ( \tilde A, \tilde B) $ iff $A \subset \tilde A$ and $\tilde B \subset B$.\\
+Then a topology base on $\mathbb{A}_F^{1\ast}$ is given by $ \left\{ ( a,b) | \infty \leq a <b \leq \infty  \right\} $.
+\end{exemple}
+\begin{rmq}
+Recall $( U\cap V)^{\ast}= ( U^{\ast}) \cap ( V^{\ast}) $.\\
+We may however have $U^{\ast}\cup V^{\ast}\subsetneq ( U\cup V)^{\ast}$, for instance $F= \mathbb{Q}$ in example 3 and the dedekind cut determined by $\pi$.\\
+This is related to the fact that the covering $\mathbb{Q}= U \cup V$ is not admissible.
+\end{rmq}
+Notice that if $U^{\ast}= \cup_{V\in \mathcal{S}} V^{\ast}$ when $ \mathcal{S} /= U$.
+\begin{defn}
+	A $G_+$-topological space $X$ has sufficiently many Van der Put points if the converse to the above fact holds, ie. :
+	\[ 
+		\text{(P)} \mathcal{S}/= U \iff U^{\ast}= \bigcup_{V\in \mathcal{S}} ( V^{\ast}) 
+	\]
+\end{defn}
+\begin{exemple}
+\begin{enumerate}
+\item Every ordinary $T_0$ space has sufficiently many van der Put points 
+\item Let $X = [ 0,1] $ with the discrete topology, then the following $G_+$-topology:
+	\[ 
+	\mathcal{S} /= U \iff \text{ there are $( X_i) \in \mathcal{S}$ such that $U \setminus \bigcup V_i$ has Lebesgue measure 0. } 
+	\]
+	Then one can show that $X\to X^{\ast}$ is bijective, but $X= \bigcup_{x\in X} \left\{ x \right\} $ is obviously not admissible.
+\end{enumerate}
+\end{exemple}
+One can show that there is a bijection $X^{\ast}= \left\{ \text{ Topos points of the topos of sheaves of sets on $X$  }  \right\} $.\\
+This is related to Delignes example in SGA4 ( IV.7.4).\\
+\begin{defn}
+	An open subset $U$ is called $G_+$-quasi compact iff every covering sieve of $U$ contains a finitely generated covering sieve.
+\end{defn}
+\begin{propo}
+Let $X$ be a topological space with sufficiently many Van der Put points. Then $U \in \mathcal{O}_X$ is $G_+$-qc iff $U^{\ast}\in \mathcal{O}_{X^{\ast}} $ is t-qc (ie. quasi-compact in the usual sense, t stands for topological).
+\end{propo}
+\begin{proof}
+	Assume $U^{\ast}$ is t-qc and let $ \mathcal{S}/= U$, then $U^{\ast}= \cup_{V\in \mathcal{S}} V^{\ast}$ by (P), which has a finite subcover $U^{\ast}= \bigcup_{i=1}^{N}V_i^{\ast}$, thus $\tilde{\mathcal{S}}^{\ast}/= U$ (by (P) ) where $[V_1,\ldots, V_N] \subset \mathcal{S}$ is finitely generated.\\
+	Let $U$ be $G_+$-qc and $U^{\ast}= \bigcup_{i \in I} W_i$.\\
+	Without loss of generality, $W_i = U_i^{\ast}$ (as elements of $ \mathcal{O}_{X^{\ast}} $ of this form form a topology base).\\
+	Then $ \mathcal{S}/= U$ (by (P) ) where $ \mathcal{S}= [ U_i] $.\\
+	As $U$ is $G_+$-qc there is $ \tilde{  \mathcal{S}  }\subset \mathcal{S}$ s.t. $ \tilde{ \mathcal{S} } = [ V_1,\ldots, V_n] $ is finitely generated, $V_i \subset U_{j_i} $.\\
+	Then (by P) $U^{\ast}= \bigcup_{V\in \tilde{  \mathcal{S} }} V^{\ast} = \bigcup_{i=1}^{N}V_i^{\ast}\subset \bigcup_{i=1} ^{N}U_{j_i} ^{\ast}$ showing the existence of a finite subcovering.
+\end{proof}
+\begin{rmq}
+If $\Omega\in B$ for some basis $B$ with a Grothendieck topology $ \mathbb{T}$ , then $\Omega$ is $ \mathbb{T}$-qc iff every sieve $ \mathcal{S}\in B$ with $\mathcal{S}/=_{ \mathbb{T}_B} \Omega$ has a finitely generated subsieve $ \tilde{ \mathcal{S} } \subset \mathcal{S}$ such that $ \tilde { \mathcal{S}} /=_{\mathbb{T}_B} \Omega$ 
+\end{rmq}
+\begin{rmq}
+As a consequence, if $ \mathbb{T}$ is obtained by enforcing the qc-ness of elements of $B$, then the elements of $B$ are $G_+$-qc in the sense of definition 13 such that the following proposition can be applied.
+\end{rmq}
+\begin{propo}
+Let $X$ be a $G_+$-topological space which has  a $G_+$-topology base $B$ whose elements are $G_+$-qc, then $X$ has sufficiently many Van der Put points.
+\end{propo}
+\begin{rmq}
+In addition, if $\Omega\in B$ and $ \mathcal{S}$ does not cover $\Omega$, then there is $\omega\in \Omega \setminus_{V \in \mathcal{S}} V^{\ast}$.\\
+If in addition $B$ is closed under finite intersections in $X$, then $X^{\ast}$ is a spectral space.
+\end{rmq}
+
+
+
+
+
+
+
+
+\end{document}	

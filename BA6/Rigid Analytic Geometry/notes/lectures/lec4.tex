@@ -1,0 +1,55 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\lecture{4}{Thu 20 Apr}{things}
+\begin{lemma}
+	If $X$ is $G_+$-qc and $ \mathcal{S} \subset \mathcal{O}_X$ a sieve s.t. $X^{\ast}= \bigcup_{V\in \mathcal{S}} V^{\ast}$ then $\mathcal{S} /= X$
+\end{lemma}
+\begin{proof}
+Assume that $ \mathcal{S}$ does not cover $X$.\\
+Then
+\[ 
+	M = \left\{ \text{ sieves } T | \mathcal{S} \subset T \subset \mathcal{O}_X, T \text{ does not cover } X \right\} 
+\]
+is non empty and is partially ordered by inclusion.\\
+Let $ \mathcal{L} \subset M$ be linearly order and let $R= \bigcup_{T \in L} T$.\\
+If $R /= X$, then by quasi-compactness of $X$ there would be finitely many $V_i, V_i \in R$ such that $ [ V_1, \ldots, V_N] /= X$.\\
+As $L$ is linearly ordered by inclusion, there is $T\in L$ such that $ \left\{ V_1,\ldots,V_N \right\} \subset T$. Then $T /= X$, contradicting the definition of $M$.\\
+Thus $M$ has a maximal element $T$.\\
+By a remark, $\xi = \mathcal{O}_X \setminus \tau \in X^{\ast} $ and $\xi \notin ( \bigcup_{V\in T} V^{\ast}) \supset \bigcup_{V \in T} V^{\ast}$.\\
+Contradicting our assumption on $ \mathcal{S}$.
+\end{proof}
+\begin{propo}
+If $X$ is a $G_+$-space with a $G_+$-base $B$ closed under taking intersections and such that the elements of $B$ are $G_+$-qc.\\
+THen $X^{\ast}$ has sufficiently many Van-der Put points.\\
+$X^{\ast}$ is also locally spectral.
+\end{propo}
+\begin{proof}
+Let $ \mathcal{S} \subset \mathcal{O}_V, V \in \mathcal{O}_X$ be a sieve such that $U^{\ast}=\bigcup_{V\in \mathcal{S}} V^{\ast}$ but not $\mathcal{S} /= V$.\\
+As $ [ B_V] /= V$ and by GTloc, there is $V \in [ B_U] $ which is not covered j
+\end{proof}
+
+\begin{defn}
+A property $E$ of open subsets of a $G_+$-space is local iff
+\begin{enumerate}
+\item $E( U) $ and $V \subset U$ $\implies E( V) $ 
+\item $ \left\{ V \in \mathcal{O}_U| E( V)  \right\} /= U \implies E( U) $ 
+\end{enumerate}
+\end{defn}
+\begin{thm}
+Having sufficiently many vdp points is a local property
+\end{thm}
+\begin{thm}
+If $E$ is a local property and $E( \Omega) $ for all $\Omega \in B$ where $b$ is a $G_+ $ basefor $X$, then $E( X) $ 
+\end{thm}
+
+\begin{thm}
+	If $ \mathcal{S}= [ V_1,\ldots,V_n] $ where $V_i$ are qc and $ \mathcal{S} /= U$ then $U$ is qc.
+\end{thm}
+\begin{proof}
+Let $T /= U$, then $T|_{V_i} /= V_i$, hence finitely many $( W_{ij} ) , W_{ij } \in T|_{V_i} $ and 
+\end{proof}
+
+
+
+
+\end{document}	
