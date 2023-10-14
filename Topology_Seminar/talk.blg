@@ -1,0 +1,15 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'talk.blg'
+[61] biber:340> INFO - === Sat Oct 14, 2023, 15:02:17
+[72] Biber.pm:419> INFO - Reading 'talk.bcf'
+[119] Biber.pm:979> INFO - Found 2 citekeys in bib section 0
+[130] Biber.pm:4419> INFO - Processing section 0
+[137] Biber.pm:4610> INFO - Looking for bibtex file '../sources.bib' for section 0
+[138] bibtex.pm:1713> INFO - LaTeX decoding ...
+[153] bibtex.pm:1519> INFO - Found BibTeX data source '../sources.bib'
+[181] UCollate.pm:68> INFO - Overriding locale 'nil' defaults 'variable = shifted' with 'variable = non-ignorable'
+[181] UCollate.pm:68> INFO - Overriding locale 'nil' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[181] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'nil'
+[181] Biber.pm:4245> INFO - No sort tailoring available for locale 'nil'
+[183] bbl.pm:660> INFO - Writing 'talk.bbl' with encoding 'UTF-8'
+[184] bbl.pm:763> INFO - Output to talk.bbl
