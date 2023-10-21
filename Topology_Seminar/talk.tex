@@ -327,7 +327,7 @@ The maps
 \[ 
 	\mathcal{A} \xrightarrow{\psi^{\ast}} \mathcal{A}\otimes \mathcal{A} \xrightarrow{\phi^{\ast}} \mathcal{A}
 \]
-Give $\mathcal{A}$ the structurre of a Hopf algebra. Furthermore $\phi^{\ast}$ is associative and $\psi^{\ast}$ is associative and commutative.
+Give $\mathcal{A}$ the structure of a Hopf algebra. Furthermore $\phi^{\ast}$ is associative and $\psi^{\ast}$ is associative and commutative.
 \end{thm}
 \begin{proof}
 It suffices to show that $\psi^{\ast}$ is associative and commutative.
@@ -345,7 +345,7 @@ This identity clearly holds on generators, namely
 	&= \sum_{i+j+k =n} P^{i}\otimes P^{j}\otimes P^{k}\\
 	&= ( 1\otimes \psi^{\ast}) \left( \sum_{i+j=n} P^{i}\otimes P^{j}\right).
 \end{align*}
-\subsubsection*{Commutativity}
+\subsubsection*{(Graded) Commutativity}
 Let
 \begin{align*}
 	T\colon \mathcal{A}\otimes \mathcal{A}&\to \mathcal{A}\otimes \mathcal{A}\\
@@ -450,7 +450,7 @@ As the cohomology of $X$ is one-dimensional in all degrees, we deduce that $\lam
 \end{proof}
 We now study the evaluation pairing $\mathcal{A}_\ast\times \mathcal{A} \to \mathbb{F}_p$. We easily establish the following lemma
 \begin{lemma}
-We have $\xi_k ( M_k) =1$ but $\xi_k( \theta) $ for any other monomial.\\
+We have $\xi_k ( M_k) =1$ but $\xi_k( \theta)=0 $ for any other monomial.\\
 Furthermore
 \[ 
 \langle M_k \delta, \tau_k \rangle = 1
@@ -466,12 +466,12 @@ Proving the equality. The second equality follows from the same argument applied
 \end{proof}
 We are ready to prove the main structure theorem for the dual Hopf algebra.
 \begin{thm}
-	There is an isomorphism
+	There is a graded isomorphism
 	\[ 
-		\mathcal{A}_\ast \simeq \Lambda [ \tau_0,\tau_1,\ldots] \otimes \mathbb{F}_p[\xi_1,\xi_2,\ldots].
+		\mathcal{A}_\ast \simeq \Lambda [ \tau_0,\tau_1,\ldots] \otimes \mathbb{F}_p[\xi_1,\xi_2,\ldots], \quad \text{ where } \dim \tau_i = 2p^{i}-1 , \dim \xi_i = 2p^{i}-2.
 	\]
-	where $\Lambda[\tau_0,\ldots]$ denotes the exterior algebra and $\mathbb{F}_p[\xi_1,\xi_2,\ldots]$ is the polynomial algebra. This isomorphism respects the grading.
-	\textcolor{red}{define weights on generators}
+	Here $\Lambda[\tau_0,\ldots]$ denotes the exterior algebra and $\mathbb{F}_p[\xi_1,\xi_2,\ldots]$ is the polynomial algebra. This isomorphism is graded 
+
 \end{thm}
 \begin{proof}
 	Let $\mathcal{I}$ be the set of finite sequences $( \epsilon_0, r_1,\epsilon_1,\ldots) $ with $\epsilon_i = 0,1$ and $r_i \in \mathbb{N}$. 
@@ -515,6 +515,7 @@ The matrix $\left( \langle \theta( J) ,\omega( I)  \right)_{I,J \in \mathcal{I}_
 %\end{align*}
 %\end{itemize}
 \end{proof}
+
 
 \printbibliography
 \end{document}

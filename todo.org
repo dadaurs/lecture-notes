@@ -2,7 +2,8 @@
 * Reading
 ** TODO Model Categories, Hovey
 ** TODO Fourier Analysis on Number Fields 
-** TODO Spectral sequences in Vakil/Weibel
+** DONE Spectral sequences in Vakil/Weibel
+CLOSED: [2023-10-19 Thu 10:06]
 
 * Bachelor's thesis
 ** To learn
@@ -61,3 +62,8 @@ CLOSED: [2023-08-07 Mon 18:06]
 *** DONE page 30
 CLOSED: [2023-08-07 Mon 18:08]
 *** references
+* Topology Seminar Questions
+** TODO Should talk about theorem 4? Maybe too technical for the talk
+** TODO different definitions of Hopf algebra, I give the definition with antipode and show it is equivalent to the condition on comultiplication
+** TODO grading on dual of vector space, why is there a -n?
+** TODO I do everything with p\neq2, at the end mention result for p=2
