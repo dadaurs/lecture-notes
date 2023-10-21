@@ -170,7 +170,7 @@ A Hopf Algebra is a bi-algebra with an antipode
 \end{defn}
 For specific classes of bialgebras, there is a way of constructing an antipode map.
 \begin{thm}
-Let $\mathcal{A}$ be a graded bialgebra such that $\Delta( x) = x\otimes 1 + 1 \otimes x + \sum_i a_i \otimes b_i $ with $\dim a_i,\dim b_i >0$, then $\mathcal{A}$ admits an antipode map.
+Let $\mathcal{A}$ be a connected graded bialgebra such that $\Delta( x) = x\otimes 1 + 1 \otimes x + \sum_i a_i \otimes b_i $ with $\dim a_i,\dim b_i >0$, then $\mathcal{A}$ admits an antipode map.
 \end{thm}
 \begin{proof}
 Let $x \in \mathcal{A}$, to define $S$, we proceed inductively on the degree of $x$. If $\dim x = 0$, we define $S( x) = x$.\\
@@ -491,11 +491,11 @@ where $s_j= \sum_{i=k}^{ \infty }( \epsilon_i+ r_i) p^{i-k}$.\\
 One can check that the $\theta( J) $ are the basic monomials of the Cartan basis for $\mathcal{A}$.\\
 
 To show the isomorphism, we show that the basic monomials in $\mathcal{A}$ form an ``almost dual'' basis to the set of $\omega( I) $.\\
-More precisely, we will show the following lemma.
+For this, we use the following lemma.
 \begin{center}
 Let $I< J \in \mathcal{I}$, then $\left\langle \theta( J), \omega( I)\right\rangle = 0 $ if $I < J$, furthermore $\left\langle \theta( I) , \omega( I) \right\rangle = \pm 1$. $\qquad (\star)$ 
 \end{center}
-The proof of $(\star)$ will constitute the main part of the proof, let us see how to conclude given $(\star).$\\
+The proof of $(\star)$ is the main technical step in the proof and we skip it.
 Let $\mathcal{I}_n \subset \mathcal{I}$ be the set of sequences such that $\dim \omega( I) = \dim \theta( I) =n$.
 The matrix $\left( \langle \theta( J) ,\omega( I)  \right)_{I,J \in \mathcal{I}_n}$ is upper-triangular with $\pm 1$ on the diagonal, hence, the pairing is non-degenerate and the $\omega( I) $ generate the $n$-th graded part of $\mathcal{A}_\ast$.
 %\subsection*{Proof of $(\star)$}
@@ -515,6 +515,57 @@ The matrix $\left( \langle \theta( J) ,\omega( I)  \right)_{I,J \in \mathcal{I}_
 %\end{align*}
 %\end{itemize}
 \end{proof}
+We also state the case for $p=2$ without proof, the proof can be found in the original paper too and proceeds in very similar steps.
+\begin{thm}[The mod 2 dual Steenrod Algebra]
+	Let $\mathcal{A}_2$ be the mod 2 Steenrod algebra and $\mathcal{A}_{2\ast} $ its dual
+Let $\xi_i\in \mathcal{A}_{2\ast} $ be the dual basis of the basis $\sq^{2^{i-1}}\cdots \sq^{2}\sq^{1}\in \mathcal{A}_2$, then there is a graded isomorphism
+\[ 
+	\mathcal{A}_{2\ast} \simeq \mathbb{F}_2[\xi_1,\xi_2,\ldots].
+\]
+
+\end{thm}
+\subsection{The comultiplication in $\mathcal{A}_\ast$}
+
+If we want to fully describe $\mathcal{A}_\ast$ as a Hopf algebra, we also have to describe the comultiplication $\phi_\ast\coloneq  ( \phi^{\ast})^{\vee}$
+
+\begin{propo}
+We have
+\begin{align*}
+	\phi_\ast( \xi_k) &= \sum_{i=0}^{k}\xi_{k-i}^{i}\otimes \xi_i\\
+\phi_\ast( \tau_k) &= \sum_{i=0}^{k}\xi_{k-i} ^{p^{i}}\otimes \tau_i + \tau_k \otimes 1
+\end{align*}
+\end{propo}
+\begin{proof}
+	We first notice that the commutativity of
+	% https://q.uiver.app/#q=WzAsNCxbMCwwLCJIX1xcYXN0XFxvdGltZXMgXFxtYXRoY2Fse0F9XFxvdGltZXMgXFxtYXRoY2Fse0F9Il0sWzEsMCwiSF9cXGFzdFxcb3RpbWVzIFxcbWF0aGNhbHtBfSJdLFswLDEsIkhfXFxhc3RcXG90aW1lcyBcXG1hdGhjYWx7QX0iXSxbMSwxLCJIX1xcYXN0Il0sWzAsMSwiMVxcb3RpbWVzIFxccGhpXlxcYXN0Il0sWzAsMiwiXFxsYW1iZGFfXFxhc3RcXG90aW1lczEiLDJdLFsyLDMsIlxcbGFtYmRhX1xcYXN0IiwyXSxbMSwzLCJcXGxhbWJkYV9cXGFzdCJdXQ==
+\[\begin{tikzcd}
+	{H_\ast\otimes \mathcal{A}\otimes \mathcal{A}} & {H_\ast\otimes \mathcal{A}} \\
+	{H_\ast\otimes \mathcal{A}} & {H_\ast}
+	\arrow["{1\otimes \phi^\ast}", from=1-1, to=1-2]
+	\arrow["{\lambda_\ast\otimes1}"', from=1-1, to=2-1]
+	\arrow["{\lambda_\ast}"', from=2-1, to=2-2]
+	\arrow["{\lambda_\ast}", from=1-2, to=2-2]
+\end{tikzcd}\]
+implies the identity
+\[ 
+	( \lambda^{\ast}\otimes 1) \lambda^{\ast}= ( 1\otimes\phi_\ast) \lambda^{\ast}.
+\]
+	Let $\alpha,\beta \in H^{\ast}( X) $ with $X$ as before, then
+\begin{align*}
+	\lambda^{\ast}( \beta) &= \sum \beta^{p^{j}}\otimes \xi_j\\
+	\lambda^{\ast}( \beta^{p^{i}}) = \sum \beta^{p^{i+j}}\otimes \xi_j^{p^{i}}
+\end{align*}
+Hence, from the identity above, we get
+\begin{align*}
+( \lambda^{\ast}\otimes 1) \lambda^{\ast}( \beta) &= \sum_{i,j} \beta^{p^{i+j}}\otimes \xi_j^{p^{i}}\otimes \xi_i\\
+&= ( 1\otimes \phi_\ast) \lambda^{\ast}( \beta) \\
+&= \sum \beta^{p^{k}}\otimes \phi_\ast( \xi_k) 
+\end{align*}
+And hence we deduce the identity for $\phi_\ast( \xi_k) $, the identity for $\phi_\ast( \tau_k) $ is deduce in the same way.
+
+\end{proof}
+
+
 
 
 \printbibliography
