@@ -1,22 +1,37 @@
 \documentclass[11pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{babel}
-\usepackage{geometry}
 \usepackage{lmodern}
 \usepackage{tikz}
 \usepackage{tikz-cd}
 \usepackage{quiver}
 \usepackage{amsmath}
 \usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{mdframed}
+\usepackage[most]{tcolorbox}
+\usepackage[a4paper,verbose]{geometry}
+\usepackage[english]{babel}
+%\usepackage{varioref}
+\usepackage{theoremref}
+\usepackage{listings}
+\usepackage{faktor}
+\usepackage{python}
+\usepackage{xurl}
+
 \usepackage[style=alphabetic,sorting=nyt]{biblatex}
+
+\renewcommand{\finalnamedelim}{, }
 \renewcommand{\vec}[1]{\overrightarrow{#1}}
 \newcommand{\del}{\partial}
 \DeclareMathOperator*{\id}{Id}
 \newcommand{\ev}{\mathrm{ev}}
 \DeclareMathOperator*{\cmod}{mod}
+\DeclareMathOperator*{\ab}{Ab}
 \newcommand{\sq}{\mathrm{Sq}}
-\usepackage{hyperref}
 \usepackage{color}
 \RequirePackage{xcolor}
 \usepackage[amsmath,hyperref,thmmarks]{ntheorem}
@@ -86,108 +101,16 @@ urlcolor={blue!70!black}
 \author{David Wiedemann}
 \maketitle
 \begin{abstract}
-	These are notes for the seminar "Advanced Topics in Homotopy Theory" given by Prof. Stefan Schwede and Dr. Jack Davies in Bonn during the WS2023/24. Our goal is to present the main results of Milnor's paper ``The Steenrod Algebra and its Dual'' \cite{steenrod_algebra_and_its_dual_milnor}.
+	These are notes for the seminar "Advanced Topics in Homotopy Theory" given by Prof. Stefan Schwede and Dr. Jack Davies in Bonn during the WS2023/24. Our goal is to present the main results of Milnor's paper ``The Steenrod Algebra and its Dual'' \cite{steenrod_algebra_and_its_dual_milnor}. The text in \textcolor{blue}{blue} was not presented during the talk.
 \end{abstract}
 \tableofcontents
-
-\section{Hopf Algebras}
-\subsection{Bi-Algebras}
-We start by studying Hopf algebras independently. 
-Throughout, let $k$ be a field.
-\begin{defn}[Algebra]
-	An \textbf{Algebra} is a triple $\left( \mathcal{A},\mu, \eta\right) $ with $\mathcal{A}$ a $k$-vector space together with two maps   $\mu\colon A\otimes A \to A$ (multiplication) , $\eta\colon k \to A$ (unit)  making the following diagrams commute
-	% https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXG1hdGhjYWx7QX0gXFxvdGltZXMgXFxtYXRoY2Fse0F9XFxvdGltZXMgXFxtYXRoY2Fse0F9Il0sWzEsMCwiQVxcb3RpbWVzIFxcbWF0aGNhbHtBfSJdLFswLDEsIlxcbWF0aGNhbHtBfVxcb3RpbWVzIFxcbWF0aGNhbHtBfSJdLFsxLDEsIlxcbWF0aGNhbHtBfSJdLFswLDEsIlxcaWRcXG90aW1lc1xcbXUiXSxbMSwzLCJcXG11Il0sWzIsMywiXFxtdSIsMl0sWzAsMiwiXFxtdVxcb3RpbWVzIFxcaWQiLDJdXQ==
-\[\begin{tikzcd}
-	{\mathcal{A} \otimes \mathcal{A}\otimes \mathcal{A}} & {A\otimes \mathcal{A}} \\
-	{\mathcal{A}\otimes \mathcal{A}} & {\mathcal{A}}
-	\arrow["\id\otimes\mu", from=1-1, to=1-2]
-	\arrow["\mu", from=1-2, to=2-2]
-	\arrow["\mu"', from=2-1, to=2-2]
-	\arrow["{\mu\otimes \id}"', from=1-1, to=2-1]
-\end{tikzcd}\]
-% https://q.uiver.app/#q=WzAsNCxbMCwwLCJrXFxvdGltZXMgXFxtYXRoY2Fse0F9Il0sWzEsMCwiXFxtYXRoY2Fse0F9XFxvdGltZXNcXG1hdGhjYWx7QX0iXSxbMiwwLCJcXG1hdGhjYWx7QX1cXG90aW1lcyBrIl0sWzEsMSwiXFxtYXRoY2Fse0F9Il0sWzIsMSwiXFxldGFcXG90aW1lcyBpIiwyXSxbMCwxLCJpXFxvdGltZXNcXGV0YSJdLFswLDNdLFsyLDNdLFsxLDMsIlxcbXUiLDFdXQ==
-\[\begin{tikzcd}
-	{k\otimes \mathcal{A}} & {\mathcal{A}\otimes\mathcal{A}} & {\mathcal{A}\otimes k} \\
-	& {\mathcal{A}}
-	\arrow["{\eta\otimes i}"', from=1-3, to=1-2]
-	\arrow["i\otimes\eta", from=1-1, to=1-2]
-	\arrow[from=1-1, to=2-2]
-	\arrow[from=1-3, to=2-2]
-	\arrow["\mu"{description}, from=1-2, to=2-2]
-\end{tikzcd}\]
-\end{defn}
-Dualizing these definitions, we unsurprisingly obtain
-\begin{defn}[Coalgebra]
-	A \textbf{coalgebra} is a triple $( C,\Delta,\epsilon) $ where $C$ is a $k$-vector space togethere with two maps $\Delta\colon C \to C \otimes C$ (comultiplication) and $\epsilon\colon C \to k$ (augmentation) making the following diagrams commute
-% https://q.uiver.app/#q=WzAsNCxbMCwwLCJDIl0sWzEsMCwiQ1xcb3RpbWVzIEMiXSxbMCwxLCJDXFxvdGltZXMgQyJdLFsxLDEsIkNcXG90aW1lcyBDIFxcb3RpbWVzIEMiXSxbMCwxLCJcXERlbHRhIl0sWzEsMywiXFxpZCBcXG90aW1lcyBcXERlbHRhIl0sWzIsMywiXFxEZWx0YSBcXG90aW1lcyBcXGlkIiwyXSxbMCwyLCJcXERlbHRhIiwyXV0=
-\[\begin{tikzcd}
-	C & {C\otimes C} \\
-	{C\otimes C} & {C\otimes C \otimes C}
-	\arrow["\Delta", from=1-1, to=1-2]
-	\arrow["{\id \otimes \Delta}", from=1-2, to=2-2]
-	\arrow["{\Delta \otimes \id}"', from=2-1, to=2-2]
-	\arrow["\Delta"', from=1-1, to=2-1]
-\end{tikzcd}\]
-% https://q.uiver.app/#q=WzAsNCxbMSwwLCJDIl0sWzAsMSwia1xcb3RpbWVzIEMiXSxbMSwxLCJDXFxvdGltZXMgQyJdLFsyLDEsIkNcXG90aW1lcyBrIl0sWzAsMiwiXFxEZWx0YSJdLFswLDFdLFswLDNdLFsyLDMsIlxcaWQgXFxvdGltZXMgXFxlcHNpbG9uIiwyXSxbMiwxLCJcXGVwc2lsb24gXFxvdGltZXMgXFxpZCJdXQ==
-\[\begin{tikzcd}
-	& C \\
-	{k\otimes C} & {C\otimes C} & {C\otimes k}
-	\arrow["\Delta", from=1-2, to=2-2]
-	\arrow[from=1-2, to=2-1]
-	\arrow[from=1-2, to=2-3]
-	\arrow["{\id \otimes \epsilon}"', from=2-2, to=2-3]
-	\arrow["{\epsilon \otimes \id}", from=2-2, to=2-1]
-\end{tikzcd}\]
-\end{defn}
-Since taking duals commutes with tensor products, notice that the dual  $C^{\vee}$ naturally gets an algebra structure.\\
-We define (co-)algebra morphisms in the obvious way.
-\begin{defn}[Bialgebra]
-	A \textbf{bialgebra} is a tuple $( \mathcal{A}, \mu, \eta, \Delta, \epsilon) $ such that $( \mathcal{A}, \mu,\epsilon)$ is an algebra, $( \mathcal{A}, \Delta, \epsilon) $ is a coalgebra and such that $\Delta$ and $\epsilon$ are algebra morphisms
-\end{defn}
-Equivalently, one can also require $\mu$ and $\epsilon$ to be coalgebra morphisms.\\
-If $\mathcal{A}= \bigoplus_{n \in \mathbb{N}}  \mathcal{A}_n$ is a graded algebra, we define the \textbf{dual algebra} by
-\[ 
-\mathcal{A}^{\ast} \coloneq A_n^{\ast}, \text{ with } A_n^{\ast}=\hom( A_{-n} , k) 
-\]
-We call a graded algebra $\mathcal{A}$ \textbf{graded commutative} if for all homogeneous elements $\alpha,\beta \in \mathcal{A}$, we have $\alpha \beta= (-1)^{\dim \alpha\dim\beta}\beta \alpha$. (omitting $\mu$ for sanity reasons)
-The graded algebra $\mathcal{A}$ is \textbf{connected} if $\mathcal{A}_0$ is generated by $1$, equivalently $\eta\colon k \to \mathcal{A}_0$ is an isomorphism.\\
-We can similarly define the notion of a  graded coalgebra and of a connected coalgebra.
-
-
-\subsection{Antipode maps}
-Let $C$ be a bi-algebra as above and let $f,g\colon C\to C$ be linear maps, we define the convolution $f\ast g$ of $f$ with $g$ as the composition
-\[ 
-	C \xrightarrow{\Delta} C\otimes C \xrightarrow{f\otimes g} C\otimes C \xrightarrow{\mu} C.
-\]
-\begin{defn}[Antipode]
-	An antipode $S\colon C\to C$ is an endomorphism such that
-	\[ 
-	S\ast \id = \id\ast S = \eta\circ \epsilon.
-	\]
-\end{defn}
-\begin{defn}[Hopf Algebra]
-A Hopf Algebra is a bi-algebra with an antipode
-\end{defn}
-For specific classes of bialgebras, there is a way of constructing an antipode map.
-\begin{thm}
-Let $\mathcal{A}$ be a connected graded bialgebra such that $\Delta( x) = x\otimes 1 + 1 \otimes x + \sum_i a_i \otimes b_i $ with $\dim a_i,\dim b_i >0$, then $\mathcal{A}$ admits an antipode map.
-\end{thm}
-\begin{proof}
-Let $x \in \mathcal{A}$, to define $S$, we proceed inductively on the degree of $x$. If $\dim x = 0$, we define $S( x) = x$.\\
-Inductively, suppose we've defined $S$ for all $x$ of degree $<n$ and write $\Delta( x) = x\otimes 1 + 1 \otimes x + \sum_i a_i \otimes b_i$ as above. Since $\Delta$ respects the grading, we may suppose that $\dim b_i <n$, we let
-\[ 
-S( x) \coloneq -x - \sum_i a_i S( b_i) 
-\]
-One now easily checks that $S$ is an antipode.
-\end{proof}
-
 
 
 %It can be shown that $\ast$ makes the set of endomorphisms of $C$ into a group whose identity is $\eta\circ \epsilon$.
 \section{The Steenrod Algebra}
 Let $p$ be a prime.
 \begin{defn}[Stable Cohomology operation]
-	A \textbf{stable $\cmod p$ cohomology operation} $\theta$ of type $r\in \mathbb{Z}$ is a family of natural transformations $( \theta_n)_{n \in \mathbb{N}} $
+	A \textbf{stable $\cmod p$ cohomology operation} $\theta$ of type $r\in \mathbb{Z}$ is a family of natural transformations $( \theta_n)_{n \in \mathbb{N}} $\footnote{We view $\cmod p$ cohomology as a functor $\mathrm{Top}^{2} \to \ab$ where $\mathrm{Top}^{2}$ denotes pairs of pointed topological spaces, we won't need the spaces to be Hausdorff or CW-complexes. }
 \[ 
 \theta_n\colon H^{n}( -, \mathbb{F}_p) \to H^{n+r}( -, \mathbb{F}_p) 
 \]
@@ -212,10 +135,9 @@ For those familiar with (maps of) spectra, the most natural way to define the St
 	Notice that if $\theta$ and $\theta'$ are two cohomology operations of different types, their sum $\theta+\theta'$ in $\mathcal{A}_p$ does \textbf{not} define a cohomology operation in any natural way.\\
 	Despite this, $\mathcal{A}_p$ still naturally acts on the \textbf{full} cohomology $H^{\ast}( X) $ of a space, when viewed as an abelian group.
 \end{rmk}
-As we will establish in the next section, $\mathcal{A}_p$ carries a Hopf algebra structure which makes $H^{\ast}( X) $ into a (Hopf-)module.
+As we will establish, $\mathcal{A}_p$ carries a Hopf algebra structure which makes $H^{\ast}( X) $ into a (Hopf-)module.
 Before showing this, we present structural results about the Steenrod algebra.
 \subsection{Steenrod Powers}
-From now on, $H^{\ast}( -) $ will always denote $\cmod p$ cohomology for a fixed prime $p$.
 \begin{defn}[Steenrod Powers]
 	Suppose $p>2$,
 	the \textbf{Steenrod powers} are the stable cohomology operations 
@@ -245,8 +167,16 @@ $$
 	\item $\delta \sq^{i}= \sq^{i}\delta$ 
 	\end{enumerate}
 \end{defn}
+For any prime, we can also define the Bockstein morphism:
+\begin{defn}[Bockstein]
+	The natural transformations
+	\[ 
+	\delta_n\colon H^{n}( -, \mathbb{F}_p) \to H^{n+1}( -, \mathbb{F}_p) 
+	\]
+	associated to the short exact sequence $0 \to \mathbb{Z}_p \to \mathbb{Z}_{p^{2}} \to \mathbb{Z}_p \to 0$ define a stable cohomology operation $\delta = ( \delta_n)_{n \in \mathbb{N}} $ called the \textbf{Bockstein morphism}.
+	
+\end{defn}
 
-The natural transformation $\beta\colon H^{n}( -) \to H^{n+1}( -) $ induced by the short exact sequence $0 \to \mathbb{Z}_p \to \mathbb{Z}_{p^{2}} \to \mathbb{Z}_p \to 0$ is also stable, we call it the \textbf{Bockstein morphism}.\\
 For $p=2$, the Bockstein coincides with $\sq^{1}$.
 It is a famed result of Steenrod that these operations generate the Steenrod algebra.
 \begin{thm}[Structure of the Steenrod Algebra]\cite[Ch. VI, Sec. 2]{cohomology_operations_Steenrod}
@@ -257,36 +187,149 @@ It is a famed result of Steenrod that these operations generate the Steenrod alg
 	\]
 	is a basis for the Steenrod algebra.
 \end{thm}
-There is a similar result for $p=2$, which we do not make explicit.
-\section{The Diagonal Morphism}
-From now on, $p$ is a prime different from 2 and $\mathcal{A}\coloneq \mathcal{A}_p$.\\
+There is a similar result for $p=2$, which we do not make explicit.\\
+The algebra structure of $\mathcal{A}_p$ is extremely complex, as is made apparent by the Adem relations, we will show that the dual of $\mathcal{A}_p$ (as a vector space) also inherits an algebra structure that is comparatively simple: it is a graded polynomial algebra.
 
-The main goal of this talk is to present a proof that $\mathcal{A}_p$ has the structure of a Hopf algebra and to make its structure more explicit.\\
+\section{Hopf Algebras}
+The first goal of this talk is to show that $\mathcal{A}_p$ is a Hopf algebra over $\mathbb{F}_p$, so we need to define what a Hopf algebra is.
+\subsection{Bi-Algebras}
+
+We start by studying Hopf algebras independently. 
+Throughout, let $k$ be a field.
+\begin{defn}[Algebra]
+	\textcolor{blue}{
+	An \textbf{Algebra} is a triple $\left( \mathcal{A},\mu, \eta\right) $ with $\mathcal{A}$ a $k$-vector space together with two maps   $\mu\colon A\otimes A \to A$ (multiplication) , $\eta\colon k \to A$ (unit)  making the following diagrams commute}
+	% https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXG1hdGhjYWx7QX0gXFxvdGltZXMgXFxtYXRoY2Fse0F9XFxvdGltZXMgXFxtYXRoY2Fse0F9Il0sWzEsMCwiQVxcb3RpbWVzIFxcbWF0aGNhbHtBfSJdLFswLDEsIlxcbWF0aGNhbHtBfVxcb3RpbWVzIFxcbWF0aGNhbHtBfSJdLFsxLDEsIlxcbWF0aGNhbHtBfSJdLFswLDEsIlxcaWRcXG90aW1lc1xcbXUiXSxbMSwzLCJcXG11Il0sWzIsMywiXFxtdSIsMl0sWzAsMiwiXFxtdVxcb3RpbWVzIFxcaWQiLDJdXQ==
+
+\[\begin{tikzcd}
+	{\mathcal{A} \otimes \mathcal{A}\otimes \mathcal{A}} & {A\otimes \mathcal{A}} \\
+	{\mathcal{A}\otimes \mathcal{A}} & {\mathcal{A}}
+	\arrow["\id\otimes\mu", from=1-1, to=1-2]
+	\arrow["\mu", from=1-2, to=2-2]
+	\arrow["\mu"', from=2-1, to=2-2]
+	\arrow["{\mu\otimes \id}"', from=1-1, to=2-1]
+\end{tikzcd}\]
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJrXFxvdGltZXMgXFxtYXRoY2Fse0F9Il0sWzEsMCwiXFxtYXRoY2Fse0F9XFxvdGltZXNcXG1hdGhjYWx7QX0iXSxbMiwwLCJcXG1hdGhjYWx7QX1cXG90aW1lcyBrIl0sWzEsMSwiXFxtYXRoY2Fse0F9Il0sWzIsMSwiXFxldGFcXG90aW1lcyBpIiwyXSxbMCwxLCJpXFxvdGltZXNcXGV0YSJdLFswLDNdLFsyLDNdLFsxLDMsIlxcbXUiLDFdXQ==
+\[\begin{tikzcd}
+	{k\otimes \mathcal{A}} & {\mathcal{A}\otimes\mathcal{A}} & {\mathcal{A}\otimes k} \\
+	& {\mathcal{A}}
+	\arrow["{\eta\otimes i}"', from=1-3, to=1-2]
+	\arrow["i\otimes\eta", from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-2]
+	\arrow[from=1-3, to=2-2]
+	\arrow["\mu"{description}, from=1-2, to=2-2]
+\end{tikzcd}\]
+\end{defn}
+
+	\textcolor{blue}{
+	Dualizing these definitions, we unsurprisingly obtain}
+\begin{defn}[Coalgebra]
+	\textcolor{blue}{
+	A \textbf{coalgebra} is a triple $( C,\Delta,\epsilon) $ where $C$ is a $k$-vector space togethere with two maps $\Delta\colon C \to C \otimes C$ (comultiplication) and $\epsilon\colon C \to k$ (augmentation) making the following diagrams commute}
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJDIl0sWzEsMCwiQ1xcb3RpbWVzIEMiXSxbMCwxLCJDXFxvdGltZXMgQyJdLFsxLDEsIkNcXG90aW1lcyBDIFxcb3RpbWVzIEMiXSxbMCwxLCJcXERlbHRhIl0sWzEsMywiXFxpZCBcXG90aW1lcyBcXERlbHRhIl0sWzIsMywiXFxEZWx0YSBcXG90aW1lcyBcXGlkIiwyXSxbMCwyLCJcXERlbHRhIiwyXV0=
+\[\begin{tikzcd}
+	C & {C\otimes C} \\
+	{C\otimes C} & {C\otimes C \otimes C}
+	\arrow["\Delta", from=1-1, to=1-2]
+	\arrow["{\id \otimes \Delta}", from=1-2, to=2-2]
+	\arrow["{\Delta \otimes \id}"', from=2-1, to=2-2]
+	\arrow["\Delta"', from=1-1, to=2-1]
+\end{tikzcd}\]
+% https://q.uiver.app/#q=WzAsNCxbMSwwLCJDIl0sWzAsMSwia1xcb3RpbWVzIEMiXSxbMSwxLCJDXFxvdGltZXMgQyJdLFsyLDEsIkNcXG90aW1lcyBrIl0sWzAsMiwiXFxEZWx0YSJdLFswLDFdLFswLDNdLFsyLDMsIlxcaWQgXFxvdGltZXMgXFxlcHNpbG9uIiwyXSxbMiwxLCJcXGVwc2lsb24gXFxvdGltZXMgXFxpZCJdXQ==
+\[\begin{tikzcd}
+	& C \\
+	{k\otimes C} & {C\otimes C} & {C\otimes k}
+	\arrow["\Delta", from=1-2, to=2-2]
+	\arrow[from=1-2, to=2-1]
+	\arrow[from=1-2, to=2-3]
+	\arrow["{\id \otimes \epsilon}"', from=2-2, to=2-3]
+	\arrow["{\epsilon \otimes \id}", from=2-2, to=2-1]
+\end{tikzcd}\]
+\end{defn}
+
+	\textcolor{blue}{
+Since taking duals commutes with tensor products, notice that the dual  $C^{\vee}$ naturally gets an algebra structure.\\
+We define (co-)algebra morphisms in the obvious way.}
+
+\begin{defn}[Bialgebra]
+	A \textbf{bialgebra} is a tuple $( \mathcal{A}, \mu, \eta, \Delta, \epsilon) $ where
+	\begin{itemize}
+	\item $\mathcal{A}$ is a $k$-vector space
+	\item $\mu\colon \mathcal{A}\otimes \mathcal{A}\to \mathcal{A}$ 
+	\item $\eta\colon k \to \mathcal{A}$ 
+	\item $\Delta\colon \mathcal{A}\to \mathcal{A}\otimes \mathcal{A}$ 
+	\item $\epsilon\colon \mathcal{A}\to k$ 
+	\end{itemize}
+	
+	such that $( \mathcal{A}, \mu,\eta)$ is an algebra, $( \mathcal{A}^{\ast}, \Delta^{\ast}, \epsilon^{\ast}) $ is an algebra and such that $\Delta$ and $\epsilon$ are algebra morphisms
+\end{defn}
+Equivalently, one can also require $\mu$ and $\epsilon$ to be coalgebra morphisms.\\
+If $\mathcal{A}= \bigoplus_{n \in \mathbb{N}}  \mathcal{A}_n$ is a graded algebra, we define the \textbf{dual algebra} by
+\[ 
+\mathcal{A}^{\ast} \coloneq A_n^{\ast}, \text{ with } A_n^{\ast}=\hom( A_{n} , k) 
+\]
+We call a graded algebra $\mathcal{A}$ \textbf{graded commutative} if for all homogeneous elements $\alpha,\beta \in \mathcal{A}$, we have $\alpha \beta= (-1)^{\dim \alpha\dim\beta}\beta \alpha$. (omitting $\mu$ for sanity reasons)
+The graded algebra $\mathcal{A}$ is \textbf{connected} if $\mathcal{A}_0$ is generated by $1$, equivalently $\eta\colon k \to \mathcal{A}_0$ is an isomorphism.\\
+We can similarly define the notion of a  graded coalgebra and of a connected coalgebra.
+
+
+\subsection{Antipode maps}
+Though we will not talk about antipode maps again throughout this talk, we still define them to be able to properly define a Hopf algebra.\\
+Let $C$ be a bi-algebra as above and let $f,g\colon C\to C$ be linear maps, we define the convolution $f\ast g$ of $f$ with $g$ as the composition
+\[ 
+	C \xrightarrow{\Delta} C\otimes C \xrightarrow{f\otimes g} C\otimes C \xrightarrow{\mu} C.
+\]
+\begin{defn}[Antipode]
+	An antipode $S\colon C\to C$ is an endomorphism such that
+	\[ 
+	S\ast \id = \id\ast S = \eta\circ \epsilon.
+	\]
+\end{defn}
+\begin{defn}[Hopf Algebra]
+A Hopf Algebra is a bi-algebra with an antipode.
+\end{defn}
+For specific classes of bialgebras, there is a way of constructing an antipode map.
+\begin{thm}[{{\cite[prop 8.2]{struct_of_hopf_alg_milnor}}}]
+Let $\mathcal{A}$ be a connected graded bialgebra such that $\Delta( x) = x\otimes 1 + 1 \otimes x + \sum_i a_i \otimes b_i $ with $\dim a_i,\dim b_i >0$, then $\mathcal{A}$ admits an antipode map.
+\end{thm}
+\begin{proof}
+Let $x \in \mathcal{A}$, to define $S$, we proceed inductively on the degree of $x$. If $\dim x = 0$, we define $S( x) = x$.\\
+Inductively, suppose we've defined $S$ for all $x$ of degree $<n$ and write $\Delta( x) = x\otimes 1 + 1 \otimes x + \sum_i a_i \otimes b_i$ as above. Since $\Delta$ respects the grading, we may suppose that $\dim b_i <n$, we let
+\[ 
+S( x) \coloneq -x - \sum_i a_i S( b_i) 
+\]
+One now easily checks that $S$ is an antipode.
+\end{proof}
+
+
+\section{The Diagonal Morphism}
+
+Our first goal is to prove that $\mathcal{A}_p$ has the structure of a Hopf algebra and to make its structure more explicit.\\
 Throughout, let $X$ be a space.
-We start by constructing the diagonal morphism $\psi^{\ast}\colon \mathcal{A}^{\ast} \to \mathcal{A}^{\ast} \otimes \mathcal{A}^{\ast}$.
+We start by constructing the diagonal morphism $\Delta\colon \mathcal{A} \to \mathcal{A} \otimes \mathcal{A}$ of our (soon to be) Hopf algebra.
 \begin{propo}
-	There is a unique diagonal morphism $\psi^{\ast}\colon \mathcal{A}^{\ast} \to  \mathcal{A}^{\ast} \otimes \mathcal{A}^{\ast}$ such that
+	There is a unique diagonal morphism $\Delta\colon \mathcal{A}\to  \mathcal{A} \otimes \mathcal{A}$ such that
 	\begin{enumerate}
-		\item For all $\theta \in  \mathcal{A}^{\ast}$, $\psi^{\ast}( \theta) = \sum_i \theta_i' \otimes \theta_i"$ and $\alpha,\beta \in H^{\ast}( X) $  we have
+		\item For all $\theta \in  \mathcal{A}$, $\Delta( \theta) = \sum_i \theta_i' \otimes \theta_i"$ and $\alpha,\beta \in H^{\ast}( X) $  we have
 			\[ 
 			\theta( \alpha\smile \beta) = \sum ( -1) ^{\dim \theta_i''\dim \alpha}\theta_i'( \alpha) \smile \theta_i''( \beta) 
 			\]
 			
-	\item The morphism $\psi^{\ast}$ is a ring morphism.
+	\item The morphism $\Delta$ is a ring morphism.
 	\end{enumerate}
 \end{propo}
 \begin{proof}
-Let $\mathcal{A}^{\ast}\otimes \mathcal{A}^{\ast}$ act on $H^{\ast}( X) \otimes H^{\ast}( X) $ by
+Let $\mathcal{A}\otimes \mathcal{A}$ act on $H^{\ast}( X) \otimes H^{\ast}( X) $ by
 \[ 
-( \theta'\otimes\theta'' )( \alpha\otimes \beta) = ( -1)^{\dim \theta''\dim \alpha}\theta'( \alpha) \otimes \theta''( \beta) 
+( \theta'\otimes\theta'' )( \alpha\otimes \beta) = ( -1)^{\dim \theta''\dim \alpha}\theta'( \alpha) \otimes \theta''( \beta) \quad \text{ where } \theta', \theta'' \in \mathcal{A}, \alpha,\beta \in H^{\ast}( X).
 \]
-and we let $c: H^{\ast}( X) \otimes H^{\ast}( X) \to H^{\ast}( X) $ denote the cup product.\\
-\textbf{$\psi^{\ast}$ exists}\\
-Let $R \subset \mathcal{A}^{\ast}$ be the set of all $\theta$ such that 
+We let $c\colon H^{\ast}( X) \otimes H^{\ast}( X) \to H^{\ast}( X) $ be the cup product.\\
+\textbf{$\Delta$ exists}\\
+Let $R \subset \mathcal{A}$ be the set of all $\theta$ such that 
 \[ 
 \theta( \alpha\smile \beta) = c \rho ( \alpha\otimes \beta) 
 \]
-for some $\rho \in \mathcal{A}^{\ast}\otimes \mathcal{A}^{\ast}$. We want to show that $R = \mathcal{A}^{\ast}$.\\
+for some $\rho \in \mathcal{A}\otimes \mathcal{A}$. We want to show that $R = \mathcal{A}$.\\
 Notice that $R$ is closed under multiplication and addition. If $\theta_1, \theta_2\in R$, then 
 \[ 
 	\theta_1\theta_2( \alpha\smile \beta) = c\rho_1\rho_2( \alpha\otimes \beta) \text{ and } 	( \theta_1 + \theta_2) ( \alpha\smile\beta) = c (  ( \rho_1 + \rho_2 )( \alpha \otimes \beta ) )
@@ -296,54 +339,54 @@ Hence, it suffices to show that $R$ contains the Bockstein and the Steenrod powe
 	\delta( \alpha\smile \beta) &= \delta \alpha\smile \beta + ( -1)^{\dim \alpha}\alpha \smile \delta( \beta) \\
 	P^{n}( \alpha\smile \beta) &= \sum_{i+j =n}  P^{i}( \alpha) \smile P^{j}( \beta) 
 \end{align*}
-\textbf{$\psi^{\ast}$ is unique}\\
-Let $K \coloneq K( \mathbb{F}_p, n+1) $ and $\gamma \in H^{n+1}( K) $ correspond to the identity map, the map
+\textbf{$\Delta$ is unique}\\
+Let $K \coloneq K( \mathbb{F}_p, n+1) $ and $\gamma \in H^{n+1}( K) \simeq [ K, K]_\ast$ correspond to the identity map, the map
 \begin{align*}
-	\ev_{\gamma} \colon \mathcal{A}^{\ast}_i &\to H^{n+1+i}( K) \\
+	\ev_{\gamma} \colon \mathcal{A}_i &\to H^{n+1+i}( K) \\
 	\theta &\mapsto \theta\gamma
 \end{align*}
 is an isomorphism for all $i \leq n$, it follows that
 \begin{align*}
-	j\colon \left( \mathcal{A}^{\ast} \otimes \mathcal{A}^{\ast} \right)_i &\to H^{2n+2+i}( K\times K) \\
+	j\colon \left( \mathcal{A}\otimes \mathcal{A} \right)_i &\to H^{2n+2+i}( K\times K) \\
 	\theta\otimes \theta'&\mapsto ( -1)^{\dim\theta'\dim\gamma} \theta( \gamma) \otimes \theta'( \gamma) 
 \end{align*}
 is too.\\
-Let $\theta\in \mathcal{A}^{\ast}_i$, suppose $\rho, \rho'$ both satisfy the required equality, then
+Let $\theta\in \mathcal{A}_i$, suppose $\rho, \rho'$ both satisfy the required equality, then
 \[ 
-j( \rho) =c\rho\left( ( \gamma\otimes 1) \otimes ( 1\otimes \gamma) \right) = c\rho'\left( ( \gamma\otimes 1)\otimes ( 1\otimes \gamma)  \right) =j(\rho' ) 
+j( \rho) =c\rho\left( ( \gamma\otimes 1) + ( 1\otimes \gamma) \right) = c\rho'\left( ( \gamma\otimes 1)+ ( 1\otimes \gamma)  \right) =j(\rho' ) 
 \]
-The unicity of $\psi^{\ast}$ implies that it is a ring morphism.
+The unicity of $\Delta$ implies that it is a ring morphism.
 \end{proof}
 \begin{rmk}\label{rmk_psi_dual}
-From this proof, we can in particular single out the action of $\psi^{\ast}$ on generators, namely, it follows that 
+From this proof, we can in particular single out the action of $\Delta$ on generators, namely, it follows that 
 \begin{align*}
-	\psi^{\ast}( \delta) &= \delta\otimes 1 + 1 \otimes \delta\\
-	\psi^{\ast}( P^{n}) &= \sum_{i+j=n} P^{i}\otimes P^{j}.
+	\Delta( \delta) &= \delta\otimes 1 + 1 \otimes \delta\\
+	\Delta( P^{n}) &= \sum_{i+j=n} P^{i}\otimes P^{j}.
 \end{align*}
 \end{rmk}
 
 \begin{thm}[The Steenrod Algebra is a Hopf Algebra]
 The maps 
 \[ 
-	\mathcal{A} \xrightarrow{\psi^{\ast}} \mathcal{A}\otimes \mathcal{A} \xrightarrow{\phi^{\ast}} \mathcal{A}
+	\mathcal{A} \xrightarrow{\Delta} \mathcal{A}\otimes \mathcal{A} \xrightarrow{\mu} \mathcal{A},
 \]
-Give $\mathcal{A}$ the structure of a Hopf algebra. Furthermore $\phi^{\ast}$ is associative and $\psi^{\ast}$ is associative and commutative.
+where $\mu$ is composition, give $\mathcal{A}$ the structure of a Hopf algebra. Furthermore $\Delta$ is graded commutative.
 \end{thm}
 \begin{proof}
-It suffices to show that $\psi^{\ast}$ is associative and commutative.
+It suffices to show that $\Delta$ is associative and commutative.
 \subsubsection*{Associativity}
 It suffices to check the identity
 \[ 
-	( \psi^{\ast}\otimes 1) \psi^{\ast}= ( 1\otimes\psi^{\ast}) \psi^{\ast}
+	( \Delta\otimes 1) \Delta= ( 1\otimes\Delta) \Delta
 \]
 This identity clearly holds on generators, namely
 \begin{align*}
-	\left( \psi^{\ast}\otimes 1\right) \left( \delta\otimes 1 + 1 \otimes \delta\right) &= \delta \otimes 1 \otimes 1 + 1\otimes \delta \otimes 1 + 1\otimes 1 \otimes \delta \\
-								      &= \left( 1\otimes \psi^{\ast}\right) \left( \delta\otimes 1 + 1 \otimes \delta\right) 
+	\left( \Delta\otimes 1\right) \left( \delta\otimes 1 + 1 \otimes \delta\right) &= \delta \otimes 1 \otimes 1 + 1\otimes \delta \otimes 1 + 1\otimes 1 \otimes \delta \\
+								      &= \left( 1\otimes \Delta\right) \left( \delta\otimes 1 + 1 \otimes \delta\right) 
 	\intertext{and}
-	\left( \psi^{\ast}\otimes 1\right) \left( \sum_{i+j=n} P^{i}\otimes P^{j}\right) &=  \sum_{i+j=n} \left( \sum_{i'+j'=i} P^{i'}\otimes P^{j'}\right) \otimes P^{j}  \\
+	\left( \Delta\otimes 1\right) \left( \sum_{i+j=n} P^{i}\otimes P^{j}\right) &=  \sum_{i+j=n} \left( \sum_{i'+j'=i} P^{i'}\otimes P^{j'}\right) \otimes P^{j}  \\
 	&= \sum_{i+j+k =n} P^{i}\otimes P^{j}\otimes P^{k}\\
-	&= ( 1\otimes \psi^{\ast}) \left( \sum_{i+j=n} P^{i}\otimes P^{j}\right).
+	&= ( 1\otimes \Delta) \left( \sum_{i+j=n} P^{i}\otimes P^{j}\right).
 \end{align*}
 \subsubsection*{(Graded) Commutativity}
 Let
@@ -351,7 +394,7 @@ Let
 	T\colon \mathcal{A}\otimes \mathcal{A}&\to \mathcal{A}\otimes \mathcal{A}\\
 	\theta\otimes\theta' &\mapsto ( -1)^{\dim\theta\dim\theta'} \theta'\otimes\theta.
 \end{align*}
-We have to check that $\psi^{\ast}= T\psi^{\ast}$, which one can check again on generators:
+We have to check that $\Delta= T\Delta$, which one can check again on generators:
 \begin{align*}
 T( 1\otimes \delta + \delta \otimes 1) &= 1\otimes \delta + \delta\otimes 1
 \intertext{and}
@@ -360,18 +403,29 @@ T( \sum_{i+j=n} P^{i}\otimes P^{j} ) &= \sum_{i+j=n} ( -1)^{4ij ( p-1)^{2}  } P^
 
 \end{proof}
 \section{The dual Steenrod Algebra}
-For the rest of this talk, we focus on the dual Steenrod algebra $\mathcal{A}_\ast \coloneq \mathcal{A}^{\vee}$, whose multiplication is induced by $\psi^{\ast}$. Our goal is to fully determine the structure of $\mathcal{A}_\ast$.\\
+There are a lot of excellent resources that describe the structure of the $\cmod 2$ Steenrod algebra, see \href{https://amathew.wordpress.com/2011/11/21/the-dual-steenrod-algebra/}{Akhil Matthew's blog} or \cite[Chap. 6]{coh_ops_and_applications_mosher}. For the sake of originality, we present the complementary case.\\
+From now on, $p$ is a prime different from 2 and $\mathcal{A}\coloneq \mathcal{A}_p$, we follow \cite[Chap. 3]{steenrod_algebra_and_its_dual_milnor}.\\
+
+For the rest of this talk, we focus on the dual Steenrod algebra $\mathcal{A}_\ast \coloneq \mathcal{A}^{\vee}$, whose multiplication is induced by $\Delta$. Our goal is to fully determine the structure of $\mathcal{A}_\ast$, more precisely we will sketch the proof of the following theorem:
+\begin{thm}
+There is a graded isomorphism
+\[ 
+	\mathcal{A}_\ast \simeq \Lambda[\tau_0,\tau_1,\ldots] \otimes \mathbb{F}_p[\xi_1,\xi_2,\ldots]
+\]
+\end{thm}
+The grading will be determined later.\\
+
 To single out an appropriate set of generators for $\mathcal{A}_\ast$, we analyze how $\mathcal{A}_\ast$ (co-)acts on the cohomology ring of a specific space. We start by describing this co-action formally and then introduce the relevant space.
 \subsection{The coaction of $\mathcal{A}_\ast$ }
-Given that we are working over a vector space, cohomology and homology are dual. Hence, given $\theta \in \mathcal{A}$ and $\mu \in H_\ast$, the rule
+Let $\langle\cdot, \cdot \rangle$ denote the evaluation pairing on $H_{\ast }\times H^{\ast}$.\\
+Given that we are working over a field, cohomology and homology are dual. Hence, given $\theta \in \mathcal{A}_i$ and $\mu \in H_n$, we define $\theta\cdot \mu \in H_{n-i} $ by the rule
 \[ 
-\theta\cdot \mu ( \alpha) \coloneq \mu ( \theta( \alpha) ) \text{ for all } \alpha\in H^{\ast}
+	\langle \theta\cdot \mu, \alpha \rangle \coloneq \langle \mu, \theta\cdot \alpha\rangle \text{ for all } \alpha\in H^{n-i}.
 \]
-gives a well defined action
+This gives a well defined action
 \[ 
-\lambda_\ast\colon \mathcal{A}\otimes H_\ast \to H_\ast
+\lambda_\ast\colon \mathcal{A}\otimes H_\ast \to H_\ast.
 \]
-
 We denote the dual of this action by $\lambda^{\ast}\colon H^{\ast}\to \mathcal{A}_\ast \otimes H^{\ast}$. The restriction of $\lambda_\ast$ 
 \[ 
 \lambda_i \colon \mathcal{A}\otimes H^{n+i} \to H^{n}
@@ -380,7 +434,7 @@ also gives rise to dual morphisms $\lambda^{i}\colon H^{n}\to \mathcal{A}_\ast \
 \[ 
 	\lambda^{\ast}= \lambda^{1}+ \lambda^{2}+ \ldots. \footnote{Elements in $H^{\ast}$ are always finite sums, so this sum should be understood as $\bigoplus_{i} \lambda^{i}$}
 \]
-We can also understand the action of $\mathcal{A}$ better in terms of $\lambda^{\ast}$.
+We can also understand the action of $\mathcal{A}$ better in terms of $\lambda^{\ast}$: if we know $\lambda^{\ast}( \alpha) $, we know $\theta \cdot \alpha$ for any $\theta \in \mathcal{A}$.
 \begin{lemma}
 Let $\lambda^{\ast}( \alpha) = \sum_i \alpha_i \otimes \omega_i$ and $\theta \in \mathcal{A}$, then
 \[ 
@@ -388,13 +442,14 @@ Let $\lambda^{\ast}( \alpha) = \sum_i \alpha_i \otimes \omega_i$ and $\theta \in
 \]
 \end{lemma}
 \begin{proof}
+\textcolor{blue}{
 By definition of the action, we have
 \begin{align*}
 \langle \mu, \theta \alpha\rangle &= \langle \mu\theta, \alpha\rangle\\
 &= \langle \mu\otimes \theta, \lambda^{\ast}\alpha\rangle\\
 &= \sum_i ( -1)^{\dim \alpha_i\dim \omega_i} \langle \mu,\alpha_i\rangle \langle \theta, \omega_i\rangle
 \end{align*}
-And the general equality follows.
+And the general equality follows.}
 
 \end{proof}
 
@@ -404,7 +459,7 @@ Fix some large integer $N$ and let $X = S^{2N+1} / \mathbb{Z}_p = sk_{2N+1} K( \
 \[ 
 H^{1}( X) = \langle \alpha \rangle, H^{2}( X) = \langle \beta \rangle, H^{2i}( X) = \langle \beta^{i}\rangle, H^{2i+1}( X) = \langle \alpha\beta^{i}\rangle,
 \]
-where $\beta= \delta \alpha$ and $i \leq N$ \\
+where $\beta= \delta \alpha$ and $i \leq N$. \\
 \begin{notn}
 We define
 \[ 
@@ -450,19 +505,21 @@ As the cohomology of $X$ is one-dimensional in all degrees, we deduce that $\lam
 \end{proof}
 We now study the evaluation pairing $\mathcal{A}_\ast\times \mathcal{A} \to \mathbb{F}_p$. We easily establish the following lemma
 \begin{lemma}
-We have $\xi_k ( M_k) =1$ but $\xi_k( \theta)=0 $ for any other monomial.\\
+	\textcolor{blue}{
+We have $\langle\xi_k,M_k\rangle=1$ but $\langle \xi_k, \theta\rangle=0 $ for any other monomial.\\
 Furthermore
 \[ 
 \langle M_k \delta, \tau_k \rangle = 1
 \]
-and $\langle \theta, \tau_k\rangle$ for any other monomial.
+and $\langle \theta, \tau_k\rangle$ for any other monomial.}
 \end{lemma}
 \begin{proof}
+	\textcolor{blue}{
 We know that
 \[ 
 M_k \beta = \beta^{p^{k}}= \sum_i ( -1)^{2 p^{i}\dim \xi^{i}} \langle M_k, \xi_i\rangle \beta^{p^{i}}
 \]
-Proving the equality. The second equality follows from the same argument applied to $\alpha$ and $M_k\delta$.
+Proving the equality. The second equality follows from the same argument applied to $\alpha$ and $M_k\delta$.}
 \end{proof}
 We are ready to prove the main structure theorem for the dual Hopf algebra.
 \begin{thm}
@@ -470,10 +527,9 @@ We are ready to prove the main structure theorem for the dual Hopf algebra.
 	\[ 
 		\mathcal{A}_\ast \simeq \Lambda [ \tau_0,\tau_1,\ldots] \otimes \mathbb{F}_p[\xi_1,\xi_2,\ldots], \quad \text{ where } \dim \tau_i = 2p^{i}-1 , \dim \xi_i = 2p^{i}-2.
 	\]
-	Here $\Lambda[\tau_0,\ldots]$ denotes the exterior algebra and $\mathbb{F}_p[\xi_1,\xi_2,\ldots]$ is the polynomial algebra. This isomorphism is graded 
-
+	Here $\Lambda[\tau_0,\ldots]$ denotes the exterior algebra and $\mathbb{F}_p[\xi_1,\xi_2,\ldots]$ is the polynomial algebra. This isomorphism is graded.
 \end{thm}
-\begin{proof}
+\begin{proof}\textbf{(Sketch)}
 	Let $\mathcal{I}$ be the set of finite sequences $( \epsilon_0, r_1,\epsilon_1,\ldots) $ with $\epsilon_i = 0,1$ and $r_i \in \mathbb{N}$. 
 	Given $I \in \mathcal{I}$, we define
 	\[ 
@@ -526,13 +582,13 @@ Let $\xi_i\in \mathcal{A}_{2\ast} $ be the dual basis of the basis $\sq^{2^{i-1}
 \end{thm}
 \subsection{The comultiplication in $\mathcal{A}_\ast$}
 
-If we want to fully describe $\mathcal{A}_\ast$ as a Hopf algebra, we also have to describe the comultiplication $\phi_\ast\coloneq  ( \phi^{\ast})^{\vee}$
+If we want to fully describe $\mathcal{A}_\ast$ as a Hopf algebra, we also have to describe the comultiplication $\mu_{\ast}\coloneq  ( \mu)^{\vee}$, wher $\mu$ is the usual multiplication in $\mathcal{A}$.
 
 \begin{propo}
 We have
 \begin{align*}
-	\phi_\ast( \xi_k) &= \sum_{i=0}^{k}\xi_{k-i}^{i}\otimes \xi_i\\
-\phi_\ast( \tau_k) &= \sum_{i=0}^{k}\xi_{k-i} ^{p^{i}}\otimes \tau_i + \tau_k \otimes 1
+	\mu_\ast( \xi_k) &= \sum_{i=0}^{k}\xi_{k-i}^{i}\otimes \xi_i\\
+\mu_\ast( \tau_k) &= \sum_{i=0}^{k}\xi_{k-i} ^{p^{i}}\otimes \tau_i + \tau_k \otimes 1
 \end{align*}
 \end{propo}
 \begin{proof}
@@ -548,7 +604,7 @@ We have
 \end{tikzcd}\]
 implies the identity
 \[ 
-	( \lambda^{\ast}\otimes 1) \lambda^{\ast}= ( 1\otimes\phi_\ast) \lambda^{\ast}.
+	( \lambda^{\ast}\otimes 1) \lambda^{\ast}= ( 1\otimes\mu_\ast) \lambda^{\ast}.
 \]
 	Let $\alpha,\beta \in H^{\ast}( X) $ with $X$ as before, then
 \begin{align*}
@@ -558,10 +614,10 @@ implies the identity
 Hence, from the identity above, we get
 \begin{align*}
 ( \lambda^{\ast}\otimes 1) \lambda^{\ast}( \beta) &= \sum_{i,j} \beta^{p^{i+j}}\otimes \xi_j^{p^{i}}\otimes \xi_i\\
-&= ( 1\otimes \phi_\ast) \lambda^{\ast}( \beta) \\
-&= \sum \beta^{p^{k}}\otimes \phi_\ast( \xi_k) 
+&= ( 1\otimes \mu_\ast) \lambda^{\ast}( \beta) \\
+&= \sum \beta^{p^{k}}\otimes \mu_\ast( \xi_k) 
 \end{align*}
-And hence we deduce the identity for $\phi_\ast( \xi_k) $, the identity for $\phi_\ast( \tau_k) $ is deduce in the same way.
+And hence we deduce the identity for $\mu_\ast( \xi_k) $, the identity for $\mu_\ast( \tau_k) $ is deduce in the same way.
 
 \end{proof}
 

@@ -1,15 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'talk.blg'
-[58] biber:340> INFO - === Sat Oct 21, 2023, 14:27:20
-[68] Biber.pm:419> INFO - Reading 'talk.bcf'
-[111] Biber.pm:979> INFO - Found 2 citekeys in bib section 0
-[122] Biber.pm:4419> INFO - Processing section 0
-[150] Biber.pm:4610> INFO - Looking for bibtex file '../sources.bib' for section 0
-[152] bibtex.pm:1713> INFO - LaTeX decoding ...
-[173] bibtex.pm:1519> INFO - Found BibTeX data source '../sources.bib'
-[202] UCollate.pm:68> INFO - Overriding locale 'nil' defaults 'variable = shifted' with 'variable = non-ignorable'
-[202] UCollate.pm:68> INFO - Overriding locale 'nil' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[202] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'nil'
-[202] Biber.pm:4245> INFO - No sort tailoring available for locale 'nil'
-[204] bbl.pm:660> INFO - Writing 'talk.bbl' with encoding 'UTF-8'
-[205] bbl.pm:763> INFO - Output to talk.bbl
+[64] biber:340> INFO - === Sat Oct 28, 2023, 14:52:46
+[74] Biber.pm:419> INFO - Reading 'talk.bcf'
+[120] Biber.pm:979> INFO - Found 4 citekeys in bib section 0
+[131] Biber.pm:4419> INFO - Processing section 0
+[139] Biber.pm:4610> INFO - Looking for bibtex file '../sources.bib' for section 0
+[140] bibtex.pm:1713> INFO - LaTeX decoding ...
+[158] bibtex.pm:1519> INFO - Found BibTeX data source '../sources.bib'
+[194] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[194] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[195] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[195] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[198] bbl.pm:660> INFO - Writing 'talk.bbl' with encoding 'UTF-8'
+[199] bbl.pm:763> INFO - Output to talk.bbl
+[199] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[199] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[199] Biber.pm:133> INFO - WARNINGS: 2

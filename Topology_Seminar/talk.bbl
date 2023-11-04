@@ -27,9 +27,6 @@
            given={John},
            giveni={J\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Annals of Mathematics}%
-      }
       \strng{namehash}{6ed546ba346b01635423d8131e45906b}
       \strng{fullhash}{6ed546ba346b01635423d8131e45906b}
       \strng{bibnamehash}{6ed546ba346b01635423d8131e45906b}
@@ -41,8 +38,68 @@
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of Mathematics}
       \field{title}{The Steenrod Algebra and its Dual}
       \field{year}{1958}
+    \endentry
+    \entry{struct_of_hopf_alg_milnor}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6ed546ba346b01635423d8131e45906b}{%
+           family={Milnor},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b42803002165e10eca5e2a1bcffce314}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={John\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e4004456381d10fbba8d8494509d0cb}
+      \strng{fullhash}{9e4004456381d10fbba8d8494509d0cb}
+      \strng{bibnamehash}{9e4004456381d10fbba8d8494509d0cb}
+      \strng{authorbibnamehash}{9e4004456381d10fbba8d8494509d0cb}
+      \strng{authornamehash}{9e4004456381d10fbba8d8494509d0cb}
+      \strng{authorfullhash}{9e4004456381d10fbba8d8494509d0cb}
+      \field{labelalpha}{MM65}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of Mathematics}
+      \field{title}{On the Structure of Hopf Algebras}
+      \field{year}{1965}
+    \endentry
+    \entry{coh_ops_and_applications_mosher}{book}{}
+      \name{author}{2}{}{%
+        {{hash=3ee4e57756552b17c9ab92b9ee49ea3e}{%
+           family={Mosher},
+           familyi={M\bibinitperiod},
+           given={R.E.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=161968d86fd0664c04ff2e08f406bc52}{%
+           family={Tangora},
+           familyi={T\bibinitperiod},
+           given={M.C.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Dover Publications}%
+      }
+      \strng{namehash}{cb2441e5f53cee740637066e93563a63}
+      \strng{fullhash}{cb2441e5f53cee740637066e93563a63}
+      \strng{bibnamehash}{cb2441e5f53cee740637066e93563a63}
+      \strng{authorbibnamehash}{cb2441e5f53cee740637066e93563a63}
+      \strng{authornamehash}{cb2441e5f53cee740637066e93563a63}
+      \strng{authorfullhash}{cb2441e5f53cee740637066e93563a63}
+      \field{labelalpha}{MT08}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Dover Books on Mathematics Series}
+      \field{title}{Cohomology Operations and Applications in Homotopy Theory}
+      \field{year}{2008}
     \endentry
     \entry{cohomology_operations_Steenrod}{article}{}
       \name{author}{2}{}{%

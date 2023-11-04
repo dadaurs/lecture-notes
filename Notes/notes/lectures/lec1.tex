@@ -1,0 +1,59 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\section{Lie Algebras of Algebraic Groups}
+
+%\lecture{1}{Sat 04 Nov}{Lie Algebras of Algebraic groups}
+Throughout, $G$ is an algebraic group over $k = \overline{k} $ of char. 0.\\
+\begin{defn}[Lie Algebra of algebraic group]
+	We define
+	\[
+		\mathfrak{g} = \mathrm{Lie}( G) = T_e G = \mathrm{Der}( \O_{G,e} ) = \mathrm{Der}_G( \O_{G} ).
+\]
+Where $\mathrm{Der}_G( \O_G) $ are the $G$-invariant derivations.
+\end{defn}
+Let's see that these identifications make sense, first we show the identification 
+%\subsection*{$T_e G= \mathrm{Der}( \O_{G,e} ) $ }
+%$T_e G= \hom_e( \spec k[\epsilon] , G)$,  then consider the map $\O_{G,e}   \to k[\epsilon] \to k$ where the second map is the projection onto the subspace $k \epsilon$.\\
+%Similarly, given a derivation $\alpha\colon \O_{G,e}  \to k $, the map $\id+ \alpha \cdot \epsilon\colon \O_{G,e} \to k[\epsilon]$ is a ring morphism and the composition $\spec k[\epsilon] \to \spec \O_{G,e} \to G$ yields a tangent vector.
+\subsection*{$T_e G = \mathrm{Der}_{G} ( \O_G) $ }
+Let $\delta\in \mathrm{Der}_G( \O_G) $ and $f \in \O( G)$, consider the map $f \mapsto \delta f ( e ) \in k$, we get an induced map $\mathrm{Der}_G( \O_G) \to T_e ( G) $ by mapping $\delta\mapsto ( \id +\delta( -)( e ))   \cdot \epsilon ) $.\\
+Given $\id+\alpha\epsilon\in T_e G$, define a derivation $\delta_\alpha\colon A \to A$ defined by $\delta_\alpha( f) ( g) = g\cdot \delta_\alpha( f) ( e )$ 
+\subsection*{$\mathrm{Der}_G( \O_G) = \mathrm{Der}( \O_{G,e} ) $ }
+Given $f \in \mathrm{Der}_G( \O_G) $, there is a natural map on stalks $f\in \mathrm{Der}( \O_{G,e} ) $.\\
+The other way, let $\del\colon \O_{G,e} \to \O_{G,e} $ be a derivation. Define a derivation $\delta\colon A \mapsto A$ by $\delta( f) ( g) = g \cdot \del f ( g) $.\\
+
+The association $G \mapsto \mathrm{Lie}( G) $ extends to a functor.
+\begin{thm}
+	\[ 
+		\left\{ \text{ $H \subset G$ closed connected  }   \right\} \to \left\{ \text{ $\mathfrak{h} \subset \mathfrak{g}$  }  \right\} 
+	\]
+	is injective.
+	
+\end{thm}
+\subsection{Borel and Parabolic subgroups}
+Let $G$ be an algebraic and $B \subset G$ a Borel subgroup.
+\begin{thm}
+$G /B$ is projective and all Borel subgroups are conjugate.	
+\end{thm}
+\begin{proof}
+Let $H \subset G$ be a Borel subgroup of maximal dimension. Let $V$ be a $G$-vector space and $L \subset V$ a line such that $G_L = H$.\\
+Now $H \curvearrowright \Fl( V/L) $ and because $\Fl( V /L) $ is complete, there is a fixed point.\\
+Extend this fixed point to a full flag of $V$ by $L$, denote this flag $F\in \Fl( V) $, then $G /H \to \mathbb{P}( V)$ sending $gH \mapsto gF$ is bijective, denote the image by $GF$.\\
+We claim $GF$ is projective, indeed, since $H$ is of maximal dimension, it suffices to show that $GF$ is an orbit of minimal dimension. If $L \subset G$ stabilises a flag, then $L$ is solvable and hence $\dim G /H \geq \dim G /L$.
+Now $GF$ is an orbit of minimal dimension and hence is closed.\\
+$B$ acts on $G /H$ by left multiplication, since $G /H$ is projective, there is a class $gH$ such that $BgH = gH$, thus $g^{-1}Bg\subset H$, since both groups are Borel, they are equal.
+\end{proof}
+\begin{thm}
+	For any parabolic subgroup $ P \subset G$, we have $N_G( P) = P$.
+\end{thm}
+\begin{proof}
+We showed (cf. ipad) that $N_G( B) = B$ for any Borel subgroup.\\
+A parabolic subgroup contains a Borel subgroup. Let $x\in N_G(P) $, then $B, xBx^{-1}$ are Borel subgroups of $P$.\\
+Then there exists $y \in P$ such that $B = yxB( yx)^{-1}$ and $xy \in N_G( B) =B$.\\
+Thus, $x \in P$.
+\end{proof}
+
+
+
+
+\end{document}	
