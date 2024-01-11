@@ -1,0 +1,42 @@
+\input{../../preamble.tex}
+\input{../../newcommands.tex}
+\title{Questions}
+\author{David Wiedemann}
+\date{}
+\begin{document}
+\maketitle
+I have decided to first present the proof of the Kuznetsov conjectures for Pfaffian cubics following Huybrecht's book as it would best tie in with Saverio's talk.
+Here are a few questions relating to the proofs of these.
+\begin{enumerate}
+\item The geometric input we need for this proof is lemma 6.2.20, Saverio told me he sketched a proof of this, but do you think it makes sense to sketch a proof of this again? Especially the fact that the fibers are $\mathbb{P}^{1}\times \mathbb{P}^{1}$ or $\mathbb{F}_2$?
+\item In the proof of lemma 3.10, I am clear on how the proof works when the fiber is $\mathbb{P}^{1}\times \mathbb{P}^{1}$, but I would like to at least have some idea of how the $\mathbb{F}_2$ case works, potentially using it as an exercise. (or is this bad practice?)
+In fact, I am not even sure what $\O_X( 1) $ restricts to on a fiber isomorphic to $\mathbb{F}_2$.
+\item Turning to lemma 3.11, there are certain claims made in the proof that I am not confident about.
+	Why is $\mathcal{I}_{\Sigma_p} $ simple? This is simply stated and I tried to use the LES in ext to show this but didn't get far. 
+
+\item I have the same question for $Hom( \mathcal{I}_{\Sigma_{p_1} } , \mathcal{I}_{\Sigma_{p_2} } ) = 0$.
+
+\item Is $\mathcal{I}$ the ideal sheaf associated to the reduced induced scheme structure on $\Sigma$ 
+\item Finally, do you think it makes sense to present the computation of $\chi( \mathcal{I}_{\Sigma_{p_1} } , \mathcal{I}_{\Sigma_{p_2} } ) $? Of course, the proof that $\chi( \O_{\Sigma_p} , \O_{\Sigma_p} ) = 10$ is not within the scope of the talk, but I can put that into one "geometric input" lemma.
+\end{enumerate}
+
+I believe the introduction together with the proof of this result will occupy a bit more than half of the talk and I have been debating what to present in the second part.\\
+As my main goal should be to motivate the Kuznetsov conjectures in general, two things come to mind.\\
+First off, I am thinking of defining what the twisted derived category of sheaves on a variety is using Azumaya algebras and mentioning proposition 3.3 as well as its corollary 3.5.
+This would imply presenting the main geometry of the situation (in particular, proposition 6.1.10).
+Unfortunately I would not go into the details of the proof of any lemma as it is very similar to the first proof I gave and I don't have the time.\\
+Another option I have been considering is to follow Kuznetsov's expository paper \url{https://arxiv.org/abs/1509.09115} to present a more theoretical reason that motivates the formulation of the Kuznetsov conjectures.
+In this paper, he defines the Griffith's component of a $k$-linear triangulated category and shows that, if it is well-defined, it is a birational invariant of $D^{\flat}( X)$.
+He then uses this Griffith's component and another conjecture to argue that, if $\mathcal{A}_X\not\simeq S$, then the geometric dimension of $\mathcal{A}_X$ is not 2 and hence $X$ could not be rational.
+The main argument is presented on page 21 of the paper while a few definitions and results are defined before.
+I believe this second option has a few distinct advantages which I would like your feedback on.
+\begin{itemize}
+\item It has a very different flavour than the proof of proposition 6.3.9, while the proof of 6.3.3 is very similar. For time reasons, I don't think I could do the proof of 6.3.3 justice.
+\item It doesn't rely on extra geometric input that has not been covered in the seminar up until now
+\item The whole argument is reasonably easy to follow and manages to omit the use of Hochschild homology which is out of the scope of my talk.
+\end{itemize}
+
+
+
+
+\end{document}

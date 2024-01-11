@@ -1,0 +1,295 @@
+\input{../preamble.tex}
+\input{../newcommands.tex}
+\newcommand{\gdim}{\mathrm{gdim}}
+\newcommand{\griff}{\mathrm{Griff}}
+\title{Derived Categories of Special Cubic Fourfolds}
+\author{David Wiedemann}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+These are notes prepated for my talk on derived categories of cubic hypersurfaces in the corresponding seminar in Bonn during the wintersemester 2023/24.\\
+The main goal is to illustrate the Kuznetsov conjectures, and more generally rationality problems for cubic fourfolds via two key examples, mainly following the book \cite{Geometry_Cubic_Huybrechts}.
+\end{abstract}
+
+\tableofcontents
+
+\section{Cubics and Rationality Problems}
+Throughout, let $k= \mathbb{C}$ and let $X \subset \mathbb{P}^{n+1}$ be a hypersurface of degree $d$.\\
+In the last talk, we defined the Kuznetsov component of a cubic hypersurface, this is a specified \textbf{admissible subcategory} of the bounded derived category of $X$ which can be thought of as the non-trivial part of $D^{\flat}( X) $.
+Given a hypersurface $X \subset \mathbb{P}^{n+1}$ of degree $d$, a version of Bott vanishing shows that the longest exceptional sequence of twisting sheaves on $X$ one can get is $\left\langle \O_X, \O_X( 1), \ldots, \O_X( n+1-d)\right\rangle  $. 
+We define the Kuznetsov component to be the right orthogonal to this:
+\[ 
+\mathcal{A}_X \coloneq \langle \O_X,\ldots, \O_X( n+1-d) \rangle^{\perp}.
+\]
+As the subcategories $ \langle \O_X( j) \rangle \subset D^{\flat}( X) $ are all equivalent\footnote{equivalent as $k$-linear triangulated categories} to $D^{\flat}( \spec k) $, $\mathcal{A}_X$ can be fruitfully thought of as the non-trivial part.\\
+Today, we will use derived categories to study the rationality of cubic fourfolds, as a refresher, here is what we know about rationality of (smooth) cubics in lower dimension:
+\begin{itemize}
+\item If $C$ is a smooth cubic curve, it is an elliptic curve and hence never rational.
+\item If $X$ is a smooth cubic surface, then it is the blowup of $\mathbb{P}^{2}$ in 6 points. In particular, it is always rational.
+\item If $X$ is a smooth cubic threefold, then, by a result of Clemens and Griffiths, it is never rational.
+\end{itemize}
+The situation for cubic fourfolds is still unclear and a largely open problem, in fact, not a single cubic fourfold is known to be non-rational.\\
+Our goal today is to shed light on a conjecture due to Kuznetsov
+\begin{center}
+	\textit{A smooth cubic fourfold $X$  is rational if and only if there is a K3 surface $S$ such that there is an equivalence $\mathcal{A}_X\simeq D^{\flat}( S) $.}
+\end{center}
+From now on, $X$ is a smooth cubic fourfold and $S$ a K3 surface.\\
+We first make the observation that $\mathcal{A}_X$ shares some striking similarities with $D^{\flat}( S) $. Recall the general result from last time
+\begin{propo}[Kuznetsov]
+The Kuznetsov component $\mathcal{A}_X \subset D^{\flat}( X)$ has a Serre functor $\mathcal{S}$  given by $\mathcal{S}= [ 2]$.
+Furthermore $\mathcal{A}_X$ is indecomposable, ie. there do not exist subcategories $A,B \subset \mathcal{A}_X$ such that $\langle A,B\rangle = \langle B,A\rangle$ are semi-orthogonal decompositions.
+\end{propo}
+Much like the case of K3 surfaces!
+Moreover, certain numerical invariants of $\mathcal{A}_X$ coincide with those of a K3 surface, indeed, we find isomorphisms in the \textit{Hochschild homology} $HH^{\bullet}( \mathcal{A}_X) \simeq HH^{\bullet}( D^{\flat}( S) ) $.
+%Let $\iota_\ast\colon\langle \O_X,\ldots, \O_X( n+1-d) \rangle \to D^{\flat}( X) $ be the inclusion with $\iota^{\ast}\dashv \iota_\ast \dashv \iota^{!}$.\\
+%The Kuznetsov component being a right complement, we know that the inclusion $j_\ast\colon \mathcal{A}_X \hookrightarrow D^{\flat}( X) $  has a left-adjoint $j^{\ast}$ given by the completion 
+%\[ 
+%\iota_\ast\iota^{!}E \to E \to j^{\ast}E.
+%\]
+%Using \cite[lemma 7.1.14]{Geometry_Cubic_Huybrechts}, we see that $\mathcal{A}_X$ also has a Serre functor and hence it's inclusion also admits a right-adjoint $j^{!}$.\\
+%In fact, this Serre functor can be computed explicitly, it is given by
+%\[ 
+%S^{-1} = j^{\ast}\circ ( \O_X( n+2-d) \otimes -) \circ [ -n] 
+%\]
+\section{Pfaffian Cubic Fourfolds}
+We illustrate the conjecture in a case where we know $X$ to be rational. 
+Remember the following theorem from a previous talk.
+\begin{thm}[Pfaffian cubics are rational]
+	A Pfaffian cubic fourfold is rational.
+\end{thm}
+We start by recalling what Pfaffian cubic fourfolds are and defining there associated K3 surfaces.\\
+Let $W$ be a six dimensional vector space, then $\Lambda^{2}W$ is 15 dimensional and we consider it's projectivization $\mathbb{P}( \Lambda^{2}W) \simeq \mathbb{P}^{14}$.
+The Pfaffian is the subvariety $Pf( W) \subset \mathbb{P}( \Lambda^{2}W) $ given by $Pf( W) = \left\{ \omega \in \mathbb{P}( \Lambda ^{2}W) | \omega\wedge\omega\wedge\omega = 0 \right\} $.
+\begin{defn}[Pfaffian Cubic Fourfold]
+	A smooth cubic fourfold is a \textit{Pfaffian Cubic fourfold} if it is isomorphic to $X_V \coloneq Pf( W^{\ast}) \cap \mathbb{P}( V) $ where $V \subset \Lambda^{2}W^{\ast}$ is a 6 dimensional sub vector space.
+\end{defn}
+\begin{defn}[Associated K3 surface ]
+	Let $V \subset \Lambda^{2}W^{\ast}$ be a subspace as above and consider the Grassmanian of lines $\mathbb{G}( 1, \mathbb{P}( W) ) $  as a closed subscheme of $\mathbb{P}( \Lambda^{2}W) $ via the Pl\"ucker embedding.
+	The associated K3 surface to $V$  is defined as $S_V \coloneq \left\{ p \in \mathbb{G}( 1, \mathbb{P}( W) ) | \omega|_p = 0 \text{ for all } \omega \in V \right\}  $.
+\end{defn}
+It was proven in a previous talk that $S_V$ is indeed a K3 surface that does not contain any lines and that $X_V$ is a smooth cubic fourfold.
+%In that same talk, we proved the following result
+%\begin{thm}[Pfaffians are Rational]
+	%A Pfaffian Cubic Fourfold is rational.
+%\end{thm}
+%The birational map to $\mathbb{P}^{4}$ was given by $\omega \in X_V \mapsto \ker\omega\cap \mathbb{P}( W') $ 
+Today, we will see that the K3 surface $S_V$ is the "associated K3" to $X_V$.
+Our main first theorem is
+\begin{thm}
+If $X$ is a Pfaffian cubic fourfold, then there is an equivalence of categories	
+\[ 
+D^{\flat}( S_V) \simeq \mathcal{A}_X.
+\]
+\end{thm}
+In the first part of this talk, we will sketch the proof of this theorem. 
+An important ingredient is the correspondence
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJcXFNpZ21hX1YgXFxzdWJzZXQgU19WXFx0aW1lcyBYX1YiXSxbMCwxLCJTX1YiXSxbMSwwLCJYX1YiXSxbMCwyLCJwX1giXSxbMCwxLCJwX1MiLDJdXQ==
+\[\begin{tikzcd}
+	{\Sigma_V \subset S_V\times X_V} & {X_V} \\
+	{S_V}
+	\arrow["{p_X}", from=1-1, to=1-2]
+	\arrow["{p_S}"', from=1-1, to=2-1]
+\end{tikzcd}\]
+where $\Sigma_V= \left\{ ( p, \omega) \in S_V\times X_V | p \cap \ker \omega \neq 0 \right\} $. We give $\Sigma_V$ the reduced induced scheme structure.\\
+Going forward, we will drop the subscript $V$ from our notation.\\
+
+Let us sketch the structure of the proof:
+\begin{enumerate}
+\item Using $\Sigma$, we construct a (exact, $k$-linear) functor $\Psi\colon D^{\flat}( S) \to D^{\flat}( X)$
+\item We show that the image of $\Psi$ is contained in $\mathcal{A}_X$.
+\item We show that the restriction $\Psi\colon D^{\flat}( S) \to \mathcal{A}_X$ is fully faithful
+\item We show that $\Psi$ is an equivalence
+\end{enumerate}
+\subsection*{Constructing $\Psi$ }
+Define
+\[ 
+\mathcal{I}( -1) \coloneq \mathcal{I}_{\Sigma} \otimes p^{\ast}_X \O_X( -1),
+\]
+and let $$\Phi_{\mathcal{I}( -1) } \colon D^{\flat}( X) \to D^{\flat}( S)$$ be the associated Fourier-Mukai functor.
+As seen in the previous talk, Fourier-Mukai functors have right-adjoints which are themselves Fourier-Mukai. 
+Explicitly, the right adjoint $\Psi$ to $\Phi_{\mathcal{I}( -1) }$ has kernel $\mathcal{I}( -1)^{\vee}\otimes p_X^{\ast}\O_X( -3) [ 4] $.
+\subsection*{$\Psi$ lands in the Kuznetsov component}
+To prove this, we need a result describing the geometry of the correspondence $\Sigma \subset S\times X$.
+\begin{propo}
+\begin{enumerate}
+	\item The fibers of $\Sigma \to S$ are either isomorphic to $\mathbb{P}^{1}\times \mathbb{P}^{1}$ or $\mathbb{F}_2$ and the embedding $\Sigma_p \to X \to \mathbb{P}^{5}$ describes $\Sigma_p$ as a quartic normal scroll. \footnote{See \cite[Sec. 6.2.6]{Geometry_Cubic_Huybrechts} for a more in depth discussion on these}\\
+		In particular, the restriction maps $H^{0}( \mathbb{P}^{5}, \O( n) ) \to H^{0}( \Sigma_p, \O_{\Sigma_p} ( n) ) $ are bijections.
+\item Let $P\in S$ and let $\Sigma_P$ be the corresponding fiber, then 
+	\[ 
+	\chi( RHom_{D^{\flat}( X) } ( \O_{\Sigma_P} , \O_{\Sigma_P} ) ) =10
+	\]
+\end{enumerate}
+\end{propo}
+Recall that $\mathcal{A}_X$ is defined as the right orthogonal of the category spanned by $ \left\{ \O_X, \O_X( 1) ,\O_X( 2)  \right\} $, hence it suffices to show that $\hom_{D^{\flat}( X) } ( \O_X( j) , \Psi( E) ) =0 $ for all $j=0,1,2$ and for all $E \in D^{b}( S) $.
+As $\Psi$ is right-adjoint, this is equivalent (by Yoneda) to showing that $\Phi_{\mathcal{I}( -1) } ( \O_X( j) ) =0$ for all $j=0,1,2$.\\
+%We will only show this for $j=0$, referring to the book for the other cases.
+Consider the short exact sequence of sheaves on $S\times X$ 
+\[ 
+0 \to \mathcal{I}_{\Sigma}  \to \O_{X\times S} \to \O_{\Sigma} \to 0
+\]
+Twisting by $\O_X( -1) $, we see that to show $\Phi_{\mathcal{I}( -1) } ( \O_X) =0$, it suffices to show the vanishing $p_{S\ast} ( \O_{X\times S}( -1)  ) = p_{S\ast} ( \O_{\Sigma}(-1)  ) =0$.
+Using cohomology and base change, it suffices to show that the cohomology of the fibers vanishes
+\begin{itemize}
+	\item By \cite[lemma 1.1.7]{Geometry_Cubic_Huybrechts} and Serre duality, $H^{\bullet}( X,\O_X( -1) ) =0$.
+	\item By \cite[lemma 6.2.20]{Geometry_Cubic_Huybrechts}, the fibers of the projection $\Sigma \to S$ are quartic normal scrolls so either isomorphic to $\mathbb{P}^{1}\times \mathbb{P}^{1}$ or $\mathbb{F}_2$.\\
+		If the fiber over $p$  is $\Sigma_p =\mathbb{P}^{1}\times \mathbb{P}^{1}$, we can use K\"unneth and the fact that $p_X^{\ast}\O_X( -1) |_{\Sigma_p} = \O_{\mathbb{P}^{1}\times \mathbb{P}^{1}} ( -2,-1)  $ to obtain the vanishing
+		\[ 
+		H^{\bullet}( \Sigma_p, \O( -2,-1) ) =0.
+		\]
+\end{itemize}
+The cases $j=1,2$ are proven similarly using normality of $\Sigma_p \subset \mathbb{P}^{5}$  and we omit them here.\\
+The case where the fibers are $\mathbb{F}_2$ is the exercise for today's talk.
+\subsection*{$\Psi$ is fully faithful}
+To prove this, we will use the following general result due to Bondal and Orlov.
+\begin{thm}
+Let $X, Y$ be smooth projective varieties and let $\Phi_P\colon D^{\flat}( X) \to D^{\flat}( Y)  $ be the Fourier-Mukai Functor associated to $P \in D^{\flat}( X\times Y) $.
+Then $\Phi_{P} $ is fully faithful if an only if for any two points $x, y \in X$, we have
+\[ 
+\hom( \Phi_P( k( x) ) , \Phi_P( k( y) ) [ i] ) =
+\begin{cases}
+k \text{ if } x=y \text{ and } i=0\\
+0 \text{ if } x\neq y \text{ or } i<0 \text{ or } i>\dim X
+\end{cases}.
+\]
+\end{thm}
+We know that $\Psi$ is the Fourier-Mukai functor whose associated kernel is $\mathcal{I}( -1)^{\vee}\otimes p_X^{\ast} ( \O_X( -3) ) [ 4] $, hence for $P \in S$, we find
+\[ 
+\Psi( k( P) ) = \mathcal{I}_{\Sigma_P} ( -1) ( -3) [ 4] 
+\]
+\textcolor{red}{Why is $ \mathcal{I}_{\Sigma_P} $ simple?}
+
+Let $P_1,P_2\in S$, we compute
+\[ 
+\ext^{i}_{\mathcal{A}_X} ( \Psi( k( P_1) ) , \Psi( k( P_2) ) ) = \ext^{i}_{\mathcal{A}_X} ( \mathcal{I}_{\Sigma_{P_2} }  , \mathcal{I}_{\Sigma_{P_1} }  )
+\]
+Now clearly, $\ext^{\bullet <0}_{\mathcal{A}_X}( \mathcal{I}_{\Sigma_{P_2} }, \mathcal{I}_{\Sigma_{P_1} } ) =0$ and hence, because $\mathcal{A}_X$ is 2-Calabi-Yau, $\ext^{\bullet>0}_{\mathcal{A}_X} ( \mathcal{I}_{\Sigma_{P_2} } , \mathcal{I}_{\Sigma_{P_1} } ) =0$.\\
+Since $\Sigma_{P_1}, \Sigma_{P_2}  $ are disjoint, $\hom( \mathcal{I}_{\Sigma_{P_1} } , \mathcal{I}_{\Sigma_{P_2} } ) =0$ \textcolor{red}{Why? Maybe write out ses for $P_1$ and take les in ext}
+Hence, by Serre duality $\ext^{2}_{\mathcal{A}_X} ( \mathcal{I}_{\Sigma_{P_1} } , \mathcal{I}_{\Sigma_{P_2} } ) =0$.\\
+Hence, it suffices to show that $\dim \ext^{1}( \mathcal{I}_{\Sigma_{P_2} }, \mathcal{I}_{\Sigma_{P_1} }  )=0$.\\
+To prove this, we consider the Euler characteristic of the complex $R\hom( \mathcal{I}_{\Sigma_{P_2} } , \mathcal{I}_{\Sigma_{P_1} } ) $, by constancy of the Euler characteristic in flat families
+\begin{align*}
+	\chi( \mathcal{I}_{\Sigma_{P_1} } , \mathcal{I}_{\Sigma_{P_2} } ) &= \chi( \mathcal{I}_{\Sigma_{P} } , \mathcal{I}_{\Sigma_P} ) \\
+									  &= \chi( \O_X,\O_X) -\chi( \O_X, \O_{\Sigma_P} ) - \chi( \O_{\Sigma_P} , \O_X) + \chi( \O_{\Sigma_P} ,\O_{\Sigma_P} ) \\
+									  &= 0
+\end{align*}
+\textcolor{red}{Should I present this?}
+
+\subsection{$\Psi$ is essentially surjective}
+Recall that $\mathcal{A}_X$ is indecomposable and suppose that $\Psi$ is not essentially surjective, then the image is a full admissible subcategory of $\mathcal{A}_X$ and there is a natural semi-orthogonal decomposition
+\[ 
+	\mathcal{A}_X = \left\langle { }^{\perp}\Psi( D^{\flat}( S) ) ,\Psi( D^{\flat}( S) )\right\rangle =  \left\langle \Psi( D^{\flat}( S) ) ,{ }^{\perp}\Psi( D^{\flat}( S) )[2]\right\rangle.
+\]
+This contradicts the indecomposability of $\mathcal{A}_X$, since $\Psi$ is not trivial, it must be essentially surjective.
+
+
+\section{Twisted Derived Categories}
+We will now introduce a new triangulated category called the \textit{twisted derived category} of sheaves.
+This category: $D^{\flat}( S, \alpha) $ will depend on the choice of a projective variety $S$ and on a cohomology class $\alpha \in H^{2}_{\mathrm{\'et}}( S, \mathbb{G}_m) $.\\
+$D^{\flat}( S,\alpha) $ will be the derived bounded category of an abelian category $\coh( S,\alpha) $  which we now construct.\\
+There are two different but equivalent ways of defining $\coh( S,\alpha) $.
+\begin{defn}[Twisted coherent sheaves]
+Let $\alpha\in H^{2}_{\'et}( S, \mathbb{G}_m)$, let $U \to S$ be an \'etale cover such that $\alpha$ is represented by a cocycle $a \in \Gamma ( U \times_S U \times_S U, \mathbb{G}_m) $.\\
+A $\alpha$-twisted sheaf $( \mathcal{F},\phi )$ on $S$ is a sheaf $\mathcal{F}$ on $U$ together with an isomorphism
+\[ 
+\phi\colon \pr_1^{\ast}\mathcal{F} \to \pr_2^{\ast}\mathcal{F}
+\]
+satisfying the cocycle conditions "up to" $\alpha$, ie. such that
+\[ 
+\pr_{1,2} ^{\ast}\phi \circ \pr_{2,3}^{\ast}\phi = a \cdot \pr_{1,3}^{\ast}\phi.
+\]
+\end{defn}
+One would now have to check that this construction does not depend on the choice of cocycle/\'etale cover.
+\begin{defn}[Morphisms of twisted sheaves]
+	Let $( \mathcal{F}, \phi_{\F}  ), ( \mathcal{G}, \phi_{\G}  )$ be $\alpha$-twisted sheaves on $S$ and suppose that they are defined on the same \'etale cover $U \to S$, a morphism from $( \F ,\phi_{\F} )\to( \G,\phi_\G )$ is a morphism of sheaves $\F \to \G$ on $U$ such that
+	\[ 
+	\phi_\G \circ \pr_1^{\ast} \F = \pr_2^{\ast}\circ \phi_{\F}.
+	\]
+\end{defn}
+
+Let $\mathcal{E}$ be a locally-free $\alpha$-twisted and let $\mathcal{A}=\mathcal{E} \otimes \mathcal{E}^{\vee}= \Endo\left( \mathcal{E}\right) $, this has the natural structure of a sheaf of algebras.\\
+Then $\mathcal{A}$ is no longer twisted and descends to a sheaf of algebras on $S$ which we also call $\mathcal{A}$. 
+There is an equivalence of categories
+\[ 
+\coh( S, \alpha) \simeq \coh( S, \mathcal{A}),
+\]
+where the left hand side is the category of right $\mathcal{A}$-modules.\\
+Finally, we can associate to the twisted locally free sheaf $\mathcal{E}$, it's projectivisation $\mathbb{P}( \mathcal{E}) $.\\
+The isomorphism $\phi$ then gives \'etale descent data for $\mathbb{P}( \mathcal{E}) $ and we call $\mathbb{P}( \mathcal{E}) $ the corresponding scheme over $S$.
+In fact, there are bijections
+\[ 
+	H^{2}_{\'et} ( S, \mathbb{G}_m) \simeq \left\{\text{ equivalence classes of Azumaya algebras } \right\} \simeq \left\{\text{ equivalence classes of $\mathbb{P}^{n}$-fibrations } \right\}
+\]
+\section{Cubic Fourfolds containing a Plane}
+Let $X$ be a general cubic fourfold containing a plane $P \subset X$ , in this last part we will sketch a proof of the following theorem.
+\begin{thm}\label{Kuznetsov_con_containing_plane}
+	There exists a K3-surface $S$ and a Brauer class $\alpha \in Br( S) $ such that
+\[ 
+D^{\flat}( S, \alpha) \simeq \mathcal{A}_X.
+\]
+\end{thm}
+Let us start with the geometric setup that was already covered in a previous talk.
+Let $p \colon X \dashrightarrow \mathbb{P}^{2}$ be the projection from $P$, this induces a map $\tilde X \coloneq \bl_P X \to \mathbb{P}^{2}$ which is a fibration in 2-dimensional quartics.\\
+We make the simplifying assumption here that the discriminant divisor of $p$ is smooth\footnote{Ie. the locus of non-smooth fibers }.
+Let $\tilde F$ be the relative Fano variety of $\tilde X \to \mathbb{P}^{2}$, ie. $\tilde F$ is a closed subscheme of $F( \tilde X) $ containing only the points corresponding to lines contained in fibers of $p$.\\
+There is a natural map $q\colon \tilde F \to \mathbb{P}^{2}$ sending the class of a line $ [ L] \in \tilde F \to p( [ L] )\in \mathbb{P}^{2} $.
+\begin{propo}
+The $\O$-connected part of the Stein factorization of $q$ corresponds to a $\mathbb{P}^{1}$-fibration $\tilde F \to S$ with $S$ a K3-surface.
+\end{propo}
+We can now infer the general strategy of proof of theorem \ref{Kuznetsov_con_containing_plane}, the $\mathbb{P}^{1}$-fibration determines a Brauer class $\alpha\in Br( S) $ and we should use the two maps $S \to \mathbb{P}^{2}$ and $\tilde X\to \mathbb{P}^{2}$ to relate $D^{\flat}( S, \alpha) $ to $\mathcal{A}_X$.
+\begin{proof}[(Sketch) of theorem \ref{Kuznetsov_con_containing_plane}]
+The Orlov formula for blow-ups gives a semi-orthogonal decomposition of $D^{\flat}( \tilde X) $ 
+\[ 
+D^{\flat}( \tilde X) = \left\langle D^{\flat}( P) , \mathcal{A}_X, \O( -2 E) , \O( -E),\O\right\rangle
+\]
+where $E$ is the exceptional divisor.\\
+A general formula for quadric fibrations gives a second semi-orthogonal decomposition 
+\[ 
+D^{\flat}( \tilde X) = \left\langle D^{\flat}( \mathbb{P}^{2}, \mathcal{B}) , D^{\flat}( \mathbb{P}^{2}) \otimes \O( -E) , D^{\flat }( \mathbb{P}^{2})\right\rangle.
+\]
+Where $\mathcal{B}$ is the pushforward to $\mathbb{P}^{2}$  of the Azumaya algebra on $S$ corresponding to $\alpha$.
+Since the map $S\to \mathbb{P}^{2}$ is finite, it induces an equivalence of categories $D^{\flat}( S, \alpha) \simeq D^{\flat}( \mathbb{P}^{2}, \mathcal{B}) $, concluding the proof.
+\end{proof}
+
+
+
+
+
+
+
+%\section{Griffith's components}
+%In the second part of this talk, we will explore a more conjectural that makes the Kuznetsov conjectures believable.\\
+%Throughout, let $X$ be a variety.
+%\begin{defn}[Geometric Dimension]
+	%Let $\mathcal{A}$ be an admissible subcategory of $D^{\flat}( X) $, we define the geometric dimension $\gdim( \mathcal{A}) $  of $\mathcal{A}$ as the least integer $k$  such that $\mathcal{A}$ can be realized as a full admissible subcategory of an $n$-dimensional variety $X$.
+%\end{defn}
+%\begin{defn}[Griffith's component]
+%Let $D^{\flat}( X) = \left\langle \mathcal{A}_1,\ldots, \mathcal{A}_n\right\rangle$ be a maximal semi-orthogonal decomposition, ie. a semi-orthogonal decomposition such that all $\mathcal{A}_i$ are indecomposable.
+%The \textit{Griffith's component} is the subcategory
+%\[ 
+	%\griff( X) = \left\langle \left\{    \mathcal{A}_i \big| \gdim{\mathcal{A}_i} \geq \dim X-1\right\} \right\rangle.
+%\]
+%\end{defn}
+%Note that this Griffith's component depends on the choice of maximal semi-orthogonal decomposition. 
+%Indeed, there exist $k$-linear triangulated categories admitting maximal sod's which yield non-equivalent Griffith's components.\\
+%However, it is easy to see the following
+%\begin{thm}
+%The Griffith's component of a variety $X$, if well-defined, is a birational invariant.
+%\end{thm}
+%\begin{proof}
+%By the weak-factorization theorem, it suffices to show that if $\pi\colon X \to Y$ is a blow-up, then the Griffith's components of $X$ and $Y$ coincide.
+%This follows immediatly from Orlov's blowup formula.
+%\end{proof}
+%A hint that $\griff( X) $ can be fruitfully used to study rationality questions is to notice that $\griff( \mathbb{P}^{n})$ is empty for all $n \geq 2$.\\
+%In particular, if $\mathcal{A}_X \simeq D^{\flat}( S) $, then $\gdim( \mathcal{A}_X) =2$ and hence $\griff( X) $ is empty, further supporting the Kuznetsov conjectures.\\
+%If however, $\mathcal{A}_X\not\simeq D^{\flat}( S) $, then heuristic considerations show that $\gdim( \mathcal{A}_{X} ) >2$ should hold.\\
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,29 @@
+\input{../preamble.tex}
+\input{../newcommands.tex}
+\title{Derived Categories of Special Cubic Fourfolds}
+\author{David Wiedemann}
+\date{}
+\begin{document}
+\maketitle
+\section{Kuznetsov Component}
+Recall that we are interested in studying the bounded derived categories of projective hypersurfaces $D^{\flat}( X) \coloneq D^{\flat}( \coh( X) ) $.\\
+Given a hypersurface $X \subset \mathbb{P}^{n+1}$ of degree $d$, a version of Bott vanishing shows that the longest exceptional sequence of twisting sheaves one can get is $\left\langle \O_X, \O_X( 1), \ldots, \O_X( n+1-d)\right\rangle  $. 
+We can define the Kuznetsov component to be the right orthogonal to this:
+\[ 
+\mathcal{A}_X \coloneq \langle \O_X,\ldots, \O_X( n+1-d) \rangle^{\perp}
+\]
+Let $\iota_\ast\colon\langle \O_X,\ldots, \O_X( n+1-d) \rangle \to D^{\flat}( X) $ be the inclusion with $\iota^{\ast}\dashv \iota_\ast \dashv \iota^{!}$.\\
+The Kuznetsov component being a right complement, we know that the inclusion $j_\ast\colon \mathcal{A}_X \hookrightarrow D^{\flat}( X) $  has a left-adjoint $j^{\ast}$ given by the completion 
+\[ 
+\iota_\ast\iota^{!}E \to E \to j^{\ast}E.
+\]
+Using \cite[lemma 7.1.14]{Geometry_Cubic_Huybrechts}, we see that $\mathcal{A}_X$ also has a Serre functor and hence it's inclusion also admits a right-adjoint $j^{!}$.\\
+In fact, this Serre functor can be computed explicitly, it is given by
+\[ 
+S^{-1} = j^{\ast}\circ ( \O_X( n+2-d) \otimes -) \circ [ -n] 
+\]
+\section{Pfaffian Cubic Fourfolds}
+Let $W$ be a six dimensional vector space, then $\Lambda^{2}W$ is 15 dimensional and we consider it's projectivization $\mathbb{P}( \Lambda^{2}W) \simeq \mathbb{P}^{14}$.
+The Pfaffian is the subvariety $Pf( W) \subset \mathbb{P}( \Lambda^{2}W) $ given by $Pf( W) = \left\{ \omega \in \mathbb{P}( \Lambda ^{2}W) | \omega\wedge\omega\wedge\omega = 0 \right\} $.
+
+\end{document}
